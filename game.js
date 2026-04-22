@@ -213,15 +213,6 @@ function showInter(pts,dist,name){
       <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">🔍 Explorer la carte</button>
       <button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante →</button>
     </div>
-    <div id="ad-inter">
-      <!-- PUB RECTANGLE 300x250 (décommenter après approbation AdSense)
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="XXXXXXXXXX"
-           data-ad-format="auto"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script>
-      -->
     </div>`;
   ov.classList.remove('h');
   // Fetch Wikipedia image
@@ -275,15 +266,6 @@ function showEnd(){
       <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">🔍 Explorer la carte</button>
       <button class="btn ba" onclick="startGame()" style="width:auto;padding:12px 32px;font-size:14px">↺ Rejouer</button>
     </div>
-    <div id="ad-inter">
-      <!-- PUB RECTANGLE 300x250 (décommenter après approbation AdSense)
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="XXXXXXXXXX"
-           data-ad-format="auto"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script>
-      -->
     </div>`;
   ov.classList.remove('h');
 }
