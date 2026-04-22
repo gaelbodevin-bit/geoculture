@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>GéoCulture - Diagnostic</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+body { background:#07090f; color:#fff; font-family:sans-serif; padding:20px; }
+.ok { color:#22c55e; }
+.err { color:#ef4444; }
+button { padding:10px 20px; margin:10px; cursor:pointer; font-size:16px; }
+#map { width:400px; height:300px; border:1px solid #333; margin:10px 0; }
+</style>
+</head>
+<body>
+<h2>Diagnostic GéoCulture</h2>
+<div id="log"></div>
+<button onclick="testAll()">Lancer diagnostic</button>
+<div id="map"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/game.js"></script>
+<script>
+function log(msg, ok) {
+  var d = document.getElementById('log');
+  d.innerHTML += '<div class="'+(ok?'ok':'err')+'">'+msg+'</div>';
+}
+
+function testAll() {
+  document.getElementById('log').innerHTML = '';
+  
+  // Test 1: Leaflet
+  log('1. Leaflet chargé: ' + (typeof L !== 'undefined'), typeof L !== 'undefined');
+  
+  // Test 2: ROUNDS
+  log('2. ROUNDS défini: ' + (typeof ROUNDS !== 'undefined'), typeof ROUNDS !== 'undefined');
+  if(typeof ROUNDS !== 'undefined') {
+    log('   ROUNDS.length = ' + ROUNDS.length, ROUNDS.length > 0);
+  }
+  
+  // Test 3: Fonctions jeu
+  log('3. startGame défini: ' + (typeof startGame !== 'undefined'), typeof startGame !== 'undefined');
+  log('   initMap défini: ' + (typeof initMap !== 'undefined'), typeof initMap !== 'undefined');
+  log('   showInter défini: ' + (typeof showInter !== 'undefined'), typeof showInter !== 'undefined');
+  
+  // Test 4: Leaflet map
+  try {
+    var map = L.map('map', {center:[48,2], zoom:5});
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+    log('4. Carte Leaflet: OK', true);
+  } catch(e) {
+    log('4. Carte Leaflet ERREUR: ' + e.message, false);
+  }
+  
+  // Test 5: BASE_PTS
+  log('5. BASE_PTS: ' + (typeof BASE_PTS !== 'undefined' ? JSON.stringify(BASE_PTS) : 'UNDEFINED'), typeof BASE_PTS !== 'undefined');
+}
+</script>
+</body>
+</html>
