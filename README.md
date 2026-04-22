@@ -48,7 +48,7 @@ git push
 3. Branch : **main** → dossier **/ (root)**
 4. **Save**
 5. Attendre 2-3 minutes → ton jeu est en ligne sur :
-   `https://TON_USERNAME.github.io/geoculture/`
+   `https://gaelbodevin-bit.github.io/geoculture/`
 
 ---
 
