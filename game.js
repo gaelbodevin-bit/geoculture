@@ -37,7 +37,7 @@ function initMap(){
 
 function makePin(color){
   return L.divIcon({className:'',
-    html:'<div style="width:18px;height:18px;background:'+color+';border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 10px rgba(0,0,0,.5)"></div>',
+    html:`<div style="width:18px;height:18px;background:${color};border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 10px rgba(0,0,0,.5)"></div>`,
     iconSize:[18,18],iconAnchor:[9,18]});
 }
 
@@ -47,7 +47,7 @@ function onMapClick(e){
   if(playerMarker)playerMarker.remove();
   playerMarker=L.marker([playerPos.lat,playerPos.lng],{icon:makePin('#f97316')}).addTo(map);
   document.getElementById('confb').disabled=false;
-  document.getElementById('placed-info').textContent='📍 '+playerPos.lat.toFixed(3)+', '+playerPos.lng.toFixed(3);
+  document.getElementById('placed-info').textContent=`📍 ${playerPos.lat.toFixed(3)}, ${playerPos.lng.toFixed(3)}`;
 }
 
 function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]]}return b}
@@ -73,7 +73,7 @@ function startRound(idx){
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
   document.getElementById('placed-info').textContent='Cliquez sur la carte pour placer votre réponse';
-  document.getElementById('hrnd').textContent=(idx+1)+'/5';
+  document.getElementById('hrnd').textContent=`${idx+1}/5`;
   updateDots();showHint();startTimer();
 }
 
@@ -116,7 +116,7 @@ function renderTimer(){
   arc.style.strokeDashoffset=offset;
   const col=pct>.6?'#22c55e':pct>.3?'#fbbf24':'#ef4444';
   arc.style.stroke=col;
-  const n=document.getElementById('tnum');
+  const n=document.getElementById('timer-big');
   n.textContent=Math.ceil(timeLeft);
   n.style.color=col;
 }
@@ -170,16 +170,16 @@ function resolveRound(){
   document.getElementById('hsc').textContent=total.toLocaleString('fr-FR');
   const popupStyle='font-family:system-ui,sans-serif;font-size:13px;line-height:1.5;min-width:140px';
   targetMarker=L.marker([r.lat,r.lng],{icon:makePin('#22c55e')})
-    .bindPopup('<div style="'+popupStyle+'"><b style="color:#15803d">&#10003; '+r.name+'</b>'+(dist?'<br><span style="color:#666">Distance : '+fmtDist(Math.round(dist*1000))+'</span>':'<br><span style="color:#666">Pas de tentative</span>')+'</div>',{maxWidth:220}).addTo(map);
+    .bindPopup(`<div style="${popupStyle}"><b style="color:#15803d">✓ ${r.name}</b>${dist?`<br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span>`:'<br><span style="color:#666">Pas de tentative</span>'}</div>`,{maxWidth:220}).addTo(map);
   if(playerPos){
-    if(playerMarker) playerMarker.bindPopup('<div style="'+popupStyle+'"><b style="color:#ea580c">&#128205; Votre réponse</b><br><span style="color:#666">Distance : '+fmtDist(Math.round(dist*1000))+'</span><br><span style="color:#f97316;font-weight:700">+'+pts+' pts</span></div>',{maxWidth:200});
+    if(playerMarker) playerMarker.bindPopup(`<div style="${popupStyle}"><b style="color:#ea580c">📍 Votre réponse</b><br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span><br><span style="color:#f97316;font-weight:700">+${pts} pts</span></div>`,{maxWidth:200});
     lineLayer=L.polyline([[playerPos.lat,playerPos.lng],[r.lat,r.lng]],{color:'#f97316',weight:2.5,dashArray:'8 5',opacity:.8}).addTo(map);
     map.fitBounds(L.latLngBounds([[playerPos.lat,playerPos.lng],[r.lat,r.lng]]),{padding:[60,60]});
   } else {
     map.setView([r.lat,r.lng],12);targetMarker.openPopup();
   }
-  document.getElementById('placed-info').textContent=dist!=null?'🎯 '+fmtDist(Math.round(dist*1000))+' — +'+pts.toLocaleString('fr-FR')+' pts':'❌ Raté — '+r.name;
-  showToast(dist!=null?r.name+' · '+fmtDist(Math.round(dist*1000))+' · +'+pts+' pts':"Raté ! C'était : "+r.name);
+  document.getElementById('placed-info').textContent=dist!=null?`🎯 ${fmtDist(Math.round(dist*1000))} — +${pts.toLocaleString('fr-FR')} pts`:`❌ Raté — ${r.name}`;
+  showToast(dist!=null?`${r.name} · ${fmtDist(Math.round(dist*1000))} · +${pts} pts`:`Raté ! C'était : ${r.name}`);
   setTimeout(()=>{
     curR+1<roundList.length?showInter(pts,dist,r.name):showEnd();
   },3000);
@@ -187,31 +187,34 @@ function resolveRound(){
 
 
 function showInter(pts,dist,name){
-  var lastScore=roundScores[roundScores.length-1];
-  var mx=lastScore?lastScore.maxPts:4500;
-  var pctRound=mx>0?Math.round(pts/mx*100):0;
-  var barColor=pctRound>=80?'#22c55e':pctRound>=50?'#fbbf24':'#f97316';
-  var ov=document.getElementById('overlay');
-  var placeDesc=roundList[curR].desc||'';
-  var imgId='wimg'+Date.now();
-  var html=[];
-  html.push('<div id="'+imgId+'" style="width:100%;max-width:380px;height:150px;background:#111827;border-radius:10px;margin-bottom:-4px;overflow:hidden;display:flex;align-items:center;justify-content:center"><span style="color:#374151;font-size:11px">chargement...</span></div>');
-  html.push('<div class="otitle" style="font-size:38px">+'+pts.toLocaleString('fr-FR')+'</div>');
-  html.push('<div class="osub" style="color:#94a3b8;font-size:12px;line-height:1.55;margin-top:-4px;max-width:360px;text-align:center">'+placeDesc+'</div>');
-  html.push('<div style="display:flex;align-items:center;gap:10px;width:100%;max-width:320px">');
-  html.push('<div style="flex:1;height:8px;background:#1e2d45;border-radius:4px;overflow:hidden">');
-  html.push('<div style="width:'+pctRound+'%;height:100%;background:'+barColor+';border-radius:4px;transition:width .6s ease"></div></div>');
-  html.push('<span style="font-size:13px;font-weight:600;color:'+barColor+';white-space:nowrap">'+pts.toLocaleString('fr-FR')+' / '+mx.toLocaleString('fr-FR')+' pts</span></div>');
-  html.push('<div class="osub" style="color:#f1f5f9;font-size:15px;font-weight:600;margin-top:-4px">'+name+'</div>');
-  html.push('<div class="osub" style="margin-top:-6px">'+(dist!=null?fmtDist(Math.round(dist*1000))+' de la cible':'Aucun point place')+'</div>');
-  html.push('<div style="color:#6b7280;font-size:13px">Total : <b style="color:#f97316">'+total.toLocaleString('fr-FR')+' pts</b></div>');
-  html.push('<div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">');
-  html.push('<button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">&#8962; Menu</button>');
-  html.push('<button onclick="enterExploreMode()" style="font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">Explorer</button>');
-  html.push('<button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante &#8594;</button>');
-  html.push('</div>');
-  ov.innerHTML=html.join('');
+  const lastScore=roundScores[roundScores.length-1];
+  const mx=lastScore?lastScore.maxPts:4500;
+  const pctRound=mx>0?Math.round(pts/mx*100):0;
+  const barColor=pctRound>=80?'#22c55e':pctRound>=50?'#fbbf24':'#f97316';
+  const ov=document.getElementById('overlay');
+  const placeDesc = roundList[curR].desc || '';
+  const imgId = 'wimg' + Date.now();
+  const wq = encodeURIComponent(roundList[curR].name.split('\u2014')[0].trim().replace(/\s*—.*/,'').trim());
+  ov.innerHTML=`
+    <div id="${imgId}" style="width:100%;max-width:380px;height:150px;background:#111827;border-radius:10px;margin-bottom:-4px;overflow:hidden;display:flex;align-items:center;justify-content:center"><span style="color:#374151;font-size:11px">📸</span></div>
+    <div class="otitle" style="font-size:38px">+${pts.toLocaleString('fr-FR')}</div>
+    <div class="osub" style="color:#94a3b8;font-size:12px;line-height:1.55;margin-top:-4px;max-width:360px;text-align:center;font-style:normal">${placeDesc}</div>
+    <div style="display:flex;align-items:center;gap:10px;width:100%;max-width:320px">
+      <div style="flex:1;height:8px;background:#1e2d45;border-radius:4px;overflow:hidden">
+        <div style="width:${pctRound}%;height:100%;background:${barColor};border-radius:4px;transition:width .6s ease"></div>
+      </div>
+      <span style="font-size:13px;font-weight:600;color:${barColor};white-space:nowrap">${pts.toLocaleString('fr-FR')} / ${mx.toLocaleString('fr-FR')} pts</span>
+    </div>
+    <div class="osub" style="color:#f1f5f9;font-size:15px;font-weight:600;margin-top:-4px">${name}</div>
+    <div class="osub" style="margin-top:-6px">${dist!=null?fmtDist(Math.round(dist*1000))+' de la cible':'Aucun point placé'}</div>
+    <div style="color:#6b7280;font-size:13px">Total : <b style="color:#f97316">${total.toLocaleString('fr-FR')} pts</b></div>
+    <div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">
+      <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">⌂ Menu</button>
+      <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">🔍 Explorer la carte</button>
+      <button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante →</button>
+    </div>`;
   ov.classList.remove('h');
+  // Fetch Wikipedia image
   (function(id,q){
     function tryWiki(lang){
       fetch('https://'+lang+'.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(q))
@@ -226,58 +229,60 @@ function showInter(pts,dist,name){
         }).catch(function(){var el=document.getElementById(id);if(el)el.style.display='none';});
     }
     tryWiki('fr');
-  })(imgId,roundList[curR].name.replace(/\s*[\u2014-].*/,'').trim());
+  })(imgId, roundList[curR].name.replace(/\s*—.*/,'').trim());
+
 }
 
 function showEnd(){
-  var totalMax=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
-  var pct=totalMax>0?Math.round(total/totalMax*100):0;
-  var rows=roundScores.map(function(s){
-    var distTxt=s.distM!=null?fmtDist(s.distM):'rate';
-    var r=[];
-    r.push('<div class="orow">');
-    r.push('<span style="font-size:11px;max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1">'+s.name+'</span>');
-    r.push('<span style="color:#6b7280;font-size:11px;margin:0 6px;flex-shrink:0">'+distTxt+'</span>');
-    r.push('<span style="font-size:11px;color:#4b5563;flex-shrink:0">'+s.pts.toLocaleString('fr-FR')+'/'+s.maxPts.toLocaleString('fr-FR')+'</span>');
-    r.push('</div>');
-    return r.join('');
+  const totalMax=roundScores.reduce((a,s)=>a+(s.maxPts||0),0);
+  const pct=totalMax>0?Math.round(total/totalMax*100):0;
+  const rows=roundScores.map(s=>{
+    const distTxt=s.distM!=null?fmtDist(s.distM):'raté';
+    const ptsColor=s.pts>=s.maxPts*0.8?'#22c55e':s.pts>=s.maxPts*0.4?'#fbbf24':'#f97316';
+    return `<div class="orow">
+      <span style="font-size:11px;max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1">${s.name}</span>
+      <span style="color:#6b7280;font-size:11px;margin:0 6px;flex-shrink:0">${distTxt}</span>
+      <span style="font-size:11px;color:#4b5563;flex-shrink:0">${s.pts.toLocaleString('fr-FR')}/${s.maxPts.toLocaleString('fr-FR')}</span>
+    </div>`;
   }).join('');
-  var rank=pct>=90?'Geographe legendaire':pct>=70?'Expert international':pct>=50?'Bon explorateur':pct>=30?'En progression':'Debutant courageux';
-  var ov=document.getElementById('overlay');
-  var html=[];
-  html.push('<div class="otitle" style="font-size:38px">Termine !</div>');
-  html.push('<div class="osub" style="color:#f97316;font-weight:700;font-size:15px">'+rank+' - '+pct+'%</div>');
-  html.push('<div class="ocard">');
-  html.push('<div style="display:flex;justify-content:space-between;font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:.5px;padding-bottom:6px;border-bottom:1px solid #1e2d45;margin-bottom:4px">');
-  html.push('<span>Lieu</span><span>Distance</span><span>Score / Max</span></div>');
-  html.push(rows);
-  html.push('<div class="otot"><span>Total</span>');
-  html.push('<span style="font-size:12px;color:#6b7280;margin-right:auto;padding-left:12px">'+total.toLocaleString('fr-FR')+' / '+totalMax.toLocaleString('fr-FR')+' pts</span>');
-  html.push('<span class="p">'+pct+'%</span></div></div>');
-  html.push('<div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">');
-  html.push('<button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">&#8962; Menu</button>');
-  html.push('<button onclick="enterExploreMode()" style="font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">Explorer</button>');
-  html.push('<button class="btn ba" onclick="startGame()" style="width:auto;padding:12px 32px;font-size:14px">&#8634; Rejouer</button>');
-  html.push('</div>');
-  ov.innerHTML=html.join('');
+  const rank=pct>=90?'Géographe légendaire':pct>=70?'Expert international':pct>=50?'Bon explorateur':pct>=30?'En progression':'Débutant courageux';
+  const ov=document.getElementById('overlay');
+  ov.innerHTML=`<div class="otitle" style="font-size:38px">Terminé !</div>
+    <div class="osub" style="color:#f97316;font-weight:700;font-size:15px">${rank} — ${pct}%</div>
+    <div class="ocard">
+      <div style="display:flex;justify-content:space-between;font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:.5px;padding-bottom:6px;border-bottom:1px solid #1e2d45;margin-bottom:4px">
+        <span>Lieu</span><span>Distance</span><span>Score / Max</span>
+      </div>
+      ${rows}
+      <div class="otot">
+        <span>Total</span>
+        <span style="font-size:12px;color:#6b7280;margin-right:auto;padding-left:12px">${total.toLocaleString('fr-FR')} / ${totalMax.toLocaleString('fr-FR')} pts</span>
+        <span class="p">${pct}%</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">
+      <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">⌂ Menu</button>
+      <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">🔍 Explorer la carte</button>
+      <button class="btn ba" onclick="startGame()" style="width:auto;padding:12px 32px;font-size:14px">↺ Rejouer</button>
+    </div>`;
   ov.classList.remove('h');
 }
 
 function showMenu(){
   clearInterval(tiv);
   gameActive=false;
-  var ov=document.getElementById('overlay');
-  var html = [];
-  html.push('<div class="otitle">GEO<br>CULTURE</div>');
-  html.push('<div class="osub">Trouve les lieux historiques. Chaque niveau devient plus simple, mais les points diminuent.</div>');
-  html.push('<div class="rgrid">');
-  html.push('<div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement</div>');
-  html.push('<div class="ri"><b>Precision</b>Plus tu es proche, plus tu gagnes</div>');
-  html.push('<div class="ri"><b>Rapidite x1.5</b>Bonus si tu reponds rapidement</div>');
-  html.push('<div class="ri"><b>Expert x3</b>Multiplicateur maximum</div>');
-  html.push('</div>');
-  html.push('<button class="btn ba" onclick="startGame()" style="width:auto;font-size:15px;padding:13px 38px;margin-top:6px">&#9654; Nouvelle partie</button>');
-  ov.innerHTML = html.join('');
+  const ov=document.getElementById('overlay');
+  ov.innerHTML=`
+    <div class="otitle">GEO<br>CULTURE</div>
+    <div class="osub">Trouve les lieux historiques sur la carte. Chaque niveau devient plus simple, mais les points s'amenuisent.</div>
+    <div class="rgrid">
+      <div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement après 30s</div>
+      <div class="ri"><b>Précision</b>Plus tu es proche, plus tu gagnes de points</div>
+      <div class="ri"><b>Rapidité ×1.5</b>Bonus si tu réponds avant la fin du compte à rebours</div>
+      <div class="ri"><b>Expert ×3</b>Multiplicateur maximum — gagne 3x plus tôt</div>
+    </div>
+    <button class="btn ba" onclick="startGame()" style="width:auto;font-size:15px;padding:13px 38px;margin-top:6px">&#9654; Nouvelle partie</button>
+  `;
   ov.classList.remove('h');
 }
 
@@ -322,11 +327,4 @@ function exitExploreMode(){
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('confb').onclick=confirmGuess;
-  document.getElementById('skipb').onclick=()=>{if(!gameActive)return;clearInterval(tiv);nextLevel();};
-  document.getElementById('startb').onclick=()=>{
-    try { initMap(); } catch(e) { console.error('initMap error:',e); }
-    startGame();
-  };
-});
+// Handlers: voir onclick dans index.html
