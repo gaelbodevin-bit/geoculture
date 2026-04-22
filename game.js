@@ -222,7 +222,7 @@ function showInter(pts,dist,name){
            data-ad-format="auto"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script>
       -->
-    </div>\`;
+    </div>`;
   ov.classList.remove('h');
   // Fetch Wikipedia image
   (function(id,q){
@@ -284,7 +284,7 @@ function showEnd(){
            data-ad-format="auto"></ins>
       <script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script>
       -->
-    </div>\`;
+    </div>`;
   ov.classList.remove('h');
 }
 
