@@ -116,7 +116,7 @@ function renderTimer(){
   arc.style.strokeDashoffset=offset;
   const col=pct>.6?'#22c55e':pct>.3?'#fbbf24':'#ef4444';
   arc.style.stroke=col;
-  const n=document.getElementById('timer-big');
+  const n=document.getElementById('tnum');
   n.textContent=Math.ceil(timeLeft);
   n.style.color=col;
 }
