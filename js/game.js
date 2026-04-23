@@ -181,7 +181,7 @@ function resolveRound(){
   document.getElementById('placed-info').textContent=dist!=null?`🎯 ${fmtDist(Math.round(dist*1000))} — +${pts.toLocaleString('fr-FR')} pts`:`❌ Raté — ${r.name}`;
   showToast(dist!=null?`${r.name} · ${fmtDist(Math.round(dist*1000))} · +${pts} pts`:`Raté ! C'était : ${r.name}`);
   setTimeout(()=>{
-    curR+1<roundList.length?showInter(pts,dist,r.name):showEnd();
+    showInter(pts,dist,r.name);
   },3000);
 }
 
