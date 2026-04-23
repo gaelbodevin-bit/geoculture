@@ -121,7 +121,7 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Capitale de l'Italie (la tour est dans ce pays)"}
   ]},
   {name:"Palais des Doges — Venise, Italie",lat:45.4337,lng:12.3401,desc:"Le Palais des Doges abritait le Pont des Soupirs, par lequel les condamnés traversaient de la salle des interrogatoires vers la prison, poussant leur dernier soupir en apercevant Venise.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palazzo Ducale sur la Piazzetta San Marco, siège du gouvernement de la République de Venise du IXe au XVIIIe siècle"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palazzo Ducale sur la Piazzetta de l'ancienne République maritime, siège du gouvernement de la Sérénissime du IXe au XVIIIe siècle"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sestiere de San Marco, bord de la lagune, face à l'île de San Giorgio Maggiore"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Symbole du pouvoir vénitien, ville construite sur 118 îlots, Italie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Cité des canaux et des gondoles dans le nord-est de l'Italie"},
@@ -207,7 +207,7 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Capitale de la Jordanie"}
   ]},
   {name:"Mur des Lamentations — Jérusalem",lat:31.7767,lng:35.2345,desc:"Le Mur des Lamentations est le seul vestige du mur de soutènement du Second Temple, détruit en 70 ap. J.-C. par les Romains. Les pèlerins y glissent des petits papiers portant des prières — environ un million par an.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kotel, vestige du mur ouest de l'esplanade du Second Temple d'Hérode le Grand, Vieille Ville de Jérusalem"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kotel, vestige du mur ouest de l'esplanade du Second Temple d'Hérode le Grand, vieille ville sainte des trois religions"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier juif de la Vieille Ville de Jérusalem, face au mont du Temple"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lieu saint du judaïsme, vestige du Temple de Salomon"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Jérusalem, ville sainte des trois religions monothéistes"},
@@ -230,7 +230,7 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Capitale de l'Égypte"}
   ]},
   {name:"Kilimandjaro — Tanzanie",lat:-3.0674,lng:37.3556,desc:"Le Kilimandjaro perd 80% de sa calotte glaciaire depuis 1912 en raison du réchauffement climatique. Ses glaciers sommitaux pourraient disparaître complètement d'ici 2060, menaçant l'approvisionnement en eau de millions d'Africains.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Uhuru Peak, point culminant du stratovolcan Kibo à 5 895 m, Parc national du Kilimandjaro, Tanzanie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Uhuru Peak, point culminant du stratovolcan Kibo à 5 895 m, plus haute montagne du continent africain"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Région de Kilimandjaro, nord-est de la Tanzanie, à 330 km de Nairobi"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute montagne d'Afrique, volcan enneigé en zone équatoriale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Nord-est de la Tanzanie, Afrique de l'Est"},
@@ -251,7 +251,7 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Capitale du Rwanda"}
   ]},
   {name:"Statue de l'Unité — Inde (Sardar Patel)",lat:21.8381,lng:73.7198,desc:"La Statue de l'Unité représente Sardar Vallabhbhai Patel, l'homme qui réunit les 562 principautés indiennes en un seul État après l'indépendance. À 182 mètres, elle est deux fois plus haute que la Statue de la Liberté. Des visiteurs viennent du monde entier pour monter jusqu'à son torse-observatoire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ekta ki Pratima, statue de Vallabhbhai Patel de 182 m inaugurée en 2018, barrage de Sardar Sarovar, Gujarat"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ekta ki Pratima, statue de 182 m inaugurée en 2018 au bord d'un grand barrage, plus haute statue du monde"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île Sadhu Bet sur la rivière Narmada, district de Narmada, Gujarat"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande statue du monde (182 m), Gujarat, Inde"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"État du Gujarat, ouest de l'Inde"},
@@ -260,7 +260,7 @@ const ROUNDS=[
 
   // ── AMÉRIQUES ───────────────────────────────────────────────────
   {name:"Christ Rédempteur — Rio, Brésil",lat:-22.9519,lng:-43.2105,desc:"Le Christ Rédempteur est frappé par la foudre environ trois fois par an. Sa restauration en 2010 inclut un paratonnerre intégré dans la couronne d'épines. Il mesure 38 mètres en comptant son piédestal.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Statue du Christ de 38 m inaugurée en 1931, sommet du Corcovado (710 m), Tijuca, Rio de Janeiro"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Statue du Christ de 38 m inaugurée en 1931, sommet du Corcovado (710 m), forêt tropicale urbaine"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Montagne du Corcovado, parc national de Tijuca, quartier de Santa Teresa, Rio"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Statue emblématique surplombant Rio de Janeiro, merveille du monde"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Rio de Janeiro, ville de la Baie de Guanabara, Brésil"},
@@ -288,14 +288,14 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Capitale des États-Unis (le canyon est dans ce pays)"}
   ]},
   {name:"Chichen Itza — Yucatan, Mexique",lat:20.6843,lng:-88.5678,desc:"La grande cénote sacrée de Chichen Itza livra lors de fouilles au XXe siècle des dizaines de squelettes, bijoux de jade et objets en or — confirmant les sacrifices mayas. On estime que des milliers d'offrandes reposent encore au fond inaccessible du puits.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"El Castillo, pyramide à degrés de Kukulcán de 30 m, cité maya fondée au VIe siècle, péninsule du Yucatán"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"El Castillo, pyramide à degrés de Kukulcán de 30 m, cité maya fondée au VIe siècle, phénomène du serpent de lumière aux équinoxes"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Municipalité de Tinum, État du Yucatán, péninsule mexicaine, à 120 km de Mérida"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pyramide maya, merveille du monde, péninsule du Yucatán, Mexique"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Péninsule du Yucatán, Mexique, Amérique centrale"},
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Capitale du Mexique"}
   ]},
   {name:"Chutes du Niagara — Canada/USA",lat:43.0896,lng:-79.0849,desc:"Les Chutes du Niagara ont été stoppées une seule fois dans l'histoire, du 29 mars au 10 juin 1848, quand un embâcle de glace sur le lac Érié interrompit le débit. Les habitants traversèrent alors à pied le lit de la rivière à sec.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Horseshoe Falls, chutes de 57 m de hauteur sur la rivière Niagara, frontière Ontario–New York"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Horseshoe Falls, chutes de 57 m de hauteur sur la rivière Niagara, frontière entre deux pays"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Frontière entre Niagara Falls (Ontario, Canada) et Niagara Falls (New York)"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Célèbres chutes d'eau à la frontière canado-américaine"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Frontière entre le Canada et les États-Unis, région des Grands Lacs"},
@@ -347,8 +347,8 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Espagne"}
   ]},
   {name:"Canal Grande — Venise, Italie",lat:45.4408,lng:12.3155,desc:"Le Grand Canal de Venise compte 150 palais construits entre le XIIIe et le XVIIIe siècle sur ses 3,8 km. Ces bâtiments s'enfoncent progressivement — Venise s'est affaissée de 23 cm au XXe siècle — ce qui poussa à lancer le projet MOSE, un système de digues mobiles anti-inondations.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canale Grande, artère principale de Venise en forme de S inversé, 3,8 km, 150 palais sur ses rives"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Venise, entre la gare Santa Lucia et le Bacino San Marco"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canale Grande, artère principale de la cité lacustre en forme de S inversé, 3,8 km, 150 palais sur ses rives"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre d'une cité lacustre, entre la gare principale et le grand bassin maritime"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal canal de Venise, la ville des gondoles, Italie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Venise, nord-est de l'Italie, lagune adriatique"},
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Italie"}
@@ -530,7 +530,7 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Ouzbékistan"}
   ]},
   {name:"Mosquée Sultan Ahmed — Istanbul, Turquie",lat:41.0054,lng:28.9768,desc:"La Mosquée Bleue, construite de 1609 à 1616, est la seule mosquée d'Istanbul à posséder six minarets — une audace qui scandalisa la Mecque, qui n'en avait alors que quatre. L'intérieur est revêtu de 20 000 carreaux d'Iznik bleus, dont chacun fut peint à la main.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosquée Bleue, construite de 1609 à 1616 par Sedefkâr Mehmed Ağa sous Ahmed Ier, seule mosquée à 6 minarets à Istanbul"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosquée Bleue, construite de 1609 à 1616 par Sedefkâr Mehmed Ağa sous Ahmed Ier, seule mosquée à 6 minarets — scandale de l'époque pour sa ressemblance avec La Mecque"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sultanahmet, face à Sainte-Sophie, péninsule historique d'Istanbul"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mosquée Bleue aux 6 minarets, face à Sainte-Sophie, Istanbul"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Istanbul, Turquie, sur le détroit du Bosphore"},
@@ -693,14 +693,14 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Équateur"}
   ]},
   {name:"Times Square — New York, USA",lat:40.7580,lng:-73.9855,desc:"Times Square doit son nom au New York Times qui y installa son siège en 1904 et y fit tomber pour la première fois la «ball drop» du Nouvel An. Avec 50 millions de visiteurs par an, c'est le lieu le plus cher pour la publicité au monde — un panneau peut coûter 50 000 dollars par jour.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Intersection de Broadway et 7th Avenue, carrefour commercial éponyme du New York Times Building depuis 1904"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Intersection de Broadway et 7th Avenue, carrefour commercial dont le nom vient d'un grand quotidien, boule du Nouvel An"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Midtown Manhattan, entre la 42nd et 47th Street City"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Carrefour des néons, cœur de Manhattan, New York"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Manhattan, New York City, côte est des États-Unis"},
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"États-Unis"}
   ]},
   {name:"Cap Canaveral — Floride, USA",lat:28.3922,lng:-80.6077,desc:"Cap Canaveral est le berceau de l'ère spatiale américaine depuis 1950. Son pas de tir 39A vit partir Apollo 11 vers la Lune en 1969. Racheté par SpaceX en 2014, ce même site historique accueille aujourd'hui les fusées Falcon 9 et Starship — une continuité symbolique entre deux époques de l'exploration spatiale.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kennedy Space Center, Pad 39A d'où sont partis Apollo 11 (1969) et la navette spatiale, Merritt Island, Floride"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kennedy Space Center, Pad 39A d'où sont partis Apollo 11 (1969) et la navette spatiale, côte Est des États-Unis"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Merritt Island, comté de Brevard, côte est de la Floride, face à l'Atlantique"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Centre spatial Kennedy, lieu de lancement d'Apollo 11, Floride"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Côte est de la Floride, États-Unis"},
@@ -822,7 +822,7 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Suède"}
   ]},
   {name:"Bibliothèque de l'Université d'Helsinki — Finlande",lat:60.1699,lng:24.9384,desc:"La bibliothèque nationale de Finlande, bâtie en 1840 par Carl Ludwig Engel, est le chef-d'œuvre néoclassique d'Helsinki. Son architecture sobre et majestueuse fut conçue pour rivaliser avec les grandes bibliothèques européennes. Elle abrite un exemplaire de chaque livre publié en Finlande depuis 1707 — un dépôt légal exceptionnel.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cathédrale luthérienne d'Helsinki, néoclassique conçue par Carl Ludwig Engel, consacrée en 1852, Sénat Square"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cathédrale luthérienne néoclassique conçue par Carl Ludwig Engel, consacrée en 1852, sur la place du Sénat"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Senate Square (Senaatintori), cœur de la ville blanche, Helsinki, Finlande"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale blanche néoclassique dominant le centre d'Helsinki"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Capitale de la Finlande, bord de la Baltique"},
@@ -1240,7 +1240,7 @@ const ROUNDS=[
 {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Italie"}
 ]},
 {name:"Piazza San Marco — Venise, Italie",lat:45.4341,lng:12.3388,desc:"La place Saint-Marc de Venise est la seule place de la ville que Napoléon appela «le plus beau salon de l'Europe». Ses 200 millions de visiteurs par an l'inondent régulièrement — la place est submergée lors des marées hautes (acqua alta). Son campanile, effondré en 1902, fut reconstruit identique et réouvert le 25 avril 1912, jour anniversaire de sa chute.",hints:[
-{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Seule place de Venise nommée 'campo', basilique dorée du XIe siècle, campanile de 99m, pigeons et marée haute (acqua alta)"},
+{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Unique place d'une cité insulaire nommée campo, basilique dorée du XIe siècle, campanile de 99m, acqua alta"},
 {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sestiere de San Marco, bord de la lagune vénitienne, extrémité est du Grand Canal"},
 {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Place Saint-Marc, cœur de Venise, basilique byzantine et campanile"},
 {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Venise, cité des canaux, nord-est de l'Italie"},
@@ -1317,7 +1317,7 @@ const ROUNDS=[
 {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Espagne"}
 ]},
 {name:"Santiago de Compostela — Espagne",lat:42.8805,lng:-8.5456,desc:"La cathédrale de Santiago de Compostela est le point d'arrivée du Chemin de Compostelle. Son encensoir géant, le «Botafumeiro», pèse 80 kg et oscille à 68 km/h au bout d'une corde de 65 mètres lors des grandes messes. Son rôle original était d'assainir l'air saturé par les milliers de pèlerins malodorants.",hints:[
-{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cathédrale de Saint-Jacques, tombeau supposé de l'apôtre Jacques, terminus du Camino de Santiago, portico de la Gloria 1188"},
+{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cathédrale de Saint-Jacques, tombeau supposé de l'apôtre Jacques, terminus du Camino, portico de la Gloria, botafumeiro (encensoir de 80kg)"},
 {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Praza do Obradoiro, vieille ville de Saint-Jacques-de-Compostelle, Galice, nord-ouest de la péninsule ibérique"},
 {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale terminus du pèlerinage de Saint-Jacques, Galice, Espagne"},
 {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Saint-Jacques-de-Compostelle, Galice, nord-ouest de l'Espagne"},
@@ -1873,7 +1873,7 @@ const ROUNDS=[
 {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"États-Unis"}
 ]},
 {name:"NASA Kennedy — Cap Canaveral, USA",lat:28.5721,lng:-80.6480,desc:"Le Kennedy Space Center est l'un des sites de lancement les plus actifs du monde, avec 50 à 60 lancements par an aujourd'hui. Sa Vehicle Assembly Building (160 m de haut) est si grande que des nuages peuvent se former à l'intérieur par temps humide. Depuis Apollo 11 en 1969, plus de 150 missions habitées y ont pris leur envol.",hints:[
-{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Launch Complex 39A, aire de lancement d'Apollo 11 (1969) et des navettes spatiales, Merritt Island, Floride"},
+{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Launch Complex 39A, aire de lancement d'Apollo 11 (1969) et des navettes spatiales, désormais loué par SpaceX"},
 {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre spatial Kennedy, Merritt Island, Brevard County, côte est de la Floride"},
 {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Complexe de lancement de la NASA, Apollo 11 et navettes, Floride"},
 {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Côte est de la Floride, États-Unis"},
@@ -1922,7 +1922,7 @@ const ROUNDS=[
 {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"États-Unis"}
 ]},
 {name:"Tenochtitlan — Mexico, Mexique",lat:19.4342,lng:-99.1333,desc:"Tenochtitlan, capitale aztèque fondée en 1325 sur une île au milieu du lac Texcoco, était la plus grande ville d'Amérique précolombienne. Elle fut détruite par Cortés en 1521 et le lac fut asséché. Mexico fut construite directement au-dessus — le Zócalo actuel se trouve exactement sur l'ancienne place centrale aztèque.",hints:[
-{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Templo Mayor aztèque à Mexico, fouilles depuis 1978, grand temple à deux sanctuaires (Huitzilopochtli et Tlaloc)"},
+{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Templo Mayor aztèque, fouilles depuis 1978, grand temple à deux sanctuaires (Huitzilopochtli et Tlaloc), au cœur de la capitale précolombienne"},
 {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centro Histórico de Mexico, place du Zócalo, coeur de l'ancienne Tenochtitlan, Mexique"},
 {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Templo Mayor aztèque, cœur de l'ancienne capitale aztèque, Mexico"},
 {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Mexico, capitale du Mexique"},
@@ -2267,7 +2267,7 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Allemagne"}
   ]},
   {name:"Philharmonie de Berlin — Allemagne",lat:52.5098,lng:13.3694,desc:"La Philharmonie de Berlin, inaugurée en 1963, fut le premier concert hall à placer l'orchestre au centre entouré du public — une révolution architecturale. Son acoustique, considérée comme la meilleure du monde, résulte d'un calcul complexe intégrant la forme de chaque siège en bois.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Berliner Philharmonie, conçue par Hans Scharoun (1963), salle en tente avec 2 440 places en amphithéâtre autour de l'orchestre"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande salle de concert avant-gardiste conçue par Hans Scharoun (1963), salle en tente avec 2 440 places en amphithéâtre autour de l'orchestre"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Herbert-von-Karajan-Straße, Kulturforum, Tiergarten, Berlin"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Philharmonie de Berlin, salle de concert emblématique de l'architecture moderne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Berlin, capitale de l'Allemagne"},
@@ -2513,7 +2513,7 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Guyana"}
   ]},
   {name:"Lac Rose — Sénégal",lat:14.8400,lng:-17.2300,desc:"Le lac Retba du Sénégal doit sa couleur rose à une bactérie halophile (Dunaliella salina) qui produit un pigment rouge pour se protéger du sel. Avec une salinité 10 fois supérieure à celle de l'océan, les récolteurs de sel flottent sans effort comme dans la mer Morte.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac Retba, couleur rose due à la bactérie Dunaliella salina, salinité de 380g/L (10x l'océan), terminus du Paris-Dakar"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac de couleur rose dû à la bactérie Dunaliella salina, salinité de 380g/L (10x l'océan), ancien terminus d'un célèbre rallye automobile"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Presqu'île du Cap-Vert, à 35 km au nord-est de Dakar, région de Dakar, Sénégal"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac rose aux eaux sursalées, Sénégal, Afrique de l'Ouest"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Presqu'île du Cap-Vert, nord de Dakar, Sénégal"},
@@ -2675,7 +2675,7 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Équateur"}
   ]},
   {name:"Tikal — Guatemala",lat:17.2220,lng:-89.6237,desc:"Les temples mayas de Tikal servirent de décor à la planète Yavin 4 dans Star Wars en 1977. George Lucas fit filmer les séquences de la Rébellion dans la forêt guatémaltèque, attirant depuis des millions de fans.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cité maya classique (Ier s. - Xe s.), Tempio I (Gran Jaguar, 47m), 6 pyramides dépassant la canopée, Petén, Guatemala"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cité maya classique (Ier s. - Xe s.), Tempio I (Gran Jaguar, 47m), 6 pyramides dépassant la canopée, forêt tropicale du plateau guatémaltèque, décors de Star Wars (1977)"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Département du Petén, jungle du nord du Guatemala, à 550 km de Guatemala City"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pyramides mayas émergeant de la jungle, Tikal, Guatemala"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Petén, nord du Guatemala, Amérique centrale"},
@@ -2703,7 +2703,7 @@ const ROUNDS=[
     {bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Grèce"}
   ]},
   {name:"Mykonos — Grèce",lat:37.4415,lng:25.3440,desc:"Mykonos, île des Cyclades, fut pendant des siècles un repaire de pirates avant de devenir, dans les années 1960, une destination de la jet-set internationale. Ses célèbres moulins à vent, construits par les Vénitiens au XVIe siècle, broyaient le blé des îles voisines pour alimenter les flottes marchandes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Île des Cyclades, Chora aux ruelles labyrinthiques, Kato Mili (5 moulins à vent), Petite Venise, plages de Paradise et Super Paradise"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Île des Cyclades, Chora aux ruelles labyrinthiques, Kato Mili (5 moulins à vent), port mondain des Grecs"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cyclades centrales, mer Égée, à 150 km d'Athènes"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île blanche des Cyclades aux moulins à vent, Mykonos, Grèce"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Cyclades, mer Égée, Grèce"},
@@ -2855,7 +2855,7 @@ const ROUNDS=[
   {name:"Arches National Park — Utah, USA",lat:38.7331,lng:-109.5925,desc:"Le parc des Arches contient plus de 2 000 arches naturelles en grès rouge sur une superficie de 300 km². La Delicate Arch, haute de 16 mètres, est l'emblème de l'Utah imprimé sur les plaques d'immatriculation de l'État. En 2008, Wall Arch, l'une des plus grandes, s'effondra brusquement dans la nuit.",hints:[{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Delicate Arch (16m de haut), 2 000 arches naturelles en grès Entrada, Landscape Arch (88m d'envergure), Moab Utah"},{bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comté de Grand, Utah, à 8 km de Moab, plateau Colorado"},{bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc des Arches, Delicate Arch, 2000 arches naturelles, Utah"},{bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Utah, plateau Colorado, sud-ouest des États-Unis"},{bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"États-Unis"}]},
   {name:"Seattle Space Needle — USA",lat:47.6205,lng:-122.3493,desc:"La Space Needle de Seattle fut construite en 398 jours pour l'Exposition universelle de 1962. Son restaurant tournant SkyCity effectue une rotation complète en 47 minutes. Elle fut conçue pour résister à des vents de 300 km/h et à un séisme de magnitude 9,1 — plus puissant que le grand séisme de Seattle de 1965.",hints:[{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tour de 184m construite pour l'Exposition universelle de 1962, restaurant tournant SkyCity, sommet en forme d'OVNI, Seattle Center"},{bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Seattle Center, Uptown, Seattle, État de Washington, nord-ouest"},{bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Space Needle, tour en OVNI de l'Expo 62, Seattle, Washington"},{bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Seattle, État de Washington, côte nord-ouest des États-Unis"},{bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"États-Unis"}]},
   {name:"Chicago Cloud Gate — USA",lat:41.8827,lng:-87.6233,desc:"Cloud Gate d'Anish Kapoor, surnommée «The Bean», est faite de 168 plaques d'acier inoxydable soudées sans aucun joint visible. Elle réfléchit le skyline de Chicago en le déformant. Ses 110 tonnes reposent sur seulement 6 pieds d'ancrage — son poids est compensé par une structure enterrée dans le sol du parc.",hints:[{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cloud Gate de Anish Kapoor (2006), sculpture en acier de 110 tonnes surnommée 'The Bean', AT&T Plaza, Millennium Park"},{bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"AT&T Plaza, Millennium Park, Michigan Avenue, Loop, Chicago, Illinois"},{bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cloud Gate, sculpture haricot géante de Chicago, Millennium Park"},{bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Chicago, Illinois, bord du lac Michigan, États-Unis"},{bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"États-Unis"}]},
-  {name:"Niagara on the Lake — Canada",lat:43.2554,lng:-79.0713,desc:"Niagara-on-the-Lake fut la première capitale du Haut-Canada en 1792. Brûlée par les Américains en 1813, elle fut reconstruite dans un style géorgien homogène. Son architecture victorienne si parfaitement préservée lui vaut le titre de «ville la plus jolie du Canada».",hints:[{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ville victorienne au bord du lac Ontario, Fort George (1796), Shaw Festival, vignobles du Niagara Escarpment, icewines"},{bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Péninsule du Niagara, Ontario, Canada, à l'embouchure de la rivière Niagara dans le lac Ontario"},{bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Niagara-on-the-Lake, ville victorienne et vignobles, Ontario, Canada"},{bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Ontario, Canada, bord du lac Ontario"},{bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Canada"}]},
+  {name:"Niagara on the Lake — Canada",lat:43.2554,lng:-79.0713,desc:"Niagara-on-the-Lake fut la première capitale du Haut-Canada en 1792. Brûlée par les Américains en 1813, elle fut reconstruite dans un style géorgien homogène. Son architecture victorienne si parfaitement préservée lui vaut le titre de «ville la plus jolie du Canada».",hints:[{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ville victorienne au bord d'un grand lac, Fort George (1796), Shaw Festival, vignobles sur l'escarpement calcaire"},{bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Péninsule du Niagara, Ontario, Canada, à l'embouchure de la rivière Niagara dans le lac Ontario"},{bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Niagara-on-the-Lake, ville victorienne et vignobles, Ontario, Canada"},{bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Ontario, Canada, bord du lac Ontario"},{bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Canada"}]},
   {name:"Capilano Suspension Bridge — Vancouver, Canada",lat:49.3429,lng:-123.1149,desc:"Le pont suspendu de Capilano se balance sous vos pieds à 70 mètres au-dessus d'une rivière glaciale. En 1956, il fut renforcé avec du câble en acier — son prédécesseur en chanvre et câble de cèdre continuait à balancer dangereusement sous les rafales de vent.",hints:[{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pont suspendu de 136m de long à 70m au-dessus du canyon de la Capilano, construit en 1889 par George Grant Mackay"},{bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"North Vancouver, Colombie-Britannique, à 15 km du centre de Vancouver, Canada"},{bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pont suspendu de Capilano, forêt de séquoias, Vancouver, Canada"},{bc:"#052e16",tc:"#86efac",l:"FACILE",t:"North Vancouver, Colombie-Britannique, Canada"},{bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Canada"}]},
   {name:"Gaspésie — Québec, Canada",lat:49.0000,lng:-65.0000,desc:"Le Rocher Percé de Gaspésie compte parmi les plus grandes roches percées au monde — son arche mesure 20 mètres de haut. L'île Bonaventure voisine héberge l'une des plus grandes colonies de fous de Bassan accessibles au monde, avec 100 000 couples nicheurs.",hints:[{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rocher Percé (88m), bonaventure avec 100 000 fous de Bassan, parc de la Gaspésie, mont Jacques-Cartier (1 268m)"},{bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Péninsule gaspésienne, golfe du Saint-Laurent, Québec, Canada"},{bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gaspésie, rocher Percé et fous de Bassan, Québec, Canada"},{bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Péninsule gaspésienne, Québec, golfe du Saint-Laurent"},{bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Canada"}]},
   {name:"Churchill — Manitoba, Canada (ours polaires)",lat:58.7684,lng:-94.1650,desc:"Les ours polaires de Churchill se rassemblent en attendant que la baie d'Hudson gèle pour aller chasser le phoque. La ville est la seule au monde où vous pouvez observer des ours polaires sauvages depuis des véhicules spéciaux à l'automne, avant qu'ils ne migrent sur la glace.",hints:[{bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale mondiale des ours polaires, 900+ ours attendant la glace de la baie d'Hudson en octobre-novembre, aurores boréales"},{bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Manitoba, bord de la baie d'Hudson, nord du Canada, accessible en train ou avion"},{bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Churchill, capitale des ours polaires, baie d'Hudson, Manitoba"},{bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Manitoba, nord du Canada, baie d'Hudson"},{bc:"#0c1a3e",tc:"#93c5fd",l:"TRÈS FACILE",t:"Canada"}]},
