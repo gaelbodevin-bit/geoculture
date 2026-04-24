@@ -278,7 +278,7 @@ function showMenu(){
   h.push('<div class="rgrid"><div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement</div><div class="ri"><b>Précision</b>Plus tu es proche, plus tu gagnes</div><div class="ri"><b>Rapidité ×1.5</b>Bonus si tu réponds vite</div><div class="ri"><b>Expert ×3</b>Multiplicateur maximum</div></div>');
   h.push('<div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">');
   h.push('<button class="btn ba" onclick="noZoomMode=false;startGame()" style="width:auto;font-size:15px;padding:13px 28px">&#9654; Mode Normal</button>');
-  h.push('<button class="btn bg" onclick="noZoomMode=true;startGame()" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316" title="La carte reste fixe — zoom interdit !">&#128274; Mode No-Zoom</button>');
+  h.push('<button class="btn bg" onclick="noZoomMode=true;startGame()" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316" title="La carte reste fixe — zoom interdit !">🌍 Mode No-Zoom</button>');
   h.push('</div>');
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
