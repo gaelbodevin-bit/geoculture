@@ -53,6 +53,44 @@ function startGame(){
   if(!map){try{initMap();}catch(e){console.warn(e);}}
   startRound(0);
 }
+
+function prefetchTiles(lat, lng){
+  // Précharge les tuiles ESRI satellite autour du lieu cible
+  // aux niveaux de zoom utiles (4 à 14)
+  var ESRI_SAT = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+  var ESRI_LBL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}';
+  
+  function deg2tile(lat, lng, zoom){
+    var x = Math.floor((lng + 180) / 360 * Math.pow(2, zoom));
+    var y = Math.floor((1 - Math.log(Math.tan(lat * Math.PI / 180) + 1 / Math.cos(lat * Math.PI / 180)) / Math.PI) / 2 * Math.pow(2, zoom));
+    return {x:x, y:y};
+  }
+  
+  function loadTile(url){
+    var img = new Image();
+    img.src = url;
+  }
+  
+  // Zooms à précharger : vue continent (4-5), vue pays (6-8), vue ville (10-13)
+  var zooms = [4, 5, 6, 7, 8, 10, 12, 13];
+  
+  setTimeout(function(){
+    zooms.forEach(function(z){
+      var t = deg2tile(lat, lng, z);
+      // Précharger la tuile centrale + tuiles adjacentes (3x3)
+      for(var dy = -1; dy <= 1; dy++){
+        for(var dx = -1; dx <= 1; dx++){
+          var tx = t.x + dx;
+          var ty = t.y + dy;
+          var sat = ESRI_SAT.replace('{z}',z).replace('{y}',ty).replace('{x}',tx);
+          var lbl = ESRI_LBL.replace('{z}',z).replace('{y}',ty).replace('{x}',tx);
+          loadTile(sat);
+          loadTile(lbl);
+        }
+      }
+    });
+  }, 500); // délai 500ms pour ne pas bloquer le rendu initial
+}
 function startRound(idx){
   curR=idx;curL=0;playerPos=null;confirming=false;gameActive=true;
   if(playerMarker){playerMarker.remove();playerMarker=null;}
@@ -65,6 +103,9 @@ function startRound(idx){
   document.getElementById('placed-info').textContent='Cliquez sur la carte pour placer votre réponse';
   document.getElementById('hrnd').textContent=(idx+1)+'/5';
   updateDots();showHint();startTimer();
+  // Précharger les tuiles du lieu cible en arrière-plan
+  var r=roundList[curR];
+  prefetchTiles(r.lat, r.lng);
 }
 function showHint(){
   var h=roundList[curR].hints[curL];
