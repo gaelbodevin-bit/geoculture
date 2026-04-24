@@ -311,5 +311,7 @@ function exitExploreMode(){
 document.addEventListener('DOMContentLoaded',function(){
   document.getElementById('confb').onclick=confirmGuess;
   document.getElementById('skipb').onclick=function(){if(!gameActive)return;clearInterval(tiv);nextLevel();};
-  document.getElementById('startb').onclick=function(){try{initMap();}catch(e){console.error(e);}startGame();};
+  document.getElementById('startb').onclick=function(){try{initMap();}catch(e){console.error(e);}noZoomMode=false;startGame();};
+  var nozb=document.getElementById('nozb');
+  if(nozb) nozb.onclick=function(){try{initMap();}catch(e){console.error(e);}noZoomMode=true;startGame();};
 });
