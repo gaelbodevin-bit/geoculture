@@ -87,7 +87,10 @@
     <!-- ══ JEU ══ -->
     <div id="g">
       <div id="hdr">
-        <div id="logo">GÉOCULTURE</div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <div id="logo">GÉOCULTURE</div>
+          <span id="nz-badge" style="display:none;background:#1e2d45;border:1px solid #f97316;color:#f97316;font-size:10px;font-weight:700;padding:3px 8px;border-radius:5px;letter-spacing:.8px">&#128274; NO-ZOOM</span>
+        </div>
         <div id="stats">
           <div class="st"><span>Manche</span><b id="hrnd">1/5</b></div>
           <div class="st"><span>Score total</span><b id="hsc">0</b></div>
@@ -162,9 +165,9 @@
   <!-- Leaflet -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <!-- Données (492 lieux) -->
-  <script src="js/data.js?v=2"></script>
+  <script src="js/data.js"></script>
   <!-- Logique du jeu -->
-  <script src="js/game.js?v=2"></script>
+  <script src="js/game.js"></script>
 
   <!-- AdSense init (décommenter après approbation) -->
   <!--

@@ -9,6 +9,7 @@ var FLASH_COLORS=['#ef4444','#f97316','#eab308','#22c55e','#3b82f6'];
 var FLASH_LABELS=['Expert','Difficile','Moyen','Facile','Tres facile'];
 var toastT;
 var inExploreMode=false;
+var noZoomMode=false;
 
 function fmtDist(meters){
   if(meters===null||meters===undefined)return '-';
@@ -23,7 +24,15 @@ function haversine(la1,lo1,la2,lo2){
 function initMap(){
   if(map){map.remove();map=null;}
   if(typeof L==='undefined'){console.error('Leaflet not loaded');return;}
-  map=L.map('map',{center:[20,10],zoom:2,zoomControl:true,attributionControl:true,minZoom:2,maxZoom:18,maxBounds:[[-85,-180],[85,180]],maxBoundsViscosity:1.0});
+  var opts={center:[20,10],zoom:2,zoomControl:!noZoomMode,attributionControl:true,minZoom:2,maxZoom:18,maxBounds:[[-85,-180],[85,180]],maxBoundsViscosity:1.0};
+  if(noZoomMode){
+    opts.scrollWheelZoom=false;
+    opts.doubleClickZoom=false;
+    opts.touchZoom=false;
+    opts.boxZoom=false;
+    opts.keyboard=false;
+  }
+  map=L.map('map',opts);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
@@ -50,21 +59,69 @@ function startGame(){
   curR=0;
   document.getElementById('hsc').textContent='0';
   document.getElementById('overlay').classList.add('h');
+  // Afficher/masquer le badge no-zoom
+  var nzBadge=document.getElementById('nz-badge');
+  if(nzBadge) nzBadge.style.display=noZoomMode?'inline-block':'none';
   if(!map){try{initMap();}catch(e){console.warn(e);}}
+  else if(noZoomMode){
+    // Réinitialiser la carte avec les options no-zoom
+    map.remove(); map=null; initMap();
+  }
   startRound(0);
+}
+
+function prefetchTiles(lat, lng){
+  // Précharge les tuiles ESRI satellite autour du lieu cible
+  // aux niveaux de zoom utiles (4 à 14)
+  var ESRI_SAT = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+  var ESRI_LBL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}';
+  
+  function deg2tile(lat, lng, zoom){
+    var x = Math.floor((lng + 180) / 360 * Math.pow(2, zoom));
+    var y = Math.floor((1 - Math.log(Math.tan(lat * Math.PI / 180) + 1 / Math.cos(lat * Math.PI / 180)) / Math.PI) / 2 * Math.pow(2, zoom));
+    return {x:x, y:y};
+  }
+  
+  function loadTile(url){
+    var img = new Image();
+    img.src = url;
+  }
+  
+  // Zooms à précharger : vue continent (4-5), vue pays (6-8), vue ville (10-13)
+  var zooms = [4, 5, 6, 7, 8, 10, 12, 13];
+  
+  setTimeout(function(){
+    zooms.forEach(function(z){
+      var t = deg2tile(lat, lng, z);
+      // Précharger la tuile centrale + tuiles adjacentes (3x3)
+      for(var dy = -1; dy <= 1; dy++){
+        for(var dx = -1; dx <= 1; dx++){
+          var tx = t.x + dx;
+          var ty = t.y + dy;
+          var sat = ESRI_SAT.replace('{z}',z).replace('{y}',ty).replace('{x}',tx);
+          var lbl = ESRI_LBL.replace('{z}',z).replace('{y}',ty).replace('{x}',tx);
+          loadTile(sat);
+          loadTile(lbl);
+        }
+      }
+    });
+  }, 500); // délai 500ms pour ne pas bloquer le rendu initial
 }
 function startRound(idx){
   curR=idx;curL=0;playerPos=null;confirming=false;gameActive=true;
   if(playerMarker){playerMarker.remove();playerMarker=null;}
   if(targetMarker){targetMarker.remove();targetMarker=null;}
   if(lineLayer){lineLayer.remove();lineLayer=null;}
-  map.setView([20,10],2);
+  if(!noZoomMode) map.setView([20,10],2);
   document.getElementById('confb').disabled=true;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
   document.getElementById('placed-info').textContent='Cliquez sur la carte pour placer votre réponse';
   document.getElementById('hrnd').textContent=(idx+1)+'/5';
   updateDots();showHint();startTimer();
+  // Précharger les tuiles du lieu cible en arrière-plan
+  var r=roundList[curR];
+  prefetchTiles(r.lat, r.lng);
 }
 function showHint(){
   var h=roundList[curR].hints[curL];
@@ -146,8 +203,8 @@ function resolveRound(){
   if(playerPos){
     if(playerMarker)playerMarker.bindPopup('<div style="'+ps+'"><b style="color:#ea580c">📍 Votre réponse</b><br><span style="color:#666">Distance : '+fmtDist(Math.round(dist*1000))+'</span><br><span style="color:#f97316;font-weight:700">+'+pts+' pts</span></div>',{maxWidth:200});
     lineLayer=L.polyline([[playerPos.lat,playerPos.lng],[r.lat,r.lng]],{color:'#f97316',weight:2.5,dashArray:'8 5',opacity:.8}).addTo(map);
-    map.fitBounds(L.latLngBounds([[playerPos.lat,playerPos.lng],[r.lat,r.lng]]),{padding:[60,60]});
-  }else{map.setView([r.lat,r.lng],12);targetMarker.openPopup();}
+    if(!noZoomMode) map.fitBounds(L.latLngBounds([[playerPos.lat,playerPos.lng],[r.lat,r.lng]]),{padding:[60,60]});
+  }else{if(!noZoomMode) map.setView([r.lat,r.lng],12);targetMarker.openPopup();}
   document.getElementById('placed-info').textContent=dist!=null?'🎯 '+fmtDist(Math.round(dist*1000))+' — +'+pts.toLocaleString('fr-FR')+' pts':'❌ Raté — '+r.name;
   showToast(dist!=null?r.name+' · '+fmtDist(Math.round(dist*1000))+' · +'+pts+' pts':"Raté ! C'était : "+r.name);
   setTimeout(function(){showInter(pts,dist,r.name);},3000);
@@ -219,7 +276,10 @@ function showMenu(){
   h.push('<div class="otitle">GÉO<br>CULTURE</div>');
   h.push('<div class="osub">Trouve les lieux historiques sur la carte. Chaque niveau devient plus simple, mais les points diminuent.</div>');
   h.push('<div class="rgrid"><div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement</div><div class="ri"><b>Précision</b>Plus tu es proche, plus tu gagnes</div><div class="ri"><b>Rapidité ×1.5</b>Bonus si tu réponds vite</div><div class="ri"><b>Expert ×3</b>Multiplicateur maximum</div></div>');
-  h.push('<button class="btn ba" onclick="startGame()" style="width:auto;font-size:15px;padding:13px 38px;margin-top:6px">&#9654; Nouvelle partie</button>');
+  h.push('<div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">');
+  h.push('<button class="btn ba" onclick="noZoomMode=false;startGame()" style="width:auto;font-size:15px;padding:13px 28px">&#9654; Mode Normal</button>');
+  h.push('<button class="btn bg" onclick="noZoomMode=true;startGame()" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316" title="La carte reste fixe — zoom interdit !">&#128274; Mode No-Zoom</button>');
+  h.push('</div>');
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
 }
@@ -236,8 +296,10 @@ function enterExploreMode(){
   document.getElementById('overlay').classList.add('h');
   if(targetMarker)targetMarker.openPopup();
   var r=roundList[curR];
-  if(playerPos&&playerMarker){map.fitBounds(L.latLngBounds([[playerPos.lat,playerPos.lng],[r.lat,r.lng]]),{padding:[80,80]});}
-  else{map.setView([r.lat,r.lng],12);}
+  if(!noZoomMode){
+    if(playerPos&&playerMarker){map.fitBounds(L.latLngBounds([[playerPos.lat,playerPos.lng],[r.lat,r.lng]]),{padding:[80,80]});}
+    else{map.setView([r.lat,r.lng],12);}
+  }
 }
 function exitExploreMode(){
   inExploreMode=false;
