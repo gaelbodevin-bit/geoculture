@@ -26,10 +26,10 @@ function initMap(){
   if(map){map.remove();map=null;}
   if(typeof L==='undefined'){console.error('Leaflet not loaded');return;}
   var opts={
-    center:[20,10],zoom:3,
+    center:[20,10],zoom:2,
     zoomControl:!noZoomMode,
     attributionControl:true,
-    minZoom:3,maxZoom:18,
+    minZoom:2,maxZoom:18,
     worldCopyJump:false,
     maxBounds:[[-85,-180],[85,180]],
     maxBoundsViscosity:1.0
@@ -43,13 +43,18 @@ function initMap(){
     opts.dragging=false;
   }
   map=L.map('map',opts);
+  // Tuiles avec noWrap pour bloquer la répétition
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{
-    maxZoom:19,attribution:'Esri',noWrap:true
+    maxZoom:19,attribution:'Esri',noWrap:true,bounds:[[-85,-180],[85,180]]
   }).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{
-    maxZoom:19,opacity:1,noWrap:true
+    maxZoom:19,opacity:1,noWrap:true,bounds:[[-85,-180],[85,180]]
   }).addTo(map);
   map.on('click',onMapClick);
+  // Forcer le zoom minimum après init pour que la carte tienne dans le div
+  setTimeout(function(){
+    if(map) map.setMinZoom(map.getBoundsZoom(map.options.maxBounds));
+  },100);
 }
 function makePin(color){
   return L.divIcon({className:'',html:'<div style="width:18px;height:18px;background:'+color+';border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 10px rgba(0,0,0,.5)"></div>',iconSize:[18,18],iconAnchor:[9,18]});
@@ -127,7 +132,7 @@ function startRound(idx){
   if(playerMarker){playerMarker.remove();playerMarker=null;}
   if(targetMarker){targetMarker.remove();targetMarker=null;}
   if(lineLayer){lineLayer.remove();lineLayer=null;}
-  if(!noZoomMode) map.setView([20,10],3);
+  if(!noZoomMode) map.setView([20,10],2);
   document.getElementById('confb').disabled=true;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
