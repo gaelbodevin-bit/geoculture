@@ -1,4 +1,4 @@
-// ── Firebase Auth + Historique ──────────────────────────────────────────────
+// ?? Firebase Auth + Historique ??????????????????????????????????????????????
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged }
   from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
@@ -22,7 +22,7 @@ var fbProvider = new GoogleAuthProvider();
 // Utilisateur courant
 var currentUser = null;
 
-// ── Auth state ───────────────────────────────────────────────────────────────
+// ?? Auth state ???????????????????????????????????????????????????????????????
 onAuthStateChanged(fbAuth, function(user) {
   currentUser = user;
   updateAuthUI(user);
@@ -34,7 +34,7 @@ function updateAuthUI(user) {
   var name = document.getElementById('auth-name');
   if (!btn) return;
   if (user) {
-    btn.textContent = 'Déconnexion';
+    btn.textContent = 'D�connexion';
     btn.onclick = fbSignOut;
     if (avatar) { avatar.src = user.photoURL || ''; avatar.style.display = 'inline-block'; }
     if (name) name.textContent = user.displayName || user.email;
@@ -55,11 +55,11 @@ function fbSignIn() {
 
 function fbSignOut() {
   signOut(fbAuth).then(function() {
-    showToast('Déconnecté');
+    showToast('D�connect�');
   });
 }
 
-// ── Sauvegarder une partie ───────────────────────────────────────────────────
+// ?? Sauvegarder une partie ???????????????????????????????????????????????????
 function saveGame(scores, total, pct, mode) {
   if (!currentUser) return;
   var data = {
@@ -75,11 +75,11 @@ function saveGame(scores, total, pct, mode) {
     createdAt: serverTimestamp()
   };
   addDoc(collection(fbDb, 'games'), data)
-    .then(function() { showToast('Partie sauvegardée !'); })
+    .then(function() { showToast('Partie sauvegard�e !'); })
     .catch(function(e) { console.error('Save error:', e); });
 }
 
-// ── Charger l'historique ─────────────────────────────────────────────────────
+// ?? Charger l'historique ?????????????????????????????????????????????????????
 function loadHistory(callback) {
   if (!currentUser) { callback([]); return; }
   var q = query(
@@ -98,14 +98,14 @@ function loadHistory(callback) {
   });
 }
 
-// ── Afficher l'historique ────────────────────────────────────────────────────
+// ?? Afficher l'historique ????????????????????????????????????????????????????
 function showHistory() {
   if (!currentUser) {
     showToast('Connecte-toi pour voir ton historique');
     return;
   }
   var ov = document.getElementById('overlay');
-  ov.innerHTML = '<div class="otitle" style="font-size:32px">⏳ Chargement...</div>';
+  ov.innerHTML = '<div class="otitle" style="font-size:32px">? Chargement...</div>';
   ov.classList.remove('h');
 
   loadHistory(function(games) {
@@ -117,13 +117,13 @@ function showHistory() {
     h.push('</div>');
 
     if (games.length === 0) {
-      h.push('<div class="osub">Aucune partie enregistrée pour le moment.</div>');
+      h.push('<div class="osub">Aucune partie enregistr�e pour le moment.</div>');
     } else {
       h.push('<div class="ocard" style="max-height:320px;overflow-y:auto;width:100%;max-width:420px">');
       games.forEach(function(g) {
         var date = g.createdAt ? new Date(g.createdAt.seconds * 1000) : new Date();
         var dateStr = date.toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
-        var modeLabel = g.mode === 'nozoom' ? ' · No-Zoom' : '';
+        var modeLabel = g.mode === 'nozoom' ? ' � No-Zoom' : '';
         var barColor = g.pct >= 80 ? '#22c55e' : g.pct >= 50 ? '#fbbf24' : '#f97316';
         h.push('<div style="padding:10px 0;border-bottom:1px solid #1e2d45">');
         h.push('<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">');
@@ -138,8 +138,8 @@ function showHistory() {
         if (g.rounds && g.rounds.length) {
           h.push('<div style="font-size:11px;color:#4b5563">');
           g.rounds.forEach(function(r) {
-            var dist = r.distM != null ? (r.distM < 1000 ? r.distM+'m' : Math.round(r.distM/1000)+'km') : 'raté';
-            h.push('<span style="margin-right:8px">'+r.name.split('—')[0].trim()+' ('+dist+')</span>');
+            var dist = r.distM != null ? (r.distM < 1000 ? r.distM+'m' : Math.round(r.distM/1000)+'km') : 'rat�';
+            h.push('<span style="margin-right:8px">'+r.name.split('�')[0].trim()+' ('+dist+')</span>');
           });
           h.push('</div>');
         }
