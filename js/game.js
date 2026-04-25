@@ -279,14 +279,28 @@ function showMenu(){
   clearInterval(tiv);gameActive=false;
   if(!map){try{initMap();}catch(e){console.error(e);}}
   var ov=document.getElementById('overlay');
+  var user=typeof getCurrentUser==='function'?getCurrentUser():null;
+  var authHtml='';
+  if(user){
+    authHtml='<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;justify-content:center">'
+      +'<img src="'+(user.photoURL||'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">'
+      +'<span style="color:#e2e8f0;font-size:13px;font-weight:600">'+(user.displayName||user.email)+'</span>'
+      +'<button onclick="fbSignOut()" style="font-size:10px;padding:3px 8px;border-radius:5px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer">Déconnexion</button>'
+      +'</div>';
+  } else {
+    authHtml='<button onclick="fbSignIn()" style="font-size:13px;font-weight:600;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer;margin-bottom:4px">Se connecter avec Google</button>';
+  }
   var h=[];
-  h.push('<div class="otitle">GÉO<br>CULTURE</div>');
-  h.push('<div class="osub">Trouve les lieux historiques sur la carte. Chaque niveau devient plus simple, mais les points diminuent.</div>');
-  h.push('<div class="rgrid"><div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement</div><div class="ri"><b>Précision</b>Plus tu es proche, plus tu gagnes</div><div class="ri"><b>Rapidité ×1.5</b>Bonus si tu réponds vite</div><div class="ri"><b>Expert ×3</b>Multiplicateur maximum</div></div>');
-  h.push('<div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">');
-  h.push('<button class="btn ba" onclick="noZoomMode=false;startGame()" style="width:auto;font-size:15px;padding:13px 28px">&#9654; Mode Normal</button>');
-  h.push('<button class="btn bg" onclick="noZoomMode=true;startGame()" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316" title="La carte reste fixe — zoom interdit !">?? Mode No-Zoom</button>');
+  h.push('<div class="otitle" style="font-size:40px">GEO<br>CULTURE</div>');
+  h.push(authHtml);
+  h.push('<div class="rgrid"><div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement</div><div class="ri"><b>Précision</b>Plus tu es proche, plus tu gagnes</div><div class="ri"><b>Rapidité x1.5</b>Bonus si tu réponds vite</div><div class="ri"><b>Expert x3</b>Multiplicateur maximum</div></div>');
+  h.push('<div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center">');
+  h.push('<button class="btn ba" onclick="noZoomMode=false;startGame()" style="width:auto;font-size:15px;padding:13px 28px">Mode Normal</button>');
+  h.push('<button class="btn bg" onclick="noZoomMode=true;startGame()" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316">Mode No-Zoom</button>');
   h.push('</div>');
+  if(user){
+    h.push('<button onclick="showHistory()" style="font-size:12px;color:#6b7280;background:transparent;border:none;cursor:pointer;margin-top:4px;text-decoration:underline">Voir mon historique</button>');
+  }
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
 }
