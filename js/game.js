@@ -47,7 +47,7 @@ function onMapClick(e){
   if(playerMarker)playerMarker.remove();
   playerMarker=L.marker([playerPos.lat,playerPos.lng],{icon:makePin('#f97316')}).addTo(map);
   document.getElementById('confb').disabled=false;
-  document.getElementById('placed-info').textContent='?? '+playerPos.lat.toFixed(3)+', '+playerPos.lng.toFixed(3);
+  document.getElementById('placed-info').textContent='\u1f4cd '+playerPos.lat.toFixed(3)+', '+playerPos.lng.toFixed(3);
 }
 function shuffle(a){
   var b=a.slice();
@@ -66,15 +66,15 @@ function startGame(){
   if(!map){try{initMap();}catch(e){console.warn(e);}}
   else if(noZoomMode!==lastNoZoomMode){lastNoZoomMode=noZoomMode;map.remove();map=null;try{initMap();}catch(e){}}
   else if(noZoomMode){
-    // Réinitialiser la carte avec les options no-zoom
+    // R\u00e9initialiser la carte avec les options no-zoom
     map.remove(); map=null; initMap();
   }
   startRound(0);
 }
 
 function prefetchTiles(lat, lng){
-  // Précharge les tuiles ESRI satellite autour du lieu cible
-  // aux niveaux de zoom utiles (4 à 14)
+  // Pr\u00e9charge les tuiles ESRI satellite autour du lieu cible
+  // aux niveaux de zoom utiles (4 \u00e0 14)
   var ESRI_SAT = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
   var ESRI_LBL = 'https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}';
   
@@ -89,13 +89,13 @@ function prefetchTiles(lat, lng){
     img.src = url;
   }
   
-  // Zooms à précharger : vue continent (4-5), vue pays (6-8), vue ville (10-13)
+  // Zooms \u00e0 pr\u00e9charger : vue continent (4-5), vue pays (6-8), vue ville (10-13)
   var zooms = [4, 5, 6, 7, 8, 10, 12, 13];
   
   setTimeout(function(){
     zooms.forEach(function(z){
       var t = deg2tile(lat, lng, z);
-      // Précharger la tuile centrale + tuiles adjacentes (3x3)
+      // Pr\u00e9charger la tuile centrale + tuiles adjacentes (3x3)
       for(var dy = -1; dy <= 1; dy++){
         for(var dx = -1; dx <= 1; dx++){
           var tx = t.x + dx;
@@ -107,7 +107,7 @@ function prefetchTiles(lat, lng){
         }
       }
     });
-  }, 500); // délai 500ms pour ne pas bloquer le rendu initial
+  }, 500); // d\u00e9lai 500ms pour ne pas bloquer le rendu initial
 }
 function startRound(idx){
   curR=idx;curL=0;playerPos=null;confirming=false;gameActive=true;
@@ -118,10 +118,10 @@ function startRound(idx){
   document.getElementById('confb').disabled=true;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
-  document.getElementById('placed-info').textContent='Cliquez sur la carte pour placer votre réponse';
+  document.getElementById('placed-info').textContent='Cliquez sur la carte pour placer votre r\u00e9ponse';
   document.getElementById('hrnd').textContent=(idx+1)+'/5';
   updateDots();showHint();startTimer();
-  // Précharger les tuiles du lieu cible en arrière-plan
+  // Pr\u00e9charger les tuiles du lieu cible en arri\u00e8re-plan
   var r=roundList[curR];
   prefetchTiles(r.lat, r.lng);
 }
@@ -201,14 +201,14 @@ function resolveRound(){
   document.getElementById('hsc').textContent=total.toLocaleString('fr-FR');
   var ps='font-family:system-ui,sans-serif;font-size:13px;line-height:1.5;min-width:140px';
   targetMarker=L.marker([r.lat,r.lng],{icon:makePin('#22c55e')})
-    .bindPopup('<div style="'+ps+'"><b style="color:#15803d">? '+r.name+'</b>'+(dist?'<br><span style="color:#666">Distance : '+fmtDist(Math.round(dist*1000))+'</span>':'<br><span style="color:#666">Pas de tentative</span>')+'</div>',{maxWidth:220}).addTo(map);
+    .bindPopup('<div style="'+ps+'"><b style="color:#15803d">\u2713 '+r.name+'</b>'+(dist?'<br><span style="color:#666">Distance : '+fmtDist(Math.round(dist*1000))+'</span>':'<br><span style="color:#666">Pas de tentative</span>')+'</div>',{maxWidth:220}).addTo(map);
   if(playerPos){
-    if(playerMarker)playerMarker.bindPopup('<div style="'+ps+'"><b style="color:#ea580c">?? Votre réponse</b><br><span style="color:#666">Distance : '+fmtDist(Math.round(dist*1000))+'</span><br><span style="color:#f97316;font-weight:700">+'+pts+' pts</span></div>',{maxWidth:200});
+    if(playerMarker)playerMarker.bindPopup('<div style="'+ps+'"><b style="color:#ea580c">\u1f4cd Votre r\u00e9ponse</b><br><span style="color:#666">Distance : '+fmtDist(Math.round(dist*1000))+'</span><br><span style="color:#f97316;font-weight:700">+'+pts+' pts</span></div>',{maxWidth:200});
     lineLayer=L.polyline([[playerPos.lat,playerPos.lng],[r.lat,r.lng]],{color:'#f97316',weight:2.5,dashArray:'8 5',opacity:.8}).addTo(map);
     if(!noZoomMode) map.fitBounds(L.latLngBounds([[playerPos.lat,playerPos.lng],[r.lat,r.lng]]),{padding:[60,60]});
   }else{if(!noZoomMode) map.setView([r.lat,r.lng],12);targetMarker.openPopup();}
-  document.getElementById('placed-info').textContent=dist!=null?'?? '+fmtDist(Math.round(dist*1000))+' — +'+pts.toLocaleString('fr-FR')+' pts':'? Raté — '+r.name;
-  showToast(dist!=null?r.name+' · '+fmtDist(Math.round(dist*1000))+' · +'+pts+' pts':"Raté ! C'était : "+r.name);
+  document.getElementById('placed-info').textContent=dist!=null?'\u1f3af '+fmtDist(Math.round(dist*1000))+' \u2014 +'+pts.toLocaleString('fr-FR')+' pts':'\u274c Rat\u00e9 \u2014 '+r.name;
+  showToast(dist!=null?r.name+' \u00b7 '+fmtDist(Math.round(dist*1000))+' \u00b7 +'+pts+' pts':"Rat\u00e9 ! C'\u00e9tait : "+r.name);
   setTimeout(function(){showInter(pts,dist,r.name);},3000);
 }
 function showInter(pts,dist,name){
@@ -226,11 +226,11 @@ function showInter(pts,dist,name){
   h.push('<div class="osub" style="color:#94a3b8;font-size:12px;line-height:1.55;margin-top:-4px;max-width:360px;text-align:center">'+placeDesc+'</div>');
   h.push('<div style="display:flex;align-items:center;gap:10px;width:100%;max-width:320px"><div style="flex:1;height:8px;background:#1e2d45;border-radius:4px;overflow:hidden"><div style="width:'+pctRound+'%;height:100%;background:'+barColor+';border-radius:4px;transition:width .6s ease"></div></div><span style="font-size:13px;font-weight:600;color:'+barColor+';white-space:nowrap">'+pts.toLocaleString('fr-FR')+' / '+mx.toLocaleString('fr-FR')+' pts</span></div>');
   h.push('<div class="osub" style="color:#f1f5f9;font-size:15px;font-weight:600;margin-top:-4px">'+name+'</div>');
-  h.push('<div class="osub" style="margin-top:-6px">'+(dist!=null?fmtDist(Math.round(dist*1000))+' de la cible':'Aucun point placé')+'</div>');
+  h.push('<div class="osub" style="margin-top:-6px">'+(dist!=null?fmtDist(Math.round(dist*1000))+' de la cible':'Aucun point plac\u00e9')+'</div>');
   h.push('<div style="color:#6b7280;font-size:13px">Total : <b style="color:#f97316">'+total.toLocaleString('fr-FR')+' pts</b></div>');
   h.push('<div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">');
   h.push('<button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">&#8962; Menu</button>');
-  h.push('<button onclick="enterExploreMode()" style="font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">?? Explorer</button>');
+  h.push('<button onclick="enterExploreMode()" style="font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">\u1f50d Explorer</button>');
   h.push('<button class="btn ba" onclick="'+(isLast?'showEnd()':'nextRound()')+'" style="width:auto;padding:12px 32px;font-size:14px">'+(isLast?'Voir le bilan &#8594;':'Manche suivante &#8594;')+'</button>');
   h.push('</div>');
   ov.innerHTML=h.join('');
@@ -248,29 +248,29 @@ function showInter(pts,dist,name){
         }).catch(function(){var el=document.getElementById(id);if(el)el.style.display='none';});
     }
     tryWiki('fr');
-  })(imgId,roundList[curR].name.replace(/\s*—.*/,'').trim());
+  })(imgId,roundList[curR].name.replace(/\s*\u2014.*/,'').trim());
 }
 function showEnd(){
   var totalMax=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
   var pct=totalMax>0?Math.round(total/totalMax*100):0;
   var rows=roundScores.map(function(s){
-    var distTxt=s.distM!=null?fmtDist(s.distM):'raté';
+    var distTxt=s.distM!=null?fmtDist(s.distM):'rat\u00e9';
     return '<div class="orow"><span style="font-size:11px;max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1">'+s.name+'</span><span style="color:#6b7280;font-size:11px;margin:0 6px;flex-shrink:0">'+distTxt+'</span><span style="font-size:11px;color:#4b5563;flex-shrink:0">'+s.pts.toLocaleString('fr-FR')+'/'+s.maxPts.toLocaleString('fr-FR')+'</span></div>';
   }).join('');
-  var rank=pct>=90?'Géographe légendaire':pct>=70?'Expert international':pct>=50?'Bon explorateur':pct>=30?'En progression':'Débutant courageux';
+  var rank=pct>=90?'G\u00e9ographe l\u00e9gendaire':pct>=70?'Expert international':pct>=50?'Bon explorateur':pct>=30?'En progression':'D\u00e9butant courageux';
   var ov=document.getElementById('overlay');
   var h=[];
-  h.push('<div class="otitle" style="font-size:38px">Terminé !</div>');
-  h.push('<div class="osub" style="color:#f97316;font-weight:700;font-size:15px">'+rank+' — '+pct+'%</div>');
+  h.push('<div class="otitle" style="font-size:38px">Termin\u00e9 !</div>');
+  h.push('<div class="osub" style="color:#f97316;font-weight:700;font-size:15px">'+rank+' \u2014 '+pct+'%</div>');
   h.push('<div class="ocard"><div style="display:flex;justify-content:space-between;font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:.5px;padding-bottom:6px;border-bottom:1px solid #1e2d45;margin-bottom:4px"><span>Lieu</span><span>Distance</span><span>Score / Max</span></div>'+rows+'<div class="otot"><span>Total</span><span style="font-size:12px;color:#6b7280;margin-right:auto;padding-left:12px">'+total.toLocaleString('fr-FR')+' / '+totalMax.toLocaleString('fr-FR')+' pts</span><span class="p">'+pct+'%</span></div></div>');
   h.push('<div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">');
   h.push('<button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">&#8962; Menu</button>');
-  h.push('<button onclick="enterExploreMode()" style="font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">?? Explorer</button>');
+  h.push('<button onclick="enterExploreMode()" style="font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">\u1f50d Explorer</button>');
   h.push('<button class="btn ba" onclick="startGame()" style="width:auto;padding:12px 32px;font-size:14px">&#8634; Rejouer</button>');
   h.push('</div>');
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
-  // Sauvegarder la partie si connecté
+  // Sauvegarder la partie si connect\u00e9
   if(typeof saveGame === 'function'){
     saveGame(roundScores, total, pct, noZoomMode ? 'nozoom' : 'normal');
   }
@@ -285,7 +285,7 @@ function showMenu(){
     authHtml='<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;justify-content:center">'
       +'<img src="'+(user.photoURL||'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">'
       +'<span style="color:#e2e8f0;font-size:13px;font-weight:600">'+(user.displayName||user.email)+'</span>'
-      +'<button onclick="fbSignOut()" style="font-size:10px;padding:3px 8px;border-radius:5px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer">Déconnexion</button>'
+      +'<button onclick="fbSignOut()" style="font-size:10px;padding:3px 8px;border-radius:5px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer">D\u00e9connexion</button>'
       +'</div>';
   } else {
     authHtml='<button onclick="fbSignIn()" style="font-size:13px;font-weight:600;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer;margin-bottom:4px">Se connecter avec Google</button>';
@@ -293,7 +293,7 @@ function showMenu(){
   var h=[];
   h.push('<div class="otitle" style="font-size:40px">GEO<br>CULTURE</div>');
   h.push(authHtml);
-  h.push('<div class="rgrid"><div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement</div><div class="ri"><b>Précision</b>Plus tu es proche, plus tu gagnes</div><div class="ri"><b>Rapidité x1.5</b>Bonus si tu réponds vite</div><div class="ri"><b>Expert x3</b>Multiplicateur maximum</div></div>');
+  h.push('<div class="rgrid"><div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement</div><div class="ri"><b>Pr\u00e9cision</b>Plus tu es proche, plus tu gagnes</div><div class="ri"><b>Rapidit\u00e9 x1.5</b>Bonus si tu r\u00e9ponds vite</div><div class="ri"><b>Expert x3</b>Multiplicateur maximum</div></div>');
   h.push('<div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center">');
   h.push('<button class="btn ba" onclick="noZoomMode=false;startGame()" style="width:auto;font-size:15px;padding:13px 28px">Mode Normal</button>');
   h.push('<button class="btn bg" onclick="noZoomMode=true;startGame()" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316">Mode No-Zoom</button>');

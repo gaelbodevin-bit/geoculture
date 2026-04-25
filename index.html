@@ -157,7 +157,10 @@
           <button id="back-btn" onclick="exitExploreMode()">? Retour aux résultats</button>
           <div id="overlay">
             <div class="otitle" style="font-size:40px">GEO<br>CULTURE</div>
-            <div class="osub">Trouve les lieux historiques sur la carte.</div>
+            <div id="overlay-auth" style="display:flex;align-items:center;gap:8px;margin:4px 0;justify-content:center">
+              <!-- Rempli dynamiquement par firebase-auth.js -->
+              <button onclick="fbSignIn()" id="google-btn" style="font-size:13px;font-weight:600;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer">Se connecter avec Google</button>
+            </div>
             <div class="rgrid">
               <div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement</div>
               <div class="ri"><b>Precision</b>Plus tu es proche, plus tu gagnes</div>
@@ -168,6 +171,7 @@
               <button class="btn ba" id="startb" style="width:auto;font-size:15px;padding:13px 28px">Mode Normal</button>
               <button class="btn bg" id="nozb" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316">Mode No-Zoom</button>
             </div>
+            <a onclick="showHistory()" id="hist-link" style="display:none;font-size:12px;color:#6b7280;cursor:pointer;margin-top:4px;text-decoration:underline">Voir mon historique</a>
           </div>
         </div>
       </div>
