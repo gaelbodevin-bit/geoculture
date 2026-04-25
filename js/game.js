@@ -25,14 +25,14 @@ function haversine(la1,lo1,la2,lo2){
 function initMap(){
   if(map){map.remove();map=null;}
   if(typeof L==='undefined'){console.error('Leaflet not loaded');return;}
+  var worldBounds=L.latLngBounds([[-75,-180],[85,180]]);
   var opts={
-    center:[20,10],zoom:2,
+    worldCopyJump:false,
+    maxBounds:worldBounds,
+    maxBoundsViscosity:1.0,
     zoomControl:!noZoomMode,
     attributionControl:true,
-    minZoom:2,maxZoom:18,
-    worldCopyJump:false,
-    maxBounds:[[-85,-180],[85,180]],
-    maxBoundsViscosity:1.0
+    maxZoom:18
   };
   if(noZoomMode){
     opts.scrollWheelZoom=false;
@@ -43,18 +43,17 @@ function initMap(){
     opts.dragging=false;
   }
   map=L.map('map',opts);
-  // Tuiles avec noWrap pour bloquer la répétition
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{
-    maxZoom:19,attribution:'Esri',noWrap:true,bounds:[[-85,-180],[85,180]]
+    maxZoom:19,attribution:'Esri',noWrap:true
   }).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{
-    maxZoom:19,opacity:1,noWrap:true,bounds:[[-85,-180],[85,180]]
+    maxZoom:19,opacity:1,noWrap:true
   }).addTo(map);
   map.on('click',onMapClick);
-  // Forcer le zoom minimum après init pour que la carte tienne dans le div
-  setTimeout(function(){
-    if(map) map.setMinZoom(map.getBoundsZoom(map.options.maxBounds));
-  },100);
+  // Adapter le zoom pour remplir exactement le div sans bandes blanches
+  map.fitBounds(worldBounds,{animate:false});
+  var minZ=map.getZoom();
+  map.setMinZoom(minZ);
 }
 function makePin(color){
   return L.divIcon({className:'',html:'<div style="width:18px;height:18px;background:'+color+';border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 10px rgba(0,0,0,.5)"></div>',iconSize:[18,18],iconAnchor:[9,18]});
@@ -132,7 +131,7 @@ function startRound(idx){
   if(playerMarker){playerMarker.remove();playerMarker=null;}
   if(targetMarker){targetMarker.remove();targetMarker=null;}
   if(lineLayer){lineLayer.remove();lineLayer=null;}
-  if(!noZoomMode) map.setView([20,10],2);
+  if(!noZoomMode){var wb=L.latLngBounds([[-75,-180],[85,180]]);map.fitBounds(wb,{animate:false});}
   document.getElementById('confb').disabled=true;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
