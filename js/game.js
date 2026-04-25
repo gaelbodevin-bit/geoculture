@@ -31,7 +31,10 @@ function initMap(){
     minZoom:2,
     maxZoom:18,
     zoomControl:!noZoomMode,
-    attributionControl:true
+    attributionControl:true,
+    worldCopyJump:false,
+    maxBounds:[[-90,-220],[90,220]],
+    maxBoundsViscosity:0.5
   };
   if(noZoomMode){
     opts.scrollWheelZoom=false;
@@ -42,19 +45,11 @@ function initMap(){
     opts.dragging=false;
   }
   map=L.map('map',opts);
-  // Satellite ESRI (zoom 3+)
-  var satellite=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{
-    maxZoom:19,attribution:'Esri',minZoom:3
-  });
-  // OpenStreetMap pour vue monde (zoom 2)
-  var osm=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-    maxZoom:3,attribution:'OSM'
-  });
-  osm.addTo(map);
-  satellite.addTo(map);
-  // Labels ESRI
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{
+    maxZoom:19,attribution:'Esri'
+  }).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{
-    maxZoom:19,opacity:1,minZoom:3
+    maxZoom:19,opacity:1
   }).addTo(map);
   map.on('click',onMapClick);
 }
