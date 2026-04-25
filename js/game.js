@@ -31,8 +31,7 @@ function initMap(){
     minZoom:2,
     maxZoom:18,
     zoomControl:!noZoomMode,
-    attributionControl:true,
-    worldCopyJump:false
+    attributionControl:true
   };
   if(noZoomMode){
     opts.scrollWheelZoom=false;
@@ -43,22 +42,21 @@ function initMap(){
     opts.dragging=false;
   }
   map=L.map('map',opts);
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{
-    maxZoom:19,attribution:'Esri'
-  }).addTo(map);
+  // Satellite ESRI (zoom 3+)
+  var satellite=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{
+    maxZoom:19,attribution:'Esri',minZoom:3
+  });
+  // OpenStreetMap pour vue monde (zoom 2)
+  var osm=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+    maxZoom:3,attribution:'OSM'
+  });
+  osm.addTo(map);
+  satellite.addTo(map);
+  // Labels ESRI
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{
-    maxZoom:19,opacity:1
+    maxZoom:19,opacity:1,minZoom:3
   }).addTo(map);
   map.on('click',onMapClick);
-  // Calculer le zoom exact pour remplir le div
-  setTimeout(function(){
-    if(!map) return;
-    var z = map.getBoundsZoom(L.latLngBounds([[-75,-180],[75,180]]));
-    map.setMinZoom(z);
-    map.setZoom(z);
-    // Bloquer le pan hors du monde APRÈS avoir fixé le zoom
-    map.setMaxBounds(L.latLngBounds([[-85,-180],[85,180]]));
-  },200);
 }
 function makePin(color){
   return L.divIcon({className:'',html:'<div style="width:18px;height:18px;background:'+color+';border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 10px rgba(0,0,0,.5)"></div>',iconSize:[18,18],iconAnchor:[9,18]});
@@ -136,7 +134,7 @@ function startRound(idx){
   if(playerMarker){playerMarker.remove();playerMarker=null;}
   if(targetMarker){targetMarker.remove();targetMarker=null;}
   if(lineLayer){lineLayer.remove();lineLayer=null;}
-  if(!noZoomMode){map.setView([20,10],map.getMinZoom());}
+  if(!noZoomMode){map.setView([20,10],2);}
   document.getElementById('confb').disabled=true;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
