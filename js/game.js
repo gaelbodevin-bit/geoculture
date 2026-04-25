@@ -268,6 +268,10 @@ function showEnd(){
   h.push('</div>');
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
+  // Sauvegarder la partie si connecté
+  if(typeof saveGame === 'function'){
+    saveGame(roundScores, total, pct, noZoomMode ? 'nozoom' : 'normal');
+  }
 }
 function showMenu(){
   clearInterval(tiv);gameActive=false;
