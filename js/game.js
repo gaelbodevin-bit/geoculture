@@ -54,7 +54,7 @@ function onMapClick(e){
   if(playerMarker)playerMarker.remove();
   playerMarker=L.marker([playerPos.lat,playerPos.lng],{icon:makePin('#f97316')}).addTo(map);
   document.getElementById('confb').disabled=false;
-  document.getElementById('placed-info').textContent=`\u00f0\u009f\u0093\u008d ${playerPos.lat.toFixed(3)}, ${playerPos.lng.toFixed(3)}`;
+  document.getElementById('placed-info').textContent=` ${playerPos.lat.toFixed(3)}, ${playerPos.lng.toFixed(3)}`;
 }
 
 function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]]}return b}
@@ -178,15 +178,15 @@ function resolveRound(){
   document.getElementById('hsc').textContent=total.toLocaleString('fr-FR');
   const popupStyle='font-family:system-ui,sans-serif;font-size:13px;line-height:1.5;min-width:140px';
   targetMarker=L.marker([r.lat,r.lng],{icon:makePin('#22c55e')})
-    .bindPopup(`<div style="${popupStyle}"><b style="color:#15803d">\u00e2\u009c\u0093 ${r.name}</b>${dist?`<br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span>`:'<br><span style="color:#666">Pas de tentative</span>'}</div>`,{maxWidth:220}).addTo(map);
+    .bindPopup(`<div style="${popupStyle}"><b style="color:#15803d">&#10003; ${r.name}</b>${dist?`<br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span>`:'<br><span style="color:#666">Pas de tentative</span>'}</div>`,{maxWidth:220}).addTo(map);
   if(playerPos){
-    if(playerMarker) playerMarker.bindPopup(`<div style="${popupStyle}"><b style="color:#ea580c">\u00f0\u009f\u0093\u008d Votre r\u00c3\u00a9ponse</b><br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span><br><span style="color:#f97316;font-weight:700">+${pts} pts</span></div>`,{maxWidth:200});
+    if(playerMarker) playerMarker.bindPopup(`<div style="${popupStyle}"><b style="color:#ea580c"> Votre r\u00c3\u00a9ponse</b><br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span><br><span style="color:#f97316;font-weight:700">+${pts} pts</span></div>`,{maxWidth:200});
     lineLayer=L.polyline([[playerPos.lat,playerPos.lng],[r.lat,r.lng]],{color:'#f97316',weight:2.5,dashArray:'8 5',opacity:.8}).addTo(map);
     map.fitBounds(L.latLngBounds([[playerPos.lat,playerPos.lng],[r.lat,r.lng]]),{padding:[60,60]});
   } else {
     map.setView([r.lat,r.lng],12);targetMarker.openPopup();
   }
-  document.getElementById('placed-info').textContent=dist!=null?`\u00f0\u009f\u008e\u00af ${fmtDist(Math.round(dist*1000))} \u00e2\u0080\u0094 +${pts.toLocaleString('fr-FR')} pts`:`\u00e2\u009d\u008c Rat\u00c3\u00a9 \u00e2\u0080\u0094 ${r.name}`;
+  document.getElementById('placed-info').textContent=dist!=null?` ${fmtDist(Math.round(dist*1000))} \u00e2\u0080\u0094 +${pts.toLocaleString('fr-FR')} pts`:`X Rat\u00c3\u00a9 \u00e2\u0080\u0094 ${r.name}`;
   showToast(dist!=null?`${r.name} \u00c2\u00b7 ${fmtDist(Math.round(dist*1000))} \u00c2\u00b7 +${pts} pts`:`Rat\u00c3\u00a9 ! C'\u00c3\u00a9tait : ${r.name}`);
   setTimeout(()=>{
     curR+1<roundList.length?showInter(pts,dist,r.name):showEnd();
@@ -217,9 +217,9 @@ function showInter(pts,dist,name){
     <div class="osub" style="margin-top:-6px">${dist!=null?fmtDist(Math.round(dist*1000))+' de la cible':'Aucun point plac\u00c3\u00a9'}</div>
     <div style="color:#6b7280;font-size:13px">Total : <b style="color:#f97316">${total.toLocaleString('fr-FR')} pts</b></div>
     <div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">
-      <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">\u00e2\u008c\u0082 Menu</button>
-      <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">\u00f0\u009f\u0094\u008d Explorer la carte</button>
-      <button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante \u00e2\u0086\u0092</button>
+      <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">Menu</button>
+      <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">Explorer la carte</button>
+      <button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante &#8594;</button>
     </div>
     <div id="ad-inter">
       <!-- PUB RECTANGLE 300x250 (d\u00c3\u00a9commenter apr\u00c3\u00a8s approbation AdSense)
@@ -279,9 +279,9 @@ function showEnd(){
       </div>
     </div>
     <div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">
-      <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">\u00e2\u008c\u0082 Menu</button>
-      <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">\u00f0\u009f\u0094\u008d Explorer la carte</button>
-      <button class="btn ba" onclick="startGame()" style="width:auto;padding:12px 32px;font-size:14px">\u00e2\u0086\u00ba Rejouer</button>
+      <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">Menu</button>
+      <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">Explorer la carte</button>
+      <button class="btn ba" onclick="startGame()" style="width:auto;padding:12px 32px;font-size:14px">Rejouer</button>
     </div>
     <div id="ad-inter">
       <!-- PUB RECTANGLE 300x250 (d\u00c3\u00a9commenter apr\u00c3\u00a8s approbation AdSense)
