@@ -9,7 +9,7 @@ var roundList=[],curR=0,curL=0,total=0,timeLeft=T,tiv=null;
 var playerPos=null,gameActive=false,confirming=false,roundScores=[];
 
 function fmtDist(meters){
-  if(meters===null||meters===undefined)return 'â';
+  if(meters===null||meters===undefined)return '\u00e2\u0080\u0094';
   if(meters<1000)return meters.toLocaleString('fr-FR')+' m';
   return (meters/1000).toLocaleString('fr-FR',{maximumFractionDigits:1})+' km';
 }
@@ -37,7 +37,7 @@ function initMap(){
   }
   map=L.map('map',mapOpts);
   // Tuiles satellite ESRI + labels
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'© Esri'}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'\u00a9 Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
 }
@@ -54,7 +54,7 @@ function onMapClick(e){
   if(playerMarker)playerMarker.remove();
   playerMarker=L.marker([playerPos.lat,playerPos.lng],{icon:makePin('#f97316')}).addTo(map);
   document.getElementById('confb').disabled=false;
-  document.getElementById('placed-info').textContent=`ð ${playerPos.lat.toFixed(3)}, ${playerPos.lng.toFixed(3)}`;
+  document.getElementById('placed-info').textContent=`\u00f0\u009f\u0093\u008d ${playerPos.lat.toFixed(3)}, ${playerPos.lng.toFixed(3)}`;
 }
 
 function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]]}return b}
@@ -65,7 +65,7 @@ function startGame(){
   curR=0;
   document.getElementById('hsc').textContent='0';
   document.getElementById('overlay').classList.add('h');
-  // S'assurer que la carte est initialisÃ©e
+  // S'assurer que la carte est initialis\u00c3\u00a9e
   if(!map){ try{ initMap(); }catch(e){ console.warn('Map init failed:',e); } }
   startRound(0);
 }
@@ -79,7 +79,7 @@ function startRound(idx){
   document.getElementById('confb').disabled=true;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
-  document.getElementById('placed-info').textContent='Cliquez sur la carte pour placer votre rÃ©ponse';
+  document.getElementById('placed-info').textContent='Cliquez sur la carte pour placer votre r\u00c3\u00a9ponse';
   document.getElementById('hrnd').textContent=`${idx+1}/5`;
   updateDots();showHint();startTimer();
   prefetchTiles(roundList[curR].lat,roundList[curR].lng);
@@ -94,7 +94,7 @@ function showHint(){
   const mx=Math.round(BASE_PTS[level]*1.5);
   const timeToMax=Math.round(T*0.67);
   document.getElementById('lvl-max').textContent=mx.toLocaleString('fr-FR')+' pts';
-  document.getElementById('lvl-mult').textContent='Score max si rÃ©ponse < '+timeToMax+'s et < 1 km';
+  document.getElementById('lvl-mult').textContent='Score max si r\u00c3\u00a9ponse < '+timeToMax+'s et < 1 km';
   let remaining=total;
   for(let i=curR;i<roundList.length;i++){
     remaining+=i===curR?mx:Math.round(BASE_PTS[5]*1.5);
@@ -130,7 +130,7 @@ function renderTimer(){
 }
 
 var FLASH_COLORS=['#ef4444','#f97316','#eab308','#22c55e','#3b82f6'];
-var FLASH_LABELS=['Expert','Difficile','Moyen','Facile','TrÃ¨s facile'];
+var FLASH_LABELS=['Expert','Difficile','Moyen','Facile','Tr\u00c3\u00a8s facile'];
 
 function triggerFlash(level){
   const el=document.getElementById('level-flash');
@@ -178,16 +178,16 @@ function resolveRound(){
   document.getElementById('hsc').textContent=total.toLocaleString('fr-FR');
   const popupStyle='font-family:system-ui,sans-serif;font-size:13px;line-height:1.5;min-width:140px';
   targetMarker=L.marker([r.lat,r.lng],{icon:makePin('#22c55e')})
-    .bindPopup(`<div style="${popupStyle}"><b style="color:#15803d">â ${r.name}</b>${dist?`<br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span>`:'<br><span style="color:#666">Pas de tentative</span>'}</div>`,{maxWidth:220}).addTo(map);
+    .bindPopup(`<div style="${popupStyle}"><b style="color:#15803d">\u00e2\u009c\u0093 ${r.name}</b>${dist?`<br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span>`:'<br><span style="color:#666">Pas de tentative</span>'}</div>`,{maxWidth:220}).addTo(map);
   if(playerPos){
-    if(playerMarker) playerMarker.bindPopup(`<div style="${popupStyle}"><b style="color:#ea580c">ð Votre rÃ©ponse</b><br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span><br><span style="color:#f97316;font-weight:700">+${pts} pts</span></div>`,{maxWidth:200});
+    if(playerMarker) playerMarker.bindPopup(`<div style="${popupStyle}"><b style="color:#ea580c">\u00f0\u009f\u0093\u008d Votre r\u00c3\u00a9ponse</b><br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span><br><span style="color:#f97316;font-weight:700">+${pts} pts</span></div>`,{maxWidth:200});
     lineLayer=L.polyline([[playerPos.lat,playerPos.lng],[r.lat,r.lng]],{color:'#f97316',weight:2.5,dashArray:'8 5',opacity:.8}).addTo(map);
     map.fitBounds(L.latLngBounds([[playerPos.lat,playerPos.lng],[r.lat,r.lng]]),{padding:[60,60]});
   } else {
     map.setView([r.lat,r.lng],12);targetMarker.openPopup();
   }
-  document.getElementById('placed-info').textContent=dist!=null?`ð¯ ${fmtDist(Math.round(dist*1000))} â +${pts.toLocaleString('fr-FR')} pts`:`â RatÃ© â ${r.name}`;
-  showToast(dist!=null?`${r.name} Â· ${fmtDist(Math.round(dist*1000))} Â· +${pts} pts`:`RatÃ© ! C'Ã©tait : ${r.name}`);
+  document.getElementById('placed-info').textContent=dist!=null?`\u00f0\u009f\u008e\u00af ${fmtDist(Math.round(dist*1000))} \u00e2\u0080\u0094 +${pts.toLocaleString('fr-FR')} pts`:`\u00e2\u009d\u008c Rat\u00c3\u00a9 \u00e2\u0080\u0094 ${r.name}`;
+  showToast(dist!=null?`${r.name} \u00c2\u00b7 ${fmtDist(Math.round(dist*1000))} \u00c2\u00b7 +${pts} pts`:`Rat\u00c3\u00a9 ! C'\u00c3\u00a9tait : ${r.name}`);
   setTimeout(()=>{
     curR+1<roundList.length?showInter(pts,dist,r.name):showEnd();
   },3000);
@@ -202,9 +202,9 @@ function showInter(pts,dist,name){
   const ov=document.getElementById('overlay');
   const placeDesc = roundList[curR].desc || '';
   const imgId = 'wimg' + Date.now();
-  const wq = encodeURIComponent(roundList[curR].name.split('\u2014')[0].trim().replace(/\s*â.*/,'').trim());
+  const wq = encodeURIComponent(roundList[curR].name.split('\u2014')[0].trim().replace(/\s*\u00e2\u0080\u0094.*/,'').trim());
   ov.innerHTML=`
-    <div id="${imgId}" style="width:100%;max-width:380px;height:150px;background:#111827;border-radius:10px;margin-bottom:-4px;overflow:hidden;display:flex;align-items:center;justify-content:center"><span style="color:#374151;font-size:11px">ð¸</span></div>
+    <div id="${imgId}" style="width:100%;max-width:380px;height:150px;background:#111827;border-radius:10px;margin-bottom:-4px;overflow:hidden;display:flex;align-items:center;justify-content:center"><span style="color:#374151;font-size:11px">\u00f0\u009f\u0093\u00b8</span></div>
     <div class="otitle" style="font-size:38px">+${pts.toLocaleString('fr-FR')}</div>
     <div class="osub" style="color:#94a3b8;font-size:12px;line-height:1.55;margin-top:-4px;max-width:360px;text-align:center;font-style:normal">${placeDesc}</div>
     <div style="display:flex;align-items:center;gap:10px;width:100%;max-width:320px">
@@ -214,15 +214,15 @@ function showInter(pts,dist,name){
       <span style="font-size:13px;font-weight:600;color:${barColor};white-space:nowrap">${pts.toLocaleString('fr-FR')} / ${mx.toLocaleString('fr-FR')} pts</span>
     </div>
     <div class="osub" style="color:#f1f5f9;font-size:15px;font-weight:600;margin-top:-4px">${name}</div>
-    <div class="osub" style="margin-top:-6px">${dist!=null?fmtDist(Math.round(dist*1000))+' de la cible':'Aucun point placÃ©'}</div>
+    <div class="osub" style="margin-top:-6px">${dist!=null?fmtDist(Math.round(dist*1000))+' de la cible':'Aucun point plac\u00c3\u00a9'}</div>
     <div style="color:#6b7280;font-size:13px">Total : <b style="color:#f97316">${total.toLocaleString('fr-FR')} pts</b></div>
     <div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">
-      <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">â Menu</button>
-      <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">ð Explorer la carte</button>
-      <button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante â</button>
+      <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">\u00e2\u008c\u0082 Menu</button>
+      <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">\u00f0\u009f\u0094\u008d Explorer la carte</button>
+      <button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante \u00e2\u0086\u0092</button>
     </div>
     <div id="ad-inter">
-      <!-- PUB RECTANGLE 300x250 (dÃ©commenter aprÃ¨s approbation AdSense)
+      <!-- PUB RECTANGLE 300x250 (d\u00c3\u00a9commenter apr\u00c3\u00a8s approbation AdSense)
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
@@ -247,7 +247,7 @@ function showInter(pts,dist,name){
         }).catch(function(){var el=document.getElementById(id);if(el)el.style.display='none';});
     }
     tryWiki('fr');
-  })(imgId, roundList[curR].name.replace(/\s*â.*/,'').trim());
+  })(imgId, roundList[curR].name.replace(/\s*\u00e2\u0080\u0094.*/,'').trim());
 
 }
 
@@ -255,7 +255,7 @@ function showEnd(){
   const totalMax=roundScores.reduce((a,s)=>a+(s.maxPts||0),0);
   const pct=totalMax>0?Math.round(total/totalMax*100):0;
   const rows=roundScores.map(s=>{
-    const distTxt=s.distM!=null?fmtDist(s.distM):'ratÃ©';
+    const distTxt=s.distM!=null?fmtDist(s.distM):'rat\u00c3\u00a9';
     const ptsColor=s.pts>=s.maxPts*0.8?'#22c55e':s.pts>=s.maxPts*0.4?'#fbbf24':'#f97316';
     return `<div class="orow">
       <span style="font-size:11px;max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1">${s.name}</span>
@@ -263,10 +263,10 @@ function showEnd(){
       <span style="font-size:11px;color:#4b5563;flex-shrink:0">${s.pts.toLocaleString('fr-FR')}/${s.maxPts.toLocaleString('fr-FR')}</span>
     </div>`;
   }).join('');
-  const rank=pct>=90?'GÃ©ographe lÃ©gendaire':pct>=70?'Expert international':pct>=50?'Bon explorateur':pct>=30?'En progression':'DÃ©butant courageux';
+  const rank=pct>=90?'G\u00c3\u00a9ographe l\u00c3\u00a9gendaire':pct>=70?'Expert international':pct>=50?'Bon explorateur':pct>=30?'En progression':'D\u00c3\u00a9butant courageux';
   const ov=document.getElementById('overlay');
-  ov.innerHTML=`<div class="otitle" style="font-size:38px">TerminÃ© !</div>
-    <div class="osub" style="color:#f97316;font-weight:700;font-size:15px">${rank} â ${pct}%</div>
+  ov.innerHTML=`<div class="otitle" style="font-size:38px">Termin\u00c3\u00a9 !</div>
+    <div class="osub" style="color:#f97316;font-weight:700;font-size:15px">${rank} \u00e2\u0080\u0094 ${pct}%</div>
     <div class="ocard">
       <div style="display:flex;justify-content:space-between;font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:.5px;padding-bottom:6px;border-bottom:1px solid #1e2d45;margin-bottom:4px">
         <span>Lieu</span><span>Distance</span><span>Score / Max</span>
@@ -279,12 +279,12 @@ function showEnd(){
       </div>
     </div>
     <div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">
-      <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">â Menu</button>
-      <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">ð Explorer la carte</button>
-      <button class="btn ba" onclick="startGame()" style="width:auto;padding:12px 32px;font-size:14px">âº Rejouer</button>
+      <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">\u00e2\u008c\u0082 Menu</button>
+      <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">\u00f0\u009f\u0094\u008d Explorer la carte</button>
+      <button class="btn ba" onclick="startGame()" style="width:auto;padding:12px 32px;font-size:14px">\u00e2\u0086\u00ba Rejouer</button>
     </div>
     <div id="ad-inter">
-      <!-- PUB RECTANGLE 300x250 (dÃ©commenter aprÃ¨s approbation AdSense)
+      <!-- PUB RECTANGLE 300x250 (d\u00c3\u00a9commenter apr\u00c3\u00a8s approbation AdSense)
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
@@ -304,10 +304,10 @@ function showMenu(){
     <div class="otitle">GEO<br>CULTURE</div>
     <div class="osub">Trouve les lieux historiques sur la carte. Chaque niveau devient plus simple, mais les points s'amenuisent.</div>
     <div class="rgrid">
-      <div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement aprÃ¨s 30s</div>
-      <div class="ri"><b>PrÃ©cision</b>Plus tu es proche, plus tu gagnes de points</div>
-      <div class="ri"><b>RapiditÃ© Ã1.5</b>Bonus si tu rÃ©ponds avant la fin du compte Ã  rebours</div>
-      <div class="ri"><b>Expert Ã3</b>Multiplicateur maximum â gagne 3x plus tÃ´t</div>
+      <div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement apr\u00c3\u00a8s 30s</div>
+      <div class="ri"><b>Pr\u00c3\u00a9cision</b>Plus tu es proche, plus tu gagnes de points</div>
+      <div class="ri"><b>Rapidit\u00c3\u00a9 \u00c3\u00971.5</b>Bonus si tu r\u00c3\u00a9ponds avant la fin du compte \u00c3\u00a0 rebours</div>
+      <div class="ri"><b>Expert \u00c3\u00973</b>Multiplicateur maximum \u00e2\u0080\u0094 gagne 3x plus t\u00c3\u00b4t</div>
     </div>
     <button class="btn ba" onclick="startGame()" style="width:auto;font-size:15px;padding:13px 38px;margin-top:6px">&#9654; Nouvelle partie</button>
   `;
