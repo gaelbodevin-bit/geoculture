@@ -26,7 +26,7 @@ function initMap(){
   if(map){map.remove();map=null;}
   if(typeof L==='undefined'){console.error('Leaflet not loaded');return;}
   var opts={
-    center:[20,10],zoom:2,minZoom:2,maxZoom:18,zoomSnap:0.25,zoomDelta:0.5,
+    center:[20,10],zoom:1.5,minZoom:1.5,maxZoom:18,zoomSnap:0.25,zoomDelta:0.25,
     zoomControl:!noZoomMode,attributionControl:true,
     worldCopyJump:false,
     maxBounds:[[-85,-180],[85,180]],
@@ -121,7 +121,7 @@ function startRound(idx){
   if(playerMarker){playerMarker.remove();playerMarker=null;}
   if(targetMarker){targetMarker.remove();targetMarker=null;}
   if(lineLayer){lineLayer.remove();lineLayer=null;}
-  if(!noZoomMode){if(map) map.setView([20,10],2);}
+  if(!noZoomMode){if(map) map.setView([20,10],1.5);}
   document.getElementById('confb').disabled=true;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
