@@ -291,21 +291,38 @@ function showEnd(){
 function showMenu(){
   clearInterval(tiv);
   gameActive=false;
-  const ov=document.getElementById('overlay');
-  ov.innerHTML=`
-    <div class="otitle">GEO<br>CULTURE</div>
-    <div class="osub">Trouve les lieux historiques sur la carte. Chaque niveau devient plus simple, mais les points s'amenuisent.</div>
-    <div class="rgrid">
-      <div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement apres 30s</div>
-      <div class="ri"><b>Precision</b>Plus tu es proche, plus tu gagnes de points</div>
-      <div class="ri"><b>Rapidite x1.5</b>Bonus si tu reponds avant la fin du compte a rebours</div>
-      <div class="ri"><b>Expert x3</b>Multiplicateur maximum - gagne 3x plus tot</div>
-    </div>
-    <button class="btn ba" onclick="startGame()" style="width:auto;font-size:15px;padding:13px 38px;margin-top:6px">&#9654; Nouvelle partie</button>
-  `;
+  if(!map){try{initMap();}catch(e){}}
+  var ov=document.getElementById('overlay');
+  var user=typeof getCurrentUser==='function'?getCurrentUser():null;
+  var h=[];
+  h.push('<div class="otitle" style="font-size:40px">GEO<br>CULTURE</div>');
+  if(user){
+    h.push('<div style="display:flex;align-items:center;gap:8px;justify-content:center;margin:4px 0">');
+    h.push('<img src="'+(user.photoURL||'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">');
+    h.push('<span style="color:#e2e8f0;font-size:13px;font-weight:600">'+(user.displayName||user.email)+'</span>');
+    h.push('<button onclick="if(typeof fbSignOut!==\'undefined\')fbSignOut()" style="font-size:10px;padding:3px 8px;border-radius:5px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer">D\u00e9connexion</button>');
+    h.push('</div>');
+  } else {
+    h.push('<div style="margin:4px 0;display:flex;justify-content:center">');
+    h.push('<button onclick="if(typeof fbSignIn!==\'undefined\')fbSignIn()" style="font-size:13px;font-weight:600;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer">Se connecter avec Google</button>');
+    h.push('</div>');
+  }
+  h.push('<div class="rgrid">');
+  h.push('<div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement</div>');
+  h.push('<div class="ri"><b>Pr\u00e9cision</b>Plus tu es proche, plus tu gagnes</div>');
+  h.push('<div class="ri"><b>Rapidit\u00e9 x1.5</b>Bonus si tu r\u00e9ponds vite</div>');
+  h.push('<div class="ri"><b>Expert x3</b>Multiplicateur maximum</div>');
+  h.push('</div>');
+  h.push('<div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center">');
+  h.push('<button class="btn ba" onclick="noZoomMode=false;startGame()" style="width:auto;font-size:15px;padding:13px 28px">Mode Normal</button>');
+  h.push('<button class="btn bg" onclick="noZoomMode=true;startGame()" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316">Mode No-Zoom</button>');
+  h.push('</div>');
+  if(user){
+    h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;margin-top:4px;text-decoration:underline">Voir mon historique</a>');
+  }
+  ov.innerHTML=h.join('');
   ov.classList.remove('h');
 }
-
 function nextRound(){document.getElementById('overlay').classList.add('h');startRound(curR+1);}
 
 var toastT;
