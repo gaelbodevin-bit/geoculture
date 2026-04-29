@@ -102,7 +102,16 @@ function updateDots(){
 }
 
 function startTimer(){
-  clearInterval(tiv);timeLeft=T;renderTimer();
+  clearInterval(tiv);timeLeft=T;
+  // Couper la transition pour le reset instantane
+  var arc=document.getElementById('arc');
+  if(arc){
+    arc.style.transition='none';
+    arc.style.strokeDashoffset='0';
+    void arc.offsetWidth; // forcer le reflow
+    arc.style.transition='stroke-dashoffset .9s linear,stroke .3s';
+  }
+  renderTimer();
   tiv=setInterval(()=>{
     timeLeft=Math.max(0,timeLeft-.1);renderTimer();
     if(timeLeft<=0){clearInterval(tiv);nextLevel();}
@@ -114,7 +123,7 @@ function renderTimer(){
   const offset=CIRC*(1-pct);
   const arc=document.getElementById('arc');
   arc.style.strokeDashoffset=offset;
-  const col=pct>.6?'#22c55e':pct>.3?'#fbbf24':'#ef4444';
+  const col=timeLeft>19?'#22c55e':timeLeft>9?'#fbbf24':'#ef4444';
   arc.style.stroke=col;
   const n=document.getElementById('tnum');
   n.textContent=Math.ceil(timeLeft);
