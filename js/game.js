@@ -1,6 +1,6 @@
 var BASE_PTS=[0,500,1000,1500,2000,3000];
 var MAX_DIST=2000;
-var CIRC=2*Math.PI*42;
+var CIRC=2*Math.PI*38;
 var T=30;
 
 var map,playerMarker,targetMarker,lineLayer;
