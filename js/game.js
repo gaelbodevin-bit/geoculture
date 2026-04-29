@@ -208,7 +208,6 @@ function showInter(pts,dist,name){
   const ov=document.getElementById('overlay');
   const placeDesc = roundList[curR].desc || '';
   const imgId = 'wimg' + Date.now();
-  const wq = encodeURIComponent(roundList[curR].name.split('\u2014')[0].trim().replace(/\s*-.*/,'').trim());
   ov.innerHTML=`
     <div id="${imgId}" style="width:100%;max-width:380px;height:150px;background:#111827;border-radius:10px;margin-bottom:-4px;overflow:hidden;display:flex;align-items:center;justify-content:center"><span style="color:#374151;font-size:11px"></span></div>
     <div class="otitle" style="font-size:38px">+${pts.toLocaleString('fr-FR')}</div>
@@ -253,7 +252,7 @@ function showInter(pts,dist,name){
         }).catch(function(){var el=document.getElementById(id);if(el)el.style.display='none';});
     }
     tryWiki('fr');
-  })(imgId, roundList[curR].name.replace(/\s*-.*/,'').trim());
+  })(imgId, roundList[curR].name.replace(/\s*[—\-].*/,'').trim());
 
 }
 
