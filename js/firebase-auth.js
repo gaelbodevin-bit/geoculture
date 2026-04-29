@@ -1,197 +1,183 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GéoCulture — Le jeu de géolocalisation culturelle. Trouve les lieux historiques sur la carte du monde en 5 indices.">
-  <meta name="keywords" content="géographie, culture, jeu, lieux historiques, quiz, monde, monuments">
-  <meta property="og:title" content="GéoCulture — Jeu de géolocalisation">
-  <meta property="og:description" content="Sauras-tu localiser 492 lieux historiques à travers le monde ?">
-  <meta property="og:type" content="website">
-  <title>GéoCulture — Jeu de géolocalisation culturelle</title>
+// ── Firebase Auth + Historique ──────────────────────────────────────────────
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged }
+  from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
+import { getFirestore, collection, addDoc, query, where, orderBy, limit, getDocs, serverTimestamp }
+  from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
 
-  <!-- Google AdSense -->
-  <!-- REMPLACER ca-pub-XXXXXXXXXXXXXXXX par votre ID AdSense -->
-  <!--
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-  -->
+var firebaseConfig = {
+  apiKey: "AIzaSyDm7KMECwQVWvnOnMmSVm8aK7FdP03QWyA",
+  authDomain: "geo-culture-73453.firebaseapp.com",
+  projectId: "geo-culture-73453",
+  storageBucket: "geo-culture-73453.firebasestorage.app",
+  messagingSenderId: "701399534769",
+  appId: "1:701399534769:web:ea9418505d8d2e9a9ea690"
+};
 
-  <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-  <!-- Styles du jeu -->
-  <link rel="stylesheet" href="css/style.css">
+var fbApp = initializeApp(firebaseConfig);
+var fbAuth = getAuth(fbApp);
+var fbDb = getFirestore(fbApp);
+var fbProvider = new GoogleAuthProvider();
 
-  <style>
-    /* ── Pub bannière top ── */
-    #ad-top {
-      width: 100%;
-      background: #0d1120;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 0;
-      overflow: hidden;
-      flex-shrink: 0;
+// Utilisateur courant
+var currentUser = null;
+
+// ── Auth state ───────────────────────────────────────────────────────────────
+onAuthStateChanged(fbAuth, function(user) {
+  currentUser = user;
+  updateAuthUI(user);
+});
+
+function updateAuthUI(user) {
+  var btn = document.getElementById('auth-btn');
+  var avatar = document.getElementById('auth-avatar');
+  var name = document.getElementById('auth-name');
+  if (!btn) return;
+  if (user) {
+    btn.textContent = 'Déconnexion';
+    btn.onclick = fbSignOut;
+    if (avatar) { avatar.src = user.photoURL || ''; avatar.style.display = 'inline-block'; }
+    if (name) name.textContent = user.displayName || user.email;
+  } else {
+    btn.textContent = 'Connexion Google';
+    btn.onclick = fbSignIn;
+    if (avatar) avatar.style.display = 'none';
+    if (name) name.textContent = '';
+  }
+}
+
+function fbSignIn() {
+  signInWithPopup(fbAuth, fbProvider).catch(function(e) {
+    console.error('Auth error:', e);
+    showToast('Erreur de connexion : ' + e.message);
+  });
+}
+
+function fbSignOut() {
+  signOut(fbAuth).then(function() {
+    showToast('Déconnecté');
+  });
+}
+
+// ── Sauvegarder une partie ───────────────────────────────────────────────────
+function saveGame(scores, total, pct, mode) {
+  if (!currentUser) return;
+  var data = {
+    uid: currentUser.uid,
+    displayName: currentUser.displayName || 'Joueur',
+    photoURL: currentUser.photoURL || '',
+    total: total,
+    pct: pct,
+    mode: mode || 'normal',
+    rounds: scores.map(function(s) {
+      return { name: s.name, pts: s.pts, maxPts: s.maxPts, distM: s.distM };
+    }),
+    createdAt: serverTimestamp()
+  };
+  addDoc(collection(fbDb, 'games'), data)
+    .then(function() { showToast('Partie sauvegardée !'); })
+    .catch(function(e) { console.error('Save error:', e); });
+}
+
+// ── Charger l'historique ─────────────────────────────────────────────────────
+function loadHistory(callback) {
+  if (!currentUser) { callback([]); return; }
+  var q = query(
+    collection(fbDb, 'games'),
+    where('uid', '==', currentUser.uid),
+    orderBy('createdAt', 'desc'),
+    limit(20)
+  );
+  getDocs(q).then(function(snap) {
+    var games = [];
+    snap.forEach(function(doc) { games.push(Object.assign({id: doc.id}, doc.data())); });
+    callback(games);
+  }).catch(function(e) {
+    console.error('Load error:', e);
+    callback([]);
+  });
+}
+
+// ── Afficher l'historique ────────────────────────────────────────────────────
+function showHistory() {
+  if (!currentUser) {
+    showToast('Connecte-toi pour voir ton historique');
+    return;
+  }
+  var ov = document.getElementById('overlay');
+  ov.innerHTML = '<div class="otitle" style="font-size:32px">⏳ Chargement...</div>';
+  ov.classList.remove('h');
+
+  loadHistory(function(games) {
+    var h = [];
+    h.push('<div class="otitle" style="font-size:28px">Mes parties</div>');
+    h.push('<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">');
+    h.push('<img src="'+(currentUser.photoURL||'')+'" style="width:32px;height:32px;border-radius:50%;object-fit:cover">');
+    h.push('<span style="color:#e2e8f0;font-size:14px;font-weight:600">'+(currentUser.displayName||'')+'</span>');
+    h.push('</div>');
+
+    if (games.length === 0) {
+      h.push('<div class="osub">Aucune partie enregistrée pour le moment.</div>');
+    } else {
+      h.push('<div class="ocard" style="max-height:320px;overflow-y:auto;width:100%;max-width:420px">');
+      games.forEach(function(g) {
+        var date = g.createdAt ? new Date(g.createdAt.seconds * 1000) : new Date();
+        var dateStr = date.toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
+        var modeLabel = g.mode === 'nozoom' ? ' · No-Zoom' : '';
+        var barColor = g.pct >= 80 ? '#22c55e' : g.pct >= 50 ? '#fbbf24' : '#f97316';
+        h.push('<div style="padding:10px 0;border-bottom:1px solid #1e2d45">');
+        h.push('<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">');
+        h.push('<span style="font-size:12px;color:#6b7280">'+dateStr+modeLabel+'</span>');
+        h.push('<span style="font-size:14px;font-weight:700;color:'+barColor+'">'+g.pct+'%</span>');
+        h.push('</div>');
+        h.push('<div style="display:flex;justify-content:space-between;font-size:12px;color:#94a3b8;margin-bottom:6px">');
+        h.push('<span>'+g.total.toLocaleString('fr-FR')+' pts</span>');
+        h.push('<span>'+g.rounds.length+' manches</span>');
+        h.push('</div>');
+        // Mini liste des lieux
+        if (g.rounds && g.rounds.length) {
+          h.push('<div style="font-size:11px;color:#4b5563">');
+          g.rounds.forEach(function(r) {
+            var dist = r.distM != null ? (r.distM < 1000 ? r.distM+'m' : Math.round(r.distM/1000)+'km') : 'raté';
+            h.push('<span style="margin-right:8px">'+r.name.split('—')[0].trim()+' ('+dist+')</span>');
+          });
+          h.push('</div>');
+        }
+        h.push('</div>');
+      });
+      h.push('</div>');
     }
-    #ad-top ins {
-      display: block;
-      width: 728px;
-      height: 90px;
-    }
-    /* Sur mobile, cacher la bannière top (trop large) */
-    @media (max-width: 800px) {
-      #ad-top { display: none; }
-    }
 
-    /* ── Pub rectangle inter-manche ── */
-    #ad-inter {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin: 12px 0;
-    }
-    #ad-inter ins {
-      display: block;
-      width: 300px;
-      height: 250px;
-    }
+    h.push('<div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center">');
+    h.push('<div style="display:flex;gap:10px;justify-content:center">');
+    h.push('<button class="btn bg" onclick="closeHistory()" style="width:auto;padding:10px 20px">&#8592; Retour</button>');
+    h.push('</div>');
+    h.push('</div>');
 
-    /* Toast notification */
-    #toast.s { opacity: 1 !important; transform: translateX(-50%) translateY(0) !important; }
+    ov.innerHTML = h.join('');
+    ov.classList.remove('h');
+  });
+}
 
-    /* Wrapper global pour pub + jeu */
-    #app-wrapper {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      overflow: hidden;
-    }
+// Exposer globalement
+window.fbSignIn = fbSignIn;
+window.fbSignOut = fbSignOut;
+window.saveGame = saveGame;
+window.showHistory = showHistory;
+window.getCurrentUser = function() { return currentUser; };
 
-    #auth-zone {display:flex;align-items:center;gap:10px;flex-shrink:0}
-    #auth-avatar {width:30px;height:30px;border-radius:50%;object-fit:cover;display:none;border:2px solid #f97316}
-    #auth-name {font-size:12px;color:#94a3b8;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-    #auth-btn {font-size:11px;font-weight:600;padding:5px 12px;border-radius:7px;border:1px solid #2d3f5e;cursor:pointer;background:transparent;color:#e2e8f0;white-space:nowrap}
-    #hist-btn {font-size:11px;padding:5px 10px;border-radius:7px;border:1px solid #2d3f5e;cursor:pointer;background:transparent;color:#94a3b8;white-space:nowrap}
-  </style>
-</head>
-<body>
-  <div id="app-wrapper">
-
-    <!-- ══ PUB BANNIÈRE HAUT (728×90) ══ -->
-    <div id="ad-top">
-      <!--
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="XXXXXXXXXX"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      -->
-    </div>
-
-    <!-- ══ JEU ══ -->
-    <div id="g">
-      <div id="hdr">
-        <div id="logo">GÉOCULTURE</div>
-        <div id="stats">
-          <div class="st"><span>Manche</span><b id="hrnd">1/5</b></div>
-          <div class="st"><span>Score total</span><b id="hsc">0</b></div>
-          <div class="st"><span>Max restant</span><b class="yw" id="hmax">—</b></div>
-        </div>
-        <div id="auth-zone">
-          <button id="hist-btn" onclick="typeof showHistory!=='undefined'&&showHistory()">Historique</button>
-          <img id="auth-avatar" src="" alt="">
-          <span id="auth-name"></span>
-          <button id="auth-btn" onclick="typeof fbSignIn!=='undefined'&&fbSignIn()">Connexion Google</button>
-        </div>
-      </div>
-
-      <div id="main">
-        <div id="sidebar">
-          <div id="qpanel">
-            <div id="badge">EXPERT</div>
-            <div id="qtxt">Démarrez pour commencer</div>
-          </div>
-          <div id="timer-section">
-            <div id="timer-lbl">Temps restant</div>
-            <div id="tring">
-              <svg id="tsvg" viewBox="0 0 90 90">
-                <circle cx="45" cy="45" r="38" fill="none" stroke="var(--border)" stroke-width="6"/>
-                <circle id="arc" cx="45" cy="45" r="38" fill="none" stroke="#22c55e" stroke-width="6"
-                  stroke-dasharray="238.76" stroke-dashoffset="0" stroke-linecap="round"
-                  transform="rotate(-90 45 45)" style="transition:stroke-dashoffset .9s linear,stroke .3s"/>
-              </svg>
-              <div id="tnum">30</div>
-            </div>
-            <div id="maxbox">
-              <div class="ml">Score max ce niveau</div>
-              <div class="mv" id="lvl-max">—</div>
-              <div class="ms" id="lvl-mult">—</div>
-            </div>
-            <div id="dots">
-              <div class="dot on" id="d0"></div>
-              <div class="dot" id="d1"></div>
-              <div class="dot" id="d2"></div>
-              <div class="dot" id="d3"></div>
-              <div class="dot" id="d4"></div>
-            </div>
-          </div>
-          <div id="actions">
-            <div id="placed-info">Cliquez sur la carte pour placer votre réponse</div>
-            <button class="btn bg" id="skipb">Indice suivant </button>
-            <button class="btn ba" id="confb" disabled>Valider ma réponse &#8594;</button>
-          </div>
-        </div>
-
-        <div id="mapw">
-          <div id="map"></div>
-          <div id="explore-tip" style="display:none;position:absolute;bottom:60px;left:50%;transform:translateX(-50%);background:rgba(13,17,32,.92);color:#94a3b8;font-size:12px;padding:8px 14px;border-radius:8px;border:1px solid #1e2d45;z-index:50;white-space:nowrap;pointer-events:none"> Naviguez librement — cliquez sur les marqueurs pour les détails</div>
-          <div id="level-flash">
-            <div id="flash-badge"></div>
-            <div id="flash-sub"></div>
-          </div>
-          <div id="toast" style="position:absolute;bottom:18px;left:50%;transform:translateX(-50%) translateY(8px);background:#1e2d45;border:1px solid #2d3f5e;border-radius:8px;padding:7px 14px;font-size:12px;color:#e2e8f0;z-index:60;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;white-space:nowrap;max-width:92%;font-family:system-ui,sans-serif"></div>
-          <button id="back-btn" onclick="exitExploreMode()">&#8592; Retour aux résultats</button>
-          <div id="overlay">
-            <div class="otitle">GÉO<br>CULTURE</div>
-            <div class="osub">Trouve les lieux historiques sur la carte. Chaque niveau devient plus simple, mais les points s'amenuisent.</div>
-            <div class="rgrid">
-              <div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement après 30 secondes</div>
-              <div class="ri"><b>Précision</b>Plus tu es proche, plus tu gagnes de points</div>
-              <div class="ri"><b>Rapidité ×1.5</b>Bonus si tu réponds avant la fin du compte à rebours</div>
-              <div class="ri"><b>Expert ×3</b>Multiplicateur maximum — gagne 3x plus tôt</div>
-            </div>
-            <div id="overlay-auth" style="display:flex;align-items:center;gap:8px;justify-content:center;margin:4px 0">
-              <button onclick="typeof fbSignIn!=='undefined'&&fbSignIn()" style="font-size:13px;font-weight:600;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer">Se connecter avec Google</button>
-            </div>
-            <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center">
-              <button class="btn ba" id="startb" style="width:auto;font-size:15px;padding:13px 28px">Mode Normal</button>
-              <button class="btn bg" id="nozb" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316">Mode No-Zoom</button>
-            </div>
-            <a onclick="typeof showHistory!=='undefined'&&showHistory()" id="hist-link" style="display:none;font-size:12px;color:#6b7280;cursor:pointer;margin-top:4px;text-decoration:underline">Voir mon historique</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /app-wrapper -->
-
-  <!-- ══ SCRIPTS ══ -->
-  <!-- Leaflet -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-  <!-- Données (492 lieux) -->
-  <script src="js/data.js?v=2"></script>
-  <!-- Firebase Auth -->
-  <script type="module" src="js/firebase-auth.js?v=2"></script>
-  <!-- Logique du jeu -->
-  <script src="js/game.js?v=7"></script>
-
-  <!-- AdSense init (décommenter après approbation) -->
-  <!--
-  <script>
-    // Les blocs ins.adsbygoogle dans #ad-top et #ad-inter sont initialisés automatiquement
-  </script>
-  -->
-</body>
-</html>
+// Fermer l'historique intelligemment
+function closeHistory() {
+  var ov = document.getElementById('overlay');
+  if (typeof gameActive !== 'undefined' && gameActive) {
+    // Partie en cours - juste fermer l'overlay
+    ov.classList.add('h');
+  } else if (typeof roundScores !== 'undefined' && roundScores.length > 0 && typeof curR !== 'undefined') {
+    // Partie terminee ou inter-manche - retourner au menu
+    if (typeof showMenu === 'function') showMenu();
+  } else {
+    // Pas de partie - menu
+    if (typeof showMenu === 'function') showMenu();
+  }
+}
+window.closeHistory = closeHistory;
