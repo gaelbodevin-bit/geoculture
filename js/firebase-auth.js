@@ -101,11 +101,14 @@ function loadHistory(callback) {
 // ── Afficher l'historique ────────────────────────────────────────────────────
 function showHistory() {
   if (!currentUser) {
-    showToast('Connecte-toi pour voir ton historique');
+    if(typeof showToast==='function') showToast('Connecte-toi pour voir ton historique');
     return;
   }
   var ov = document.getElementById('overlay');
-  ov.innerHTML = '<div class="otitle" style="font-size:32px">⏳ Chargement...</div>';
+  // Sauvegarder l'etat actuel
+  window._prevOverlayHTML = ov.innerHTML;
+  window._prevOverlayHidden = ov.classList.contains('h');
+  ov.innerHTML = '<div class="otitle" style="font-size:32px">Chargement...</div>';
   ov.classList.remove('h');
 
   loadHistory(function(games) {
@@ -169,14 +172,18 @@ window.getCurrentUser = function() { return currentUser; };
 // Fermer l'historique intelligemment
 function closeHistory() {
   var ov = document.getElementById('overlay');
-  if (typeof gameActive !== 'undefined' && gameActive) {
-    // Partie en cours - juste fermer l'overlay
+  if (window._prevOverlayHTML !== undefined) {
+    ov.innerHTML = window._prevOverlayHTML;
+    if (window._prevOverlayHidden) {
+      ov.classList.add('h');
+    } else {
+      ov.classList.remove('h');
+    }
+    window._prevOverlayHTML = undefined;
+    window._prevOverlayHidden = undefined;
+  } else if (typeof gameActive !== 'undefined' && gameActive) {
     ov.classList.add('h');
-  } else if (typeof roundScores !== 'undefined' && roundScores.length > 0 && typeof curR !== 'undefined') {
-    // Partie terminee ou inter-manche - retourner au menu
-    if (typeof showMenu === 'function') showMenu();
   } else {
-    // Pas de partie - menu
     if (typeof showMenu === 'function') showMenu();
   }
 }
