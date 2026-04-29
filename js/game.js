@@ -299,6 +299,11 @@ function showEnd(){
       -->
     </div>`;
   ov.classList.remove('h');
+  if(typeof window.saveGame==='function'){
+    var _tot=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
+    var _pct=_tot>0?Math.round(total/_tot*100):0;
+    try{window.saveGame(roundScores,total,_pct,noZoomMode?'nozoom':'normal');}catch(e){}
+  }
 }
 
 function showMenu(){
