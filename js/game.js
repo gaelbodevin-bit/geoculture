@@ -125,19 +125,24 @@ var FLASH_COLORS=['#ef4444','#f97316','#eab308','#22c55e','#3b82f6'];
 var FLASH_LABELS=['Expert','Difficile','Moyen','Facile','Tres facile'];
 
 function triggerFlash(level){
-  const el=document.getElementById('level-flash');
-  const badge=document.getElementById('flash-badge');
-  const sub=document.getElementById('flash-sub');
-  const col=FLASH_COLORS[level]||'#ef4444';
-  const lbl=FLASH_LABELS[level]||'';
+  var el=document.getElementById('level-flash');
+  var badge=document.getElementById('flash-badge');
+  var sub=document.getElementById('flash-sub');
+  var col=FLASH_COLORS[level]||'#ef4444';
+  var lbl=FLASH_LABELS[level]||'';
   el.style.background=col+'22';
   badge.textContent=lbl;
   badge.style.color=col;
-  sub.textContent='Indice suivant !';
+  sub.textContent='';
   el.classList.remove('fire');
   void el.offsetWidth;
   el.classList.add('fire');
-  const sb=document.getElementById('sidebar');
+  // Vider le texte apres l'animation (700ms)
+  setTimeout(function(){
+    badge.textContent='';
+    el.style.background='transparent';
+  },750);
+  var sb=document.getElementById('sidebar');
   sb.style.setProperty('--flash-col',col);
   sb.classList.remove('flash-border');
   void sb.offsetWidth;

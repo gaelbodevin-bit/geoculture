@@ -34,7 +34,7 @@
   .ba{background:var(--accent);color:#fff}.ba:hover{background:#ea6c0b}.ba:disabled{background:var(--bg3);color:var(--muted);cursor:not-allowed;transform:none}
   .bg{background:transparent;color:var(--muted2);border:1px solid var(--border2)}.bg:hover{background:var(--bg3);color:var(--text)}
   #mapw{flex:1;position:relative;min-height:0}
-  #level-flash{position:fixed;inset:0;z-index:900;pointer-events:none;display:flex;align-items:center;justify-content:center;opacity:0}
+  #level-flash{position:absolute;inset:0;z-index:900;pointer-events:none;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0}
   #level-flash.fire{animation:flashAnim .7s ease forwards}
   @keyframes flashAnim{0%{opacity:0}15%{opacity:1}60%{opacity:.8}100%{opacity:0}}
   #flash-inner{display:flex;flex-direction:column;align-items:center;gap:6px}
