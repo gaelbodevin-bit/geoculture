@@ -1,4 +1,4 @@
-// ?? Firebase Auth + Historique ??????????????????????????????????????????????
+// \u2500\u2500 Firebase Auth + Historique \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged }
   from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
@@ -22,7 +22,7 @@ var fbProvider = new GoogleAuthProvider();
 // Utilisateur courant
 var currentUser = null;
 
-// ?? Auth state ???????????????????????????????????????????????????????????????
+// \u2500\u2500 Auth state \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 onAuthStateChanged(fbAuth, function(user) {
   currentUser = user;
   updateAuthUI(user);
@@ -34,7 +34,7 @@ function updateAuthUI(user) {
   var name = document.getElementById('auth-name');
   if (!btn) return;
   if (user) {
-    btn.textContent = 'Déconnexion';
+    btn.textContent = 'D\u00e9connexion';
     btn.onclick = fbSignOut;
     if (avatar) { avatar.src = user.photoURL || ''; avatar.style.display = 'inline-block'; }
     if (name) name.textContent = user.displayName || user.email;
@@ -55,13 +55,18 @@ function fbSignIn() {
 
 function fbSignOut() {
   signOut(fbAuth).then(function() {
-    showToast('Déconnecté');
+    showToast('D\u00e9connect\u00e9');
   });
 }
 
-// ?? Sauvegarder une partie ???????????????????????????????????????????????????
+// \u2500\u2500 Sauvegarder une partie \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 function saveGame(scores, total, pct, mode) {
-  if (!currentUser) return;
+  console.log('saveGame appel\u00e9, currentUser=', currentUser ? currentUser.uid : 'NULL');
+  if (!currentUser) {
+    console.warn('saveGame: pas de currentUser !');
+    return;
+  }
+  console.log('saveGame: sauvegarde', scores.length, 'manches, total=', total, 'pct=', pct);
   var data = {
     uid: currentUser.uid,
     displayName: currentUser.displayName || 'Joueur',
@@ -75,11 +80,11 @@ function saveGame(scores, total, pct, mode) {
     createdAt: serverTimestamp()
   };
   addDoc(collection(fbDb, 'games'), data)
-    .then(function() { showToast('Partie sauvegardée !'); })
+    .then(function() { showToast('Partie sauvegard\u00e9e !'); })
     .catch(function(e) { console.error('Save error:', e); });
 }
 
-// ?? Charger l'historique ?????????????????????????????????????????????????????
+// \u2500\u2500 Charger l'historique \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 function loadHistory(callback) {
   if (!currentUser) {
     console.log('loadHistory: pas de currentUser, uid=', currentUser);
@@ -108,7 +113,7 @@ function loadHistory(callback) {
   });
 }
 
-// ?? Afficher l'historique ????????????????????????????????????????????????????
+// \u2500\u2500 Afficher l'historique \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 function showHistory() {
   if (!currentUser) {
     if(typeof showToast==='function') showToast('Connecte-toi pour voir ton historique');
@@ -129,14 +134,21 @@ function showHistory() {
     h.push('<span style="color:#e2e8f0;font-size:14px;font-weight:600">'+(currentUser.displayName||'')+'</span>');
     h.push('</div>');
 
+    // S\u00e9parer Normal et No-Zoom
+    var gamesNormal = games.filter(function(g){ return g.mode !== 'nozoom'; });
+    var gamesNozoom = games.filter(function(g){ return g.mode === 'nozoom'; });
+
     if (games.length === 0) {
-      h.push('<div class="osub">Aucune partie enregistrée pour le moment.</div>');
+      h.push('<div class="osub">Aucune partie enregistr\u00e9e pour le moment.</div>');
     } else {
-      h.push('<div class="ocard" style="max-height:320px;overflow-y:auto;width:100%;max-width:420px">');
-      games.forEach(function(g) {
+      // Afficher les parties normales
+      if(gamesNormal.length > 0){
+        h.push('<div style="font-size:11px;color:#f97316;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Mode Normal</div>');
+        h.push('<div class="ocard" style="max-height:200px;overflow-y:auto;width:100%;max-width:420px;margin-bottom:8px">');
+        gamesNormal.forEach(function(g) {
         var date = g.createdAt ? new Date(g.createdAt.seconds * 1000) : new Date();
         var dateStr = date.toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
-        var modeLabel = g.mode === 'nozoom' ? ' · No-Zoom' : '';
+        var modeLabel = g.mode === 'nozoom' ? ' \u00b7 No-Zoom' : '';
         var barColor = g.pct >= 80 ? '#22c55e' : g.pct >= 50 ? '#fbbf24' : '#f97316';
         h.push('<div style="padding:10px 0;border-bottom:1px solid #1e2d45">');
         h.push('<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">');
@@ -151,14 +163,33 @@ function showHistory() {
         if (g.rounds && g.rounds.length) {
           h.push('<div style="font-size:11px;color:#4b5563">');
           g.rounds.forEach(function(r) {
-            var dist = r.distM != null ? (r.distM < 1000 ? r.distM+'m' : Math.round(r.distM/1000)+'km') : 'raté';
-            h.push('<span style="margin-right:8px">'+r.name.split('—')[0].trim()+' ('+dist+')</span>');
+            var dist = r.distM != null ? (r.distM < 1000 ? r.distM+'m' : Math.round(r.distM/1000)+'km') : 'rat\u00e9';
+            h.push('<span style="margin-right:8px">'+r.name.split('\u2014')[0].trim()+' ('+dist+')</span>');
           });
           h.push('</div>');
         }
         h.push('</div>');
-      });
-      h.push('</div>');
+        });
+        h.push('</div>');
+      }
+      // Afficher les parties No-Zoom
+      if(gamesNozoom.length > 0){
+        h.push('<div style="font-size:11px;color:#f97316;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;margin-top:4px">Mode No-Zoom</div>');
+        h.push('<div class="ocard" style="max-height:200px;overflow-y:auto;width:100%;max-width:420px">');
+        gamesNozoom.forEach(function(g) {
+          var date = g.createdAt ? new Date(g.createdAt.seconds * 1000) : new Date();
+          var dateStr = date.toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
+          var barColor = g.pct >= 80 ? '#22c55e' : g.pct >= 50 ? '#fbbf24' : '#f97316';
+          h.push('<div style="padding:10px 0;border-bottom:1px solid #1e2d45">');
+          h.push('<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">');
+          h.push('<span style="font-size:12px;color:#6b7280">'+dateStr+'</span>');
+          h.push('<span style="font-size:14px;font-weight:700;color:'+barColor+'">'+g.pct+'%</span>');
+          h.push('</div>');
+          h.push('<span style="font-size:12px;color:#94a3b8">'+g.total.toLocaleString('fr-FR')+' pts</span>');
+          h.push('</div>');
+        });
+        h.push('</div>');
+      }
     }
 
     h.push('<div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center">');
