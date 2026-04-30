@@ -27,7 +27,8 @@ function initMap(){
     center:[20,10],zoom:2,
     zoomControl:!noZoomMode,
     attributionControl:true,
-    minZoom:2,maxZoom:18,
+    minZoom:1,maxZoom:18,
+    zoomSnap:0.1,
     maxBounds:[[-85,-180],[85,180]],
     maxBoundsViscosity:1.0
   };
@@ -43,8 +44,15 @@ function initMap(){
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
+  // Calculer le zoom minimum pour eviter les doublons
+  setTimeout(function(){
+    if(!map) return;
+    var bounds = L.latLngBounds([[-85,-180],[85,180]]);
+    var z = map.getBoundsZoom(bounds);
+    map.setMinZoom(z);
+    if(map.getZoom() < z) map.setZoom(z, {animate:false});
+  }, 150);
 }
-
 function makePin(color){
   return L.divIcon({className:'',
     html:`<div style="width:18px;height:18px;background:${color};border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 10px rgba(0,0,0,.5)"></div>`,
@@ -78,7 +86,7 @@ function startRound(idx){
   if(playerMarker){playerMarker.remove();playerMarker=null;}
   if(targetMarker){targetMarker.remove();targetMarker=null;}
   if(lineLayer){lineLayer.remove();lineLayer=null;}
-  map.setView([20,10],2);
+  map.setView([20,10], map.getMinZoom ? map.getMinZoom() : 2);
   if(noZoomMode&&map){
     map.scrollWheelZoom.disable();
     map.doubleClickZoom.disable();
