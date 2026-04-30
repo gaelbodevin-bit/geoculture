@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GÃ©oCulture â€” Le jeu de gÃ©olocalisation culturelle. Trouve les lieux historiques sur la carte du monde en 5 indices.">
-  <meta name="keywords" content="gÃ©ographie, culture, jeu, lieux historiques, quiz, monde, monuments">
-  <meta property="og:title" content="GÃ©oCulture â€” Jeu de gÃ©olocalisation">
-  <meta property="og:description" content="Sauras-tu localiser 492 lieux historiques Ã  travers le monde ?">
+  <meta name="description" content="GéoCulture — Le jeu de géolocalisation culturelle. Trouve les lieux historiques sur la carte du monde en 5 indices.">
+  <meta name="keywords" content="géographie, culture, jeu, lieux historiques, quiz, monde, monuments">
+  <meta property="og:title" content="GéoCulture — Jeu de géolocalisation">
+  <meta property="og:description" content="Sauras-tu localiser 492 lieux historiques à travers le monde ?">
   <meta property="og:type" content="website">
-  <title>GÃ©oCulture â€” Jeu de gÃ©olocalisation culturelle</title>
+  <title>GéoCulture — Jeu de géolocalisation culturelle</title>
 
   <!-- Google AdSense -->
   <!-- REMPLACER ca-pub-XXXXXXXXXXXXXXXX par votre ID AdSense -->
@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <style>
-    /* â”€â”€ Pub banniÃ¨re top â”€â”€ */
+    /* ?? Pub bannière top ?? */
     #ad-top {
       width: 100%;
       background: #0d1120;
@@ -38,12 +38,12 @@
       width: 728px;
       height: 90px;
     }
-    /* Sur mobile, cacher la banniÃ¨re top (trop large) */
+    /* Sur mobile, cacher la bannière top (trop large) */
     @media (max-width: 800px) {
       #ad-top { display: none; }
     }
 
-    /* â”€â”€ Pub rectangle inter-manche â”€â”€ */
+    /* ?? Pub rectangle inter-manche ?? */
     #ad-inter {
       width: 100%;
       display: flex;
@@ -77,7 +77,7 @@
 <body>
   <div id="app-wrapper">
 
-    <!-- â•â• PUB BANNIÃˆRE HAUT (728Ã—90) â•â• -->
+    <!-- ?? PUB BANNIÈRE HAUT (728×90) ?? -->
     <div id="ad-top">
       <!--
       <ins class="adsbygoogle"
@@ -90,14 +90,14 @@
       -->
     </div>
 
-    <!-- â•â• JEU â•â• -->
+    <!-- ?? JEU ?? -->
     <div id="g">
       <div id="hdr">
-        <div id="logo">GÃ‰OCULTURE</div>
+        <div id="logo">GÉOCULTURE <span style="font-size:10px;color:#4b5563;font-family:sans-serif;font-weight:400;letter-spacing:1px">v1.0</span></div>
         <div id="stats">
           <div class="st"><span>Manche</span><b id="hrnd">1/5</b></div>
           <div class="st"><span>Score total</span><b id="hsc">0</b></div>
-          <div class="st"><span>Max restant</span><b class="yw" id="hmax">â€”</b></div>
+          <div class="st"><span>Max restant</span><b class="yw" id="hmax">—</b></div>
         </div>
         <div id="auth-zone">
           <button id="menu-btn" onclick="typeof showMenu!=='undefined'&&showMenu()" style="font-size:11px;padding:5px 10px;border-radius:7px;border:1px solid #2d3f5e;cursor:pointer;background:transparent;color:#94a3b8;white-space:nowrap">Menu</button>
@@ -112,7 +112,7 @@
         <div id="sidebar">
           <div id="qpanel">
             <div id="badge">EXPERT</div>
-            <div id="qtxt">DÃ©marrez pour commencer</div>
+            <div id="qtxt">Démarrez pour commencer</div>
           </div>
           <div id="timer-section">
             <div id="timer-lbl">Temps restant</div>
@@ -127,8 +127,8 @@
             </div>
             <div id="maxbox">
               <div class="ml">Score max ce niveau</div>
-              <div class="mv" id="lvl-max">â€”</div>
-              <div class="ms" id="lvl-mult">â€”</div>
+              <div class="mv" id="lvl-max">—</div>
+              <div class="ms" id="lvl-mult">—</div>
             </div>
             <div id="dots">
               <div class="dot on" id="d0"></div>
@@ -139,29 +139,29 @@
             </div>
           </div>
           <div id="actions">
-            <div id="placed-info">Cliquez sur la carte pour placer votre rÃ©ponse</div>
+            <div id="placed-info">Cliquez sur la carte pour placer votre réponse</div>
             <button class="btn bg" id="skipb">Indice suivant </button>
-            <button class="btn ba" id="confb" disabled>Valider ma rÃ©ponse &#8594;</button>
+            <button class="btn ba" id="confb" disabled>Valider ma réponse &#8594;</button>
           </div>
         </div>
 
         <div id="mapw">
           <div id="map"></div>
-          <div id="explore-tip" style="display:none;position:absolute;bottom:60px;left:50%;transform:translateX(-50%);background:rgba(13,17,32,.92);color:#94a3b8;font-size:12px;padding:8px 14px;border-radius:8px;border:1px solid #1e2d45;z-index:50;white-space:nowrap;pointer-events:none"> Naviguez librement â€” cliquez sur les marqueurs pour les dÃ©tails</div>
+          <div id="explore-tip" style="display:none;position:absolute;bottom:60px;left:50%;transform:translateX(-50%);background:rgba(13,17,32,.92);color:#94a3b8;font-size:12px;padding:8px 14px;border-radius:8px;border:1px solid #1e2d45;z-index:50;white-space:nowrap;pointer-events:none"> Naviguez librement — cliquez sur les marqueurs pour les détails</div>
           <div id="level-flash">
             <div id="flash-badge"></div>
             <div id="flash-sub"></div>
           </div>
           <div id="toast" style="position:absolute;bottom:18px;left:50%;transform:translateX(-50%) translateY(8px);background:#1e2d45;border:1px solid #2d3f5e;border-radius:8px;padding:7px 14px;font-size:12px;color:#e2e8f0;z-index:60;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;white-space:nowrap;max-width:92%;font-family:system-ui,sans-serif"></div>
-          <button id="back-btn" onclick="exitExploreMode()">&#8592; Retour aux rÃ©sultats</button>
+          <button id="back-btn" onclick="exitExploreMode()">&#8592; Retour aux résultats</button>
           <div id="overlay">
-            <div class="otitle">GÃ‰O<br>CULTURE</div>
+            <div class="otitle">GÉO<br>CULTURE</div>
             <div class="osub">Trouve les lieux historiques sur la carte. Chaque niveau devient plus simple, mais les points s'amenuisent.</div>
             <div class="rgrid">
-              <div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement aprÃ¨s 30 secondes</div>
-              <div class="ri"><b>PrÃ©cision</b>Plus tu es proche, plus tu gagnes de points</div>
-              <div class="ri"><b>RapiditÃ© Ã—1.5</b>Bonus si tu rÃ©ponds avant la fin du compte Ã  rebours</div>
-              <div class="ri"><b>Expert Ã—3</b>Multiplicateur maximum â€” gagne 3x plus tÃ´t</div>
+              <div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement après 30 secondes</div>
+              <div class="ri"><b>Précision</b>Plus tu es proche, plus tu gagnes de points</div>
+              <div class="ri"><b>Rapidité ×1.5</b>Bonus si tu réponds avant la fin du compte à rebours</div>
+              <div class="ri"><b>Expert ×3</b>Multiplicateur maximum — gagne 3x plus tôt</div>
             </div>
             <div id="overlay-auth" style="display:flex;align-items:center;gap:8px;justify-content:center;margin:4px 0">
               <button onclick="typeof fbSignIn!=='undefined'&&fbSignIn()" style="font-size:13px;font-weight:600;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer">Se connecter avec Google</button>
@@ -178,20 +178,20 @@
 
   </div><!-- /app-wrapper -->
 
-  <!-- â•â• SCRIPTS â•â• -->
+  <!-- ?? SCRIPTS ?? -->
   <!-- Leaflet -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-  <!-- DonnÃ©es (492 lieux) -->
+  <!-- Données (492 lieux) -->
   <script src="js/data.js?v=2"></script>
   <!-- Firebase Auth -->
   <script type="module" src="js/firebase-auth.js?v=2"></script>
   <!-- Logique du jeu -->
   <script src="js/game.js?v=7"></script>
 
-  <!-- AdSense init (dÃ©commenter aprÃ¨s approbation) -->
+  <!-- AdSense init (décommenter après approbation) -->
   <!--
   <script>
-    // Les blocs ins.adsbygoogle dans #ad-top et #ad-inter sont initialisÃ©s automatiquement
+    // Les blocs ins.adsbygoogle dans #ad-top et #ad-inter sont initialisés automatiquement
   </script>
   -->
 </body>
