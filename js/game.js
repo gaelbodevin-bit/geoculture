@@ -206,8 +206,10 @@ function showInter(pts,dist,name){
   const pctRound=mx>0?Math.round(pts/mx*100):0;
   const barColor=pctRound>=80?'#22c55e':pctRound>=50?'#fbbf24':'#f97316';
   const ov=document.getElementById('overlay');
-  const placeDesc = roundList[curR].desc || '';
+  const curIdx=curR; // capturer l'index courant
+  const placeDesc = roundList[curIdx].desc || '';
   const imgId = 'wimg' + Date.now();
+  const wikiQuery = roundList[curIdx].name.replace(/\s*[\u2014\-].*/,'').trim();
   ov.innerHTML=`
     <div id="${imgId}" style="width:100%;max-width:380px;height:150px;background:#111827;border-radius:10px;margin-bottom:-4px;overflow:hidden;display:flex;align-items:center;justify-content:center"><span style="color:#374151;font-size:11px"></span></div>
     <div class="otitle" style="font-size:38px">+${pts.toLocaleString('fr-FR')}</div>
@@ -252,7 +254,7 @@ function showInter(pts,dist,name){
         }).catch(function(){var el=document.getElementById(id);if(el)el.style.display='none';});
     }
     tryWiki('fr');
-  })(imgId, roundList[curR].name.replace(/\s*[—\-].*/,'').trim());
+  })(imgId, wikiQuery);
 
 }
 
