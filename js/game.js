@@ -195,7 +195,7 @@ function resolveRound(){
   document.getElementById('placed-info').textContent=dist!=null?` ${fmtDist(Math.round(dist*1000))} - +${pts.toLocaleString('fr-FR')} pts`:`X Rate - ${r.name}`;
   showToast(dist!=null?`${r.name} \u00b7 ${fmtDist(Math.round(dist*1000))} \u00b7 +${pts} pts`:`Rate ! C'etait : ${r.name}`);
   setTimeout(()=>{
-    curR+1<roundList.length?showInter(pts,dist,r.name):showEnd();
+    showInter(pts,dist,r.name);
   },3000);
 }
 
@@ -224,7 +224,7 @@ function showInter(pts,dist,name){
     <div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">
       <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px"> Menu</button>
       <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0"> Explorer la carte</button>
-      <button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante ></button>
+      ${curR+1<roundList.length?'<button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante</button>':'<button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>'}
     </div>
     <div id="ad-inter">
       <!-- PUB RECTANGLE 300x250 (decommenter apres approbation AdSense)
@@ -252,7 +252,7 @@ function showInter(pts,dist,name){
         }).catch(function(){var el=document.getElementById(id);if(el)el.style.display='none';});
     }
     tryWiki('fr');
-  })(imgId, roundList[curR].name.replace(/\s*[â€”\-].*/,'').trim());
+  })(imgId, roundList[curR].name.replace(/\s*[—\-].*/,'').trim());
 
 }
 
@@ -300,9 +300,21 @@ function showEnd(){
     </div>`;
   ov.classList.remove('h');
   if(typeof window.saveGame==='function'){
-    var _tot=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
-    var _pct=_tot>0?Math.round(total/_tot*100):0;
-    try{window.saveGame(roundScores,total,_pct,noZoomMode?'nozoom':'normal');}catch(e){}
+    var _scores=roundScores.slice();
+    var _total=total;
+    var _tot=_scores.reduce(function(a,s){return a+(s.maxPts||0);},0);
+    var _pct=_tot>0?Math.round(_total/_tot*100):0;
+    var _mode=noZoomMode?'nozoom':'normal';
+    // Retry si currentUser pas encore initialise
+    function trySave(attempts){
+      try{
+        window.saveGame(_scores,_total,_pct,_mode);
+      }catch(e){
+        if(attempts>0) setTimeout(function(){trySave(attempts-1);},1000);
+        else console.warn('saveGame failed:',e);
+      }
+    }
+    setTimeout(function(){trySave(3);},500);
   }
 }
 
