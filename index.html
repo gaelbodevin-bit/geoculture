@@ -93,7 +93,7 @@
     <!-- ══ JEU ══ -->
     <div id="g">
       <div id="hdr">
-        <div id="logo">G&#201;OCULTURE <span style="font-size:10px;color:#4b5563;font-family:sans-serif;font-weight:400;letter-spacing:1px">v1.4</span></div>
+        <div id="logo">G&#201;OCULTURE <span style="font-size:10px;color:#4b5563;font-family:sans-serif;font-weight:400;letter-spacing:1px">v1.5</span></div>
         <div id="stats">
           <div class="st"><span>Manche</span><b id="hrnd">1/5</b></div>
           <div class="st"><span>Score total</span><b id="hsc">0</b></div>
@@ -167,8 +167,8 @@
               <button onclick="typeof fbSignIn!=='undefined'&&fbSignIn()" style="font-size:13px;font-weight:600;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer">Se connecter avec Google</button>
             </div>
             <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center">
-              <button class="btn ba" id="startb" style="width:auto;font-size:15px;padding:13px 28px">Mode Normal</button>
-              <button class="btn bg" id="nozb" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316">Mode No-Zoom</button>
+              <button class="btn ba" id="startb" onclick="noZoomMode=false;if(map){map.remove();map=null;}initMap();startGame();" style="width:auto;font-size:15px;padding:13px 28px">Mode Normal</button>
+              <button class="btn bg" id="nozb" onclick="noZoomMode=true;if(map){map.remove();map=null;}initMap();startGame();" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316">Mode No-Zoom</button>
             </div>
             <a onclick="typeof showHistory!=='undefined'&&showHistory()" id="hist-link" style="display:none;font-size:12px;color:#6b7280;cursor:pointer;margin-top:4px;text-decoration:underline">Voir mon historique</a>
           </div>
