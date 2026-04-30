@@ -79,6 +79,12 @@ function startRound(idx){
   if(targetMarker){targetMarker.remove();targetMarker=null;}
   if(lineLayer){lineLayer.remove();lineLayer=null;}
   map.setView([20,10],2);
+  if(noZoomMode&&map){
+    map.scrollWheelZoom.disable();
+    map.doubleClickZoom.disable();
+    map.touchZoom.disable();
+    map.dragging.disable();
+  }
   document.getElementById('confb').disabled=true;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
@@ -412,11 +418,20 @@ function exitExploreMode(){
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded',function(){
   document.getElementById('confb').onclick=confirmGuess;
-  document.getElementById('skipb').onclick=()=>{if(!gameActive)return;clearInterval(tiv);nextLevel();};
-  document.getElementById('startb').onclick=()=>{
-    try { initMap(); } catch(e) { console.error('initMap error:',e); }
+  document.getElementById('skipb').onclick=function(){if(!gameActive)return;clearInterval(tiv);nextLevel();};
+  document.getElementById('startb').onclick=function(){
+    noZoomMode=false;
+    if(map){map.remove();map=null;}
+    try{initMap();}catch(e){console.error(e);}
+    startGame();
+  };
+  var nozb=document.getElementById('nozb');
+  if(nozb) nozb.onclick=function(){
+    noZoomMode=true;
+    if(map){map.remove();map=null;}
+    try{initMap();}catch(e){console.error(e);}
     startGame();
   };
 });
