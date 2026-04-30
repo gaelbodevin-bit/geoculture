@@ -250,8 +250,14 @@ function showInter(pts,dist,name){
           if(d.thumbnail&&d.thumbnail.source){
             el.innerHTML='<img src="'+d.thumbnail.source+'" style="width:100%;height:100%;object-fit:cover;border-radius:10px" alt="">';
           } else if(lang==='fr'){tryWiki('en');}
-          else{el.style.display='none';}
-        }).catch(function(){var el=document.getElementById(id);if(el)el.style.display='none';});
+          else{
+            // Pas d'image trouvee - afficher le nom du lieu
+            el.innerHTML='<span style="color:#4b5563;font-size:13px;text-align:center;padding:10px">'+q+'</span>';
+          }
+        }).catch(function(){
+          var el=document.getElementById(id);
+          if(el) el.innerHTML='<span style="color:#374151;font-size:11px">...</span>';
+        });
     }
     tryWiki('fr');
   })(imgId, wikiQuery);
