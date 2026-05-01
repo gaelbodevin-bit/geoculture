@@ -307,7 +307,7 @@ function showMenu(){
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
   h.push('<div class="otitle" style="font-size:40px">GEO<br>CULTURE</div>');
-  h.push('<div style="font-size:11px;color:#4b5563;letter-spacing:2px;margin-top:-8px;margin-bottom:4px">v1.5</div>');
+  h.push('<div style="font-size:11px;color:#4b5563;letter-spacing:2px;margin-top:-8px;margin-bottom:4px">v1.6</div>');
   if(user){
     h.push('<div style="display:flex;align-items:center;gap:8px;justify-content:center;margin:4px 0">');
     h.push('<img src="'+(user.photoURL||'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">');
