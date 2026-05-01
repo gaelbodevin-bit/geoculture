@@ -26,17 +26,17 @@ function initMap(){
   if(typeof L==='undefined'){console.error('Leaflet not loaded');return;}
   map=L.map('map',{
     center:[20,10],zoom:2,
-    zoomControl:true,attributionControl:true,
-    minZoom:2,maxZoom:18,
-    maxBounds:[[-85,-180],[85,180]],
-    maxBoundsViscosity:1.0
+    zoomControl:!noZoomMode,attributionControl:true,
+    minZoom:2,maxZoom:noZoomMode?2:18,
+    maxBounds:[[-85,-180],[85,180]],maxBoundsViscosity:1.0,
+    scrollWheelZoom:!noZoomMode,doubleClickZoom:!noZoomMode,
+    touchZoom:!noZoomMode,boxZoom:!noZoomMode,
+    keyboard:!noZoomMode,dragging:!noZoomMode
   });
-  // Tuiles satellite ESRI + labels
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'\u00a9 Esri'}).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
 }
-
 function makePin(color){
   return L.divIcon({className:'',
     html:`<div style="width:18px;height:18px;background:${color};border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 10px rgba(0,0,0,.5)"></div>`,
@@ -82,10 +82,11 @@ function startRound(idx){
 function showHint(){
   var hintIdx=fixedLevel>=0?fixedLevel:curL;
   const h=roundList[curR].hints[hintIdx];
+  const levelScore=5-(fixedLevel>=0?fixedLevel:curL);
   const b=document.getElementById('badge');
   b.textContent=h.l;b.style.background=h.bc;b.style.color=h.tc;
   document.getElementById('qtxt').textContent=h.t;
-  const level=5-(fixedLevel>=0?fixedLevel:curL);
+  // level calcul\u00e9 dans showHint
   const mx=Math.round(BASE_PTS[level]*1.5);
   const timeToMax=Math.round(T*0.67);
   document.getElementById('lvl-max').textContent=mx.toLocaleString('fr-FR')+' pts';
@@ -98,18 +99,18 @@ function showHint(){
 }
 
 function updateDots(){
-  for(let i=0;i<5;i++){
+  for(var i=0;i<5;i++){
     var d=document.getElementById('d'+i);
-    if(fixedLevel>=0){
-      d.className='dot'+(i===fixedLevel?' on':'');
-    } else {
-      d.className='dot'+(i===curL?' on':i<curL?' done':'');
-    }
+    if(fixedLevel>=0) d.className='dot'+(i===fixedLevel?' on':'');
+    else d.className='dot'+(i===curL?' on':i<curL?' done':'');
   }
 }
 
 function startTimer(){
-  clearInterval(tiv);timeLeft=T;renderTimer();
+  clearInterval(tiv);timeLeft=T;
+  var arc=document.getElementById('arc');
+  if(arc){arc.style.transition='none';arc.style.strokeDashoffset='0';void arc.offsetWidth;arc.style.transition='stroke-dashoffset .9s linear,stroke .3s';}
+  renderTimer();
   tiv=setInterval(()=>{
     timeLeft=Math.max(0,timeLeft-.1);renderTimer();
     if(timeLeft<=0){clearInterval(tiv);nextLevel();}
@@ -153,13 +154,9 @@ function triggerFlash(level){
 
 function nextLevel(){
   if(!gameActive)return;
-  if(fixedLevel>=0){
-    // Niveau fixe : pas de progression, on resout directement
-    clearInterval(tiv);gameActive=false;confirming=true;resolveRound();
-  } else {
-    if(curL<4){curL++;triggerFlash(curL);updateDots();showHint();startTimer();}
-    else{clearInterval(tiv);gameActive=false;confirming=true;resolveRound();}
-  }
+  if(fixedLevel>=0){clearInterval(tiv);gameActive=false;confirming=true;resolveRound();}
+  else if(curL<4){curL++;triggerFlash(curL);updateDots();showHint();startTimer();}
+  else{clearInterval(tiv);gameActive=false;confirming=true;resolveRound();}
 }
 
 function confirmGuess(){
@@ -169,7 +166,7 @@ function confirmGuess(){
 
 function resolveRound(){
   const r=roundList[curR];
-  const level=5-(fixedLevel>=0?fixedLevel:curL);
+  // level calcul\u00e9 dans showHint
   let pts=0,dist=null;
   if(playerPos){
     dist=haversine(playerPos.lat,playerPos.lng,r.lat,r.lng);
@@ -207,6 +204,7 @@ function showInter(pts,dist,name){
   const placeDesc = roundList[curR].desc || '';
   const imgId = 'wimg' + Date.now();
   const wq = encodeURIComponent(roundList[curR].name.split('\u2014')[0].trim().replace(/\s*\u2014.*/,'').trim());
+  var _nextBtn=curR+1<roundList.length?'<button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante</button>':'<button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';
   ov.innerHTML=`
     <div id="${imgId}" style="width:100%;max-width:380px;height:150px;background:#111827;border-radius:10px;margin-bottom:-4px;overflow:hidden;display:flex;align-items:center;justify-content:center"><span style="color:#374151;font-size:11px">\u1f4f8</span></div>
     <div class="otitle" style="font-size:38px">+${pts.toLocaleString('fr-FR')}</div>
@@ -223,7 +221,7 @@ function showInter(pts,dist,name){
     <div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">
       <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">\u2302 Menu</button>
       <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">\u1f50d Explorer la carte</button>
-      <button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante \u2192</button>
+      ${_nextBtn}
     </div>
     <div id="ad-inter">
       <!-- PUB RECTANGLE 300x250 (d\u00e9commenter apr\u00e8s approbation AdSense)
@@ -298,20 +296,10 @@ function showEnd(){
       -->
     </div>`;
   ov.classList.remove('h');
-  // Sauvegarder dans Firebase
-  if(typeof window.saveGame==='function'){
-    var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
-    var _p=_t>0?Math.round(total/_t*100):0;
-    var _lvlNames=['tout-niveaux','expert','difficile','moyen','facile','tres-facile'];
-    var _lvlKey=fixedLevel>=0?_lvlNames[fixedLevel+1]:'tout-niveaux';
-    var _mode=(noZoomMode?'nozoom-':'')+ _lvlKey;
-    setTimeout(function(){try{window.saveGame(roundScores,total,_p,_mode);}catch(e){console.warn(e);}},500);
-  }
 }
 
 function showMenu(){
-  clearInterval(tiv);
-  gameActive=false;
+  clearInterval(tiv);gameActive=false;
   var ov=document.getElementById('overlay');
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
@@ -328,32 +316,22 @@ function showMenu(){
     h.push('<button onclick="if(typeof fbSignIn!==\'undefined\')fbSignIn()" style="font-size:13px;font-weight:600;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer">Se connecter avec Google</button>');
     h.push('</div>');
   }
-  // Grille des niveaux
-  var levels=[
-    {label:'Tout niveaux',idx:-1,color:'#f97316'},
-    {label:'Expert',idx:0,color:'#ef4444'},
-    {label:'Difficile',idx:1,color:'#f97316'},
-    {label:'Moyen',idx:2,color:'#eab308'},
-    {label:'Facile',idx:3,color:'#22c55e'},
-    {label:'Tr\u00e8s Facile',idx:4,color:'#3b82f6'}
-  ];
-  // Choix du mode (Normal / No-Zoom)
-  h.push('<div style="display:flex;gap:8px;margin:8px 0;justify-content:center">');
-  h.push('<span style="font-size:11px;color:#6b7280;align-self:center">Mode :</span>');
-  h.push('<button id="btn-normal" onclick="window._menuNZ=false;document.getElementById(\'btn-normal\').style.background=\'#f97316\';document.getElementById(\'btn-normal\').style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="font-size:12px;font-weight:600;padding:5px 14px;border-radius:7px;border:1px solid #f97316;cursor:pointer;background:#f97316;color:#fff">Normal</button>');
-  h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;document.getElementById(\'btn-nozoom\').style.background=\'#f97316\';document.getElementById(\'btn-nozoom\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="font-size:12px;font-weight:600;padding:5px 14px;border-radius:7px;border:1px solid #f97316;cursor:pointer;background:transparent;color:#f97316">No-Zoom</button>');
+  h.push('<div style="display:flex;gap:8px;margin:8px 0;justify-content:center;align-items:center">');
+  h.push('<span style="font-size:11px;color:#6b7280">Mode :</span>');
+  h.push('<button id="btn-normal" onclick="window._menuNZ=false;this.style.background=\'#f97316\';this.style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="font-size:12px;font-weight:600;padding:5px 14px;border-radius:7px;border:1px solid #f97316;cursor:pointer;background:#f97316;color:#fff">Normal</button>');
+  h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;this.style.background=\'#f97316\';this.style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="font-size:12px;font-weight:600;padding:5px 14px;border-radius:7px;border:1px solid #f97316;cursor:pointer;background:transparent;color:#f97316">No-Zoom</button>');
   h.push('</div>');
+  var levels=[{l:'Tout niveaux',i:-1,c:'#f97316'},{l:'Expert',i:0,c:'#ef4444'},{l:'Difficile',i:1,c:'#f97316'},{l:'Moyen',i:2,c:'#eab308'},{l:'Facile',i:3,c:'#22c55e'},{l:'Tr\u00e8s Facile',i:4,c:'#3b82f6'}];
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;width:100%;max-width:360px;margin:4px 0">');
   levels.forEach(function(lv){
-    var isAll=lv.idx===-1;
-    var cols=isAll?'grid-column:1/-1':'';
-    h.push('<button onclick="fixedLevel='+lv.idx+';noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="'+cols+';padding:10px 8px;border-radius:8px;border:2px solid '+lv.color+';background:transparent;color:'+lv.color+';font-weight:700;font-size:13px;cursor:pointer;">'+lv.label+'</button>');
+    var span=lv.i===-1?'grid-column:1/-1':'';
+    h.push('<button onclick="fixedLevel='+lv.i+';noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="'+span+';padding:10px 8px;border-radius:8px;border:2px solid '+lv.c+';background:transparent;color:'+lv.c+';font-weight:700;font-size:13px;cursor:pointer">'+lv.l+'</button>');
   });
   h.push('</div>');
   if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;margin-top:4px;text-decoration:underline">Voir mon historique</a>');
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
-  window._menuNZ=false; // defaut Normal
+  window._menuNZ=false;
 }
 function nextRound(){document.getElementById('overlay').classList.add('h');startRound(curR+1);}
 
@@ -396,12 +374,10 @@ function exitExploreMode(){
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded',function(){
   setTimeout(function(){try{initMap();}catch(e){}showMenu();},200);
   document.getElementById('confb').onclick=confirmGuess;
-  document.getElementById('skipb').onclick=()=>{if(!gameActive)return;clearInterval(tiv);nextLevel();};
-  document.getElementById('startb').onclick=()=>{
-    try { initMap(); } catch(e) { console.error('initMap error:',e); }
-    startGame();
-  };
+  document.getElementById('skipb').onclick=function(){if(!gameActive)return;clearInterval(tiv);nextLevel();};
+  var nozb=document.getElementById('nozb');
+  if(nozb) nozb.onclick=function(){noZoomMode=true;if(map){map.remove();map=null;}initMap();startGame();};
 });
