@@ -26,34 +26,20 @@ function initMap(){
     center:[20,10],zoom:2,
     zoomControl:!noZoomMode,
     attributionControl:true,
-    minZoom:1,maxZoom:18,
+    minZoom:2,maxZoom:18,
     maxBounds:[[-85,-180],[85,180]],
-    maxBoundsViscosity:1.0
+    maxBoundsViscosity:1.0,
+    scrollWheelZoom:!noZoomMode,
+    doubleClickZoom:!noZoomMode,
+    touchZoom:!noZoomMode,
+    boxZoom:!noZoomMode,
+    keyboard:!noZoomMode,
+    dragging:!noZoomMode
   };
-  if(noZoomMode){
-    opts.scrollWheelZoom=false;
-    opts.doubleClickZoom=false;
-    opts.touchZoom=false;
-    opts.boxZoom=false;
-    opts.keyboard=false;
-    opts.dragging=false;
-  } else {
-    opts.scrollWheelZoom=true;
-    opts.doubleClickZoom=true;
-    opts.touchZoom=true;
-    opts.boxZoom=true;
-    opts.keyboard=true;
-    opts.dragging=true;
-  }
   map=L.map('map',opts);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
-  // Calculer le zoom exact pour remplir le div sans repetition
-  var worldBounds=L.latLngBounds([[-75,-180],[75,180]]);
-  var z=map.getBoundsZoom(worldBounds);
-  map.setMinZoom(z);
-  map.setView([20,10],map.getMinZoom(),{animate:false});
 }
 function makePin(color){
   return L.divIcon({className:'',
@@ -88,7 +74,7 @@ function startRound(idx){
   if(playerMarker){playerMarker.remove();playerMarker=null;}
   if(targetMarker){targetMarker.remove();targetMarker=null;}
   if(lineLayer){lineLayer.remove();lineLayer=null;}
-  map.setView([20,10],map.getMinZoom(),{animate:false});
+  map.setView([20,10],2,{animate:false});
   document.getElementById('confb').disabled=true;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
