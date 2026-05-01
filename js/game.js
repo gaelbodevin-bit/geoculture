@@ -27,7 +27,7 @@ function initMap(){
     center:[20,10],zoom:2,
     zoomControl:!noZoomMode,
     attributionControl:true,
-    minZoom:2,maxZoom:18,
+    minZoom:2,maxZoom:noZoomMode?2:18,
     maxBounds:[[-85,-180],[85,180]],
     maxBoundsViscosity:1.0,
     scrollWheelZoom:!noZoomMode,
@@ -301,6 +301,7 @@ function showMenu(){
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
   h.push('<div class="otitle" style="font-size:40px">GEO<br>CULTURE</div>');
+  h.push('<div style="font-size:11px;color:#4b5563;letter-spacing:2px;margin-top:-8px">v1.0</div>');
   if(user){
     h.push('<div style="display:flex;align-items:center;gap:8px;justify-content:center;margin:4px 0">');
     h.push('<img src="'+(user.photoURL||'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">');
@@ -312,19 +313,12 @@ function showMenu(){
     h.push('<button onclick="if(typeof fbSignIn!==\'undefined\')fbSignIn()" style="font-size:13px;font-weight:600;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer">Se connecter avec Google</button>');
     h.push('</div>');
   }
-  h.push('<div class="rgrid">');
-  h.push('<div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement</div>');
-  h.push('<div class="ri"><b>Pr\u00e9cision</b>Plus tu es proche, plus tu gagnes</div>');
-  h.push('<div class="ri"><b>Rapidit\u00e9 x1.5</b>Bonus si tu r\u00e9ponds vite</div>');
-  h.push('<div class="ri"><b>Expert x3</b>Multiplicateur maximum</div>');
-  h.push('</div>');
+  h.push('<div class="rgrid"><div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement</div><div class="ri"><b>Pr\u00e9cision</b>Plus tu es proche, plus tu gagnes</div><div class="ri"><b>Rapidit\u00e9 x1.5</b>Bonus si tu r\u00e9ponds vite</div><div class="ri"><b>Expert x3</b>Multiplicateur maximum</div></div>');
   h.push('<div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center">');
   h.push('<button class="btn ba" onclick="noZoomMode=false;if(map){map.remove();map=null;}initMap();startGame();" style="width:auto;font-size:15px;padding:13px 28px">Mode Normal</button>');
   h.push('<button class="btn bg" onclick="noZoomMode=true;if(map){map.remove();map=null;}initMap();startGame();" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316">Mode No-Zoom</button>');
   h.push('</div>');
-  if(user){
-    h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;margin-top:4px;text-decoration:underline">Voir mon historique</a>');
-  }
+  if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;margin-top:4px;text-decoration:underline">Voir mon historique</a>');
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
 }
