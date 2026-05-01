@@ -1,3 +1,4 @@
+var noZoomMode=false;
 var BASE_PTS=[0,500,1000,1500,2000,3000];
 var MAX_DIST=2000;
 var CIRC=2*Math.PI*42;
@@ -22,7 +23,7 @@ function haversine(la1,lo1,la2,lo2){
 function initMap(){
   if(map){map.remove();map=null;}
   if(typeof L==='undefined'){console.error('Leaflet not loaded');return;}
-  var opts={
+  map=L.map('map',{
     center:[20,10],zoom:2,
     zoomControl:!noZoomMode,
     attributionControl:true,
@@ -35,8 +36,7 @@ function initMap(){
     boxZoom:!noZoomMode,
     keyboard:!noZoomMode,
     dragging:!noZoomMode
-  };
-  map=L.map('map',opts);
+  });
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
@@ -74,7 +74,7 @@ function startRound(idx){
   if(playerMarker){playerMarker.remove();playerMarker=null;}
   if(targetMarker){targetMarker.remove();targetMarker=null;}
   if(lineLayer){lineLayer.remove();lineLayer=null;}
-  map.setView([20,10],2,{animate:false});
+  map.setView([20,10],2);
   document.getElementById('confb').disabled=true;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
@@ -353,11 +353,18 @@ function exitExploreMode(){
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded',function(){
   document.getElementById('confb').onclick=confirmGuess;
-  document.getElementById('skipb').onclick=()=>{if(!gameActive)return;clearInterval(tiv);nextLevel();};
-  document.getElementById('startb').onclick=()=>{
-    try { initMap(); } catch(e) { console.error('initMap error:',e); }
+  document.getElementById('skipb').onclick=function(){if(!gameActive)return;clearInterval(tiv);nextLevel();};
+  document.getElementById('startb').onclick=function(){
+    noZoomMode=false;
+    try{initMap();}catch(e){console.error(e);}
+    startGame();
+  };
+  var nozb=document.getElementById('nozb');
+  if(nozb) nozb.onclick=function(){
+    noZoomMode=true;
+    try{initMap();}catch(e){console.error(e);}
     startGame();
   };
 });
