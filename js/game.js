@@ -2,7 +2,7 @@ var noZoomMode=false;
 var fixedLevel=-1;
 var BASE_PTS=[0,500,1000,1500,2000,3000];
 var MAX_DIST=2000;
-var CIRC=2*Math.PI*38;
+var CIRC=2*Math.PI*42;
 var T=30;
 
 var map,playerMarker,targetMarker,lineLayer;
@@ -79,13 +79,13 @@ function startRound(idx){
   updateDots();showHint();startTimer();
   // Masquer le bouton indice suivant en niveau fixe
   var skipb=document.getElementById('skipb');
-  if(skipb) skipb.style.display=fixedLevel>=0?'none':'block';
+  if(skipb) skipb.style.display=fixedLevel>=0?'none':'';
 }
 
 function showHint(){
   var hintIdx=fixedLevel>=0?fixedLevel:curL;
   const h=roundList[curR].hints[hintIdx];
-  const level=5-(fixedLevel>=0?fixedLevel:curL);
+  const levelScore=5-(fixedLevel>=0?fixedLevel:curL);
   const b=document.getElementById('badge');
   b.textContent=h.l;b.style.background=h.bc;b.style.color=h.tc;
   document.getElementById('qtxt').textContent=h.t;
@@ -111,19 +111,11 @@ function updateDots(){
 
 function startTimer(){
   clearInterval(tiv);timeLeft=T;
-  var arcEl=document.getElementById('arc');
-  if(arcEl){
-    arcEl.style.transition='none';
-    arcEl.style.strokeDashoffset='0';
-    arcEl.style.stroke='#22c55e';
-    void arcEl.offsetWidth;
-    arcEl.style.transition='stroke-dashoffset .9s linear,stroke .3s';
-  }
-  var numEl=document.getElementById('tnum');
-  if(numEl){numEl.textContent=T;numEl.style.color='#22c55e';}
-  tiv=setInterval(function(){
-    timeLeft=Math.max(0,timeLeft-.1);
-    renderTimer();
+  var arc=document.getElementById('arc');
+  if(arc){arc.style.transition='none';arc.style.strokeDashoffset='0';void arc.offsetWidth;arc.style.transition='stroke-dashoffset .9s linear,stroke .3s';}
+  renderTimer();
+  tiv=setInterval(()=>{
+    timeLeft=Math.max(0,timeLeft-.1);renderTimer();
     if(timeLeft<=0){clearInterval(tiv);nextLevel();}
   },100);
 }
@@ -132,9 +124,8 @@ function renderTimer(){
   const pct=timeLeft/T;
   const offset=CIRC*(1-pct);
   const arc=document.getElementById('arc');
-  if(timeLeft<=0) arc.style.transition='none';
   arc.style.strokeDashoffset=offset;
-  const col=timeLeft>19?'#22c55e':timeLeft>9?'#fbbf24':'#ef4444';
+  const col=pct>.6?'#22c55e':pct>.3?'#fbbf24':'#ef4444';
   arc.style.stroke=col;
   const n=document.getElementById('tnum');
   n.textContent=Math.ceil(timeLeft);
@@ -178,7 +169,7 @@ function confirmGuess(){
 
 function resolveRound(){
   const r=roundList[curR];
-  const level=5-(fixedLevel>=0?fixedLevel:curL);
+  // level calcul\u00e9 dans showHint
   let pts=0,dist=null;
   if(playerPos){
     dist=haversine(playerPos.lat,playerPos.lng,r.lat,r.lng);
@@ -311,36 +302,78 @@ function showEnd(){
 }
 
 function showMenu(){
-  clearInterval(tiv);gameActive=false;
+  clearInterval(tiv);
+  gameActive=false;
   var ov=document.getElementById('overlay');
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
-  h.push('<div class="otitle" style="font-size:40px">GEO<br>CULTURE</div>');
-  h.push('<div style="font-size:11px;color:#4b5563;letter-spacing:2px;margin-top:-8px;margin-bottom:4px">v1.6</div>');
+
+  // Titre
+  h.push('<div class="otitle" style="font-size:44px;letter-spacing:6px;line-height:1">GEO<br>CULTURE</div>');
+  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v1.6</div>');
+
+  // Zone auth
   if(user){
-    h.push('<div style="display:flex;align-items:center;gap:8px;justify-content:center;margin:4px 0">');
+    h.push('<div style="display:flex;align-items:center;gap:10px;background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:8px 16px;margin-bottom:4px">');
     h.push('<img src="'+(user.photoURL||'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">');
-    h.push('<span style="color:#e2e8f0;font-size:13px;font-weight:600">'+(user.displayName||user.email)+'</span>');
-    h.push('<button onclick="if(typeof fbSignOut!==\'undefined\')fbSignOut()" style="font-size:10px;padding:3px 8px;border-radius:5px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer">D\u00e9connexion</button>');
+    h.push('<span style="font-size:13px;color:#e2e8f0">'+(user.displayName||user.email)+'</span>');
+    h.push('<button onclick="if(typeof fbSignOut!==\'undefined\')fbSignOut()" style="font-size:11px;color:#6b7280;background:transparent;border:none;cursor:pointer;text-decoration:underline;margin-left:8px">Déconnexion</button>');
+    h.push('<button onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:11px;color:#6b7280;background:transparent;border:none;cursor:pointer;text-decoration:underline">Historique</button>');
     h.push('</div>');
   } else {
-    h.push('<div style="margin:4px 0;display:flex;justify-content:center">');
-    h.push('<button onclick="if(typeof fbSignIn!==\'undefined\')fbSignIn()" style="font-size:13px;font-weight:600;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer">Se connecter avec Google</button>');
-    h.push('</div>');
+    h.push('<button onclick="if(typeof fbSignIn!==\'undefined\')fbSignIn()" style="font-size:13px;font-weight:500;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer;margin-bottom:8px">Se connecter avec Google</button>');
   }
-  h.push('<div style="display:flex;gap:8px;margin:8px 0;justify-content:center;align-items:center">');
-  h.push('<span style="font-size:11px;color:#6b7280">Mode :</span>');
-  h.push('<button id="btn-normal" onclick="window._menuNZ=false;this.style.background=\'#f97316\';this.style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="font-size:12px;font-weight:600;padding:5px 14px;border-radius:7px;border:1px solid #f97316;cursor:pointer;background:#f97316;color:#fff">Normal</button>');
-  h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;this.style.background=\'#f97316\';this.style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="font-size:12px;font-weight:600;padding:5px 14px;border-radius:7px;border:1px solid #f97316;cursor:pointer;background:transparent;color:#f97316">No-Zoom</button>');
-  h.push('</div>');
-  var levels=[{l:'Tout niveaux',i:-1,c:'#f97316'},{l:'Expert',i:0,c:'#ef4444'},{l:'Difficile',i:1,c:'#f97316'},{l:'Moyen',i:2,c:'#eab308'},{l:'Facile',i:3,c:'#22c55e'},{l:'Tr\u00e8s Facile',i:4,c:'#3b82f6'}];
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;width:100%;max-width:360px;margin:4px 0">');
-  levels.forEach(function(lv){
-    var span=lv.i===-1?'grid-column:1/-1':'';
-    h.push('<button onclick="fixedLevel='+lv.i+';noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="'+span+';padding:10px 8px;border-radius:8px;border:2px solid '+lv.c+';background:transparent;color:'+lv.c+';font-weight:700;font-size:13px;cursor:pointer">'+lv.l+'</button>');
+
+  // Grille 2 colonnes
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:540px">');
+
+  // Colonne gauche: comment jouer
+  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px">');
+  h.push('<div style="font-size:11px;font-weight:500;color:#f97316;letter-spacing:1px;text-transform:uppercase">Comment jouer</div>');
+  var rules=[
+    'Un lieu à deviner sur la carte',
+    'Plus tu réponds tôt, plus tu scores',
+    '5 manches par partie'
+  ];
+  rules.forEach(function(r,i){
+    h.push('<div style="display:flex;gap:10px;align-items:flex-start">');
+    h.push('<div style="width:22px;height:22px;border-radius:50%;background:#1a2238;display:flex;align-items:center;justify-content:center;font-size:11px;color:#f97316;font-weight:500;flex-shrink:0">'+(i+1)+'</div>');
+    h.push('<span style="font-size:12px;color:#94a3b8;line-height:1.5">'+r+'</span>');
+    h.push('</div>');
   });
   h.push('</div>');
-  if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;margin-top:4px;text-decoration:underline">Voir mon historique</a>');
+
+  // Colonne droite: mode + difficulté
+  h.push('<div style="display:flex;flex-direction:column;gap:10px">');
+
+  // Toggle mode
+  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:10px 12px">');
+  h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Mode de jeu</div>');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">');
+  h.push('<button id="btn-normal" onclick="window._menuNZ=false;document.getElementById(\'btn-normal\').style.background=\'#f97316\';document.getElementById(\'btn-normal\').style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Normal</button>');
+  h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;document.getElementById(\'btn-nozoom\').style.background=\'#f97316\';document.getElementById(\'btn-nozoom\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">No-Zoom</button>');
+  h.push('</div></div>');
+
+  // Difficulté
+  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:10px 12px">');
+  h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Difficulté</div>');
+  h.push('<div style="display:flex;flex-direction:column;gap:5px">');
+  // Tout niveaux
+  h.push('<button onclick="fixedLevel=-1;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="background:#f97316;color:#fff;border:none;border-radius:7px;padding:8px 12px;font-size:13px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%"><span>Tout niveaux</span><span style="font-size:10px;opacity:.8">5 indices par lieu</span></button>');
+  // Grille 2x2
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">');
+  var lvls=[{l:'Expert',c:'#ef4444',i:0},{l:'Difficile',c:'#f97316',i:1},{l:'Moyen',c:'#eab308',i:2},{l:'Facile',c:'#22c55e',i:3}];
+  lvls.forEach(function(lv){
+    h.push('<button onclick="fixedLevel='+lv.i+';noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
+  });
+  h.push('</div>');
+  // Très Facile pleine largeur
+  h.push('<button onclick="fixedLevel=4;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid #3b82f6;color:#3b82f6;background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer;width:100%">Très Facile</button>');
+  h.push('</div></div>');
+
+  h.push('</div>'); // fin colonne droite
+  h.push('</div>'); // fin grille
+
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
   window._menuNZ=false;
