@@ -135,8 +135,8 @@ function showHistory() {
     h.push('</div>');
 
     // S\u00e9parer Normal et No-Zoom
-    var gamesNormal = games.filter(function(g){ return g.mode !== 'nozoom'; });
-    var gamesNozoom = games.filter(function(g){ return g.mode === 'nozoom'; });
+    var gamesNormal = games.filter(function(g){ return (g.mode||'').indexOf('nozoom') < 0; });
+    var gamesNozoom = games.filter(function(g){ return (g.mode||'').indexOf('nozoom') >= 0; });
 
     if (games.length === 0) {
       h.push('<div class="osub">Aucune partie enregistr\u00e9e pour le moment.</div>');

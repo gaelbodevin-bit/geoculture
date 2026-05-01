@@ -1,4 +1,5 @@
 var noZoomMode=false;
+var fixedLevel=-1;
 var BASE_PTS=[0,500,1000,1500,2000,3000];
 var MAX_DIST=2000;
 var CIRC=2*Math.PI*42;
@@ -25,22 +26,17 @@ function initMap(){
   if(typeof L==='undefined'){console.error('Leaflet not loaded');return;}
   map=L.map('map',{
     center:[20,10],zoom:2,
-    zoomControl:!noZoomMode,
-    attributionControl:true,
-    minZoom:2,maxZoom:noZoomMode?2:18,
+    zoomControl:true,attributionControl:true,
+    minZoom:2,maxZoom:18,
     maxBounds:[[-85,-180],[85,180]],
-    maxBoundsViscosity:1.0,
-    scrollWheelZoom:!noZoomMode,
-    doubleClickZoom:!noZoomMode,
-    touchZoom:!noZoomMode,
-    boxZoom:!noZoomMode,
-    keyboard:!noZoomMode,
-    dragging:!noZoomMode
+    maxBoundsViscosity:1.0
   });
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
+  // Tuiles satellite ESRI + labels
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'\u00a9 Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
 }
+
 function makePin(color){
   return L.divIcon({className:'',
     html:`<div style="width:18px;height:18px;background:${color};border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 10px rgba(0,0,0,.5)"></div>`,
@@ -84,11 +80,12 @@ function startRound(idx){
 }
 
 function showHint(){
-  const h=roundList[curR].hints[curL];
+  var hintIdx=fixedLevel>=0?fixedLevel:curL;
+  const h=roundList[curR].hints[hintIdx];
   const b=document.getElementById('badge');
   b.textContent=h.l;b.style.background=h.bc;b.style.color=h.tc;
   document.getElementById('qtxt').textContent=h.t;
-  const level=5-curL;
+  const level=5-(fixedLevel>=0?fixedLevel:curL);
   const mx=Math.round(BASE_PTS[level]*1.5);
   const timeToMax=Math.round(T*0.67);
   document.getElementById('lvl-max').textContent=mx.toLocaleString('fr-FR')+' pts';
@@ -102,8 +99,12 @@ function showHint(){
 
 function updateDots(){
   for(let i=0;i<5;i++){
-    const d=document.getElementById('d'+i);
-    d.className='dot'+(i===curL?' on':i<curL?' done':'');
+    var d=document.getElementById('d'+i);
+    if(fixedLevel>=0){
+      d.className='dot'+(i===fixedLevel?' on':'');
+    } else {
+      d.className='dot'+(i===curL?' on':i<curL?' done':'');
+    }
   }
 }
 
@@ -152,8 +153,13 @@ function triggerFlash(level){
 
 function nextLevel(){
   if(!gameActive)return;
-  if(curL<4){curL++;triggerFlash(curL);updateDots();showHint();startTimer();}
-  else{clearInterval(tiv);gameActive=false;confirming=true;resolveRound();}
+  if(fixedLevel>=0){
+    // Niveau fixe : pas de progression, on resout directement
+    clearInterval(tiv);gameActive=false;confirming=true;resolveRound();
+  } else {
+    if(curL<4){curL++;triggerFlash(curL);updateDots();showHint();startTimer();}
+    else{clearInterval(tiv);gameActive=false;confirming=true;resolveRound();}
+  }
 }
 
 function confirmGuess(){
@@ -163,7 +169,7 @@ function confirmGuess(){
 
 function resolveRound(){
   const r=roundList[curR];
-  const level=5-curL;
+  const level=5-(fixedLevel>=0?fixedLevel:curL);
   let pts=0,dist=null;
   if(playerPos){
     dist=haversine(playerPos.lat,playerPos.lng,r.lat,r.lng);
@@ -292,6 +298,15 @@ function showEnd(){
       -->
     </div>`;
   ov.classList.remove('h');
+  // Sauvegarder dans Firebase
+  if(typeof window.saveGame==='function'){
+    var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
+    var _p=_t>0?Math.round(total/_t*100):0;
+    var _lvlNames=['tout-niveaux','expert','difficile','moyen','facile','tres-facile'];
+    var _lvlKey=fixedLevel>=0?_lvlNames[fixedLevel+1]:'tout-niveaux';
+    var _mode=(noZoomMode?'nozoom-':'')+ _lvlKey;
+    setTimeout(function(){try{window.saveGame(roundScores,total,_p,_mode);}catch(e){console.warn(e);}},500);
+  }
 }
 
 function showMenu(){
@@ -301,7 +316,7 @@ function showMenu(){
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
   h.push('<div class="otitle" style="font-size:40px">GEO<br>CULTURE</div>');
-  h.push('<div style="font-size:11px;color:#4b5563;letter-spacing:2px;margin-top:-8px">v1.0</div>');
+  h.push('<div style="font-size:11px;color:#4b5563;letter-spacing:2px;margin-top:-8px;margin-bottom:4px">v1.0</div>');
   if(user){
     h.push('<div style="display:flex;align-items:center;gap:8px;justify-content:center;margin:4px 0">');
     h.push('<img src="'+(user.photoURL||'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">');
@@ -313,14 +328,32 @@ function showMenu(){
     h.push('<button onclick="if(typeof fbSignIn!==\'undefined\')fbSignIn()" style="font-size:13px;font-weight:600;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer">Se connecter avec Google</button>');
     h.push('</div>');
   }
-  h.push('<div class="rgrid"><div class="ri"><b>30s par indice</b>Le niveau glisse automatiquement</div><div class="ri"><b>Pr\u00e9cision</b>Plus tu es proche, plus tu gagnes</div><div class="ri"><b>Rapidit\u00e9 x1.5</b>Bonus si tu r\u00e9ponds vite</div><div class="ri"><b>Expert x3</b>Multiplicateur maximum</div></div>');
-  h.push('<div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center">');
-  h.push('<button class="btn ba" onclick="noZoomMode=false;if(map){map.remove();map=null;}initMap();startGame();" style="width:auto;font-size:15px;padding:13px 28px">Mode Normal</button>');
-  h.push('<button class="btn bg" onclick="noZoomMode=true;if(map){map.remove();map=null;}initMap();startGame();" style="width:auto;font-size:15px;padding:13px 28px;border-color:#f97316;color:#f97316">Mode No-Zoom</button>');
+  // Grille des niveaux
+  var levels=[
+    {label:'Tout niveaux',idx:-1,color:'#f97316'},
+    {label:'Expert',idx:0,color:'#ef4444'},
+    {label:'Difficile',idx:1,color:'#f97316'},
+    {label:'Moyen',idx:2,color:'#eab308'},
+    {label:'Facile',idx:3,color:'#22c55e'},
+    {label:'Tr\u00e8s Facile',idx:4,color:'#3b82f6'}
+  ];
+  // Choix du mode (Normal / No-Zoom)
+  h.push('<div style="display:flex;gap:8px;margin:8px 0;justify-content:center">');
+  h.push('<span style="font-size:11px;color:#6b7280;align-self:center">Mode :</span>');
+  h.push('<button id="btn-normal" onclick="window._menuNZ=false;document.getElementById(\'btn-normal\').style.background=\'#f97316\';document.getElementById(\'btn-normal\').style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="font-size:12px;font-weight:600;padding:5px 14px;border-radius:7px;border:1px solid #f97316;cursor:pointer;background:#f97316;color:#fff">Normal</button>');
+  h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;document.getElementById(\'btn-nozoom\').style.background=\'#f97316\';document.getElementById(\'btn-nozoom\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="font-size:12px;font-weight:600;padding:5px 14px;border-radius:7px;border:1px solid #f97316;cursor:pointer;background:transparent;color:#f97316">No-Zoom</button>');
+  h.push('</div>');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;width:100%;max-width:360px;margin:4px 0">');
+  levels.forEach(function(lv){
+    var isAll=lv.idx===-1;
+    var cols=isAll?'grid-column:1/-1':'';
+    h.push('<button onclick="fixedLevel='+lv.idx+';noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="'+cols+';padding:10px 8px;border-radius:8px;border:2px solid '+lv.color+';background:transparent;color:'+lv.color+';font-weight:700;font-size:13px;cursor:pointer;">'+lv.label+'</button>');
+  });
   h.push('</div>');
   if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;margin-top:4px;text-decoration:underline">Voir mon historique</a>');
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
+  window._menuNZ=false; // defaut Normal
 }
 function nextRound(){document.getElementById('overlay').classList.add('h');startRound(curR+1);}
 
@@ -363,18 +396,12 @@ function exitExploreMode(){
   }
 }
 
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function(){try{initMap();}catch(e){}showMenu();},200);
   document.getElementById('confb').onclick=confirmGuess;
-  document.getElementById('skipb').onclick=function(){if(!gameActive)return;clearInterval(tiv);nextLevel();};
-  document.getElementById('startb').onclick=function(){
-    noZoomMode=false;
-    try{initMap();}catch(e){console.error(e);}
-    startGame();
-  };
-  var nozb=document.getElementById('nozb');
-  if(nozb) nozb.onclick=function(){
-    noZoomMode=true;
-    try{initMap();}catch(e){console.error(e);}
+  document.getElementById('skipb').onclick=()=>{if(!gameActive)return;clearInterval(tiv);nextLevel();};
+  document.getElementById('startb').onclick=()=>{
+    try { initMap(); } catch(e) { console.error('initMap error:',e); }
     startGame();
   };
 });
