@@ -78,14 +78,14 @@ function startRound(idx){
   document.getElementById('hrnd').textContent=`${idx+1}/5`;
   updateDots();showHint();startTimer();
   // Masquer le bouton indice suivant en niveau fixe
-  var skipb=document.getElementById('skipb');
-  if(skipb) skipb.style.display=fixedLevel>=0?'none':'';
+  var skipbEl=document.getElementById('skipb');
+  if(skipbEl){skipbEl.style.display=fixedLevel>=0?'none':'block';}
 }
 
 function showHint(){
   var hintIdx=fixedLevel>=0?fixedLevel:curL;
   const h=roundList[curR].hints[hintIdx];
-  const levelScore=5-(fixedLevel>=0?fixedLevel:curL);
+  const level=5-(fixedLevel>=0?fixedLevel:curL);
   const b=document.getElementById('badge');
   b.textContent=h.l;b.style.background=h.bc;b.style.color=h.tc;
   document.getElementById('qtxt').textContent=h.t;
@@ -307,7 +307,7 @@ function showMenu(){
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
   h.push('<div class="otitle" style="font-size:40px">GEO<br>CULTURE</div>');
-  h.push('<div style="font-size:11px;color:#4b5563;letter-spacing:2px;margin-top:-8px;margin-bottom:4px">v1.4</div>');
+  h.push('<div style="font-size:11px;color:#4b5563;letter-spacing:2px;margin-top:-8px;margin-bottom:4px">v1.5</div>');
   if(user){
     h.push('<div style="display:flex;align-items:center;gap:8px;justify-content:center;margin:4px 0">');
     h.push('<img src="'+(user.photoURL||'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">');
