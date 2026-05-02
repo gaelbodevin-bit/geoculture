@@ -2,7 +2,7 @@ var noZoomMode=false;
 var fixedLevel=-1;
 var BASE_PTS=[0,500,1000,1500,2000,3000];
 var MAX_DIST=2000;
-var CIRC=2*Math.PI*42;
+var CIRC=2*Math.PI*38;
 var T=30;
 
 var map,playerMarker,targetMarker,lineLayer;
@@ -79,13 +79,13 @@ function startRound(idx){
   updateDots();showHint();startTimer();
   // Masquer le bouton indice suivant en niveau fixe
   var skipb=document.getElementById('skipb');
-  if(skipb) skipb.style.display=fixedLevel>=0?'none':'';
+  if(skipb) skipb.style.display=fixedLevel>=0?'none':'block';
 }
 
 function showHint(){
   var hintIdx=fixedLevel>=0?fixedLevel:curL;
   const h=roundList[curR].hints[hintIdx];
-  const levelScore=5-(fixedLevel>=0?fixedLevel:curL);
+  const level=5-(fixedLevel>=0?fixedLevel:curL);
   const b=document.getElementById('badge');
   b.textContent=h.l;b.style.background=h.bc;b.style.color=h.tc;
   document.getElementById('qtxt').textContent=h.t;
@@ -111,11 +111,19 @@ function updateDots(){
 
 function startTimer(){
   clearInterval(tiv);timeLeft=T;
-  var arc=document.getElementById('arc');
-  if(arc){arc.style.transition='none';arc.style.strokeDashoffset='0';void arc.offsetWidth;arc.style.transition='stroke-dashoffset .9s linear,stroke .3s';}
-  renderTimer();
-  tiv=setInterval(()=>{
-    timeLeft=Math.max(0,timeLeft-.1);renderTimer();
+  var arcEl=document.getElementById('arc');
+  if(arcEl){
+    arcEl.style.transition='none';
+    arcEl.style.strokeDashoffset='0';
+    arcEl.style.stroke='#22c55e';
+    void arcEl.offsetWidth;
+    arcEl.style.transition='stroke-dashoffset .9s linear,stroke .3s';
+  }
+  var numEl=document.getElementById('tnum');
+  if(numEl){numEl.textContent=T;numEl.style.color='#22c55e';}
+  tiv=setInterval(function(){
+    timeLeft=Math.max(0,timeLeft-.1);
+    renderTimer();
     if(timeLeft<=0){clearInterval(tiv);nextLevel();}
   },100);
 }
@@ -124,8 +132,9 @@ function renderTimer(){
   const pct=timeLeft/T;
   const offset=CIRC*(1-pct);
   const arc=document.getElementById('arc');
+  if(timeLeft<=0) arc.style.transition='none';
   arc.style.strokeDashoffset=offset;
-  const col=pct>.6?'#22c55e':pct>.3?'#fbbf24':'#ef4444';
+  const col=timeLeft>19?'#22c55e':timeLeft>9?'#fbbf24':'#ef4444';
   arc.style.stroke=col;
   const n=document.getElementById('tnum');
   n.textContent=Math.ceil(timeLeft);
@@ -169,7 +178,7 @@ function confirmGuess(){
 
 function resolveRound(){
   const r=roundList[curR];
-  // level calcul\u00e9 dans showHint
+  const level=5-(fixedLevel>=0?fixedLevel:curL);
   let pts=0,dist=null;
   if(playerPos){
     dist=haversine(playerPos.lat,playerPos.lng,r.lat,r.lng);
@@ -193,7 +202,7 @@ function resolveRound(){
   document.getElementById('placed-info').textContent=dist!=null?`\u1f3af ${fmtDist(Math.round(dist*1000))} \u2014 +${pts.toLocaleString('fr-FR')} pts`:`\u274c Rat\u00e9 \u2014 ${r.name}`;
   showToast(dist!=null?`${r.name} \u00b7 ${fmtDist(Math.round(dist*1000))} \u00b7 +${pts} pts`:`Rat\u00e9 ! C'\u00e9tait : ${r.name}`);
   setTimeout(()=>{
-    curR+1<roundList.length?showInter(pts,dist,r.name):showEnd();
+    showInter(pts,dist,r.name);
   },3000);
 }
 
