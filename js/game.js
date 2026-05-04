@@ -36,16 +36,26 @@ function initMap(){
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
-  // Calculer le zoom minimum APRES que le div est rendu
-  setTimeout(function(){
-    if(!map) return;
-    var z=map.getBoundsZoom(L.latLngBounds([[-75,-180],[75,180]]));
-    map.setMinZoom(z);
-    if(noZoomMode){
-      map.setMaxZoom(z);
-    }
-    map.setView([20,10],z,{animate:false});
-  },100);
+  adjustMapZoom();
+  window.addEventListener('resize', adjustMapZoom);
+}
+
+function adjustMapZoom(){
+  if(!map) return;
+  var container=map.getContainer();
+  var w=container.offsetWidth;
+  var h=container.offsetHeight;
+  if(w===0||h===0) return;
+  // Zoom pour que 256*2^z >= largeur (évite répétition horizontale)
+  var minZ=Math.ceil(Math.log2(w/256));
+  if(minZ<1) minZ=1;
+  map.setMinZoom(minZ);
+  if(noZoomMode){
+    map.setMaxZoom(minZ);
+  }
+  if(map.getZoom()<minZ){
+    map.setZoom(minZ,{animate:false});
+  }
 }
 function makePin(color){
   return L.divIcon({className:'',
@@ -80,7 +90,7 @@ function startRound(idx){
   if(playerMarker){playerMarker.remove();playerMarker=null;}
   if(targetMarker){targetMarker.remove();targetMarker=null;}
   if(lineLayer){lineLayer.remove();lineLayer=null;}
-  map.setView([20,10],map.getMinZoom()||2,{animate:false});
+  map.setView([20,10],map.getMinZoom(),{animate:false});
   document.getElementById('confb').disabled=true;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
@@ -329,7 +339,7 @@ function showMenu(){
 
   // Titre
   h.push('<div class="otitle" style="font-size:44px;letter-spacing:6px;line-height:1">GEO<br>CULTURE</div>');
-  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.2</div>');
+  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.3</div>');
 
   // Zone auth
   if(user){
