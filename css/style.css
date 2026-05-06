@@ -104,3 +104,24 @@ pointer-events:none;
   .rgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:400px}
   .ri{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:12px;color:var(--muted2);line-height:1.5}
   .ri b{display:block;color:var(--text);font-size:13px;margin-bottom:3px}
+
+/* =========================
+   MENU PRINCIPAL CLEAN MODE
+   ========================= */
+
+body.menu-mode #sidebar{
+display:none;
+}
+
+body.menu-mode #main{
+display:block;
+}
+
+body.menu-mode #mapw{
+width:100vw;
+height:100vh;
+}
+
+body.menu-mode #hdr{
+display:none;
+}
