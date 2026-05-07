@@ -163,3 +163,7 @@ height:100vh !important;
 body.menu-mode #hdr{
 display:none !important;
 }
+/* Fix bandeau blanc */
+#app-wrapper{overflow:hidden;background:var(--bg0)}
+body.menu-mode #app-wrapper{background:transparent}
+.leaflet-container{background:#0d1120}

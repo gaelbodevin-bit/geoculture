@@ -24,11 +24,17 @@ function haversine(la1,lo1,la2,lo2){
 function initMap(){
   if(map){map.remove();map=null;}
   if(typeof L==='undefined'){console.error('Leaflet not loaded');return;}
+  var mapDiv=document.getElementById('map');
+  var divW=mapDiv?mapDiv.offsetWidth:(window.innerWidth-210);
+  var minZ=Math.ceil(Math.log2(divW/256));
+  if(minZ<2) minZ=2;
   map=L.map('map',{
-    center:[20,10],zoom:2,
+    center:[20,10],zoom:minZ,
     zoomControl:!noZoomMode,attributionControl:true,
-    minZoom:1,maxZoom:noZoomMode?2:18,
-    maxBounds:[[-85,-180],[85,180]],maxBoundsViscosity:1.0,
+    minZoom:minZ,maxZoom:noZoomMode?minZ:18,
+    maxBounds:[[-85,-210],[85,210]],
+    maxBoundsViscosity:0.7,
+    worldCopyJump:true,
     scrollWheelZoom:!noZoomMode,doubleClickZoom:!noZoomMode,
     touchZoom:!noZoomMode,boxZoom:!noZoomMode,
     keyboard:!noZoomMode,dragging:true
@@ -36,26 +42,6 @@ function initMap(){
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
-  adjustMapZoom();
-  window.addEventListener('resize', adjustMapZoom);
-}
-
-function adjustMapZoom(){
-  if(!map) return;
-  var container=map.getContainer();
-  var w=container.offsetWidth;
-  var h=container.offsetHeight;
-  if(w===0||h===0) return;
-  // Zoom pour que 256*2^z >= largeur (évite répétition horizontale)
-  var minZ=Math.ceil(Math.log2(w/256));
-  if(minZ<1) minZ=1;
-  map.setMinZoom(minZ);
-  if(noZoomMode){
-    map.setMaxZoom(minZ);
-  }
-  if(map.getZoom()<minZ){
-    map.setZoom(minZ,{animate:false});
-  }
 }
 function makePin(color){
   return L.divIcon({className:'',
@@ -75,7 +61,6 @@ function onMapClick(e){
 function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]]}return b}
 
 function startGame(){
-  document.body.classList.remove('menu-mode');
   total=0;roundScores=[];
   roundList=shuffle(ROUNDS).slice(0,5);
   curR=0;
@@ -334,14 +319,13 @@ function showEnd(){
 function showMenu(){
   clearInterval(tiv);
   gameActive=false;
-  document.body.classList.add('menu-mode');
   var ov=document.getElementById('overlay');
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
 
   // Titre
   h.push('<div class="otitle" style="font-size:44px;letter-spacing:6px;line-height:1">GEO<br>CULTURE</div>');
-  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.7</div>');
+  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.8</div>');
 
   // Zone auth
   if(user){
