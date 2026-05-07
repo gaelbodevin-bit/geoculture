@@ -31,7 +31,7 @@ function initMap(){
     maxBounds:[[-85,-180],[85,180]],maxBoundsViscosity:1.0,
     scrollWheelZoom:!noZoomMode,doubleClickZoom:!noZoomMode,
     touchZoom:!noZoomMode,boxZoom:!noZoomMode,
-    keyboard:!noZoomMode,dragging:!noZoomMode
+    keyboard:!noZoomMode,dragging:true
   });
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
@@ -341,7 +341,7 @@ function showMenu(){
 
   // Titre
   h.push('<div class="otitle" style="font-size:44px;letter-spacing:6px;line-height:1">GEO<br>CULTURE</div>');
-  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.9</div>');
+  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.6</div>');
 
   // Zone auth
   if(user){
