@@ -187,7 +187,7 @@ function triggerFlash(level){
 function nextLevel(){
   if(!gameActive)return;
   if(fixedLevel>=0){clearInterval(tiv);gameActive=false;confirming=true;resolveRound();}
-  else if(curL<4){curL++;triggerFlash(curL);updateDots();showHint();startTimer();}
+  else if(curL<3){curL++;triggerFlash(curL);updateDots();showHint();startTimer();}
   else{clearInterval(tiv);gameActive=false;confirming=true;resolveRound();}
 }
 
@@ -396,7 +396,9 @@ function showMenu(){
     h.push('<button onclick="fixedLevel='+lv.i+';noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
   });
   h.push('</div>');
-    h.push('</div></div>');
+  // Très Facile pleine largeur
+  h.push('<button onclick="fixedLevel=4;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid #3b82f6;color:#3b82f6;background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer;width:100%">Très Facile</button>');
+  h.push('</div></div>');
 
   h.push('</div>'); // fin colonne droite
   h.push('</div>'); // fin grille
