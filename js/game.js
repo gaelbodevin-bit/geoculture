@@ -24,20 +24,40 @@ function haversine(la1,lo1,la2,lo2){
 function initMap(){
   if(map){map.remove();map=null;}
   if(typeof L==='undefined'){console.error('Leaflet not loaded');return;}
+  var mapDiv=document.getElementById('map');
+  var divW=mapDiv?mapDiv.offsetWidth:(window.innerWidth-210);
+  var divH=mapDiv?mapDiv.offsetHeight:window.innerHeight;
+  // Zoom exact pour que la carte remplisse le div sans répétition ni scroll
+  var zW=Math.log2(divW/256);
+  var zH=Math.log2(divH/256)+1; // +1 car la hauteur mercator est ~1/2 de la largeur
+  var minZ=Math.ceil(Math.max(zW,zH));
+  if(minZ<1) minZ=1;
   map=L.map('map',{
-    center:[20,10],zoom:2,
+    center:[20,0],zoom:minZ,
     zoomControl:!noZoomMode,attributionControl:true,
-    minZoom:1,maxZoom:noZoomMode?2:18,
-    maxBounds:[[-85,-180],[85,180]],maxBoundsViscosity:1.0,
+    minZoom:minZ,maxZoom:noZoomMode?minZ:18,
+    maxBounds:[[-85,-180],[85,180]],
+    maxBoundsViscosity:1.0,
     scrollWheelZoom:!noZoomMode,doubleClickZoom:!noZoomMode,
     touchZoom:!noZoomMode,boxZoom:!noZoomMode,
-    keyboard:!noZoomMode,dragging:true
+    keyboard:true,dragging:true
   });
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
-  adjustMapZoom();
-  window.addEventListener('resize', adjustMapZoom);
+  // Recalculer si la fenêtre change de taille
+  window.onresize=function(){
+    if(!map) return;
+    var w=mapDiv?mapDiv.offsetWidth:(window.innerWidth-210);
+    var h=mapDiv?mapDiv.offsetHeight:window.innerHeight;
+    var zw=Math.log2(w/256);
+    var zh=Math.log2(h/256)+1;
+    var mz=Math.ceil(Math.max(zw,zh));
+    if(mz<1) mz=1;
+    map.setMinZoom(mz);
+    if(noZoomMode) map.setMaxZoom(mz);
+    if(map.getZoom()<mz) map.setZoom(mz,{animate:false});
+  };
 }
 
 function adjustMapZoom(){
