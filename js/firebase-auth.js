@@ -44,6 +44,11 @@ function updateAuthUI(user) {
     if (avatar) avatar.style.display = 'none';
     if (name) name.textContent = '';
   }
+  // Rafraichir le menu si ouvert
+  var ov = document.getElementById('overlay');
+  if(ov && !ov.classList.contains('h') && typeof showMenu==='function' && typeof gameActive!=='undefined' && !gameActive) {
+    showMenu();
+  }
 }
 
 function fbSignIn() {
@@ -63,10 +68,8 @@ function fbSignOut() {
 function saveGame(scores, total, pct, mode) {
   console.log('saveGame appel\u00e9, currentUser=', currentUser ? currentUser.uid : 'NULL');
   if (!currentUser) {
-    console.warn('saveGame: pas de currentUser !');
-    return;
+      return;
   }
-  console.log('saveGame: sauvegarde', scores.length, 'manches, total=', total, 'pct=', pct);
   var data = {
     uid: currentUser.uid,
     displayName: currentUser.displayName || 'Joueur',
@@ -74,8 +77,8 @@ function saveGame(scores, total, pct, mode) {
     total: total,
     pct: pct,
     mode: mode || 'normal',
-    rounds: scores.map(function(s) {
-      return { name: s.name, pts: s.pts, maxPts: s.maxPts, distM: s.distM };
+    rounds: (scores||[]).map(function(s) {
+      return { name: s.name||'', pts: s.pts||0, maxPts: s.maxPts||0, distM: s.distM!=null?s.distM:null };
     }),
     createdAt: serverTimestamp()
   };
@@ -87,11 +90,9 @@ function saveGame(scores, total, pct, mode) {
 // \u2500\u2500 Charger l'historique \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 function loadHistory(callback) {
   if (!currentUser) {
-    console.log('loadHistory: pas de currentUser, uid=', currentUser);
-    callback([]); 
+      callback([]); 
     return; 
   }
-  console.log('loadHistory: chargement pour uid=', currentUser.uid);
   var q = query(
     collection(fbDb, 'games'),
     where('uid', '==', currentUser.uid),
@@ -100,10 +101,8 @@ function loadHistory(callback) {
   );
   getDocs(q).then(function(snap) {
     var games = [];
-    console.log('loadHistory: snap.size=', snap.size);
     snap.forEach(function(doc) { 
       var d = doc.data();
-      console.log('loadHistory doc:', doc.id, d);
       games.push(Object.assign({id: doc.id}, d)); 
     });
     callback(games);
@@ -148,7 +147,10 @@ function showHistory() {
         gamesNormal.forEach(function(g) {
         var date = g.createdAt ? new Date(g.createdAt.seconds * 1000) : new Date();
         var dateStr = date.toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
-        var modeLabel = g.mode === 'nozoom' ? ' \u00b7 No-Zoom' : '';
+        var _modeMap={'tout-niveaux':'Tout niveaux','expert':'Expert','difficile':'Difficile','moyen':'Moyen','facile':'Facile','tres-facile':'Tr\u00e8s Facile'};
+        var _isNZ=(g.mode||'').indexOf('nozoom')>=0;
+        var _lvlKey=(g.mode||'tout-niveaux').replace('nozoom-','');
+        var modeLabel=' \u00b7 '+(_isNZ?'No-Zoom \u00b7 ':'')+(_modeMap[_lvlKey]||_lvlKey);
         var barColor = g.pct >= 80 ? '#22c55e' : g.pct >= 50 ? '#fbbf24' : '#f97316';
         h.push('<div style="padding:10px 0;border-bottom:1px solid #1e2d45">');
         h.push('<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">');
