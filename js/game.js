@@ -31,7 +31,7 @@ function initMap(){
     maxBounds:[[-85,-180],[85,180]],maxBoundsViscosity:1.0,
     scrollWheelZoom:!noZoomMode,doubleClickZoom:!noZoomMode,
     touchZoom:!noZoomMode,boxZoom:!noZoomMode,
-    keyboard:!noZoomMode,dragging:!noZoomMode
+    keyboard:!noZoomMode,dragging:true
   });
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
@@ -75,6 +75,7 @@ function onMapClick(e){
 function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]]}return b}
 
 function startGame(){
+  document.body.classList.remove('menu-mode');
   total=0;roundScores=[];
   roundList=shuffle(ROUNDS).slice(0,5);
   curR=0;
@@ -333,6 +334,7 @@ function showEnd(){
 function showMenu(){
   clearInterval(tiv);
   gameActive=false;
+  document.body.classList.add('menu-mode');
   var ov=document.getElementById('overlay');
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
@@ -396,9 +398,7 @@ function showMenu(){
     h.push('<button onclick="fixedLevel='+lv.i+';noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
   });
   h.push('</div>');
-  // Très Facile pleine largeur
-  h.push('<button onclick="fixedLevel=4;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid #3b82f6;color:#3b82f6;background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer;width:100%">Très Facile</button>');
-  h.push('</div></div>');
+    h.push('</div></div>');
 
   h.push('</div>'); // fin colonne droite
   h.push('</div>'); // fin grille
@@ -449,6 +449,7 @@ function exitExploreMode(){
 }
 
 document.addEventListener('DOMContentLoaded',function(){
+  document.body.classList.add('menu-mode');
   setTimeout(function(){try{initMap();}catch(e){}showMenu();},200);
   document.getElementById('confb').onclick=confirmGuess;
   document.getElementById('skipb').onclick=function(){if(!gameActive)return;clearInterval(tiv);nextLevel();};
