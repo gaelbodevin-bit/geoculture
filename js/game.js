@@ -27,18 +27,15 @@ function initMap(){
   var mapDiv=document.getElementById('map');
   var divW=mapDiv?mapDiv.offsetWidth:(window.innerWidth-210);
   var divH=mapDiv?mapDiv.offsetHeight:window.innerHeight;
-  // Zoom minimum: la carte monde entier doit tenir dans le div
   var minZ=Math.max(
     Math.ceil(Math.log2(divW/256)),
-    Math.ceil(Math.log2(divH/170)) // 170 = hauteur approx monde en tuiles mercator
+    Math.ceil(Math.log2(divH/170))
   );
   if(minZ<1) minZ=1;
   map=L.map('map',{
     center:[20,0],zoom:minZ,
     zoomControl:!noZoomMode,attributionControl:true,
     minZoom:minZ,maxZoom:noZoomMode?minZ:18,
-    maxBounds:[[-90,-200],[90,200]],
-    maxBoundsViscosity:0.5,
     scrollWheelZoom:!noZoomMode,doubleClickZoom:!noZoomMode,
     touchZoom:!noZoomMode,boxZoom:!noZoomMode,
     keyboard:true,dragging:true
