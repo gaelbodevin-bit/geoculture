@@ -33,8 +33,6 @@ function initMap(){
     center:[20,0],zoom:minZ,
     zoomControl:!noZoomMode,attributionControl:true,
     minZoom:minZ,maxZoom:noZoomMode?minZ:18,
-    maxBounds:[[-85,-180],[85,180]],
-    maxBoundsViscosity:1.0,
     scrollWheelZoom:!noZoomMode,doubleClickZoom:!noZoomMode,
     touchZoom:!noZoomMode,boxZoom:!noZoomMode,
     keyboard:true,dragging:true
@@ -42,7 +40,6 @@ function initMap(){
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
-  // Ajuster pour que tout le globe soit visible
   setTimeout(function(){
     if(!map) return;
     var worldBounds=L.latLngBounds([[-75,-179],[75,179]]);
@@ -50,6 +47,8 @@ function initMap(){
     map.setMinZoom(z);
     if(noZoomMode) map.setMaxZoom(z);
     map.fitBounds(worldBounds,{animate:false,padding:[0,0]});
+    // Limites souples pour permettre scroll vers extrêmes
+    map.setMaxBounds(L.latLngBounds([[-88,-270],[88,270]]));
   },200);
 }
 
