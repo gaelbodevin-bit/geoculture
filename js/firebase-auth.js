@@ -229,3 +229,81 @@ function closeHistory() {
   }
 }
 window.closeHistory = closeHistory;
+
+// Classement
+function loadLeaderboard(mode, callback) {
+  var q = query(
+    collection(fbDb, 'games'),
+    where('mode', '==', mode),
+    orderBy('total', 'desc'),
+    limit(20)
+  );
+  getDocs(q).then(function(snap) {
+    var entries = [];
+    snap.forEach(function(doc) { entries.push(doc.data()); });
+    callback(entries);
+  }).catch(function(e) {
+    console.error('Leaderboard error:', e);
+    callback([]);
+  });
+}
+
+function showLeaderboard() {
+  var ov = document.getElementById('overlay');
+  window._prevOverlayHTML = ov.innerHTML;
+  window._prevOverlayHidden = ov.classList.contains('h');
+
+  var MODES = [
+    {key:'tout-niveaux',label:'Tout niveaux',color:'#f97316'},
+    {key:'expert',label:'Expert',color:'#ef4444'},
+    {key:'difficile',label:'Difficile',color:'#f97316'},
+    {key:'moyen',label:'Moyen',color:'#eab308'},
+    {key:'facile',label:'Facile',color:'#22c55e'}
+  ];
+
+  function render(mode, entries) {
+    var h = [];
+    h.push('<div class="otitle" style="font-size:28px">Classement</div>');
+    h.push('<div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:8px">');
+    MODES.forEach(function(m) {
+      var active = m.key === mode;
+      h.push('<button onclick="window._showLbMode(\''+m.key+'\')" style="padding:5px 12px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;border:2px solid '+m.color+';background:'+(active?m.color:'transparent')+';color:'+(active?'#fff':m.color)+'">'+m.label+'</button>');
+    });
+    h.push('</div>');
+
+    if(entries.length===0){
+      h.push('<div class="osub" style="margin:16px 0">Aucune partie pour ce mode.</div>');
+    } else {
+      h.push('<div class="ocard" style="max-height:380px;overflow-y:auto;width:100%;max-width:480px;padding:8px 0">');
+      entries.forEach(function(g,i){
+        var medal = i===0?'\ud83e\udd47':i===1?'\ud83e\udd48':i===2?'\ud83e\udd49':(i+1)+'.';
+        var barColor = g.pct>=80?'#22c55e':g.pct>=50?'#fbbf24':'#f97316';
+        var isMe = currentUser&&g.uid===currentUser.uid;
+        h.push('<div style="display:flex;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid #1e2d45'+(isMe?';background:#1a2238;border-radius:8px':'')+'" >');
+        h.push('<span style="font-size:16px;min-width:28px;text-align:center">'+medal+'</span>');
+        if(g.photoURL){
+          h.push('<img src="'+g.photoURL+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0">');
+        } else {
+          h.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;flex-shrink:0"></div>');
+        }
+        h.push('<span style="flex:1;font-size:13px;color:'+(isMe?'#f97316':'#e2e8f0')+';font-weight:'+(isMe?'700':'400')+';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+(g.displayName||'Joueur')+'</span>');
+        h.push('<div style="text-align:right"><div style="font-size:15px;font-weight:700;color:'+barColor+'">'+(g.total||0).toLocaleString('fr-FR')+' pts</div>');
+        h.push('<div style="font-size:11px;color:#6b7280">'+(g.pct||0)+'%</div></div></div>');
+      });
+      h.push('</div>');
+    }
+    h.push('<button class="btn bg" onclick="closeHistory()" style="width:auto;padding:10px 20px;margin-top:8px">&#8592; Retour</button>');
+    ov.innerHTML=h.join('');
+    ov.classList.remove('h');
+  }
+
+  window._showLbMode = function(mode) {
+    ov.innerHTML='<div class="otitle" style="font-size:28px">Chargement...</div>';
+    ov.classList.remove('h');
+    loadLeaderboard(mode, function(entries){ render(mode, entries); });
+  };
+
+  window._showLbMode('tout-niveaux');
+}
+
+window.showLeaderboard = showLeaderboard;

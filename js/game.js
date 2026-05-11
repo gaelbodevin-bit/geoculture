@@ -24,18 +24,43 @@ function haversine(la1,lo1,la2,lo2){
 function initMap(){
   if(map){map.remove();map=null;}
   if(typeof L==='undefined'){console.error('Leaflet not loaded');return;}
+  var mapDiv=document.getElementById('map');
+  var divW=mapDiv?mapDiv.offsetWidth:(window.innerWidth-210);
+  var divH=mapDiv?mapDiv.offsetHeight:window.innerHeight;
+  var minZ=Math.max(
+    Math.ceil(Math.log2(divW/256)),
+    Math.ceil(Math.log2(divH/170))
+  );
+  if(minZ<1) minZ=1;
   map=L.map('map',{
-    center:[20,10],zoom:2,
+    center:[20,0],zoom:minZ,
     zoomControl:!noZoomMode,attributionControl:true,
-    minZoom:2,maxZoom:noZoomMode?2:18,
-    maxBounds:[[-85,-180],[85,180]],maxBoundsViscosity:1.0,
+    minZoom:minZ,maxZoom:noZoomMode?minZ:18,
     scrollWheelZoom:!noZoomMode,doubleClickZoom:!noZoomMode,
     touchZoom:!noZoomMode,boxZoom:!noZoomMode,
-    keyboard:!noZoomMode,dragging:!noZoomMode
+    keyboard:true,dragging:true
   });
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
+}
+
+function adjustMapZoom(){
+  if(!map) return;
+  var container=map.getContainer();
+  var w=container.offsetWidth;
+  var h=container.offsetHeight;
+  if(w===0||h===0) return;
+  // Zoom pour que 256*2^z >= largeur (évite répétition horizontale)
+  var minZ=Math.ceil(Math.log2(w/256));
+  if(minZ<1) minZ=1;
+  map.setMinZoom(minZ);
+  if(noZoomMode){
+    map.setMaxZoom(minZ);
+  }
+  if(map.getZoom()<minZ){
+    map.setZoom(minZ,{animate:false});
+  }
 }
 function makePin(color){
   return L.divIcon({className:'',
@@ -55,6 +80,7 @@ function onMapClick(e){
 function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]]}return b}
 
 function startGame(){
+  document.body.classList.remove('menu-mode');
   total=0;roundScores=[];
   roundList=shuffle(ROUNDS).slice(0,5);
   curR=0;
@@ -70,7 +96,7 @@ function startRound(idx){
   if(playerMarker){playerMarker.remove();playerMarker=null;}
   if(targetMarker){targetMarker.remove();targetMarker=null;}
   if(lineLayer){lineLayer.remove();lineLayer=null;}
-  map.setView([20,10],2);
+  map.setView([20,10],map.getMinZoom(),{animate:false});
   document.getElementById('confb').disabled=true;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
@@ -167,7 +193,7 @@ function triggerFlash(level){
 function nextLevel(){
   if(!gameActive)return;
   if(fixedLevel>=0){clearInterval(tiv);gameActive=false;confirming=true;resolveRound();}
-  else if(curL<4){curL++;triggerFlash(curL);updateDots();showHint();startTimer();}
+  else if(curL<3){curL++;triggerFlash(curL);updateDots();showHint();startTimer();}
   else{clearInterval(tiv);gameActive=false;confirming=true;resolveRound();}
 }
 
@@ -313,13 +339,14 @@ function showEnd(){
 function showMenu(){
   clearInterval(tiv);
   gameActive=false;
+  document.body.classList.add('menu-mode');
   var ov=document.getElementById('overlay');
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
 
   // Titre
   h.push('<div class="otitle" style="font-size:44px;letter-spacing:6px;line-height:1">GEO<br>CULTURE</div>');
-  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v1.9</div>');
+  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.8</div>');
 
   // Zone auth
   if(user){
@@ -376,12 +403,16 @@ function showMenu(){
     h.push('<button onclick="fixedLevel='+lv.i+';noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
   });
   h.push('</div>');
-  // Très Facile pleine largeur
-  h.push('<button onclick="fixedLevel=4;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid #3b82f6;color:#3b82f6;background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer;width:100%">Très Facile</button>');
-  h.push('</div></div>');
+    h.push('</div></div>');
 
   h.push('</div>'); // fin colonne droite
   h.push('</div>'); // fin grille
+
+  // Lien classement
+  h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
+  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">&#127942; Classement</a>');
+  if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;text-decoration:underline">Mes parties</a>');
+  h.push('</div>');
 
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
@@ -429,6 +460,7 @@ function exitExploreMode(){
 }
 
 document.addEventListener('DOMContentLoaded',function(){
+  document.body.classList.add('menu-mode');
   setTimeout(function(){try{initMap();}catch(e){}showMenu();},200);
   document.getElementById('confb').onclick=confirmGuess;
   document.getElementById('skipb').onclick=function(){if(!gameActive)return;clearInterval(tiv);nextLevel();};
