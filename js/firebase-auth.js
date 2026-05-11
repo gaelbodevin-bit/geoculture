@@ -234,16 +234,18 @@ window.closeHistory = closeHistory;
 
 // Classement
 function loadLeaderboard(mode, callback) {
+  // Sans orderBy pour eviter l'index composite - tri cote client
   var q = query(
     collection(fbDb, 'games'),
     where('mode', '==', mode),
-    orderBy('total', 'desc'),
-    limit(20)
+    limit(100)
   );
   getDocs(q).then(function(snap) {
     var entries = [];
     snap.forEach(function(doc) { entries.push(doc.data()); });
-    callback(entries);
+    // Trier par total descroissant et garder top 20
+    entries.sort(function(a,b){ return (b.total||0)-(a.total||0); });
+    callback(entries.slice(0,20));
   }).catch(function(e) {
     console.error('Leaderboard error:', e);
     callback([]);
