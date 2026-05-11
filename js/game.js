@@ -30,7 +30,7 @@ function initMap(){
   var minZ=Math.max(Math.ceil(Math.log2(divW/256)),Math.ceil(Math.log2(divH/170)));
   if(minZ<1) minZ=1;
   map=L.map('map',{
-    center:[10,10],zoom:minZ,
+    center:[20,0],zoom:minZ,
     zoomControl:!noZoomMode,attributionControl:true,
     minZoom:minZ,maxZoom:noZoomMode?minZ:18,
     maxBounds:[[-85,-180],[85,180]],
@@ -42,14 +42,15 @@ function initMap(){
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
+  // Ajuster pour que tout le globe soit visible
   setTimeout(function(){
     if(!map) return;
-    var z=map.getBoundsZoom(L.latLngBounds([[-75,-179],[75,179]]));
+    var worldBounds=L.latLngBounds([[-75,-179],[75,179]]);
+    var z=map.getBoundsZoom(worldBounds);
     map.setMinZoom(z);
     if(noZoomMode) map.setMaxZoom(z);
-    map.setZoom(z,{animate:false});
-    map.setView([10,10],z,{animate:false});
-  },300);
+    map.fitBounds(worldBounds,{animate:false,padding:[0,0]});
+  },200);
 }
 
 function adjustMapZoom(){
@@ -281,45 +282,20 @@ function showInter(pts,dist,name){
   ov.classList.remove('h');
   // Fetch Wikipedia image
   (function(id,q){
-    // Préparer plusieurs variantes du nom à essayer
-    var queries=[
-      q,
-      q.split(',')[0].trim(),
-      q.replace(/\s*\([^)]+\)/g,'').trim(),
-      q.split('\u2013')[0].trim()
-    ].filter(function(s,i,a){return s.length>2&&a.indexOf(s)===i;});
-    var qIdx=0;
-    var langs=['fr','en'];
-    var lIdx=0;
-
-    function showPlaceholder(){
-      var el=document.getElementById(id);
-      if(!el)return;
-      el.innerHTML='<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#4b5563;font-size:12px;text-align:center;padding:8px">'+q+'</div>';
-    }
-
-    function tryNext(){
-      lIdx++;
-      if(lIdx>=langs.length){lIdx=0;qIdx++;}
-      if(qIdx>=queries.length){showPlaceholder();return;}
-      tryWiki(langs[lIdx],queries[qIdx]);
-    }
-
-    function tryWiki(lang,query){
-      fetch('https://'+lang+'.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(query))
-        .then(function(r){return r.ok?r.json():Promise.reject();})
+    function tryWiki(lang){
+      fetch('https://'+lang+'.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(q))
+        .then(function(r){return r.json();})
         .then(function(d){
           var el=document.getElementById(id);
           if(!el)return;
           if(d.thumbnail&&d.thumbnail.source){
             el.innerHTML='<img src="'+d.thumbnail.source+'" style="width:100%;height:100%;object-fit:cover;border-radius:10px" alt="">';
-          } else {
-            tryNext();
-          }
-        }).catch(function(){tryNext();});
+          } else if(lang==='fr'){tryWiki('en');}
+          else{el.style.display='none';}
+        }).catch(function(){var el=document.getElementById(id);if(el)el.style.display='none';});
     }
-    tryWiki(langs[0],queries[0]);
-  })(imgId, roundList[curIdx].name.replace(/\s*\u2014.*/,'').trim());
+    tryWiki('fr');
+  })(imgId, roundList[curR].name.replace(/\s*\u2014.*/,'').trim());
 
 }
 
@@ -366,20 +342,26 @@ function showEnd(){
       -->
     </div>`;
   ov.classList.remove('h');
+  if(typeof window.saveGame==='function'){
+    var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
+    var _p=_t>0?Math.round(total/_t*100):0;
+    var _n=['tout-niveaux','expert','difficile','moyen','facile'];
+    var _m=(noZoomMode?'nozoom-':'')+(_n[fixedLevel+1]||'tout-niveaux');
+    setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);
+  }
 }
 
 function showMenu(){
   clearInterval(tiv);
   gameActive=false;
   document.body.classList.add('menu-mode');
-  var curIdx=curR;
   var ov=document.getElementById('overlay');
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
 
   // Titre
   h.push('<div class="otitle" style="font-size:44px;letter-spacing:6px;line-height:1">GEO<br>CULTURE</div>');
-  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v1.2</div>');
+  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.6</div>');
 
   // Zone auth
   if(user){
@@ -444,7 +426,6 @@ function showMenu(){
   // Lien classement
   h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
   h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">&#127942; Classement</a>');
-  if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;text-decoration:underline">Mes parties</a>');
   h.push('</div>');
 
   ov.innerHTML=h.join('');
