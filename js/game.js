@@ -27,14 +27,14 @@ function initMap(){
   var mapDiv=document.getElementById('map');
   var divW=mapDiv?mapDiv.offsetWidth:(window.innerWidth-210);
   var divH=mapDiv?mapDiv.offsetHeight:window.innerHeight;
-  // Zoom minimum pour que le monde entier tienne dans le div
+  // Zoom pour que le monde entier tienne sans répétition
   var minZ=Math.max(
     Math.ceil(Math.log2(divW/256)),
     Math.ceil(Math.log2(divH/170))
   );
   if(minZ<1) minZ=1;
   map=L.map('map',{
-    center:[20,0],zoom:minZ,
+    center:[10,10],zoom:minZ,
     zoomControl:!noZoomMode,attributionControl:true,
     minZoom:minZ,maxZoom:noZoomMode?minZ:18,
     maxBounds:[[-85,-180],[85,180]],
@@ -46,18 +46,15 @@ function initMap(){
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
-  // Forcer le zoom correct après rendu
+  // Ajuster le zoom après rendu complet
   setTimeout(function(){
     if(!map) return;
-    var w=map.getContainer().offsetWidth;
-    var h=map.getContainer().offsetHeight;
-    var z=Math.max(Math.ceil(Math.log2(w/256)),Math.ceil(Math.log2(h/170)));
-    if(z<1) z=1;
+    var z=map.getBoundsZoom(L.latLngBounds([[-75,-179],[75,179]]));
     map.setMinZoom(z);
     if(noZoomMode) map.setMaxZoom(z);
-    if(map.getZoom()<z) map.setZoom(z,{animate:false});
-    map.setMaxBounds([[-85,-180],[85,180]]);
-  },200);
+    map.setZoom(z,{animate:false});
+    map.setView([10,10],z,{animate:false});
+  },300);
 }
 
 function adjustMapZoom(){
@@ -350,12 +347,11 @@ function showEnd(){
     </div>`;
   ov.classList.remove('h');
   if(typeof window.saveGame==='function'){
-    var _maxTotal=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
-    var _pct=_maxTotal>0?Math.round(total/_maxTotal*100):0;
-    var _lvlNames=['tout-niveaux','expert','difficile','moyen','facile'];
-    var _lvlKey=fixedLevel>=0?(_lvlNames[fixedLevel+1]||'tout-niveaux'):'tout-niveaux';
-    var _mode=(noZoomMode?'nozoom-':'')+_lvlKey;
-    setTimeout(function(){try{window.saveGame(roundScores,total,_pct,_mode);}catch(e){console.error(e);}},500);
+    var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
+    var _p=_t>0?Math.round(total/_t*100):0;
+    var _n=['tout-niveaux','expert','difficile','moyen','facile'];
+    var _m=(noZoomMode?'nozoom-':'')+(_n[fixedLevel+1]||'tout-niveaux');
+    setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);
   }
 }
 
@@ -369,7 +365,7 @@ function showMenu(){
 
   // Titre
   h.push('<div class="otitle" style="font-size:44px;letter-spacing:6px;line-height:1">GEO<br>CULTURE</div>');
-  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.7</div>');
+  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.6</div>');
 
   // Zone auth
   if(user){
@@ -434,7 +430,6 @@ function showMenu(){
   // Lien classement
   h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
   h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">&#127942; Classement</a>');
-  if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;text-decoration:underline">Mes parties</a>');
   h.push('</div>');
 
   ov.innerHTML=h.join('');
