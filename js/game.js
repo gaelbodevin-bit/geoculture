@@ -27,10 +27,7 @@ function initMap(){
   var mapDiv=document.getElementById('map');
   var divW=mapDiv?mapDiv.offsetWidth:(window.innerWidth-210);
   var divH=mapDiv?mapDiv.offsetHeight:window.innerHeight;
-  var minZ=Math.max(
-    Math.ceil(Math.log2(divW/256)),
-    Math.ceil(Math.log2(divH/170))
-  );
+  var minZ=Math.max(Math.ceil(Math.log2(divW/256)),Math.ceil(Math.log2(divH/170)));
   if(minZ<1) minZ=1;
   map=L.map('map',{
     center:[20,0],zoom:minZ,
@@ -411,7 +408,6 @@ function showMenu(){
   // Lien classement
   h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
   h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">&#127942; Classement</a>');
-  if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;text-decoration:underline">Mes parties</a>');
   h.push('</div>');
 
   ov.innerHTML=h.join('');
