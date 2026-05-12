@@ -134,8 +134,9 @@ function showHistory() {
     h.push('</div>');
 
     // S\u00e9parer Normal et No-Zoom
-    var gamesNormal = games.filter(function(g){ return (g.mode||'').indexOf('nozoom') < 0; });
-    var gamesNozoom = games.filter(function(g){ return (g.mode||'').indexOf('nozoom') >= 0; });
+    var gamesPerf = games.filter(function(g){ return (g.mode||'').indexOf('perfection') >= 0; });
+    var gamesNozoom = games.filter(function(g){ return (g.mode||'').indexOf('nozoom') >= 0 && (g.mode||'').indexOf('perfection') < 0; });
+    var gamesNormal = games.filter(function(g){ return (g.mode||'').indexOf('nozoom') < 0 && (g.mode||'').indexOf('perfection') < 0; });
 
     if (games.length === 0) {
       h.push('<div class="osub">Aucune partie enregistr\u00e9e pour le moment.</div>');
@@ -192,6 +193,26 @@ function showHistory() {
         });
         h.push('</div>');
       }
+      // Parties Perfection
+      if(gamesPerf.length > 0){
+        h.push('<div style="font-size:11px;color:#a78bfa;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;margin-top:4px">&#11088; Perfection</div>');
+        h.push('<div class="ocard" style="max-height:200px;overflow-y:auto;width:100%;max-width:420px">');
+        gamesPerf.forEach(function(g) {
+          var date = g.createdAt ? new Date(g.createdAt.seconds * 1000) : new Date();
+          var dateStr = date.toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
+          var _modeMap={'tout-niveaux':'Tout niveaux','expert':'Expert','difficile':'Difficile','moyen':'Moyen','facile':'Facile'};
+          var _lvlKey=(g.mode||'').replace('perfection-','').replace('nozoom-','');
+          var barColor = g.pct >= 80 ? '#22c55e' : g.pct >= 50 ? '#fbbf24' : '#f97316';
+          h.push('<div style="padding:10px 0;border-bottom:1px solid #1e2d45">');
+          h.push('<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">');
+          h.push('<span style="font-size:12px;color:#6b7280">'+dateStr+' \u00b7 '+(_modeMap[_lvlKey]||_lvlKey)+'</span>');
+          h.push('<span style="font-size:14px;font-weight:700;color:'+barColor+'">'+g.pct+'%</span>');
+          h.push('</div>');
+          h.push('<span style="font-size:12px;color:#94a3b8">'+g.total.toLocaleString('fr-FR')+' pts \u00b7 '+g.rounds.length+' manches</span>');
+          h.push('</div>');
+        });
+        h.push('</div>');
+      }
     }
 
     h.push('<div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center">');
@@ -234,18 +255,16 @@ window.closeHistory = closeHistory;
 
 // Classement
 function loadLeaderboard(mode, callback) {
-  // Sans orderBy pour eviter l'index composite - tri cote client
   var q = query(
     collection(fbDb, 'games'),
     where('mode', '==', mode),
-    limit(100)
+    orderBy('total', 'desc'),
+    limit(20)
   );
   getDocs(q).then(function(snap) {
     var entries = [];
     snap.forEach(function(doc) { entries.push(doc.data()); });
-    // Trier par total descroissant et garder top 20
-    entries.sort(function(a,b){ return (b.total||0)-(a.total||0); });
-    callback(entries.slice(0,20));
+    callback(entries);
   }).catch(function(e) {
     console.error('Leaderboard error:', e);
     callback([]);
