@@ -341,6 +341,13 @@ function showEnd(){
       -->
     </div>`;
   ov.classList.remove('h');
+  if(typeof window.saveGame==='function'){
+    var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
+    var _p=_t>0?Math.round(total/_t*100):0;
+    var _n=['tout-niveaux','expert','difficile','moyen','facile'];
+    var _m=(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(_n[fixedLevel+1]||'tout-niveaux');
+    setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);
+  }
 }
 
 function showMenu(){
@@ -374,14 +381,14 @@ function showMenu(){
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px">');
   h.push('<div style="font-size:11px;font-weight:500;color:#f97316;letter-spacing:1px;text-transform:uppercase">Comment jouer</div>');
   var rules=[
-    {t:'Normal', d:'5 manches \u00b7 indices progressifs \u00b7 place le marqueur sur la carte'},
-    {t:'No-Zoom', d:'Comme  le mode Normal mais la carte est bloqu\u00e9e au zoom initial'},
-    {t:'Perfection', d:'10 manches \u00b7 \u00e9limin\u00e9 imm\u00e9diatement si tu es \u00e0 plus de 50 km'}
+    'Un lieu \u00e0 deviner sur la carte',
+    'Plus tu r\u00e9ponds t\u00f4t, plus tu scores',
+    '5 manches par partie'
   ];
   rules.forEach(function(r,i){
-    h.push('<div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:2px">');
+    h.push('<div style="display:flex;gap:10px;align-items:flex-start">');
     h.push('<div style="width:22px;height:22px;border-radius:50%;background:#1a2238;display:flex;align-items:center;justify-content:center;font-size:11px;color:#f97316;font-weight:500;flex-shrink:0">'+(i+1)+'</div>');
-    h.push('<div><span style="font-size:12px;color:#e2e8f0;font-weight:600">'+(r.t)+'</span><br><span style="font-size:11px;color:#6b7280;line-height:1.4">'+(r.d)+'</span></div>');
+    h.push('<span style="font-size:12px;color:#94a3b8;line-height:1.5">'+r+'</span>');
     h.push('</div>');
   });
   h.push('</div>');
@@ -392,9 +399,8 @@ function showMenu(){
   // Toggle mode
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:10px 12px">');
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Mode de jeu</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">');
   h.push('<button id="btn-normal" onclick="window._menuNZ=false;document.getElementById(\'btn-normal\').style.background=\'#f97316\';document.getElementById(\'btn-normal\').style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Normal</button>');
-  h.push('<button id="btn-perf" onclick="window._menuNZ=false;window._menuPerf=true;document.getElementById(\'btn-perf\').style.background=\'#7c3aed\';document.getElementById(\'btn-perf\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:7px;padding:7px;font-size:12px;font-weight:600;cursor:pointer">Perfection</button>');
   h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;document.getElementById(\'btn-nozoom\').style.background=\'#f97316\';document.getElementById(\'btn-nozoom\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">No-Zoom</button>');
   h.push('</div></div>');
 
@@ -418,14 +424,13 @@ function showMenu(){
 
   // Lien classement
   h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
-  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">Classement</a>');
-  if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;text-decoration:underline">Mes parties</a>');
+  h.push('<button onclick="mpShowJoinMenu()" style="width:100%;max-width:360px;padding:9px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:13px;cursor:pointer;margin-bottom:6px">Multijoueur</button>');
+  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">&#127942; Classement</a>');
   h.push('</div>');
 
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
   window._menuNZ=false;
-  window._menuPerf=false;
 }
 function nextRound(){document.getElementById('overlay').classList.add('h');startRound(curR+1);}
 
