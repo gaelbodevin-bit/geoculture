@@ -51,7 +51,7 @@ function adjustMapZoom(){
   var w=container.offsetWidth;
   var h=container.offsetHeight;
   if(w===0||h===0) return;
-  // Zoom pour que 256*2^z >= largeur (évite répétition horizontale)
+  // Zoom pour que 256*2^z >= largeur (\u00e9vite r\u00e9p\u00e9tition horizontale)
   var minZ=Math.ceil(Math.log2(w/256));
   if(minZ<1) minZ=1;
   map.setMinZoom(minZ);
@@ -199,7 +199,26 @@ function nextLevel(){
 
 function confirmGuess(){
   if(!gameActive||confirming)return;
-  clearInterval(tiv);gameActive=false;confirming=true;resolveRound();
+  clearInterval(tiv);gameActive=false;confirming=true;
+  if(window._mpMode && playerPos){
+    // Mode multijoueur: soumettre la r\u00e9ponse
+    var r=roundList[curR];
+    var dist=playerPos?haversine(playerPos,{lat:r.lat,lng:r.lng}):null;
+    var level=5-(fixedLevel>=0?fixedLevel:curL);
+    var pts=0;
+    if(dist!==null){
+      var distScore=Math.max(0,1-dist/2000);
+      var timeScore=timeLeft/30;
+      var speedBonus=timeLeft>20?1.5:1;
+      pts=Math.round(BASE_PTS[level]*(distScore*0.7+timeScore*0.3)*speedBonus);
+    }
+    mpAnswered=true;
+    if(typeof mpSubmitAnswer==='function') mpSubmitAnswer(playerPos,dist,pts,mpCurrentRound);
+    // Afficher le marqueur cible
+    showTarget(r);
+    return;
+  }
+  resolveRound();
 }
 
 function resolveRound(){
@@ -353,7 +372,7 @@ function showMenu(){
     h.push('<div style="display:flex;align-items:center;gap:10px;background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:8px 16px;margin-bottom:4px">');
     h.push('<img src="'+(user.photoURL||'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">');
     h.push('<span style="font-size:13px;color:#e2e8f0">'+(user.displayName||user.email)+'</span>');
-    h.push('<button onclick="if(typeof fbSignOut!==\'undefined\')fbSignOut()" style="font-size:11px;color:#6b7280;background:transparent;border:none;cursor:pointer;text-decoration:underline;margin-left:8px">Déconnexion</button>');
+    h.push('<button onclick="if(typeof fbSignOut!==\'undefined\')fbSignOut()" style="font-size:11px;color:#6b7280;background:transparent;border:none;cursor:pointer;text-decoration:underline;margin-left:8px">D\u00e9connexion</button>');
     h.push('<button onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:11px;color:#6b7280;background:transparent;border:none;cursor:pointer;text-decoration:underline">Historique</button>');
     h.push('</div>');
   } else {
@@ -367,8 +386,8 @@ function showMenu(){
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px">');
   h.push('<div style="font-size:11px;font-weight:500;color:#f97316;letter-spacing:1px;text-transform:uppercase">Comment jouer</div>');
   var rules=[
-    'Un lieu à deviner sur la carte',
-    'Plus tu réponds tôt, plus tu scores',
+    'Un lieu \u00e0 deviner sur la carte',
+    'Plus tu r\u00e9ponds t\u00f4t, plus tu scores',
     '5 manches par partie'
   ];
   rules.forEach(function(r,i){
@@ -379,7 +398,7 @@ function showMenu(){
   });
   h.push('</div>');
 
-  // Colonne droite: mode + difficulté
+  // Colonne droite: mode + difficult\u00e9
   h.push('<div style="display:flex;flex-direction:column;gap:10px">');
 
   // Toggle mode
@@ -390,9 +409,9 @@ function showMenu(){
   h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;document.getElementById(\'btn-nozoom\').style.background=\'#f97316\';document.getElementById(\'btn-nozoom\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">No-Zoom</button>');
   h.push('</div></div>');
 
-  // Difficulté
+  // Difficult\u00e9
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:10px 12px">');
-  h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Difficulté</div>');
+  h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Difficult\u00e9</div>');
   h.push('<div style="display:flex;flex-direction:column;gap:5px">');
   // Tout niveaux
   h.push('<button onclick="fixedLevel=-1;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="background:#f97316;color:#fff;border:none;border-radius:7px;padding:8px 12px;font-size:13px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%"><span>Tout niveaux</span><span style="font-size:10px;opacity:.8">5 indices par lieu</span></button>');
@@ -407,6 +426,13 @@ function showMenu(){
 
   h.push('</div>'); // fin colonne droite
   h.push('</div>'); // fin grille
+
+  // Lien classement
+  h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
+  h.push('<button onclick="mpShowJoinMenu()" style="width:100%;max-width:360px;padding:10px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:6px"><span>&#127760;</span> Multijoueur</button>');
+  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">&#127942; Classement</a>');
+  if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;text-decoration:underline">Mes parties</a>');
+  h.push('</div>');
 
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
@@ -461,3 +487,72 @@ document.addEventListener('DOMContentLoaded',function(){
   var nozb=document.getElementById('nozb');
   if(nozb) nozb.onclick=function(){noZoomMode=true;if(map){map.remove();map=null;}initMap();startGame();};
 });
+
+function mpShowJoinMenu(){
+  var ov=document.getElementById('overlay');
+  window._prevOverlayHTML=ov.innerHTML;
+  var user=typeof getCurrentUser==='function'?getCurrentUser():null;
+  var h=[];
+  h.push('<div class="otitle" style="font-size:32px">MULTIJOUEUR</div>');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:400px;margin:12px 0">');
+  // Cr\u00e9er salon
+  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px">');
+  h.push('<div style="font-size:13px;font-weight:700;color:#22c55e">Cr\u00e9er un salon</div>');
+  h.push('<div style="font-size:11px;color:#6b7280">Tu seras l\'h\u00f4te de la partie</div>');
+  h.push('<select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
+  h.push('<option value="-1">Tout niveaux</option>');
+  h.push('<option value="0">Expert</option>');
+  h.push('<option value="1">Difficile</option>');
+  h.push('<option value="2">Moyen</option>');
+  h.push('<option value="3">Facile</option>');
+  h.push('</select>');
+  h.push('<label style="display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;cursor:pointer"><input type="checkbox" id="mp-nozoom"> No-Zoom</label>');
+  h.push('<select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
+  h.push('<option value="5">5 manches</option>');
+  h.push('<option value="10">10 manches</option>');
+  h.push('</select>');
+  if(!user) h.push('<input id="mp-name-create" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
+  h.push('<button onclick="mpDoCreate()" style="padding:8px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer;font-size:13px">Cr\u00e9er \u2197</button>');
+  h.push('</div>');
+  // Rejoindre salon
+  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px">');
+  h.push('<div style="font-size:13px;font-weight:700;color:#f97316">Rejoindre</div>');
+  h.push('<div style="font-size:11px;color:#6b7280">Entre le code du salon</div>');
+  h.push('<input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:8px;color:#f97316;font-size:20px;font-weight:700;letter-spacing:4px;text-align:center;text-transform:uppercase">');
+  if(!user) h.push('<input id="mp-name-join" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
+  h.push('<button onclick="mpDoJoin()" style="padding:8px;border-radius:7px;border:none;background:#f97316;color:#fff;font-weight:700;cursor:pointer;font-size:13px">Rejoindre \u2197</button>');
+  h.push('</div>');
+  h.push('</div>');
+  h.push('<button onclick="showMenu()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px">\u2190 Retour</button>');
+  ov.innerHTML=h.join('');
+  ov.classList.remove('h');
+}
+
+function mpDoCreate(){
+  var lvl=parseInt(document.getElementById('mp-level').value);
+  var nz=document.getElementById('mp-nozoom').checked;
+  var nb=parseInt(document.getElementById('mp-rounds').value);
+  var nameEl=document.getElementById('mp-name-create');
+  if(nameEl&&nameEl.value) mp.playerName=nameEl.value;
+  window._mpMode=true;
+  if(typeof mpCreateRoom==='function'){
+    mpCreateRoom({fixedLevel:lvl,noZoomMode:nz,nbRounds:nb}).then(function(code){
+      if(typeof showToast==='function') showToast('Salon cr\u00e9\u00e9 : '+code);
+    }).catch(function(e){ if(typeof showToast==='function') showToast('Erreur: '+e.message); });
+  } else {
+    if(typeof showToast==='function') showToast('Module multijoueur non charg\u00e9');
+  }
+}
+
+function mpDoJoin(){
+  var code=(document.getElementById('mp-code').value||'').toUpperCase().trim();
+  if(code.length<4){if(typeof showToast==='function') showToast('Entre un code valide');return;}
+  var nameEl=document.getElementById('mp-name-join');
+  var name=nameEl?nameEl.value:'Joueur';
+  window._mpMode=true;
+  if(typeof mpJoinRoom==='function'){
+    mpJoinRoom(code,name).catch(function(e){ if(typeof showToast==='function') showToast('Erreur: '+e.message); });
+  } else {
+    if(typeof showToast==='function') showToast('Module multijoueur non charg\u00e9');
+  }
+}
