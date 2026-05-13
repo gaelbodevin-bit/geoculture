@@ -375,7 +375,6 @@ function showMenu(){
     h.push('<div><span style="font-size:12px;color:#e2e8f0;font-weight:600">'+r.t+'</span><br><span style="font-size:11px;color:#6b7280;line-height:1.4">'+r.d+'</span></div>');
     h.push('</div>');
   });
-  
   h.push('</div>');
 
   // Colonne droite: mode + difficult\u00e9
@@ -384,9 +383,10 @@ function showMenu(){
   // Toggle mode
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:10px 12px">');
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Mode de jeu</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">');
   h.push('<button id="btn-normal" onclick="window._menuNZ=false;document.getElementById(\'btn-normal\').style.background=\'#f97316\';document.getElementById(\'btn-normal\').style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Normal</button>');
   h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;document.getElementById(\'btn-nozoom\').style.background=\'#f97316\';document.getElementById(\'btn-nozoom\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">No-Zoom</button>');
+  h.push('<button id="btn-perf" onclick="window._menuNZ=false;window._menuPerf=true;document.getElementById(\'btn-perf\').style.background=\'#7c3aed\';document.getElementById(\'btn-perf\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Perfection</button>');
   h.push('</div></div>');
 
   // Difficult\u00e9
@@ -394,12 +394,12 @@ function showMenu(){
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Difficult\u00e9</div>');
   h.push('<div style="display:flex;flex-direction:column;gap:5px">');
   // Tout niveaux
-  h.push('<button onclick="fixedLevel=-1;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="background:#f97316;color:#fff;border:none;border-radius:7px;padding:8px 12px;font-size:13px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%"><span>Tout niveaux</span><span style="font-size:10px;opacity:.8">5 indices par lieu</span></button>');
+  h.push('<button onclick="fixedLevel=-1;perfectionMode=window._menuPerf||false;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="background:#f97316;color:#fff;border:none;border-radius:7px;padding:8px 12px;font-size:13px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%"><span>Tout niveaux</span><span style="font-size:10px;opacity:.8">5 indices par lieu</span></button>');
   // Grille 2x2
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">');
   var lvls=[{l:'Expert',c:'#ef4444',i:0},{l:'Difficile',c:'#f97316',i:1},{l:'Moyen',c:'#eab308',i:2},{l:'Facile',c:'#22c55e',i:3}];
   lvls.forEach(function(lv){
-    h.push('<button onclick="fixedLevel='+lv.i+';noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
+    h.push('<button onclick="fixedLevel='+lv.i+';perfectionMode=window._menuPerf||false;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
   });
   h.push('</div>');
     h.push('</div></div>');
@@ -416,6 +416,7 @@ function showMenu(){
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
   window._menuNZ=false;
+  window._menuPerf=false;
 }
 function nextRound(){document.getElementById('overlay').classList.add('h');startRound(curR+1);}
 
