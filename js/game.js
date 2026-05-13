@@ -34,8 +34,6 @@ function initMap(){
     center:[20,0],zoom:minZ,
     zoomControl:!noZoomMode,attributionControl:true,
     minZoom:minZ,maxZoom:noZoomMode?minZ:18,
-    maxBounds:[[-85,-180],[85,180]],
-    maxBoundsViscosity:1.0,
     scrollWheelZoom:!noZoomMode,doubleClickZoom:!noZoomMode,
     touchZoom:!noZoomMode,boxZoom:!noZoomMode,
     keyboard:true,dragging:true
@@ -50,7 +48,7 @@ function initMap(){
     map.setMinZoom(z);
     if(noZoomMode) map.setMaxZoom(z);
     map.fitBounds(wb,{animate:false,padding:[0,0]});
-    map.setMaxBounds(L.latLngBounds([[-85,-180],[85,180]]));
+    map.setMaxBounds(L.latLngBounds([[-85,-360],[85,360]]));
   },200);
 }
 
@@ -255,7 +253,7 @@ function showInter(pts,dist,name,eliminated){
   const wq = encodeURIComponent(roundList[curR].name.split('\u2014')[0].trim().replace(/\s*\u2014.*/,'').trim());
   var _nextBtn;
   if(eliminated){
-    _nextBtn='<div style="color:#ef4444;font-size:15px;font-weight:700;margin:8px 0">&#10060; \u00c9limin\u00e9 ! > 50 km</div><button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';
+    _nextBtn='<div style="color:#ef4444;font-size:15px;font-weight:700;margin:8px 0">&#10060; \u00c9limin\u00e9 ! > 50km</div><button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';
   } else if(curR+1<roundList.length){
     _nextBtn='<button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante</button>';
   } else {
@@ -412,7 +410,7 @@ function showMenu(){
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Mode de jeu</div>');
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">');
   h.push('<button id="btn-normal" onclick="window._menuNZ=false;document.getElementById(\'btn-normal\').style.background=\'#f97316\';document.getElementById(\'btn-normal\').style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Normal</button>');
-  h.push('<button id="btn-perf" onclick="window._menuNZ=false;window._menuPerf=true;document.getElementById(\'btn-perf\').style.background=\'#7c3aed\';document.getElementById(\'btn-perf\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" title="10 manches \u00b7 \u00c9limin\u00e9 si > 50km" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:7px;padding:7px;font-size:11px;font-weight:600;cursor:pointer">&#11088; Perf.</button>');
+  h.push('<button id="btn-perf" onclick="window._menuNZ=false;window._menuPerf=true;document.getElementById(\'btn-perf\').style.background=\'#7c3aed\';document.getElementById(\'btn-perf\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" title="10 manches, \u00e9limin\u00e9 si > 50km" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:7px;padding:7px;font-size:11px;font-weight:600;cursor:pointer">&#11088; Perfection</button>');
   h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;document.getElementById(\'btn-nozoom\').style.background=\'#f97316\';document.getElementById(\'btn-nozoom\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">No-Zoom</button>');
   h.push('</div></div>');
 
@@ -494,55 +492,3 @@ document.addEventListener('DOMContentLoaded',function(){
   var nozb=document.getElementById('nozb');
   if(nozb) nozb.onclick=function(){noZoomMode=true;if(map){map.remove();map=null;}initMap();startGame();};
 });
-
-function mpShowJoinMenu(){
-  var ov=document.getElementById('overlay');
-  window._prevOverlayHTML=ov.innerHTML;
-  var user=typeof getCurrentUser==='function'?getCurrentUser():null;
-  var h=[];
-  h.push('<div class="otitle" style="font-size:32px">MULTIJOUEUR</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:420px;margin:12px 0">');
-  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
-  h.push('<div style="font-size:13px;font-weight:700;color:#22c55e">Cr\u00e9er un salon</div>');
-  h.push('<select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="-1">Tout niveaux</option><option value="0">Expert</option><option value="1">Difficile</option><option value="2">Moyen</option><option value="3">Facile</option></select>');
-  h.push('<label style="display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;cursor:pointer"><input type="checkbox" id="mp-nozoom"> No-Zoom</label>');
-  h.push('<select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="5">5 manches</option><option value="10">10 manches</option></select>');
-  if(!user) h.push('<input id="mp-name-create" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
-  h.push('<button onclick="mpDoCreate()" style="padding:8px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer;font-size:13px">Cr\u00e9er \u2197</button>');
-  h.push('</div>');
-  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
-  h.push('<div style="font-size:13px;font-weight:700;color:#f97316">Rejoindre</div>');
-  h.push('<input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:8px;color:#f97316;font-size:20px;font-weight:700;letter-spacing:4px;text-align:center;text-transform:uppercase">');
-  if(!user) h.push('<input id="mp-name-join" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
-  h.push('<button onclick="mpDoJoin()" style="padding:8px;border-radius:7px;border:none;background:#f97316;color:#fff;font-weight:700;cursor:pointer;font-size:13px">Rejoindre \u2197</button>');
-  h.push('</div>');
-  h.push('</div>');
-  h.push('<button onclick="showMenu()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px">\u2190 Retour</button>');
-  ov.innerHTML=h.join('');
-  ov.classList.remove('h');
-}
-
-function mpDoCreate(){
-  var lvl=parseInt(document.getElementById('mp-level').value);
-  var nz=document.getElementById('mp-nozoom').checked;
-  var nb=parseInt(document.getElementById('mp-rounds').value);
-  var nameEl=document.getElementById('mp-name-create');
-  if(nameEl&&nameEl.value&&typeof mp!=='undefined') mp.playerName=nameEl.value;
-  window._mpMode=true;
-  if(typeof mpCreateRoom==='function'){
-    mpCreateRoom({fixedLevel:lvl,noZoomMode:nz,nbRounds:nb}).then(function(code){
-      if(typeof showToast==='function') showToast('Salon cr\u00e9\u00e9 : '+code);
-    }).catch(function(e){ if(typeof showToast==='function') showToast('Erreur: '+e.message); window._mpMode=false; });
-  } else { if(typeof showToast==='function') showToast('Module multijoueur non charg\u00e9'); }
-}
-
-function mpDoJoin(){
-  var code=(document.getElementById('mp-code').value||'').toUpperCase().trim();
-  if(code.length<4){if(typeof showToast==='function') showToast('Entre un code valide');return;}
-  var nameEl=document.getElementById('mp-name-join');
-  var name=nameEl?nameEl.value:'Joueur';
-  window._mpMode=true;
-  if(typeof mpJoinRoom==='function'){
-    mpJoinRoom(code,name).catch(function(e){ if(typeof showToast==='function') showToast('Erreur: '+e.message); window._mpMode=false; });
-  } else { if(typeof showToast==='function') showToast('Module multijoueur non charg\u00e9'); }
-}
