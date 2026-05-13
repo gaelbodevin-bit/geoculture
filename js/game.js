@@ -344,7 +344,7 @@ function showMenu(){
 
   // Titre
   h.push('<div class="otitle" style="font-size:44px;letter-spacing:6px;line-height:1">GEO<br>CULTURE</div>');
-  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.8</div>');
+  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.6</div>');
 
   // Zone auth
   if(user){
@@ -365,16 +365,17 @@ function showMenu(){
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px">');
   h.push('<div style="font-size:11px;font-weight:500;color:#f97316;letter-spacing:1px;text-transform:uppercase">Comment jouer</div>');
   var rules=[
-    'Un lieu \u00e0 deviner sur la carte',
-    'Plus tu r\u00e9ponds t\u00f4t, plus tu scores',
-    '5 manches par partie'
+    {t:'Normal', d:'5 manches \u00b7 indices progressifs \u00b7 place le marqueur'},
+    {t:'No-Zoom', d:'Carte bloqu\u00e9e au zoom \u00b7 pas de loupe'},
+    {t:'Perfection', d:'10 manches \u00b7 \u00e9limin\u00e9 si > 50 km du lieu'}
   ];
   rules.forEach(function(r,i){
-    h.push('<div style="display:flex;gap:10px;align-items:flex-start">');
+    h.push('<div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:2px">');
     h.push('<div style="width:22px;height:22px;border-radius:50%;background:#1a2238;display:flex;align-items:center;justify-content:center;font-size:11px;color:#f97316;font-weight:500;flex-shrink:0">'+(i+1)+'</div>');
-    h.push('<span style="font-size:12px;color:#94a3b8;line-height:1.5">'+r+'</span>');
+    h.push('<div><span style="font-size:12px;color:#e2e8f0;font-weight:600">'+r.t+'</span><br><span style="font-size:11px;color:#6b7280;line-height:1.4">'+r.d+'</span></div>');
     h.push('</div>');
   });
+  
   h.push('</div>');
 
   // Colonne droite: mode + difficult\u00e9
@@ -383,10 +384,9 @@ function showMenu(){
   // Toggle mode
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:10px 12px">');
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Mode de jeu</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">');
   h.push('<button id="btn-normal" onclick="window._menuNZ=false;document.getElementById(\'btn-normal\').style.background=\'#f97316\';document.getElementById(\'btn-normal\').style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Normal</button>');
   h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;document.getElementById(\'btn-nozoom\').style.background=\'#f97316\';document.getElementById(\'btn-nozoom\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">No-Zoom</button>');
-  h.push('<button id="btn-perf" onclick="window._menuNZ=false;window._menuPerf=true;document.getElementById(\'btn-perf\').style.background=\'#7c3aed\';document.getElementById(\'btn-perf\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Perfection</button>');
   h.push('</div></div>');
 
   // Difficult\u00e9
@@ -394,12 +394,12 @@ function showMenu(){
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Difficult\u00e9</div>');
   h.push('<div style="display:flex;flex-direction:column;gap:5px">');
   // Tout niveaux
-  h.push('<button onclick="fixedLevel=-1;perfectionMode=window._menuPerf||false;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="background:#f97316;color:#fff;border:none;border-radius:7px;padding:8px 12px;font-size:13px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%"><span>Tout niveaux</span><span style="font-size:10px;opacity:.8">5 indices par lieu</span></button>');
+  h.push('<button onclick="fixedLevel=-1;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="background:#f97316;color:#fff;border:none;border-radius:7px;padding:8px 12px;font-size:13px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%"><span>Tout niveaux</span><span style="font-size:10px;opacity:.8">5 indices par lieu</span></button>');
   // Grille 2x2
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">');
   var lvls=[{l:'Expert',c:'#ef4444',i:0},{l:'Difficile',c:'#f97316',i:1},{l:'Moyen',c:'#eab308',i:2},{l:'Facile',c:'#22c55e',i:3}];
   lvls.forEach(function(lv){
-    h.push('<button onclick="fixedLevel='+lv.i+';perfectionMode=window._menuPerf||false;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
+    h.push('<button onclick="fixedLevel='+lv.i+';noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
   });
   h.push('</div>');
     h.push('</div></div>');
@@ -409,14 +409,13 @@ function showMenu(){
 
   // Lien classement
   h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
-  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">&#127942; Classement</a>');
-  if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;text-decoration:underline">Mes parties</a>');
+  h.push('<button onclick="mpShowJoinMenu()" style="padding:8px 18px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:12px;cursor:pointer;margin-right:8px">Multijoueur</button>');
+  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">Classement</a>');
   h.push('</div>');
 
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
   window._menuNZ=false;
-  window._menuPerf=false;
 }
 function nextRound(){document.getElementById('overlay').classList.add('h');startRound(curR+1);}
 
@@ -467,6 +466,3 @@ document.addEventListener('DOMContentLoaded',function(){
   var nozb=document.getElementById('nozb');
   if(nozb) nozb.onclick=function(){noZoomMode=true;if(map){map.remove();map=null;}initMap();startGame();};
 });
-function mpShowJoinMenu(){var ov=document.getElementById('overlay');var user=typeof getCurrentUser==='function'?getCurrentUser():null;var h=[];h.push('<div class="otitle" style="font-size:32px">MULTIJOUEUR</div>');h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:420px;margin:12px 0">');h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px"><div style="font-size:13px;font-weight:700;color:#22c55e">Cr\u00e9er un salon</div><select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="-1">Tout niveaux</option><option value="0">Expert</option><option value="1">Difficile</option><option value="2">Moyen</option><option value="3">Facile</option></select><label style="display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;cursor:pointer"><input type="checkbox" id="mp-nozoom"> No-Zoom</label><select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="5">5 manches</option><option value="10">10 manches</option></select>');if(!user) h.push('<input id="mp-name-create" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');h.push('<button onclick="mpDoCreate()" style="padding:8px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer;font-size:13px">Cr\u00e9er</button></div>');h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px"><div style="font-size:13px;font-weight:700;color:#f97316">Rejoindre</div><input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:8px;color:#f97316;font-size:20px;font-weight:700;letter-spacing:4px;text-align:center;text-transform:uppercase">');if(!user) h.push('<input id="mp-name-join" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');h.push('<button onclick="mpDoJoin()" style="padding:8px;border-radius:7px;border:none;background:#f97316;color:#fff;font-weight:700;cursor:pointer;font-size:13px">Rejoindre</button></div></div><button onclick="showMenu()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px">\u2190 Retour</button>');ov.innerHTML=h.join('');ov.classList.remove('h');}
-function mpDoCreate(){var lvl=parseInt(document.getElementById('mp-level').value);var nz=document.getElementById('mp-nozoom').checked;var nb=parseInt(document.getElementById('mp-rounds').value);var nameEl=document.getElementById('mp-name-create');if(nameEl&&nameEl.value&&typeof mp!=='undefined') mp.playerName=nameEl.value;window._mpMode=true;if(typeof mpCreateRoom==='function'){mpCreateRoom({fixedLevel:lvl,noZoomMode:nz,nbRounds:nb}).then(function(code){if(typeof showToast==='function') showToast('Salon cr\u00e9\u00e9 : '+code);}).catch(function(e){if(typeof showToast==='function') showToast('Erreur: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function') showToast('Module non charg\u00e9');}}
-function mpDoJoin(){var code=(document.getElementById('mp-code').value||'').toUpperCase().trim();if(code.length<4){if(typeof showToast==='function') showToast('Entre un code valide');return;}var nameEl=document.getElementById('mp-name-join');var name=nameEl?nameEl.value:'Joueur';window._mpMode=true;if(typeof mpJoinRoom==='function'){mpJoinRoom(code,name).catch(function(e){if(typeof showToast==='function') showToast('Erreur: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function') showToast('Module non charg\u00e9');}}
