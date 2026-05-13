@@ -1,3 +1,4 @@
+var perfectionMode=false;
 var noZoomMode=false;
 var fixedLevel=-1;
 var BASE_PTS=[0,500,1000,1500,2000,3000];
@@ -27,15 +28,14 @@ function initMap(){
   var mapDiv=document.getElementById('map');
   var divW=mapDiv?mapDiv.offsetWidth:(window.innerWidth-210);
   var divH=mapDiv?mapDiv.offsetHeight:window.innerHeight;
-  var minZ=Math.max(
-    Math.ceil(Math.log2(divW/256)),
-    Math.ceil(Math.log2(divH/170))
-  );
+  var minZ=Math.max(Math.ceil(Math.log2(divW/256)),Math.ceil(Math.log2(divH/170)));
   if(minZ<1) minZ=1;
   map=L.map('map',{
     center:[20,0],zoom:minZ,
     zoomControl:!noZoomMode,attributionControl:true,
     minZoom:minZ,maxZoom:noZoomMode?minZ:18,
+    maxBounds:[[-85,-180],[85,180]],
+    maxBoundsViscosity:1.0,
     scrollWheelZoom:!noZoomMode,doubleClickZoom:!noZoomMode,
     touchZoom:!noZoomMode,boxZoom:!noZoomMode,
     keyboard:true,dragging:true
@@ -43,6 +43,15 @@ function initMap(){
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
+  setTimeout(function(){
+    if(!map) return;
+    var wb=L.latLngBounds([[-75,-179],[75,179]]);
+    var z=map.getBoundsZoom(wb);
+    map.setMinZoom(z);
+    if(noZoomMode) map.setMaxZoom(z);
+    map.fitBounds(wb,{animate:false,padding:[0,0]});
+    map.setMaxBounds(L.latLngBounds([[-85,-180],[85,180]]));
+  },200);
 }
 
 function adjustMapZoom(){
@@ -81,8 +90,9 @@ function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.
 
 function startGame(){
   document.body.classList.remove('menu-mode');
+  var nbRounds=perfectionMode?10:5;
   total=0;roundScores=[];
-  roundList=shuffle(ROUNDS).slice(0,5);
+  roundList=shuffle(ROUNDS).slice(0,nbRounds);
   curR=0;
   document.getElementById('hsc').textContent='0';
   document.getElementById('overlay').classList.add('h');
@@ -101,7 +111,7 @@ function startRound(idx){
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
   document.getElementById('placed-info').textContent='Cliquez sur la carte pour placer votre r\u00e9ponse';
-  document.getElementById('hrnd').textContent=`${idx+1}/5`;
+  document.getElementById('hrnd').textContent=(idx+1)+'/'+roundList.length;
   updateDots();showHint();startTimer();
   // Masquer le bouton indice suivant en niveau fixe
   var skipb=document.getElementById('skipb');
@@ -199,26 +209,7 @@ function nextLevel(){
 
 function confirmGuess(){
   if(!gameActive||confirming)return;
-  clearInterval(tiv);gameActive=false;confirming=true;
-  if(window._mpMode && playerPos){
-    // Mode multijoueur: soumettre la r\u00e9ponse
-    var r=roundList[curR];
-    var dist=playerPos?haversine(playerPos,{lat:r.lat,lng:r.lng}):null;
-    var level=5-(fixedLevel>=0?fixedLevel:curL);
-    var pts=0;
-    if(dist!==null){
-      var distScore=Math.max(0,1-dist/2000);
-      var timeScore=timeLeft/30;
-      var speedBonus=timeLeft>20?1.5:1;
-      pts=Math.round(BASE_PTS[level]*(distScore*0.7+timeScore*0.3)*speedBonus);
-    }
-    mpAnswered=true;
-    if(typeof mpSubmitAnswer==='function') mpSubmitAnswer(playerPos,dist,pts,mpCurrentRound);
-    // Afficher le marqueur cible
-    showTarget(r);
-    return;
-  }
-  resolveRound();
+  clearInterval(tiv);gameActive=false;confirming=true;resolveRound();
 }
 
 function resolveRound(){
@@ -246,13 +237,14 @@ function resolveRound(){
   }
   document.getElementById('placed-info').textContent=dist!=null?`\u1f3af ${fmtDist(Math.round(dist*1000))} \u2014 +${pts.toLocaleString('fr-FR')} pts`:`\u274c Rat\u00e9 \u2014 ${r.name}`;
   showToast(dist!=null?`${r.name} \u00b7 ${fmtDist(Math.round(dist*1000))} \u00b7 +${pts} pts`:`Rat\u00e9 ! C'\u00e9tait : ${r.name}`);
-  setTimeout(()=>{
-    showInter(pts,dist,r.name);
+  setTimeout(function(){
+    var elim=perfectionMode&&(dist===null||dist>50);
+    showInter(pts,dist,r.name,elim);
   },3000);
 }
 
 
-function showInter(pts,dist,name){
+function showInter(pts,dist,name,eliminated){
   const lastScore=roundScores[roundScores.length-1];
   const mx=lastScore?lastScore.maxPts:4500;
   const pctRound=mx>0?Math.round(pts/mx*100):0;
@@ -261,7 +253,14 @@ function showInter(pts,dist,name){
   const placeDesc = roundList[curR].desc || '';
   const imgId = 'wimg' + Date.now();
   const wq = encodeURIComponent(roundList[curR].name.split('\u2014')[0].trim().replace(/\s*\u2014.*/,'').trim());
-  var _nextBtn=curR+1<roundList.length?'<button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante</button>':'<button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';
+  var _nextBtn;
+  if(eliminated){
+    _nextBtn='<div style="color:#ef4444;font-size:15px;font-weight:700;margin:8px 0">&#10060; \u00c9limin\u00e9 ! > 50 km</div><button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';
+  } else if(curR+1<roundList.length){
+    _nextBtn='<button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante</button>';
+  } else {
+    _nextBtn='<button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';
+  }
   ov.innerHTML=`
     <div id="${imgId}" style="width:100%;max-width:380px;height:150px;background:#111827;border-radius:10px;margin-bottom:-4px;overflow:hidden;display:flex;align-items:center;justify-content:center"><span style="color:#374151;font-size:11px">\u1f4f8</span></div>
     <div class="otitle" style="font-size:38px">+${pts.toLocaleString('fr-FR')}</div>
@@ -353,6 +352,13 @@ function showEnd(){
       -->
     </div>`;
   ov.classList.remove('h');
+  if(typeof window.saveGame==='function'){
+    var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
+    var _p=_t>0?Math.round(total/_t*100):0;
+    var _n=['tout-niveaux','expert','difficile','moyen','facile'];
+    var _m=(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(_n[fixedLevel+1]||'tout-niveaux');
+    setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);
+  }
 }
 
 function showMenu(){
@@ -404,8 +410,9 @@ function showMenu(){
   // Toggle mode
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:10px 12px">');
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Mode de jeu</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">');
   h.push('<button id="btn-normal" onclick="window._menuNZ=false;document.getElementById(\'btn-normal\').style.background=\'#f97316\';document.getElementById(\'btn-normal\').style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Normal</button>');
+  h.push('<button id="btn-perf" onclick="window._menuNZ=false;window._menuPerf=true;document.getElementById(\'btn-perf\').style.background=\'#7c3aed\';document.getElementById(\'btn-perf\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" title="10 manches \u00b7 \u00c9limin\u00e9 si > 50km" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:7px;padding:7px;font-size:11px;font-weight:600;cursor:pointer">&#11088; Perf.</button>');
   h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;document.getElementById(\'btn-nozoom\').style.background=\'#f97316\';document.getElementById(\'btn-nozoom\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">No-Zoom</button>');
   h.push('</div></div>');
 
@@ -414,12 +421,12 @@ function showMenu(){
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Difficult\u00e9</div>');
   h.push('<div style="display:flex;flex-direction:column;gap:5px">');
   // Tout niveaux
-  h.push('<button onclick="fixedLevel=-1;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="background:#f97316;color:#fff;border:none;border-radius:7px;padding:8px 12px;font-size:13px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%"><span>Tout niveaux</span><span style="font-size:10px;opacity:.8">5 indices par lieu</span></button>');
+  h.push('<button onclick="fixedLevel=-1;perfectionMode=window._menuPerf||false;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="background:#f97316;color:#fff;border:none;border-radius:7px;padding:8px 12px;font-size:13px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%"><span>Tout niveaux</span><span style="font-size:10px;opacity:.8">5 indices par lieu</span></button>');
   // Grille 2x2
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">');
   var lvls=[{l:'Expert',c:'#ef4444',i:0},{l:'Difficile',c:'#f97316',i:1},{l:'Moyen',c:'#eab308',i:2},{l:'Facile',c:'#22c55e',i:3}];
   lvls.forEach(function(lv){
-    h.push('<button onclick="fixedLevel='+lv.i+';noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
+    h.push('<button onclick="fixedLevel='+lv.i+';perfectionMode=window._menuPerf||false;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
   });
   h.push('</div>');
     h.push('</div></div>');
@@ -429,14 +436,14 @@ function showMenu(){
 
   // Lien classement
   h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
-  h.push('<button onclick="mpShowJoinMenu()" style="width:100%;max-width:360px;padding:10px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:6px"><span>&#127760;</span> Multijoueur</button>');
+  h.push('<button onclick="mpShowJoinMenu()" style="width:100%;max-width:360px;padding:9px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:13px;cursor:pointer;margin-bottom:6px">&#127760; Multijoueur</button>');
   h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">&#127942; Classement</a>');
-  if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;text-decoration:underline">Mes parties</a>');
   h.push('</div>');
 
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
   window._menuNZ=false;
+  window._menuPerf=false;
 }
 function nextRound(){document.getElementById('overlay').classList.add('h');startRound(curR+1);}
 
@@ -494,30 +501,17 @@ function mpShowJoinMenu(){
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
   h.push('<div class="otitle" style="font-size:32px">MULTIJOUEUR</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:400px;margin:12px 0">');
-  // Cr\u00e9er salon
-  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px">');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:420px;margin:12px 0">');
+  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
   h.push('<div style="font-size:13px;font-weight:700;color:#22c55e">Cr\u00e9er un salon</div>');
-  h.push('<div style="font-size:11px;color:#6b7280">Tu seras l\'h\u00f4te de la partie</div>');
-  h.push('<select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
-  h.push('<option value="-1">Tout niveaux</option>');
-  h.push('<option value="0">Expert</option>');
-  h.push('<option value="1">Difficile</option>');
-  h.push('<option value="2">Moyen</option>');
-  h.push('<option value="3">Facile</option>');
-  h.push('</select>');
+  h.push('<select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="-1">Tout niveaux</option><option value="0">Expert</option><option value="1">Difficile</option><option value="2">Moyen</option><option value="3">Facile</option></select>');
   h.push('<label style="display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8;cursor:pointer"><input type="checkbox" id="mp-nozoom"> No-Zoom</label>');
-  h.push('<select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
-  h.push('<option value="5">5 manches</option>');
-  h.push('<option value="10">10 manches</option>');
-  h.push('</select>');
+  h.push('<select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="5">5 manches</option><option value="10">10 manches</option></select>');
   if(!user) h.push('<input id="mp-name-create" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
   h.push('<button onclick="mpDoCreate()" style="padding:8px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer;font-size:13px">Cr\u00e9er \u2197</button>');
   h.push('</div>');
-  // Rejoindre salon
-  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px">');
+  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
   h.push('<div style="font-size:13px;font-weight:700;color:#f97316">Rejoindre</div>');
-  h.push('<div style="font-size:11px;color:#6b7280">Entre le code du salon</div>');
   h.push('<input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:8px;color:#f97316;font-size:20px;font-weight:700;letter-spacing:4px;text-align:center;text-transform:uppercase">');
   if(!user) h.push('<input id="mp-name-join" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
   h.push('<button onclick="mpDoJoin()" style="padding:8px;border-radius:7px;border:none;background:#f97316;color:#fff;font-weight:700;cursor:pointer;font-size:13px">Rejoindre \u2197</button>');
@@ -533,15 +527,13 @@ function mpDoCreate(){
   var nz=document.getElementById('mp-nozoom').checked;
   var nb=parseInt(document.getElementById('mp-rounds').value);
   var nameEl=document.getElementById('mp-name-create');
-  if(nameEl&&nameEl.value) mp.playerName=nameEl.value;
+  if(nameEl&&nameEl.value&&typeof mp!=='undefined') mp.playerName=nameEl.value;
   window._mpMode=true;
   if(typeof mpCreateRoom==='function'){
     mpCreateRoom({fixedLevel:lvl,noZoomMode:nz,nbRounds:nb}).then(function(code){
       if(typeof showToast==='function') showToast('Salon cr\u00e9\u00e9 : '+code);
-    }).catch(function(e){ if(typeof showToast==='function') showToast('Erreur: '+e.message); });
-  } else {
-    if(typeof showToast==='function') showToast('Module multijoueur non charg\u00e9');
-  }
+    }).catch(function(e){ if(typeof showToast==='function') showToast('Erreur: '+e.message); window._mpMode=false; });
+  } else { if(typeof showToast==='function') showToast('Module multijoueur non charg\u00e9'); }
 }
 
 function mpDoJoin(){
@@ -551,8 +543,6 @@ function mpDoJoin(){
   var name=nameEl?nameEl.value:'Joueur';
   window._mpMode=true;
   if(typeof mpJoinRoom==='function'){
-    mpJoinRoom(code,name).catch(function(e){ if(typeof showToast==='function') showToast('Erreur: '+e.message); });
-  } else {
-    if(typeof showToast==='function') showToast('Module multijoueur non charg\u00e9');
-  }
+    mpJoinRoom(code,name).catch(function(e){ if(typeof showToast==='function') showToast('Erreur: '+e.message); window._mpMode=false; });
+  } else { if(typeof showToast==='function') showToast('Module multijoueur non charg\u00e9'); }
 }
