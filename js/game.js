@@ -88,9 +88,8 @@ function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.
 
 function startGame(){
   document.body.classList.remove('menu-mode');
-  var nbRounds=perfectionMode?10:5;
   total=0;roundScores=[];
-  roundList=shuffle(ROUNDS).slice(0,nbRounds);
+  roundList=shuffle(ROUNDS).slice(0,5);
   curR=0;
   document.getElementById('hsc').textContent='0';
   document.getElementById('overlay').classList.add('h');
@@ -109,7 +108,7 @@ function startRound(idx){
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';
   document.getElementById('placed-info').textContent='Cliquez sur la carte pour placer votre r\u00e9ponse';
-  document.getElementById('hrnd').textContent=(idx+1)+'/'+roundList.length;
+  document.getElementById('hrnd').textContent=`${idx+1}/5`;
   updateDots();showHint();startTimer();
   // Masquer le bouton indice suivant en niveau fixe
   var skipb=document.getElementById('skipb');
@@ -235,14 +234,13 @@ function resolveRound(){
   }
   document.getElementById('placed-info').textContent=dist!=null?`\u1f3af ${fmtDist(Math.round(dist*1000))} \u2014 +${pts.toLocaleString('fr-FR')} pts`:`\u274c Rat\u00e9 \u2014 ${r.name}`;
   showToast(dist!=null?`${r.name} \u00b7 ${fmtDist(Math.round(dist*1000))} \u00b7 +${pts} pts`:`Rat\u00e9 ! C'\u00e9tait : ${r.name}`);
-  setTimeout(function(){
-    var elim=perfectionMode&&(dist===null||dist>50);
-    showInter(pts,dist,r.name,elim);
+  setTimeout(()=>{
+    showInter(pts,dist,r.name);
   },3000);
 }
 
 
-function showInter(pts,dist,name,eliminated){
+function showInter(pts,dist,name){
   const lastScore=roundScores[roundScores.length-1];
   const mx=lastScore?lastScore.maxPts:4500;
   const pctRound=mx>0?Math.round(pts/mx*100):0;
@@ -251,14 +249,7 @@ function showInter(pts,dist,name,eliminated){
   const placeDesc = roundList[curR].desc || '';
   const imgId = 'wimg' + Date.now();
   const wq = encodeURIComponent(roundList[curR].name.split('\u2014')[0].trim().replace(/\s*\u2014.*/,'').trim());
-  var _nextBtn;
-  if(eliminated){
-    _nextBtn='<div style="color:#ef4444;font-size:15px;font-weight:700;margin:8px 0">&#10060; \u00c9limin\u00e9 ! > 50km</div><button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';
-  } else if(curR+1<roundList.length){
-    _nextBtn='<button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante</button>';
-  } else {
-    _nextBtn='<button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';
-  }
+  var _nextBtn=curR+1<roundList.length?'<button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante</button>':'<button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';
   ov.innerHTML=`
     <div id="${imgId}" style="width:100%;max-width:380px;height:150px;background:#111827;border-radius:10px;margin-bottom:-4px;overflow:hidden;display:flex;align-items:center;justify-content:center"><span style="color:#374151;font-size:11px">\u1f4f8</span></div>
     <div class="otitle" style="font-size:38px">+${pts.toLocaleString('fr-FR')}</div>
@@ -350,13 +341,6 @@ function showEnd(){
       -->
     </div>`;
   ov.classList.remove('h');
-  if(typeof window.saveGame==='function'){
-    var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
-    var _p=_t>0?Math.round(total/_t*100):0;
-    var _n=['tout-niveaux','expert','difficile','moyen','facile'];
-    var _m=(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(_n[fixedLevel+1]||'tout-niveaux');
-    setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);
-  }
 }
 
 function showMenu(){
@@ -390,14 +374,14 @@ function showMenu(){
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px">');
   h.push('<div style="font-size:11px;font-weight:500;color:#f97316;letter-spacing:1px;text-transform:uppercase">Comment jouer</div>');
   var rules=[
-    'Un lieu \u00e0 deviner sur la carte',
-    'Plus tu r\u00e9ponds t\u00f4t, plus tu scores',
-    '5 manches par partie'
+    {t:'Normal', d:'5 manches \u00b7 indices progressifs \u00b7 place le marqueur sur la carte'},
+    {t:'No-Zoom', d:'Comme  le mode Normal mais la carte est bloqu\u00e9e au zoom initial'},
+    {t:'Perfection', d:'10 manches \u00b7 \u00e9limin\u00e9 imm\u00e9diatement si tu es \u00e0 plus de 50 km'}
   ];
   rules.forEach(function(r,i){
-    h.push('<div style="display:flex;gap:10px;align-items:flex-start">');
+    h.push('<div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:2px">');
     h.push('<div style="width:22px;height:22px;border-radius:50%;background:#1a2238;display:flex;align-items:center;justify-content:center;font-size:11px;color:#f97316;font-weight:500;flex-shrink:0">'+(i+1)+'</div>');
-    h.push('<span style="font-size:12px;color:#94a3b8;line-height:1.5">'+r+'</span>');
+    h.push('<div><span style="font-size:12px;color:#e2e8f0;font-weight:600">'+(r.t)+'</span><br><span style="font-size:11px;color:#6b7280;line-height:1.4">'+(r.d)+'</span></div>');
     h.push('</div>');
   });
   h.push('</div>');
@@ -410,7 +394,7 @@ function showMenu(){
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Mode de jeu</div>');
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">');
   h.push('<button id="btn-normal" onclick="window._menuNZ=false;document.getElementById(\'btn-normal\').style.background=\'#f97316\';document.getElementById(\'btn-normal\').style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Normal</button>');
-  h.push('<button id="btn-perf" onclick="window._menuNZ=false;window._menuPerf=true;document.getElementById(\'btn-perf\').style.background=\'#7c3aed\';document.getElementById(\'btn-perf\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" title="10 manches, \u00e9limin\u00e9 si > 50km" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:7px;padding:7px;font-size:11px;font-weight:600;cursor:pointer">&#11088; Perfection</button>');
+  h.push('<button id="btn-perf" onclick="window._menuNZ=false;window._menuPerf=true;document.getElementById(\'btn-perf\').style.background=\'#7c3aed\';document.getElementById(\'btn-perf\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:7px;padding:7px;font-size:12px;font-weight:600;cursor:pointer">Perfection</button>');
   h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;document.getElementById(\'btn-nozoom\').style.background=\'#f97316\';document.getElementById(\'btn-nozoom\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">No-Zoom</button>');
   h.push('</div></div>');
 
@@ -419,12 +403,12 @@ function showMenu(){
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Difficult\u00e9</div>');
   h.push('<div style="display:flex;flex-direction:column;gap:5px">');
   // Tout niveaux
-  h.push('<button onclick="fixedLevel=-1;perfectionMode=window._menuPerf||false;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="background:#f97316;color:#fff;border:none;border-radius:7px;padding:8px 12px;font-size:13px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%"><span>Tout niveaux</span><span style="font-size:10px;opacity:.8">5 indices par lieu</span></button>');
+  h.push('<button onclick="fixedLevel=-1;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="background:#f97316;color:#fff;border:none;border-radius:7px;padding:8px 12px;font-size:13px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%"><span>Tout niveaux</span><span style="font-size:10px;opacity:.8">5 indices par lieu</span></button>');
   // Grille 2x2
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">');
   var lvls=[{l:'Expert',c:'#ef4444',i:0},{l:'Difficile',c:'#f97316',i:1},{l:'Moyen',c:'#eab308',i:2},{l:'Facile',c:'#22c55e',i:3}];
   lvls.forEach(function(lv){
-    h.push('<button onclick="fixedLevel='+lv.i+';perfectionMode=window._menuPerf||false;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
+    h.push('<button onclick="fixedLevel='+lv.i+';noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
   });
   h.push('</div>');
     h.push('</div></div>');
@@ -434,8 +418,8 @@ function showMenu(){
 
   // Lien classement
   h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
-  h.push('<button onclick="mpShowJoinMenu()" style="width:100%;max-width:360px;padding:9px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:13px;cursor:pointer;margin-bottom:6px">&#127760; Multijoueur</button>');
-  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">&#127942; Classement</a>');
+  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">Classement</a>');
+  if(user) h.push('<a onclick="if(typeof showHistory!==\'undefined\')showHistory()" style="font-size:12px;color:#6b7280;cursor:pointer;text-decoration:underline">Mes parties</a>');
   h.push('</div>');
 
   ov.innerHTML=h.join('');
