@@ -548,14 +548,17 @@ function mpDoCreate(){
   var nameEl=document.getElementById('mp-name-create');
   if(nameEl&&nameEl.value&&typeof mp!=='undefined') mp.playerName=nameEl.value;
   window._mpMode=true;
-  if(typeof mpCreateRoom==='function'){
-    mpCreateRoom({fixedLevel:lvl,noZoomMode:nz,perfectionMode:perf,nbRounds:nb}).then(function(code){
+  var _createFn = window.mpCreateRoom || (typeof mpCreateRoom==='function'?mpCreateRoom:null);
+  if(_createFn){
+    _createFn({fixedLevel:lvl,noZoomMode:nz,perfectionMode:perf,nbRounds:nb}).then(function(code){
       if(typeof showToast==='function') showToast('Salon créé: '+code);
     }).catch(function(e){
+      console.error('mpCreateRoom error:', e);
       if(typeof showToast==='function') showToast('Erreur: '+e.message);
       window._mpMode=false;
     });
   } else {
+    console.error('mpCreateRoom non disponible - module chargé?', typeof window.mpCreateRoom);
     if(typeof showToast==='function') showToast('Module multijoueur non chargé');
   }
 }
@@ -565,12 +568,15 @@ function mpDoJoin(){
   var nameEl=document.getElementById('mp-name-join');
   var name=nameEl?nameEl.value:'Joueur';
   window._mpMode=true;
-  if(typeof mpJoinRoom==='function'){
-    mpJoinRoom(code,name).catch(function(e){
+  var _joinFn = window.mpJoinRoom || (typeof mpJoinRoom==='function'?mpJoinRoom:null);
+  if(_joinFn){
+    _joinFn(code,name).catch(function(e){
+      console.error('mpJoinRoom error:', e);
       if(typeof showToast==='function') showToast('Erreur: '+e.message);
       window._mpMode=false;
     });
   } else {
+    console.error('mpJoinRoom non disponible');
     if(typeof showToast==='function') showToast('Module multijoueur non chargé');
   }
 }
