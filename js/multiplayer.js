@@ -230,7 +230,7 @@ function mpUpdateLobby(room) {
     h.push(canStart ? '? Lancer la partie' : 'En attente (min. 2 joueurs)');
     h.push('</button>');
   } else {
-    h.push('<div style="color:#94a3b8;font-size:13px;padding:10px">En attente que l'hôte lance la partie...</div>');
+    h.push('<div style="color:#94a3b8;font-size:13px;padding:10px">En attente que l\'h\u00f4te lance la partie...</div>');
   }
   h.push('<button onclick="mpLeaveRoom()" style="padding:10px 20px;font-size:13px;border-radius:9px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer">Quitter</button>');
   h.push('</div>');
