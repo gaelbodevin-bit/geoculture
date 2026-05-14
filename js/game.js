@@ -34,7 +34,7 @@ function initMap(){
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'(c) Esri'}).addTo(map);
   L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,opacity:1}).addTo(map);
   map.on('click',onMapClick);
-  setTimeout(function(){if(!map) return;var wb=L.latLngBounds([[-75,-179],[75,179]]);var z=map.getBoundsZoom(wb);map.setMinZoom(z);if(noZoomMode) map.setMaxZoom(z);map.fitBounds(wb,{animate:false,padding:[0,0]});map.setMaxBounds(L.latLngBounds([[-85,-360],[85,360]]));},200);
+  setTimeout(function(){if(!map)return;var wb=L.latLngBounds([[-75,-179],[75,179]]);var z=map.getBoundsZoom(wb);map.setMinZoom(z);if(noZoomMode)map.setMaxZoom(z);map.fitBounds(wb,{animate:false,padding:[0,0]});map.setMaxBounds(L.latLngBounds([[-85,-360],[85,360]]));},200);
 }
 
 function adjustMapZoom(){
@@ -331,7 +331,7 @@ function showEnd(){
       -->
     </div>`;
   ov.classList.remove('h');
-  if(typeof window.saveGame==='function'){var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);var _p=_t>0?Math.round(total/_t*100):0;var _n=['tout-niveaux','expert','difficile','moyen','facile'];var _m=(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(_n[fixedLevel+1]||'tout-niveaux');if(window._dailyMode){markDailyPlayed(window._dailyLevel,total);if(typeof window.saveDailyScore==='function') window.saveDailyScore(window._dailyLevel,total,_p);window._dailyMode=false;}setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);}
+  if(typeof window.saveGame==='function'){var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);var _p=_t>0?Math.round(total/_t*100):0;var _n=['tout-niveaux','expert','difficile','moyen','facile'];var _m=(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(_n[fixedLevel+1]||'tout-niveaux');setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);}
 }
 
 function showMenu(){
@@ -365,9 +365,9 @@ function showMenu(){
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px">');
   h.push('<div style="font-size:11px;font-weight:500;color:#f97316;letter-spacing:1px;text-transform:uppercase">Comment jouer</div>');
   var rules=[
-    {t:'Normal', d:'5 manches \u00b7 indices progressifs \u00b7 place le lieu'},
-    {t:'No-Zoom', d:'Carte bloqu\u00e9e pas de zoom \u00b7'},
-    {t:'Perfection', d:'10 manches \u00b7 \u00e9limin\u00e9 si > 50 km du lieu'}
+    {t:'Normal', d:'5 manches · indices progressifs · place le marqueur'},
+    {t:'No-Zoom', d:'Carte bloquée au zoom · pas de loupe'},
+    {t:'Perfection', d:'10 manches · éliminé si > 50 km du lieu'}
   ];
   rules.forEach(function(r,i){
     h.push('<div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:2px">');
@@ -383,9 +383,10 @@ function showMenu(){
   // Toggle mode
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:10px 12px">');
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Mode de jeu</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px">');
   h.push('<button id="btn-normal" onclick="window._menuNZ=false;document.getElementById(\'btn-normal\').style.background=\'#f97316\';document.getElementById(\'btn-normal\').style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Normal</button>');
   h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;document.getElementById(\'btn-nozoom\').style.background=\'#f97316\';document.getElementById(\'btn-nozoom\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">No-Zoom</button>');
+  h.push('<button id="btn-perf" onclick="window._menuNZ=false;window._menuPerf=true;document.getElementById(\'btn-perf\').style.background=\'#7c3aed\';document.getElementById(\'btn-perf\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Perfection</button>');
   h.push('<button id="btn-perf" onclick="window._menuNZ=false;window._menuPerf=true;document.getElementById(\'btn-perf\').style.background=\'#7c3aed\';document.getElementById(\'btn-perf\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Perfection</button>');
   h.push('</div></div>');
 
@@ -406,15 +407,14 @@ function showMenu(){
 
   h.push('</div>'); // fin colonne droite
   h.push('</div>'); // fin grille
-  // Défi du jour
-  h.push('<button onclick="showDailyMenu()" style="width:100%;max-width:360px;padding:10px;border-radius:8px;border:2px solid #fbbf24;background:transparent;color:#fbbf24;font-weight:700;font-size:13px;cursor:pointer;margin-top:6px">Défi du jour</button>');
+  h.push('<button onclick="showDailyMenu()" style="width:100%;max-width:360px;padding:9px;border-radius:8px;border:2px solid #fbbf24;background:transparent;color:#fbbf24;font-weight:700;font-size:13px;cursor:pointer;margin-top:6px">Défi du jour</button>');
 
   // Lien classement
   h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
+  h.push('<button onclick="mpShowJoinMenu()" style="padding:8px 18px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:12px;cursor:pointer;margin-right:8px">Multijoueur</button>');
   h.push('<div style="display:flex;align-items:center;gap:16px;justify-content:center;margin-top:4px">');
   h.push('<button onclick="mpShowJoinMenu()" style="padding:8px 22px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:13px;cursor:pointer">Multijoueur</button>');
-  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:13px;color:#f97316;cursor:pointer;font-weight:600;text-decoration:underline;text-underline-offset:4px">Classement</a>');
-  h.push('</div>');
+  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">Classement</a>');
   h.push('</div>');
 
   ov.innerHTML=h.join('');
@@ -471,240 +471,17 @@ document.addEventListener('DOMContentLoaded',function(){
   var nozb=document.getElementById('nozb');
   if(nozb) nozb.onclick=function(){noZoomMode=true;if(map){map.remove();map=null;}initMap();startGame();};
 });
-function mpShowJoinMenu(){
-  var ov=document.getElementById('overlay');
-  var user=typeof getCurrentUser==='function'?getCurrentUser():null;
-  var h=[];
-  h.push('<div class="otitle" style="font-size:32px">MULTIJOUEUR</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:480px;margin:12px 0">');
-
-  // === Créer un salon ===
-  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
-  h.push('<div style="font-size:13px;font-weight:700;color:#22c55e">Créer un salon</div>');
-
-  // Mode de jeu: Normal / No-Zoom / Perfection
-  h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:.8px">Mode</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px">');
-  h.push('<button id="mp-mode-normal" onclick="mpSetMode(\'normal\')" style="padding:5px 4px;border-radius:6px;border:1px solid #f97316;background:#f97316;color:#fff;font-size:11px;font-weight:600;cursor:pointer">Normal</button>');
-  h.push('<button id="mp-mode-nozoom" onclick="mpSetMode(\'nozoom\')" style="padding:5px 4px;border-radius:6px;border:1px solid #f97316;background:transparent;color:#f97316;font-size:11px;font-weight:600;cursor:pointer">No-Zoom</button>');
-  h.push('<button id="mp-mode-perf" onclick="mpSetMode(\'perfection\')" style="padding:5px 4px;border-radius:6px;border:1px solid #7c3aed;background:transparent;color:#a78bfa;font-size:11px;font-weight:600;cursor:pointer">Perfection</button>');
-  h.push('</div>');
-
-  // Difficulté
-  h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:.8px">Difficulté</div>');
-  h.push('<select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="-1">Tout niveaux</option><option value="0">Expert</option><option value="1">Difficile</option><option value="2">Moyen</option><option value="3">Facile</option></select>');
-
-  // Manches
-  h.push('<select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="5">5 manches</option><option value="10">10 manches</option></select>');
-
-  if(!user) h.push('<input id="mp-name-create" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
-  h.push('<button onclick="mpDoCreate()" style="padding:8px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer">Créer</button>');
-  h.push('</div>');
-
-  // === Rejoindre ===
-  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
-  h.push('<div style="font-size:13px;font-weight:700;color:#f97316">Rejoindre</div>');
-  h.push('<div style="font-size:11px;color:#6b7280;line-height:1.5">Entre le code du salon partagé par l\'hôte.</div>');
-  h.push('<input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:10px;color:#f97316;font-size:22px;font-weight:700;letter-spacing:6px;text-align:center;text-transform:uppercase">');
-  if(!user) h.push('<input id="mp-name-join" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
-  h.push('<button onclick="mpDoJoin()" style="padding:8px;border-radius:7px;border:none;background:#f97316;color:#fff;font-weight:700;cursor:pointer">Rejoindre</button>');
-  h.push('</div>');
-
-  h.push('</div>');
-  h.push('<button onclick="showMenu()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer">← Retour</button>');
-  ov.innerHTML=h.join('');
-  ov.classList.remove('h');
-  // Initialiser le mode sélectionné
-  window._mpGameMode='normal';
-}
-
-
-function mpSetMode(mode){
-  window._mpGameMode=mode;
-  var styles={
-    'normal':  {btn:'mp-mode-normal', bg:'#f97316', color:'#fff', border:'#f97316'},
-    'nozoom':  {btn:'mp-mode-nozoom', bg:'#f97316', color:'#fff', border:'#f97316'},
-    'perfection':{btn:'mp-mode-perf', bg:'#7c3aed', color:'#fff', border:'#7c3aed'}
-  };
-  ['normal','nozoom','perfection'].forEach(function(m){
-    var s=styles[m];
-    var el=document.getElementById('mp-mode-'+m.replace('perfection','perf'));
-    if(!el) return;
-    if(m===mode){
-      el.style.background=s.bg; el.style.color=s.color; el.style.borderColor=s.border;
-    } else {
-      el.style.background='transparent';
-      el.style.color=m==='perfection'?'#a78bfa':'#f97316';
-      el.style.borderColor=m==='perfection'?'#7c3aed':'#f97316';
-    }
-  });
-}
-
-function mpDoCreate(){
-  var lvl=parseInt(document.getElementById('mp-level').value);
-  var gameMode=window._mpGameMode||'normal';
-  var nz=gameMode==='nozoom';
-  var perf=gameMode==='perfection';
-  var nb=parseInt(document.getElementById('mp-rounds').value);
-  if(perf&&nb<10) nb=10; // Perfection = 10 manches min
-  var nameEl=document.getElementById('mp-name-create');
-  if(nameEl&&nameEl.value&&typeof mp!=='undefined') mp.playerName=nameEl.value;
-  window._mpMode=true;
-  var _createFn = window.mpCreateRoom || (typeof mpCreateRoom==='function'?mpCreateRoom:null);
-  if(_createFn){
-    _createFn({fixedLevel:lvl,noZoomMode:nz,perfectionMode:perf,nbRounds:nb}).then(function(code){
-      if(typeof showToast==='function') showToast('Salon créé: '+code);
-    }).catch(function(e){
-      console.error('mpCreateRoom error:', e);
-      if(typeof showToast==='function') showToast('Erreur: '+e.message);
-      window._mpMode=false;
-    });
-  } else {
-    console.error('mpCreateRoom non disponible - module chargé?', typeof window.mpCreateRoom);
-    if(typeof showToast==='function') showToast('Module multijoueur non chargé');
-  }
-}
-function mpDoJoin(){
-  var code=(document.getElementById('mp-code').value||'').toUpperCase().trim();
-  if(code.length<4){if(typeof showToast==='function') showToast('Code invalide');return;}
-  var nameEl=document.getElementById('mp-name-join');
-  var name=nameEl?nameEl.value:'Joueur';
-  window._mpMode=true;
-  var _joinFn = window.mpJoinRoom || (typeof mpJoinRoom==='function'?mpJoinRoom:null);
-  if(_joinFn){
-    _joinFn(code,name).catch(function(e){
-      console.error('mpJoinRoom error:', e);
-      if(typeof showToast==='function') showToast('Erreur: '+e.message);
-      window._mpMode=false;
-    });
-  } else {
-    console.error('mpJoinRoom non disponible');
-    if(typeof showToast==='function') showToast('Module multijoueur non chargé');
-  }
-}
-
-// ── Défi du jour ─────────────────────────────────────────────────────────────
-
-function getDailyDateFR() {
-  // Date actuelle en heure française (UTC+1 hiver / UTC+2 été)
-  var now = new Date();
-  var offset = 60; // UTC+1 par défaut
-  // Détection DST simplifiée: avril-octobre = UTC+2
-  var month = now.getUTCMonth() + 1;
-  if(month >= 4 && month <= 10) offset = 120;
-  var frTime = new Date(now.getTime() + offset * 60000);
-  var y = frTime.getUTCFullYear();
-  var mo = String(frTime.getUTCMonth()+1).padStart(2,'0');
-  var d = String(frTime.getUTCDate()).padStart(2,'0');
-  return y + '-' + mo + '-' + d;
-}
-
-function getDailySeed(dateStr) {
-  // Seed déterministe depuis la date
-  var hash = 0;
-  for(var i=0; i<dateStr.length; i++){
-    hash = ((hash << 5) - hash) + dateStr.charCodeAt(i);
-    hash |= 0;
-  }
-  return Math.abs(hash);
-}
-
-function getDailyRounds(seed, level) {
-  // Générer 5 indices de lieux pour ce seed+niveau
-  var indices = [];
-  var s = seed + level * 9999;
-  for(var i=0; i<5; i++){
-    s = (s * 1664525 + 1013904223) & 0x7fffffff;
-    indices.push(Math.abs(s) % ROUNDS.length);
-  }
-  // Dédupliquer
-  var seen = {}, result = [];
-  for(var j=0; j<indices.length; j++){
-    if(!seen[indices[j]]){ seen[indices[j]]=true; result.push(indices[j]); }
-    else { var idx=indices[j]; while(seen[idx]) idx=(idx+1)%ROUNDS.length; seen[idx]=true; result.push(idx); }
-  }
-  return result.map(function(i){ return ROUNDS[i]; });
-}
-
-function getDailyKey(level) {
-  return 'daily_' + getDailyDateFR() + '_lvl' + level;
-}
-
-function hasDailyBeenPlayed(level) {
-  return localStorage.getItem(getDailyKey(level)) === 'done';
-}
-
-function markDailyPlayed(level, score) {
-  localStorage.setItem(getDailyKey(level), 'done');
-  localStorage.setItem(getDailyKey(level) + '_score', score);
-}
-
-function getDailyScore(level) {
-  return parseInt(localStorage.getItem(getDailyKey(level) + '_score')) || 0;
-}
-
-function showDailyMenu() {
-  var ov = document.getElementById('overlay');
-  var dateStr = getDailyDateFR();
-  var lvls = [
-    {i:0, label:'Expert',    color:'#ef4444', border:'#ef4444'},
-    {i:1, label:'Difficile', color:'#f97316', border:'#f97316'},
-    {i:2, label:'Moyen',     color:'#eab308', border:'#eab308'},
-    {i:3, label:'Facile',    color:'#22c55e', border:'#22c55e'}
-  ];
-  var h = [];
-  h.push('<div class="otitle" style="font-size:28px">DÉFI DU JOUR</div>');
-  h.push('<div style="font-size:12px;color:#6b7280;margin-bottom:12px">' + dateStr + ' · 5 lieux · réinitialisé à minuit</div>');
-  h.push('<div style="display:flex;flex-direction:column;gap:8px;width:100%;max-width:340px">');
-  lvls.forEach(function(lv){
-    var played = hasDailyBeenPlayed(lv.i);
-    var score = played ? getDailyScore(lv.i) : null;
-    h.push('<div style="display:flex;align-items:center;gap:10px;background:#0d1120;border:1px solid ' + lv.border + ';border-radius:10px;padding:10px 14px">');
-    h.push('<span style="font-size:13px;font-weight:700;color:' + lv.color + ';flex:1">' + lv.label + '</span>');
-    if(played){
-      h.push('<span style="font-size:12px;color:#6b7280">' + score.toLocaleString('fr-FR') + ' pts</span>');
-      h.push('<span style="font-size:11px;color:#22c55e;margin-left:6px">✓ Joué</span>');
-    } else {
-      h.push('<button onclick="startDailyChallenge(' + lv.i + ')" style="padding:6px 14px;border-radius:7px;border:none;background:' + lv.color + ';color:#fff;font-size:12px;font-weight:700;cursor:pointer">Jouer</button>');
-    }
-    h.push('</div>');
-  });
-  h.push('</div>');
-  h.push('<div style="display:flex;gap:10px;margin-top:10px">');
-  h.push('<button onclick="showDailyLeaderboard()" style="padding:8px 16px;border-radius:8px;border:1px solid #fbbf24;background:transparent;color:#fbbf24;font-size:12px;font-weight:600;cursor:pointer">Classement du jour</button>');
-  h.push('<button onclick="showMenu()" style="padding:8px 16px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;font-size:12px;cursor:pointer">← Retour</button>');
-  h.push('</div>');
-  ov.innerHTML = h.join('');
-  ov.classList.remove('h');
-}
-
-function startDailyChallenge(level) {
-  if(hasDailyBeenPlayed(level)){
-    if(typeof showToast==='function') showToast('Déjà joué aujourd\'hui !');
-    return;
-  }
-  var seed = getDailySeed(getDailyDateFR());
-  var dailyRounds = getDailyRounds(seed, level);
-  // Configurer la partie
-  fixedLevel = level;
-  noZoomMode = false;
-  perfectionMode = false;
-  window._dailyMode = true;
-  window._dailyLevel = level;
-  total = 0; roundScores = [];
-  roundList = dailyRounds;
-  curR = 0;
-  document.body.classList.remove('menu-mode');
-  document.getElementById('overlay').classList.add('h');
-  document.getElementById('hsc').textContent = '0';
-  if(!map){ try{ initMap(); }catch(e){} }
-  startRound(0);
-}
-
-function showDailyLeaderboard() {
-  if(typeof window.showDailyLB === 'function') {
-    window.showDailyLB();
-  } else {
-    if(typeof showToast==='function') showToast('Chargement...');
-  }
-}
+function mpShowJoinMenu(){var ov=document.getElementById('overlay');var user=typeof getCurrentUser==='function'?getCurrentUser():null;var h=[];h.push('<div class="otitle" style="font-size:32px">MULTIJOUEUR</div>');h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:480px;margin:12px 0">');h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px"><div style="font-size:13px;font-weight:700;color:#22c55e">Créer</div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px"><button id="mp-mode-normal" onclick="mpSetMode(\'normal\')" style="padding:5px 4px;border-radius:6px;border:1px solid #f97316;background:#f97316;color:#fff;font-size:11px;font-weight:600;cursor:pointer">Normal</button><button id="mp-mode-nozoom" onclick="mpSetMode(\'nozoom\')" style="padding:5px 4px;border-radius:6px;border:1px solid #f97316;background:transparent;color:#f97316;font-size:11px;font-weight:600;cursor:pointer">No-Zoom</button><button id="mp-mode-perf" onclick="mpSetMode(\'perfection\')" style="padding:5px 4px;border-radius:6px;border:1px solid #7c3aed;background:transparent;color:#a78bfa;font-size:11px;font-weight:600;cursor:pointer">Perfection</button></div><select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="-1">Tout niveaux</option><option value="0">Expert</option><option value="1">Difficile</option><option value="2">Moyen</option><option value="3">Facile</option></select><select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="5">5 manches</option><option value="10">10 manches</option></select>');if(!user)h.push('<input id="mp-name-create" placeholder="Pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');h.push('<button onclick="mpDoCreate()" style="padding:8px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer">Créer</button></div>');h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px"><div style="font-size:13px;font-weight:700;color:#f97316">Rejoindre</div><input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:10px;color:#f97316;font-size:22px;font-weight:700;letter-spacing:6px;text-align:center;text-transform:uppercase">');if(!user)h.push('<input id="mp-name-join" placeholder="Pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');h.push('<button onclick="mpDoJoin()" style="padding:8px;border-radius:7px;border:none;background:#f97316;color:#fff;font-weight:700;cursor:pointer">Rejoindre</button></div></div><button onclick="showMenu()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer">← Retour</button>');ov.innerHTML=h.join('');ov.classList.remove('h');window._mpGameMode='normal';}
+function mpSetMode(m){window._mpGameMode=m;['normal','nozoom','perfection'].forEach(function(k){var el=document.getElementById('mp-mode-'+(k==='perfection'?'perf':k));if(!el)return;var a=k===m;el.style.background=a?(k==='perfection'?'#7c3aed':'#f97316'):'transparent';el.style.color=a?'#fff':(k==='perfection'?'#a78bfa':'#f97316');el.style.borderColor=k==='perfection'?'#7c3aed':'#f97316';});}
+function mpDoCreate(){var lvl=parseInt(document.getElementById('mp-level').value);var gm=window._mpGameMode||'normal';var nz=gm==='nozoom';var perf=gm==='perfection';var nb=parseInt(document.getElementById('mp-rounds').value);if(perf&&nb<10)nb=10;window._mpMode=true;var fn=window.mpCreateRoom||(typeof mpCreateRoom==='function'?mpCreateRoom:null);if(fn){fn({fixedLevel:lvl,noZoomMode:nz,perfectionMode:perf,nbRounds:nb}).then(function(code){if(typeof showToast==='function')showToast('Salon: '+code);}).catch(function(e){if(typeof showToast==='function')showToast('Erreur: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non chargé');}}
+function mpDoJoin(){var code=(document.getElementById('mp-code').value||'').toUpperCase().trim();if(code.length<4){if(typeof showToast==='function')showToast('Code invalide');return;}window._mpMode=true;var fn=window.mpJoinRoom||(typeof mpJoinRoom==='function'?mpJoinRoom:null);if(fn){fn(code,'Joueur').catch(function(e){if(typeof showToast==='function')showToast('Erreur: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non chargé');}}
+function getDailyDateFR(){var now=new Date();var m=now.getUTCMonth()+1;var off=m>=4&&m<=10?120:60;var t=new Date(now.getTime()+off*60000);return t.getUTCFullYear()+'-'+String(t.getUTCMonth()+1).padStart(2,'0')+'-'+String(t.getUTCDate()).padStart(2,'0');}
+function getDailySeed(d){var h=0;for(var i=0;i<d.length;i++){h=((h<<5)-h)+d.charCodeAt(i);h|=0;}return Math.abs(h);}
+function getDailyRounds(seed,level){var s=seed+level*9999;var res=[];var seen={};for(var i=0;i<500&&res.length<5;i++){s=(s*1664525+1013904223)&0x7fffffff;var idx=Math.abs(s)%ROUNDS.length;if(!seen[idx]){seen[idx]=true;res.push(ROUNDS[idx]);}}return res;}
+function getDailyKey(l){return 'daily_'+getDailyDateFR()+'_lvl'+l;}
+function hasDailyBeenPlayed(l){return localStorage.getItem(getDailyKey(l))==='done';}
+function markDailyPlayed(l,score){localStorage.setItem(getDailyKey(l),'done');localStorage.setItem(getDailyKey(l)+'_score',String(score));}
+function getDailyScore(l){return parseInt(localStorage.getItem(getDailyKey(l)+'_score'))||0;}
+function showDailyMenu(){var ov=document.getElementById('overlay');var ds=getDailyDateFR();var lvls=[{i:0,label:'Expert',color:'#ef4444'},{i:1,label:'Difficile',color:'#f97316'},{i:2,label:'Moyen',color:'#eab308'},{i:3,label:'Facile',color:'#22c55e'}];var h=[];h.push('<div class="otitle" style="font-size:28px">DÉFI DU JOUR</div>');h.push('<div style="font-size:12px;color:#6b7280;margin-bottom:12px">'+ds+' · 5 lieux · réinitialisé à minuit (FR)</div>');h.push('<div style="display:flex;flex-direction:column;gap:8px;width:100%;max-width:340px">');lvls.forEach(function(lv){var played=hasDailyBeenPlayed(lv.i);var score=played?getDailyScore(lv.i):null;h.push('<div style="display:flex;align-items:center;gap:10px;background:#0d1120;border:1px solid '+lv.color+';border-radius:10px;padding:10px 14px">');h.push('<span style="font-size:13px;font-weight:700;color:'+lv.color+';flex:1">'+lv.label+'</span>');if(played){h.push('<span style="font-size:12px;color:#6b7280">'+score.toLocaleString('fr-FR')+' pts</span>');h.push('<span style="font-size:11px;color:#22c55e;margin-left:6px">✓ Joué</span>');}else{h.push('<button onclick="startDailyChallenge('+lv.i+')" style="padding:6px 14px;border-radius:7px;border:none;background:'+lv.color+';color:#fff;font-size:12px;font-weight:700;cursor:pointer">Jouer</button>');}h.push('</div>');});h.push('</div>');h.push('<div style="display:flex;gap:10px;margin-top:10px">');h.push('<button onclick="showDailyLeaderboard()" style="padding:8px 16px;border-radius:8px;border:1px solid #fbbf24;background:transparent;color:#fbbf24;font-size:12px;font-weight:600;cursor:pointer">Classement du jour</button>');h.push('<button onclick="showMenu()" style="padding:8px 16px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;font-size:12px;cursor:pointer">← Retour</button>');h.push('</div>');ov.innerHTML=h.join('');ov.classList.remove('h');}
+function startDailyChallenge(level){if(hasDailyBeenPlayed(level)){if(typeof showToast==='function')showToast('Déjà joué aujourd\'hui !');return;}fixedLevel=level;noZoomMode=false;perfectionMode=false;window._dailyMode=true;window._dailyLevel=level;total=0;roundScores=[];roundList=getDailyRounds(getDailySeed(getDailyDateFR()),level);curR=0;document.body.classList.remove('menu-mode');document.getElementById('overlay').classList.add('h');document.getElementById('hsc').textContent='0';if(!map){try{initMap();}catch(e){}}startRound(0);}
+function showDailyLeaderboard(){if(typeof window.showDailyLB==='function'){window.showDailyLB();}else if(typeof showToast==='function'){showToast('Classement non disponible');}}
