@@ -1,4 +1,4 @@
-// ── GéoCulture Multijoueur ──────────────────────────────────────────────────
+// ?? G�oCulture Multijoueur ??????????????????????????????????????????????????
 import { initializeApp, getApps } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
 import { getDatabase, ref, set, get, onValue, off, push, update, remove, serverTimestamp as rtServerTimestamp }
   from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js';
@@ -13,11 +13,11 @@ var firebaseConfig = {
   appId: "1:701399534769:web:ea9418505d8d2e9a9ea690"
 };
 
-// Réutiliser l'app Firebase existante
+// R�utiliser l'app Firebase existante
 var mpApp = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
 var rtdb = getDatabase(mpApp);
 
-// État local multijoueur
+// �tat local multijoueur
 var mp = {
   roomCode: null,
   playerId: null,
@@ -29,7 +29,7 @@ var mp = {
   timerInterval: null
 };
 
-// ── Utilitaires ──────────────────────────────────────────────────────────────
+// ?? Utilitaires ??????????????????????????????????????????????????????????????
 
 function genCode() {
   var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
@@ -52,7 +52,7 @@ function getPlayerPhoto() {
   return user ? (user.photoURL || '') : '';
 }
 
-// ── Créer un salon (Hôte) ─────────────────────────────────────────────────────
+// ?? Cr�er un salon (H�te) ?????????????????????????????????????????????????????
 
 function mpCreateRoom(options) {
   var code = genCode();
@@ -68,6 +68,7 @@ function mpCreateRoom(options) {
     options: {
       fixedLevel: options.fixedLevel !== undefined ? options.fixedLevel : -1,
       noZoomMode: options.noZoomMode || false,
+      perfectionMode: options.perfectionMode || false,
       nbRounds: options.nbRounds || 5,
       timerDuration: 30
     },
@@ -77,7 +78,7 @@ function mpCreateRoom(options) {
     createdAt: Date.now()
   };
 
-  // Ajouter l'hôte
+  // Ajouter l'h�te
   roomData.players[mp.playerId] = {
     name: getPlayerName(),
     photo: getPlayerPhoto(),
@@ -89,7 +90,7 @@ function mpCreateRoom(options) {
   };
 
   return set(mp.roomRef, roomData).then(function() {
-    // Auto-supprimer après 2h
+    // Auto-supprimer apr�s 2h
     setTimeout(function(){
       if(mp.roomRef) remove(mp.roomRef);
     }, 7200000);
@@ -99,7 +100,7 @@ function mpCreateRoom(options) {
   });
 }
 
-// ── Rejoindre un salon (Invité) ───────────────────────────────────────────────
+// ?? Rejoindre un salon (Invit�) ???????????????????????????????????????????????
 
 function mpJoinRoom(code, playerName) {
   code = code.toUpperCase().trim();
@@ -112,7 +113,7 @@ function mpJoinRoom(code, playerName) {
   return get(mp.roomRef).then(function(snap) {
     if(!snap.exists()) throw new Error('Salon introuvable');
     var room = snap.val();
-    if(room.status !== 'waiting') throw new Error('Partie déjà commencée');
+    if(room.status !== 'waiting') throw new Error('Partie d�j� commenc�e');
     var playerCount = Object.keys(room.players || {}).length;
     if(playerCount >= 8) throw new Error('Salon complet (8/8)');
 
@@ -132,7 +133,7 @@ function mpJoinRoom(code, playerName) {
   });
 }
 
-// ── Écouter les changements du salon ─────────────────────────────────────────
+// ?? �couter les changements du salon ?????????????????????????????????????????
 
 function mpListenRoom() {
   if(!mp.roomRef) return;
@@ -164,7 +165,7 @@ function mpHandleRoomChange(room) {
   }
 }
 
-// ── Lobby ─────────────────────────────────────────────────────────────────────
+// ?? Lobby ?????????????????????????????????????????????????????????????????????
 
 function mpShowLobby() {
   var ov = document.getElementById('overlay');
@@ -186,7 +187,8 @@ function mpUpdateLobby(room) {
   var opts = room.options || {};
 
   var lvlNames = ['Tout niveaux','Expert','Difficile','Moyen','Facile'];
-  var lvlLabel = lvlNames[(opts.fixedLevel||0)+1] || 'Tout niveaux';
+  var lvlLabel = lvlNames[(opts.fixedLevel>=0?opts.fixedLevel+1:0)] || 'Tout niveaux';
+  var modeLabel = opts.perfectionMode ? 'Perfection' : opts.noZoomMode ? 'No-Zoom' : 'Normal';
 
   var h = [];
   h.push('<div style="text-align:center;margin-bottom:12px">');
@@ -216,7 +218,7 @@ function mpUpdateLobby(room) {
       h.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;display:flex;align-items:center;justify-content:center;font-size:12px;color:#94a3b8">'+p.name[0].toUpperCase()+'</div>');
     }
     h.push('<span style="flex:1;font-size:13px;color:'+(isMe?'#f97316':'#e2e8f0')+';font-weight:'+(isMe?'700':'400')+'">'+p.name+(isMe?' (moi)':'')+'</span>');
-    if(isH) h.push('<span style="font-size:10px;color:#f97316;background:#3d1a05;padding:2px 6px;border-radius:4px">Hôte</span>');
+    if(isH) h.push('<span style="font-size:10px;color:#f97316;background:#3d1a05;padding:2px 6px;border-radius:4px">H�te</span>');
     h.push('</div>');
   });
   h.push('</div>');
@@ -225,10 +227,10 @@ function mpUpdateLobby(room) {
   h.push('<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">');
   if(isHost) {
     h.push('<button onclick="mpLaunchGame()" '+(canStart?'':'disabled')+' style="padding:10px 28px;font-size:14px;font-weight:700;border-radius:9px;border:none;cursor:'+(canStart?'pointer':'not-allowed')+';background:'+(canStart?'#f97316':'#374151')+';color:#fff">');
-    h.push(canStart ? '▶ Lancer la partie' : 'En attente (min. 2 joueurs)');
+    h.push(canStart ? '? Lancer la partie' : 'En attente (min. 2 joueurs)');
     h.push('</button>');
   } else {
-    h.push('<div style="color:#94a3b8;font-size:13px;padding:10px">En attente que l'hôte lance la partie...</div>');
+    h.push('<div style="color:#94a3b8;font-size:13px;padding:10px">En attente que l'h�te lance la partie...</div>');
   }
   h.push('<button onclick="mpLeaveRoom()" style="padding:10px 20px;font-size:13px;border-radius:9px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer">Quitter</button>');
   h.push('</div>');
@@ -236,16 +238,16 @@ function mpUpdateLobby(room) {
   ov.innerHTML = h.join('');
 }
 
-// ── Lancer la partie (Hôte seulement) ────────────────────────────────────────
+// ?? Lancer la partie (H�te seulement) ????????????????????????????????????????
 
 function mpLaunchGame() {
   if(!mp.isHost || !mp.roomRef) return;
 
-  // Générer les seeds des rounds (indices dans ROUNDS)
+  // G�n�rer les seeds des rounds (indices dans ROUNDS)
   var seeds = [];
   var indices = [];
   for(var i=0;i<(typeof ROUNDS!=='undefined'?ROUNDS.length:493);i++) indices.push(i);
-  // Fisher-Yates shuffle déterministe
+  // Fisher-Yates shuffle d�terministe
   var seed = Date.now();
   function seededRand(max) { seed = (seed * 1664525 + 1013904223) & 0xffffffff; return Math.abs(seed) % max; }
   for(var j=indices.length-1;j>0;j--) {
@@ -264,7 +266,7 @@ function mpLaunchGame() {
   });
 }
 
-// ── Compte à rebours ──────────────────────────────────────────────────────────
+// ?? Compte � rebours ??????????????????????????????????????????????????????????
 
 function mpShowCountdown(room) {
   var ov = document.getElementById('overlay');
@@ -278,21 +280,21 @@ function mpShowCountdown(room) {
   if(remaining > 0) {
     setTimeout(function(){ mpShowCountdown(room); }, 500);
   } else if(mp.isHost) {
-    // L'hôte passe au statut playing
+    // L'h�te passe au statut playing
     setTimeout(function(){
       update(mp.roomRef, { status: 'playing', roundStart: Date.now() });
     }, 500);
   }
 }
 
-// ── Jouer un round ────────────────────────────────────────────────────────────
+// ?? Jouer un round ????????????????????????????????????????????????????????????
 
 var mpCurrentRound = -1;
 var mpAnswered = false;
 
 function mpStartRound(room) {
   var rIdx = room.round || 0;
-  if(rIdx === mpCurrentRound) return; // Déjà affiché
+  if(rIdx === mpCurrentRound) return; // D�j� affich�
   mpCurrentRound = rIdx;
   mpAnswered = false;
 
@@ -313,6 +315,7 @@ function mpStartRound(room) {
   gameActive = true;
   fixedLevel = opts.fixedLevel !== undefined ? opts.fixedLevel : -1;
   noZoomMode = opts.noZoomMode || false;
+  perfectionMode = opts.perfectionMode || false;
   total = room.players[mp.playerId] ? (room.players[mp.playerId].score || 0) : 0;
 
   // Fermer overlay
@@ -323,7 +326,7 @@ function mpStartRound(room) {
   var nbTotal = opts.nbRounds || 5;
   document.getElementById('hrnd').textContent = (rIdx+1)+'/'+nbTotal;
 
-  // Réinitialiser carte
+  // R�initialiser carte
   if(map) { map.setView([20,0], map.getMinZoom(), {animate:false}); }
   if(playerMarker){playerMarker.remove();playerMarker=null;}
   if(targetMarker){targetMarker.remove();targetMarker=null;}
@@ -340,7 +343,7 @@ function mpStartRound(room) {
   // Afficher l'indice
   showHint();
 
-  // Timer synchronisé avec le serveur
+  // Timer synchronis� avec le serveur
   var roundStart = room.roundStart || Date.now();
   mpStartSyncTimer(roundStart, opts.timerDuration || 30, rIdx, room);
 }
@@ -375,7 +378,7 @@ function mpStartSyncTimer(roundStart, duration, rIdx, room) {
       if(gameActive && !mpAnswered) {
         mpAnswered = true;
         gameActive = false;
-        // Soumettre un raté
+        // Soumettre un rat�
         mpSubmitAnswer(null, null, 0, rIdx);
       }
     }
@@ -384,12 +387,12 @@ function mpStartSyncTimer(roundStart, duration, rIdx, room) {
   tick();
 }
 
-// ── Soumettre une réponse ─────────────────────────────────────────────────────
+// ?? Soumettre une r�ponse ?????????????????????????????????????????????????????
 
 function mpSubmitAnswer(pos, dist, pts, rIdx) {
   if(!mp.roomRef || !mp.playerId) return;
   var answerRef = ref(rtdb, 'rooms/' + mp.roomCode + '/answers/' + rIdx + '/' + mp.playerId);
-  var newScore = (mp.isHost ? 0 : 0); // calculé après
+  var newScore = (mp.isHost ? 0 : 0); // calcul� apr�s
 
   set(answerRef, {
     pts: pts || 0,
@@ -397,19 +400,19 @@ function mpSubmitAnswer(pos, dist, pts, rIdx) {
     pos: pos ? {lat: pos.lat, lng: pos.lng} : null,
     submittedAt: Date.now()
   }).then(function() {
-    // Mettre à jour le score du joueur
+    // Mettre � jour le score du joueur
     var scoreRef = ref(rtdb, 'rooms/' + mp.roomCode + '/players/' + mp.playerId + '/score');
     get(scoreRef).then(function(snap) {
       var current = snap.val() || 0;
       set(scoreRef, current + (pts || 0));
     });
 
-    // Si hôte: surveiller quand tous ont répondu
+    // Si h�te: surveiller quand tous ont r�pondu
     if(mp.isHost) mpCheckAllAnswered(rIdx);
   });
 }
 
-// ── Hôte vérifie si tous ont répondu ─────────────────────────────────────────
+// ?? H�te v�rifie si tous ont r�pondu ?????????????????????????????????????????
 
 function mpCheckAllAnswered(rIdx) {
   var answersRef = ref(rtdb, 'rooms/' + mp.roomCode + '/answers/' + rIdx);
@@ -456,12 +459,12 @@ function mpHostAdvance(rIdx) {
             roundStart: Date.now()
           });
         }
-      }, 5000); // 5s pour voir les résultats
+      }, 5000); // 5s pour voir les r�sultats
     });
   });
 }
 
-// ── Résultats d'un round ──────────────────────────────────────────────────────
+// ?? R�sultats d'un round ??????????????????????????????????????????????????????
 
 function mpShowRoundResults(room) {
   clearInterval(mp.timerInterval);
@@ -482,12 +485,12 @@ function mpShowRoundResults(room) {
   var ov = document.getElementById('overlay');
   var h = [];
   h.push('<div style="font-size:13px;color:#f97316;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px">Manche '+(rIdx+1)+'</div>');
-  h.push('<div style="font-size:18px;font-weight:700;color:#e2e8f0;margin-bottom:12px">'+place.name.split('—')[0].trim()+'</div>');
+  h.push('<div style="font-size:18px;font-weight:700;color:#e2e8f0;margin-bottom:12px">'+place.name.split('�')[0].trim()+'</div>');
 
   results.forEach(function(r, i) {
     var isMe = r.pid === mp.playerId;
-    var distStr = r.dist != null ? (r.dist < 1 ? Math.round(r.dist*1000)+'m' : Math.round(r.dist)+'km') : 'Raté';
-    var medal = i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1)+'.';
+    var distStr = r.dist != null ? (r.dist < 1 ? Math.round(r.dist*1000)+'m' : Math.round(r.dist)+'km') : 'Rat�';
+    var medal = i===0?'??':i===1?'??':i===2?'??':(i+1)+'.';
     h.push('<div style="display:flex;align-items:center;gap:10px;padding:8px 14px;background:'+(isMe?'#1a2238':'transparent')+';border-radius:8px;margin-bottom:3px">');
     h.push('<span style="font-size:16px;min-width:28px">'+medal+'</span>');
     h.push('<span style="flex:1;font-size:13px;color:'+(isMe?'#f97316':'#e2e8f0')+'">'+r.name+'</span>');
@@ -501,7 +504,7 @@ function mpShowRoundResults(room) {
   ov.classList.remove('h');
 }
 
-// ── Résultats finaux ──────────────────────────────────────────────────────────
+// ?? R�sultats finaux ??????????????????????????????????????????????????????????
 
 function mpShowFinalResults(room) {
   clearInterval(mp.timerInterval);
@@ -515,7 +518,7 @@ function mpShowFinalResults(room) {
   h.push('<div class="otitle" style="font-size:28px;margin-bottom:12px">Fin de partie !</div>');
   results.forEach(function(r,i){
     var isMe = r.pid === mp.playerId;
-    var medal = i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1)+'.';
+    var medal = i===0?'??':i===1?'??':i===2?'??':(i+1)+'.';
     h.push('<div style="display:flex;align-items:center;gap:12px;padding:10px 16px;background:'+(isMe?'#1a2238':'transparent')+';border-radius:9px;margin-bottom:4px;border:'+(isMe?'1px solid #f97316':'1px solid transparent')+'">');
     h.push('<span style="font-size:20px">'+medal+'</span>');
     if(r.photo) h.push('<img src="'+r.photo+'" style="width:32px;height:32px;border-radius:50%;object-fit:cover">');
@@ -530,7 +533,7 @@ function mpShowFinalResults(room) {
   ov.classList.remove('h');
 }
 
-// ── Quitter le salon ──────────────────────────────────────────────────────────
+// ?? Quitter le salon ??????????????????????????????????????????????????????????
 
 function mpLeaveRoom() {
   clearInterval(mp.timerInterval);
@@ -540,7 +543,7 @@ function mpLeaveRoom() {
   if(mp.roomRef && mp.playerId) {
     var playerRef = ref(rtdb, 'rooms/' + mp.roomCode + '/players/' + mp.playerId);
     remove(playerRef).then(function() {
-      // Si hôte, supprimer le salon
+      // Si h�te, supprimer le salon
       if(mp.isHost) remove(mp.roomRef);
     }).catch(function(){});
   }
@@ -554,7 +557,7 @@ function mpLeaveRoom() {
   if(typeof showMenu === 'function') showMenu();
 }
 
-// ── Nettoyage ─────────────────────────────────────────────────────────────────
+// ?? Nettoyage ?????????????????????????????????????????????????????????????????
 
 function mpCleanup() {
   clearInterval(mp.timerInterval);
@@ -563,7 +566,7 @@ function mpCleanup() {
   if(typeof showMenu === 'function') showMenu();
 }
 
-// ── Exposer globalement ───────────────────────────────────────────────────────
+// ?? Exposer globalement ???????????????????????????????????????????????????????
 
 window.mpCreateRoom = mpCreateRoom;
 window.mpJoinRoom = mpJoinRoom;

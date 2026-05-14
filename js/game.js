@@ -474,35 +474,82 @@ function mpShowJoinMenu(){
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
   h.push('<div class="otitle" style="font-size:32px">MULTIJOUEUR</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:420px;margin:12px 0">');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:480px;margin:12px 0">');
+
+  // === Créer un salon ===
   h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
   h.push('<div style="font-size:13px;font-weight:700;color:#22c55e">Créer un salon</div>');
+
+  // Mode de jeu: Normal / No-Zoom / Perfection
+  h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:.8px">Mode</div>');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px">');
+  h.push('<button id="mp-mode-normal" onclick="mpSetMode(\'normal\')" style="padding:5px 4px;border-radius:6px;border:1px solid #f97316;background:#f97316;color:#fff;font-size:11px;font-weight:600;cursor:pointer">Normal</button>');
+  h.push('<button id="mp-mode-nozoom" onclick="mpSetMode(\'nozoom\')" style="padding:5px 4px;border-radius:6px;border:1px solid #f97316;background:transparent;color:#f97316;font-size:11px;font-weight:600;cursor:pointer">No-Zoom</button>');
+  h.push('<button id="mp-mode-perf" onclick="mpSetMode(\'perfection\')" style="padding:5px 4px;border-radius:6px;border:1px solid #7c3aed;background:transparent;color:#a78bfa;font-size:11px;font-weight:600;cursor:pointer">Perfection</button>');
+  h.push('</div>');
+
+  // Difficulté
+  h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:.8px">Difficulté</div>');
   h.push('<select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="-1">Tout niveaux</option><option value="0">Expert</option><option value="1">Difficile</option><option value="2">Moyen</option><option value="3">Facile</option></select>');
-  h.push('<label style="display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8"><input type="checkbox" id="mp-nozoom"> No-Zoom</label>');
+
+  // Manches
   h.push('<select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="5">5 manches</option><option value="10">10 manches</option></select>');
+
   if(!user) h.push('<input id="mp-name-create" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
   h.push('<button onclick="mpDoCreate()" style="padding:8px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer">Créer</button>');
   h.push('</div>');
+
+  // === Rejoindre ===
   h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
   h.push('<div style="font-size:13px;font-weight:700;color:#f97316">Rejoindre</div>');
-  h.push('<input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:8px;color:#f97316;font-size:20px;font-weight:700;letter-spacing:4px;text-align:center;text-transform:uppercase">');
+  h.push('<div style="font-size:11px;color:#6b7280;line-height:1.5">Entre le code du salon partagé par l\'hôte.</div>');
+  h.push('<input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:10px;color:#f97316;font-size:22px;font-weight:700;letter-spacing:6px;text-align:center;text-transform:uppercase">');
   if(!user) h.push('<input id="mp-name-join" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
   h.push('<button onclick="mpDoJoin()" style="padding:8px;border-radius:7px;border:none;background:#f97316;color:#fff;font-weight:700;cursor:pointer">Rejoindre</button>');
   h.push('</div>');
+
   h.push('</div>');
   h.push('<button onclick="showMenu()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer">← Retour</button>');
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
+  // Initialiser le mode sélectionné
+  window._mpGameMode='normal';
 }
+
+
+function mpSetMode(mode){
+  window._mpGameMode=mode;
+  var styles={
+    'normal':  {btn:'mp-mode-normal', bg:'#f97316', color:'#fff', border:'#f97316'},
+    'nozoom':  {btn:'mp-mode-nozoom', bg:'#f97316', color:'#fff', border:'#f97316'},
+    'perfection':{btn:'mp-mode-perf', bg:'#7c3aed', color:'#fff', border:'#7c3aed'}
+  };
+  ['normal','nozoom','perfection'].forEach(function(m){
+    var s=styles[m];
+    var el=document.getElementById('mp-mode-'+m.replace('perfection','perf'));
+    if(!el) return;
+    if(m===mode){
+      el.style.background=s.bg; el.style.color=s.color; el.style.borderColor=s.border;
+    } else {
+      el.style.background='transparent';
+      el.style.color=m==='perfection'?'#a78bfa':'#f97316';
+      el.style.borderColor=m==='perfection'?'#7c3aed':'#f97316';
+    }
+  });
+}
+
 function mpDoCreate(){
   var lvl=parseInt(document.getElementById('mp-level').value);
-  var nz=document.getElementById('mp-nozoom').checked;
+  var gameMode=window._mpGameMode||'normal';
+  var nz=gameMode==='nozoom';
+  var perf=gameMode==='perfection';
   var nb=parseInt(document.getElementById('mp-rounds').value);
+  if(perf&&nb<10) nb=10; // Perfection = 10 manches min
   var nameEl=document.getElementById('mp-name-create');
   if(nameEl&&nameEl.value&&typeof mp!=='undefined') mp.playerName=nameEl.value;
   window._mpMode=true;
   if(typeof mpCreateRoom==='function'){
-    mpCreateRoom({fixedLevel:lvl,noZoomMode:nz,nbRounds:nb}).then(function(code){
+    mpCreateRoom({fixedLevel:lvl,noZoomMode:nz,perfectionMode:perf,nbRounds:nb}).then(function(code){
       if(typeof showToast==='function') showToast('Salon créé: '+code);
     }).catch(function(e){
       if(typeof showToast==='function') showToast('Erreur: '+e.message);
