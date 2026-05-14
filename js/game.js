@@ -331,7 +331,7 @@ function showEnd(){
       -->
     </div>`;
   ov.classList.remove('h');
-  if(typeof window.saveGame==='function'){var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);var _p=_t>0?Math.round(total/_t*100):0;var _n=['tout-niveaux','expert','difficile','moyen','facile'];var _m=(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(_n[fixedLevel+1]||'tout-niveaux');setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);}
+  if(typeof window.saveGame==='function'){var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);var _p=_t>0?Math.round(total/_t*100):0;var _n=['tout-niveaux','expert','difficile','moyen','facile'];var _m=(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(_n[fixedLevel+1]||'tout-niveaux');if(window._dailyMode){markDailyPlayed(window._dailyLevel,total);if(typeof window.saveDailyScore==='function') window.saveDailyScore(window._dailyLevel,total,_p);window._dailyMode=false;}setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);}
 }
 
 function showMenu(){
@@ -406,6 +406,8 @@ function showMenu(){
 
   h.push('</div>'); // fin colonne droite
   h.push('</div>'); // fin grille
+  // Défi du jour
+  h.push('<button onclick="showDailyMenu()" style="width:100%;max-width:360px;padding:10px;border-radius:8px;border:2px solid #fbbf24;background:transparent;color:#fbbf24;font-weight:700;font-size:13px;cursor:pointer;margin-top:6px">Défi du jour</button>');
 
   // Lien classement
   h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
@@ -578,5 +580,131 @@ function mpDoJoin(){
   } else {
     console.error('mpJoinRoom non disponible');
     if(typeof showToast==='function') showToast('Module multijoueur non chargé');
+  }
+}
+
+// ── Défi du jour ─────────────────────────────────────────────────────────────
+
+function getDailyDateFR() {
+  // Date actuelle en heure française (UTC+1 hiver / UTC+2 été)
+  var now = new Date();
+  var offset = 60; // UTC+1 par défaut
+  // Détection DST simplifiée: avril-octobre = UTC+2
+  var month = now.getUTCMonth() + 1;
+  if(month >= 4 && month <= 10) offset = 120;
+  var frTime = new Date(now.getTime() + offset * 60000);
+  var y = frTime.getUTCFullYear();
+  var mo = String(frTime.getUTCMonth()+1).padStart(2,'0');
+  var d = String(frTime.getUTCDate()).padStart(2,'0');
+  return y + '-' + mo + '-' + d;
+}
+
+function getDailySeed(dateStr) {
+  // Seed déterministe depuis la date
+  var hash = 0;
+  for(var i=0; i<dateStr.length; i++){
+    hash = ((hash << 5) - hash) + dateStr.charCodeAt(i);
+    hash |= 0;
+  }
+  return Math.abs(hash);
+}
+
+function getDailyRounds(seed, level) {
+  // Générer 5 indices de lieux pour ce seed+niveau
+  var indices = [];
+  var s = seed + level * 9999;
+  for(var i=0; i<5; i++){
+    s = (s * 1664525 + 1013904223) & 0x7fffffff;
+    indices.push(Math.abs(s) % ROUNDS.length);
+  }
+  // Dédupliquer
+  var seen = {}, result = [];
+  for(var j=0; j<indices.length; j++){
+    if(!seen[indices[j]]){ seen[indices[j]]=true; result.push(indices[j]); }
+    else { var idx=indices[j]; while(seen[idx]) idx=(idx+1)%ROUNDS.length; seen[idx]=true; result.push(idx); }
+  }
+  return result.map(function(i){ return ROUNDS[i]; });
+}
+
+function getDailyKey(level) {
+  return 'daily_' + getDailyDateFR() + '_lvl' + level;
+}
+
+function hasDailyBeenPlayed(level) {
+  return localStorage.getItem(getDailyKey(level)) === 'done';
+}
+
+function markDailyPlayed(level, score) {
+  localStorage.setItem(getDailyKey(level), 'done');
+  localStorage.setItem(getDailyKey(level) + '_score', score);
+}
+
+function getDailyScore(level) {
+  return parseInt(localStorage.getItem(getDailyKey(level) + '_score')) || 0;
+}
+
+function showDailyMenu() {
+  var ov = document.getElementById('overlay');
+  var dateStr = getDailyDateFR();
+  var lvls = [
+    {i:0, label:'Expert',    color:'#ef4444', border:'#ef4444'},
+    {i:1, label:'Difficile', color:'#f97316', border:'#f97316'},
+    {i:2, label:'Moyen',     color:'#eab308', border:'#eab308'},
+    {i:3, label:'Facile',    color:'#22c55e', border:'#22c55e'}
+  ];
+  var h = [];
+  h.push('<div class="otitle" style="font-size:28px">DÉFI DU JOUR</div>');
+  h.push('<div style="font-size:12px;color:#6b7280;margin-bottom:12px">' + dateStr + ' · 5 lieux · réinitialisé à minuit</div>');
+  h.push('<div style="display:flex;flex-direction:column;gap:8px;width:100%;max-width:340px">');
+  lvls.forEach(function(lv){
+    var played = hasDailyBeenPlayed(lv.i);
+    var score = played ? getDailyScore(lv.i) : null;
+    h.push('<div style="display:flex;align-items:center;gap:10px;background:#0d1120;border:1px solid ' + lv.border + ';border-radius:10px;padding:10px 14px">');
+    h.push('<span style="font-size:13px;font-weight:700;color:' + lv.color + ';flex:1">' + lv.label + '</span>');
+    if(played){
+      h.push('<span style="font-size:12px;color:#6b7280">' + score.toLocaleString('fr-FR') + ' pts</span>');
+      h.push('<span style="font-size:11px;color:#22c55e;margin-left:6px">✓ Joué</span>');
+    } else {
+      h.push('<button onclick="startDailyChallenge(' + lv.i + ')" style="padding:6px 14px;border-radius:7px;border:none;background:' + lv.color + ';color:#fff;font-size:12px;font-weight:700;cursor:pointer">Jouer</button>');
+    }
+    h.push('</div>');
+  });
+  h.push('</div>');
+  h.push('<div style="display:flex;gap:10px;margin-top:10px">');
+  h.push('<button onclick="showDailyLeaderboard()" style="padding:8px 16px;border-radius:8px;border:1px solid #fbbf24;background:transparent;color:#fbbf24;font-size:12px;font-weight:600;cursor:pointer">Classement du jour</button>');
+  h.push('<button onclick="showMenu()" style="padding:8px 16px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;font-size:12px;cursor:pointer">← Retour</button>');
+  h.push('</div>');
+  ov.innerHTML = h.join('');
+  ov.classList.remove('h');
+}
+
+function startDailyChallenge(level) {
+  if(hasDailyBeenPlayed(level)){
+    if(typeof showToast==='function') showToast('Déjà joué aujourd\'hui !');
+    return;
+  }
+  var seed = getDailySeed(getDailyDateFR());
+  var dailyRounds = getDailyRounds(seed, level);
+  // Configurer la partie
+  fixedLevel = level;
+  noZoomMode = false;
+  perfectionMode = false;
+  window._dailyMode = true;
+  window._dailyLevel = level;
+  total = 0; roundScores = [];
+  roundList = dailyRounds;
+  curR = 0;
+  document.body.classList.remove('menu-mode');
+  document.getElementById('overlay').classList.add('h');
+  document.getElementById('hsc').textContent = '0';
+  if(!map){ try{ initMap(); }catch(e){} }
+  startRound(0);
+}
+
+function showDailyLeaderboard() {
+  if(typeof window.showDailyLB === 'function') {
+    window.showDailyLB();
+  } else {
+    if(typeof showToast==='function') showToast('Chargement...');
   }
 }
