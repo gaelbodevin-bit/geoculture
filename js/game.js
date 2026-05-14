@@ -317,7 +317,7 @@ function showEnd(){
     </div>
     <div style="display:flex;gap:10px;margin-top:6px;flex-wrap:wrap;justify-content:center">
       <button class="btn bg" onclick="showMenu()" style="width:auto;padding:12px 22px;font-size:14px">\u2302 Menu</button>
-      <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">\u1f50d Explorer la carte</button>
+      <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">Explorer la carte</button>
       <button class="btn ba" onclick="startGame()" style="width:auto;padding:12px 32px;font-size:14px">\u21ba Rejouer</button>
     </div>
     <div id="ad-inter">
@@ -409,8 +409,10 @@ function showMenu(){
 
   // Lien classement
   h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
-  h.push('<button onclick="mpShowJoinMenu()" style="padding:8px 18px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:12px;cursor:pointer;margin-right:8px">Multijoueur</button>');
-  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">Classement</a>');
+  h.push('<div style="display:flex;align-items:center;gap:16px;justify-content:center;margin-top:4px">');
+  h.push('<button onclick="mpShowJoinMenu()" style="padding:8px 22px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:13px;cursor:pointer">Multijoueur</button>');
+  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:13px;color:#f97316;cursor:pointer;font-weight:600;text-decoration:underline;text-underline-offset:4px">Classement</a>');
+  h.push('</div>');
   h.push('</div>');
 
   ov.innerHTML=h.join('');
@@ -467,3 +469,61 @@ document.addEventListener('DOMContentLoaded',function(){
   var nozb=document.getElementById('nozb');
   if(nozb) nozb.onclick=function(){noZoomMode=true;if(map){map.remove();map=null;}initMap();startGame();};
 });
+function mpShowJoinMenu(){
+  var ov=document.getElementById('overlay');
+  var user=typeof getCurrentUser==='function'?getCurrentUser():null;
+  var h=[];
+  h.push('<div class="otitle" style="font-size:32px">MULTIJOUEUR</div>');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:420px;margin:12px 0">');
+  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
+  h.push('<div style="font-size:13px;font-weight:700;color:#22c55e">Créer un salon</div>');
+  h.push('<select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="-1">Tout niveaux</option><option value="0">Expert</option><option value="1">Difficile</option><option value="2">Moyen</option><option value="3">Facile</option></select>');
+  h.push('<label style="display:flex;align-items:center;gap:6px;font-size:12px;color:#94a3b8"><input type="checkbox" id="mp-nozoom"> No-Zoom</label>');
+  h.push('<select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="5">5 manches</option><option value="10">10 manches</option></select>');
+  if(!user) h.push('<input id="mp-name-create" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
+  h.push('<button onclick="mpDoCreate()" style="padding:8px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer">Créer</button>');
+  h.push('</div>');
+  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
+  h.push('<div style="font-size:13px;font-weight:700;color:#f97316">Rejoindre</div>');
+  h.push('<input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:8px;color:#f97316;font-size:20px;font-weight:700;letter-spacing:4px;text-align:center;text-transform:uppercase">');
+  if(!user) h.push('<input id="mp-name-join" placeholder="Ton pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
+  h.push('<button onclick="mpDoJoin()" style="padding:8px;border-radius:7px;border:none;background:#f97316;color:#fff;font-weight:700;cursor:pointer">Rejoindre</button>');
+  h.push('</div>');
+  h.push('</div>');
+  h.push('<button onclick="showMenu()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer">← Retour</button>');
+  ov.innerHTML=h.join('');
+  ov.classList.remove('h');
+}
+function mpDoCreate(){
+  var lvl=parseInt(document.getElementById('mp-level').value);
+  var nz=document.getElementById('mp-nozoom').checked;
+  var nb=parseInt(document.getElementById('mp-rounds').value);
+  var nameEl=document.getElementById('mp-name-create');
+  if(nameEl&&nameEl.value&&typeof mp!=='undefined') mp.playerName=nameEl.value;
+  window._mpMode=true;
+  if(typeof mpCreateRoom==='function'){
+    mpCreateRoom({fixedLevel:lvl,noZoomMode:nz,nbRounds:nb}).then(function(code){
+      if(typeof showToast==='function') showToast('Salon créé: '+code);
+    }).catch(function(e){
+      if(typeof showToast==='function') showToast('Erreur: '+e.message);
+      window._mpMode=false;
+    });
+  } else {
+    if(typeof showToast==='function') showToast('Module multijoueur non chargé');
+  }
+}
+function mpDoJoin(){
+  var code=(document.getElementById('mp-code').value||'').toUpperCase().trim();
+  if(code.length<4){if(typeof showToast==='function') showToast('Code invalide');return;}
+  var nameEl=document.getElementById('mp-name-join');
+  var name=nameEl?nameEl.value:'Joueur';
+  window._mpMode=true;
+  if(typeof mpJoinRoom==='function'){
+    mpJoinRoom(code,name).catch(function(e){
+      if(typeof showToast==='function') showToast('Erreur: '+e.message);
+      window._mpMode=false;
+    });
+  } else {
+    if(typeof showToast==='function') showToast('Module multijoueur non chargé');
+  }
+}
