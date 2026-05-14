@@ -13,9 +13,15 @@ var firebaseConfig = {
   appId: "1:701399534769:web:ea9418505d8d2e9a9ea690"
 };
 
-// Réutiliser l'app Firebase existante
-var mpApp = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
-var rtdb = getDatabase(mpApp);
+// Toujours initialiser avec notre config complète incluant databaseURL
+var mpApp;
+var _existingApps = getApps();
+if(_existingApps.length > 0) {
+  mpApp = _existingApps[0];
+} else {
+  mpApp = initializeApp(firebaseConfig);
+}
+var rtdb = getDatabase(mpApp, 'https://geo-culture-73453-default-rtdb.europe-west1.firebasedatabase.app');
 
 // État local multijoueur
 var mp = {
