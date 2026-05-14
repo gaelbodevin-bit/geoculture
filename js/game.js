@@ -365,8 +365,8 @@ function showMenu(){
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px">');
   h.push('<div style="font-size:11px;font-weight:500;color:#f97316;letter-spacing:1px;text-transform:uppercase">Comment jouer</div>');
   var rules=[
-    {t:'Normal', d:'5 manches \u00b7 indices progressifs \u00b7 place le marqueur'},
-    {t:'No-Zoom', d:'Carte bloqu\u00e9e au zoom \u00b7 pas de loupe'},
+    {t:'Normal', d:'5 manches \u00b7 indices progressifs \u00b7 place le lieu'},
+    {t:'No-Zoom', d:'Carte bloqu\u00e9e pas de zoom \u00b7'},
     {t:'Perfection', d:'10 manches \u00b7 \u00e9limin\u00e9 si > 50 km du lieu'}
   ];
   rules.forEach(function(r,i){
