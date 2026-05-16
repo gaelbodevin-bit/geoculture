@@ -18,7 +18,7 @@ var firebaseConfig = {
 var fbApp = initializeApp(firebaseConfig);
 var fbAuth = getAuth(fbApp);
 var fbDb = getFirestore(fbApp);
-var fbFunctions = getFunctions(fbApp, 'europe-west1');
+var fbFunctions = getFunctions(fbApp);
 var currentUserPremium = false;
 var fbProvider = new GoogleAuthProvider();
 
