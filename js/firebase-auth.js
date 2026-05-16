@@ -2,8 +2,9 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged }
   from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
-import { getFirestore, collection, addDoc, query, where, orderBy, limit, getDocs, serverTimestamp }
+import { getFirestore, collection, addDoc, query, where, orderBy, limit, getDocs, serverTimestamp, doc, getDoc, setDoc }
   from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js';
+import { getFunctions, httpsCallable } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-functions.js';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDm7KMECwQVWvnOnMmSVm8aK7FdP03QWyA",
@@ -17,6 +18,8 @@ var firebaseConfig = {
 var fbApp = initializeApp(firebaseConfig);
 var fbAuth = getAuth(fbApp);
 var fbDb = getFirestore(fbApp);
+var fbFunctions = getFunctions(fbApp, 'europe-west1');
+var currentUserPremium = false;
 var fbProvider = new GoogleAuthProvider();
 
 // Utilisateur courant
@@ -25,7 +28,39 @@ var currentUser = null;
 // \u2500\u2500 Auth state \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 onAuthStateChanged(fbAuth, function(user) {
   currentUser = user;
-  updateAuthUI(user);
+  if(user) {
+    getDoc(doc(fbDb, 'users', user.uid)).then(function(snap) {
+      currentUserPremium = snap.exists() && snap.data().premium === true;
+      window.isPremium = currentUserPremium;
+      updateAuthUI(user);
+    }).catch(function() {
+      currentUserPremium = false;
+      window.isPremium = false;
+      updateAuthUI(user);
+    });
+  } else {
+    currentUserPremium = false;
+    window.isPremium = false;
+    updateAuthUI(user);
+  }
+  // Retour de Stripe
+  var params = new URLSearchParams(window.location.search);
+  if(params.get('premium') === 'success') {
+    window.history.replaceState({}, '', window.location.pathname);
+    setTimeout(function() {
+      if(typeof showToast==='function') showToast('Merci ! Accès Premium activé. Rechargez si nécessaire.');
+      if(user) {
+        getDoc(doc(fbDb, 'users', user.uid)).then(function(snap) {
+          currentUserPremium = snap.exists() && snap.data().premium === true;
+          window.isPremium = currentUserPremium;
+        });
+      }
+    }, 800);
+  }
+  if(params.get('premium') === 'cancel') {
+    window.history.replaceState({}, '', window.location.pathname);
+    if(typeof showToast==='function') showToast('Paiement annulé.');
+  }
 });
 
 function updateAuthUI(user) {
@@ -326,6 +361,86 @@ function showLeaderboard() {
 }
 
 window.showLeaderboard = showLeaderboard;
+
+// Daily scores
 function saveDailyScore(level,total,pct){if(!currentUser)return;var d=typeof getDailyDateFR==='function'?getDailyDateFR():new Date().toISOString().slice(0,10);addDoc(collection(fbDb,'daily_scores'),{uid:currentUser.uid,displayName:currentUser.displayName||'Joueur',photoURL:currentUser.photoURL||'',total:total,pct:pct,level:level,date:d,createdAt:serverTimestamp()}).catch(function(e){console.error(e);});}
 function loadDailyLeaderboard(level,callback){var d=typeof getDailyDateFR==='function'?getDailyDateFR():new Date().toISOString().slice(0,10);getDocs(query(collection(fbDb,'daily_scores'),where('date','==',d),where('level','==',level),limit(100))).then(function(snap){var e=[];snap.forEach(function(doc){e.push(doc.data());});e.sort(function(a,b){return(b.total||0)-(a.total||0);});callback(e.slice(0,20));}).catch(function(e){callback([]);});}
-function showDailyLB(){var ov=document.getElementById('overlay');window._prevOverlayHTML=ov.innerHTML;window._prevOverlayHidden=ov.classList.contains('h');var LVLS=[{i:0,label:'Expert',color:'#ef4444'},{i:1,label:'Difficile',color:'#f97316'},{i:2,label:'Moyen',color:'#eab308'},{i:3,label:'Facile',color:'#22c55e'}];function render(level,entries){var d=typeof getDailyDateFR==='function'?getDailyDateFR():'';var h=[];h.push('<div class="otitle" style="font-size:26px">CLASSEMENT DU JOUR</div>');h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px">'+d+'</div>');h.push('<div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:10px">');LVLS.forEach(function(lv){var a=lv.i===level;h.push('<button onclick="window._showDailyLbLevel('+lv.i+')" style="padding:5px 12px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;border:2px solid '+lv.color+';background:'+(a?lv.color:'transparent')+';color:'+(a?'#fff':lv.color)+'">'+lv.label+'</button>');});h.push('</div>');if(entries.length===0){h.push('<div class="osub" style="margin:16px 0">Aucune partie aujourd&#39;hui.</div>');}else{h.push('<div class="ocard" style="max-height:340px;overflow-y:auto;width:100%;max-width:460px;padding:8px 0">');entries.forEach(function(g,i){var medals=['&#129351;','&#129352;','&#129353;'];var medal=i<3?medals[i]:(i+1)+'.';var bc=g.pct>=80?'#22c55e':g.pct>=50?'#fbbf24':'#f97316';var me=currentUser&&g.uid===currentUser.uid;h.push('<div style="display:flex;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid #1e2d45'+(me?';background:#1a2238;border-radius:8px':'')+'">');h.push('<span style="font-size:16px;min-width:28px;text-align:center">'+medal+'</span>');if(g.photoURL)h.push('<img src="'+g.photoURL+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0">');else h.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;flex-shrink:0"></div>');h.push('<span style="flex:1;font-size:13px;color:'+(me?'#f97316':'#e2e8f0')+';font-weight:'+(me?'700':'400')+';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+(g.displayName||'Joueur')+'</span>');h.push('<div style="text-align:right"><div style="font-size:15px;font-weight:700;color:'+bc+'">'+(g.total||0).toLocaleString('fr-FR')+' pts</div><div style="font-size:11px;color:#6b7280">'+(g.pct||0)+'%</div></div></div>');});h.push('</div>');}h.push('<button class="btn bg" onclick="closeHistory()" style="width:auto;padding:10px 20px;margin-top:8px">&#8592; Retour</button>');ov.innerHTML=h.join('');ov.classList.remove('h');}window._showDailyLbLevel=function(level){ov.innerHTML='<div class="otitle" style="font-size:26px">Chargement...</div>';ov.classList.remove('h');loadDailyLeaderboard(level,function(entries){render(level,entries);});};window._showDailyLbLevel(0);}window.showDailyLB=showDailyLB;window.saveDailyScore=saveDailyScore;
+function showDailyLB(){var ov=document.getElementById('overlay');window._prevOverlayHTML=ov.innerHTML;window._prevOverlayHidden=ov.classList.contains('h');var LVLS=[{i:0,label:'Expert',color:'#ef4444'},{i:1,label:'Difficile',color:'#f97316'},{i:2,label:'Moyen',color:'#eab308'},{i:3,label:'Facile',color:'#22c55e'}];function render(level,entries){var d=typeof getDailyDateFR==='function'?getDailyDateFR():'';var h=[];h.push('<div class="otitle" style="font-size:26px">CLASSEMENT DU JOUR</div>');h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px">'+d+'</div>');h.push('<div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:10px">');LVLS.forEach(function(lv){var a=lv.i===level;h.push('<button onclick="window._showDailyLbLevel('+lv.i+')" style="padding:5px 12px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;border:2px solid '+lv.color+';background:'+(a?lv.color:'transparent')+';color:'+(a?'#fff':lv.color)+'">'+lv.label+'</button>');});h.push('</div>');if(entries.length===0){h.push('<div class="osub" style="margin:16px 0">Aucune partie aujourd&#39;hui.</div>');}else{h.push('<div class="ocard" style="max-height:340px;overflow-y:auto;width:100%;max-width:460px;padding:8px 0">');entries.forEach(function(g,i){var medals=['&#129351;','&#129352;','&#129353;'];var medal=i<3?medals[i]:(i+1)+'.';var bc=g.pct>=80?'#22c55e':g.pct>=50?'#fbbf24':'#f97316';var me=currentUser&&g.uid===currentUser.uid;h.push('<div style="display:flex;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid #1e2d45'+(me?';background:#1a2238;border-radius:8px':'')+'" >');h.push('<span style="font-size:16px;min-width:28px;text-align:center">'+medal+'</span>');if(g.photoURL)h.push('<img src="'+g.photoURL+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0">');else h.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;flex-shrink:0"></div>');h.push('<span style="flex:1;font-size:13px;color:'+(me?'#f97316':'#e2e8f0')+';font-weight:'+(me?'700':'400')+';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+(g.displayName||'Joueur')+'</span>');h.push('<div style="text-align:right"><div style="font-size:15px;font-weight:700;color:'+bc+'">'+(g.total||0).toLocaleString('fr-FR')+' pts</div><div style="font-size:11px;color:#6b7280">'+(g.pct||0)+'%</div></div></div>');});h.push('</div>');}h.push('<button class="btn bg" onclick="closeHistory()" style="width:auto;padding:10px 20px;margin-top:8px">&#8592; Retour</button>');ov.innerHTML=h.join('');ov.classList.remove('h');}window._showDailyLbLevel=function(level){ov.innerHTML='<div class="otitle" style="font-size:26px">Chargement...</div>';ov.classList.remove('h');loadDailyLeaderboard(level,function(entries){render(level,entries);});};window._showDailyLbLevel(0);}
+
+// Premium
+function isPremiumUser(){return currentUserPremium===true;}
+function showPremiumOverlay(featureName){
+  if(!currentUser){
+    var ov=document.getElementById('overlay');
+    window._prevOverlayHTML=ov.innerHTML;
+    window._prevOverlayHidden=ov.classList.contains('h');
+    var h=[];
+    h.push('<div class="otitle" style="font-size:26px;color:#fbbf24">Connexion requise</div>');
+    h.push('<div style="font-size:14px;color:#94a3b8;margin-bottom:20px;text-align:center;max-width:340px">Connecte-toi pour acc&#233;der &#224; <strong style="color:#e2e8f0">'+featureName+'</strong> et aux fonctionnalit&#233;s Premium.</div>');
+    h.push('<button onclick="fbSignIn()" style="padding:10px 28px;border-radius:8px;border:none;background:#f97316;color:#fff;font-weight:700;font-size:14px;cursor:pointer">Se connecter avec Google</button>');
+    h.push('<button onclick="closeHistory()" style="margin-top:10px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px">&#8592; Retour</button>');
+    ov.innerHTML=h.join('');ov.classList.remove('h');
+    return;
+  }
+  var ov=document.getElementById('overlay');
+  window._prevOverlayHTML=ov.innerHTML;
+  window._prevOverlayHidden=ov.classList.contains('h');
+  var h=[];
+  h.push('<div class="otitle" style="font-size:26px;color:#fbbf24">&#11088; Premium</div>');
+  h.push('<div style="font-size:14px;color:#94a3b8;margin-bottom:16px;text-align:center;max-width:340px">D&#233;bloquez <strong style="color:#e2e8f0">'+featureName+'</strong> et tous les modes avanc&#233;s.</div>');
+  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;width:100%;max-width:340px;margin-bottom:16px">');
+  h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Inclus dans Premium</div>');
+  [['&#128683;','Mode No-Zoom'],['&#11088;','Mode Perfection'],['&#127760;','Mode Multijoueur'],['&#9989;','Soutien ind&#233;pendant']].forEach(function(f){h.push('<div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#e2e8f0"><span>'+f[0]+'</span><span>'+f[1]+'</span></div>');});
+  h.push('</div>');
+  h.push('<div style="width:100%;max-width:340px;margin-bottom:12px">');
+  h.push('<div style="font-size:12px;color:#6b7280;margin-bottom:8px;text-align:center">Choisissez le montant (min. 1&#8364;)</div>');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:8px">');
+  [2,5,10,20].forEach(function(amt){h.push('<button onclick="selectAmount('+amt+')" id="amt-btn-'+amt+'" style="padding:8px;border-radius:7px;border:2px solid #1e2d45;background:#0d1120;color:#e2e8f0;font-size:13px;font-weight:600;cursor:pointer">'+amt+'&#8364;</button>');});
+  h.push('</div>');
+  h.push('<input id="custom-amount" type="number" min="1" step="1" placeholder="Montant libre (&#8364;)" style="width:100%;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 12px;color:#e2e8f0;font-size:13px">');
+  h.push('</div>');
+  h.push('<button onclick="initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">Soutenir et d&#233;bloquer &#8594;</button>');
+  h.push('<div style="font-size:11px;color:#4b5563;margin-top:8px;text-align:center">Paiement s&#233;curis&#233; via Stripe &#183; Acc&#232;s permanent</div>');
+  h.push('<div style="display:flex;gap:12px;margin-top:10px">');
+  h.push('<button onclick="closeHistory()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px">&#8592; Retour</button>');
+  h.push('<a href="/legal.html" target="_blank" style="padding:8px 12px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:11px;text-decoration:none">Mentions l&#233;gales</a>');
+  h.push('</div>');
+  ov.innerHTML=h.join('');ov.classList.remove('h');
+  window._selectedAmount=5;selectAmount(5);
+}
+function selectAmount(amt){
+  window._selectedAmount=amt;
+  [2,5,10,20].forEach(function(a){var el=document.getElementById('amt-btn-'+a);if(!el)return;el.style.borderColor=a===amt?'#fbbf24':'#1e2d45';el.style.color=a===amt?'#fbbf24':'#e2e8f0';});
+  var inp=document.getElementById('custom-amount');if(inp)inp.value='';
+}
+function initiatePremiumPayment(){
+  if(!currentUser){if(typeof fbSignIn==='function')fbSignIn();return;}
+  var inp=document.getElementById('custom-amount');
+  var amount=inp&&inp.value?parseFloat(inp.value):(window._selectedAmount||5);
+  if(isNaN(amount)||amount<1){if(typeof showToast==='function')showToast('Montant minimum : 1€');return;}
+  var btn=document.getElementById('pay-btn');
+  if(btn){btn.textContent='Redirection...';btn.disabled=true;}
+  var createSession=httpsCallable(fbFunctions,'createCheckoutSession');
+  createSession({amount:amount}).then(function(result){
+    if(result.data&&result.data.url){window.location.href=result.data.url;}
+  }).catch(function(err){
+    console.error('Stripe error:',err);
+    if(typeof showToast==='function')showToast('Erreur: '+err.message);
+    if(btn){btn.textContent='Soutenir et débloquer ?';btn.disabled=false;}
+  });
+}
+function deleteMyAccount(){
+  if(!currentUser)return;
+  if(!confirm('Supprimer définitivement votre compte et toutes vos données ?'))return;
+  var del=httpsCallable(fbFunctions,'deleteAccount');
+  del({}).then(function(){
+    if(typeof showToast==='function')showToast('Compte supprimé.');
+    setTimeout(function(){window.location.reload();},1500);
+  }).catch(function(e){
+    if(typeof showToast==='function')showToast('Erreur: '+e.message);
+  });
+}
+window.showDailyLB=showDailyLB;window.saveDailyScore=saveDailyScore;
+window.isPremiumUser=isPremiumUser;window.showPremiumOverlay=showPremiumOverlay;
+window.initiatePremiumPayment=initiatePremiumPayment;window.selectAmount=selectAmount;
+window.deleteMyAccount=deleteMyAccount;

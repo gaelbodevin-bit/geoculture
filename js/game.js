@@ -66,7 +66,7 @@ function onMapClick(e){
   if(playerMarker)playerMarker.remove();
   playerMarker=L.marker([playerPos.lat,playerPos.lng],{icon:makePin('#f97316')}).addTo(map);
   document.getElementById('confb').disabled=false;
-  document.getElementById('placed-info').textContent=`\u1f4cd ${playerPos.lat.toFixed(3)}, ${playerPos.lng.toFixed(3)}`;
+  document.getElementById('placed-info').textContent=`${playerPos.lat.toFixed(3)}, ${playerPos.lng.toFixed(3)}`;
 }
 
 function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]]}return b}
@@ -368,7 +368,7 @@ function showMenu(){
     {t:'Normal', d:'5 manches · indices progressifs · place le marqueur'},
     {t:'No-Zoom', d:'Carte bloquée au zoom · pas de loupe'},
     {t:'Perfection', d:'10 manches · éliminé si > 50 km du lieu'},
-    {t:'Défi du jour', d:'5 lieux identiques pour tous · jouable une fois par jour · classement quotidien'}
+    {t:'Défi du jour', d:'5 lieux identiques pour tous · 1x par jour · classement quotidien'}
   ];
   rules.forEach(function(r,i){
     h.push('<div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:2px">');
@@ -410,9 +410,9 @@ function showMenu(){
   h.push('<button onclick="showDailyMenu()" style="width:100%;max-width:360px;padding:9px;border-radius:8px;border:2px solid #fbbf24;background:transparent;color:#fbbf24;font-weight:700;font-size:13px;cursor:pointer;margin-top:6px">Défi du jour</button>');
 
   // Lien classement
-  h.push('<div style="display:flex;gap:16px;margin-top:4px;justify-content:center">');
+  h.push('<div style="display:flex;align-items:center;gap:16px;margin-top:6px;justify-content:center">');
   h.push('<button onclick="mpShowJoinMenu()" style="padding:8px 18px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:12px;cursor:pointer;margin-right:8px">Multijoueur</button>');
-  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:12px;color:#f97316;cursor:pointer;text-decoration:underline;font-weight:600">Classement</a>');
+  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:13px;color:#f97316;cursor:pointer;font-weight:600;text-decoration:underline;text-underline-offset:4px">Classement</a>');
   h.push('</div>');
 
   ov.innerHTML=h.join('');
@@ -483,3 +483,34 @@ function mpShowJoinMenu(){var ov=document.getElementById('overlay');var user=typ
 function mpSetMode(m){window._mpGameMode=m;['normal','nozoom','perfection'].forEach(function(k){var el=document.getElementById('mp-mode-'+(k==='perfection'?'perf':k));if(!el)return;var a=k===m;el.style.background=a?(k==='perfection'?'#7c3aed':'#f97316'):'transparent';el.style.color=a?'#fff':(k==='perfection'?'#a78bfa':'#f97316');el.style.borderColor=k==='perfection'?'#7c3aed':'#f97316';});}
 function mpDoCreate(){var lvl=parseInt(document.getElementById('mp-level').value);var gm=window._mpGameMode||'normal';var nz=gm==='nozoom';var perf=gm==='perfection';var nb=parseInt(document.getElementById('mp-rounds').value);if(perf&&nb<10)nb=10;window._mpMode=true;var fn=window.mpCreateRoom||(typeof mpCreateRoom==='function'?mpCreateRoom:null);if(fn){fn({fixedLevel:lvl,noZoomMode:nz,perfectionMode:perf,nbRounds:nb}).then(function(code){if(typeof showToast==='function')showToast('Salon: '+code);}).catch(function(e){if(typeof showToast==='function')showToast('Erreur: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non chargé');}}
 function mpDoJoin(){var code=(document.getElementById('mp-code').value||'').toUpperCase().trim();if(code.length<4){if(typeof showToast==='function')showToast('Code invalide');return;}window._mpMode=true;var fn=window.mpJoinRoom||(typeof mpJoinRoom==='function'?mpJoinRoom:null);if(fn){fn(code,'Joueur').catch(function(e){if(typeof showToast==='function')showToast('Erreur: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non chargé');}}
+function selectGameMode(mode) {
+  var isPrem = typeof isPremiumUser==='function' && isPremiumUser();
+  if((mode==='nozoom'||mode==='perfection') && !isPrem) {
+    if(typeof showPremiumOverlay==='function') showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
+    return;
+  }
+  window._menuNZ = mode==='nozoom';
+  window._menuPerf = mode==='perfection';
+  ['normal','nozoom','perfection'].forEach(function(m) {
+    var id = m==='nozoom'?'btn-nozoom':m==='perfection'?'btn-perf':'btn-normal';
+    var el = document.getElementById(id);
+    if(!el) return;
+    var active = m===mode;
+    if(m==='perfection') {
+      el.style.background=active?'#7c3aed':'transparent';
+      el.style.color=active?'#fff':'#a78bfa';
+    } else {
+      el.style.background=active?'#f97316':'transparent';
+      el.style.color=active?'#fff':'#f97316';
+    }
+  });
+}
+
+function openMultiplayer() {
+  var isPrem = typeof isPremiumUser==='function' && isPremiumUser();
+  if(!isPrem) {
+    if(typeof showPremiumOverlay==='function') showPremiumOverlay('Multijoueur');
+    return;
+  }
+  if(typeof mpShowJoinMenu==='function') mpShowJoinMenu();
+}
