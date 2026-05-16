@@ -416,7 +416,7 @@ function showPremiumOverlay(featureName){
   h.push('<div style="font-size:11px;color:#4b5563;margin-top:8px;text-align:center">Paiement s&#233;curis&#233; via Stripe &#183; Acc&#232;s permanent</div>');
   h.push('<div style="display:flex;gap:12px;margin-top:10px">');
   h.push('<button onclick="closeHistory()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px">&#8592; Retour</button>');
-  h.push('<a href="/legal.html" target="_blank" style="padding:8px 12px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:11px;text-decoration:none">Mentions l&#233;gales</a>');
+  h.push('<a href="https://gaelbodevin-bit.github.io/geoculture/legal.html" target="_blank" style="padding:8px 12px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:11px;text-decoration:none">Mentions l&#233;gales</a>');
   h.push('</div>');
   ov.innerHTML=h.join('');ov.classList.remove('h');
   window._selectedAmount=5;selectAmount(5);
@@ -430,16 +430,24 @@ function initiatePremiumPayment(){
   if(!currentUser){if(typeof fbSignIn==='function')fbSignIn();return;}
   var inp=document.getElementById('custom-amount');
   var amount=inp&&inp.value?parseFloat(inp.value):(window._selectedAmount||5);
-  if(isNaN(amount)||amount<1){if(typeof showToast==='function')showToast('Montant minimum : 1');return;}
+  if(isNaN(amount)||amount<1){if(typeof showToast==='function')showToast('Montant minimum : 1€');return;}
   var btn=document.getElementById('pay-btn');
   if(btn){btn.textContent='Redirection...';btn.disabled=true;}
-  var createSession=httpsCallable(fbFunctions,'createCheckoutSession');
-  createSession({amount:amount}).then(function(result){
-    if(result.data&&result.data.url){window.location.href=result.data.url;}
+  // Utiliser httpsCallable avec le token d'auth explicite
+  currentUser.getIdToken(true).then(function(token){
+    return fetch('https://createcheckoutsession-whrbeiarxa-uc.a.run.app',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},
+      body:JSON.stringify({data:{amount:amount}})
+    });
+  }).then(function(res){return res.json();}).then(function(result){
+    var url=result&&result.result&&result.result.url;
+    if(url){window.location.href=url;}
+    else{throw new Error('URL manquante dans la réponse');}
   }).catch(function(err){
     console.error('Stripe error:',err);
     if(typeof showToast==='function')showToast('Erreur: '+err.message);
-    if(btn){btn.textContent='Soutenir et dbloquer ?';btn.disabled=false;}
+    if(btn){btn.textContent='Soutenir et débloquer ?';btn.disabled=false;}
   });
 }
 function deleteMyAccount(){
