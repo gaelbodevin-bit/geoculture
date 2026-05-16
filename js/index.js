@@ -8,8 +8,8 @@ const db = admin.firestore();
 // ?? Webhook Stripe ????????????????????????????????????????????????????????????
 // Déclenché par Stripe quand un paiement est complété
 exports.stripeWebhook = functions.region('europe-west1').https.onRequest(async (req, res) => {
-  const stripeClient = stripe(functions.config().stripe.secret_key);
-  const webhookSecret = functions.config().stripe.webhook_secret;
+  const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
   let event;
   try {
@@ -76,7 +76,7 @@ exports.createCheckoutSession = functions.region('europe-west1').https.onCall(as
   const email = context.auth.token.email || '';
   const amount = Math.max(100, Math.round(Number(data.amount) * 100)); // min 1€, en centimes
 
-  const stripeClient = stripe(functions.config().stripe.secret_key);
+  const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
 
   try {
     const session = await stripeClient.checkout.sessions.create({
