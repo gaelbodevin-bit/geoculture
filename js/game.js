@@ -384,10 +384,11 @@ function showMenu(){
   // Toggle mode
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:10px 12px">');
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Mode de jeu</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">');
-  h.push('<button id="btn-normal" onclick="window._menuNZ=false;document.getElementById(\'btn-normal\').style.background=\'#f97316\';document.getElementById(\'btn-normal\').style.color=\'#fff\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Normal</button>');
-  h.push('<button id="btn-nozoom" onclick="window._menuNZ=true;document.getElementById(\'btn-nozoom\').style.background=\'#f97316\';document.getElementById(\'btn-nozoom\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">No-Zoom</button>');
-  h.push('<button id="btn-perf" onclick="window._menuNZ=false;window._menuPerf=true;document.getElementById(\'btn-perf\').style.background=\'#7c3aed\';document.getElementById(\'btn-perf\').style.color=\'#fff\';document.getElementById(\'btn-normal\').style.background=\'transparent\';document.getElementById(\'btn-normal\').style.color=\'#f97316\';document.getElementById(\'btn-nozoom\').style.background=\'transparent\';document.getElementById(\'btn-nozoom\').style.color=\'#f97316\';" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:7px;padding:7px;font-size:12px;font-weight:500;cursor:pointer">Perfection</button>');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:5px">');
+  h.push('<button id="btn-normal" onclick="selectGameMode(\'normal\')" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:600;cursor:pointer">Normal</button>');
+  h.push('<button id="btn-nozoom" onclick="selectGameMode(\'nozoom\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:600;cursor:pointer">No-Zoom</button>');
+  h.push('<button id="btn-perf" onclick="selectGameMode(\'perfection\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:600;cursor:pointer">Perfection</button>');
+  h.push('<button id="btn-daily" onclick="showDailyMenu()" style="background:transparent;color:#fbbf24;border:1px solid #fbbf24;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:600;cursor:pointer">'+T('dailyChallenge')+'</button>');
   h.push('</div></div>');
 
   // Difficult\u00e9
@@ -407,7 +408,6 @@ function showMenu(){
 
   h.push('</div>'); // fin colonne droite
   h.push('</div>'); // fin grille
-  h.push('<button onclick="showDailyMenu()" style="width:100%;max-width:360px;padding:9px;border-radius:8px;border:2px solid #fbbf24;background:transparent;color:#fbbf24;font-weight:700;font-size:13px;cursor:pointer;margin-top:6px">Défi du jour</button>');
 
   // Lien classement
   h.push('<div style="display:flex;align-items:center;gap:16px;margin-top:6px;justify-content:center">');
@@ -484,32 +484,31 @@ function mpSetMode(m){window._mpGameMode=m;['normal','nozoom','perfection'].forE
 function mpDoCreate(){var lvl=parseInt(document.getElementById('mp-level').value);var gm=window._mpGameMode||'normal';var nz=gm==='nozoom';var perf=gm==='perfection';var nb=parseInt(document.getElementById('mp-rounds').value);if(perf&&nb<10)nb=10;window._mpMode=true;var fn=window.mpCreateRoom||(typeof mpCreateRoom==='function'?mpCreateRoom:null);if(fn){fn({fixedLevel:lvl,noZoomMode:nz,perfectionMode:perf,nbRounds:nb}).then(function(code){if(typeof showToast==='function')showToast('Salon: '+code);}).catch(function(e){if(typeof showToast==='function')showToast('Erreur: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non chargé');}}
 function mpDoJoin(){var code=(document.getElementById('mp-code').value||'').toUpperCase().trim();if(code.length<4){if(typeof showToast==='function')showToast('Code invalide');return;}window._mpMode=true;var fn=window.mpJoinRoom||(typeof mpJoinRoom==='function'?mpJoinRoom:null);if(fn){fn(code,'Joueur').catch(function(e){if(typeof showToast==='function')showToast('Erreur: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non chargé');}}
 function selectGameMode(mode) {
-  var isPrem = typeof isPremiumUser==='function' && isPremiumUser();
+  var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
   if((mode==='nozoom'||mode==='perfection') && !isPrem) {
-    if(typeof showPremiumOverlay==='function') showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
+    if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
     return;
   }
   window._menuNZ = mode==='nozoom';
   window._menuPerf = mode==='perfection';
-  ['normal','nozoom','perfection'].forEach(function(m) {
-    var id = m==='nozoom'?'btn-nozoom':m==='perfection'?'btn-perf':'btn-normal';
+  // Visuels boutons modes
+  ['normal','nozoom','perfection'].forEach(function(k) {
+    var id = k==='nozoom'?'btn-nozoom':k==='perfection'?'btn-perf':'btn-normal';
     var el = document.getElementById(id);
     if(!el) return;
-    var active = m===mode;
-    if(m==='perfection') {
-      el.style.background=active?'#7c3aed':'transparent';
-      el.style.color=active?'#fff':'#a78bfa';
-    } else {
-      el.style.background=active?'#f97316':'transparent';
-      el.style.color=active?'#fff':'#f97316';
-    }
+    var active = k===mode;
+    el.style.background = active?'#f97316':'transparent';
+    el.style.color = active?'#fff':'#f97316';
   });
+  // Déselectionner Défi du jour
+  var daily = document.getElementById('btn-daily');
+  if(daily){ daily.style.background='transparent'; daily.style.color='#fbbf24'; }
 }
 
 function openMultiplayer() {
-  var isPrem = typeof isPremiumUser==='function' && isPremiumUser();
+  var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
   if(!isPrem) {
-    if(typeof showPremiumOverlay==='function') showPremiumOverlay('Multijoueur');
+    if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay('Multijoueur');
     return;
   }
   if(typeof mpShowJoinMenu==='function') mpShowJoinMenu();
