@@ -33,22 +33,35 @@ onAuthStateChanged(fbAuth, function(user) {
       currentUserPremium = snap.exists() && snap.data().premium === true;
       window.isPremium = currentUserPremium;
       updateAuthUI(user);
+      // RafraÓchir le menu si visible (sans boucle)
+      var ov = document.getElementById('overlay');
+      if(ov && !ov.classList.contains('h') && typeof gameActive !== 'undefined' && !gameActive) {
+        if(typeof showMenu === 'function') showMenu();
+      }
     }).catch(function() {
       currentUserPremium = false;
       window.isPremium = false;
       updateAuthUI(user);
+      var ov = document.getElementById('overlay');
+      if(ov && !ov.classList.contains('h') && typeof gameActive !== 'undefined' && !gameActive) {
+        if(typeof showMenu === 'function') showMenu();
+      }
     });
   } else {
     currentUserPremium = false;
     window.isPremium = false;
     updateAuthUI(user);
+    var ov = document.getElementById('overlay');
+    if(ov && !ov.classList.contains('h') && typeof gameActive !== 'undefined' && !gameActive) {
+      if(typeof showMenu === 'function') showMenu();
+    }
   }
   // Retour de Stripe
   var params = new URLSearchParams(window.location.search);
   if(params.get('premium') === 'success') {
     window.history.replaceState({}, '', window.location.pathname);
     setTimeout(function() {
-      if(typeof showToast==='function') showToast('Merci ! AccËs Premium activÈ. Rechargez si nÈcessaire.');
+      if(typeof showToast==='function') showToast('Merci ! Accùs Premium activù. Rechargez si nùcessaire.');
       if(user) {
         getDoc(doc(fbDb, 'users', user.uid)).then(function(snap) {
           currentUserPremium = snap.exists() && snap.data().premium === true;
@@ -59,7 +72,7 @@ onAuthStateChanged(fbAuth, function(user) {
   }
   if(params.get('premium') === 'cancel') {
     window.history.replaceState({}, '', window.location.pathname);
-    if(typeof showToast==='function') showToast('Paiement annulÈ.');
+    if(typeof showToast==='function') showToast('Paiement annulù.');
   }
 });
 
@@ -417,7 +430,7 @@ function initiatePremiumPayment(){
   if(!currentUser){if(typeof fbSignIn==='function')fbSignIn();return;}
   var inp=document.getElementById('custom-amount');
   var amount=inp&&inp.value?parseFloat(inp.value):(window._selectedAmount||5);
-  if(isNaN(amount)||amount<1){if(typeof showToast==='function')showToast('Montant minimum : 1Ä');return;}
+  if(isNaN(amount)||amount<1){if(typeof showToast==='function')showToast('Montant minimum : 1ù');return;}
   var btn=document.getElementById('pay-btn');
   if(btn){btn.textContent='Redirection...';btn.disabled=true;}
   var createSession=httpsCallable(fbFunctions,'createCheckoutSession');
@@ -426,15 +439,15 @@ function initiatePremiumPayment(){
   }).catch(function(err){
     console.error('Stripe error:',err);
     if(typeof showToast==='function')showToast('Erreur: '+err.message);
-    if(btn){btn.textContent='Soutenir et dÈbloquer ?';btn.disabled=false;}
+    if(btn){btn.textContent='Soutenir et dùbloquer ?';btn.disabled=false;}
   });
 }
 function deleteMyAccount(){
   if(!currentUser)return;
-  if(!confirm('Supprimer dÈfinitivement votre compte et toutes vos donnÈes ?'))return;
+  if(!confirm('Supprimer dùfinitivement votre compte et toutes vos donnùes ?'))return;
   var del=httpsCallable(fbFunctions,'deleteAccount');
   del({}).then(function(){
-    if(typeof showToast==='function')showToast('Compte supprimÈ.');
+    if(typeof showToast==='function')showToast('Compte supprimù.');
     setTimeout(function(){window.location.reload();},1500);
   }).catch(function(e){
     if(typeof showToast==='function')showToast('Erreur: '+e.message);
