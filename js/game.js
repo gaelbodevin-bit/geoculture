@@ -1,13 +1,25 @@
+var _lang=(navigator.language||navigator.userLanguage||'fr').slice(0,2).toLowerCase();
+if(!['fr','en','es','de','it','pt'].includes(_lang))_lang='en';
+var _t={
+fr:{howToPlay:'COMMENT JOUER',gameMode:'Mode de jeu',difficulty:'Difficulté',allLevels:'Tout niveaux',hintsPerPlace:'indices par lieu',dailyChallenge:'Défi du jour',multiplayer:'Multijoueur',leaderboard:'Classement',disconnect:'Déconnexion',history:'Historique',connectGoogle:'Connexion Google',ruleNormal:'5 manches · indices progressifs · place le marqueur',ruleNozoom:'Carte bloquée au zoom · pas de loupe · Premium',rulePerfection:'10 manches · éliminé si > 50 km · Premium',ruleDaily:'5 lieux identiques pour tous · 1x par jour · classement quotidien',confirm:'Confirmer',nextHint:'Indice suivant',exploreMap:'Explorer la carte',nextRound:'Manche suivante',viewSummary:'Voir le bilan →',eliminated:'❌ Éliminé ! > 50km',finished:'Terminé !',playAgain:'Rejouer',backMenu:'← Menu',dailyTitle:'DÉFI DU JOUR',dailySubtitle:'5 lieux · réinitialisé à minuit (FR)',dailyPlayed:'✓ Joué',dailyPlay:'Jouer',dailyLB:'Classement du jour',back:'← Retour',alreadyPlayed:'Déjà joué aujourd’hui !',premiumTitle:'⭐ Premium',premiumSubtitle:'Débloquez {feature}.',premiumIncludes:'Inclus dans Premium',premiumSupport:'Soutenir et débloquer →',premiumSecure:'Paiement sécurisé via Stripe',premiumMin:'Montant minimum : 1€',premiumChoose:'Choisissez le montant (min. 1€)',premiumRedirect:'Redirection...',loginRequired:'Connexion requise',loginMsg:'Connecte-toi pour accéder à {feature}.',loginBtn:'Se connecter avec Google',legalLink:'Mentions légales',mpTitle:'MULTIJOUEUR',mpCreate:'Créer',mpJoin:'Rejoindre',mpCode:'CODE',mpPseudo:'Pseudo',mpRounds5:'5 manches',mpRounds10:'10 manches',mpCodeInvalid:'Code invalide',mpModuleNotLoaded:'Module non chargé',mpSalon:'Salon : ',mpError:'Erreur : ',lvlAll:'Tout niveaux',lvlExpert:'Expert',lvlHard:'Difficile',lvlMedium:'Moyen',lvlEasy:'Facile',lbTitle:'CLASSEMENT',lbDailyTitle:'CLASSEMENT DU JOUR',lbLoading:'Chargement…',lbNoData:'Aucune donnée.'},
+en:{howToPlay:'HOW TO PLAY',gameMode:'Game mode',difficulty:'Difficulty',allLevels:'All levels',hintsPerPlace:'hints per place',dailyChallenge:'Daily challenge',multiplayer:'Multiplayer',leaderboard:'Leaderboard',disconnect:'Sign out',history:'History',connectGoogle:'Sign in with Google',ruleNormal:'5 rounds · progressive hints · place the marker',ruleNozoom:'Map locked at zoom · no loupe · Premium',rulePerfection:'10 rounds · eliminated if > 50 km · Premium',ruleDaily:'Same 5 places for everyone · 1x per day · daily leaderboard',confirm:'Confirm',nextHint:'Next hint',exploreMap:'Explore map',nextRound:'Next round',viewSummary:'View results →',eliminated:'❌ Eliminated! > 50km',finished:'Finished!',playAgain:'Play again',backMenu:'← Menu',dailyTitle:'DAILY CHALLENGE',dailySubtitle:'5 places · resets at midnight (FR)',dailyPlayed:'✓ Played',dailyPlay:'Play',dailyLB:'Daily leaderboard',back:'← Back',alreadyPlayed:'Already played today!',premiumTitle:'⭐ Premium',premiumSubtitle:'Unlock {feature}.',premiumIncludes:'Included in Premium',premiumSupport:'Support & unlock →',premiumSecure:'Secure payment via Stripe',premiumMin:'Minimum: €1',premiumChoose:'Choose your amount (min. €1)',premiumRedirect:'Redirecting...',loginRequired:'Login required',loginMsg:'Sign in to access {feature}.',loginBtn:'Sign in with Google',legalLink:'Legal notice',mpTitle:'MULTIPLAYER',mpCreate:'Create',mpJoin:'Join',mpCode:'CODE',mpPseudo:'Nickname',mpRounds5:'5 rounds',mpRounds10:'10 rounds',mpCodeInvalid:'Invalid code',mpModuleNotLoaded:'Module not loaded',mpSalon:'Room: ',mpError:'Error: ',lvlAll:'All levels',lvlExpert:'Expert',lvlHard:'Hard',lvlMedium:'Medium',lvlEasy:'Easy',lbTitle:'LEADERBOARD',lbDailyTitle:'DAILY LEADERBOARD',lbLoading:'Loading…',lbNoData:'No data.'},
+es:{howToPlay:'CÓMO JUGAR',gameMode:'Modo de juego',difficulty:'Dificultad',allLevels:'Todos los niveles',hintsPerPlace:'pistas por lugar',dailyChallenge:'Reto diario',multiplayer:'Multijugador',leaderboard:'Clasificación',disconnect:'Cerrar sesión',history:'Historial',connectGoogle:'Iniciar sesión con Google',ruleNormal:'5 rondas · pistas progresivas · coloca el marcador',ruleNozoom:'Mapa bloqueado · sin lupa · Premium',rulePerfection:'10 rondas · eliminado si > 50 km · Premium',ruleDaily:'Los mismos 5 lugares para todos · 1x al día',confirm:'Confirmar',nextHint:'Siguiente pista',exploreMap:'Explorar mapa',nextRound:'Siguiente ronda',viewSummary:'Ver resultados →',eliminated:'❌ ¡Eliminado! > 50km',finished:'¡Terminado!',playAgain:'Jugar de nuevo',backMenu:'← Menú',dailyTitle:'RETO DIARIO',dailySubtitle:'5 lugares · se reinicia a medianoche (FR)',dailyPlayed:'✓ Jugado',dailyPlay:'Jugar',dailyLB:'Clasificación del día',back:'← Volver',alreadyPlayed:'¡Ya jugaste hoy!',premiumTitle:'⭐ Premium',premiumSubtitle:'Desbloquea {feature}.',premiumIncludes:'Incluido en Premium',premiumSupport:'Apoyar y desbloquear →',premiumSecure:'Pago seguro con Stripe',premiumMin:'Mínimo: 1€',premiumChoose:'Elige el importe (mín. 1€)',premiumRedirect:'Redirigiendo...',loginRequired:'Inicio de sesión requerido',loginMsg:'Inicia sesión para acceder a {feature}.',loginBtn:'Iniciar sesión con Google',legalLink:'Aviso legal',mpTitle:'MULTIJUGADOR',mpCreate:'Crear',mpJoin:'Unirse',mpCode:'CÓDIGO',mpPseudo:'Apodo',mpRounds5:'5 rondas',mpRounds10:'10 rondas',mpCodeInvalid:'Código inválido',mpModuleNotLoaded:'Módulo no cargado',mpSalon:'Sala: ',mpError:'Error: ',lvlAll:'Todos los niveles',lvlExpert:'Experto',lvlHard:'Difícil',lvlMedium:'Medio',lvlEasy:'Fácil',lbTitle:'CLASIFICACIÓN',lbDailyTitle:'CLASIFICACIÓN DEL DÍA',lbLoading:'Cargando…',lbNoData:'Sin datos.'},
+de:{howToPlay:'SO SPIELST DU',gameMode:'Spielmodus',difficulty:'Schwierigkeit',allLevels:'Alle Level',hintsPerPlace:'Hinweise pro Ort',dailyChallenge:'Tagesaufgabe',multiplayer:'Mehrspieler',leaderboard:'Bestenliste',disconnect:'Abmelden',history:'Verlauf',connectGoogle:'Mit Google anmelden',ruleNormal:'5 Runden · progressive Hinweise · Marker setzen',ruleNozoom:'Karte gesperrt · keine Lupe · Premium',rulePerfection:'10 Runden · eliminiert bei > 50 km · Premium',ruleDaily:'Gleiche 5 Orte für alle · 1x täglich',confirm:'Bestätigen',nextHint:'Nächster Hinweis',exploreMap:'Karte erkunden',nextRound:'Nächste Runde',viewSummary:'Ergebnisse →',eliminated:'❌ Ausgeschieden! > 50km',finished:'Fertig!',playAgain:'Nochmal spielen',backMenu:'← Menü',dailyTitle:'TAGESAUFGABE',dailySubtitle:'5 Orte · Zurücksetzen um Mitternacht (FR)',dailyPlayed:'✓ Gespielt',dailyPlay:'Spielen',dailyLB:'Tagesrangliste',back:'← Zurück',alreadyPlayed:'Heute schon gespielt!',premiumTitle:'⭐ Premium',premiumSubtitle:'{feature} freischalten.',premiumIncludes:'Im Premium enthalten',premiumSupport:'Unterstützen →',premiumSecure:'Sichere Zahlung via Stripe',premiumMin:'Mindestbetrag: 1€',premiumChoose:'Betrag wählen (min. 1€)',premiumRedirect:'Weiterleitung...',loginRequired:'Anmeldung erforderlich',loginMsg:'Melde dich an um {feature} zu nutzen.',loginBtn:'Mit Google anmelden',legalLink:'Impressum',mpTitle:'MEHRSPIELER',mpCreate:'Erstellen',mpJoin:'Beitreten',mpCode:'CODE',mpPseudo:'Spitzname',mpRounds5:'5 Runden',mpRounds10:'10 Runden',mpCodeInvalid:'Ungültiger Code',mpModuleNotLoaded:'Modul nicht geladen',mpSalon:'Raum: ',mpError:'Fehler: ',lvlAll:'Alle Level',lvlExpert:'Experte',lvlHard:'Schwer',lvlMedium:'Mittel',lvlEasy:'Leicht',lbTitle:'BESTENLISTE',lbDailyTitle:'TAGESBESTENLISTE',lbLoading:'Laden…',lbNoData:'Keine Daten.'},
+it:{howToPlay:'COME GIOCARE',gameMode:'Modalità di gioco',difficulty:'Difficoltà',allLevels:'Tutti i livelli',hintsPerPlace:'suggerimenti per luogo',dailyChallenge:'Sfida del giorno',multiplayer:'Multigiocatore',leaderboard:'Classifica',disconnect:'Disconnetti',history:'Cronologia',connectGoogle:'Accedi con Google',ruleNormal:'5 round · suggerimenti progressivi · posiziona il marker',ruleNozoom:'Mappa bloccata · senza lente · Premium',rulePerfection:'10 round · eliminato se > 50 km · Premium',ruleDaily:'Stessi 5 luoghi per tutti · 1x al giorno',confirm:'Conferma',nextHint:'Prossimo suggerimento',exploreMap:'Esplora la mappa',nextRound:'Round successivo',viewSummary:'Vedi risultati →',eliminated:'❌ Eliminato! > 50km',finished:'Finito!',playAgain:'Gioca ancora',backMenu:'← Menu',dailyTitle:'SFIDA DEL GIORNO',dailySubtitle:'5 luoghi · azzera a mezzanotte (FR)',dailyPlayed:'✓ Giocato',dailyPlay:'Gioca',dailyLB:'Classifica del giorno',back:'← Indietro',alreadyPlayed:'Hai già giocato oggi!',premiumTitle:'⭐ Premium',premiumSubtitle:'Sblocca {feature}.',premiumIncludes:'Incluso nel Premium',premiumSupport:'Supporta e sblocca →',premiumSecure:'Pagamento sicuro via Stripe',premiumMin:'Importo minimo: 1€',premiumChoose:"Scegli l'importo (min. 1€)",premiumRedirect:'Reindirizzamento...',loginRequired:'Accesso richiesto',loginMsg:'Accedi per utilizzare {feature}.',loginBtn:'Accedi con Google',legalLink:'Note legali',mpTitle:'MULTIGIOCATORE',mpCreate:'Crea',mpJoin:'Unisciti',mpCode:'CODICE',mpPseudo:'Soprannome',mpRounds5:'5 round',mpRounds10:'10 round',mpCodeInvalid:'Codice non valido',mpModuleNotLoaded:'Modulo non caricato',mpSalon:'Stanza: ',mpError:'Errore: ',lvlAll:'Tutti i livelli',lvlExpert:'Esperto',lvlHard:'Difficile',lvlMedium:'Medio',lvlEasy:'Facile',lbTitle:'CLASSIFICA',lbDailyTitle:'CLASSIFICA DEL GIORNO',lbLoading:'Caricamento…',lbNoData:'Nessun dato.'},
+pt:{howToPlay:'COMO JOGAR',gameMode:'Modo de jogo',difficulty:'Dificuldade',allLevels:'Todos os níveis',hintsPerPlace:'dicas por lugar',dailyChallenge:'Desafio diário',multiplayer:'Multijogador',leaderboard:'Classificação',disconnect:'Sair',history:'Histórico',connectGoogle:'Entrar com Google',ruleNormal:'5 rodadas · dicas progressivas · coloque o marcador',ruleNozoom:'Mapa bloqueado · sem lupa · Premium',rulePerfection:'10 rodadas · eliminado se > 50 km · Premium',ruleDaily:'Mesmos 5 lugares para todos · 1x por dia',confirm:'Confirmar',nextHint:'Próxima dica',exploreMap:'Explorar mapa',nextRound:'Próxima rodada',viewSummary:'Ver resultados →',eliminated:'❌ Eliminado! > 50km',finished:'Terminado!',playAgain:'Jogar novamente',backMenu:'← Menu',dailyTitle:'DESAFIO DIÁRIO',dailySubtitle:'5 lugares · reinicia à meia-noite (FR)',dailyPlayed:'✓ Jogado',dailyPlay:'Jogar',dailyLB:'Ranking do dia',back:'← Voltar',alreadyPlayed:'Já jogou hoje!',premiumTitle:'⭐ Premium',premiumSubtitle:'Desbloqueie {feature}.',premiumIncludes:'Incluído no Premium',premiumSupport:'Apoiar e desbloquear →',premiumSecure:'Pagamento seguro via Stripe',premiumMin:'Valor mínimo: 1€',premiumChoose:'Escolha o valor (mín. 1€)',premiumRedirect:'Redirecionando...',loginRequired:'Login necessário',loginMsg:'Entre para acessar {feature}.',loginBtn:'Entrar com Google',legalLink:'Aviso legal',mpTitle:'MULTIJOGADOR',mpCreate:'Criar',mpJoin:'Entrar',mpCode:'CÓDIGO',mpPseudo:'Apelido',mpRounds5:'5 rodadas',mpRounds10:'10 rodadas',mpCodeInvalid:'Código inválido',mpModuleNotLoaded:'Módulo não carregado',mpSalon:'Sala: ',mpError:'Erro: ',lvlAll:'Todos os níveis',lvlExpert:'Especialista',lvlHard:'Difícil',lvlMedium:'Médio',lvlEasy:'Fácil',lbTitle:'CLASSIFICAÇÃO',lbDailyTitle:'RANKING DO DIA',lbLoading:'Carregando…',lbNoData:'Sem dados.'}
+};
+function T(key,vars){var d=_t[_lang]||_t.en;var s=d[key]||_t.en[key]||key;if(vars)Object.keys(vars).forEach(function(k){s=s.replace('{'+k+'}',vars[k]);});return s;}
+window._lang=_lang;window.T=T;
 var perfectionMode=false;
 var noZoomMode=false;
 var fixedLevel=-1;
 var BASE_PTS=[0,500,1000,1500,2000,3000];
 var MAX_DIST=2000;
 var CIRC=2*Math.PI*38;
-var T=30;
+var TIMER=30;
 
 var map,playerMarker,targetMarker,lineLayer;
-var roundList=[],curR=0,curL=0,total=0,timeLeft=T,tiv=null;
+var roundList=[],curR=0,curL=0,total=0,timeLeft=TIMER,tiv=null;
 var playerPos=null,gameActive=false,confirming=false,roundScores=[];
 
 function fmtDist(meters){
@@ -110,7 +122,7 @@ function showHint(){
   document.getElementById('qtxt').textContent=h.t;
   // level calcul\u00e9 dans showHint
   const mx=Math.round(BASE_PTS[level]*1.5);
-  const timeToMax=Math.round(T*0.67);
+  const timeToMax=Math.round(TIMER*0.67);
   document.getElementById('lvl-max').textContent=mx.toLocaleString('fr-FR')+' pts';
   document.getElementById('lvl-mult').textContent='Score max si r\u00e9ponse < '+timeToMax+'s et < 1 km';
   let remaining=total;
@@ -129,7 +141,7 @@ function updateDots(){
 }
 
 function startTimer(){
-  clearInterval(tiv);timeLeft=T;
+  clearInterval(tiv);timeLeft=TIMER;
   var arcEl=document.getElementById('arc');
   if(arcEl){
     arcEl.style.transition='none';
@@ -139,7 +151,7 @@ function startTimer(){
     arcEl.style.transition='stroke-dashoffset .9s linear,stroke .3s';
   }
   var numEl=document.getElementById('tnum');
-  if(numEl){numEl.textContent=T;numEl.style.color='#22c55e';}
+  if(numEl){numEl.textContent=TIMER;numEl.style.color='#22c55e';}
   tiv=setInterval(function(){
     timeLeft=Math.max(0,timeLeft-.1);
     renderTimer();
@@ -148,7 +160,7 @@ function startTimer(){
 }
 
 function renderTimer(){
-  const pct=timeLeft/T;
+  const pct=timeLeft/TIMER;
   const offset=CIRC*(1-pct);
   const arc=document.getElementById('arc');
   if(timeLeft<=0) arc.style.transition='none';
@@ -202,7 +214,7 @@ function resolveRound(){
   if(playerPos){
     dist=haversine(playerPos.lat,playerPos.lng,r.lat,r.lng);
     const precScore=BASE_PTS[level]*Math.max(0,1-dist/MAX_DIST);
-    const timeBonus=precScore*(timeLeft/T)*0.5;
+    const timeBonus=precScore*(timeLeft/TIMER)*0.5;
     pts=Math.round(precScore+timeBonus);
   }
   total+=pts;
@@ -365,10 +377,10 @@ function showMenu(){
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px">');
   h.push('<div style="font-size:11px;font-weight:500;color:#f97316;letter-spacing:1px;text-transform:uppercase">Comment jouer</div>');
   var rules=[
-    {t:'Normal', d:'5 manches · indices progressifs · place le marqueur'},
-    {t:'No-Zoom', d:'Carte bloquée au zoom · pas de loupe'},
-    {t:'Perfection', d:'10 manches · éliminé si > 50 km du lieu'},
-    {t:'Défi du jour', d:'5 lieux identiques pour tous · 1x par jour · classement quotidien'}
+    {t:'Normal', d:T('ruleNormal')},
+    {t:'No-Zoom ★', d:T('ruleNozoom')},
+    {t:'Perfection ★', d:T('rulePerfection')},
+    {t:T('dailyChallenge'), d:T('ruleDaily')}
   ];
   rules.forEach(function(r,i){
     h.push('<div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:2px">');
@@ -411,8 +423,8 @@ function showMenu(){
 
   // Lien classement
   h.push('<div style="display:flex;align-items:center;gap:16px;margin-top:6px;justify-content:center">');
-  h.push('<button onclick="mpShowJoinMenu()" style="padding:8px 18px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:12px;cursor:pointer;margin-right:8px">Multijoueur</button>');
-  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:13px;color:#f97316;cursor:pointer;font-weight:600;text-decoration:underline;text-underline-offset:4px">Classement</a>');
+  h.push('<button onclick="openMultiplayer()" style="padding:8px 22px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:13px;cursor:pointer">'+T('multiplayer')+'</button>');
+  h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:13px;color:#f97316;cursor:pointer;font-weight:600;text-decoration:underline;text-underline-offset:4px">'+T('leaderboard')+'</a>');
   h.push('</div>');
 
   ov.innerHTML=h.join('');
@@ -491,25 +503,19 @@ function selectGameMode(mode) {
   }
   window._menuNZ = mode==='nozoom';
   window._menuPerf = mode==='perfection';
-  // Visuels boutons modes
   ['normal','nozoom','perfection'].forEach(function(k) {
-    var id = k==='nozoom'?'btn-nozoom':k==='perfection'?'btn-perf':'btn-normal';
-    var el = document.getElementById(id);
+    var id=k==='nozoom'?'btn-nozoom':k==='perfection'?'btn-perf':'btn-normal';
+    var el=document.getElementById(id);
     if(!el) return;
-    var active = k===mode;
-    el.style.background = active?'#f97316':'transparent';
-    el.style.color = active?'#fff':'#f97316';
+    el.style.background=k===mode?'#f97316':'transparent';
+    el.style.color=k===mode?'#fff':'#f97316';
   });
-  // Déselectionner Défi du jour
-  var daily = document.getElementById('btn-daily');
-  if(daily){ daily.style.background='transparent'; daily.style.color='#fbbf24'; }
+  var daily=document.getElementById('btn-daily');
+  if(daily){daily.style.background='transparent';daily.style.color='#fbbf24';}
 }
 
 function openMultiplayer() {
   var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
-  if(!isPrem) {
-    if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay('Multijoueur');
-    return;
-  }
+  if(!isPrem) {if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay('Multijoueur');return;}
   if(typeof mpShowJoinMenu==='function') mpShowJoinMenu();
 }
