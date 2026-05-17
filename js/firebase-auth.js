@@ -430,7 +430,7 @@ function initiatePremiumPayment(){
   if(!currentUser){if(typeof fbSignIn==='function')fbSignIn();return;}
   var inp=document.getElementById('custom-amount');
   var amount=inp&&inp.value?parseFloat(inp.value):(window._selectedAmount||5);
-  if(isNaN(amount)||amount<1){if(typeof showToast==='function')showToast('Montant minimum : 1€');return;}
+  if(isNaN(amount)||amount<1){if(typeof showToast==='function')showToast('Montant minimum : 1&#8364;');return;}
   var btn=document.getElementById('pay-btn');
   if(btn){btn.textContent='Redirection...';btn.disabled=true;}
   // Utiliser httpsCallable avec le token d'auth explicite

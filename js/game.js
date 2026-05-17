@@ -396,11 +396,11 @@ function showMenu(){
   // Toggle mode
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:10px 12px">');
   h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Mode de jeu</div>');
-  h.push('<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px">');
-    h.push('<button id="btn-normal" onclick="selectGameMode(\'normal\')" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px 2px;font-size:10px;font-weight:700;cursor:pointer;text-align:center;min-width:0;word-break:break-word">Normal</button>');
-    h.push('<button id="btn-nozoom" onclick="selectGameMode(\'nozoom\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px 2px;font-size:10px;font-weight:700;cursor:pointer;text-align:center;min-width:0;word-break:break-word">No-Zoom</button>');
-    h.push('<button id="btn-perf" onclick="selectGameMode(\'perfection\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px 2px;font-size:10px;font-weight:700;cursor:pointer;text-align:center;min-width:0;word-break:break-word">Perfection</button>');
-    h.push('<button id="btn-daily" onclick="showDailyMenu()" style="background:transparent;color:#fbbf24;border:1px solid #fbbf24;border-radius:7px;padding:7px 2px;font-size:10px;font-weight:700;cursor:pointer;text-align:center;min-width:0;word-break:break-word">'+T('dailyChallenge')+'</button>');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">');
+  h.push('<button id="btn-normal" onclick="selectGameMode(\'normal\')" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center">Normal</button>');
+  h.push('<button id="btn-nozoom" onclick="selectGameMode(\'nozoom\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center">No-Zoom</button>');
+  h.push('<button id="btn-perf" onclick="selectGameMode(\'perfection\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center">Perfection</button>');
+  h.push('<button id="btn-daily" onclick="showDailyMenu()" style="background:transparent;color:#fbbf24;border:1px solid #fbbf24;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center">'+T('dailyChallenge')+'</button>');
   h.push('</div></div>');
 
   // Difficult\u00e9
