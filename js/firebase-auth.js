@@ -33,7 +33,7 @@ onAuthStateChanged(fbAuth, function(user) {
       currentUserPremium = snap.exists() && snap.data().premium === true;
       window.isPremium = currentUserPremium;
       updateAuthUI(user);
-      // Rafraùchir le menu si visible (sans boucle)
+      // RafraÓchir le menu si visible (sans boucle)
       var ov = document.getElementById('overlay');
       if(ov && !ov.classList.contains('h') && typeof gameActive !== 'undefined' && !gameActive) {
         if(typeof showMenu === 'function') showMenu();
@@ -61,7 +61,7 @@ onAuthStateChanged(fbAuth, function(user) {
   if(params.get('premium') === 'success') {
     window.history.replaceState({}, '', window.location.pathname);
     setTimeout(function() {
-      if(typeof showToast==='function') showToast('Merci ! Accùs Premium activù. Rechargez si nùcessaire.');
+      if(typeof showToast==='function') showToast('Merci ! AccÈs Premium activÈ. Rechargez si nÈcessaire.');
       if(user) {
         getDoc(doc(fbDb, 'users', user.uid)).then(function(snap) {
           currentUserPremium = snap.exists() && snap.data().premium === true;
@@ -72,7 +72,7 @@ onAuthStateChanged(fbAuth, function(user) {
   }
   if(params.get('premium') === 'cancel') {
     window.history.replaceState({}, '', window.location.pathname);
-    if(typeof showToast==='function') showToast('Paiement annulù.');
+    if(typeof showToast==='function') showToast('Paiement annulÈ.');
   }
 });
 
@@ -430,7 +430,7 @@ function initiatePremiumPayment(){
   if(!currentUser){if(typeof fbSignIn==='function')fbSignIn();return;}
   var inp=document.getElementById('custom-amount');
   var amount=inp&&inp.value?parseFloat(inp.value):(window._selectedAmount||5);
-  if(isNaN(amount)||amount<1){if(typeof showToast==='function')showToast('Montant minimum : 1ù');return;}
+  if(isNaN(amount)||amount<1){if(typeof showToast==='function')showToast('Montant minimum : 1Ä');return;}
   var btn=document.getElementById('pay-btn');
   if(btn){btn.textContent='Redirection...';btn.disabled=true;}
   // Utiliser httpsCallable avec le token d'auth explicite
@@ -443,19 +443,19 @@ function initiatePremiumPayment(){
   }).then(function(res){return res.json();}).then(function(result){
     var url=result&&result.result&&result.result.url;
     if(url){window.location.href=url;}
-    else{throw new Error('URL manquante dans la rùponse');}
+    else{throw new Error('URL manquante dans la rÈponse');}
   }).catch(function(err){
     console.error('Stripe error:',err);
     if(typeof showToast==='function')showToast('Erreur: '+err.message);
-    if(btn){btn.textContent='Soutenir et dùbloquer ?';btn.disabled=false;}
+    if(btn){btn.textContent='Soutenir et dÈbloquer ?';btn.disabled=false;}
   });
 }
 function deleteMyAccount(){
   if(!currentUser)return;
-  if(!confirm('Supprimer dùfinitivement votre compte et toutes vos donnùes ?'))return;
+  if(!confirm('Supprimer dÈfinitivement votre compte et toutes vos donnÈes ?'))return;
   var del=httpsCallable(fbFunctions,'deleteAccount');
   del({}).then(function(){
-    if(typeof showToast==='function')showToast('Compte supprimù.');
+    if(typeof showToast==='function')showToast('Compte supprimÈ.');
     setTimeout(function(){window.location.reload();},1500);
   }).catch(function(e){
     if(typeof showToast==='function')showToast('Erreur: '+e.message);
