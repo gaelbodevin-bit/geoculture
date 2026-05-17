@@ -52,7 +52,7 @@ exports.stripeWebhook = functions.https.onRequest(async (req, res) => {
         currency: session.currency, email,
         createdAt: admin.firestore.FieldValue.serverTimestamp()
       });
-      console.log('Premium activé uid=' + uid);
+      console.log('Premium active uid=' + uid);
     } catch (err) {
       console.error('Firestore error:', err);
       return res.status(500).send('DB error');
@@ -61,15 +61,15 @@ exports.stripeWebhook = functions.https.onRequest(async (req, res) => {
   res.status(200).json({ received: true });
 });
 
-// Créer session Checkout via fetch + Bearer token
+// Creer session Checkout via fetch + Bearer token
 exports.createCheckoutSession = functions.https.onRequest(async (req, res) => {
   setCORS(res, req);
   if (req.method === 'OPTIONS') return res.status(204).send('');
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
-  // Vérifier token Firebase Auth
+  // Verifier token Firebase Auth
   const authHeader = req.headers.authorization || '';
-  if (!authHeader.startsWith('Bearer ')) return res.status(401).json({ error: 'Non authentifié' });
+  if (!authHeader.startsWith('Bearer ')) return res.status(401).json({ error: 'Non authentifie' });
 
   let uid, email;
   try {
@@ -96,7 +96,7 @@ exports.createCheckoutSession = functions.https.onRequest(async (req, res) => {
       line_items: [{
         price_data: {
           currency: 'eur',
-          product_data: { name: 'GéoCulture Premium', description: 'Accès aux modes No-Zoom, Perfection et Multijoueur' },
+          product_data: { name: 'GeoCulture Premium', description: 'Acces aux modes No-Zoom, Perfection et Multijoueur' },
           unit_amount: amount
         },
         quantity: 1
@@ -104,8 +104,8 @@ exports.createCheckoutSession = functions.https.onRequest(async (req, res) => {
       mode: 'payment',
       customer_email: email,
       metadata: { uid },
-      success_url: 'https://gaelbodevin-bit.github.io/geoculture/?premium=success',
-      cancel_url: 'https://gaelbodevin-bit.github.io/geoculture/?premium=cancel',
+      success_url: 'https://gaelbodevin-bit.github.io/geoculture/epremium=success',
+      cancel_url: 'https://gaelbodevin-bit.github.io/geoculture/epremium=cancel',
       locale: 'fr'
     });
     return res.status(200).json({ result: { url: session.url, sessionId: session.id } });
@@ -115,7 +115,7 @@ exports.createCheckoutSession = functions.https.onRequest(async (req, res) => {
   }
 });
 
-// Vérifier statut premium
+// Verifier statut premium
 exports.checkPremium = functions.https.onCall(async (data, context) => {
   if (!context.auth) return { premium: false };
   const doc = await db.collection('users').doc(context.auth.uid).get();
