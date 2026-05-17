@@ -496,9 +496,17 @@ function mpSetMode(m){window._mpGameMode=m;['normal','nozoom','perfection'].forE
 function mpDoCreate(){var lvl=parseInt(document.getElementById('mp-level').value);var gm=window._mpGameMode||'normal';var nz=gm==='nozoom';var perf=gm==='perfection';var nb=parseInt(document.getElementById('mp-rounds').value);if(perf&&nb<10)nb=10;window._mpMode=true;var fn=window.mpCreateRoom||(typeof mpCreateRoom==='function'?mpCreateRoom:null);if(fn){fn({fixedLevel:lvl,noZoomMode:nz,perfectionMode:perf,nbRounds:nb}).then(function(code){if(typeof showToast==='function')showToast('Salon: '+code);}).catch(function(e){if(typeof showToast==='function')showToast('Erreur: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non charg?');}}
 function mpDoJoin(){var code=(document.getElementById('mp-code').value||'').toUpperCase().trim();if(code.length<4){if(typeof showToast==='function')showToast('Code invalide');return;}window._mpMode=true;var fn=window.mpJoinRoom||(typeof mpJoinRoom==='function'?mpJoinRoom:null);if(fn){fn(code,'Joueur').catch(function(e){if(typeof showToast==='function')showToast('Erreur: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non charg?');}}
 function selectGameMode(mode) {
-  var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
+  var isPrem = typeof window.isPremiumUser==='function' ? window.isPremiumUser() : (window.isPremium===true);
   if((mode==='nozoom'||mode==='perfection') && !isPrem) {
-    if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
+    // Réessayer si firebase-auth pas encore chargé
+    if(typeof window.showPremiumOverlay==='function') {
+      window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
+    } else {
+      setTimeout(function(){
+        if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
+        else if(typeof showToast==='function') showToast('Chargement en cours, réessayez.');
+      }, 500);
+    }
     return;
   }
   window._menuNZ = mode==='nozoom';
@@ -515,7 +523,17 @@ function selectGameMode(mode) {
 }
 
 function openMultiplayer() {
-  var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
-  if(!isPrem) {if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay('Multijoueur');return;}
+  var isPrem = typeof window.isPremiumUser==='function' ? window.isPremiumUser() : (window.isPremium===true);
+  if(!isPrem) {
+    if(typeof window.showPremiumOverlay==='function') {
+      window.showPremiumOverlay('Multijoueur');
+    } else {
+      setTimeout(function(){
+        if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay('Multijoueur');
+        else if(typeof showToast==='function') showToast('Chargement en cours, réessayez.');
+      }, 500);
+    }
+    return;
+  }
   if(typeof mpShowJoinMenu==='function') mpShowJoinMenu();
 }
