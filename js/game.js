@@ -370,46 +370,38 @@ function showMenu(){
     h.push('<button onclick="if(typeof fbSignIn!==\'undefined\')fbSignIn()" style="font-size:13px;font-weight:500;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer;margin-bottom:8px">Se connecter avec Google</button>');
   }
 
-  // Grille 2 colonnes
-  h.push('<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;width:100%;max-width:540px">');
+  // Grille 2 colonnes égales
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;max-width:680px">');
 
   // Colonne gauche: comment jouer
-  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px">');
-  h.push('<div style="font-size:11px;font-weight:500;color:#f97316;letter-spacing:1px;text-transform:uppercase">Comment jouer</div>');
+  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:12px">');
+  h.push('<div style="font-size:10px;font-weight:600;color:#f97316;letter-spacing:1.5px;text-transform:uppercase">Comment jouer</div>');
   var rules=[
     {t:'Normal', d:T('ruleNormal')},
-    {t:'No-Zoom ?', d:T('ruleNozoom')},
-    {t:'Perfection ?', d:T('rulePerfection')},
+    {t:'No-Zoom \u2605', d:T('ruleNozoom')},
+    {t:'Perfection \u2605', d:T('rulePerfection')},
     {t:T('dailyChallenge'), d:T('ruleDaily')}
   ];
   rules.forEach(function(r,i){
-    h.push('<div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:2px">');
-    h.push('<div style="width:22px;height:22px;border-radius:50%;background:#1a2238;display:flex;align-items:center;justify-content:center;font-size:11px;color:#f97316;font-weight:500;flex-shrink:0">'+(i+1)+'</div>');
-    h.push('<div><span style="font-size:12px;color:#e2e8f0;font-weight:600">'+r.t+'</span><br><span style="font-size:11px;color:#6b7280;line-height:1.4">'+r.d+'</span></div>');
+    h.push('<div style="display:flex;gap:12px;align-items:flex-start">');
+    h.push('<div style="width:24px;height:24px;border-radius:50%;background:#1a2238;display:flex;align-items:center;justify-content:center;font-size:11px;color:#f97316;font-weight:700;flex-shrink:0">'+(i+1)+'</div>');
+    h.push('<div><span style="font-size:13px;color:#e2e8f0;font-weight:700">'+r.t+'</span><br><span style="font-size:12px;color:#94a3b8;line-height:1.5">'+r.d+'</span></div>');
     h.push('</div>');
   });
   h.push('</div>');
 
-  // Colonne droite: mode + difficult\u00e9
-  h.push('<div style="display:flex;flex-direction:column;gap:10px">');
+  // Colonne droite: modes de jeu
+  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:12px">');
+  h.push('<div style="font-size:10px;font-weight:600;color:#94a3b8;letter-spacing:1.5px;text-transform:uppercase">Mode de jeu</div>');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;flex:1">');
+  h.push('<button id="btn-normal" onclick="selectGameMode(\'normal\')" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:8px;padding:11px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center">Normal</button>');
+  h.push('<button id="btn-nozoom" onclick="selectGameMode(\'nozoom\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:8px;padding:11px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center">No-Zoom</button>');
+  h.push('<button id="btn-perf" onclick="selectGameMode(\'perfection\')" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:8px;padding:11px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center">Perfection</button>');
+  h.push('<button id="btn-daily" onclick="showDailyMenu()" style="background:transparent;color:#fbbf24;border:1px solid #fbbf24;border-radius:8px;padding:11px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center">'+T('dailyChallenge')+'</button>');
+  h.push('<button id="btn-multi" onclick="openMultiplayer()" style="grid-column:span 2;background:transparent;color:#22c55e;border:1px solid #22c55e;border-radius:8px;padding:11px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center">'+T('multiplayer')+'</button>');
+  h.push('</div>');
+  h.push('</div>');
 
-  // Toggle mode
-  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:12px 14px">');
-  h.push('<div style="font-size:10px;color:#94a3b8;margin-bottom:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600">Mode de jeu</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">');
-  // Normal (actif par défaut, plein)
-  h.push('<button id="btn-normal" onclick="selectGameMode(\'normal\')" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:8px;padding:9px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center;letter-spacing:.3px">Normal</button>');
-  // No-Zoom
-  h.push('<button id="btn-nozoom" onclick="selectGameMode(\'nozoom\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:8px;padding:9px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center;letter-spacing:.3px">No-Zoom</button>');
-  // Perfection (couleur violette pour se distinguer)
-  h.push('<button id="btn-perf" onclick="selectGameMode(\'perfection\')" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:8px;padding:9px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center;letter-spacing:.3px">Perfection</button>');
-  // Défi du jour (jaune)
-  h.push('<button id="btn-daily" onclick="showDailyMenu()" style="background:transparent;color:#fbbf24;border:1px solid #fbbf24;border-radius:8px;padding:9px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center;letter-spacing:.3px">'+T('dailyChallenge')+'</button>');
-  // Multijoueur (vert, pleine largeur)
-  h.push('<button id="btn-multi" onclick="openMultiplayer()" style="grid-column:span 2;background:transparent;color:#22c55e;border:1px solid #22c55e;border-radius:8px;padding:9px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center;letter-spacing:.3px">'+T('multiplayer')+'</button>');
-  h.push('</div></div>');
-
-  h.push('</div>'); // fin colonne droite
   h.push('</div>'); // fin grille
 
   // Lien classement
@@ -510,10 +502,10 @@ function showDifficultyMenu(mode) {
   var h = [];
   h.push('<div class="otitle" style="font-size:32px;color:'+modeColor+'">' + modeLabel.toUpperCase() + '</div>');
   h.push('<div style="font-size:13px;color:#cbd5e1;margin-bottom:18px;font-weight:500">Choisissez votre niveau de difficult&#233;</div>');
-  h.push('<div style="display:flex;flex-direction:column;gap:8px;width:100%;max-width:340px">');
+  h.push('<div style="display:flex;flex-direction:column;gap:8px;width:100%;max-width:420px">');
 
   // Tout niveaux
-  h.push('<button onclick="launchGame(-1)" style="padding:12px 16px;border-radius:10px;border:1.5px solid #f97316;background:rgba(249,115,22,0.08);color:#f97316;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between">');
+  h.push('<button onclick="launchGame(-1)" style="padding:12px 18px;border-radius:10px;border:1.5px solid #f97316;background:rgba(249,115,22,0.08);color:#f97316;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between">');
   h.push('<span>Tout niveaux</span><span style="font-size:12px;color:#94a3b8;font-weight:500">5 indices par lieu</span>');
   h.push('</button>');
 
@@ -524,7 +516,7 @@ function showDifficultyMenu(mode) {
     {l:'Facile',    c:'#22c55e', i:3, d:'4 indices'}
   ];
   lvls.forEach(function(lv){
-    h.push('<button data-lvl="'+lv.i+'" onclick="launchGame(parseInt(this.dataset.lvl))" style="padding:12px 16px;border-radius:10px;border:1.5px solid '+lv.c+';background:'+lv.c+'18;color:'+lv.c+';font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between">');
+    h.push('<button data-lvl="'+lv.i+'" onclick="launchGame(parseInt(this.dataset.lvl))" style="padding:12px 18px;border-radius:10px;border:1.5px solid '+lv.c+';background:'+lv.c+'18;color:'+lv.c+';font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between">');
     h.push('<span>'+lv.l+'</span><span style="font-size:12px;color:#94a3b8;font-weight:500">'+lv.d+'</span>');
     h.push('</button>');
   });
