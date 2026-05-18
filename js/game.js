@@ -356,9 +356,7 @@ function showMenu(){
 
   // Titre
   h.push('<div class="otitle" style="font-size:44px;letter-spacing:6px;line-height:1">GEO<br>CULTURE</div>');
-  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.6</div>');
-
-  // Zone auth
+    // Zone auth
   if(user){
     h.push('<div style="display:flex;align-items:center;gap:10px;background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:8px 16px;margin-bottom:4px">');
     h.push('<img src="'+(user.photoURL||'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">');
@@ -496,17 +494,9 @@ function mpSetMode(m){window._mpGameMode=m;['normal','nozoom','perfection'].forE
 function mpDoCreate(){var lvl=parseInt(document.getElementById('mp-level').value);var gm=window._mpGameMode||'normal';var nz=gm==='nozoom';var perf=gm==='perfection';var nb=parseInt(document.getElementById('mp-rounds').value);if(perf&&nb<10)nb=10;window._mpMode=true;var fn=window.mpCreateRoom||(typeof mpCreateRoom==='function'?mpCreateRoom:null);if(fn){fn({fixedLevel:lvl,noZoomMode:nz,perfectionMode:perf,nbRounds:nb}).then(function(code){if(typeof showToast==='function')showToast('Salon: '+code);}).catch(function(e){if(typeof showToast==='function')showToast('Erreur: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non charg?');}}
 function mpDoJoin(){var code=(document.getElementById('mp-code').value||'').toUpperCase().trim();if(code.length<4){if(typeof showToast==='function')showToast('Code invalide');return;}window._mpMode=true;var fn=window.mpJoinRoom||(typeof mpJoinRoom==='function'?mpJoinRoom:null);if(fn){fn(code,'Joueur').catch(function(e){if(typeof showToast==='function')showToast('Erreur: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non charg?');}}
 function selectGameMode(mode) {
-  var isPrem = typeof window.isPremiumUser==='function' ? window.isPremiumUser() : (window.isPremium===true);
+  var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
   if((mode==='nozoom'||mode==='perfection') && !isPrem) {
-    // Réessayer si firebase-auth pas encore chargé
-    if(typeof window.showPremiumOverlay==='function') {
-      window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
-    } else {
-      setTimeout(function(){
-        if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
-        else if(typeof showToast==='function') showToast('Chargement en cours, réessayez.');
-      }, 500);
-    }
+    if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
     return;
   }
   window._menuNZ = mode==='nozoom';
@@ -523,17 +513,7 @@ function selectGameMode(mode) {
 }
 
 function openMultiplayer() {
-  var isPrem = typeof window.isPremiumUser==='function' ? window.isPremiumUser() : (window.isPremium===true);
-  if(!isPrem) {
-    if(typeof window.showPremiumOverlay==='function') {
-      window.showPremiumOverlay('Multijoueur');
-    } else {
-      setTimeout(function(){
-        if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay('Multijoueur');
-        else if(typeof showToast==='function') showToast('Chargement en cours, réessayez.');
-      }, 500);
-    }
-    return;
-  }
+  var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
+  if(!isPrem) {if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay('Multijoueur');return;}
   if(typeof mpShowJoinMenu==='function') mpShowJoinMenu();
 }
