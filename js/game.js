@@ -394,22 +394,26 @@ function showMenu(){
   h.push('<div style="display:flex;flex-direction:column;gap:10px">');
 
   // Toggle mode
-  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:10px 12px">');
-  h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Mode de jeu</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">');
-  h.push('<button id="btn-normal" onclick="selectGameMode(\'normal\')" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center">Normal</button>');
-  h.push('<button id="btn-nozoom" onclick="selectGameMode(\'nozoom\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center">No-Zoom</button>');
-  h.push('<button id="btn-perf" onclick="selectGameMode(\'perfection\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center">Perfection</button>');
-  h.push('<button id="btn-daily" onclick="showDailyMenu()" style="background:transparent;color:#fbbf24;border:1px solid #fbbf24;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center">'+T('dailyChallenge')+'</button>');
-  h.push('<button id="btn-multi" onclick="openMultiplayer()" style="background:transparent;color:#22c55e;border:1px solid #22c55e;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center;grid-column:span 2">'+T('multiplayer')+'</button>');
+  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:12px 14px">');
+  h.push('<div style="font-size:10px;color:#94a3b8;margin-bottom:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600">Mode de jeu</div>');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">');
+  // Normal (actif par défaut, plein)
+  h.push('<button id="btn-normal" onclick="selectGameMode(\'normal\')" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:8px;padding:9px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center;letter-spacing:.3px">Normal</button>');
+  // No-Zoom
+  h.push('<button id="btn-nozoom" onclick="selectGameMode(\'nozoom\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:8px;padding:9px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center;letter-spacing:.3px">No-Zoom</button>');
+  // Perfection (couleur violette pour se distinguer)
+  h.push('<button id="btn-perf" onclick="selectGameMode(\'perfection\')" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:8px;padding:9px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center;letter-spacing:.3px">Perfection</button>');
+  // Défi du jour (jaune)
+  h.push('<button id="btn-daily" onclick="showDailyMenu()" style="background:transparent;color:#fbbf24;border:1px solid #fbbf24;border-radius:8px;padding:9px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center;letter-spacing:.3px">'+T('dailyChallenge')+'</button>');
+  // Multijoueur (vert, pleine largeur)
+  h.push('<button id="btn-multi" onclick="openMultiplayer()" style="grid-column:span 2;background:transparent;color:#22c55e;border:1px solid #22c55e;border-radius:8px;padding:9px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center;letter-spacing:.3px">'+T('multiplayer')+'</button>');
   h.push('</div></div>');
-
 
   h.push('</div>'); // fin colonne droite
   h.push('</div>'); // fin grille
 
   // Lien classement
-  h.push('<div style="display:flex;align-items:center;gap:16px;margin-top:6px;justify-content:center">');
+  h.push('<div style="display:flex;align-items:center;gap:16px;margin-top:8px;justify-content:center">');
   h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:13px;color:#f97316;cursor:pointer;font-weight:600;text-decoration:underline;text-underline-offset:4px">'+T('leaderboard')+'</a>');
   h.push('</div>');
 
@@ -504,29 +508,29 @@ function showDifficultyMenu(mode) {
   var modeLabel = mode==='nozoom'?'No-Zoom':mode==='perfection'?'Perfection':'Normal';
   var modeColor = mode==='perfection'?'#a78bfa':'#f97316';
   var h = [];
-  h.push('<div class="otitle" style="font-size:28px">' + modeLabel.toUpperCase() + '</div>');
-  h.push('<div style="font-size:12px;color:#6b7280;margin-bottom:16px">Choisissez votre niveau de difficult&#233;</div>');
+  h.push('<div class="otitle" style="font-size:32px;color:'+modeColor+'">' + modeLabel.toUpperCase() + '</div>');
+  h.push('<div style="font-size:13px;color:#cbd5e1;margin-bottom:18px;font-weight:500">Choisissez votre niveau de difficult&#233;</div>');
   h.push('<div style="display:flex;flex-direction:column;gap:8px;width:100%;max-width:340px">');
 
   // Tout niveaux
-  h.push('<button onclick="launchGame(-1)" style="padding:10px 14px;border-radius:9px;border:1px solid #f97316;background:transparent;color:#f97316;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between">');
-  h.push('<span>Tout niveaux</span><span style="font-size:11px;color:#6b7280">5 indices par lieu</span>');
+  h.push('<button onclick="launchGame(-1)" style="padding:12px 16px;border-radius:10px;border:1.5px solid #f97316;background:rgba(249,115,22,0.08);color:#f97316;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between">');
+  h.push('<span>Tout niveaux</span><span style="font-size:12px;color:#94a3b8;font-weight:500">5 indices par lieu</span>');
   h.push('</button>');
 
   var lvls=[
-    {l:'Expert', c:'#ef4444', i:0, d:'1 indice'},
+    {l:'Expert',    c:'#ef4444', i:0, d:'1 indice'},
     {l:'Difficile', c:'#3b82f6', i:1, d:'2 indices'},
-    {l:'Moyen', c:'#eab308', i:2, d:'3 indices'},
-    {l:'Facile', c:'#22c55e', i:3, d:'4 indices'}
+    {l:'Moyen',     c:'#eab308', i:2, d:'3 indices'},
+    {l:'Facile',    c:'#22c55e', i:3, d:'4 indices'}
   ];
   lvls.forEach(function(lv){
-    h.push('<button data-lvl="'+lv.i+'" onclick="launchGame(parseInt(this.dataset.lvl))" style="padding:10px 14px;border-radius:9px;border:1px solid '+lv.c+';background:transparent;color:'+lv.c+';font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between">');
-    h.push('<span>'+lv.l+'</span><span style="font-size:11px;color:#6b7280">'+lv.d+'</span>');
+    h.push('<button data-lvl="'+lv.i+'" onclick="launchGame(parseInt(this.dataset.lvl))" style="padding:12px 16px;border-radius:10px;border:1.5px solid '+lv.c+';background:'+lv.c+'18;color:'+lv.c+';font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between">');
+    h.push('<span>'+lv.l+'</span><span style="font-size:12px;color:#94a3b8;font-weight:500">'+lv.d+'</span>');
     h.push('</button>');
   });
 
   h.push('</div>');
-  h.push('<button onclick="showMenu()" style="margin-top:12px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;font-size:12px;cursor:pointer">&#8592; Retour</button>');
+  h.push('<button onclick="showMenu()" style="margin-top:14px;padding:9px 22px;border-radius:9px;border:1px solid #334155;background:transparent;color:#94a3b8;font-size:12px;font-weight:600;cursor:pointer">&#8592; Retour</button>');
   ov.innerHTML = h.join('');
   ov.classList.remove('h');
 }
