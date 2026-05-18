@@ -371,7 +371,7 @@ function showMenu(){
   }
 
   // Grille 2 colonnes
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:540px">');
+  h.push('<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;width:100%;max-width:540px">');
 
   // Colonne gauche: comment jouer
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px">');
@@ -495,7 +495,7 @@ function selectGameMode(mode) {
   }
   window._menuNZ = mode==='nozoom';
   window._menuPerf = mode==='perfection';
-  // Afficher le sous-menu de difficulté
+  // Afficher le sous-menu de difficult&#233;
   showDifficultyMenu(mode);
 }
 
@@ -515,7 +515,7 @@ function showDifficultyMenu(mode) {
 
   var lvls=[
     {l:'Expert', c:'#ef4444', i:0, d:'1 indice'},
-    {l:'Difficile', c:'#f97316', i:1, d:'2 indices'},
+    {l:'Difficile', c:'#3b82f6', i:1, d:'2 indices'},
     {l:'Moyen', c:'#eab308', i:2, d:'3 indices'},
     {l:'Facile', c:'#22c55e', i:3, d:'4 indices'}
   ];
