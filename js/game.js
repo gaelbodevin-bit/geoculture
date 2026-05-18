@@ -356,7 +356,9 @@ function showMenu(){
 
   // Titre
   h.push('<div class="otitle" style="font-size:44px;letter-spacing:6px;line-height:1">GEO<br>CULTURE</div>');
-    // Zone auth
+  h.push('<div style="font-size:11px;color:#374151;letter-spacing:3px;margin-top:4px;margin-bottom:8px">v2.6</div>');
+
+  // Zone auth
   if(user){
     h.push('<div style="display:flex;align-items:center;gap:10px;background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:8px 16px;margin-bottom:4px">');
     h.push('<img src="'+(user.photoURL||'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">');
@@ -401,20 +403,6 @@ function showMenu(){
   h.push('<button id="btn-daily" onclick="showDailyMenu()" style="background:transparent;color:#fbbf24;border:1px solid #fbbf24;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center">'+T('dailyChallenge')+'</button>');
   h.push('</div></div>');
 
-  // Difficult\u00e9
-  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:10px 12px">');
-  h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px;letter-spacing:.5px">Difficult\u00e9</div>');
-  h.push('<div style="display:flex;flex-direction:column;gap:5px">');
-  // Tout niveaux
-  h.push('<button onclick="fixedLevel=-1;perfectionMode=window._menuPerf||false;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="background:#f97316;color:#fff;border:none;border-radius:7px;padding:8px 12px;font-size:13px;font-weight:500;cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%"><span>Tout niveaux</span><span style="font-size:10px;opacity:.8">5 indices par lieu</span></button>');
-  // Grille 2x2
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:5px">');
-  var lvls=[{l:'Expert',c:'#ef4444',i:0},{l:'Difficile',c:'#f97316',i:1},{l:'Moyen',c:'#eab308',i:2},{l:'Facile',c:'#22c55e',i:3}];
-  lvls.forEach(function(lv){
-    h.push('<button onclick="fixedLevel='+lv.i+';perfectionMode=window._menuPerf||false;noZoomMode=window._menuNZ||false;if(map){map.remove();map=null;}initMap();startGame();" style="border:1px solid '+lv.c+';color:'+lv.c+';background:transparent;border-radius:7px;padding:7px;font-size:12px;cursor:pointer">'+lv.l+'</button>');
-  });
-  h.push('</div>');
-    h.push('</div></div>');
 
   h.push('</div>'); // fin colonne droite
   h.push('</div>'); // fin grille
@@ -496,24 +484,70 @@ function mpDoJoin(){var code=(document.getElementById('mp-code').value||'').toUp
 function selectGameMode(mode) {
   var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
   if((mode==='nozoom'||mode==='perfection') && !isPrem) {
-    if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
+    if(typeof window.showPremiumOverlay==='function') {
+      window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
+    } else {
+      setTimeout(function(){
+        if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
+      }, 500);
+    }
     return;
   }
   window._menuNZ = mode==='nozoom';
   window._menuPerf = mode==='perfection';
-  ['normal','nozoom','perfection'].forEach(function(k) {
-    var id=k==='nozoom'?'btn-nozoom':k==='perfection'?'btn-perf':'btn-normal';
-    var el=document.getElementById(id);
-    if(!el) return;
-    el.style.background=k===mode?'#f97316':'transparent';
-    el.style.color=k===mode?'#fff':'#f97316';
+  // Afficher le sous-menu de difficulté
+  showDifficultyMenu(mode);
+}
+
+function showDifficultyMenu(mode) {
+  var ov = document.getElementById('overlay');
+  var modeLabel = mode==='nozoom'?'No-Zoom':mode==='perfection'?'Perfection':'Normal';
+  var modeColor = mode==='perfection'?'#a78bfa':'#f97316';
+  var h = [];
+  h.push('<div class="otitle" style="font-size:28px">' + modeLabel.toUpperCase() + '</div>');
+  h.push('<div style="font-size:12px;color:#6b7280;margin-bottom:16px">Choisissez votre niveau de difficult&#233;</div>');
+  h.push('<div style="display:flex;flex-direction:column;gap:8px;width:100%;max-width:340px">');
+
+  // Tout niveaux
+  h.push('<button onclick="launchGame(-1)" style="padding:10px 14px;border-radius:9px;border:1px solid #f97316;background:transparent;color:#f97316;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between">');
+  h.push('<span>Tout niveaux</span><span style="font-size:11px;color:#6b7280">5 indices par lieu</span>');
+  h.push('</button>');
+
+  var lvls=[
+    {l:'Expert', c:'#ef4444', i:0, d:'1 indice'},
+    {l:'Difficile', c:'#f97316', i:1, d:'2 indices'},
+    {l:'Moyen', c:'#eab308', i:2, d:'3 indices'},
+    {l:'Facile', c:'#22c55e', i:3, d:'4 indices'}
+  ];
+  lvls.forEach(function(lv){
+    h.push('<button data-lvl="'+lv.i+'" onclick="launchGame(parseInt(this.dataset.lvl))" style="padding:10px 14px;border-radius:9px;border:1px solid '+lv.c+';background:transparent;color:'+lv.c+';font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:space-between">');
+    h.push('<span>'+lv.l+'</span><span style="font-size:11px;color:#6b7280">'+lv.d+'</span>');
+    h.push('</button>');
   });
-  var daily=document.getElementById('btn-daily');
-  if(daily){daily.style.background='transparent';daily.style.color='#fbbf24';}
+
+  h.push('</div>');
+  h.push('<button onclick="showMenu()" style="margin-top:12px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;font-size:12px;cursor:pointer">&#8592; Retour</button>');
+  ov.innerHTML = h.join('');
+  ov.classList.remove('h');
+}
+
+function launchGame(level) {
+  fixedLevel = level;
+  noZoomMode = window._menuNZ || false;
+  perfectionMode = window._menuPerf || false;
+  if(map){ map.remove(); map=null; }
+  document.getElementById('overlay').classList.add('h');
+  document.getElementById('hsc').textContent='0';
+  if(!map){ try{ initMap(); }catch(e){} }
+  startGame();
 }
 
 function openMultiplayer() {
   var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
-  if(!isPrem) {if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay('Multijoueur');return;}
+  if(!isPrem) {
+    if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay('Multijoueur');
+    else setTimeout(function(){ if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay('Multijoueur'); },500);
+    return;
+  }
   if(typeof mpShowJoinMenu==='function') mpShowJoinMenu();
 }

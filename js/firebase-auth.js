@@ -331,7 +331,7 @@ function showLeaderboard() {
     {key:'perfection',label:'Perfection', color:'#22c55e'}
   ];
   var LEVELS = [
-    {key:'tout-niveaux', label:'Tout'},
+    {key:'tout-niveaux', label:'Tout niveaux'},
     {key:'expert',       label:'Expert'},
     {key:'difficile',    label:'Difficile'},
     {key:'moyen',        label:'Moyen'},
