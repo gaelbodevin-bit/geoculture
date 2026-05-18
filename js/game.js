@@ -401,6 +401,7 @@ function showMenu(){
   h.push('<button id="btn-nozoom" onclick="selectGameMode(\'nozoom\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center">No-Zoom</button>');
   h.push('<button id="btn-perf" onclick="selectGameMode(\'perfection\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center">Perfection</button>');
   h.push('<button id="btn-daily" onclick="showDailyMenu()" style="background:transparent;color:#fbbf24;border:1px solid #fbbf24;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center">'+T('dailyChallenge')+'</button>');
+  h.push('<button id="btn-multi" onclick="openMultiplayer()" style="background:transparent;color:#22c55e;border:1px solid #22c55e;border-radius:7px;padding:7px 4px;font-size:11px;font-weight:700;cursor:pointer;text-align:center;grid-column:span 2">'+T('multiplayer')+'</button>');
   h.push('</div></div>');
 
 
@@ -409,7 +410,6 @@ function showMenu(){
 
   // Lien classement
   h.push('<div style="display:flex;align-items:center;gap:16px;margin-top:6px;justify-content:center">');
-  h.push('<button onclick="openMultiplayer()" style="padding:8px 22px;border-radius:8px;border:2px solid #22c55e;background:transparent;color:#22c55e;font-weight:700;font-size:13px;cursor:pointer">'+T('multiplayer')+'</button>');
   h.push('<a onclick="if(typeof showLeaderboard!==\'undefined\')showLeaderboard()" style="font-size:13px;color:#f97316;cursor:pointer;font-weight:600;text-decoration:underline;text-underline-offset:4px">'+T('leaderboard')+'</a>');
   h.push('</div>');
 
