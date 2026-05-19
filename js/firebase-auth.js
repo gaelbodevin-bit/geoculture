@@ -499,7 +499,7 @@ function showPremiumOverlay(featureName) {
   h.push('<div style="font-size:14px;color:#94a3b8;margin-bottom:16px;text-align:center;max-width:340px">D&#233;bloquez <strong style="color:#e2e8f0">'+featureName+'</strong> et tous les modes avanc&#233;s.</div>');
   h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;width:100%;max-width:340px;margin-bottom:16px">');
   h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Inclus dans Premium</div>');
-  [['&#9203;','Acc&#232;s permanent sans abonnement'],['&#128683;','Mode No-Zoom'],['&#11088;','Mode Perfection'],['&#127760;','Mode Multijoueur'],['&#9989;','Soutien ind&#233;pendant']].forEach(function(f){
+  [['&#128683;','Mode No-Zoom'],['&#11088;','Mode Perfection'],['&#127760;','Mode Multijoueur'],['&#9989;','Soutien ind&#233;pendant']].forEach(function(f){
     h.push('<div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#e2e8f0"><span>'+f[0]+'</span><span>'+f[1]+'</span></div>');
   });
   h.push('</div>');
@@ -513,13 +513,51 @@ function showPremiumOverlay(featureName) {
   h.push('<input id="custom-amount" type="number" min="1" step="1" placeholder="Montant libre (&#8364;)" style="width:100%;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 12px;color:#e2e8f0;font-size:13px">');
   h.push('</div>');
   h.push('<button onclick="initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">Soutenir et d&#233;bloquer &#8594;</button>');
-  h.push('<div style="font-size:11px;color:#4b5563;margin-top:8px;text-align:center">Paiement s&#233;curis&#233; via Stripe</div>');
+  h.push('<div style="font-size:11px;color:#4b5563;margin-top:8px;text-align:center">Paiement s&#233;curis&#233; via Stripe &#183; Acc&#232;s permanent</div>');
+  h.push('<div style="width:100%;max-width:340px;margin-top:14px;border-top:1px solid #1e2d45;padding-top:14px">');
+  h.push('<div style="font-size:11px;color:#6b7280;text-align:center;margin-bottom:8px">Vous avez un code testeur ?</div>');
+  h.push('<div style="display:flex;gap:6px">');
+  h.push('<input id="redeem-input" placeholder="CODE-XXXX" maxlength="12" style="flex:1;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 10px;color:#e2e8f0;font-size:13px;letter-spacing:2px;text-transform:uppercase">');
+  h.push('<button onclick="redeemCode()" style="padding:8px 14px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-size:12px;font-weight:700;cursor:pointer">Activer</button>');
+  h.push('</div>');
+  h.push('<div id="redeem-msg" style="font-size:12px;margin-top:6px;text-align:center;min-height:18px"></div>');
+  h.push('</div>');
   h.push('<div style="display:flex;gap:12px;margin-top:10px">');
   h.push('<button onclick="closeHistory()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px">&#8592; Retour</button>');
   h.push('<a href="https://gaelbodevin-bit.github.io/geoculture/legal.html" style="padding:8px 12px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:11px;text-decoration:none">Mentions l&#233;gales</a>');
   h.push('</div>');
   ov.innerHTML=h.join(''); ov.classList.remove('h');
   window._selectedAmount=5; selectAmount(5);
+}
+
+function redeemCode() {
+  if (!currentUser) { if(typeof showToast==='function') showToast('Connecte-toi d\'abord !'); return; }
+  var input = document.getElementById('redeem-input');
+  var msg = document.getElementById('redeem-msg');
+  if (!input || !msg) return;
+  var code = input.value.trim().toUpperCase();
+  if (code.length < 4) { msg.style.color='#ef4444'; msg.textContent='Code invalide.'; return; }
+  msg.style.color='#94a3b8'; msg.textContent='V\u00e9rification\u2026';
+  var codeRef = doc(fbDb, 'testCodes', code);
+  getDoc(codeRef).then(function(snap) {
+    if (!snap.exists()) { msg.style.color='#ef4444'; msg.textContent='Code introuvable.'; return; }
+    var data = snap.data();
+    if (data.used) { msg.style.color='#ef4444'; msg.textContent='Code d\u00e9j\u00e0 utilis\u00e9.'; return; }
+    // Marquer le code comme utilisé
+    return setDoc(codeRef, { used: true, usedBy: currentUser.uid, usedAt: serverTimestamp() }, { merge: true })
+      .then(function() {
+        // Activer le premium sur le compte
+        return setDoc(doc(fbDb, 'users', currentUser.uid), { premium: true, premiumSource: 'testCode', premiumCode: code }, { merge: true });
+      })
+      .then(function() {
+        currentUserPremium = true;
+        window.isPremium = true;
+        msg.style.color='#22c55e'; msg.textContent='\u2713 Premium activ\u00e9 ! Profitez bien.';
+        setTimeout(function() { if(typeof showMenu==='function') showMenu(); }, 1200);
+      });
+  }).catch(function(e) {
+    msg.style.color='#ef4444'; msg.textContent='Erreur : '+e.message;
+  });
 }
 
 function selectAmount(amt) {
