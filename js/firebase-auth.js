@@ -406,7 +406,9 @@ function showLeaderboard() {
 function saveDailyScore(level, total, pct) {
   if(!currentUser) return;
   var dateStr = typeof getDailyDateFR==='function' ? getDailyDateFR() : new Date().toISOString().slice(0,10);
-  addDoc(collection(fbDb,'daily_scores'), {
+  // ID déterministe uid+date+level → un seul document par joueur/jour/niveau (setDoc écrase si rejoué)
+  var docId = currentUser.uid + '_' + dateStr + '_' + level;
+  setDoc(doc(fbDb,'daily_scores', docId), {
     uid: currentUser.uid,
     displayName: currentUser.displayName || 'Joueur',
     photoURL: currentUser.photoURL || '',

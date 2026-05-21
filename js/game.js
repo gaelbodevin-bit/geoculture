@@ -351,6 +351,16 @@ function showEnd(){
     </div>`;
   ov.classList.remove('h');
   if(typeof window.saveGame==='function'){var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);var _p=_t>0?Math.round(total/_t*100):0;var _n=['tout-niveaux','expert','difficile','moyen','facile'];var _m=(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(_n[fixedLevel+1]||'tout-niveaux');setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);}
+  // Sauvegarder dans le classement du jour si mode daily
+  if(window._dailyMode && typeof window.saveDailyScore==='function'){
+    var _dt=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
+    var _dp=_dt>0?Math.round(total/_dt*100):0;
+    var _dlvl=window._dailyLevel!==undefined?window._dailyLevel:fixedLevel;
+    // Marquer comme joué (localStorage) et envoyer au classement Firestore
+    if(typeof markDailyPlayed==='function') markDailyPlayed(_dlvl, total);
+    window.saveDailyScore(_dlvl, total, _dp);
+    window._dailyMode = false; // empêcher double soumission
+  }
 }
 
 function showMenu(){
