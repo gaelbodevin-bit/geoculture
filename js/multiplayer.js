@@ -208,11 +208,13 @@ function mpHandleCountdown(room) {
   if(remaining > 0) {
     _cdTimer = setTimeout(function(){ mpHandleCountdown(room); }, Math.min(remaining, 300));
   } else {
-    // L'hôte écrit le statut 'playing' une seule fois
+    // L'hôte écrit roundStart dans le futur (+1500ms) pour absorber le délai réseau
+    // Tous les clients recevront le même timestamp et démarreront au même moment
     if(mp.isHost) {
-      update(mp.roomRef, { status:'playing', roundStart:Date.now() });
+      var syncedStart = Date.now() + 1500;
+      update(mp.roomRef, { status:'playing', roundStart: syncedStart });
     }
-    // Les non-hôtes attendent le prochain onValue qui apportera status:'playing'
+    // Les non-hôtes reçoivent status:'playing' via onValue avec le même roundStart
   }
 }
 
@@ -281,8 +283,10 @@ function mpStartSyncTimer(roundStart, duration, rIdx) {
   var C = 2*Math.PI*38;
 
   function tick() {
-    var elapsed  = (Date.now()-roundStart)/1000;
-    var remaining = Math.max(0, duration-elapsed);
+    var now = Date.now();
+    // Attendre que roundStart soit atteint (absorbe le délai réseau côté invités)
+    var elapsed   = Math.max(0, (now - roundStart) / 1000);
+    var remaining = Math.max(0, duration - elapsed);
     timeLeft = remaining;
 
     var arc = document.getElementById('arc');
