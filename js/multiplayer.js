@@ -1,4 +1,4 @@
-// ?? GÈoCulture Multijoueur ó v3.1 (tous jouent ensemble, panel live, marqueurs)
+// ?? GùoCulture Multijoueur ù v3.1 (tous jouent ensemble, panel live, marqueurs)
 import { initializeApp, getApps } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
 import { getDatabase, ref, set, get, onValue, off, update, remove }
   from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js';
@@ -16,16 +16,16 @@ var firebaseConfig = {
 var mpApp = getApps().length > 0 ? getApps()[0] : initializeApp(firebaseConfig);
 var rtdb = getDatabase(mpApp, 'https://geo-culture-73453-default-rtdb.europe-west1.firebasedatabase.app');
 
-// ??? …tat local ???????????????????????????????????????????????????????????????
+// ??? ùtat local ???????????????????????????????????????????????????????????????
 var mp = {
   roomCode: null, playerId: null, playerName: null,
   isHost: false, roomRef: null,
   listeners: [], timerInterval: null
 };
 
-var mpCurrentRound = -1;   // index de la manche actuellement jouÈe
-var mpAnswered    = false;  // le joueur local a-t-il rÈpondu ce round ?
-var mpRoundActive = false;  // la manche est-elle en cours (empÍche les rÈ-init)
+var mpCurrentRound = -1;   // index de la manche actuellement jouùe
+var mpAnswered    = false;  // le joueur local a-t-il rùpondu ce round ?
+var mpRoundActive = false;  // la manche est-elle en cours (empùche les rù-init)
 var mpOtherMarkers = {};    // { playerId: L.marker }
 
 // Couleurs fixes par joueur
@@ -42,9 +42,9 @@ function genPid(){ return 'p_'+Math.random().toString(36).substr(2,9)+'_'+Date.n
 function getPlayerName(){ var u=typeof getCurrentUser==='function'?getCurrentUser():null; return u?(u.displayName||u.email.split('@')[0]):(mp.playerName||'Joueur'); }
 function getPlayerPhoto(){ var u=typeof getCurrentUser==='function'?getCurrentUser():null; return u?(u.photoURL||''):''; }
 function fmtPts(n){ return (n||0).toLocaleString('fr-FR'); }
-function fmtDst(km){ if(km==null)return 'ó'; return km<1?Math.round(km*1000)+'m':Math.round(km)+'km'; }
+function fmtDst(km){ if(km==null)return 'ù'; return km<1?Math.round(km*1000)+'m':Math.round(km)+'km'; }
 
-// ??? CrÈer un salon ???????????????????????????????????????????????????????????
+// ??? Crùer un salon ???????????????????????????????????????????????????????????
 function mpCreateRoom(options) {
   var code = genCode();
   mp.roomCode = code; mp.playerId = genPid(); mp.isHost = true;
@@ -79,7 +79,7 @@ function mpJoinRoom(code, playerName) {
   return get(mp.roomRef).then(function(snap) {
     if(!snap.exists()) throw new Error('Salon introuvable');
     var room = snap.val();
-    if(room.status !== 'waiting') throw new Error('Partie dÈj‡ commencÈe');
+    if(room.status !== 'waiting') throw new Error('Partie dùjù commencùe');
     if(Object.keys(room.players||{}).length >= 8) throw new Error('Salon complet (8/8)');
     _colorMap = {};
     Object.entries(room.players||{}).forEach(function(e){ if(e[1].color) _colorMap[e[0]]=e[1].color; });
@@ -91,7 +91,7 @@ function mpJoinRoom(code, playerName) {
   }).then(function(){ mpListenRoom(); mpShowLobby(); });
 }
 
-// ??? …couter le salon (un seul listener sur la room entiËre) ?????????????????
+// ??? ùcouter le salon (un seul listener sur la room entiùre) ?????????????????
 function mpListenRoom() {
   if(!mp.roomRef) return;
   var fn = onValue(mp.roomRef, function(snap) {
@@ -103,7 +103,7 @@ function mpListenRoom() {
 
 // ??? Routeur principal ????????????????????????????????????????????????????????
 function mpHandleRoomChange(room) {
-  // --- Mise ‡ jour panel live si on est en train de jouer ---
+  // --- Mise ù jour panel live si on est en train de jouer ---
   if(mpRoundActive) {
     mpUpdateLivePanel(room);
     mpUpdateOtherMarkers(room);
@@ -125,7 +125,7 @@ function mpShowLobby() {
 }
 
 function mpUpdateLobby(room) {
-  // Ne redessiner que si on est bien en 'waiting' (Èvite d'Ècraser l'Ècran de jeu)
+  // Ne redessiner que si on est bien en 'waiting' (ùvite d'ùcraser l'ùcran de jeu)
   if(mpRoundActive) return;
 
   var ov = document.getElementById('overlay');
@@ -162,7 +162,7 @@ function mpUpdateLobby(room) {
     if(p.photo) h.push('<img src="'+p.photo+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover">');
     else h.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;display:flex;align-items:center;justify-content:center;font-size:12px;color:#94a3b8">'+p.name[0].toUpperCase()+'</div>');
     h.push('<span style="flex:1;font-size:13px;color:'+(isMe?col:'#e2e8f0')+';font-weight:'+(isMe?'700':'400')+'">'+p.name+(isMe?' (moi)':'')+'</span>');
-    if(p.isHost) h.push('<span style="font-size:10px;color:#f97316;background:#3d1a05;padding:2px 6px;border-radius:4px">HÙte</span>');
+    if(p.isHost) h.push('<span style="font-size:10px;color:#f97316;background:#3d1a05;padding:2px 6px;border-radius:4px">Hùte</span>');
     h.push('</div>');
   });
   h.push('</div>');
@@ -171,7 +171,7 @@ function mpUpdateLobby(room) {
   if(mp.isHost) {
     h.push('<button onclick="mpLaunchGame()" '+(canStart?'':'disabled')+' style="padding:10px 28px;font-size:14px;font-weight:700;border-radius:9px;border:none;cursor:'+(canStart?'pointer':'not-allowed')+';background:'+(canStart?'#f97316':'#374151')+';color:#fff">'+(canStart?'? Lancer la partie':'En attente (min. 2 joueurs)')+'</button>');
   } else {
-    h.push('<div style="color:#94a3b8;font-size:13px;padding:10px">En attente que l\'hÙte lance...</div>');
+    h.push('<div style="color:#94a3b8;font-size:13px;padding:10px">En attente que l\'hùte lance...</div>');
   }
   h.push('<button onclick="mpLeaveRoom()" style="padding:10px 20px;font-size:13px;border-radius:9px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer">Quitter</button>');
   h.push('</div>');
@@ -193,7 +193,7 @@ function mpLaunchGame() {
 
 // ??? Countdown ???????????????????????????????????????????????????????????????
 // Chaque client affiche le countdown localement.
-// L'hÙte passe ‡ 'playing' quand c'est terminÈ ó les autres reÁoivent la mise ‡ jour Firebase.
+// L'hùte passe ù 'playing' quand c'est terminù ù les autres reùoivent la mise ù jour Firebase.
 var _cdTimer = null;
 function mpHandleCountdown(room) {
   clearTimeout(_cdTimer);
@@ -208,21 +208,21 @@ function mpHandleCountdown(room) {
   if(remaining > 0) {
     _cdTimer = setTimeout(function(){ mpHandleCountdown(room); }, Math.min(remaining, 300));
   } else {
-    // L'hÙte Ècrit roundStart dans le futur (+1500ms) pour absorber le dÈlai rÈseau
-    // Tous les clients recevront le mÍme timestamp et dÈmarreront au mÍme moment
+    // L'hùte ùcrit roundStart dans le futur (+1500ms) pour absorber le dùlai rùseau
+    // Tous les clients recevront le mùme timestamp et dùmarreront au mùme moment
     if(mp.isHost) {
       var syncedStart = Date.now() + 1500;
       update(mp.roomRef, { status:'playing', roundStart: syncedStart });
     }
-    // Les non-hÙtes reÁoivent status:'playing' via onValue avec le mÍme roundStart
+    // Les non-hùtes reùoivent status:'playing' via onValue avec le mùme roundStart
   }
 }
 
-// ??? DÈmarrer un round ó appelÈ quand status passe ‡ 'playing' ???????????????
+// ??? Dùmarrer un round ù appelù quand status passe ù 'playing' ???????????????
 function mpHandlePlaying(room) {
   var rIdx = room.round||0;
 
-  // Si c'est le mÍme round et qu'il est dÈj‡ actif ? simple rafraÓchissement panel
+  // Si c'est le mùme round et qu'il est dùjù actif ? simple rafraùchissement panel
   if(rIdx === mpCurrentRound && mpRoundActive) return;
 
   // Nouveau round ? initialiser
@@ -267,24 +267,24 @@ function mpHandlePlaying(room) {
   updateDots();
   showHint();
 
-  // ?? Panel live ó crÈer et forcer visible AVANT que l'overlay soit cachÈ ??
+  // ?? Panel live ù crùer et forcer visible AVANT que l'overlay soit cachù ??
   mpEnsureLivePanel();
   var _panel = document.getElementById('mp-live-panel');
   if(_panel) _panel.style.display = 'block';
   mpRenderLivePanel(room);
 
-  // ?? Timer synchronisÈ ??
+  // ?? Timer synchronisù ??
   mpStartSyncTimer(room.roundStart||Date.now(), opts.timerDuration||30, rIdx);
 }
 
-// ??? Timer synchronisÈ ???????????????????????????????????????????????????????
+// ??? Timer synchronisù ???????????????????????????????????????????????????????
 function mpStartSyncTimer(roundStart, duration, rIdx) {
   clearInterval(mp.timerInterval);
   var C = 2*Math.PI*38;
 
   function tick() {
     var now = Date.now();
-    // Attendre que roundStart soit atteint (absorbe le dÈlai rÈseau cÙtÈ invitÈs)
+    // Attendre que roundStart soit atteint (absorbe le dùlai rùseau cùtù invitùs)
     var elapsed   = Math.max(0, (now - roundStart) / 1000);
     var remaining = Math.max(0, duration - elapsed);
     timeLeft = remaining;
@@ -301,7 +301,7 @@ function mpStartSyncTimer(roundStart, duration, rIdx) {
 
     if(remaining<=0) {
       clearInterval(mp.timerInterval);
-      // Le joueur n'a pas rÈpondu ? soumettre ratÈ automatiquement
+      // Le joueur n'a pas rùpondu ? soumettre ratù automatiquement
       if(!mpAnswered) {
         mpAnswered = true;
         gameActive = false;
@@ -313,7 +313,7 @@ function mpStartSyncTimer(roundStart, duration, rIdx) {
   tick();
 }
 
-// ??? Soumettre une rÈponse ????????????????????????????????????????????????????
+// ??? Soumettre une rùponse ????????????????????????????????????????????????????
 function mpSubmitAnswer(pos, dist, pts, rIdx) {
   if(!mp.roomCode || !mp.playerId) return;
 
@@ -321,15 +321,15 @@ function mpSubmitAnswer(pos, dist, pts, rIdx) {
   set(ansRef, {
     pts: pts||0, dist, pos: pos ? {lat:pos.lat, lng:pos.lng} : null, submittedAt:Date.now()
   }).then(function() {
-    // Mettre ‡ jour le score total du joueur
+    // Mettre ù jour le score total du joueur
     var scRef = ref(rtdb, 'rooms/'+mp.roomCode+'/players/'+mp.playerId+'/score');
     get(scRef).then(function(s){ set(scRef, (s.val()||0)+(pts||0)); });
-    // L'hÙte surveille si tout le monde a rÈpondu
+    // L'hùte surveille si tout le monde a rùpondu
     if(mp.isHost) mpWatchAllAnswered(rIdx);
   });
 }
 
-// ??? HÙte surveille les rÈponses de tous ?????????????????????????????????????
+// ??? Hùte surveille les rùponses de tous ?????????????????????????????????????
 function mpWatchAllAnswered(rIdx) {
   var aRef = ref(rtdb,'rooms/'+mp.roomCode+'/answers/'+rIdx);
   var pRef = ref(rtdb,'rooms/'+mp.roomCode+'/players');
@@ -357,7 +357,7 @@ function mpAdvance(rIdx) {
   });
 }
 
-// ??? RÈsultats d'un round ?????????????????????????????????????????????????????
+// ??? Rùsultats d'un round ?????????????????????????????????????????????????????
 function mpHandleRoundEnd(room) {
   clearInterval(mp.timerInterval);
   mpRoundActive = false;
@@ -380,7 +380,7 @@ function mpHandleRoundEnd(room) {
     if(targetMarker){ targetMarker.remove(); targetMarker=null; }
     if(lineLayer){    lineLayer.remove();    lineLayer=null;    }
 
-    var popup = '<div style="font-family:system-ui,sans-serif;font-size:13px"><b style="color:#15803d">? '+place.name.split('ó')[0].trim()+'</b></div>';
+    var popup = '<div style="font-family:system-ui,sans-serif;font-size:13px"><b style="color:#15803d">? '+place.name.split('ù')[0].trim()+'</b></div>';
     targetMarker = L.marker([place.lat,place.lng], {icon:makePin('#22c55e')})
       .bindPopup(popup,{maxWidth:220}).addTo(map).openPopup();
 
@@ -414,7 +414,7 @@ function mpHandleRoundEnd(room) {
   var next = rIdx+1;
   var h=[];
   h.push('<div style="font-size:13px;color:#f97316;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px">Manche '+(rIdx+1)+'/'+nb+'</div>');
-  h.push('<div style="font-size:17px;font-weight:700;color:#e2e8f0;margin-bottom:14px">'+place.name.split('ó')[0].trim()+'</div>');
+  h.push('<div style="font-size:17px;font-weight:700;color:#e2e8f0;margin-bottom:14px">'+place.name.split('ù')[0].trim()+'</div>');
 
   results.forEach(function(r,i) {
     var isMe=r.pid===mp.playerId, medal=i===0?'??':i===1?'??':i===2?'??':(i+1)+'.';
@@ -429,14 +429,14 @@ function mpHandleRoundEnd(room) {
     h.push('<div style="font-size:10px;color:#4b5563;padding-left:56px;margin-bottom:3px">Total : '+fmtPts(r.score)+' pts</div>');
   });
 
-  h.push('<div style="font-size:12px;color:#6b7280;margin-top:10px">'+(next<nb ? 'Prochaine manche dans 6sÖ' : 'Fin de partie dans 6sÖ')+'</div>');
+  h.push('<div style="font-size:12px;color:#6b7280;margin-top:10px">'+(next<nb ? 'Prochaine manche dans 6sù' : 'Fin de partie dans 6sù')+'</div>');
 
   var ov = document.getElementById('overlay');
   ov.innerHTML = h.join('');
   ov.classList.remove('h');
 }
 
-// ??? RÈsultats finaux ?????????????????????????????????????????????????????????
+// ??? Rùsultats finaux ?????????????????????????????????????????????????????????
 function mpShowFinalResults(room) {
   clearInterval(mp.timerInterval);
   mpRoundActive = false;
@@ -477,8 +477,8 @@ function mpEnsureLivePanel() {
 }
 
 function mpUpdateLivePanel(room) {
-  // AppelÈ depuis mpHandleRoomChange (mises ‡ jour temps rÈel)
-  // Seulement si le panel existe et que l'overlay est cachÈ (on est en train de jouer)
+  // Appelù depuis mpHandleRoomChange (mises ù jour temps rùel)
+  // Seulement si le panel existe et que l'overlay est cachù (on est en train de jouer)
   var panel = document.getElementById('mp-live-panel');
   if(!panel) return;
   var ov = document.getElementById('overlay');
@@ -488,7 +488,7 @@ function mpUpdateLivePanel(room) {
 }
 
 function mpRenderLivePanel(room) {
-  // Remplit le contenu du panel sans toucher ‡ display
+  // Remplit le contenu du panel sans toucher ù display
   var panel = document.getElementById('mp-live-panel');
   if(!panel) return;
 
@@ -520,17 +520,17 @@ function mpRemoveLivePanel() {
   var p=document.getElementById('mp-live-panel'); if(p)p.remove();
 }
 
-// ??? Marqueurs adversaires en temps rÈel ?????????????????????????????????????
+// ??? Marqueurs adversaires en temps rùel ?????????????????????????????????????
 function mpUpdateOtherMarkers(room) {
   if(!window.map) return;
   var rIdx=room.round||0, answers=(room.answers||{})[rIdx]||{}, players=room.players||{};
 
-  // Supprimer les markers obsolËtes
+  // Supprimer les markers obsolùtes
   Object.keys(mpOtherMarkers).forEach(function(pid) {
     if(!answers[pid]||!answers[pid].pos){ mpOtherMarkers[pid].remove(); delete mpOtherMarkers[pid]; }
   });
 
-  // Ajouter/mettre ‡ jour
+  // Ajouter/mettre ù jour
   Object.entries(answers).forEach(function([pid,ans]) {
     if(pid===mp.playerId||!ans.pos||ans.pos.lat==null) return;
     var p=players[pid]; if(!p) return;
@@ -549,51 +549,46 @@ function mpClearOtherMarkers() {
   mpOtherMarkers={};
 }
 
-// ??? Hook sur confirmGuess / timer ÈcoulÈ de game.js ?????????????????????????
-// STRAT…GIE : on surcharge window.resolveRound
-// En mode MP on bloque l'affichage solo (showInter) et on soumet ‡ Firebase ‡ la place.
-var _origResolveRound = null;
-function mpHookGameEngine() {
-  if(typeof resolveRound==='undefined'){ setTimeout(mpHookGameEngine,200); return; }
-  if(_origResolveRound) return;
-  _origResolveRound = window.resolveRound;
+// ??? Hook sur confirmGuess / timer ùcoulù de game.js ?????????????????????????
+// STRATùGIE : on surcharge window.resolveRound
+// En mode MP on bloque l'affichage solo (showInter) et on soumet ù Firebase ù la place.
+// ??? mpOnConfirm : appelÈ par game.js (confirmGuess/nextLevel) en mode MP ?????
+// game.js a ÈtÈ patchÈ pour appeler window.mpOnConfirm() au lieu de resolveRound()
+window.mpOnConfirm = function() {
+  if(!window._mpMode || !mp.roomCode) return;
+  if(mpAnswered) return;
+  mpAnswered = true;
+  gameActive = false;
+  clearInterval(tiv);            // stopper timer solo (sÈcuritÈ)
+  clearInterval(mp.timerInterval); // stopper timer MP
 
-  window.resolveRound = function() {
-    // Mode solo normal
-    if(!window._mpMode || !mp.roomCode) { _origResolveRound(); return; }
+  var r     = roundList[curR];
+  var level = 5-(fixedLevel>=0?fixedLevel:curL);
+  var pts=0, dist=null;
+  if(playerPos && r) {
+    dist = haversine(playerPos.lat,playerPos.lng,r.lat,r.lng);
+    pts  = Math.round(BASE_PTS[level]*0.8*Math.exp(-DIST_K*dist) + BASE_PTS[level]*0.2*(timeLeft/30));
+  }
 
-    // Mode multijoueur : bloquer showInter, calculer pts, soumettre
-    if(mpAnswered) return; // dÈj‡ soumis (ex: timeout timer)
-    mpAnswered = true;
-    gameActive = false;
-    clearInterval(tiv);
-    clearInterval(mp.timerInterval);
+  // Afficher marqueur couleur du joueur sur la carte
+  if(playerPos && window.map) {
+    if(playerMarker) playerMarker.remove();
+    var myColor = (_colorMap[mp.playerId]) ? _colorMap[mp.playerId] : '#f97316';
+    playerMarker = L.marker([playerPos.lat,playerPos.lng],{icon:makePin(myColor)}).addTo(map);
+  }
 
-    var r     = roundList[curR];
-    var level = 5-(fixedLevel>=0?fixedLevel:curL);
-    var pts=0, dist=null;
-    if(playerPos && r) {
-      dist = haversine(playerPos.lat,playerPos.lng,r.lat,r.lng);
-      pts  = Math.round(BASE_PTS[level]*0.8*Math.exp(-DIST_K*dist) + BASE_PTS[level]*0.2*(timeLeft/30));
-    }
+  // DÈsactiver le bouton confirmer
+  var confb = document.getElementById('confb');
+  if(confb) confb.disabled = true;
 
-    // Afficher marqueur du joueur + message d'attente
-    if(playerPos && window.map) {
-      if(playerMarker) playerMarker.remove();
-      var myColor = (mp.playerId && _colorMap[mp.playerId]) ? _colorMap[mp.playerId] : '#f97316';
-      playerMarker = L.marker([playerPos.lat,playerPos.lng],{icon:makePin(myColor)}).addTo(map);
-    }
+  // Toast "en attente"
+  if(typeof showToast==='function') {
+    showToast(dist!=null ? fmtDst(dist)+' ∑ +'+pts+' pts ∑ En attente des autres...' : 'RatÈ ∑ En attente des autres...');
+  }
 
-    // Toast "en attente des autres"
-    if(typeof showToast==='function') showToast(dist!=null ? fmtDst(dist)+' ∑ +'+pts+' pts ∑ En attente des autres...' : 'RatÈ ∑ En attente des autres...');
-
-    // Soumettre ‡ Firebase
-    mpSubmitAnswer(playerPos, dist, pts, mpCurrentRound);
-  };
-}
-
-if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',mpHookGameEngine);
-else setTimeout(mpHookGameEngine,300);
+  // Soumettre ‡ Firebase
+  mpSubmitAnswer(playerPos, dist, pts, mpCurrentRound);
+};
 
 // ??? Quitter ?????????????????????????????????????????????????????????????????
 function mpLeaveRoom() {
@@ -608,7 +603,7 @@ function mpLeaveRoom() {
   }
   mp.roomCode=mp.playerId=mp.roomRef=null; mp.isHost=false;
   mpCurrentRound=-1; mpAnswered=false; mpRoundActive=false;
-  window._mpMode=false; _origResolveRound=null;
+  window._mpMode=false;
   if(typeof showMenu==='function') showMenu();
 }
 
@@ -616,7 +611,7 @@ function mpCleanup() {
   clearInterval(mp.timerInterval); clearTimeout(_cdTimer);
   mpRemoveLivePanel(); mpClearOtherMarkers();
   mp.listeners.forEach(function(l){ try{off(l.ref);}catch(e){} });
-  mp.listeners=[]; mpRoundActive=false; window._mpMode=false; _origResolveRound=null;
+  mp.listeners=[]; mpRoundActive=false; window._mpMode=false;
   if(typeof showMenu==='function') showMenu();
 }
 

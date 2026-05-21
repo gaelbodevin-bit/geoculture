@@ -140,6 +140,7 @@ function updateDots(){
 }
 
 function startTimer(){
+  if(window._mpMode) return; // timer géré par mpStartSyncTimer
   clearInterval(tiv);timeLeft=TIMER;
   var arcEl=document.getElementById('arc');
   if(arcEl){
@@ -196,13 +197,20 @@ function triggerFlash(level){
 
 function nextLevel(){
   if(!gameActive)return;
-  if(fixedLevel>=0){clearInterval(tiv);gameActive=false;confirming=true;resolveRound();}
+  if(fixedLevel>=0){
+    if(window._mpMode && window.mpOnConfirm){ window.mpOnConfirm(); return; }
+    clearInterval(tiv);gameActive=false;confirming=true;resolveRound();
+  }
   else if(curL<3){curL++;triggerFlash(curL);updateDots();showHint();startTimer();}
-  else{clearInterval(tiv);gameActive=false;confirming=true;resolveRound();}
+  else{
+    if(window._mpMode && window.mpOnConfirm){ window.mpOnConfirm(); return; }
+    clearInterval(tiv);gameActive=false;confirming=true;resolveRound();
+  }
 }
 
 function confirmGuess(){
   if(!gameActive||confirming)return;
+  if(window._mpMode && window.mpOnConfirm){ window.mpOnConfirm(); return; }
   clearInterval(tiv);gameActive=false;confirming=true;resolveRound();
 }
 
