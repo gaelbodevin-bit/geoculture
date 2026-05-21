@@ -351,7 +351,7 @@ function mpAdvance(rIdx) {
       setTimeout(function() {
         update(mp.roomRef, next >= (opts.nbRounds||5)
           ? { status:'finished' }
-          : { status:'playing', round:next, roundStart:Date.now() });
+          : { status:'playing', round:next, roundStart:Date.now()+1500 }); // +1500ms pour absorber délai réseau
       }, 6000);
     });
   });
