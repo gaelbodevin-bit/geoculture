@@ -181,12 +181,12 @@ function mpUpdateLobby(room) {
 // ??? Lancer la partie ?????????????????????????????????????????????????????????
 function mpLaunchGame() {
   if(!mp.isHost || !mp.roomRef) return;
-  var indices = Array.from({length: typeof ROUNDS!=='undefined'?ROUNDS.length:493}, (_,i)=>i);
-  var seed = Date.now();
-  function sr(max){ seed=(seed*1664525+1013904223)&0xffffffff; return Math.abs(seed)%max; }
-  for(var j=indices.length-1;j>0;j--){ var k=sr(j+1); [indices[j],indices[k]]=[indices[k],indices[j]]; }
   get(mp.roomRef).then(function(snap) {
     var nb = (snap.val().options||{}).nbRounds||5;
+    var indices = Array.from({length: typeof ROUNDS!=='undefined'?ROUNDS.length:493}, (_,i)=>i);
+    var seed = Date.now();
+    function sr(max){ seed=(seed*1664525+1013904223)&0xffffffff; return Math.abs(seed)%max; }
+    for(var j=indices.length-1;j>0;j--){ var k=sr(j+1); [indices[j],indices[k]]=[indices[k],indices[j]]; }
     update(mp.roomRef, { status:'countdown', roundSeeds:indices.slice(0,nb), countdownStart:Date.now(), round:0 });
   });
 }
@@ -265,9 +265,11 @@ function mpHandlePlaying(room) {
   updateDots();
   showHint();
 
-  // ?? Panel live ??
+  // ?? Panel live — créer et forcer visible AVANT que l'overlay soit caché ??
   mpEnsureLivePanel();
-  mpUpdateLivePanel(room);
+  var _panel = document.getElementById('mp-live-panel');
+  if(_panel) _panel.style.display = 'block';
+  mpRenderLivePanel(room);
 
   // ?? Timer synchronisé ??
   mpStartSyncTimer(room.roundStart||Date.now(), opts.timerDuration||30, rIdx);
@@ -356,6 +358,7 @@ function mpHandleRoundEnd(room) {
   clearInterval(mp.timerInterval);
   mpRoundActive = false;
   gameActive = false;
+  mpCurrentRound = -1; // reset pour que le prochain round passe le guard dans mpHandlePlaying
 
   var rIdx  = room.currentRoundResults!==undefined ? room.currentRoundResults : (room.round||0);
   var seeds = room.roundSeeds||[];
@@ -470,14 +473,20 @@ function mpEnsureLivePanel() {
 }
 
 function mpUpdateLivePanel(room) {
+  // Appelé depuis mpHandleRoomChange (mises à jour temps réel)
+  // Seulement si le panel existe et que l'overlay est caché (on est en train de jouer)
   var panel = document.getElementById('mp-live-panel');
   if(!panel) return;
-
-  // Visible seulement quand l'overlay est caché (on joue)
   var ov = document.getElementById('overlay');
-  var playing = ov && ov.classList.contains('h');
-  panel.style.display = playing ? 'block' : 'none';
-  if(!playing) return;
+  if(!ov || !ov.classList.contains('h')) { panel.style.display='none'; return; }
+  panel.style.display = 'block';
+  mpRenderLivePanel(room);
+}
+
+function mpRenderLivePanel(room) {
+  // Remplit le contenu du panel sans toucher à display
+  var panel = document.getElementById('mp-live-panel');
+  if(!panel) return;
 
   var rIdx    = room.round||0;
   var answers = (room.answers||{})[rIdx]||{};
