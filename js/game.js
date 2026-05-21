@@ -14,7 +14,7 @@ var perfectionMode=false;
 var noZoomMode=false;
 var fixedLevel=-1;
 var BASE_PTS=[0,500,1000,1500,2000,3000];
-var MAX_DIST=2000;
+var DIST_K=Math.log(2)/200;
 var CIRC=2*Math.PI*38;
 var TIMER=30;
 
@@ -121,13 +121,12 @@ function showHint(){
   b.textContent=h.l;b.style.background=h.bc;b.style.color=h.tc;
   document.getElementById('qtxt').textContent=h.t;
   // level calcul\u00e9 dans showHint
-  const mx=Math.round(BASE_PTS[level]*1.5);
-  const timeToMax=Math.round(TIMER*0.67);
+  const mx=BASE_PTS[level];
   document.getElementById('lvl-max').textContent=mx.toLocaleString('fr-FR')+' pts';
-  document.getElementById('lvl-mult').textContent='Score max si r\u00e9ponse < '+timeToMax+'s et < 1 km';
+  document.getElementById('lvl-mult').textContent='Score max : pr\u00e9cision \u00e0 100\u00a0m + r\u00e9ponse rapide';
   let remaining=total;
   for(let i=curR;i<roundList.length;i++){
-    remaining+=i===curR?mx:Math.round(BASE_PTS[5]*1.5);
+    remaining+=i===curR?mx:BASE_PTS[5];
   }
   document.getElementById('hmax').textContent=remaining.toLocaleString('fr-FR');
 }
@@ -213,12 +212,12 @@ function resolveRound(){
   let pts=0,dist=null;
   if(playerPos){
     dist=haversine(playerPos.lat,playerPos.lng,r.lat,r.lng);
-    const precScore=BASE_PTS[level]*Math.max(0,1-dist/MAX_DIST);
-    const timeBonus=precScore*(timeLeft/TIMER)*0.5;
-    pts=Math.round(precScore+timeBonus);
+    const distScore=BASE_PTS[level]*0.8*Math.exp(-DIST_K*dist);
+    const timeScore=BASE_PTS[level]*0.2*(timeLeft/TIMER);
+    pts=Math.round(distScore+timeScore);
   }
   total+=pts;
-  roundScores.push({name:r.name,pts,distM:dist!=null?Math.round(dist*1000):null,maxPts:Math.round(BASE_PTS[level]*1.5),level});
+  roundScores.push({name:r.name,pts,distM:dist!=null?Math.round(dist*1000):null,maxPts:BASE_PTS[level],level});
   document.getElementById('hsc').textContent=total.toLocaleString('fr-FR');
   const popupStyle='font-family:system-ui,sans-serif;font-size:13px;line-height:1.5;min-width:140px';
   targetMarker=L.marker([r.lat,r.lng],{icon:makePin('#22c55e')})
@@ -241,7 +240,7 @@ function resolveRound(){
 
 function showInter(pts,dist,name,eliminated){
   const lastScore=roundScores[roundScores.length-1];
-  const mx=lastScore?lastScore.maxPts:4500;
+  const mx=lastScore?lastScore.maxPts:3000;
   const pctRound=mx>0?Math.round(pts/mx*100):0;
   const barColor=pctRound>=80?'#22c55e':pctRound>=50?'#fbbf24':'#f97316';
   const ov=document.getElementById('overlay');
