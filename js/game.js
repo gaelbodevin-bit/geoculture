@@ -420,7 +420,7 @@ function showMenu(){
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:12px">');
   h.push('<div style="font-size:10px;font-weight:600;color:#94a3b8;letter-spacing:1.5px;text-transform:uppercase">Mode de jeu</div>');
   var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
-  var lock = isPrem ? '' : ' \uD83D\uDD12';
+  var lock = isPrem ? '' : ' 🔒';
 
   // Styles de base — plus grands, plus visuels
   var _bs = 'font-family:\'DM Sans\',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-align:center;border-radius:10px;padding:14px 6px;transition:all .2s;border:1.5px solid;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1.2;';
@@ -431,21 +431,21 @@ function showMenu(){
   h.push('<button onclick="selectGameMode(\'normal\')" style="'+_bs+'background:transparent;color:#f97316;border-color:#f97316" '
     +'onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\';this.style.transform=\'translateY(-2px)\'" '
     +'onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\';this.style.transform=\'\'">'
-    +'<span style="font-size:18px">\uD83C\uDF0D</span><span>Normal</span>'
+    +'<span style="font-size:18px">🌍</span><span>Normal</span>'
     +'</button>');
 
   // No-Zoom — cyan (différent de normal)
   h.push('<button onclick="selectGameMode(\'nozoom\')" style="'+_bs+'background:transparent;color:#22d3ee;border-color:#06b6d4" '
     +'onmouseover="this.style.background=\'#06b6d4\';this.style.color=\'#fff\';this.style.transform=\'translateY(-2px)\'" '
     +'onmouseout="this.style.background=\'transparent\';this.style.color=\'#22d3ee\';this.style.transform=\'\'">'
-    +'<span style="font-size:18px">\uD83D\uDDFA\uFE0F</span><span>No-Zoom'+lock+'</span>'
+    +'<span style="font-size:18px">🗺️</span><span>No-Zoom'+lock+'</span>'
     +'</button>');
 
   // Perfection — violet
   h.push('<button onclick="selectGameMode(\'perfection\')" style="'+_bs+'background:transparent;color:#a78bfa;border-color:#7c3aed" '
     +'onmouseover="this.style.background=\'#7c3aed\';this.style.color=\'#fff\';this.style.transform=\'translateY(-2px)\'" '
     +'onmouseout="this.style.background=\'transparent\';this.style.color=\'#a78bfa\';this.style.transform=\'\'">'
-    +'<span style="font-size:18px">\uD83C\uDFAF</span><span>Perfection'+lock+'</span>'
+    +'<span style="font-size:18px">🎯</span><span>Perfection'+lock+'</span>'
     +'</button>');
 
   // Chill — bleu
@@ -459,14 +459,14 @@ function showMenu(){
   h.push('<button onclick="showDailyMenu()" style="'+_bs+'grid-column:span 2;background:transparent;color:#fbbf24;border-color:#fbbf24" '
     +'onmouseover="this.style.background=\'#fbbf24\';this.style.color=\'#000\';this.style.transform=\'translateY(-2px)\'" '
     +'onmouseout="this.style.background=\'transparent\';this.style.color=\'#fbbf24\';this.style.transform=\'\'">'
-    +'<span style="font-size:18px">\uD83D\uDCC5</span><span>'+T('dailyChallenge')+'</span>'
+    +'<span style="font-size:18px">📅</span><span>'+T('dailyChallenge')+'</span>'
     +'</button>');
 
   // Multijoueur — vert (pleine largeur)
   h.push('<button onclick="openMultiplayer()" style="'+_bs+'grid-column:span 2;background:transparent;color:#22c55e;border-color:#22c55e" '
     +'onmouseover="this.style.background=\'#22c55e\';this.style.color=\'#fff\';this.style.transform=\'translateY(-2px)\'" '
     +'onmouseout="this.style.background=\'transparent\';this.style.color=\'#22c55e\';this.style.transform=\'\'">'
-    +'<span style="font-size:18px">\uD83D\uDC65</span><span>'+T('multiplayer')+lock+'</span>'
+    +'<span style="font-size:18px">👥</span><span>'+T('multiplayer')+lock+'</span>'
     +'</button>');
 
   h.push('</div>');
