@@ -12,6 +12,7 @@ function T(key,vars){var d=_t[_lang]||_t.en;var s=d[key]||_t.en[key]||key;if(var
 window._lang=_lang;window.T=T;
 var perfectionMode=false;
 var noZoomMode=false;
+var chillMode=false;
 var fixedLevel=-1;
 var BASE_PTS=[0,500,1000,1500,2000,3000];
 var DIST_K=Math.log(2)/200;
@@ -140,7 +141,14 @@ function updateDots(){
 }
 
 function startTimer(){
-  if(window._mpMode) return; // timer géré par mpStartSyncTimer
+  if(window._mpMode) return;
+  if(chillMode){
+    clearInterval(tiv);timeLeft=999;
+    var _a=document.getElementById('arc');
+    if(_a){_a.style.transition='none';_a.style.strokeDashoffset='0';_a.style.stroke='#3b82f6';}
+    var _tn=document.getElementById('tnum');if(_tn){_tn.textContent='∞';_tn.style.color='#3b82f6';}
+    return;
+  }
   clearInterval(tiv);timeLeft=TIMER;
   var arcEl=document.getElementById('arc');
   if(arcEl){
@@ -410,12 +418,14 @@ function showMenu(){
   // Colonne droite: modes de jeu
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:12px">');
   h.push('<div style="font-size:10px;font-weight:600;color:#94a3b8;letter-spacing:1.5px;text-transform:uppercase">Mode de jeu</div>');
+  var _bs='font-size:12px;font-weight:700;cursor:pointer;text-align:center;border-radius:8px;padding:11px 4px;transition:background .18s,color .18s,transform .12s;';
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;flex:1">');
-  h.push('<button id="btn-normal" onclick="selectGameMode(\'normal\')" style="background:#f97316;color:#fff;border:1px solid #f97316;border-radius:8px;padding:11px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center">Normal</button>');
-  h.push('<button id="btn-nozoom" onclick="selectGameMode(\'nozoom\')" style="background:transparent;color:#f97316;border:1px solid #f97316;border-radius:8px;padding:11px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center">No-Zoom</button>');
-  h.push('<button id="btn-perf" onclick="selectGameMode(\'perfection\')" style="background:transparent;color:#a78bfa;border:1px solid #7c3aed;border-radius:8px;padding:11px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center">Perfection</button>');
-  h.push('<button id="btn-daily" onclick="showDailyMenu()" style="background:transparent;color:#fbbf24;border:1px solid #fbbf24;border-radius:8px;padding:11px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center">'+T('dailyChallenge')+'</button>');
-  h.push('<button id="btn-multi" onclick="openMultiplayer()" style="grid-column:span 2;background:transparent;color:#22c55e;border:1px solid #22c55e;border-radius:8px;padding:11px 4px;font-size:12px;font-weight:700;cursor:pointer;text-align:center">'+T('multiplayer')+'</button>');
+  h.push('<button onclick="selectGameMode(\'normal\')" style="'+_bs+'background:transparent;color:#f97316;border:1px solid #f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">Normal</button>');
+  h.push('<button onclick="selectGameMode(\'nozoom\')" style="'+_bs+'background:transparent;color:#f97316;border:1px solid #f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">No-Zoom 🔒</button>');
+  h.push('<button onclick="selectGameMode(\'perfection\')" style="'+_bs+'background:transparent;color:#a78bfa;border:1px solid #7c3aed" onmouseover="this.style.background=\'#7c3aed\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#a78bfa\'">Perfection 🔒</button>');
+  h.push('<button onclick="selectGameMode(\'chill\')" style="'+_bs+'background:transparent;color:#60a5fa;border:1px solid #3b82f6" onmouseover="this.style.background=\'#3b82f6\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#60a5fa\'">Chill ☕ 🔒</button>');
+  h.push('<button onclick="showDailyMenu()" style="'+_bs+'background:transparent;color:#fbbf24;border:1px solid #fbbf24" onmouseover="this.style.background=\'#fbbf24\';this.style.color=\'#000\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#fbbf24\'">'+T('dailyChallenge')+'</button>');
+  h.push('<button onclick="openMultiplayer()" style="'+_bs+'grid-column:span 2;background:transparent;color:#22c55e;border:1px solid #22c55e" onmouseover="this.style.background=\'#22c55e\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#22c55e\'">'+T('multiplayer')+' 🔒</button>');
   h.push('</div>');
   h.push('</div>');
 
@@ -496,36 +506,28 @@ function mpShowJoinMenu(){
   var h=[];
   h.push('<div class="otitle" style="font-size:32px">MULTIJOUEUR</div>');
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:480px;margin:12px 0">');
-
-  // ── Panneau Créer ──
   h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
-  h.push('<div style="font-size:13px;font-weight:700;color:#22c55e">Cr\u00e9er</div>');
-
-  // Boutons mode — grille 2x2
-  var bs = 'padding:5px 4px;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;transition:all .15s;';
+  h.push('<div style="font-size:13px;font-weight:700;color:#22c55e">Créer</div>');
+  var _mb='padding:5px 4px;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;transition:all .15s;';
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">');
-  h.push('<button id="mp-mode-normal" onclick="mpSetMode(\'normal\')" style="'+bs+'border:1px solid #f97316;background:transparent;color:#f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">Normal</button>');
-  h.push('<button id="mp-mode-nozoom" onclick="mpSetMode(\'nozoom\')" style="'+bs+'border:1px solid #f97316;background:transparent;color:#f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">No-Zoom</button>');
-  h.push('<button id="mp-mode-perf"  onclick="mpSetMode(\'perfection\')" style="'+bs+'border:1px solid #7c3aed;background:transparent;color:#a78bfa" onmouseover="this.style.background=\'#7c3aed\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#a78bfa\'">Perfection</button>');
-  h.push('<button id="mp-mode-chill" onclick="mpSetMode(\'chill\')"  style="'+bs+'border:1px solid #3b82f6;background:transparent;color:#60a5fa" onmouseover="this.style.background=\'#3b82f6\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#60a5fa\'">\u2615 Chill</button>');
+  h.push('<button id="mp-mode-normal" onclick="mpSetMode(\'normal\')" style="'+_mb+'border:1px solid #f97316;background:transparent;color:#f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">Normal</button>');
+  h.push('<button id="mp-mode-nozoom" onclick="mpSetMode(\'nozoom\')" style="'+_mb+'border:1px solid #f97316;background:transparent;color:#f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">No-Zoom</button>');
+  h.push('<button id="mp-mode-perf"  onclick="mpSetMode(\'perfection\')" style="'+_mb+'border:1px solid #7c3aed;background:transparent;color:#a78bfa" onmouseover="this.style.background=\'#7c3aed\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#a78bfa\'">Perfection</button>');
+  h.push('<button id="mp-mode-chill" onclick="mpSetMode(\'chill\')"  style="'+_mb+'border:1px solid #3b82f6;background:transparent;color:#60a5fa" onmouseover="this.style.background=\'#3b82f6\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#60a5fa\'">Chill ☕</button>');
   h.push('</div>');
-
   h.push('<select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="-1">Tout niveaux</option><option value="0">Expert</option><option value="1">Difficile</option><option value="2">Moyen</option><option value="3">Facile</option></select>');
   h.push('<select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="5">5 manches</option><option value="10">10 manches</option></select>');
   if(!user) h.push('<input id="mp-name-create" placeholder="Pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
-  h.push('<button onclick="mpDoCreate()" style="padding:8px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer">Cr\u00e9er</button>');
+  h.push('<button onclick="mpDoCreate()" style="padding:8px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer">Créer</button>');
   h.push('</div>');
-
-  // ── Panneau Rejoindre ──
   h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
   h.push('<div style="font-size:13px;font-weight:700;color:#f97316">Rejoindre</div>');
   h.push('<input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:10px;color:#f97316;font-size:22px;font-weight:700;letter-spacing:6px;text-align:center;text-transform:uppercase">');
   if(!user) h.push('<input id="mp-name-join" placeholder="Pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
   h.push('<button onclick="mpDoJoin()" style="padding:8px;border-radius:7px;border:none;background:#f97316;color:#fff;font-weight:700;cursor:pointer">Rejoindre</button>');
   h.push('</div>');
-
   h.push('</div>');
-  h.push('<button onclick="showMenu()" style="padding:9px 22px;border-radius:9px;border:1px solid #334155;background:transparent;color:#94a3b8;font-size:12px;font-weight:600;cursor:pointer">\u2190 Retour</button>');
+  h.push('<button onclick="showMenu()" style="padding:9px 22px;border-radius:9px;border:1px solid #334155;background:transparent;color:#94a3b8;font-size:12px;font-weight:600;cursor:pointer">← Retour</button>');
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
   window._mpGameMode='normal';
@@ -535,26 +537,27 @@ function mpDoCreate(){var lvl=parseInt(document.getElementById('mp-level').value
 function mpDoJoin(){var code=(document.getElementById('mp-code').value||'').toUpperCase().trim();if(code.length<4){if(typeof showToast==='function')showToast('Code invalide');return;}window._mpMode=true;var fn=window.mpJoinRoom||(typeof mpJoinRoom==='function'?mpJoinRoom:null);if(fn){fn(code,'Joueur').catch(function(e){if(typeof showToast==='function')showToast('Erreur\u00a0: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non charg\u00e9');}}
 function selectGameMode(mode) {
   var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
-  if((mode==='nozoom'||mode==='perfection') && !isPrem) {
+  if((mode==='nozoom'||mode==='perfection'||mode==='chill') && !isPrem) {
     if(typeof window.showPremiumOverlay==='function') {
-      window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
+      window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':mode==='chill'?'Chill':'Perfection');
     } else {
       setTimeout(function(){
-        if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':'Perfection');
+        if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':mode==='chill'?'Chill':'Perfection');
       }, 500);
     }
     return;
   }
   window._menuNZ = mode==='nozoom';
   window._menuPerf = mode==='perfection';
+  window._menuChill = mode==='chill';
   // Afficher le sous-menu de difficult&#233;
   showDifficultyMenu(mode);
 }
 
 function showDifficultyMenu(mode) {
   var ov = document.getElementById('overlay');
-  var modeLabel = mode==='nozoom'?'No-Zoom':mode==='perfection'?'Perfection':'Normal';
-  var modeColor = mode==='perfection'?'#a78bfa':'#f97316';
+  var modeLabel = mode==='nozoom'?'No-Zoom':mode==='perfection'?'Perfection':mode==='chill'?'Chill':'Normal';
+  var modeColor = mode==='perfection'?'#a78bfa':mode==='chill'?'#3b82f6':'#f97316';
   var h = [];
   h.push('<div class="otitle" style="font-size:32px;color:'+modeColor+'">' + modeLabel.toUpperCase() + '</div>');
   h.push('<div style="font-size:13px;color:#cbd5e1;margin-bottom:18px;font-weight:500">Choisissez votre niveau de difficult&#233;</div>');
@@ -587,6 +590,7 @@ function launchGame(level) {
   fixedLevel = level;
   noZoomMode = window._menuNZ || false;
   perfectionMode = window._menuPerf || false;
+  chillMode = window._menuChill || false;
   if(map){ map.remove(); map=null; }
   document.getElementById('overlay').classList.add('h');
   document.getElementById('hsc').textContent='0';
