@@ -167,3 +167,26 @@ display:none !important;
 #app-wrapper{overflow:hidden;background:var(--bg0)}
 body.menu-mode #app-wrapper{background:transparent}
 .leaflet-container{background:#0d1120}
+
+/* ════════════════════════════════════════
+   MODE CHILL
+   ════════════════════════════════════════ */
+
+/* Timer infini en bleu */
+.chill-infinity {
+  color: #3b82f6 !important;
+  font-size: 42px !important;
+}
+
+/* Boutons mode de jeu — hover natif CSS */
+.menu-btn {
+  transition: background .18s, color .18s, transform .12s, box-shadow .18s;
+}
+.menu-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,.35);
+}
+.menu-btn:active {
+  transform: scale(0.97);
+  box-shadow: none;
+}
