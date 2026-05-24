@@ -266,7 +266,7 @@ function showHistory() {
     h.push('<button onclick="confirmDeleteAccount()" style="padding:8px 16px;border-radius:8px;border:1px solid #ef4444;background:transparent;color:#ef4444;font-size:13px;cursor:pointer;font-weight:600">Supprimer mon compte et mes donn&#233;es</button>');
     h.push('<div style="font-size:11px;color:#6b7280;margin-top:6px">Supprime d&#233;finitivement votre compte, vos parties et vos scores. Irr&#233;versible.</div>');
     h.push('</div>');
-    h.push('<button class="btn bg" onclick="closeHistory()" style="width:auto;padding:10px 20px">&#8592; Retour</button>');
+    h.push('<button class="btn bg" onclick="window.closeHistory()" style="width:auto;padding:10px 20px">&#8592; Retour</button>');
     h.push('</div>');
     h.push('</div>');
 
@@ -386,7 +386,7 @@ function showLeaderboard() {
       });
       h.push('</div>');
     }
-    h.push('<button class="btn bg" onclick="closeHistory()" style="width:auto;padding:10px 20px;margin-top:8px">&#8592; Retour</button>');
+    h.push('<button class="btn bg" onclick="window.closeHistory()" style="width:auto;padding:10px 20px;margin-top:8px">&#8592; Retour</button>');
     ov.innerHTML = h.join('');
     ov.classList.remove('h');
   }
@@ -467,7 +467,7 @@ function showDailyLB() {
       });
       h.push('</div>');
     }
-    h.push('<button class="btn bg" onclick="closeHistory()" style="width:auto;padding:10px 20px;margin-top:8px">&#8592; Retour</button>');
+    h.push('<button class="btn bg" onclick="window.closeHistory()" style="width:auto;padding:10px 20px;margin-top:8px">&#8592; Retour</button>');
     ov.innerHTML = h.join('');
     ov.classList.remove('h');
   }
@@ -493,8 +493,8 @@ function showPremiumOverlay(featureName) {
   if(!currentUser) {
     h.push('<div class="otitle" style="font-size:26px;color:#fbbf24">Connexion requise</div>');
     h.push('<div style="font-size:14px;color:#94a3b8;margin-bottom:20px;text-align:center;max-width:340px">Connecte-toi pour acc&#233;der &#224; <strong style="color:#e2e8f0">'+featureName+'</strong>.</div>');
-    h.push('<button onclick="fbSignIn()" style="padding:10px 28px;border-radius:8px;border:none;background:#f97316;color:#fff;font-weight:700;font-size:14px;cursor:pointer">Se connecter avec Google</button>');
-    h.push('<button onclick="closeHistory()" style="margin-top:10px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px;display:block">&#8592; Retour</button>');
+    h.push('<button onclick="window.fbSignIn()" style="padding:10px 28px;border-radius:8px;border:none;background:#f97316;color:#fff;font-weight:700;font-size:14px;cursor:pointer">Se connecter avec Google</button>');
+    h.push('<button onclick="window.closeHistory()" style="margin-top:10px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px;display:block">&#8592; Retour</button>');
     ov.innerHTML=h.join(''); ov.classList.remove('h'); return;
   }
   h.push('<div class="otitle" style="font-size:26px;color:#fbbf24">&#11088; Premium</div>');
@@ -509,23 +509,23 @@ function showPremiumOverlay(featureName) {
   h.push('<div style="font-size:12px;color:#6b7280;margin-bottom:8px;text-align:center">Choisissez le montant (min. 1&#8364;)</div>');
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:8px">');
   [2,5,10,20].forEach(function(amt){
-    h.push('<button data-amt="'+amt+'" onclick="selectAmount(parseInt(this.dataset.amt))" id="amt-btn-'+amt+'" style="padding:8px;border-radius:7px;border:2px solid #1e2d45;background:#0d1120;color:#e2e8f0;font-size:13px;font-weight:600;cursor:pointer">'+amt+'&#8364;</button>');
+    h.push('<button data-amt="'+amt+'" onclick="window.selectAmount(parseInt(this.dataset.amt))" id="amt-btn-'+amt+'" style="padding:8px;border-radius:7px;border:2px solid #1e2d45;background:#0d1120;color:#e2e8f0;font-size:13px;font-weight:600;cursor:pointer">'+amt+'&#8364;</button>');
   });
   h.push('</div>');
   h.push('<input id="custom-amount" type="number" min="1" step="1" placeholder="Montant libre (&#8364;)" style="width:100%;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 12px;color:#e2e8f0;font-size:13px">');
   h.push('</div>');
-  h.push('<button onclick="initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">Soutenir et d&#233;bloquer &#8594;</button>');
+  h.push('<button onclick="window.initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">Soutenir et d&#233;bloquer &#8594;</button>');
   h.push('<div style="font-size:11px;color:#4b5563;margin-top:8px;text-align:center">Paiement s&#233;curis&#233; via Stripe</div>');
   h.push('<div style="width:100%;max-width:340px;margin-top:14px;border-top:1px solid #1e2d45;padding-top:14px">');
   h.push('<div style="font-size:11px;color:#6b7280;text-align:center;margin-bottom:8px">Vous avez un code testeur ?</div>');
   h.push('<div style="display:flex;gap:6px">');
   h.push('<input id="redeem-input" placeholder="CODE-XXXX" maxlength="12" style="flex:1;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 10px;color:#e2e8f0;font-size:13px;letter-spacing:2px;text-transform:uppercase">');
-  h.push('<button onclick="redeemCode()" style="padding:8px 14px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-size:12px;font-weight:700;cursor:pointer">Activer</button>');
+  h.push('<button onclick="window.redeemCode()" style="padding:8px 14px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-size:12px;font-weight:700;cursor:pointer">Activer</button>');
   h.push('</div>');
   h.push('<div id="redeem-msg" style="font-size:12px;margin-top:6px;text-align:center;min-height:18px"></div>');
   h.push('</div>');
   h.push('<div style="display:flex;gap:12px;margin-top:10px">');
-  h.push('<button onclick="closeHistory()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px">&#8592; Retour</button>');
+  h.push('<button onclick="window.closeHistory()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px">&#8592; Retour</button>');
   h.push('<a href="https://gaelbodevin-bit.github.io/geoculture/legal.html" style="padding:8px 12px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:11px;text-decoration:none">Mentions l&#233;gales</a>');
   h.push('</div>');
   ov.innerHTML=h.join(''); ov.classList.remove('h');
@@ -607,7 +607,7 @@ function confirmDeleteAccount() {
   h.push('<div style="font-size:14px;color:#94a3b8;margin:12px 0;text-align:center;max-width:380px;line-height:1.6">Cette action est <strong style="color:#ef4444">irr&#233;versible</strong>.<br>Toutes vos donn&#233;es seront supprim&#233;es&nbsp;:<br><span style="font-size:12px;color:#6b7280">compte, parties, scores, statut premium</span></div>');
   h.push('<div style="display:flex;gap:10px;margin-top:8px">');
   h.push('<button onclick="doDeleteAccount()" style="padding:10px 20px;border-radius:8px;border:none;background:#ef4444;color:#fff;font-weight:700;font-size:14px;cursor:pointer">Oui, supprimer</button>');
-  h.push('<button onclick="closeHistory()" style="padding:10px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;font-size:14px;cursor:pointer">Annuler</button>');
+  h.push('<button onclick="window.closeHistory()" style="padding:10px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;font-size:14px;cursor:pointer">Annuler</button>');
   h.push('</div>');
   ov.innerHTML=h.join(''); ov.classList.remove('h');
 }
@@ -623,7 +623,7 @@ function doDeleteAccount() {
     setTimeout(function(){ window.location.reload(); },2500);
   }).catch(function(e){
     console.error('deleteAccount:',e);
-    ov.innerHTML='<div class="otitle" style="font-size:22px;color:#ef4444">Erreur</div><div style="color:#94a3b8;font-size:14px;margin-top:8px">'+e.message+'</div><button onclick="closeHistory()" style="margin-top:16px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer">Fermer</button>';
+    ov.innerHTML='<div class="otitle" style="font-size:22px;color:#ef4444">Erreur</div><div style="color:#94a3b8;font-size:14px;margin-top:8px">'+e.message+'</div><button onclick="window.closeHistory()" style="margin-top:16px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer">Fermer</button>';
   });
 }
 
