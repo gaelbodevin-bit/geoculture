@@ -228,8 +228,10 @@ function resolveRound(){
   let pts=0,dist=null;
   if(playerPos){
     dist=haversine(playerPos.lat,playerPos.lng,r.lat,r.lng);
-    const distScore=BASE_PTS[level]*0.8*Math.exp(-DIST_K*dist);
-    const timeScore=BASE_PTS[level]*0.2*(timeLeft/TIMER);
+    const effLevel=chillMode?5:level;
+    const distCoef=chillMode?1.0:0.8;
+    const distScore=BASE_PTS[effLevel]*distCoef*Math.exp(-DIST_K*dist);
+    const timeScore=chillMode?0:BASE_PTS[effLevel]*0.2*(timeLeft/TIMER);
     pts=Math.round(distScore+timeScore);
   }
   total+=pts;
@@ -405,7 +407,7 @@ function showMenu(){
     {t:'Normal', d:T('ruleNormal')},
     {t:'No-Zoom', d:T('ruleNozoom')},
     {t:'Perfection', d:T('rulePerfection')},
-    {t:'Chill', d:T('ruleChill')},
+    {t:'Chill ☕', d:T('ruleChill')},
     {t:T('dailyChallenge'), d:T('ruleDaily')}
   ];
   rules.forEach(function(r,i){
@@ -547,76 +549,33 @@ function mpShowJoinMenu(){
   var ov=document.getElementById('overlay');
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
-
-  h.push('<div class="otitle" style="font-size:36px;margin-bottom:20px">MULTIJOUEUR</div>');
-
-  // ── Conteneur principal : deux colonnes équilibrées ──
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;width:100%;max-width:700px">');
-
-  // ════ Colonne CRÉER ════
-  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px">');
-  h.push('<div style="font-size:12px;font-weight:700;color:#22c55e;letter-spacing:2px;text-transform:uppercase">Créer une partie</div>');
-
-  // Boutons modes — grille 2×2 avec hauteur fixe
-  var _mb='width:100%;padding:10px 4px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .15s;text-align:center;';
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">');
-  h.push('<button id="mp-mode-normal" onclick="mpSetMode(\'normal\')" style="'+_mb+'border:1.5px solid #f97316;background:transparent;color:#f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">Normal</button>');
-  h.push('<button id="mp-mode-nozoom" onclick="mpSetMode(\'nozoom\')" style="'+_mb+'border:1.5px solid #22d3ee;background:transparent;color:#22d3ee" onmouseover="this.style.background=\'#22d3ee\';this.style.color=\'#000\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#22d3ee\'">No-Zoom</button>');
-  h.push('<button id="mp-mode-perf"  onclick="mpSetMode(\'perfection\')" style="'+_mb+'border:1.5px solid #7c3aed;background:transparent;color:#a78bfa" onmouseover="this.style.background=\'#7c3aed\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#a78bfa\'">Perfection</button>');
-  h.push('<button id="mp-mode-chill" onclick="mpSetMode(\'chill\')"  style="'+_mb+'border:1.5px solid #3b82f6;background:transparent;color:#60a5fa" onmouseover="this.style.background=\'#3b82f6\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#60a5fa\'">Chill</button>');
+  h.push('<div class="otitle" style="font-size:32px">MULTIJOUEUR</div>');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:480px;margin:12px 0">');
+  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
+  h.push('<div style="font-size:13px;font-weight:700;color:#22c55e">Créer</div>');
+  var _mb='padding:5px 4px;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;transition:all .15s;';
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">');
+  h.push('<button id="mp-mode-normal" onclick="mpSetMode(\'normal\')" style="'+_mb+'border:1px solid #f97316;background:transparent;color:#f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">Normal</button>');
+  h.push('<button id="mp-mode-nozoom" onclick="mpSetMode(\'nozoom\')" style="'+_mb+'border:1px solid #f97316;background:transparent;color:#f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">No-Zoom</button>');
+  h.push('<button id="mp-mode-perf"  onclick="mpSetMode(\'perfection\')" style="'+_mb+'border:1px solid #7c3aed;background:transparent;color:#a78bfa" onmouseover="this.style.background=\'#7c3aed\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#a78bfa\'">Perfection</button>');
+  h.push('<button id="mp-mode-chill" onclick="mpSetMode(\'chill\')"  style="'+_mb+'border:1px solid #3b82f6;background:transparent;color:#60a5fa" onmouseover="this.style.background=\'#3b82f6\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#60a5fa\'">Chill ☕</button>');
   h.push('</div>');
-
-  // Niveau
-  h.push('<div>');
-  h.push('<div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px">Niveau</div>');
-  h.push('<select id="mp-level" style="width:100%;background:#111827;border:1px solid #2d3f5e;border-radius:8px;padding:10px 12px;color:#e2e8f0;font-size:13px;cursor:pointer"><option value="-1">Tout niveaux</option><option value="0">Expert</option><option value="1">Difficile</option><option value="2">Moyen</option><option value="3">Facile</option></select>');
+  h.push('<select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="-1">Tout niveaux</option><option value="0">Expert</option><option value="1">Difficile</option><option value="2">Moyen</option><option value="3">Facile</option></select>');
+  h.push('<select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="5">5 manches</option><option value="10">10 manches</option></select>');
+  if(!user) h.push('<input id="mp-name-create" placeholder="Pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
+  h.push('<button onclick="mpDoCreate()" style="padding:8px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer">Créer</button>');
   h.push('</div>');
-
-  // Manches
-  h.push('<div>');
-  h.push('<div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px">Manches</div>');
-  h.push('<select id="mp-rounds" style="width:100%;background:#111827;border:1px solid #2d3f5e;border-radius:8px;padding:10px 12px;color:#e2e8f0;font-size:13px;cursor:pointer"><option value="5">5 manches</option><option value="10">10 manches</option></select>');
+  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
+  h.push('<div style="font-size:13px;font-weight:700;color:#f97316">Rejoindre</div>');
+  h.push('<input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:10px;color:#f97316;font-size:22px;font-weight:700;letter-spacing:6px;text-align:center;text-transform:uppercase">');
+  if(!user) h.push('<input id="mp-name-join" placeholder="Pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
+  h.push('<button onclick="mpDoJoin()" style="padding:8px;border-radius:7px;border:none;background:#f97316;color:#fff;font-weight:700;cursor:pointer">Rejoindre</button>');
   h.push('</div>');
-
-  if(!user) {
-    h.push('<div>');
-    h.push('<div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px">Pseudo</div>');
-    h.push('<input id="mp-name-create" placeholder="Ton pseudo" style="width:100%;background:#111827;border:1px solid #2d3f5e;border-radius:8px;padding:10px 12px;color:#e2e8f0;font-size:13px">');
-    h.push('</div>');
-  }
-
-  h.push('<button onclick="mpDoCreate()" style="width:100%;padding:13px;border-radius:10px;border:none;background:#22c55e;color:#fff;font-weight:700;font-size:14px;cursor:pointer;margin-top:4px;transition:opacity .15s" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Créer la partie</button>');
   h.push('</div>');
-
-  // ════ Colonne REJOINDRE ════
-  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:14px">');
-  h.push('<div style="font-size:12px;font-weight:700;color:#f97316;letter-spacing:2px;text-transform:uppercase">Rejoindre une partie</div>');
-
-  h.push('<div style="flex:1;display:flex;flex-direction:column;gap:6px">');
-  h.push('<div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px">Code du salon</div>');
-  h.push('<input id="mp-code" placeholder="XXXXXX" maxlength="6" style="width:100%;background:#111827;border:2px solid #2d3f5e;border-radius:10px;padding:18px 12px;color:#f97316;font-size:28px;font-weight:700;letter-spacing:10px;text-align:center;text-transform:uppercase;transition:border-color .15s" onfocus="this.style.borderColor=\'#f97316\'" onblur="this.style.borderColor=\'#2d3f5e\'">');
-  h.push('</div>');
-
-  if(!user) {
-    h.push('<div>');
-    h.push('<div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px">Pseudo</div>');
-    h.push('<input id="mp-name-join" placeholder="Ton pseudo" style="width:100%;background:#111827;border:1px solid #2d3f5e;border-radius:8px;padding:10px 12px;color:#e2e8f0;font-size:13px">');
-    h.push('</div>');
-  }
-
-  // Spacer pour aligner le bouton en bas
-  h.push('<div style="flex:1"></div>');
-  h.push('<button onclick="mpDoJoin()" style="width:100%;padding:13px;border-radius:10px;border:none;background:#f97316;color:#fff;font-weight:700;font-size:14px;cursor:pointer;margin-top:4px;transition:opacity .15s" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Rejoindre</button>');
-  h.push('</div>');
-
-  h.push('</div>'); // fin grille
-
-  h.push('<button onclick="showMenu()" style="margin-top:16px;padding:9px 28px;border-radius:9px;border:1px solid #334155;background:transparent;color:#64748b;font-size:12px;font-weight:600;cursor:pointer;transition:color .15s" onmouseover="this.style.color=\'#e2e8f0\'" onmouseout="this.style.color=\'#64748b\'">← Retour</button>');
-
+  h.push('<button onclick="showMenu()" style="padding:9px 22px;border-radius:9px;border:1px solid #334155;background:transparent;color:#94a3b8;font-size:12px;font-weight:600;cursor:pointer">← Retour</button>');
   ov.innerHTML=h.join('');
   ov.classList.remove('h');
   window._mpGameMode='normal';
-  mpSetMode('normal');
 }
 function mpSetMode(m){window._mpGameMode=m;['normal','nozoom','perfection','chill'].forEach(function(k){var el=document.getElementById('mp-mode-'+(k==='perfection'?'perf':k));if(!el)return;var a=k===m;var col=k==='perfection'?'#7c3aed':k==='chill'?'#3b82f6':'#f97316';var tc=k==='perfection'?'#a78bfa':k==='chill'?'#60a5fa':'#f97316';el.style.background=a?col:'transparent';el.style.color=a?'#fff':tc;el.style.borderColor=col;});}
 function mpDoCreate(){var lvl=parseInt(document.getElementById('mp-level').value);var gm=window._mpGameMode||'normal';var nz=gm==='nozoom';var perf=gm==='perfection';var chill=gm==='chill';var nb=parseInt(document.getElementById('mp-rounds').value);if(perf&&nb<10)nb=10;window._mpMode=true;var fn=window.mpCreateRoom||(typeof mpCreateRoom==='function'?mpCreateRoom:null);if(fn){fn({fixedLevel:lvl,noZoomMode:nz,perfectionMode:perf,chillMode:chill,nbRounds:nb}).then(function(code){if(typeof showToast==='function')showToast('Salon\u00a0: '+code);}).catch(function(e){if(typeof showToast==='function')showToast('Erreur\u00a0: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non charg\u00e9');}}
