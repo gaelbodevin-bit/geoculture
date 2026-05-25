@@ -2904,7 +2904,7 @@ const ROUNDS=[
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Vallée du Dadès au Maroc"}
   ]},
   {name:"Île de Djerba — Tunisie",lat:33.8076,lng:10.8451,desc:"Djerba est traditionnellement identifiée à l'île des Lotophages d'Homère, où Ulysse et ses compagnons mangèrent la fleur de lotus qui fit tout oublier. Elle abrite la synagogue El Ghriba, lieu de pèlerinage juif parmi les plus importants du monde, fondée au VIe siècle av. J.-C. selon la tradition.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Synagogue à dômes blancs (VIe s. av. J.-C.), poterie traditionnelle au tour manuel, lagune peu profonde, architecture troglodytiqu"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Synagogue à dômes blancs (VIe s. av. J.-C.), poterie traditionnelle au tour manuel, lagune peu profonde, architecture troglodytique"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île reliée au continent par une chaussée, golfe peu profond, latitude ~34°N, mer intérieure semi-fermée, côte sablonneuse basse"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île méditerranéenne à majorité berbère, abritant l'une des plus anciennes synagogues du monde et une importante communauté juive h"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Île de Djerba en Tunisie"}
