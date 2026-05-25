@@ -297,26 +297,38 @@ function mpStartSyncTimer(roundStart, duration, rIdx) {
   }
 
 
+  // DÈsactiver toute transition CSS sur l'arc ó mise ‡ jour directe par JS
+  var arcEl = document.getElementById('arc');
+  if(arcEl) arcEl.style.transition = 'none';
+
   function tick() {
-    var now = Date.now();
-    // Attendre que roundStart soit atteint (absorbe le dùlai rùseau cùtù invitùs)
-    var elapsed   = Math.max(0, (now - roundStart) / 1000);
-    var remaining = Math.max(0, duration - elapsed);
+    var now     = Date.now();
+    var elapsed = (now - roundStart) / 1000; // peut Ítre nÈgatif si roundStart est dans le futur
+
+    var remaining;
+    if(elapsed < 0) {
+      // roundStart pas encore atteint ? afficher duration, arc plein, attendre
+      remaining = duration;
+    } else {
+      remaining = Math.max(0, duration - elapsed);
+    }
     timeLeft = remaining;
 
     var arc = document.getElementById('arc');
     if(arc) {
-      if(remaining<=0) arc.style.transition='none';
-      arc.style.strokeDashoffset = C*(1-remaining/duration);
-      var col = remaining>19?'#22c55e':remaining>9?'#fbbf24':'#ef4444';
+      var pct = remaining / duration;
+      arc.style.strokeDashoffset = C * (1 - pct);
+      var col = remaining > 19 ? '#22c55e' : remaining > 9 ? '#fbbf24' : '#ef4444';
       arc.style.stroke = col;
-      var n = document.getElementById('tnum');
-      if(n){ n.textContent=Math.ceil(remaining); n.style.color=col; }
+      var numEl = document.getElementById('tnum');
+      if(numEl) {
+        numEl.textContent = elapsed < 0 ? duration : Math.ceil(remaining);
+        numEl.style.color = col;
+      }
     }
 
-    if(remaining<=0) {
+    if(elapsed >= 0 && remaining <= 0) {
       clearInterval(mp.timerInterval);
-      // Le joueur n'a pas rùpondu ? soumettre ratù automatiquement
       if(!mpAnswered && !chillMode) {
         mpAnswered = true;
         gameActive = false;
