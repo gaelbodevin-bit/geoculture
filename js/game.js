@@ -405,7 +405,7 @@ function showMenu(){
     {t:'Normal', d:T('ruleNormal')},
     {t:'No-Zoom', d:T('ruleNozoom')},
     {t:'Perfection', d:T('rulePerfection')},
-    {t:'Chill ☕', d:T('ruleChill')},
+    {t:'Chill', d:T('ruleChill')},
     {t:T('dailyChallenge'), d:T('ruleDaily')}
   ];
   rules.forEach(function(r,i){
@@ -548,26 +548,26 @@ function mpShowJoinMenu(){
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
   h.push('<div class="otitle" style="font-size:32px">MULTIJOUEUR</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:480px;margin:12px 0">');
-  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;width:100%;max-width:620px;margin:12px 0">');
+  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px">');
   h.push('<div style="font-size:13px;font-weight:700;color:#22c55e">Créer</div>');
-  var _mb='padding:5px 4px;border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;transition:all .15s;';
+  var _mb='padding:9px 6px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:all .15s;';
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">');
   h.push('<button id="mp-mode-normal" onclick="mpSetMode(\'normal\')" style="'+_mb+'border:1px solid #f97316;background:transparent;color:#f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">Normal</button>');
   h.push('<button id="mp-mode-nozoom" onclick="mpSetMode(\'nozoom\')" style="'+_mb+'border:1px solid #f97316;background:transparent;color:#f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">No-Zoom</button>');
   h.push('<button id="mp-mode-perf"  onclick="mpSetMode(\'perfection\')" style="'+_mb+'border:1px solid #7c3aed;background:transparent;color:#a78bfa" onmouseover="this.style.background=\'#7c3aed\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#a78bfa\'">Perfection</button>');
-  h.push('<button id="mp-mode-chill" onclick="mpSetMode(\'chill\')"  style="'+_mb+'border:1px solid #3b82f6;background:transparent;color:#60a5fa" onmouseover="this.style.background=\'#3b82f6\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#60a5fa\'">Chill ☕</button>');
+  h.push('<button id="mp-mode-chill" onclick="mpSetMode(\'chill\')"  style="'+_mb+'border:1px solid #3b82f6;background:transparent;color:#60a5fa" onmouseover="this.style.background=\'#3b82f6\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#60a5fa\'">Chill</button>');
   h.push('</div>');
-  h.push('<select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="-1">Tout niveaux</option><option value="0">Expert</option><option value="1">Difficile</option><option value="2">Moyen</option><option value="3">Facile</option></select>');
-  h.push('<select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px"><option value="5">5 manches</option><option value="10">10 manches</option></select>');
-  if(!user) h.push('<input id="mp-name-create" placeholder="Pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
-  h.push('<button onclick="mpDoCreate()" style="padding:8px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer">Créer</button>');
+  h.push('<select id="mp-level" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:8px;padding:9px;color:#e2e8f0;font-size:13px"><option value="-1">Tout niveaux</option><option value="0">Expert</option><option value="1">Difficile</option><option value="2">Moyen</option><option value="3">Facile</option></select>');
+  h.push('<select id="mp-rounds" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:8px;padding:9px;color:#e2e8f0;font-size:13px"><option value="5">5 manches</option><option value="10">10 manches</option></select>');
+  if(!user) h.push('<input id="mp-name-create" placeholder="Pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:8px;padding:9px;color:#e2e8f0;font-size:13px">');
+  h.push('<button onclick="mpDoCreate()" style="padding:12px;border-radius:9px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer;font-size:14px">Créer</button>');
   h.push('</div>');
-  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:8px">');
+  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px">');
   h.push('<div style="font-size:13px;font-weight:700;color:#f97316">Rejoindre</div>');
-  h.push('<input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:10px;color:#f97316;font-size:22px;font-weight:700;letter-spacing:6px;text-align:center;text-transform:uppercase">');
-  if(!user) h.push('<input id="mp-name-join" placeholder="Pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:6px;color:#e2e8f0;font-size:12px">');
-  h.push('<button onclick="mpDoJoin()" style="padding:8px;border-radius:7px;border:none;background:#f97316;color:#fff;font-weight:700;cursor:pointer">Rejoindre</button>');
+  h.push('<input id="mp-code" placeholder="CODE" maxlength="6" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:8px;padding:14px;color:#f97316;font-size:26px;font-weight:700;letter-spacing:8px;text-align:center;text-transform:uppercase">');
+  if(!user) h.push('<input id="mp-name-join" placeholder="Pseudo" style="background:#1a2238;border:1px solid #2d3f5e;border-radius:8px;padding:9px;color:#e2e8f0;font-size:13px">');
+  h.push('<button onclick="mpDoJoin()" style="padding:12px;border-radius:9px;border:none;background:#f97316;color:#fff;font-weight:700;cursor:pointer;font-size:14px">Rejoindre</button>');
   h.push('</div>');
   h.push('</div>');
   h.push('<button onclick="showMenu()" style="padding:9px 22px;border-radius:9px;border:1px solid #334155;background:transparent;color:#94a3b8;font-size:12px;font-weight:600;cursor:pointer">← Retour</button>');
