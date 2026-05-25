@@ -405,7 +405,7 @@ function showMenu(){
     {t:'Normal', d:T('ruleNormal')},
     {t:'No-Zoom', d:T('ruleNozoom')},
     {t:'Perfection', d:T('rulePerfection')},
-    {t:'Chill ☕', d:T('ruleChill')},
+    {t:'Chill', d:T('ruleChill')},
     {t:T('dailyChallenge'), d:T('ruleDaily')}
   ];
   rules.forEach(function(r,i){
