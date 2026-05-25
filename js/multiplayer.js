@@ -196,34 +196,34 @@ function mpLaunchGame() {
 // Chaque client affiche le countdown localement.
 // L'hùte passe ù 'playing' quand c'est terminù ù les autres reùoivent la mise ù jour Firebase.
 var _cdTimer = null;
-var _cdDone  = false;
-
 function mpHandleCountdown(room) {
-  if(_cdDone) return;
   clearTimeout(_cdTimer);
   var ov = document.getElementById('overlay');
-  var elapsed   = Date.now() - (room.countdownStart || Date.now());
+  var elapsed = Date.now() - (room.countdownStart||Date.now());
   var remaining = Math.max(0, 3000 - elapsed);
-  var sec       = Math.ceil(remaining / 1000);
+  var sec = Math.ceil(remaining/1000);
+
   ov.innerHTML = '<div class="otitle" style="font-size:90px;color:#f97316;line-height:1">'+(sec||'?')+'</div><div style="font-size:16px;color:#94a3b8;margin-top:8px">La partie commence !</div>';
   ov.classList.remove('h');
+
   if(remaining > 0) {
     _cdTimer = setTimeout(function(){ mpHandleCountdown(room); }, Math.min(remaining, 300));
   } else {
+    // L'hùte ùcrit roundStart dans le futur (+1500ms) pour absorber le dùlai rùseau
+    // Tous les clients recevront le mùme timestamp et dùmarreront au mùme moment
     if(mp.isHost) {
-      var syncedStart = Date.now() + 2500;
+      var syncedStart = Date.now() + 2500; // +2500ms : absorbe dùlai onValue (200-800ms) + marge
       update(mp.roomRef, { status:'playing', roundStart: syncedStart });
     }
-    // InvitÈs : attendre le onValue Firebase, ne pas reboucler
+    // Les non-hùtes reùoivent status:'playing' via onValue avec le mùme roundStart
   }
 }
 
-
+// ??? Dùmarrer un round ù appelù quand status passe ù 'playing' ???????????????
 function mpHandlePlaying(room) {
   var rIdx = room.round||0;
 
   // Annuler le countdown local (cas non-hùte : _cdTimer encore actif)
-  _cdDone = true;
   clearTimeout(_cdTimer);
 
   // Si c'est le mùme round et qu'il est dùjù actif ? simple rafraùchissement panel
@@ -388,82 +388,162 @@ function mpAdvance(rIdx) {
 function mpHandleRoundEnd(room) {
   clearInterval(mp.timerInterval);
   mpRoundActive = false;
-  gameActive = false;
-  mpCurrentRound = -1; // reset pour que le prochain round passe le guard dans mpHandlePlaying
+  gameActive    = false;
+  mpCurrentRound = -1;
 
-  var rIdx  = room.currentRoundResults!==undefined ? room.currentRoundResults : (room.round||0);
-  var seeds = room.roundSeeds||[];
-  var place = typeof ROUNDS!=='undefined' ? ROUNDS[seeds[rIdx]||0] : {name:'?',lat:0,lng:0};
+  var rIdx    = room.currentRoundResults!==undefined ? room.currentRoundResults : (room.round||0);
+  var seeds   = room.roundSeeds||[];
+  var place   = typeof ROUNDS!=='undefined' ? ROUNDS[seeds[rIdx]||0] : {name:'?',lat:0,lng:0};
   var answers = (room.answers||{})[rIdx]||{};
   var players = room.players||{};
 
-  // Masquer le panel live
+  // ?? VÈrifier que toutes les rÈponses sont prÈsentes ??????????????????????
+  var allPresent = Object.keys(players).every(function(pid){ return answers[pid]!==undefined; });
+  if(!allPresent) {
+    setTimeout(function(){
+      get(ref(rtdb,'rooms/'+mp.roomCode)).then(function(s){
+        if(s.exists()) mpHandleRoundEnd(s.val());
+      }).catch(function(){});
+    }, 1000);
+    return;
+  }
+
+  // ?? Masquer panel live ????????????????????????????????????????????????????
   var lp = document.getElementById('mp-live-panel');
   if(lp) lp.style.display='none';
 
-  // ?? Afficher le lieu cible + lignes de tous ??
+  // ?? Carte : lieu cible + marqueurs + lignes de tous ???????????????????????
   mpClearOtherMarkers();
   if(window.map && place.lat) {
     if(targetMarker){ targetMarker.remove(); targetMarker=null; }
     if(lineLayer){    lineLayer.remove();    lineLayer=null;    }
 
-    var popup = '<div style="font-family:system-ui,sans-serif;font-size:13px"><b style="color:#15803d">? '+place.name.split('ù')[0].trim()+'</b></div>';
+    var placeName = place.name ? place.name.split('\u2014')[0].trim() : '?';
     targetMarker = L.marker([place.lat,place.lng], {icon:makePin('#22c55e')})
-      .bindPopup(popup,{maxWidth:220}).addTo(map).openPopup();
+      .bindPopup('<div style="font-family:system-ui;font-size:13px"><b style="color:#15803d">\u2713 '+placeName+'</b></div>',{maxWidth:220})
+      .addTo(map).openPopup();
 
     var bounds = [[place.lat,place.lng]];
     Object.entries(answers).forEach(function([pid,ans]) {
       if(!ans.pos||ans.pos.lat==null) return;
       var p=players[pid], col=(p&&p.color)||mpColorFor(pid);
-      var isMe=pid===mp.playerId;
+      var isMe = pid===mp.playerId;
       var icon = isMe ? makePin(col) : L.divIcon({
         className:'',
-        html: '<div style="width:20px;height:20px;background:'+col+';border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 8px rgba(0,0,0,.4);position:relative">'
-            + '<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(45deg);font-size:8px;color:#fff;font-weight:700">'+((p&&p.name)?p.name[0].toUpperCase():'?')+'</div></div>',
-        iconSize:[20,20],iconAnchor:[10,20]
+        html:'<div style="width:22px;height:22px;background:'+col+';border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 8px rgba(0,0,0,.4);position:relative">'
+            +'<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(45deg);font-size:9px;color:#fff;font-weight:700">'+((p&&p.name)?p.name[0].toUpperCase():'?')+'</div></div>',
+        iconSize:[22,22],iconAnchor:[11,22]
       });
-      var m = L.marker([ans.pos.lat,ans.pos.lng], {icon})
-        .bindPopup('<div style="font-family:system-ui;font-size:12px"><b style="color:'+col+'">'+(p?p.name:'?')+(isMe?' (moi)':'')+'</b><br>'+fmtDst(ans.dist)+'<br><b style="color:#f97316">+'+fmtPts(ans.pts)+' pts</b></div>')
-        .addTo(map);
-      L.polyline([[ans.pos.lat,ans.pos.lng],[place.lat,place.lng]],{color:col,weight:2,dashArray:'6 4',opacity:0.75}).addTo(map);
+      var popup = '<div style="font-family:system-ui;font-size:12px">'
+        +'<b style="color:'+col+'">'+(p?p.name:'?')+(isMe?' (moi)':'')+'</b><br>'
+        +fmtDst(ans.dist)+'<br>'
+        +'<b style="color:#f97316">+'+fmtPts(ans.pts)+' pts</b></div>';
+      var m = L.marker([ans.pos.lat,ans.pos.lng],{icon}).bindPopup(popup).addTo(map);
+      L.polyline([[ans.pos.lat,ans.pos.lng],[place.lat,place.lng]],
+        {color:col,weight:2.5,dashArray:'6 4',opacity:0.8}).addTo(map);
       mpOtherMarkers[pid] = m;
       bounds.push([ans.pos.lat,ans.pos.lng]);
     });
     if(bounds.length>1) try{ map.fitBounds(L.latLngBounds(bounds),{padding:[60,60]}); }catch(e){}
   }
 
-  // ?? Overlay classement ??
+  // ?? Construire l'overlay style showInter ??????????????????????????????????
+  var nb      = (room.options||{}).nbRounds||5;
+  var next    = rIdx+1;
+  var myAns   = answers[mp.playerId]||{};
+  var myPts   = myAns.pts||0;
+  var myDist  = myAns.dist;
+  var placeName = place.name ? place.name.split('\u2014')[0].trim() : '?';
+  var placeDesc = place.desc || '';
+
+  // Score perso cette manche
+  var myPlayer = players[mp.playerId]||{};
+  var myScore  = myPlayer.score||0;
+  var effLevel = chillMode ? 5 : (fixedLevel>=0 ? 5-fixedLevel : 5-(curL||0));
+  var maxPts   = (typeof BASE_PTS!=='undefined') ? BASE_PTS[Math.max(0,Math.min(5,effLevel))] : 3000;
+  var pctRound = maxPts>0 ? Math.round(myPts/maxPts*100) : 0;
+  var barColor = pctRound>=80?'#22c55e':pctRound>=50?'#fbbf24':'#f97316';
+
+  // RÈsultats triÈs par pts de ce round
   var results = Object.entries(players).map(function([pid,p]) {
-    var ans=(answers[pid]||{}); return {pid,name:p.name,photo:p.photo,color:p.color||mpColorFor(pid),score:p.score||0,pts:ans.pts||0,dist:ans.dist};
+    var ans=answers[pid]||{};
+    return {pid,name:p.name,photo:p.photo,color:p.color||mpColorFor(pid),score:p.score||0,pts:ans.pts||0,dist:ans.dist};
   }).sort(function(a,b){ return b.pts-a.pts; });
 
-  var nb = (room.options||{}).nbRounds||5;
-  var next = rIdx+1;
+  var imgId = 'mpwimg'+Date.now();
+  var medals = ['\uD83E\uDD47','\uD83E\uDD48','\uD83E\uDD49'];
+
   var h=[];
-  h.push('<div style="font-size:13px;color:#f97316;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px">Manche '+(rIdx+1)+'/'+nb+'</div>');
-  h.push('<div style="font-size:17px;font-weight:700;color:#e2e8f0;margin-bottom:14px">'+place.name.split('ù')[0].trim()+'</div>');
 
+  // Photo Wikipedia (placeholder)
+  h.push('<div id="'+imgId+'" style="width:100%;max-width:380px;height:140px;background:#111827;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:#374151;font-size:11px">??</span></div>');
+
+  // Label manche
+  h.push('<div style="font-size:11px;color:#f97316;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-top:2px">Manche '+(rIdx+1)+'/'+nb+'</div>');
+
+  // Nom du lieu
+  h.push('<div style="font-size:20px;font-weight:700;color:#e2e8f0;text-align:center;max-width:380px">'+placeName+'</div>');
+
+  // Description
+  if(placeDesc){
+    h.push('<div style="font-size:11px;color:#94a3b8;text-align:center;max-width:360px;line-height:1.5;margin-top:-4px">'+placeDesc+'</div>');
+  }
+
+  // Score perso + barre
+  h.push('<div style="width:100%;max-width:340px;background:#111827;border-radius:12px;padding:12px 16px;display:flex;flex-direction:column;gap:6px">');
+  h.push('<div style="display:flex;justify-content:space-between;align-items:center">');
+  h.push('<span style="font-size:24px;font-weight:700;color:'+barColor+'">+'+fmtPts(myPts)+' pts</span>');
+  h.push('<span style="font-size:12px;color:#6b7280">'+(myDist!=null?fmtDst(myDist):'RatÈ')+'</span>');
+  h.push('</div>');
+  h.push('<div style="height:7px;background:#1e2d45;border-radius:4px;overflow:hidden">');
+  h.push('<div style="width:'+pctRound+'%;height:100%;background:'+barColor+';border-radius:4px"></div>');
+  h.push('</div>');
+  h.push('<div style="font-size:11px;color:#6b7280">'+fmtPts(myPts)+' / '+fmtPts(maxPts)+' pts max ∑ Total : <b style="color:#f97316">'+fmtPts(myScore)+' pts</b></div>');
+  h.push('</div>');
+
+  // Classement joueurs
+  h.push('<div style="width:100%;max-width:380px;display:flex;flex-direction:column;gap:3px">');
   results.forEach(function(r,i) {
-    var isMe=r.pid===mp.playerId, medal=i===0?'??':i===1?'??':i===2?'??':(i+1)+'.';
-    h.push('<div style="display:flex;align-items:center;gap:10px;padding:8px 14px;background:'+(isMe?'#1a2238':'transparent')+';border-radius:8px;margin-bottom:2px;border:'+(isMe?'1px solid '+r.color:'1px solid transparent')+'">');
-    h.push('<span style="font-size:16px;min-width:26px">'+medal+'</span>');
-    if(r.photo) h.push('<img src="'+r.photo+'" style="width:24px;height:24px;border-radius:50%;border:2px solid '+r.color+';object-fit:cover">');
-    else h.push('<div style="width:24px;height:24px;border-radius:50%;background:'+r.color+'33;border:2px solid '+r.color+';display:flex;align-items:center;justify-content:center;font-size:10px;color:'+r.color+';font-weight:700">'+r.name[0].toUpperCase()+'</div>');
-    h.push('<span style="flex:1;font-size:13px;font-weight:'+(isMe?'700':'400')+';color:'+(isMe?r.color:'#e2e8f0')+'">'+r.name+(isMe?' (moi)':'')+'</span>');
-    h.push('<span style="font-size:11px;color:#6b7280;margin-right:6px">'+fmtDst(r.dist)+'</span>');
-    h.push('<span style="font-size:14px;font-weight:700;color:#f97316">+'+fmtPts(r.pts)+'</span>');
+    var isMe=r.pid===mp.playerId;
+    var medal=i<3?medals[i]:(i+1)+'.';
+    h.push('<div style="display:flex;align-items:center;gap:8px;padding:7px 12px;background:'+(isMe?'#1a2238':'#0d1120')+';border-radius:8px;border:1px solid '+(isMe?r.color:'#1e2d45')+'">');
+    h.push('<span style="font-size:14px;min-width:24px;text-align:center">'+medal+'</span>');
+    if(r.photo) h.push('<img src="'+r.photo+'" style="width:22px;height:22px;border-radius:50%;border:2px solid '+r.color+';object-fit:cover;flex-shrink:0">');
+    else h.push('<div style="width:22px;height:22px;border-radius:50%;background:'+r.color+'33;border:2px solid '+r.color+';display:flex;align-items:center;justify-content:center;font-size:9px;color:'+r.color+';font-weight:700;flex-shrink:0">'+r.name[0].toUpperCase()+'</div>');
+    h.push('<span style="flex:1;font-size:12px;font-weight:'+(isMe?'700':'400')+';color:'+(isMe?r.color:'#e2e8f0')+';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+r.name+'</span>');
+    h.push('<span style="font-size:11px;color:#6b7280;margin-right:6px;flex-shrink:0">'+fmtDst(r.dist)+'</span>');
+    h.push('<span style="font-size:13px;font-weight:700;color:#f97316;flex-shrink:0">+'+fmtPts(r.pts)+'</span>');
+    h.push('<span style="font-size:10px;color:#4b5563;margin-left:4px;flex-shrink:0">'+fmtPts(r.score)+'</span>');
     h.push('</div>');
-    h.push('<div style="font-size:10px;color:#4b5563;padding-left:56px;margin-bottom:3px">Total : '+fmtPts(r.score)+' pts</div>');
   });
+  h.push('</div>');
 
-  h.push('<div style="font-size:12px;color:#6b7280;margin-top:10px">'+(next<nb ? 'Prochaine manche dans 6sù' : 'Fin de partie dans 6sù')+'</div>');
+  // Compte ‡ rebours
+  h.push('<div style="font-size:12px;color:#6b7280">'+(next<nb?'Prochaine manche dans 6s\u2026':'Fin de partie dans 6s\u2026')+'</div>');
 
   var ov = document.getElementById('overlay');
   ov.innerHTML = h.join('');
   ov.classList.remove('h');
+
+  // Fetch photo Wikipedia (identique ‡ showInter)
+  (function(id, q){
+    function tryWiki(lang){
+      fetch('https://'+lang+'.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(q))
+        .then(function(r){return r.json();})
+        .then(function(d){
+          var el=document.getElementById(id);
+          if(!el) return;
+          if(d.thumbnail&&d.thumbnail.source){
+            el.innerHTML='<img src="'+d.thumbnail.source+'" style="width:100%;height:100%;object-fit:cover;border-radius:10px" alt="">';
+          } else if(lang==='fr'){tryWiki('en');}
+          else{el.style.display='none';}
+        }).catch(function(){ var el=document.getElementById(id); if(el) el.style.display='none'; });
+    }
+    tryWiki('fr');
+  })(imgId, placeName);
 }
 
-// ??? Rùsultats finaux ?????????????????????????????????????????????????????????
+
 function mpShowFinalResults(room) {
   clearInterval(mp.timerInterval);
   mpRoundActive = false;
@@ -623,7 +703,7 @@ window.mpOnConfirm = function() {
 // ??? Quitter ?????????????????????????????????????????????????????????????????
 function mpLeaveRoom() {
   clearInterval(mp.timerInterval);
-  clearTimeout(_cdTimer); _cdDone=false;
+  clearTimeout(_cdTimer);
   mpRemoveLivePanel(); mpClearOtherMarkers();
   mp.listeners.forEach(function(l){ try{off(l.ref,'value',l.fn);}catch(e){} });
   mp.listeners=[];
@@ -638,7 +718,7 @@ function mpLeaveRoom() {
 }
 
 function mpCleanup() {
-  clearInterval(mp.timerInterval); clearTimeout(_cdTimer); _cdDone=false;
+  clearInterval(mp.timerInterval); clearTimeout(_cdTimer);
   mpRemoveLivePanel(); mpClearOtherMarkers();
   mp.listeners.forEach(function(l){ try{off(l.ref);}catch(e){} });
   mp.listeners=[]; mpRoundActive=false; window._mpMode=false;

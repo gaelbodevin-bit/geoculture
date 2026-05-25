@@ -151,7 +151,7 @@ const ROUNDS=[
   ]},
   {name:"Angkor Wat — Siem Reap, Cambodge",lat:13.4125,lng:103.867,desc:"Angkor Wat est le plus grand bâtiment religieux du monde. La cité d'Angkor, qui l'entourait, était au XIIe siècle la plus grande ville pré-industrielle du monde, avec peut-être un million d'habitants.",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple-montagne khmer construit par Suryavarman II au XIIe siècle, dédié à Vishnu, plus grand édifice religieux du monde"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province du nord-ouest du pays, bord d'un grand lac intérieur"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Temple dans la Province du Siem Reap nord-ouest du pays, bord d'un grand lac intérieur"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple du monde, joyau de l'architecture khmère, Cambodge"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le complexe d'Angkor Wat à Siem Reap, Cambodge"}
   ]},
