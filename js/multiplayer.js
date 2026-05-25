@@ -116,6 +116,7 @@ function mpHandleRoomChange(room) {
     case 'playing':   mpHandlePlaying(room); break;
     case 'roundEnd':  mpHandleRoundEnd(room); break;
     case 'finished':  mpShowFinalResults(room); break;
+    case 'disbanded': mpOnDisbanded(room); break;
   }
 }
 
@@ -397,7 +398,7 @@ function mpHandleRoundEnd(room) {
   var answers = (room.answers||{})[rIdx]||{};
   var players = room.players||{};
 
-  // ?? VÈrifier que toutes les rÈponses sont prÈsentes ??????????????????????
+  // ?? Vùrifier que toutes les rùponses sont prùsentes ??????????????????????
   var allPresent = Object.keys(players).every(function(pid){ return answers[pid]!==undefined; });
   if(!allPresent) {
     setTimeout(function(){
@@ -464,7 +465,7 @@ function mpHandleRoundEnd(room) {
   var pctRound = maxPts>0 ? Math.round(myPts/maxPts*100) : 0;
   var barColor = pctRound>=80?'#22c55e':pctRound>=50?'#fbbf24':'#f97316';
 
-  // RÈsultats triÈs par pts de ce round
+  // Rùsultats triùs par pts de ce round
   var results = Object.entries(players).map(function([pid,p]) {
     var ans=answers[pid]||{};
     return {pid,name:p.name,photo:p.photo,color:p.color||mpColorFor(pid),score:p.score||0,pts:ans.pts||0,dist:ans.dist};
@@ -493,12 +494,12 @@ function mpHandleRoundEnd(room) {
   h.push('<div style="width:100%;max-width:340px;background:#111827;border-radius:12px;padding:12px 16px;display:flex;flex-direction:column;gap:6px">');
   h.push('<div style="display:flex;justify-content:space-between;align-items:center">');
   h.push('<span style="font-size:24px;font-weight:700;color:'+barColor+'">+'+fmtPts(myPts)+' pts</span>');
-  h.push('<span style="font-size:12px;color:#6b7280">'+(myDist!=null?fmtDst(myDist):'RatÈ')+'</span>');
+  h.push('<span style="font-size:12px;color:#6b7280">'+(myDist!=null?fmtDst(myDist):'Ratù')+'</span>');
   h.push('</div>');
   h.push('<div style="height:7px;background:#1e2d45;border-radius:4px;overflow:hidden">');
   h.push('<div style="width:'+pctRound+'%;height:100%;background:'+barColor+';border-radius:4px"></div>');
   h.push('</div>');
-  h.push('<div style="font-size:11px;color:#6b7280">'+fmtPts(myPts)+' / '+fmtPts(maxPts)+' pts max ∑ Total : <b style="color:#f97316">'+fmtPts(myScore)+' pts</b></div>');
+  h.push('<div style="font-size:11px;color:#6b7280">'+fmtPts(myPts)+' / '+fmtPts(maxPts)+' pts max ù Total : <b style="color:#f97316">'+fmtPts(myScore)+' pts</b></div>');
   h.push('</div>');
 
   // Classement joueurs
@@ -518,14 +519,14 @@ function mpHandleRoundEnd(room) {
   });
   h.push('</div>');
 
-  // Compte ‡ rebours
+  // Compte ù rebours
   h.push('<div style="font-size:12px;color:#6b7280">'+(next<nb?'Prochaine manche dans 6s\u2026':'Fin de partie dans 6s\u2026')+'</div>');
 
   var ov = document.getElementById('overlay');
   ov.innerHTML = h.join('');
   ov.classList.remove('h');
 
-  // Fetch photo Wikipedia (identique ‡ showInter)
+  // Fetch photo Wikipedia (identique ù showInter)
   (function(id, q){
     function tryWiki(lang){
       fetch('https://'+lang+'.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(q))
@@ -703,18 +704,34 @@ window.mpOnConfirm = function() {
 // ??? Quitter ?????????????????????????????????????????????????????????????????
 function mpLeaveRoom() {
   clearInterval(mp.timerInterval);
-  clearTimeout(_cdTimer);
+  clearTimeout(_cdTimer); _cdDone=false;
+  mpRemoveLivePanel(); mpClearOtherMarkers();
+  if(mp.roomRef && mp.playerId) {
+    update(mp.roomRef, { status:'disbanded', disbandedBy:mp.playerId, disbandedAt:Date.now() }).catch(function(){});
+  }
+  mp.listeners.forEach(function(l){ try{off(l.ref,'value',l.fn);}catch(e){} });
+  mp.listeners=[];
+  if(mp.roomRef) { setTimeout(function(){ remove(mp.roomRef).catch(function(){}); }, 1000); }
+  mp.roomCode=mp.playerId=mp.roomRef=null; mp.isHost=false;
+  mpCurrentRound=-1; mpAnswered=false; mpRoundActive=false; window._mpMode=false;
+  if(typeof showMenu==='function') showMenu();
+}
+function mpOnDisbanded(room) {
+  if(room.disbandedBy === mp.playerId) return; // c'est nous qui avons quittÈ, dÈj‡ gÈrÈ
+  clearInterval(mp.timerInterval);
+  clearTimeout(_cdTimer); _cdDone=false;
   mpRemoveLivePanel(); mpClearOtherMarkers();
   mp.listeners.forEach(function(l){ try{off(l.ref,'value',l.fn);}catch(e){} });
   mp.listeners=[];
-  if(mp.roomRef&&mp.playerId){
-    var pRef=ref(rtdb,'rooms/'+mp.roomCode+'/players/'+mp.playerId);
-    remove(pRef).then(function(){ if(mp.isHost)remove(mp.roomRef); }).catch(function(){});
+  var ov = document.getElementById('overlay');
+  if(ov){
+    ov.innerHTML = '<div class="otitle" style="font-size:28px">Partie terminÈe</div>'
+      + '<div style="font-size:14px;color:#94a3b8;margin-top:8px">Un joueur a quittÈ la partie.</div>';
+    ov.classList.remove('h');
   }
   mp.roomCode=mp.playerId=mp.roomRef=null; mp.isHost=false;
-  mpCurrentRound=-1; mpAnswered=false; mpRoundActive=false;
-  window._mpMode=false;
-  if(typeof showMenu==='function') showMenu();
+  mpCurrentRound=-1; mpAnswered=false; mpRoundActive=false; window._mpMode=false;
+  setTimeout(function(){ if(typeof showMenu==='function') showMenu(); }, 2000);
 }
 
 function mpCleanup() {
