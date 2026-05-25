@@ -374,6 +374,10 @@ function showEnd(){
 }
 
 function showMenu(){
+  // En mode MP, quitter la partie (mpLeaveRoom gère le retour au menu)
+  if(window._mpMode && typeof window.mpLeaveRoom==='function'){
+    window.mpLeaveRoom(); return;
+  }
   clearInterval(tiv);
   gameActive=false;
   document.body.classList.add('menu-mode');
