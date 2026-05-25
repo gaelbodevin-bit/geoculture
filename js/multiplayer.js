@@ -196,34 +196,34 @@ function mpLaunchGame() {
 // Chaque client affiche le countdown localement.
 // L'hùte passe ù 'playing' quand c'est terminù ù les autres reùoivent la mise ù jour Firebase.
 var _cdTimer = null;
+var _cdDone  = false;
+
 function mpHandleCountdown(room) {
+  if(_cdDone) return;
   clearTimeout(_cdTimer);
   var ov = document.getElementById('overlay');
-  var elapsed = Date.now() - (room.countdownStart||Date.now());
+  var elapsed   = Date.now() - (room.countdownStart || Date.now());
   var remaining = Math.max(0, 3000 - elapsed);
-  var sec = Math.ceil(remaining/1000);
-
+  var sec       = Math.ceil(remaining / 1000);
   ov.innerHTML = '<div class="otitle" style="font-size:90px;color:#f97316;line-height:1">'+(sec||'?')+'</div><div style="font-size:16px;color:#94a3b8;margin-top:8px">La partie commence !</div>';
   ov.classList.remove('h');
-
   if(remaining > 0) {
     _cdTimer = setTimeout(function(){ mpHandleCountdown(room); }, Math.min(remaining, 300));
   } else {
-    // L'hùte ùcrit roundStart dans le futur (+1500ms) pour absorber le dùlai rùseau
-    // Tous les clients recevront le mùme timestamp et dùmarreront au mùme moment
     if(mp.isHost) {
-      var syncedStart = Date.now() + 2500; // +2500ms : absorbe dùlai onValue (200-800ms) + marge
+      var syncedStart = Date.now() + 2500;
       update(mp.roomRef, { status:'playing', roundStart: syncedStart });
     }
-    // Les non-hùtes reùoivent status:'playing' via onValue avec le mùme roundStart
+    // InvitÈs : attendre le onValue Firebase, ne pas reboucler
   }
 }
 
-// ??? Dùmarrer un round ù appelù quand status passe ù 'playing' ???????????????
+
 function mpHandlePlaying(room) {
   var rIdx = room.round||0;
 
   // Annuler le countdown local (cas non-hùte : _cdTimer encore actif)
+  _cdDone = true;
   clearTimeout(_cdTimer);
 
   // Si c'est le mùme round et qu'il est dùjù actif ? simple rafraùchissement panel
@@ -373,54 +373,25 @@ function mpWatchAllAnswered(rIdx) {
 
 function mpAdvance(rIdx) {
   get(mp.roomRef).then(function(snap) {
-    var room = snap.val(), opts = room.options||{}, next = rIdx+1;
-    var players = room.players||{};
-
-    // Consolider les scores depuis toutes les rÈponses Firebase
-    // …vite les race conditions de get/set sÈparÈs dans mpSubmitAnswer
-    var updates = { status: 'roundEnd', currentRoundResults: rIdx };
-    Object.keys(players).forEach(function(pid) {
-      var total = 0;
-      for(var r = 0; r <= rIdx; r++) {
-        var ans = ((room.answers||{})[r]||{})[pid];
-        if(ans && ans.pts) total += ans.pts;
-      }
-      updates['players/' + pid + '/score'] = total;
-    });
-
-    // …crire scores + roundEnd en une seule update atomique
-    update(mp.roomRef, updates).then(function() {
+    var room=snap.val(), opts=room.options||{}, next=rIdx+1;
+    update(mp.roomRef, { status:'roundEnd', currentRoundResults:rIdx }).then(function() {
       setTimeout(function() {
         update(mp.roomRef, next >= (opts.nbRounds||5)
-          ? { status: 'finished' }
-          : { status: 'playing', round: next, roundStart: Date.now()+2500 });
+          ? { status:'finished' }
+          : { status:'playing', round:next, roundStart:Date.now()+1500 }); // +1500ms pour absorber dùlai rùseau
       }, 6000);
     });
   });
 }
 
-
+// ??? Rùsultats d'un round ?????????????????????????????????????????????????????
 function mpHandleRoundEnd(room) {
   clearInterval(mp.timerInterval);
   mpRoundActive = false;
   gameActive = false;
-  mpCurrentRound = -1;
+  mpCurrentRound = -1; // reset pour que le prochain round passe le guard dans mpHandlePlaying
 
   var rIdx  = room.currentRoundResults!==undefined ? room.currentRoundResults : (room.round||0);
-  players = room.players||{};
-  answers = (room.answers||{})[rIdx]||{};
-
-  // VÈrifier que tous les joueurs ont une rÈponse ó si non, attendre 1s et retenter
-  // (cas o˘ roundEnd arrive avant que le dernier answer soit propagÈ)
-  var allPresent = Object.keys(players).every(function(pid){ return answers[pid]!==undefined; });
-  if(!allPresent) {
-    setTimeout(function(){
-      get(ref(rtdb,'rooms/'+mp.roomCode)).then(function(s){
-        if(s.exists()) mpHandleRoundEnd(s.val());
-      }).catch(function(){});
-    }, 1000);
-    return;
-  }
   var seeds = room.roundSeeds||[];
   var place = typeof ROUNDS!=='undefined' ? ROUNDS[seeds[rIdx]||0] : {name:'?',lat:0,lng:0};
   var answers = (room.answers||{})[rIdx]||{};
@@ -652,7 +623,7 @@ window.mpOnConfirm = function() {
 // ??? Quitter ?????????????????????????????????????????????????????????????????
 function mpLeaveRoom() {
   clearInterval(mp.timerInterval);
-  clearTimeout(_cdTimer);
+  clearTimeout(_cdTimer); _cdDone=false;
   mpRemoveLivePanel(); mpClearOtherMarkers();
   mp.listeners.forEach(function(l){ try{off(l.ref,'value',l.fn);}catch(e){} });
   mp.listeners=[];
@@ -667,7 +638,7 @@ function mpLeaveRoom() {
 }
 
 function mpCleanup() {
-  clearInterval(mp.timerInterval); clearTimeout(_cdTimer);
+  clearInterval(mp.timerInterval); clearTimeout(_cdTimer); _cdDone=false;
   mpRemoveLivePanel(); mpClearOtherMarkers();
   mp.listeners.forEach(function(l){ try{off(l.ref);}catch(e){} });
   mp.listeners=[]; mpRoundActive=false; window._mpMode=false;
