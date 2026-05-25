@@ -212,7 +212,7 @@ function mpHandleCountdown(room) {
     // L'hùte ùcrit roundStart dans le futur (+1500ms) pour absorber le dùlai rùseau
     // Tous les clients recevront le mùme timestamp et dùmarreront au mùme moment
     if(mp.isHost) {
-      var syncedStart = Date.now() + 2500; // +2500ms : absorbe dÈlai onValue (200-800ms) + marge
+      var syncedStart = Date.now() + 2500; // +2500ms : absorbe dùlai onValue (200-800ms) + marge
       update(mp.roomRef, { status:'playing', roundStart: syncedStart });
     }
     // Les non-hùtes reùoivent status:'playing' via onValue avec le mùme roundStart
@@ -223,7 +223,10 @@ function mpHandleCountdown(room) {
 function mpHandlePlaying(room) {
   var rIdx = room.round||0;
 
-  // Si c'est le mùme round et qu'il est dùjù actif ? simple rafraùchissement panel
+  // Annuler le countdown local (cas non-hÙte : _cdTimer encore actif)
+  clearTimeout(_cdTimer);
+
+  // Si c'est le mÍme round et qu'il est dÈj‡ actif ? simple rafraÓchissement panel
   if(rIdx === mpCurrentRound && mpRoundActive) return;
 
   // Nouveau round ? initialiser
@@ -579,8 +582,10 @@ window.mpOnConfirm = function() {
   var pts=0, dist=null;
   if(playerPos && r) {
     dist = haversine(playerPos.lat,playerPos.lng,r.lat,r.lng);
-    var effLevel = chillMode ? 5 : level; // Chill : toujours score max, pas de pÈnalitÈ d'indice ni de timer
-    pts  = Math.round(BASE_PTS[effLevel]*0.8*Math.exp(-DIST_K*dist) + (chillMode ? 0 : BASE_PTS[effLevel]*0.2*(timeLeft/30)));
+    var effLevel = chillMode ? 5 : level; // Chill : toujours score max, pas de pùnalitù d'indice ni de timer
+    var distCoef  = chillMode ? 1.0 : 0.8;
+    var timeBonus = chillMode ? 0   : BASE_PTS[effLevel]*0.2*(timeLeft/30);
+    pts  = Math.round(BASE_PTS[effLevel]*distCoef*Math.exp(-DIST_K*dist) + timeBonus);
   }
 
   // Afficher marqueur couleur du joueur sur la carte
