@@ -223,10 +223,10 @@ function mpHandleCountdown(room) {
 function mpHandlePlaying(room) {
   var rIdx = room.round||0;
 
-  // Annuler le countdown local (cas non-hÙte : _cdTimer encore actif)
+  // Annuler le countdown local (cas non-hùte : _cdTimer encore actif)
   clearTimeout(_cdTimer);
 
-  // Si c'est le mÍme round et qu'il est dÈj‡ actif ? simple rafraÓchissement panel
+  // Si c'est le mùme round et qu'il est dùjù actif ? simple rafraùchissement panel
   if(rIdx === mpCurrentRound && mpRoundActive) return;
 
   // Nouveau round ? initialiser
@@ -297,13 +297,13 @@ function mpStartSyncTimer(roundStart, duration, rIdx) {
   }
 
 
-  // DÈsactiver toute transition CSS sur l'arc ó mise ‡ jour directe par JS
+  // Dùsactiver toute transition CSS sur l'arc ù mise ù jour directe par JS
   var arcEl = document.getElementById('arc');
   if(arcEl) arcEl.style.transition = 'none';
 
   function tick() {
     var now     = Date.now();
-    var elapsed = (now - roundStart) / 1000; // peut Ítre nÈgatif si roundStart est dans le futur
+    var elapsed = (now - roundStart) / 1000; // peut ùtre nùgatif si roundStart est dans le futur
 
     var remaining;
     if(elapsed < 0) {
@@ -373,25 +373,54 @@ function mpWatchAllAnswered(rIdx) {
 
 function mpAdvance(rIdx) {
   get(mp.roomRef).then(function(snap) {
-    var room=snap.val(), opts=room.options||{}, next=rIdx+1;
-    update(mp.roomRef, { status:'roundEnd', currentRoundResults:rIdx }).then(function() {
+    var room = snap.val(), opts = room.options||{}, next = rIdx+1;
+    var players = room.players||{};
+
+    // Consolider les scores depuis toutes les rÈponses Firebase
+    // …vite les race conditions de get/set sÈparÈs dans mpSubmitAnswer
+    var updates = { status: 'roundEnd', currentRoundResults: rIdx };
+    Object.keys(players).forEach(function(pid) {
+      var total = 0;
+      for(var r = 0; r <= rIdx; r++) {
+        var ans = ((room.answers||{})[r]||{})[pid];
+        if(ans && ans.pts) total += ans.pts;
+      }
+      updates['players/' + pid + '/score'] = total;
+    });
+
+    // …crire scores + roundEnd en une seule update atomique
+    update(mp.roomRef, updates).then(function() {
       setTimeout(function() {
         update(mp.roomRef, next >= (opts.nbRounds||5)
-          ? { status:'finished' }
-          : { status:'playing', round:next, roundStart:Date.now()+1500 }); // +1500ms pour absorber dùlai rùseau
+          ? { status: 'finished' }
+          : { status: 'playing', round: next, roundStart: Date.now()+2500 });
       }, 6000);
     });
   });
 }
 
-// ??? Rùsultats d'un round ?????????????????????????????????????????????????????
+
 function mpHandleRoundEnd(room) {
   clearInterval(mp.timerInterval);
   mpRoundActive = false;
   gameActive = false;
-  mpCurrentRound = -1; // reset pour que le prochain round passe le guard dans mpHandlePlaying
+  mpCurrentRound = -1;
 
   var rIdx  = room.currentRoundResults!==undefined ? room.currentRoundResults : (room.round||0);
+  players = room.players||{};
+  answers = (room.answers||{})[rIdx]||{};
+
+  // VÈrifier que tous les joueurs ont une rÈponse ó si non, attendre 1s et retenter
+  // (cas o˘ roundEnd arrive avant que le dernier answer soit propagÈ)
+  var allPresent = Object.keys(players).every(function(pid){ return answers[pid]!==undefined; });
+  if(!allPresent) {
+    setTimeout(function(){
+      get(ref(rtdb,'rooms/'+mp.roomCode)).then(function(s){
+        if(s.exists()) mpHandleRoundEnd(s.val());
+      }).catch(function(){});
+    }, 1000);
+    return;
+  }
   var seeds = room.roundSeeds||[];
   var place = typeof ROUNDS!=='undefined' ? ROUNDS[seeds[rIdx]||0] : {name:'?',lat:0,lng:0};
   var answers = (room.answers||{})[rIdx]||{};
