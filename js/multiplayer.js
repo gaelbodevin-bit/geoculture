@@ -398,8 +398,8 @@ function mpAdvance(rIdx) {
       }
       updates['players/' + pid + '/score'] = total;
     });
-    // Stocker le numÈro de la manche suivante dans Firebase
-    // L'hÙte dÈclenchera manuellement via le bouton "Manche suivante"
+    // Stocker le numùro de la manche suivante dans Firebase
+    // L'hùte dùclenchera manuellement via le bouton "Manche suivante"
     updates['nextRound'] = next;
     updates['totalRounds'] = opts.nbRounds||5;
     update(mp.roomRef, updates);
@@ -407,7 +407,7 @@ function mpAdvance(rIdx) {
 }
 
 
-// AppelÈ par le bouton "Manche suivante" (hÙte uniquement)
+// Appelù par le bouton "Manche suivante" (hùte uniquement)
 function mpLaunchNextRound() {
   if(!mp.isHost || !mp.roomRef) return;
   var btn = document.getElementById('mp-next-btn');
@@ -556,15 +556,15 @@ function mpHandleRoundEnd(room) {
   });
   h.push('</div>');
 
-  // Bouton "Manche suivante" (hÙte) ou attente (invitÈ)
+  // Bouton "Manche suivante" (hùte) ou attente (invitù)
   if(next < nb) {
     if(mp.isHost) {
       h.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="margin-top:4px;padding:12px 32px;border-radius:10px;border:none;background:#f97316;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Manche suivante ?</button>');
     } else {
-      h.push('<div style="font-size:13px;color:#94a3b8;padding:8px 16px;background:#0d1120;border-radius:8px;border:1px solid #1e2d45">En attente que l\'hÙte lance la manche suivante...</div>');
+      h.push('<div style="font-size:13px;color:#94a3b8;padding:8px 16px;background:#0d1120;border-radius:8px;border:1px solid #1e2d45">En attente que l\'hùte lance la manche suivante...</div>');
     }
   } else {
-    h.push('<div style="font-size:12px;color:#6b7280">Fin de partieÖ</div>');
+    h.push('<div style="font-size:12px;color:#6b7280">Fin de partieù</div>');
   }
 
   // Montrer la carte 3s avant d'ouvrir le bilan
@@ -719,7 +719,7 @@ window.mpOnConfirm = function() {
   mpAnswered = true;
   gameActive = false;
   clearInterval(tiv);            // stopper timer solo (sùcuritù)
-  clearInterval(mp.timerInterval); // stopper timer MP
+  // timer MP continue (cf. mpHandleRoundEnd)
 
   var r     = roundList[curR];
   var level = 5-(fixedLevel>=0?fixedLevel:curL);
