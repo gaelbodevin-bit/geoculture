@@ -27,7 +27,7 @@ var mpCurrentRound = -1;   // index de la manche actuellement jouùe
 var mpAnswered    = false;  // le joueur local a-t-il rùpondu ce round ?
 var mpRoundActive = false;  // la manche est-elle en cours (empùche les rù-init)
 var mpOtherMarkers = {};    // { playerId: L.marker }
-var mpPolylines   = [];    // polylines de fin de manche ‡ supprimer
+var mpPolylines   = [];    // polylines de fin de manche ù supprimer
 
 // Couleurs fixes par joueur
 var MP_COLORS = ['#3b82f6','#a855f7','#ec4899','#14b8a6','#f59e0b','#06b6d4','#84cc16','#f43f5e'];
@@ -165,7 +165,7 @@ function mpUpdateLobby(room) {
     if(p.photo) h.push('<img src="'+p.photo+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover">');
     else h.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;display:flex;align-items:center;justify-content:center;font-size:12px;color:#94a3b8">'+p.name[0].toUpperCase()+'</div>');
     h.push('<span style="flex:1;font-size:13px;color:'+(isMe?col:'#e2e8f0')+';font-weight:'+(isMe?'700':'400')+'">'+p.name+(isMe?' (moi)':'')+'</span>');
-    if(p.isHost) h.push('<span style="font-size:10px;color:#f97316;background:#3d1a05;padding:2px 6px;border-radius:4px">HÙte</span>');
+    if(p.isHost) h.push('<span style="font-size:10px;color:#f97316;background:#3d1a05;padding:2px 6px;border-radius:4px">Hùte</span>');
     h.push('</div>');
   });
   h.push('</div>');
@@ -174,7 +174,7 @@ function mpUpdateLobby(room) {
   if(mp.isHost) {
     h.push('<button onclick="mpLaunchGame()" '+(canStart?'':'disabled')+' style="padding:10px 28px;font-size:14px;font-weight:700;border-radius:9px;border:none;cursor:'+(canStart?'pointer':'not-allowed')+';background:'+(canStart?'#f97316':'#374151')+';color:#fff">'+(canStart?'? Lancer la partie':'En attente (min. 2 joueurs)')+'</button>');
   } else {
-    h.push('<div style="color:#94a3b8;font-size:13px;padding:10px">En attente que l\'hÙte lance...</div>');
+    h.push('<div style="color:#94a3b8;font-size:13px;padding:10px">En attente que l\'hùte lance...</div>');
   }
   h.push('<button onclick="mpLeaveRoom()" style="padding:10px 20px;font-size:13px;border-radius:9px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer">Quitter</button>');
   h.push('</div>');
@@ -196,7 +196,7 @@ function mpLaunchGame() {
 
 // ??? Countdown ???????????????????????????????????????????????????????????????
 // Chaque client affiche le countdown localement.
-// L'hÙte passe ù 'playing' quand c'est terminù ù les autres reùoivent la mise ù jour Firebase.
+// L'hùte passe ù 'playing' quand c'est terminù ù les autres reùoivent la mise ù jour Firebase.
 var _cdTimer = null;
 var _cdDone  = false;
 
@@ -214,13 +214,13 @@ function mpHandleCountdown(room) {
   if(remaining > 0) {
     _cdTimer = setTimeout(function(){ mpHandleCountdown(room); }, Math.min(remaining, 300));
   } else {
-    // L'hÙte ùcrit roundStart dans le futur (+1500ms) pour absorber le dùlai rùseau
+    // L'hùte ùcrit roundStart dans le futur (+1500ms) pour absorber le dùlai rùseau
     // Tous les clients recevront le mùme timestamp et dùmarreront au mùme moment
     if(mp.isHost) {
       var syncedStart = Date.now() + 2500; // +2500ms : absorbe dùlai onValue (200-800ms) + marge
       update(mp.roomRef, { status:'playing', roundStart: syncedStart });
     }
-    // Les non-hÙtes reùoivent status:'playing' via onValue avec le mùme roundStart
+    // Les non-hùtes reùoivent status:'playing' via onValue avec le mùme roundStart
   }
 }
 
@@ -288,7 +288,7 @@ function mpHandlePlaying(room) {
   // Timer synchronisù ù attendre que roundStart soit disponible dans Firebase
   var _rs = room.roundStart;
   if(!_rs || _rs <= 0) {
-    // roundStart pas encore ùcrit par l'hÙte ù attendre le prochain onValue
+    // roundStart pas encore ùcrit par l'hùte ù attendre le prochain onValue
     // mpHandlePlaying sera rappelù avec le roundStart correct
     // On affiche quand mùme l'indice mais sans dùmarrer le timer
     return;
@@ -365,12 +365,12 @@ function mpSubmitAnswer(pos, dist, pts, rIdx) {
     // Mettre ù jour le score total du joueur
     var scRef = ref(rtdb, 'rooms/'+mp.roomCode+'/players/'+mp.playerId+'/score');
     get(scRef).then(function(s){ set(scRef, (s.val()||0)+(pts||0)); });
-    // L'hÙte surveille si tout le monde a rùpondu
+    // L'hùte surveille si tout le monde a rùpondu
     if(mp.isHost) mpWatchAllAnswered(rIdx);
   });
 }
 
-// ??? HÙte surveille les rùponses de tous ?????????????????????????????????????
+// ??? Hùte surveille les rùponses de tous ?????????????????????????????????????
 function mpWatchAllAnswered(rIdx) {
   var aRef = ref(rtdb,'rooms/'+mp.roomCode+'/answers/'+rIdx);
   var pRef = ref(rtdb,'rooms/'+mp.roomCode+'/players');
@@ -398,15 +398,29 @@ function mpAdvance(rIdx) {
       }
       updates['players/' + pid + '/score'] = total;
     });
-    update(mp.roomRef, updates).then(function() {
-      setTimeout(function() {
-        update(mp.roomRef, next >= (opts.nbRounds||5)
-          ? { status: 'finished' }
-          : { status: 'playing', round: next, roundStart: Date.now()+2500 });
-      }, 6000);
-    });
+    // Stocker le numÈro de la manche suivante dans Firebase
+    // L'hÙte dÈclenchera manuellement via le bouton "Manche suivante"
+    updates['nextRound'] = next;
+    updates['totalRounds'] = opts.nbRounds||5;
+    update(mp.roomRef, updates);
   });
 }
+
+
+// AppelÈ par le bouton "Manche suivante" (hÙte uniquement)
+function mpLaunchNextRound() {
+  if(!mp.isHost || !mp.roomRef) return;
+  var btn = document.getElementById('mp-next-btn');
+  if(btn) { btn.disabled = true; btn.textContent = 'Chargement...'; }
+  get(mp.roomRef).then(function(snap) {
+    var room = snap.val(), opts = room.options||{};
+    var next = room.nextRound !== undefined ? room.nextRound : 0;
+    update(mp.roomRef, next >= (room.totalRounds||opts.nbRounds||5)
+      ? { status: 'finished' }
+      : { status: 'playing', round: next, roundStart: Date.now()+2500 });
+  });
+}
+
 
 function mpHandleRoundEnd(room) {
   clearInterval(mp.timerInterval);
@@ -542,11 +556,19 @@ function mpHandleRoundEnd(room) {
   });
   h.push('</div>');
 
-  // Compte ù rebours
-  h.push('<div style="font-size:12px;color:#6b7280">'+(next<nb?'Prochaine manche dans 6s\u2026':'Fin de partie dans 6s\u2026')+'</div>');
+  // Bouton "Manche suivante" (hÙte) ou attente (invitÈ)
+  if(next < nb) {
+    if(mp.isHost) {
+      h.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="margin-top:4px;padding:12px 32px;border-radius:10px;border:none;background:#f97316;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Manche suivante ?</button>');
+    } else {
+      h.push('<div style="font-size:13px;color:#94a3b8;padding:8px 16px;background:#0d1120;border-radius:8px;border:1px solid #1e2d45">En attente que l\'hÙte lance la manche suivante...</div>');
+    }
+  } else {
+    h.push('<div style="font-size:12px;color:#6b7280">Fin de partieÖ</div>');
+  }
 
   // Montrer la carte 3s avant d'ouvrir le bilan
-  // L'overlay reste cachÈ pendant 3s pour que les joueurs voient les marqueurs
+  // L'overlay reste cachù pendant 3s pour que les joueurs voient les marqueurs
   var ov = document.getElementById('overlay');
   setTimeout(function(){
     ov.innerHTML = h.join('');
@@ -778,3 +800,4 @@ window.mpLaunchGame       = mpLaunchGame;
 window.mpLeaveRoom        = mpLeaveRoom;
 window.mpSubmitAnswer     = mpSubmitAnswer;
 window.mpCheckAllAnswered = mpWatchAllAnswered;
+window.mpLaunchNextRound  = mpLaunchNextRound;
