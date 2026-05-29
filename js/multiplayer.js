@@ -27,6 +27,7 @@ var mpCurrentRound = -1;   // index de la manche actuellement jouùe
 var mpAnswered    = false;  // le joueur local a-t-il rùpondu ce round ?
 var mpRoundActive = false;  // la manche est-elle en cours (empùche les rù-init)
 var mpOtherMarkers = {};    // { playerId: L.marker }
+var mpPolylines   = [];    // polylines de fin de manche ‡ supprimer
 
 // Couleurs fixes par joueur
 var MP_COLORS = ['#3b82f6','#a855f7','#ec4899','#14b8a6','#f59e0b','#06b6d4','#84cc16','#f43f5e'];
@@ -231,8 +232,8 @@ function mpHandlePlaying(room) {
   _cdDone = true;
   clearTimeout(_cdTimer);
 
-  // MÍme round dÈj‡ actif ? simple rafraÓchissement panel
-  // MAIS si le timer n'est pas lancÈ (roundStart absent au premier appel), continuer
+  // Mùme round dùjù actif ? simple rafraùchissement panel
+  // MAIS si le timer n'est pas lancù (roundStart absent au premier appel), continuer
   if(rIdx === mpCurrentRound && mpRoundActive && mp.timerInterval) return;
 
   // Nouveau round ? initialiser
@@ -284,12 +285,12 @@ function mpHandlePlaying(room) {
   if(_panel) _panel.style.display = 'block';
   mpRenderLivePanel(room);
 
-  // Timer synchronisÈ ó attendre que roundStart soit disponible dans Firebase
+  // Timer synchronisù ù attendre que roundStart soit disponible dans Firebase
   var _rs = room.roundStart;
   if(!_rs || _rs <= 0) {
-    // roundStart pas encore Ècrit par l'hÙte ó attendre le prochain onValue
-    // mpHandlePlaying sera rappelÈ avec le roundStart correct
-    // On affiche quand mÍme l'indice mais sans dÈmarrer le timer
+    // roundStart pas encore ùcrit par l'hÙte ù attendre le prochain onValue
+    // mpHandlePlaying sera rappelù avec le roundStart correct
+    // On affiche quand mùme l'indice mais sans dùmarrer le timer
     return;
   }
   mpStartSyncTimer(_rs, opts.timerDuration||30, rIdx);
@@ -461,8 +462,9 @@ function mpHandleRoundEnd(room) {
         +fmtDst(ans.dist)+'<br>'
         +'<b style="color:#f97316">+'+fmtPts(ans.pts)+' pts</b></div>';
       var m = L.marker([ans.pos.lat,ans.pos.lng],{icon}).bindPopup(popup).addTo(map);
-      L.polyline([[ans.pos.lat,ans.pos.lng],[place.lat,place.lng]],
+      var pl=L.polyline([[ans.pos.lat,ans.pos.lng],[place.lat,place.lng]],
         {color:col,weight:2.5,dashArray:'6 4',opacity:0.8}).addTo(map);
+      mpPolylines.push(pl);
       mpOtherMarkers[pid] = m;
       bounds.push([ans.pos.lat,ans.pos.lng]);
     });
@@ -543,11 +545,14 @@ function mpHandleRoundEnd(room) {
   // Compte ù rebours
   h.push('<div style="font-size:12px;color:#6b7280">'+(next<nb?'Prochaine manche dans 6s\u2026':'Fin de partie dans 6s\u2026')+'</div>');
 
+  // Montrer la carte 3s avant d'ouvrir le bilan
+  // L'overlay reste cachÈ pendant 3s pour que les joueurs voient les marqueurs
   var ov = document.getElementById('overlay');
-  ov.innerHTML = h.join('');
-  ov.classList.remove('h');
+  setTimeout(function(){
+    ov.innerHTML = h.join('');
+    ov.classList.remove('h');
 
-  // Fetch photo Wikipedia (identique ù showInter)
+    // Fetch photo Wikipedia (identique ù showInter)
   (function(id, q){
     function tryWiki(lang){
       fetch('https://'+lang+'.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(q))
@@ -563,6 +568,7 @@ function mpHandleRoundEnd(room) {
     }
     tryWiki('fr');
   })(imgId, placeName);
+  }, 10000); // 10s de carte visible avant le bilan
 }
 
 
@@ -601,7 +607,7 @@ function mpEnsureLivePanel() {
   if(document.getElementById('mp-live-panel')) return;
   var p = document.createElement('div');
   p.id = 'mp-live-panel';
-  p.style.cssText = 'position:fixed;top:12px;right:12px;z-index:9000;background:rgba(13,17,32,0.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid #1e2d45;border-radius:12px;padding:10px 12px;min-width:170px;max-width:220px;box-shadow:0 4px 24px rgba(0,0,0,.5);font-family:system-ui,sans-serif;pointer-events:none;transition:opacity .2s';
+  p.style.cssText = 'position:fixed;top:64px;right:12px;z-index:9000;background:rgba(13,17,32,0.93);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid #1e2d45;border-radius:12px;padding:10px 12px;min-width:170px;max-width:220px;box-shadow:0 4px 24px rgba(0,0,0,.5);font-family:system-ui,sans-serif;pointer-events:none;transition:opacity .2s';
   document.body.appendChild(p);
 }
 
@@ -676,6 +682,8 @@ function mpUpdateOtherMarkers(room) {
 function mpClearOtherMarkers() {
   Object.values(mpOtherMarkers).forEach(function(m){ try{m.remove();}catch(e){} });
   mpOtherMarkers={};
+  mpPolylines.forEach(function(p){ try{p.remove();}catch(e){} });
+  mpPolylines=[];
 }
 
 // ??? Hook sur confirmGuess / timer ùcoulù de game.js ?????????????????????????
