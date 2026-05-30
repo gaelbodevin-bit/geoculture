@@ -683,4 +683,9 @@ function openMultiplayer() {
 
 // ── Exports window pour onclick inline ──
 window.mpShowJoinMenu = mpShowJoinMenu;
-window.mpLaunchGame = mpLaunchGame;
+
+// ── Exports window pour onclick inline ──
+window.mpShowJoinMenu = mpShowJoinMenu;
+window.mpSetMode = mpSetMode;
+window.mpDoCreate = mpDoCreate;
+window.mpDoJoin = mpDoJoin;
