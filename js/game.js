@@ -680,3 +680,9 @@ function openMultiplayer() {
   }
   if(typeof mpShowJoinMenu==='function') mpShowJoinMenu();
 }
+
+// ── Exports window pour les onclick inline ──
+window.mpShowJoinMenu = mpShowJoinMenu;
+window.mpSetMode = mpSetMode;
+window.mpDoCreate = mpDoCreate;
+window.mpDoJoin = mpDoJoin;
