@@ -172,7 +172,7 @@ function mpUpdateLobby(room) {
 
   h.push('<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">');
   if(mp.isHost) {
-    h.push('<button onclick="mpLaunchGame()" '+(canStart?'':'disabled')+' style="padding:10px 28px;font-size:14px;font-weight:700;border-radius:9px;border:none;cursor:'+(canStart?'pointer':'not-allowed')+';background:'+(canStart?'#f97316':'#374151')+';color:#fff">'+(canStart?'? Lancer la partie':'En attente (min. 2 joueurs)')+'</button>');
+    h.push('<button onclick="mpLaunchGame()" '+(canStart?'':'disabled')+' style="padding:10px 28px;font-size:14px;font-weight:700;border-radius:9px;border:none;cursor:'+(canStart?'pointer':'not-allowed')+';background:'+(canStart?'#f97316':'#374151')+';color:#fff">'+(canStart?'▶ Lancer la partie':'En attente (min. 2 joueurs)')+'</button>');
   } else {
     h.push('<div style="color:#94a3b8;font-size:13px;padding:10px">En attente que l\'hôte lance...</div>');
   }
@@ -569,7 +569,7 @@ function mpHandleRoundEnd(room) {
   // Bouton "Manche suivante" (hôte) ou attente (invité)
   if(next < nb) {
     if(mp.isHost) {
-      h.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="margin-top:4px;padding:12px 32px;border-radius:10px;border:none;background:#f97316;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Manche suivante ?</button>');
+      h.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="margin-top:4px;padding:12px 32px;border-radius:10px;border:none;background:#f97316;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Manche suivante ▶</button>');
     } else {
       h.push('<div style="font-size:13px;color:#94a3b8;padding:8px 16px;background:#0d1120;border-radius:8px;border:1px solid #1e2d45">En attente que l\'hôte lance la manche suivante...</div>');
     }
