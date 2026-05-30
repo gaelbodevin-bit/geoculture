@@ -411,7 +411,7 @@ function showMenu(){
     {t:'Normal', d:T('ruleNormal')},
     {t:'No-Zoom', d:T('ruleNozoom')},
     {t:'Perfection', d:T('rulePerfection')},
-    {t:'Chill ☕', d:T('ruleChill')},
+    {t:'Chill', d:T('ruleChill')},
     {t:T('dailyChallenge'), d:T('ruleDaily')}
   ];
   rules.forEach(function(r,i){
@@ -566,7 +566,7 @@ function mpShowJoinMenu(){
   h.push('<button id="mp-mode-normal" onclick="mpSetMode(\'normal\')" style="'+_mb+'border:1.5px solid #f97316;background:transparent;color:#f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">Normal</button>');
   h.push('<button id="mp-mode-nozoom" onclick="mpSetMode(\'nozoom\')" style="'+_mb+'border:1.5px solid #22d3ee;background:transparent;color:#22d3ee" onmouseover="this.style.background=\'#22d3ee\';this.style.color=\'#000\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#22d3ee\'">No-Zoom</button>');
   h.push('<button id="mp-mode-perf"  onclick="mpSetMode(\'perfection\')" style="'+_mb+'border:1.5px solid #7c3aed;background:transparent;color:#a78bfa" onmouseover="this.style.background=\'#7c3aed\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#a78bfa\'">Perfection</button>');
-  h.push('<button id="mp-mode-chill" onclick="mpSetMode(\'chill\')"  style="'+_mb+'border:1.5px solid #3b82f6;background:transparent;color:#60a5fa" onmouseover="this.style.background=\'#3b82f6\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#60a5fa\'">Chill ☕</button>');
+  h.push('<button id="mp-mode-chill" onclick="mpSetMode(\'chill\')"  style="'+_mb+'border:1.5px solid #3b82f6;background:transparent;color:#60a5fa" onmouseover="this.style.background=\'#3b82f6\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#60a5fa\'">Chill</button>');
   h.push('</div>');
 
   h.push('<div><div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px">Niveau</div>');
