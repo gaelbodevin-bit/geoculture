@@ -600,7 +600,7 @@ function mpHandleRoundEnd(room) {
     }
     tryWiki('fr');
   })(imgId, placeName);
-  }, 10000); // 10s de carte visible avant le bilan
+  }, 5000); // 5s de carte visible avant le bilan
 }
 
 
