@@ -236,6 +236,16 @@ function mpHandlePlaying(room) {
   // MAIS si le timer n'est pas lancé (roundStart absent au premier appel), continuer
   if(rIdx === mpCurrentRound && mpRoundActive && mp.timerInterval) return;
 
+  // Même round actif SANS timer (roundStart absent au 1er onValue) → relancer le timer
+  if(rIdx === mpCurrentRound && mpRoundActive && !mp.timerInterval) {
+    var _rsRetry = room.roundStart;
+    if(_rsRetry && _rsRetry > 0) {
+      var optsRetry = room.options||{};
+      mpStartSyncTimer(_rsRetry, optsRetry.timerDuration||30, rIdx);
+    }
+    return;
+  }
+
   // Nouveau round ? initialiser
   mpCurrentRound = rIdx;
   mpAnswered = false;
@@ -288,9 +298,9 @@ function mpHandlePlaying(room) {
   // Timer synchronisé — attendre que roundStart soit disponible dans Firebase
   var _rs = room.roundStart;
   if(!_rs || _rs <= 0) {
-    // roundStart pas encore écrit par l'hôte — attendre le prochain onValue
-    // mpHandlePlaying sera rappelé avec le roundStart correct
-    // On affiche quand même l'indice mais sans démarrer le timer
+    // roundStart pas encore propagé — afficher l'indice mais timer en attente
+    // mpRoundActive reste true mais mp.timerInterval reste null
+    // → le prochain onValue avec roundStart déclenchera le timer via le guard ci-dessus
     return;
   }
   mpStartSyncTimer(_rs, opts.timerDuration||30, rIdx);
@@ -1070,9 +1080,9 @@ function mpHandlePlaying(room) {
   // Timer synchronisé — attendre que roundStart soit disponible dans Firebase
   var _rs = room.roundStart;
   if(!_rs || _rs <= 0) {
-    // roundStart pas encore écrit par l'hôte — attendre le prochain onValue
-    // mpHandlePlaying sera rappelé avec le roundStart correct
-    // On affiche quand même l'indice mais sans démarrer le timer
+    // roundStart pas encore propagé — afficher l'indice mais timer en attente
+    // mpRoundActive reste true mais mp.timerInterval reste null
+    // → le prochain onValue avec roundStart déclenchera le timer via le guard ci-dessus
     return;
   }
   mpStartSyncTimer(_rs, opts.timerDuration||30, rIdx);
