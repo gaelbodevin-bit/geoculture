@@ -563,10 +563,10 @@ function mpShowJoinMenu(){
 
   var _mb='width:100%;padding:10px 4px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;transition:all .15s;text-align:center;';
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">');
-  h.push('<button id="mp-mode-normal" onclick="mpSetMode(\'normal\')" style="'+_mb+'border:1.5px solid #f97316;background:transparent;color:#f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">Normal</button>');
-  h.push('<button id="mp-mode-nozoom" onclick="mpSetMode(\'nozoom\')" style="'+_mb+'border:1.5px solid #22d3ee;background:transparent;color:#22d3ee" onmouseover="this.style.background=\'#22d3ee\';this.style.color=\'#000\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#22d3ee\'">No-Zoom</button>');
-  h.push('<button id="mp-mode-perf"  onclick="mpSetMode(\'perfection\')" style="'+_mb+'border:1.5px solid #7c3aed;background:transparent;color:#a78bfa" onmouseover="this.style.background=\'#7c3aed\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#a78bfa\'">Perfection</button>');
-  h.push('<button id="mp-mode-chill" onclick="mpSetMode(\'chill\')"  style="'+_mb+'border:1.5px solid #3b82f6;background:transparent;color:#60a5fa" onmouseover="this.style.background=\'#3b82f6\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#60a5fa\'">Chill</button>');
+  h.push('<button id="mp-mode-normal" onclick="window.mpSetMode&&window.mpSetMode(\'normal\')" style="'+_mb+'border:1.5px solid #f97316;background:transparent;color:#f97316" onmouseover="this.style.background=\'#f97316\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#f97316\'">Normal</button>');
+  h.push('<button id="mp-mode-nozoom" onclick="window.mpSetMode&&window.mpSetMode(\'nozoom\')" style="'+_mb+'border:1.5px solid #22d3ee;background:transparent;color:#22d3ee" onmouseover="this.style.background=\'#22d3ee\';this.style.color=\'#000\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#22d3ee\'">No-Zoom</button>');
+  h.push('<button id="mp-mode-perf"  onclick="window.mpSetMode&&window.mpSetMode(\'perfection\')" style="'+_mb+'border:1.5px solid #7c3aed;background:transparent;color:#a78bfa" onmouseover="this.style.background=\'#7c3aed\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#a78bfa\'">Perfection</button>');
+  h.push('<button id="mp-mode-chill" onclick="window.mpSetMode&&window.mpSetMode(\'chill\')"  style="'+_mb+'border:1.5px solid #3b82f6;background:transparent;color:#60a5fa" onmouseover="this.style.background=\'#3b82f6\';this.style.color=\'#fff\'" onmouseout="this.style.background=\'transparent\';this.style.color=\'#60a5fa\'">Chill</button>');
   h.push('</div>');
 
   h.push('<div><div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px">Niveau</div>');
@@ -579,7 +579,7 @@ function mpShowJoinMenu(){
     h.push('<div><div style="font-size:10px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px">Pseudo</div>');
     h.push('<input id="mp-name-create" placeholder="Ton pseudo" style="width:100%;background:#111827;border:1px solid #2d3f5e;border-radius:8px;padding:10px 12px;color:#e2e8f0;font-size:13px"></div>');
   }
-  h.push('<button onclick="mpDoCreate()" style="width:100%;padding:13px;border-radius:10px;border:none;background:#22c55e;color:#fff;font-weight:700;font-size:14px;cursor:pointer;margin-top:4px" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Créer la partie</button>');
+  h.push('<button onclick="window.mpDoCreate&&window.mpDoCreate()" style="width:100%;padding:13px;border-radius:10px;border:none;background:#22c55e;color:#fff;font-weight:700;font-size:14px;cursor:pointer;margin-top:4px" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Créer la partie</button>');
   h.push('</div>');
 
   // ── Colonne REJOINDRE ──
@@ -594,7 +594,7 @@ function mpShowJoinMenu(){
     h.push('<input id="mp-name-join" placeholder="Ton pseudo" style="width:100%;background:#111827;border:1px solid #2d3f5e;border-radius:8px;padding:10px 12px;color:#e2e8f0;font-size:13px"></div>');
   }
   h.push('<div style="flex:1"></div>');
-  h.push('<button onclick="mpDoJoin()" style="width:100%;padding:13px;border-radius:10px;border:none;background:#f97316;color:#fff;font-weight:700;font-size:14px;cursor:pointer;margin-top:4px" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Rejoindre</button>');
+  h.push('<button onclick="window.mpDoJoin&&window.mpDoJoin()" style="width:100%;padding:13px;border-radius:10px;border:none;background:#f97316;color:#fff;font-weight:700;font-size:14px;cursor:pointer;margin-top:4px" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Rejoindre</button>');
   h.push('</div>');
 
   h.push('</div>');
@@ -681,8 +681,6 @@ function openMultiplayer() {
   if(typeof mpShowJoinMenu==='function') mpShowJoinMenu();
 }
 
-// ── Exports window pour les onclick inline ──
+// ── Exports window pour onclick inline ──
 window.mpShowJoinMenu = mpShowJoinMenu;
-window.mpSetMode = mpSetMode;
-window.mpDoCreate = mpDoCreate;
-window.mpDoJoin = mpDoJoin;
+window.mpLaunchGame = mpLaunchGame;
