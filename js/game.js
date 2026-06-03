@@ -407,6 +407,7 @@ function showMenu(){
   // Colonne gauche: comment jouer
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:12px">');
   h.push('<div style="font-size:10px;font-weight:600;color:#f97316;letter-spacing:1.5px;text-transform:uppercase">Comment jouer</div>');
+  h.push('<div style="font-size:12px;color:#94a3b8;line-height:1.5;padding:2px 0 4px 0;border-bottom:1px solid #1e2d4566;margin-bottom:2px">Localise les lieux grâce aux indices en un minimum de temps.</div>');
   var rules=[
     {t:'Normal', d:T('ruleNormal')},
     {t:'No-Zoom', d:T('ruleNozoom')},
@@ -683,9 +684,4 @@ function openMultiplayer() {
 
 // ── Exports window pour onclick inline ──
 window.mpShowJoinMenu = mpShowJoinMenu;
-
-// ── Exports window pour onclick inline ──
-window.mpShowJoinMenu = mpShowJoinMenu;
-window.mpSetMode = mpSetMode;
-window.mpDoCreate = mpDoCreate;
-window.mpDoJoin = mpDoJoin;
+window.mpLaunchGame = mpLaunchGame;
