@@ -298,22 +298,39 @@ function showInter(pts,dist,name,eliminated){
       -->
     </div>`;
   ov.classList.remove('h');
-  // Fetch Wikipedia image
-  (function(id,q){
+  // Photo : utiliser la photo locale si disponible, sinon Wikipedia
+  (function(id, round){
+    var el = document.getElementById(id);
+    if(!el) return;
+    // Priorité 1 : champ photo du round (fichier local ou URL)
+    if(round.photo){
+      var img = new Image();
+      img.onload = function(){
+        el.innerHTML = '<img src="'+round.photo+'" style="width:100%;height:100%;object-fit:cover;border-radius:10px" alt="">';
+      };
+      img.onerror = function(){
+        // Fichier local introuvable → fallback Wikipedia
+        tryWiki('fr');
+      };
+      img.src = round.photo;
+      return;
+    }
+    // Priorité 2 : Wikipedia
     function tryWiki(lang){
-      fetch('https://'+lang+'.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(q))
+      var q = encodeURIComponent(round.name.replace(/\s*\u2014.*/,'').trim());
+      fetch('https://'+lang+'.wikipedia.org/api/rest_v1/page/summary/'+q)
         .then(function(r){return r.json();})
         .then(function(d){
-          var el=document.getElementById(id);
-          if(!el)return;
+          var el2=document.getElementById(id);
+          if(!el2) return;
           if(d.thumbnail&&d.thumbnail.source){
-            el.innerHTML='<img src="'+d.thumbnail.source+'" style="width:100%;height:100%;object-fit:cover;border-radius:10px" alt="">';
+            el2.innerHTML='<img src="'+d.thumbnail.source+'" style="width:100%;height:100%;object-fit:cover;border-radius:10px" alt="">';
           } else if(lang==='fr'){tryWiki('en');}
-          else{el.style.display='none';}
-        }).catch(function(){var el=document.getElementById(id);if(el)el.style.display='none';});
+          else{el2.style.display='none';}
+        }).catch(function(){var el2=document.getElementById(id);if(el2)el2.style.display='none';});
     }
     tryWiki('fr');
-  })(imgId, roundList[curR].name.replace(/\s*\u2014.*/,'').trim());
+  })(imgId, roundList[curR]);
 
 }
 
