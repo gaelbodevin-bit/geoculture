@@ -1,2960 +1,2858 @@
 const ROUNDS=[
-  {name:"Tour Eiffel ‚Äî Paris, France",lat:48.8584,lng:2.2945,desc:"Symbole universel de la France, la Tour Eiffel fut d'abord critiqu√©e comme une ¬´verrue de fer¬ª avant de devenir le monument payant le plus visit√© au monde avec 7 millions de visiteurs par an.",hints:[
+  {name:"Tour Eiffel ó Paris, France",lat:48.8584,lng:2.2945,desc:"Symbole universel de la France, la Tour Eiffel fut d'abord critiquÈe comme une ´verrue de ferª avant de devenir le monument payant le plus visitÈ au monde avec 7 millions de visiteurs par an.",photo:"photos/tour_de_pise.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Champ-de-Mars, Exposition Universelle de 1889, construite par Gustave Eiffel"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"7√®me arrondissement de rive gauche de la Seine, face au Trocad√©ro"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument en fer forg√© le plus visit√© au monde, symbole de Paris"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour Eiffel √† Paris, France"}
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"7Ëme arrondissement de rive gauche de la Seine, face au TrocadÈro"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument en fer forgÈ le plus visitÈ au monde, symbole de Paris"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour Eiffel ‡ Paris, France"}
   ]},
-  {name:"Notre-Dame de Paris ‚Äî France",lat:48.853,lng:2.3499,desc:"Joyau du gothique fran√ßais, Notre-Dame a failli dispara√Ætre lors de l'incendie d'avril 2019. Sa reconstruction mobilisa des artisans du monde entier et elle a rouvert ses portes en d√©cembre 2024.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√éle de la Cit√©, cath√©drale gothique dont la construction d√©buta en 1163 sous l'√©v√™que Maurice de Sully"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre g√©ographique de point z√©ro des routes nationales"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale incendi√©e en 2019 et rouverte en d√©cembre 2024"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La cath√©drale Notre-Dame √† Paris, France"}
+  {name:"Notre-Dame de Paris ó France",lat:48.853,lng:2.3499,desc:"Joyau du gothique franÁais, Notre-Dame a failli disparaÓtre lors de l'incendie d'avril 2019. Sa reconstruction mobilisa des artisans du monde entier et elle a rouvert ses portes en dÈcembre 2024.",photo:"https://upload.wikimedia.org/wikipedia/commons/a/af/Notre-Dame_de_Paris_2013-07-24.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Œle de la CitÈ, cathÈdrale gothique dont la construction dÈbuta en 1163 sous l'ÈvÍque Maurice de Sully"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre gÈographique de point zÈro des routes nationales"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CathÈdrale incendiÈe en 2019 et rouverte en dÈcembre 2024"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La cathÈdrale Notre-Dame ‡ Paris, France"}
   ]},
-  {name:"Moulin Rouge ‚Äî Montmartre, Paris",lat:48.8842,lng:2.3322,desc:"Fond√© en 1889, le Moulin Rouge inventa le french cancan et accueillit Toulouse-Lautrec, Mistinguett et Edith Piaf. Ses 1 200 plumes d'autruche par spectacle en font un symbole du Paris de la f√™te.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Boulevard de Clichy, Pigalle ‚Äî cabaret fond√© en 1889 par Charles Zidler et Joseph Oller"},
+  {name:"Moulin Rouge ó Montmartre, Paris",lat:48.8842,lng:2.3322,desc:"FondÈ en 1889, le Moulin Rouge inventa le french cancan et accueillit Toulouse-Lautrec, Mistinguett et Edith Piaf. Ses 1 200 plumes d'autruche par spectacle en font un symbole du Paris de la fÍte.",photo:"https://upload.wikimedia.org/wikipedia/commons/4/44/Paris%2C_Moulin_Rouge_--_2014_--_1220.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Boulevard de Clichy, Pigalle ó cabaret fondÈ en 1889 par Charles Zidler et Joseph Oller"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Montmartre, au pied de la Butte, quartier historique de la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cabaret parisien mondialement c√©l√®bre pour le french cancan"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le cabaret du Moulin Rouge √† Paris, France"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cabaret parisien mondialement cÈlËbre pour le french cancan"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le cabaret du Moulin Rouge ‡ Paris, France"}
   ]},
-  {name:"Colis√©e ‚Äî Rome, Italie",lat:41.8902,lng:12.4922,desc:"L'amphith√©√¢tre le plus grand de l'Antiquit√© pouvait se remplir d'eau pour simuler des batailles navales. Ses 80 sorties permettaient d'√©vacuer 80 000 spectateurs en moins de 10 minutes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Amphith√©√¢tre flavien b√¢ti sous Vespasien en 70 ap. J.-C., Via Sacra, entre le Forum et le Palatin"},
+  {name:"ColisÈe ó Rome, Italie",lat:41.8902,lng:12.4922,desc:"L'amphithÈ‚tre le plus grand de l'AntiquitÈ pouvait se remplir d'eau pour simuler des batailles navales. Ses 80 sorties permettaient d'Èvacuer 80 000 spectateurs en moins de 10 minutes.",photo:"https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"AmphithÈ‚tre flavien b‚ti sous Vespasien en 70 ap. J.-C., Via Sacra, entre le Forum et le Palatin"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre historique, entre le Forum Romain et le mont Palatin"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand amphith√©√¢tre antique du monde, pouvant accueillir 80 000 spectateurs"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Colis√©e √† Rome, Italie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand amphithÈ‚tre antique du monde, pouvant accueillir 80 000 spectateurs"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le ColisÈe ‡ Rome, Italie"}
   ]},
-  {name:"Chapelle Sixtine ‚Äî Vatican",lat:41.9029,lng:12.4545,desc:"Michel-Ange peignit les 512 m¬≤ de la vo√ªte en seulement 4 ans, allong√© sur un √©chafaudage. La sc√®ne de la cr√©ation d'Adam, o√π les doigts de Dieu et de l'homme se fr√¥lent, reste l'une des images les plus reproduites de l'Histoire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chapelle palatiale d'une cit√©-√âtat souveraine, plafond peint par Michel-Ange entre 1508 et 1512 sur commande du pape Jules II"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mus√©es, cit√©-√âtat enclav√©e dans bord du Tibre"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus petit √âtat souverain du monde, si√®ge de la papaut√© catholique"},
+  {name:"Chapelle Sixtine ó Vatican",lat:41.9029,lng:12.4545,desc:"Michel-Ange peignit les 512 m≤ de la vo˚te en seulement 4 ans, allongÈ sur un Èchafaudage. La scËne de la crÈation d'Adam, o˘ les doigts de Dieu et de l'homme se frÙlent, reste l'une des images les plus reproduites de l'Histoire.",photo:"https://upload.wikimedia.org/wikipedia/commons/1/1c/Cappella_Sistina_-_2005.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chapelle palatiale d'une citÈ-…tat souveraine, plafond peint par Michel-Ange entre 1508 et 1512 sur commande du pape Jules II"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"MusÈes, citÈ-…tat enclavÈe dans bord du Tibre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus petit …tat souverain du monde, siËge de la papautÈ catholique"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Chapelle Sixtine au Vatican (enclave de Rome)"}
   ]},
-  {name:"Sagrada Fam√≠lia ‚Äî Barcelone, Espagne",lat:41.4036,lng:2.1744,desc:"Gaud√≠ consacra les 43 derni√®res ann√©es de sa vie √† cette cath√©drale. Renvers√© par un tramway en 1926, il fut enterr√© dans sa propre √©glise. La construction, financ√©e uniquement par les entr√©es des visiteurs, devrait s'achever en 2026.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Basilique d'Antoni Gaud√≠, chantier ouvert depuis 1882 dans un quartier moderniste ‚Äî toujours en construction"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier moderniste de la deuxi√®me ville, √† deux kilom√®tres de la mer"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale inachev√©e la plus visit√©e d'Europe, en Catalogne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Sagrada Fam√≠lia √† Barcelone, Espagne"}
+  {name:"Sagrada FamÌlia ó Barcelone, Espagne",lat:41.4036,lng:2.1744,desc:"GaudÌ consacra les 43 derniËres annÈes de sa vie ‡ cette cathÈdrale. RenversÈ par un tramway en 1926, il fut enterrÈ dans sa propre Èglise. La construction, financÈe uniquement par les entrÈes des visiteurs, devrait s'achever en 2026.",photo:"https://upload.wikimedia.org/wikipedia/commons/7/78/SF_maig_2026.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Basilique d'Antoni GaudÌ, chantier ouvert depuis 1882 dans un quartier moderniste ó toujours en construction"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier moderniste de la deuxiËme ville, ‡ deux kilomËtres de la mer"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CathÈdrale inachevÈe la plus visitÈe d'Europe, en Catalogne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Sagrada FamÌlia ‡ Barcelone, Espagne"}
   ]},
-  {name:"Alhambra ‚Äî Grenade, Espagne",lat:37.1761,lng:-3.5881,desc:"Ce palais nasride renferme l'une des plus belles d√©corations islamiques du monde. Ses jardins de l'Generalife, aliment√©s par un syst√®me hydraulique vieux de 700 ans, restent en fleur toute l'ann√©e.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais et forteresse nasride du XIVe si√®cle sur une colline aux pieds d'une sierra enneig√©e"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline surplombant le quartier Albaic√≠n, face √† la Sierra Nevada, Andalousie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chef-d'≈ìuvre de l'architecture mauresque, le plus visit√© d'Espagne"},
+  {name:"Alhambra ó Grenade, Espagne",lat:37.1761,lng:-3.5881,desc:"Ce palais nasride renferme l'une des plus belles dÈcorations islamiques du monde. Ses jardins de l'Generalife, alimentÈs par un systËme hydraulique vieux de 700 ans, restent en fleur toute l'annÈe.",photo:"https://upload.wikimedia.org/wikipedia/commons/d/de/Dawn_Charles_V_Palace_Alhambra_Granada_Andalusia_Spain.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais et forteresse nasride du XIVe siËcle sur une colline aux pieds d'une sierra enneigÈe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline surplombant le quartier AlbaicÌn, face ‡ la Sierra Nevada, Andalousie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chef-d'úuvre de l'architecture mauresque, le plus visitÈ d'Espagne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Alhambra de Grenade, en Andalousie (Espagne)"}
   ]},
-  {name:"Big Ben ‚Äî Londres, Royaume-Uni",lat:51.5007,lng:-0.1246,desc:"Big Ben ne d√©signe pas la tour mais la cloche de 13,7 tonnes qu'elle abrite. Silenci√©e pour restauration de 2017 √† 2022, elle a retenti √† nouveau pour le couronnement de Charles III en mai 2023.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tour Elizabeth au Palais de Westminster, inaugur√©e en 1859, bord de la Tamise"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Westminster, √† 500m du 10 Downing Street, c≈ìur politique de la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Horloge embl√©matique du Parlement britannique, symbole de Londres"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Big Ben √† Londres, Royaume-Uni"}
+  {name:"Big Ben ó Londres, Royaume-Uni",lat:51.5007,lng:-0.1246,desc:"Big Ben ne dÈsigne pas la tour mais la cloche de 13,7 tonnes qu'elle abrite. SilenciÈe pour restauration de 2017 ‡ 2022, elle a retenti ‡ nouveau pour le couronnement de Charles III en mai 2023.",photo:"https://upload.wikimedia.org/wikipedia/commons/4/43/Elizabeth_Tower%2C_June_2022.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tour Elizabeth au Palais de Westminster, inaugurÈe en 1859, bord de la Tamise"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Westminster, ‡ 500m du 10 Downing Street, cúur politique de la capitale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Horloge emblÈmatique du Parlement britannique, symbole de Londres"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Big Ben ‡ Londres, Royaume-Uni"}
   ]},
-  {name:"Stonehenge ‚Äî Wiltshire, Royaume-Uni",lat:51.1789,lng:-1.8262,desc:"Stonehenge fut √©difi√© en trois phases entre -3000 et -1500 av. J.-C. Les plus grandes pierres pesant 25 tonnes furent transport√©es depuis le Pays de Galles sur 250 km, probablement √† l'aide de tra√Æneaux, de rondins et de rivi√®res.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cercle de m√©galithes √©rig√© entre -3000 et -1500 av. J.-C. sur la plaine de Salisbury"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comt√© du Wiltshire, plaine du sud du pays, √† 13 km de la cath√©drale de Salisbury"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument pr√©historique le plus c√©l√®bre d'Europe, class√© UNESCO"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Stonehenge dans le comt√© du Wiltshire, Angleterre (Royaume-Uni)"}
+  {name:"Stonehenge ó Wiltshire, Royaume-Uni",lat:51.1789,lng:-1.8262,desc:"Stonehenge fut ÈdifiÈ en trois phases entre -3000 et -1500 av. J.-C. Les plus grandes pierres pesant 25 tonnes furent transportÈes depuis le Pays de Galles sur 250 km, probablement ‡ l'aide de traÓneaux, de rondins et de riviËres.",photo:"https://upload.wikimedia.org/wikipedia/commons/3/3c/Stonehenge2007_07_30.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cercle de mÈgalithes ÈrigÈ entre -3000 et -1500 av. J.-C. sur la plaine de Salisbury"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ComtÈ du Wiltshire, plaine du sud du pays, ‡ 13 km de la cathÈdrale de Salisbury"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument prÈhistorique le plus cÈlËbre d'Europe, classÈ UNESCO"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Stonehenge dans le comtÈ du Wiltshire, Angleterre (Royaume-Uni)"}
   ]},
-  {name:"Acropole ‚Äî Ath√®nes, Gr√®ce",lat:37.9715,lng:23.7267,desc:"Le Parth√©non n'a jamais √©t√© achev√© dans sa forme originale : ses colonnes l√©g√®rement inclin√©es vers l'int√©rieur et bomb√©es cr√©aient une illusion d'optique le faisant para√Ætre parfaitement droit.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rocher calcaire de 156m surplombant la ville, site du Parth√©non d√©di√© √† Ath√©na Parth√©nos"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Plaka, rive du golfe Saronique, r√©gion de l'Attique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple grec antique le plus c√©l√®bre du monde, berceau de la civilisation occidentale"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Acropole √† Ath√®nes, Gr√®ce"}
+  {name:"Acropole ó AthËnes, GrËce",lat:37.9715,lng:23.7267,desc:"Le ParthÈnon n'a jamais ÈtÈ achevÈ dans sa forme originale : ses colonnes lÈgËrement inclinÈes vers l'intÈrieur et bombÈes crÈaient une illusion d'optique le faisant paraÓtre parfaitement droit.",photo:"photos/acropole_de_lindos.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rocher calcaire de 156m surplombant la ville, site du ParthÈnon dÈdiÈ ‡ AthÈna ParthÈnos"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Plaka, rive du golfe Saronique, rÈgion de l'Attique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple grec antique le plus cÈlËbre du monde, berceau de la civilisation occidentale"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Acropole ‡ AthËnes, GrËce"}
   ]},
-  {name:"Palais de l'√âlys√©e ‚Äî Paris, France",lat:48.8699,lng:2.3167,desc:"Construit en 1722, le palais de l'√âlys√©e fut la r√©sidence de Madame de Pompadour, favorite de Louis XV. Devenu r√©sidence pr√©sidentielle en 1848, il poss√®de un standard t√©l√©phonique actif 24h/24 reli√© directement √† la force de frappe nucl√©aire fran√ßaise.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rue du Faubourg Saint-Honor√©, 8√®me arrondissement, r√©sidence officielle du pr√©sident de la R√©publique fran√ßaise depuis 1848"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier des Champs-√âlys√©es, entre le Grand Palais et la Madeleine"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"R√©sidence et bureau du pr√©sident de la R√©publique fran√ßaise"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de l'√âlys√©e √† Paris, France"}
+  {name:"Palais de l'…lysÈe ó Paris, France",lat:48.8699,lng:2.3167,desc:"Construit en 1722, le palais de l'…lysÈe fut la rÈsidence de Madame de Pompadour, favorite de Louis XV. Devenu rÈsidence prÈsidentielle en 1848, il possËde un standard tÈlÈphonique actif 24h/24 reliÈ directement ‡ la force de frappe nuclÈaire franÁaise.",photo:"photos/palais_de_buckingham.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rue du Faubourg Saint-HonorÈ, 8Ëme arrondissement, rÈsidence officielle du prÈsident de la RÈpublique franÁaise depuis 1848"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier des Champs-…lysÈes, entre le Grand Palais et la Madeleine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"RÈsidence et bureau du prÈsident de la RÈpublique franÁaise"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de l'…lysÈe ‡ Paris, France"}
   ]},
-  {name:"Ch√¢teau de Versailles ‚Äî France",lat:48.8049,lng:2.1204,desc:"Versailles consomma 6% du budget total du royaume sous Louis XIV. Ses jardins de 800 hectares n√©cessitaient 1 200 personnes pour leur entretien. Le roi se levait √† 8h30 dans une c√©r√©monie appel√©e le ¬´Lever¬ª : 200 courtisans s'y bousculaient pour tenir sa chemise ou lui pr√©senter sa perruque.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch√¢teau royal de Louis XIV, transform√© √† partir de 1661 par Jules Hardouin-Mansart, galerie des Glaces"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune des Yvelines, √† 17 km au sud-ouest de la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand ch√¢teau du monde par surface, ancienne r√©sidence royale fran√ßaise"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Versailles, pr√®s de Paris (France)"}
+  {name:"Ch‚teau de Versailles ó France",lat:48.8049,lng:2.1204,desc:"Versailles consomma 6% du budget total du royaume sous Louis XIV. Ses jardins de 800 hectares nÈcessitaient 1 200 personnes pour leur entretien. Le roi se levait ‡ 8h30 dans une cÈrÈmonie appelÈe le ´Leverª : 200 courtisans s'y bousculaient pour tenir sa chemise ou lui prÈsenter sa perruque.",photo:"photos/chateau_de_blarney.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch‚teau royal de Louis XIV, transformÈ ‡ partir de 1661 par Jules Hardouin-Mansart, galerie des Glaces"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune des Yvelines, ‡ 17 km au sud-ouest de la capitale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand ch‚teau du monde par surface, ancienne rÈsidence royale franÁaise"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Versailles, prËs de Paris (France)"}
   ]},
-  {name:"Rijksmuseum ‚Äî Amsterdam, Pays-Bas",lat:52.36,lng:4.8852,desc:"La ¬´Ronde de nuit¬ª de Rembrandt mesure 3,6 m √ó 4,3 m. Pour la d√©placer lors d'une restauration en 1975, les autorit√©s n√©erlandaises perc√®rent une porte sp√©ciale dans le mur du mus√©e.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mus√©e national d'un pays du nord de l'Europe inaugur√© en 1885 sur une grande place, abritant La Ronde de Nuit de Rembrandt"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier des mus√©es au sud du centre historique, entre le Vondelpark et les canaux"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal mus√©e d'art et d'histoire des Pays-Bas, √† Amsterdam"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Rijksmuseum √† Amsterdam, Pays-Bas"}
+  {name:"Rijksmuseum ó Amsterdam, Pays-Bas",lat:52.36,lng:4.8852,desc:"La ´Ronde de nuitª de Rembrandt mesure 3,6 m ◊ 4,3 m. Pour la dÈplacer lors d'une restauration en 1975, les autoritÈs nÈerlandaises percËrent une porte spÈciale dans le mur du musÈe.",photo:"https://upload.wikimedia.org/wikipedia/commons/4/47/Rijksmuseum_from_Museumplein_2523.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"MusÈe national d'un pays du nord de l'Europe inaugurÈ en 1885 sur une grande place, abritant La Ronde de Nuit de Rembrandt"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier des musÈes au sud du centre historique, entre le Vondelpark et les canaux"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal musÈe d'art et d'histoire des Pays-Bas, ‡ Amsterdam"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Rijksmuseum ‡ Amsterdam, Pays-Bas"}
   ]},
-  {name:"Maison d'Anne Frank ‚Äî Amsterdam",lat:52.3752,lng:4.8839,desc:"Anne Frank r√©digea son journal entre 1942 et 1944, dans une annexe secr√®te cach√©e derri√®re une biblioth√®que pivotante. Traduit en 70 langues, son t√©moignage est l'un des livres les plus lus au monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Prinsengracht 263, maison o√π Anne Frank se cacha avec sa famille de 1942 √† 1944"},
+  {name:"Maison d'Anne Frank ó Amsterdam",lat:52.3752,lng:4.8839,desc:"Anne Frank rÈdigea son journal entre 1942 et 1944, dans une annexe secrËte cachÈe derriËre une bibliothËque pivotante. Traduit en 70 langues, son tÈmoignage est l'un des livres les plus lus au monde.",photo:"https://upload.wikimedia.org/wikipedia/commons/f/f4/AnneFrankHuisAmsterdam.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Prinsengracht 263, maison o˘ Anne Frank se cacha avec sa famille de 1942 ‡ 1944"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier du Jordaan, rive ouest du canal Prinsengracht, Amsterdam"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mus√©e d√©di√© √† Anne Frank, auteure du c√©l√®bre journal de guerre"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Maison d'Anne Frank √† Amsterdam, Pays-Bas"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"MusÈe dÈdiÈ ‡ Anne Frank, auteure du cÈlËbre journal de guerre"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Maison d'Anne Frank ‡ Amsterdam, Pays-Bas"}
   ]},
-  {name:"Mur de Berlin ‚Äî Allemagne",lat:52.5351,lng:13.3905,desc:"Le mur fut construit en une seule nuit du 12 au 13 ao√ªt 1961, s√©parant 40 000 Berlinois de leurs familles. Il tomba non par d√©cision officielle mais suite √† une annonce t√©l√©vis√©e mal pr√©par√©e le 9 novembre 1989.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"East Side Gallery, M√ºhlenstra√üe, vestiges du mur √©rig√© en 1961 sur ordre d'Erich Honecker"},
+  {name:"Mur de Berlin ó Allemagne",lat:52.5351,lng:13.3905,desc:"Le mur fut construit en une seule nuit du 12 au 13 ao˚t 1961, sÈparant 40 000 Berlinois de leurs familles. Il tomba non par dÈcision officielle mais suite ‡ une annonce tÈlÈvisÈe mal prÈparÈe le 9 novembre 1989.",photo:"https://upload.wikimedia.org/wikipedia/commons/5/5d/Berlinermauer.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"East Side Gallery, M¸hlenstraﬂe, vestiges du mur ÈrigÈ en 1961 sur ordre d'Erich Honecker"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord de la Spree, quartier de Friedrichshain, secteur oriental de la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand fragment subsistant du mur qui divisait Berlin de 1961 √† 1989"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand fragment subsistant du mur qui divisait Berlin de 1961 ‡ 1989"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les vestiges du Mur de Berlin, Allemagne"}
   ]},
-  {name:"Neuschwanstein ‚Äî Bavi√®re, Allemagne",lat:47.5576,lng:10.7498,desc:"Louis II de Bavi√®re ne dormit que 11 nuits dans son ch√¢teau de conte de f√©es avant d'√™tre d√©clar√© fou et mort myst√©rieusement. Walt Disney s'en inspira directement pour le ch√¢teau de La Belle au Bois Dormant.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch√¢teau n√©o-roman command√© par Louis II de Bavi√®re en 1869, commune de Schwangau, Allg√§u"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Alpes bavaroises, pr√®s de F√ºssen, √† la fronti√®re autrichienne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau de conte de f√©es ayant inspir√© Walt Disney, Bavi√®re"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le ch√¢teau de Neuschwanstein en Bavi√®re, Allemagne"}
+  {name:"Neuschwanstein ó BaviËre, Allemagne",lat:47.5576,lng:10.7498,desc:"Louis II de BaviËre ne dormit que 11 nuits dans son ch‚teau de conte de fÈes avant d'Ítre dÈclarÈ fou et mort mystÈrieusement. Walt Disney s'en inspira directement pour le ch‚teau de La Belle au Bois Dormant.",photo:"https://upload.wikimedia.org/wikipedia/commons/f/f8/Schloss_Neuschwanstein_2013.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch‚teau nÈo-roman commandÈ par Louis II de BaviËre en 1869, commune de Schwangau, Allg‰u"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Alpes bavaroises, prËs de F¸ssen, ‡ la frontiËre autrichienne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau de conte de fÈes ayant inspirÈ Walt Disney, BaviËre"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le ch‚teau de Neuschwanstein en BaviËre, Allemagne"}
   ]},
-  {name:"Tour de Pise ‚Äî Italie",lat:43.723,lng:10.3966,desc:"La Tour de Pise penche depuis sa deuxi√®me phase de construction au XIIe si√®cle, √† cause d'un sol trop mou d'un c√¥t√©. Des travaux de 1990 √† 2001 ont r√©duit l'inclinaison de 44 cm pour la stabiliser pour les 200 prochaines ann√©es.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Campanile du Duomo di Pisa, construction entam√©e en 1173, inclinaison de 3,97 degr√©s due √† un sol meuble"},
+  {name:"Tour de Pise ó Italie",lat:43.723,lng:10.3966,desc:"La Tour de Pise penche depuis sa deuxiËme phase de construction au XIIe siËcle, ‡ cause d'un sol trop mou d'un cÙtÈ. Des travaux de 1990 ‡ 2001 ont rÈduit l'inclinaison de 44 cm pour la stabiliser pour les 200 prochaines annÈes.",photo:"photos/tour_de_pise.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Campanile du Duomo di Pisa, construction entamÈe en 1173, inclinaison de 3,97 degrÈs due ‡ un sol meuble"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Piazza dei Miracoli (Place des Miracles), Pise, Toscane"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour pench√©e mondialement connue, embl√®me de la Toscane italienne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour penchÈe mondialement connue, emblËme de la Toscane italienne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour de Pise en Toscane, Italie"}
   ]},
-  {name:"Palais des Doges ‚Äî Venise, Italie",lat:45.4337,lng:12.3401,desc:"Le Palais des Doges abritait le Pont des Soupirs, par lequel les condamn√©s traversaient de la salle des interrogatoires vers la prison, poussant leur dernier soupir en apercevant Venise.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palazzo Ducale sur la Piazzetta de l'ancienne R√©publique maritime, si√®ge du gouvernement de la S√©r√©nissime du IXe au XVIIIe si√®cle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sestiere de San Marco, bord de la lagune, face √† l'√Æle de San Giorgio Maggiore"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Symbole du pouvoir v√©nitien, ville construite sur 118 √Ælots, Italie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais des Doges √† Venise, Italie"}
+  {name:"Palais des Doges ó Venise, Italie",lat:45.4337,lng:12.3401,desc:"Le Palais des Doges abritait le Pont des Soupirs, par lequel les condamnÈs traversaient de la salle des interrogatoires vers la prison, poussant leur dernier soupir en apercevant Venise.",photo:"photos/palais_des_doges.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palazzo Ducale sur la Piazzetta de l'ancienne RÈpublique maritime, siËge du gouvernement de la SÈrÈnissime du IXe au XVIIIe siËcle"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sestiere de San Marco, bord de la lagune, face ‡ l'Óle de San Giorgio Maggiore"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Symbole du pouvoir vÈnitien, ville construite sur 118 Ólots, Italie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais des Doges ‡ Venise, Italie"}
   ]},
-  {name:"Cath√©drale Saint-Basile ‚Äî Moscou, Russie",lat:55.7525,lng:37.6231,desc:"Selon la l√©gende, Ivan le Terrible fit aveugler ses architectes apr√®s l'ach√®vement de la cath√©drale pour qu'ils ne puissent jamais construire quelque chose d'aussi beau ailleurs. Cette histoire est probablement apocryphe.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cath√©drale de l'Intercession de la M√®re de Dieu sur les Douves, Place Rouge, construite de 1555 √† 1561 sous Ivan le Terrible"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande place centrale, entre la forteresse du Kremlin et le grand magasin d'√âtat"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale aux bulbes color√©s, embl√®me de la Russie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cath√©drale Saint-Basile sur la Place Rouge √† Moscou, Russie"}
+  {name:"CathÈdrale Saint-Basile ó Moscou, Russie",lat:55.7525,lng:37.6231,desc:"Selon la lÈgende, Ivan le Terrible fit aveugler ses architectes aprËs l'achËvement de la cathÈdrale pour qu'ils ne puissent jamais construire quelque chose d'aussi beau ailleurs. Cette histoire est probablement apocryphe.",photo:"photos/cathedrale_saint_basile.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CathÈdrale de l'Intercession de la MËre de Dieu sur les Douves, Place Rouge, construite de 1555 ‡ 1561 sous Ivan le Terrible"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande place centrale, entre la forteresse du Kremlin et le grand magasin d'…tat"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CathÈdrale aux bulbes colorÈs, emblËme de la Russie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La CathÈdrale Saint-Basile sur la Place Rouge ‡ Moscou, Russie"}
   ]},
-  {name:"Palais du Parlement ‚Äî Bucarest, Roumanie",lat:44.4275,lng:26.0875,desc:"Le Parlement de Bucarest est le deuxi√®me plus grand b√¢timent administratif au monde apr√®s le Pentagone. Ceau?escu fit raser un cinqui√®me de la vieille ville de Bucarest pour le construire ‚Äî dont 19 √©glises orthodoxes et 7 synagogues.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palatul Parlamentului, command√© par Nicolae Ceau?escu en 1984, 2√®me plus grand b√¢timent administratif du monde"},
+  {name:"Palais du Parlement ó Bucarest, Roumanie",lat:44.4275,lng:26.0875,desc:"Le Parlement de Bucarest est le deuxiËme plus grand b‚timent administratif au monde aprËs le Pentagone. Ceau?escu fit raser un cinquiËme de la vieille ville de Bucarest pour le construire ó dont 19 Èglises orthodoxes et 7 synagogues.",photo:"photos/palais_du_parlement.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palatul Parlamentului, commandÈ par Nicolae Ceau?escu en 1984, 2Ëme plus grand b‚timent administratif du monde"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline Spirii, centre de la capitale, pays d'Europe de l'Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand b√¢timent du monde par volume int√©rieur, capitale de la Roumanie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais du Parlement √† Bucarest, Roumanie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand b‚timent du monde par volume intÈrieur, capitale de la Roumanie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais du Parlement ‡ Bucarest, Roumanie"}
   ]},
-  {name:"Grande Muraille de Chine ‚Äî Mutianyu",lat:40.4319,lng:116.5704,desc:"Contrairement √† la l√©gende, la Grande Muraille n'est pas visible √† l'≈ìil nu depuis l'espace. Mais elle reste l'une des constructions humaines les plus longues avec ses 21 196 km, soit la moiti√© du p√©rim√®tre de la Terre.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Section de Mutianyu, construite sous la dynastie Ming (1368-1644), pr√©fecture de Beijing"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Montagnes au nord-est de la capitale, √† 73 km du centre-ville"},
+  {name:"Grande Muraille de Chine ó Mutianyu",lat:40.4319,lng:116.5704,desc:"Contrairement ‡ la lÈgende, la Grande Muraille n'est pas visible ‡ l'úil nu depuis l'espace. Mais elle reste l'une des constructions humaines les plus longues avec ses 21 196 km, soit la moitiÈ du pÈrimËtre de la Terre.",photo:"photos/grande_muraille_de_chine.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Section de Mutianyu, construite sous la dynastie Ming (1368-1644), prÈfecture de Beijing"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Montagnes au nord-est de la capitale, ‡ 73 km du centre-ville"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus longue structure construite par l'Homme, 21 196 km de long au total"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Grande Muraille de Chine (Section de Mutianyu, pr√®s de P√©kin)"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Grande Muraille de Chine (Section de Mutianyu, prËs de PÈkin)"}
   ]},
-  {name:"Cit√© Interdite ‚Äî P√©kin, Chine",lat:39.9163,lng:116.3972,desc:"Avec ses 9 999 pi√®ces (une de moins que le palais c√©leste des dieux selon la tradition), la Cit√© Interdite h√©bergea 24 empereurs chinois. Aucun simple citoyen n'y p√©n√©tra pendant 500 ans.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gugong, palais imp√©rial construit entre 1406 et 1420 sous l'empereur Yongle, 980 b√¢timents"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de la capitale, au nord de la grande place c√©l√®bre, entour√© de douves"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand palais du monde, r√©sidence des empereurs Ming et Qing pendant 500 ans"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cit√© Interdite √† P√©kin, Chine"}
+  {name:"CitÈ Interdite ó PÈkin, Chine",lat:39.9163,lng:116.3972,desc:"Avec ses 9 999 piËces (une de moins que le palais cÈleste des dieux selon la tradition), la CitÈ Interdite hÈbergea 24 empereurs chinois. Aucun simple citoyen n'y pÈnÈtra pendant 500 ans.",photo:"photos/cite_interdit.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gugong, palais impÈrial construit entre 1406 et 1420 sous l'empereur Yongle, 980 b‚timents"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de la capitale, au nord de la grande place cÈlËbre, entourÈ de douves"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand palais du monde, rÈsidence des empereurs Ming et Qing pendant 500 ans"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La CitÈ Interdite ‡ PÈkin, Chine"}
   ]},
-  {name:"Temple d'or (Harmandir Sahib) ‚Äî Amritsar, Inde",lat:31.62,lng:74.8765,desc:"Le Temple d'Or recouvre 750 kg de feuilles d'or pur. Les Sikhs cuisinent et servent gratuitement 100 000 repas par jour √† tous les visiteurs sans distinction de religion, de caste ou de nationalit√©.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Harmandir Sahib, lieu saint sikh construit en 1604 par Guru Arjan Dev Ji, entour√© du lac Amrit Sarovar"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"C≈ìur de la vieille ville d'Amritsar, Pendjab indien, √† 30 km de la fronti√®re pakistanaise"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple le plus sacr√© du sikhisme, recouvert de feuilles d'or"},
+  {name:"Temple d'or (Harmandir Sahib) ó Amritsar, Inde",lat:31.62,lng:74.8765,desc:"Le Temple d'Or recouvre 750 kg de feuilles d'or pur. Les Sikhs cuisinent et servent gratuitement 100 000 repas par jour ‡ tous les visiteurs sans distinction de religion, de caste ou de nationalitÈ.",photo:"photos/temple_d_or_harmandir_sahib.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Harmandir Sahib, lieu saint sikh construit en 1604 par Guru Arjan Dev Ji, entourÈ du lac Amrit Sarovar"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cúur de la vieille ville d'Amritsar, Pendjab indien, ‡ 30 km de la frontiËre pakistanaise"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple le plus sacrÈ du sikhisme, recouvert de feuilles d'or"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple d'Or d'Amritsar, Inde"}
   ]},
-  {name:"Taj Mahal ‚Äî Agra, Inde",lat:27.1751,lng:78.0421,desc:"Le Taj Mahal change de couleur selon la lumi√®re : ros√© √† l'aube, blanc √©blouissant √† midi, dor√© au coucher du soleil, argent√© au clair de lune. Shah Jahan, vieilli et emprisonn√© par son fils, pouvait apercevoir le mausol√©e de sa fen√™tre jusqu'√† sa mort.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mausol√©e en marbre blanc command√© par Shah Jahan pour son √©pouse Mumtaz Mahal, construit de 1632 √† 1653"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive droite de la Yamuna, Agra, √âtat de l'Uttar Pradesh"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Merveille du monde, mausol√©e moghol class√© UNESCO, Inde"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Taj Mahal √† Agra, Inde"}
+  {name:"Taj Mahal ó Agra, Inde",lat:27.1751,lng:78.0421,desc:"Le Taj Mahal change de couleur selon la lumiËre : rosÈ ‡ l'aube, blanc Èblouissant ‡ midi, dorÈ au coucher du soleil, argentÈ au clair de lune. Shah Jahan, vieilli et emprisonnÈ par son fils, pouvait apercevoir le mausolÈe de sa fenÍtre jusqu'‡ sa mort.",photo:"photos/taj_mahal.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"MausolÈe en marbre blanc commandÈ par Shah Jahan pour son Èpouse Mumtaz Mahal, construit de 1632 ‡ 1653"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive droite de la Yamuna, Agra, …tat de l'Uttar Pradesh"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Merveille du monde, mausolÈe moghol classÈ UNESCO, Inde"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Taj Mahal ‡ Agra, Inde"}
   ]},
-  {name:"Mont Fuji ‚Äî Japon",lat:35.3606,lng:138.7274,desc:"Le Fuji est consid√©r√© comme sacr√© depuis des si√®cles ‚Äî les femmes n'avaient pas le droit de l'escalader jusqu'en 1868. Chaque √©t√©, pr√®s de 200 000 personnes font l'ascension dont beaucoup de nuit pour voir le lever du soleil.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stratovolcan de 3 776 m, pr√©fectures de Shizuoka et Yamanashi, dernier r√©veil en 1707"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion de Ch?bu, √† 100 km au sud-ouest de la m√©galopole, visible par temps clair depuis la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute montagne du Japon, symbole national class√© UNESCO"},
+  {name:"Mont Fuji ó Japon",lat:35.3606,lng:138.7274,desc:"Le Fuji est considÈrÈ comme sacrÈ depuis des siËcles ó les femmes n'avaient pas le droit de l'escalader jusqu'en 1868. Chaque ÈtÈ, prËs de 200 000 personnes font l'ascension dont beaucoup de nuit pour voir le lever du soleil.",photo:"photos/taj_mahal.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stratovolcan de 3 776 m, prÈfectures de Shizuoka et Yamanashi, dernier rÈveil en 1707"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion de Ch?bu, ‡ 100 km au sud-ouest de la mÈgalopole, visible par temps clair depuis la capitale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute montagne du Japon, symbole national classÈ UNESCO"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mont Fuji, Japon"}
   ]},
-  {name:"Angkor Wat ‚Äî Siem Reap, Cambodge",lat:13.4125,lng:103.867,desc:"Angkor Wat est le plus grand b√¢timent religieux du monde. La cit√© d'Angkor, qui l'entourait, √©tait au XIIe si√®cle la plus grande ville pr√©-industrielle du monde, avec peut-√™tre un million d'habitants.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple-montagne khmer construit par Suryavarman II au XIIe si√®cle, d√©di√© √† Vishnu, plus grand √©difice religieux du monde"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Temple dans la Province du Siem Reap nord-ouest du pays, bord d'un grand lac int√©rieur"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple du monde, joyau de l'architecture khm√®re, Cambodge"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le complexe d'Angkor Wat √† Siem Reap, Cambodge"}
+  {name:"Angkor Wat ó Siem Reap, Cambodge",lat:13.4125,lng:103.867,desc:"Angkor Wat est le plus grand b‚timent religieux du monde. La citÈ d'Angkor, qui l'entourait, Ètait au XIIe siËcle la plus grande ville prÈ-industrielle du monde, avec peut-Ítre un million d'habitants.",photo:"photos/angkor_wat.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple-montagne khmer construit par Suryavarman II au XIIe siËcle, dÈdiÈ ‡ Vishnu, plus grand Èdifice religieux du monde"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Temple dans la Province du Siem Reap nord-ouest du pays, bord d'un grand lac intÈrieur"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple du monde, joyau de l'architecture khmËre, Cambodge"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le complexe d'Angkor Wat ‡ Siem Reap, Cambodge"}
   ]},
-  {name:"Marina Bay Sands ‚Äî Singapour",lat:1.2834,lng:103.8607,desc:"La piscine √† d√©bordement du Marina Bay Sands, √† 200 m de hauteur, est la plus grande piscine en hauteur du monde avec ses 150 m de long. Elle ne relie les tours que visuellement ‚Äî elle est port√©e par une structure distincte de 10 000 tonnes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Complexe h√¥telier de Moshe Safdie ouvert en 2010, trois tours reli√©es par une plateforme panoramique de 340m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Baie centrale de la cit√©-√âtat, bord d'un d√©troit maritime, c≈ì≈ìur financier"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"H√¥tel iconique √† la piscine suspendue, skyline de Singapour"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Marina Bay Sands √† Singapour"}
+  {name:"Marina Bay Sands ó Singapour",lat:1.2834,lng:103.8607,desc:"La piscine ‡ dÈbordement du Marina Bay Sands, ‡ 200 m de hauteur, est la plus grande piscine en hauteur du monde avec ses 150 m de long. Elle ne relie les tours que visuellement ó elle est portÈe par une structure distincte de 10 000 tonnes.",photo:"photos/angkor_wat.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Complexe hÙtelier de Moshe Safdie ouvert en 2010, trois tours reliÈes par une plateforme panoramique de 340m"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Baie centrale de la citÈ-…tat, bord d'un dÈtroit maritime, cúúur financier"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"HÙtel iconique ‡ la piscine suspendue, skyline de Singapour"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Marina Bay Sands ‡ Singapour"}
   ]},
-  {name:"Burj Khalifa ‚Äî Duba√Ø, √âmirats Arabes Unis",lat:25.1972,lng:55.2744,desc:"Le Burj Khalifa est si haut que les r√©sidents des derniers √©tages peuvent voir deux couchers de soleil le m√™me jour : l'un depuis le sol, puis un second apr√®s √™tre mont√©s en ascenseur en quelques minutes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gratte-ciel de 829,8 m con√ßu par Adrian Smith (Skidmore, Owings & Merrill), inaugur√© le 4 janvier 2010"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Downtown de la m√©tropole, √† c√¥t√© d'un immense centre commercial et de fontaines c√©l√®bres"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand b√¢timent du monde, 163 √©tages, √âmirats Arabes Unis"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Burj Khalifa √† Duba√Ø, √âmirats Arabes Unis"}
+  {name:"Burj Khalifa ó DubaÔ, …mirats Arabes Unis",lat:25.1972,lng:55.2744,desc:"Le Burj Khalifa est si haut que les rÈsidents des derniers Ètages peuvent voir deux couchers de soleil le mÍme jour : l'un depuis le sol, puis un second aprËs Ítre montÈs en ascenseur en quelques minutes.",photo:"https://upload.wikimedia.org/wikipedia/fr/b/b0/Burj_Khalifa.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gratte-ciel de 829,8 m conÁu par Adrian Smith (Skidmore, Owings & Merrill), inaugurÈ le 4 janvier 2010"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Downtown de la mÈtropole, ‡ cÙtÈ d'un immense centre commercial et de fontaines cÈlËbres"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand b‚timent du monde, 163 Ètages, …mirats Arabes Unis"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Burj Khalifa ‡ DubaÔ, …mirats Arabes Unis"}
   ]},
-  {name:"Petra ‚Äî Jordanie",lat:30.3285,lng:35.4444,desc:"Le canyon du Siq, gorge menant √† Petra, mesure par endroits moins d'un m√®tre de large pour 80 m√®tres de haut. Les touristes qui marchent dans cette fissure rouge au lever du soleil √©mergent sur le Tr√©sor ‚Äî un moment consid√©r√© comme l'un des plus beaux au monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Al-Khazneh (Le Tr√©sor), tombe nabat√©enne du Ier si√®cle av. J.-C. taill√©e dans le gr√®s rose, Wadi Musa"},
+  {name:"Petra ó Jordanie",lat:30.3285,lng:35.4444,desc:"Le canyon du Siq, gorge menant ‡ Petra, mesure par endroits moins d'un mËtre de large pour 80 mËtres de haut. Les touristes qui marchent dans cette fissure rouge au lever du soleil Èmergent sur le TrÈsor ó un moment considÈrÈ comme l'un des plus beaux au monde.",photo:"https://upload.wikimedia.org/wikipedia/commons/e/e8/Al_Deir_Petra.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Al-Khazneh (Le TrÈsor), tombe nabatÈenne du Ier siËcle av. J.-C. taillÈe dans le grËs rose, Wadi Musa"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gouvernorat du sud du pays, dans les monts Shara"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© rose taill√©e dans le roc, merveille du monde, Jordanie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La cit√© antique de P√©tra, Jordanie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ rose taillÈe dans le roc, merveille du monde, Jordanie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La citÈ antique de PÈtra, Jordanie"}
   ]},
-  {name:"Mur des Lamentations ‚Äî J√©rusalem",lat:31.7767,lng:35.2345,desc:"Le Mur des Lamentations est le seul vestige du mur de sout√®nement du Second Temple, d√©truit en 70 ap. J.-C. par les Romains. Les p√®lerins y glissent des petits papiers portant des pri√®res ‚Äî environ un million par an.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kotel, vestige du mur ouest de l'esplanade du Second Temple d'H√©rode le Grand, vieille ville sainte des trois religions"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier juif de la Vieille Ville de J√©rusalem, face au mont du Temple"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lieu saint du juda√Øsme, vestige du Temple de Salomon"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mur des Lamentations √† J√©rusalem"}
+  {name:"Mur des Lamentations ó JÈrusalem",lat:31.7767,lng:35.2345,desc:"Le Mur des Lamentations est le seul vestige du mur de soutËnement du Second Temple, dÈtruit en 70 ap. J.-C. par les Romains. Les pËlerins y glissent des petits papiers portant des priËres ó environ un million par an.",photo:"photos/mur_des_lamentations.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kotel, vestige du mur ouest de l'esplanade du Second Temple d'HÈrode le Grand, vieille ville sainte des trois religions"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier juif de la Vieille Ville de JÈrusalem, face au mont du Temple"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lieu saint du judaÔsme, vestige du Temple de Salomon"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mur des Lamentations ‡ JÈrusalem"}
   ]},
-  {name:"Pyramides de Gizeh ‚Äî √âgypte",lat:29.9792,lng:31.1342,desc:"La Grande Pyramide de Kh√©ops √©tait le plus grand b√¢timent du monde pendant 3 800 ans. Ses 2,3 millions de blocs de calcaire sont pos√©s avec une pr√©cision millim√©trique, sans ciment ni mortier.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"N√©cropole royale de la IVe dynastie ‚Äî Kh√©ops (2551 av. J.-C.), Kh√©phren et Myk√©rinos, plateau de Gizeh"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau de Gizeh, bord du d√©sert libyen, en face du Caire sur la rive ouest du Nil"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Unique merveille du monde antique encore debout, √âgypte"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Pyramides de Gizeh, √âgypte"}
+  {name:"Pyramides de Gizeh ó …gypte",lat:29.9792,lng:31.1342,desc:"La Grande Pyramide de KhÈops Ètait le plus grand b‚timent du monde pendant 3 800 ans. Ses 2,3 millions de blocs de calcaire sont posÈs avec une prÈcision millimÈtrique, sans ciment ni mortier.",photo:"photos/pyramides_de_gizeh.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"NÈcropole royale de la IVe dynastie ó KhÈops (2551 av. J.-C.), KhÈphren et MykÈrinos, plateau de Gizeh"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau de Gizeh, bord du dÈsert libyen, en face du Caire sur la rive ouest du Nil"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Unique merveille du monde antique encore debout, …gypte"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Pyramides de Gizeh, …gypte"}
   ]},
-  {name:"Sphinx de Gizeh ‚Äî √âgypte",lat:29.9753,lng:31.1376,desc:"Le nez du Sphinx fut probablement bris√© intentionnellement au XVe si√®cle. Des photographies du XIXe si√®cle montrent que le Sphinx √©tait recouvert jusqu'aux √©paules par les sables du d√©sert pendant des si√®cles.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monolithe calcaire de 73m de long sculpt√© sous Kh√©phren vers 2500 av. J.-C., plateau de Gizeh"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√Ä l'est des pyramides de Gizeh, gardant la n√©cropole royale, plateau de Gizeh"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand sphinx du monde, gardien des pyramides d'√âgypte"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Sphinx de Gizeh en √âgypte"}
+  {name:"Sphinx de Gizeh ó …gypte",lat:29.9753,lng:31.1376,desc:"Le nez du Sphinx fut probablement brisÈ intentionnellement au XVe siËcle. Des photographies du XIXe siËcle montrent que le Sphinx Ètait recouvert jusqu'aux Èpaules par les sables du dÈsert pendant des siËcles.",photo:"photos/sphinx_de_gizeh.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monolithe calcaire de 73m de long sculptÈ sous KhÈphren vers 2500 av. J.-C., plateau de Gizeh"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"¿ l'est des pyramides de Gizeh, gardant la nÈcropole royale, plateau de Gizeh"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand sphinx du monde, gardien des pyramides d'…gypte"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Sphinx de Gizeh en …gypte"}
   ]},
-  {name:"Kilimandjaro ‚Äî Tanzanie",lat:-3.0674,lng:37.3556,desc:"Le Kilimandjaro perd 80% de sa calotte glaciaire depuis 1912 en raison du r√©chauffement climatique. Ses glaciers sommitaux pourraient dispara√Ætre compl√®tement d'ici 2060, mena√ßant l'approvisionnement en eau de millions d'Africains.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Uhuru Peak, point culminant du stratovolcan Kibo √† 5 895 m, plus haute montagne du continent africain"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion du nord-est du pays, proche d'une grande capitale voisine"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute montagne d'Afrique, volcan enneig√© en zone √©quatoriale"},
+  {name:"Kilimandjaro ó Tanzanie",lat:-3.0674,lng:37.3556,desc:"Le Kilimandjaro perd 80% de sa calotte glaciaire depuis 1912 en raison du rÈchauffement climatique. Ses glaciers sommitaux pourraient disparaÓtre complËtement d'ici 2060, menaÁant l'approvisionnement en eau de millions d'Africains.",photo:"photos/kilimandjaro.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Uhuru Peak, point culminant du stratovolcan Kibo ‡ 5 895 m, plus haute montagne du continent africain"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion du nord-est du pays, proche d'une grande capitale voisine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute montagne d'Afrique, volcan enneigÈ en zone Èquatoriale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kilimandjaro en Tanzanie"}
   ]},
-  {name:"Victoria Falls ‚Äî Zimbabwe/Zambie",lat:-17.9243,lng:25.8572,desc:"L'arc-en-ciel permanent cr√©√© par les embruns des chutes Victoria donne naissance √† un ¬´arc-en-ciel lunaire¬ª lors des nuits de pleine lune ‚Äî l'un des ph√©nom√®nes naturels les plus rares et les plus difficiles √† photographier au monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosi-oa-Tunya, chutes de 108m de haut et 1,7 km de large sur le fleuve Zamb√®ze, d√©crites par Livingstone en 1855"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fronti√®re entre deux pays d'Afrique australe, fleuve majestueux"},
+  {name:"Victoria Falls ó Zimbabwe/Zambie",lat:-17.9243,lng:25.8572,desc:"L'arc-en-ciel permanent crÈÈ par les embruns des chutes Victoria donne naissance ‡ un ´arc-en-ciel lunaireª lors des nuits de pleine lune ó l'un des phÈnomËnes naturels les plus rares et les plus difficiles ‡ photographier au monde.",photo:"photos/victoria_falls.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosi-oa-Tunya, chutes de 108m de haut et 1,7 km de large sur le fleuve ZambËze, dÈcrites par Livingstone en 1855"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"FrontiËre entre deux pays d'Afrique australe, fleuve majestueux"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande cascade du monde en volume d'eau, Afrique australe"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Victoria Falls au Zimbabwe/Zambie"}
   ]},
-  {name:"Kigali Genocide Memorial ‚Äî Rwanda",lat:-1.9441,lng:30.0619,desc:"Le m√©morial de Kigali honore les 250 000 victimes du g√©nocide rwandais de 1994. En 100 jours, environ 800 000 Tutsis et Hutus mod√©r√©s furent tu√©s. Le Rwanda, qui a depuis accompli une transformation √©conomique remarquable, comm√©more chaque 7 avril la Journ√©e internationale de la r√©flexion.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gisozi, m√©morial inaugur√© en 2004 comm√©morant le g√©nocide de 1994, colline de Kigali"},
+  {name:"Kigali Genocide Memorial ó Rwanda",lat:-1.9441,lng:30.0619,desc:"Le mÈmorial de Kigali honore les 250 000 victimes du gÈnocide rwandais de 1994. En 100 jours, environ 800 000 Tutsis et Hutus modÈrÈs furent tuÈs. Le Rwanda, qui a depuis accompli une transformation Èconomique remarquable, commÈmore chaque 7 avril la JournÈe internationale de la rÈflexion.",photo:"photos/kigali_genocide_memorial.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gisozi, mÈmorial inaugurÈ en 2004 commÈmorant le gÈnocide de 1994, colline de Kigali"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier d'une capitale d'Afrique centrale, sur une colline des mille collines"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal m√©morial du g√©nocide rwandais, capitale du Rwanda"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal mÈmorial du gÈnocide rwandais, capitale du Rwanda"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kigali Genocide Memorial au Rwanda"}
   ]},
-  {name:"Statue de l'Unit√© ‚Äî Inde (Sardar Patel)",lat:21.8381,lng:73.7198,desc:"La Statue de l'Unit√© repr√©sente Sardar Vallabhbhai Patel, l'homme qui r√©unit les 562 principaut√©s indiennes en un seul √âtat apr√®s l'ind√©pendance. √Ä 182 m√®tres, elle est deux fois plus haute que la Statue de la Libert√©. Des visiteurs viennent du monde entier pour monter jusqu'√† son torse-observatoire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ekta ki Pratima, statue de 182 m inaugur√©e en 2018 au bord d'un grand barrage, plus haute statue du monde"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle Sadhu Bet sur la rivi√®re Narmada, district de Narmada, Gujarat"},
+  {name:"Statue de l'UnitÈ ó Inde (Sardar Patel)",lat:21.8381,lng:73.7198,desc:"La Statue de l'UnitÈ reprÈsente Sardar Vallabhbhai Patel, l'homme qui rÈunit les 562 principautÈs indiennes en un seul …tat aprËs l'indÈpendance. ¿ 182 mËtres, elle est deux fois plus haute que la Statue de la LibertÈ. Des visiteurs viennent du monde entier pour monter jusqu'‡ son torse-observatoire.",photo:"photos/statue_de_l_unite.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ekta ki Pratima, statue de 182 m inaugurÈe en 2018 au bord d'un grand barrage, plus haute statue du monde"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle Sadhu Bet sur la riviËre Narmada, district de Narmada, Gujarat"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande statue du monde (182 m), Gujarat, Inde"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Statue de l'Unit√© en Inde (Sardar Patel)"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Statue de l'UnitÈ en Inde (Sardar Patel)"}
   ]},
-  {name:"Christ R√©dempteur ‚Äî Rio, Br√©sil",lat:-22.9519,lng:-43.2105,desc:"Le Christ R√©dempteur est frapp√© par la foudre environ trois fois par an. Sa restauration en 2010 inclut un paratonnerre int√©gr√© dans la couronne d'√©pines. Il mesure 38 m√®tres en comptant son pi√©destal.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Statue du Christ de 38 m inaugur√©e en 1931, sommet du Corcovado (710 m), for√™t tropicale urbaine"},
+  {name:"Christ RÈdempteur ó Rio, BrÈsil",lat:-22.9519,lng:-43.2105,desc:"Le Christ RÈdempteur est frappÈ par la foudre environ trois fois par an. Sa restauration en 2010 inclut un paratonnerre intÈgrÈ dans la couronne d'Èpines. Il mesure 38 mËtres en comptant son piÈdestal.",photo:"photos/christ_redempteur.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Statue du Christ de 38 m inaugurÈe en 1931, sommet du Corcovado (710 m), forÍt tropicale urbaine"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Montagne du Corcovado, parc national de Tijuca, quartier de Santa Teresa, Rio"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Statue embl√©matique surplombant Rio de Janeiro, merveille du monde"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Christ R√©dempteur √† Rio, Br√©sil"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Statue emblÈmatique surplombant Rio de Janeiro, merveille du monde"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Christ RÈdempteur ‡ Rio, BrÈsil"}
   ]},
-  {name:"Machu Picchu ‚Äî P√©rou",lat:-13.1631,lng:-72.545,desc:"Machu Picchu fut construit sans roue, sans fer et sans √©criture. Ses murs en pierre s√®che r√©sistent aux s√©ismes car chaque bloc est l√©g√®rement arrondi, permettant aux pierres de ¬´danser¬ª lors des tremblements de terre.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© inca construite vers 1450 par Pachacuti sur un col √† 2 430 m, red√©couverte par Hiram Bingham en 1911"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vall√©e de l'Urubamba (Rivi√®re Sacr√©e), haute Andes, ancienne capitale inca √† proximit√©"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© inca perdue dans les nuages, merveille du monde, P√©rou"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Machu Picchu au P√©rou"}
+  {name:"Machu Picchu ó PÈrou",lat:-13.1631,lng:-72.545,desc:"Machu Picchu fut construit sans roue, sans fer et sans Ècriture. Ses murs en pierre sËche rÈsistent aux sÈismes car chaque bloc est lÈgËrement arrondi, permettant aux pierres de ´danserª lors des tremblements de terre.",photo:"photos/christ_redempteur.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ inca construite vers 1450 par Pachacuti sur un col ‡ 2 430 m, redÈcouverte par Hiram Bingham en 1911"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"VallÈe de l'Urubamba (RiviËre SacrÈe), haute Andes, ancienne capitale inca ‡ proximitÈ"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ inca perdue dans les nuages, merveille du monde, PÈrou"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Machu Picchu au PÈrou"}
   ]},
-  {name:"Statue de la Libert√© ‚Äî New York, USA",lat:40.6892,lng:-74.0445,desc:"La Statue de la Libert√© fut offerte par la France mais les Am√©ricains durent financer eux-m√™mes son pi√©destal. Joseph Pulitzer lan√ßa une collecte publique dans son journal, r√©coltant 100 000 dollars en moins de six mois.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Liberty Island, inaugur√© en 1886, con√ßu par Bartholdi et Eiffel, 93 m avec le socle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Liberty Island, grande baie de la c√¥te est, entre deux √âtats am√©ricains"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Symbole de la libert√© offert par la France, port de New York"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Statue de la Libert√© √† New York, USA"}
+  {name:"Statue de la LibertÈ ó New York, USA",lat:40.6892,lng:-74.0445,desc:"La So?a (Isonzo en italien) est une riviËre aux eaux d\'un bleu-vert Èmeraude unique, prenant sa source dans les Alpes juliennes slovËnes. Sa vallÈe fut le thÈ‚tre des batailles de l\'Isonzo (1915-1917) et est aujourd\'hui un paradis naturel rÈputÈ pour ses gorges spectaculaires et sports d\'eau vive.",photo:"photos/statue_de_la_liberte.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Liberty Island, inaugurÈ en 1886, conÁu par Bartholdi et Eiffel, 93 m avec le socle"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Liberty Island, grande baie de la cÙte est, entre deux …tats amÈricains"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Symbole de la libertÈ offert par la France, port de New York"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Statue de la LibertÈ ‡ New York, USA"}
   ]},
-  {name:"Grand Canyon ‚Äî Arizona, USA",lat:36.0544,lng:-112.2401,desc:"Le Grand Canyon contient des fossiles de cr√©atures marines √† 2 000 m√®tres d'altitude ‚Äî preuve que cette r√©gion √©tait autrefois au fond d'une mer chaude. En descendant vers le fond, on voyage litt√©ralement dans le temps g√©ologique.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mather Point, South Rim, canyon creus√© par le Colorado sur 446 km de long, 1 857 m de profondeur maximale"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau du Colorado, nord de l'Arizona, parc national cr√©√© par Theodore Roosevelt en 1908"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyon creus√© par le Colorado sur 446 km, 1 857 m de profondeur maximale, merveille naturelle de l'Arizona"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grand Canyon √† Arizona, USA"}
+  {name:"Grand Canyon ó Arizona, USA",lat:36.0544,lng:-112.2401,desc:"Le Grand Canyon contient des fossiles de crÈatures marines ‡ 2 000 mËtres d'altitude ó preuve que cette rÈgion Ètait autrefois au fond d'une mer chaude. En descendant vers le fond, on voyage littÈralement dans le temps gÈologique.",photo:"photos/grand_canyon.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mather Point, South Rim, canyon creusÈ par le Colorado sur 446 km de long, 1 857 m de profondeur maximale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau du Colorado, nord de l'Arizona, parc national crÈÈ par Theodore Roosevelt en 1908"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyon creusÈ par le Colorado sur 446 km, 1 857 m de profondeur maximale, merveille naturelle de l'Arizona"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grand Canyon ‡ Arizona, USA"}
   ]},
-  {name:"Chichen Itza ‚Äî Yucatan, Mexique",lat:20.6843,lng:-88.5678,desc:"La grande c√©note sacr√©e de Chichen Itza livra lors de fouilles au XXe si√®cle des dizaines de squelettes, bijoux de jade et objets en or ‚Äî confirmant les sacrifices mayas. On estime que des milliers d'offrandes reposent encore au fond inaccessible du puits.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"El Castillo, pyramide √† degr√©s de Kukulc√°n de 30 m, cit√© maya fond√©e au VIe si√®cle, ph√©nom√®ne du serpent de lumi√®re aux √©quinoxes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Municipalit√© de Tinum, √âtat du Yucat√°n, p√©ninsule mexicaine, √† 120 km de M√©rida"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pyramide maya, merveille du monde, p√©ninsule du Yucat√°n, Mexique"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chichen Itza √† Yucatan, Mexique"}
+  {name:"Chichen Itza ó Yucatan, Mexique",lat:20.6843,lng:-88.5678,desc:"La grande cÈnote sacrÈe de Chichen Itza livra lors de fouilles au XXe siËcle des dizaines de squelettes, bijoux de jade et objets en or ó confirmant les sacrifices mayas. On estime que des milliers d'offrandes reposent encore au fond inaccessible du puits.",photo:"photos/chichen_itza.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"El Castillo, pyramide ‡ degrÈs de Kukulc·n de 30 m, citÈ maya fondÈe au VIe siËcle, phÈnomËne du serpent de lumiËre aux Èquinoxes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"MunicipalitÈ de Tinum, …tat du Yucat·n, pÈninsule mexicaine, ‡ 120 km de MÈrida"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pyramide maya, merveille du monde, pÈninsule du Yucat·n, Mexique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chichen Itza ‡ Yucatan, Mexique"}
   ]},
-  {name:"Chutes du Niagara ‚Äî Canada/USA",lat:43.0896,lng:-79.0849,desc:"Les Chutes du Niagara ont √©t√© stopp√©es une seule fois dans l'histoire, du 29 mars au 10 juin 1848, quand un emb√¢cle de glace sur le lac √âri√© interrompit le d√©bit. Les habitants travers√®rent alors √† pied le lit de la rivi√®re √† sec.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Horseshoe Falls, chutes de 57 m de hauteur sur la rivi√®re Niagara, fronti√®re entre deux pays"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fronti√®re entre deux villes homonymes de part et d'autre d'une fronti√®re internationale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"C√©l√®bres chutes d'eau √† la fronti√®re canado-am√©ricaine"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes du Niagara (fronti√®re Canada / √âtats-Unis)"}
+  {name:"Chutes du Niagara ó Canada/USA",lat:43.0896,lng:-79.0849,desc:"Les Chutes du Niagara ont ÈtÈ stoppÈes une seule fois dans l'histoire, du 29 mars au 10 juin 1848, quand un emb‚cle de glace sur le lac …riÈ interrompit le dÈbit. Les habitants traversËrent alors ‡ pied le lit de la riviËre ‡ sec.",photo:"photos/chutes_du_niagara.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Horseshoe Falls, chutes de 57 m de hauteur sur la riviËre Niagara, frontiËre entre deux pays"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"FrontiËre entre deux villes homonymes de part et d'autre d'une frontiËre internationale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CÈlËbres chutes d'eau ‡ la frontiËre canado-amÈricaine"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes du Niagara (frontiËre Canada / …tats-Unis)"}
   ]},
-  {name:"Op√©ra de Sydney ‚Äî Australie",lat:-33.8568,lng:151.2153,desc:"La construction de l'Op√©ra de Sydney prit 16 ans et co√ªta 14 fois son budget initial. Pour financer le d√©passement, le gouvernement australien cr√©a une loterie nationale sp√©ciale. Les billets de loterie ¬´Sydney Opera House¬ª sont aujourd'hui des pi√®ces de collection.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bennelong Point, con√ßu par J√∏rn Utzon, construction de 1959 √† 1973, inaugur√© par la reine Elizabeth II"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"P√©ninsule d'une grande baie naturelle, port principal d'un continent insulaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Salle de spectacle aux toits en coquilles, embl√®me de l'Australie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Op√©ra de Sydney en Australie"}
+  {name:"OpÈra de Sydney ó Australie",lat:-33.8568,lng:151.2153,desc:"La construction de l'OpÈra de Sydney prit 16 ans et co˚ta 14 fois son budget initial. Pour financer le dÈpassement, le gouvernement australien crÈa une loterie nationale spÈciale. Les billets de loterie ´Sydney Opera Houseª sont aujourd'hui des piËces de collection.",photo:"photos/chutes_du_niagara.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bennelong Point, conÁu par J¯rn Utzon, construction de 1959 ‡ 1973, inaugurÈ par la reine Elizabeth II"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"PÈninsule d'une grande baie naturelle, port principal d'un continent insulaire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Salle de spectacle aux toits en coquilles, emblËme de l'Australie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'OpÈra de Sydney en Australie"}
   ]},
-  {name:"Uluru ‚Äî Territoire du Nord, Australie",lat:-25.3444,lng:131.0369,desc:"Uluru est beaucoup plus grand qu'il n'y para√Æt : les deux tiers de ce monolithe sont enfouis sous terre. Les Anangu ont finalement interdit l'escalade du rocher sacr√© en 2019, apr√®s des d√©cennies de n√©gociations.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monolithe de gr√®s rouge de 348 m de hauteur, lieu sacr√© des Anangu, parc national Uluru-Kata Tjuta"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"C≈ì≈ìur du continent, r√©gion aride, √† 450 km d'une ville isol√©e du d√©sert"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand rocher rouge sacr√© au c≈ìur du d√©sert australien, class√© UNESCO"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Uluru √† Territoire du Nord, Australie"}
+  {name:"Uluru ó Territoire du Nord, Australie",lat:-25.3444,lng:131.0369,desc:"Uluru est beaucoup plus grand qu'il n'y paraÓt : les deux tiers de ce monolithe sont enfouis sous terre. Les Anangu ont finalement interdit l'escalade du rocher sacrÈ en 2019, aprËs des dÈcennies de nÈgociations.",photo:"https://upload.wikimedia.org/wikipedia/commons/c/c2/Uluru%2C_helicopter_view%2C_cropped.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monolithe de grËs rouge de 348 m de hauteur, lieu sacrÈ des Anangu, parc national Uluru-Kata Tjuta"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cúúur du continent, rÈgion aride, ‡ 450 km d'une ville isolÈe du dÈsert"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand rocher rouge sacrÈ au cúur du dÈsert australien, classÈ UNESCO"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Uluru ‡ Territoire du Nord, Australie"}
   ]},
-  {name:"Trou Bleu de Belize ‚Äî Belize",lat:17.3158,lng:-87.5348,desc:"Le Grand Trou Bleu de Belize fut rendu c√©l√®bre par Jacques-Yves Cousteau qui le classa parmi les 10 plus beaux sites de plong√©e au monde en 1971. Ses parois verticales descendent √† 125 m√®tres et abritent des requins nourrices et des requins des r√©cifs dormant au fond.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Great Blue Hole, gouffre sous-marin de 300 m de diam√®tre et 125 m de profondeur, r√©cif m√©so-am√©ricain"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de l'atoll de Lighthouse Reef, mer des Cara√Øbes, Belize"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande structure de ce type au monde, embl√®me du Belize, Cara√Øbes"},
+  {name:"Trou Bleu de Belize ó Belize",lat:17.3158,lng:-87.5348,desc:"Le Grand Trou Bleu de Belize fut rendu cÈlËbre par Jacques-Yves Cousteau qui le classa parmi les 10 plus beaux sites de plongÈe au monde en 1971. Ses parois verticales descendent ‡ 125 mËtres et abritent des requins nourrices et des requins des rÈcifs dormant au fond.",photo:"photos/trou_bleu_de_belize.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Great Blue Hole, gouffre sous-marin de 300 m de diamËtre et 125 m de profondeur, rÈcif mÈso-amÈricain"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de l'atoll de Lighthouse Reef, mer des CaraÔbes, Belize"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande structure de ce type au monde, emblËme du Belize, CaraÔbes"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grand Trou Bleu au large du Belize"}
   ]},
-  {name:"Palais du Parlement ‚Äî Budapest, Hongrie",lat:47.5072,lng:19.0461,desc:"Le Parlement de Budapest est illumin√© chaque nuit et se refl√®te dans le Danube ‚Äî l'une des plus belles vues nocturnes d'Europe. Sa construction dura 17 ans (1885-1902) et employa 100 000 ouvriers et 40 millions de briques.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Orsz√°gh√°z, construit de 1885 √† 1904 par Imre Steindl, 96m de hauteur, rive gauche du Danube"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Lip√≥tv√°ros, rive du Danube, Budapest"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parlement n√©ogothique le plus grand d'Europe, Hongrie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais du Parlement √† Budapest, Hongrie"}
+  {name:"Palais du Parlement ó Budapest, Hongrie",lat:47.5072,lng:19.0461,desc:"Le Parlement de Budapest est illuminÈ chaque nuit et se reflËte dans le Danube ó l'une des plus belles vues nocturnes d'Europe. Sa construction dura 17 ans (1885-1902) et employa 100 000 ouvriers et 40 millions de briques.",photo:"photos/palais_du_parlement.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Orsz·gh·z, construit de 1885 ‡ 1904 par Imre Steindl, 96m de hauteur, rive gauche du Danube"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de LipÛtv·ros, rive du Danube, Budapest"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parlement nÈogothique le plus grand d'Europe, Hongrie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais du Parlement ‡ Budapest, Hongrie"}
   ]},
-  {name:"Ch√¢teau de Prague ‚Äî R√©publique Tch√®que",lat:50.0902,lng:14.4,desc:"Le complexe du ch√¢teau de Prague est l'un des plus grands du monde avec ses 70 000 m¬≤. Il abrite une cath√©drale, un palais royal, un couvent, des jardins et une ruelle d'or o√π vivaient jadis les alchimistes de Rodolphe II qui cherchaient √† transmuer le plomb en or.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hrad?any, plus grand ch√¢teau du monde en superficie (70 000 m¬≤), √©rig√© au IXe si√®cle sur le Hradschin"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline de Hrad?any dominant la Vltava, quartier Mal√° Strana, Prague"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand ch√¢teau du monde, r√©sidence pr√©sidentielle tch√®que"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Prague, R√©publique Tch√®que"}
+  {name:"Ch‚teau de Prague ó RÈpublique TchËque",lat:50.0902,lng:14.4,desc:"Le complexe du ch‚teau de Prague est l'un des plus grands du monde avec ses 70 000 m≤. Il abrite une cathÈdrale, un palais royal, un couvent, des jardins et une ruelle d'or o˘ vivaient jadis les alchimistes de Rodolphe II qui cherchaient ‡ transmuer le plomb en or.",photo:"photos/chateau_de_blarney.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hrad?any, plus grand ch‚teau du monde en superficie (70 000 m≤), ÈrigÈ au IXe siËcle sur le Hradschin"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline de Hrad?any dominant la Vltava, quartier Mal· Strana, Prague"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand ch‚teau du monde, rÈsidence prÈsidentielle tchËque"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Prague, RÈpublique TchËque"}
   ]},
-  {name:"Sagrada Fam√≠lia ‚Äî Barcelone",lat:41.4036,lng:2.1744,desc:"Gaud√≠ consacra les 43 derni√®res ann√©es de sa vie √† cette cath√©drale. Renvers√© par un tramway en 1926, il fut enterr√© dans sa propre √©glise. La construction, financ√©e uniquement par les entr√©es des visiteurs, devrait s'achever en 2026.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Basilique expiatoire de la Sainte Famille, Antoni Gaud√≠, 1882, Eixample"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Eixample, √† 2 km de la mer"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale inachev√©e de Gaud√≠, Barcelone, Espagne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Sagrada Fam√≠lia √† Barcelone, Espagne"}
-  ]},
-  {name:"Canal Grande ‚Äî Venise, Italie",lat:45.4408,lng:12.3155,desc:"Le Grand Canal de Venise compte 150 palais construits entre le XIIIe et le XVIIIe si√®cle sur ses 3,8 km. Ces b√¢timents s'enfoncent progressivement ‚Äî Venise s'est affaiss√©e de 23 cm au XXe si√®cle ‚Äî ce qui poussa √† lancer le projet MOSE, un syst√®me de digues mobiles anti-inondations.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canale Grande, art√®re principale de la cit√© lacustre en forme de S invers√©, 3,8 km, 150 palais sur ses rives"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre d'une cit√© lacustre, entre la gare principale et le grand bassin maritime"},
+    {name:"Canal Grande ó Venise, Italie",lat:45.4408,lng:12.3155,desc:"Le Grand Canal de Venise compte 150 palais construits entre le XIIIe et le XVIIIe siËcle sur ses 3,8 km. Ces b‚timents s'enfoncent progressivement ó Venise s'est affaissÈe de 23 cm au XXe siËcle ó ce qui poussa ‡ lancer le projet MOSE, un systËme de digues mobiles anti-inondations.",photo:"https://upload.wikimedia.org/wikipedia/commons/5/51/View_of_the_Grand_Canal_from_Rialto_to_Ca%27Foscari.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canale Grande, artËre principale de la citÈ lacustre en forme de S inversÈ, 3,8 km, 150 palais sur ses rives"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre d'une citÈ lacustre, entre la gare principale et le grand bassin maritime"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal canal de Venise, la ville des gondoles, Italie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Canal Grande √† Venise, Italie"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Canal Grande ‡ Venise, Italie"}
   ]},
-  {name:"Thermes de Caracalla ‚Äî Rome, Italie",lat:41.8788,lng:12.4922,desc:"Les thermes de Caracalla furent ferm√©s d√©finitivement en 537 quand les Ostrogoths coup√®rent les aqueducs de Rome. Depuis les ann√©es 1930, l'Op√©ra de Rome y organise des spectacles en plein air ‚Äî des repr√©sentations de Verdi ou Puccini dans ce d√©cor antique imposant.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Thermae Antoninianae, inaugur√©es en 216 ap. J.-C. sous Caracalla, accueillaient 1600 baigneurs simultan√©ment"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Via delle Terme di Caracalla, quartier Aventino, au sud du Colis√©e"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grands thermes romains conserv√©s, au sud du Colis√©e"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Thermes de Caracalla √† Rome, Italie"}
+  {name:"Thermes de Caracalla ó Rome, Italie",lat:41.8788,lng:12.4922,desc:"Les thermes de Caracalla furent fermÈs dÈfinitivement en 537 quand les Ostrogoths coupËrent les aqueducs de Rome. Depuis les annÈes 1930, l'OpÈra de Rome y organise des spectacles en plein air ó des reprÈsentations de Verdi ou Puccini dans ce dÈcor antique imposant.",photo:"https://upload.wikimedia.org/wikipedia/commons/5/53/Baths_of_Caracalla%2C_facing_Caldarium.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Thermae Antoninianae, inaugurÈes en 216 ap. J.-C. sous Caracalla, accueillaient 1600 baigneurs simultanÈment"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Via delle Terme di Caracalla, quartier Aventino, au sud du ColisÈe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grands thermes romains conservÈs, au sud du ColisÈe"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Thermes de Caracalla ‡ Rome, Italie"}
   ]},
-  {name:"Mus√©e du Prado ‚Äî Madrid, Espagne",lat:40.4138,lng:-3.6922,desc:"Le Prado poss√®de la plus grande collection au monde de tableaux de Vel√°zquez, Goya et Titien. ¬´Les Menines¬ª de Vel√°zquez, qui repr√©sentent la famille royale avec l'artiste se peignant lui-m√™me, est consid√©r√© comme le premier tableau ¬´postmoderne¬ª de l'histoire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Museo Nacional del Prado, Paseo del Prado, ouvert en 1819, abritant Las Meninas de Vel√°zquez"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Paseo del Prado, quartier de los Jer√≥nimos, pr√®s du parc du Retiro"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand mus√©e d'art classique espagnol, Madrid"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mus√©e du Prado √† Madrid, Espagne"}
+  {name:"MusÈe du Prado ó Madrid, Espagne",lat:40.4138,lng:-3.6922,desc:"Le Prado possËde la plus grande collection au monde de tableaux de Vel·zquez, Goya et Titien. ´Les Meninesª de Vel·zquez, qui reprÈsentent la famille royale avec l'artiste se peignant lui-mÍme, est considÈrÈ comme le premier tableau ´postmoderneª de l'histoire.",photo:"https://upload.wikimedia.org/wikipedia/commons/6/68/Museo_del_Prado_2016_%2825185969599%29.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Museo Nacional del Prado, Paseo del Prado, ouvert en 1819, abritant Las Meninas de Vel·zquez"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Paseo del Prado, quartier de los JerÛnimos, prËs du parc du Retiro"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand musÈe d'art classique espagnol, Madrid"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le MusÈe du Prado ‡ Madrid, Espagne"}
   ]},
-  {name:"Tour de Bel√©m ‚Äî Lisbonne, Portugal",lat:38.6916,lng:-9.216,desc:"La tour de Bel√©m fut construite en 1516 au bord du Tage pour saluer les explorateurs partant vers les Indes. Ce joyau manu√©lin est orn√© de motifs marins, de n≈ìuds de corde en pierre et de la sph√®re armillaire, embl√®me du Portugal des grandes d√©couvertes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Torre de S√£o Vicente de Bel√©m, style manu√©lin, construite de 1516 √† 1521 par Francisco de Arruda"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive du Tage, quartier de Bel√©m, Lisbonne, √† l'embouchure de l'estuaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour fortifi√©e manu√©line, symbole des Grandes D√©couvertes, Lisbonne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour de Bel√©m √† Lisbonne, Portugal"}
+  {name:"Tour de BelÈm ó Lisbonne, Portugal",lat:38.6916,lng:-9.216,desc:"La tour de BelÈm fut construite en 1516 au bord du Tage pour saluer les explorateurs partant vers les Indes. Ce joyau manuÈlin est ornÈ de motifs marins, de núuds de corde en pierre et de la sphËre armillaire, emblËme du Portugal des grandes dÈcouvertes.",photo:"photos/tour_de_belfort.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Torre de S„o Vicente de BelÈm, style manuÈlin, construite de 1516 ‡ 1521 par Francisco de Arruda"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive du Tage, quartier de BelÈm, Lisbonne, ‡ l'embouchure de l'estuaire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour fortifiÈe manuÈline, symbole des Grandes DÈcouvertes, Lisbonne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour de BelÈm ‡ Lisbonne, Portugal"}
   ]},
-  {name:"Atomium ‚Äî Bruxelles, Belgique",lat:50.8947,lng:4.3411,desc:"L'Atomium de Bruxelles repr√©sente une maille de cristal de fer agrandie 165 milliards de fois. Con√ßu comme une attraction temporaire pour l'Expo 58, il fut maintenu apr√®s l'exposition suite √† son succ√®s populaire. Ses sph√®res int√©rieures accueillent des expositions et m√™me un appartement lou√©.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Construit pour l'Expo 58 par Andr√© Waterkeyn, repr√©sente une maille de cristal de fer agrandie 165 milliards de fois"},
+  {name:"Atomium ó Bruxelles, Belgique",lat:50.8947,lng:4.3411,desc:"L'Atomium de Bruxelles reprÈsente une maille de cristal de fer agrandie 165 milliards de fois. ConÁu comme une attraction temporaire pour l'Expo 58, il fut maintenu aprËs l'exposition suite ‡ son succËs populaire. Ses sphËres intÈrieures accueillent des expositions et mÍme un appartement louÈ.",photo:"photos/atomium.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Construit pour l'Expo 58 par AndrÈ Waterkeyn, reprÈsente une maille de cristal de fer agrandie 165 milliards de fois"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Laeken, commune de Bruxelles, parc d'Osseghempark, quartier nord"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument en forme d'atome g√©ant, embl√®me de Bruxelles"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Atomium √† Bruxelles, Belgique"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument en forme d'atome gÈant, emblËme de Bruxelles"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Atomium ‡ Bruxelles, Belgique"}
   ]},
-  {name:"Manneken Pis ‚Äî Bruxelles, Belgique",lat:50.8451,lng:4.35,desc:"La statue du Manneken Pis ne mesure que 61 cm mais poss√®de une garde-robe de plus de 1 000 costumes offerts par des nations du monde entier. Il est r√©guli√®rement habill√© en tenue officielle lors des f√™tes nationales ‚Äî une tradition depuis le XVIIIe si√®cle.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kleine Juliaan, statue de bronze de 61 cm par J√©r√¥me Duquesnoy l'Ancien (1619), rue de l'√âtuve"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Intersection rue de l'√âtuve et rue du Ch√™ne, √élot Sacr√©, centre historique de Bruxelles"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"C√©l√®bre petite fontaine d'un enfant, symbole populaire de Bruxelles"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Manneken Pis √† Bruxelles, Belgique"}
+  {name:"Manneken Pis ó Bruxelles, Belgique",lat:50.8451,lng:4.35,desc:"La statue du Manneken Pis ne mesure que 61 cm mais possËde une garde-robe de plus de 1 000 costumes offerts par des nations du monde entier. Il est rÈguliËrement habillÈ en tenue officielle lors des fÍtes nationales ó une tradition depuis le XVIIIe siËcle.",photo:"photos/manneken_pis.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kleine Juliaan, statue de bronze de 61 cm par JÈrÙme Duquesnoy l'Ancien (1619), rue de l'…tuve"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Intersection rue de l'…tuve et rue du ChÍne, Œlot SacrÈ, centre historique de Bruxelles"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CÈlËbre petite fontaine d'un enfant, symbole populaire de Bruxelles"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Manneken Pis ‡ Bruxelles, Belgique"}
   ]},
-  {name:"Ch√¢teau de √âdimbourg ‚Äî √âcosse, Royaume-Uni",lat:55.9486,lng:-3.2008,desc:"Le ch√¢teau d'√âdimbourg est b√¢ti sur un rocher volcanique vieux de 340 millions d'ann√©es. Il abrite les Honneurs d'√âcosse ‚Äî la plus ancienne couronne royale d'Europe en service, datant de 1540. Son canon ¬´One O'Clock Gun¬ª tire chaque jour √† 13h pr√©cises depuis 1861, une tradition d√©but√©e pour les marins du port de Leith.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Edinburgh Castle sur le Castle Rock, volcan √©teint, abritant la pierre du Destin et les Honneurs d'√âcosse"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Haut de la Royal Mile, Old Town, √âdimbourg, surplombant Princes Street Gardens"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse m√©di√©vale dominant la capitale √©cossaise"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de √âdimbourg √† √âcosse, Royaume-Uni"}
+  {name:"Ch‚teau de …dimbourg ó …cosse, Royaume-Uni",lat:55.9486,lng:-3.2008,desc:"Le ch‚teau d'…dimbourg est b‚ti sur un rocher volcanique vieux de 340 millions d'annÈes. Il abrite les Honneurs d'…cosse ó la plus ancienne couronne royale d'Europe en service, datant de 1540. Son canon ´One O'Clock Gunª tire chaque jour ‡ 13h prÈcises depuis 1861, une tradition dÈbutÈe pour les marins du port de Leith.",photo:"photos/chateau_de_edimbourg.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Edinburgh Castle sur le Castle Rock, volcan Èteint, abritant la pierre du Destin et les Honneurs d'…cosse"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Haut de la Royal Mile, Old Town, …dimbourg, surplombant Princes Street Gardens"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse mÈdiÈvale dominant la capitale Ècossaise"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de …dimbourg ‡ …cosse, Royaume-Uni"}
   ]},
-  {name:"Pont du Gard ‚Äî France",lat:43.9473,lng:4.5355,desc:"Le Pont du Gard transportait 20 000 m¬≥ d'eau par jour vers la ville de N√Æmes sur une distance de 50 km. Sa pente, calcul√©e avec une pr√©cision de 2,5 cm par kilom√®tre, √©tait si fine que l'eau coulait presque sans mouvement apparent ‚Äî un prodige d'ing√©nierie romaine.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Aqueduc romain du Ier si√®cle ap. J.-C., 49 m de hauteur, enjambant le Gardon, construit sans mortier"},
+  {name:"Pont du Gard ó France",lat:43.9473,lng:4.5355,desc:"Le Pont du Gard transportait 20 000 m≥ d'eau par jour vers la ville de NÓmes sur une distance de 50 km. Sa pente, calculÈe avec une prÈcision de 2,5 cm par kilomËtre, Ètait si fine que l'eau coulait presque sans mouvement apparent ó un prodige d'ingÈnierie romaine.",photo:"photos/chateau_de_edimbourg.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Aqueduc romain du Ier siËcle ap. J.-C., 49 m de hauteur, enjambant le Gardon, construit sans mortier"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gorges du Gardon, commune de Vers-Pont-du-Gard, Gard, Occitanie"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haut pont-aqueduc romain du monde, UNESCO, sud de la France"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont du Gard en France"}
   ]},
-  {name:"Mont Saint-Michel ‚Äî Normandie, France",lat:48.6361,lng:-1.5115,desc:"La baie du Mont-Saint-Michel poss√®de le coefficient de mar√©e le plus fort d'Europe continentale. En 1879, la construction d'une digue pour relier le Mont au continent acc√©l√©ra l'envasement de la baie. La digue fut d√©mantel√©e et remplac√©e par un pont en 2014 pour laisser circuler les eaux.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√élot granitique couronn√© par l'abbaye b√©n√©dictine d√©di√©e √† l'archange Michel, fond√©e en 966"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Baie du Mont-Saint-Michel, Manche, Normandie, √† 80 km de Caen"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Abbaye insulaire en Normandie, l'un des sites les plus visit√©s de France"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mont Saint-Michel √† Normandie, France"}
+  {name:"Mont Saint-Michel ó Normandie, France",lat:48.6361,lng:-1.5115,desc:"La baie du Mont-Saint-Michel possËde le coefficient de marÈe le plus fort d'Europe continentale. En 1879, la construction d'une digue pour relier le Mont au continent accÈlÈra l'envasement de la baie. La digue fut dÈmantelÈe et remplacÈe par un pont en 2014 pour laisser circuler les eaux.",photo:"photos/mont_saint_michel.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Œlot granitique couronnÈ par l'abbaye bÈnÈdictine dÈdiÈe ‡ l'archange Michel, fondÈe en 966"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Baie du Mont-Saint-Michel, Manche, Normandie, ‡ 80 km de Caen"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Abbaye insulaire en Normandie, l'un des sites les plus visitÈs de France"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mont Saint-Michel ‡ Normandie, France"}
   ]},
-  {name:"Ch√¢teau de Chambord ‚Äî Loire, France",lat:47.6161,lng:1.5171,desc:"Chambord poss√®de un escalier √† double h√©lice attribu√© √† L√©onard de Vinci : deux visiteurs peuvent monter et descendre simultan√©ment sans jamais se croiser. Fran√ßois Ier ne dormit √† Chambord que 72 nuits en 32 ans ‚Äî un ch√¢teau avant tout con√ßu pour les fastes de la cour.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Construit √† partir de 1519 pour Fran√ßois Ier, attribu√© √† L√©onard de Vinci pour l'escalier √† double h√©lice, 426 pi√®ces"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Chambord, Loir-et-Cher, val de Loire, √† 15 km de Blois"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand ch√¢teau de la Loire, Renaissance fran√ßaise"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Chambord √† Loire, France"}
+  {name:"Ch‚teau de Chambord ó Loire, France",lat:47.6161,lng:1.5171,desc:"Chambord possËde un escalier ‡ double hÈlice attribuÈ ‡ LÈonard de Vinci : deux visiteurs peuvent monter et descendre simultanÈment sans jamais se croiser. FranÁois Ier ne dormit ‡ Chambord que 72 nuits en 32 ans ó un ch‚teau avant tout conÁu pour les fastes de la cour.",photo:"photos/chateau_de_blarney.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Construit ‡ partir de 1519 pour FranÁois Ier, attribuÈ ‡ LÈonard de Vinci pour l'escalier ‡ double hÈlice, 426 piËces"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Chambord, Loir-et-Cher, val de Loire, ‡ 15 km de Blois"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand ch‚teau de la Loire, Renaissance franÁaise"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Chambord ‡ Loire, France"}
   ]},
-  {name:"Basilique du Sacr√©-C≈ìur ‚Äî Paris, France",lat:48.8867,lng:2.3431,desc:"La basilique du Sacr√©-C≈ìur fut construite gr√¢ce √† des souscriptions priv√©es apr√®s la d√©faite de 1871 contre la Prusse ‚Äî un v≈ìu national de repentir. Ses 83 m√®tres de hauteur sur la Butte Montmartre en font le point culminant de Paris, visible de presque partout dans la ville.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Basilique romano-byzantine consacr√©e en 1919, construite en travertin auto-blanchissant de Ch√¢teau-Landon, sommet de la Butte Mont"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sommet de la Butte Montmartre, 18√®me arrondissement de 130 m d'altitude"},
+  {name:"Basilique du SacrÈ-Cúur ó Paris, France",lat:48.8867,lng:2.3431,desc:"La basilique du SacrÈ-Cúur fut construite gr‚ce ‡ des souscriptions privÈes aprËs la dÈfaite de 1871 contre la Prusse ó un vúu national de repentir. Ses 83 mËtres de hauteur sur la Butte Montmartre en font le point culminant de Paris, visible de presque partout dans la ville.",photo:"photos/basilique_du_sacre_coeur.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Basilique romano-byzantine consacrÈe en 1919, construite en travertin auto-blanchissant de Ch‚teau-Landon, sommet de la Butte Mont"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sommet de la Butte Montmartre, 18Ëme arrondissement de 130 m d'altitude"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Basilique blanche dominant Paris depuis la Butte Montmartre"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Basilique du Sacr√©-C≈ìur √† Paris, France"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Basilique du SacrÈ-Cúur ‡ Paris, France"}
   ]},
-  {name:"Palais de Justice ‚Äî Bruxelles, Belgique",lat:50.8359,lng:4.3531,desc:"Palais de Justice est un lieu historique remarquable situ√© en Europe.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais con√ßu par Joseph Poelaert, 1883, plus grand b√¢timent construit au XIXe si√®cle (26 000 m¬≤), sommet du Sablon"},
+  {name:"Palais de Justice ó Bruxelles, Belgique",lat:50.8359,lng:4.3531,desc:"Palais de Justice est un lieu historique remarquable situÈ en Europe.",photo:"photos/palais_de_justice.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais conÁu par Joseph Poelaert, 1883, plus grand b‚timent construit au XIXe siËcle (26 000 m≤), sommet du Sablon"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place Poelaert, quartier des Marolles, Brussels, surplombant la ville basse"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand b√¢timent construit au XIXe si√®cle, imposante coupole dominant la ville belge"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Justice √† Bruxelles, Belgique"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand b‚timent construit au XIXe siËcle, imposante coupole dominant la ville belge"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Justice ‡ Bruxelles, Belgique"}
   ]},
-  {name:"Fjord de Geiranger ‚Äî Norv√®ge",lat:62.1006,lng:7.2051,desc:"Les 7 cascades des ¬´Sept S≈ìurs¬ª dans le fjord de Geiranger sont aliment√©es uniquement par la fonte des neiges et la pluie ‚Äî il n'y a aucune source ni aucun lac en amont. En face se trouve la cascade du Pr√©tendant qui semble ¬´arroser¬ª les sept s≈ìurs.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Geirangerfjord, 15 km de long, class√© UNESCO, c√©l√®bre pour les cascades des Sept S≈ìurs et du Voile de la Mari√©e"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Municipalit√© du nord-ouest du pays, fjord parmi les plus profonds d'Europe"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'un des fjords les plus spectaculaires de Norv√®ge, UNESCO"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Fjord de Geiranger en Norv√®ge"}
+  {name:"Fjord de Geiranger ó NorvËge",lat:62.1006,lng:7.2051,desc:"Les 7 cascades des ´Sept Súursª dans le fjord de Geiranger sont alimentÈes uniquement par la fonte des neiges et la pluie ó il n'y a aucune source ni aucun lac en amont. En face se trouve la cascade du PrÈtendant qui semble ´arroserª les sept súurs.",photo:"photos/fjord_de_geiranger.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Geirangerfjord, 15 km de long, classÈ UNESCO, cÈlËbre pour les cascades des Sept Súurs et du Voile de la MariÈe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"MunicipalitÈ du nord-ouest du pays, fjord parmi les plus profonds d'Europe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'un des fjords les plus spectaculaires de NorvËge, UNESCO"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Fjord de Geiranger en NorvËge"}
   ]},
-  {name:"Hallgr√≠mskirkja ‚Äî Reykjavik, Islande",lat:64.1418,lng:-21.9264,desc:"La statue devant la cath√©drale d'Hallgr√≠mskirkja repr√©sente Leifur Eir√≠ksson, qui atteignit l'Am√©rique 500 ans avant Christophe Colomb. Elle fut offerte par les √âtats-Unis √† l'Islande pour le mill√©naire du parlement islandais en 1930.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√âglise luth√©rienne de 73 m con√ßue par Gu√∞j√≥n Sam√∫elsson en 1937, inspir√©e des orgues basaltiques, construite pendant 41 ans"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sommet d'une colline au c≈ìur de la capitale la plus septentrionale du monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√âglise embl√©matique en forme de colonnes basaltiques, Reykjavik"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hallgr√≠mskirkja √† Reykjavik, Islande"}
+  {name:"HallgrÌmskirkja ó Reykjavik, Islande",lat:64.1418,lng:-21.9264,desc:"La statue devant la cathÈdrale d'HallgrÌmskirkja reprÈsente Leifur EirÌksson, qui atteignit l'AmÈrique 500 ans avant Christophe Colomb. Elle fut offerte par les …tats-Unis ‡ l'Islande pour le millÈnaire du parlement islandais en 1930.",photo:"photos/hallgrimskirkja.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"…glise luthÈrienne de 73 m conÁue par GujÛn Sam˙elsson en 1937, inspirÈe des orgues basaltiques, construite pendant 41 ans"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sommet d'une colline au cúur de la capitale la plus septentrionale du monde"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"…glise emblÈmatique en forme de colonnes basaltiques, Reykjavik"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'HallgrÌmskirkja ‡ Reykjavik, Islande"}
   ]},
-  {name:"Acropole de Lindos ‚Äî Rhodes, Gr√®ce",lat:36.0912,lng:28.0861,desc:"L'acropole de Lindos √† Rhodes est un sanctuaire consacr√© √† Ath√©na datant du IVe si√®cle av. J.-C. Perch√©e sur une falaise de 116 m√®tres au-dessus de la mer √âg√©e, elle offre une des vues les plus spectaculaires de Gr√®ce. Alexandre le Grand y sacrifia avant de partir √† la conqu√™te de la Perse.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple dorique d'Ath√©na Lindia du IVe si√®cle av. J.-C., sur un rocher de 116 m, √Æle de Rhodes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville de Lindos, c√¥te est de Rhodes, Dod√©can√®se, mer √âg√©e"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple dorique sur un promontoire de 116 m, dominant une baie de la mer √âg√©e"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Acropole de Lindos √† Rhodes, Gr√®ce"}
+  {name:"Acropole de Lindos ó Rhodes, GrËce",lat:36.0912,lng:28.0861,desc:"L'acropole de Lindos ‡ Rhodes est un sanctuaire consacrÈ ‡ AthÈna datant du IVe siËcle av. J.-C. PerchÈe sur une falaise de 116 mËtres au-dessus de la mer …gÈe, elle offre une des vues les plus spectaculaires de GrËce. Alexandre le Grand y sacrifia avant de partir ‡ la conquÍte de la Perse.",photo:"photos/acropole_de_lindos.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple dorique d'AthÈna Lindia du IVe siËcle av. J.-C., sur un rocher de 116 m, Óle de Rhodes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville de Lindos, cÙte est de Rhodes, DodÈcanËse, mer …gÈe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple dorique sur un promontoire de 116 m, dominant une baie de la mer …gÈe"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Acropole de Lindos ‡ Rhodes, GrËce"}
   ]},
-  {name:"Ch√¢teau de Hohenzollern ‚Äî Allemagne",lat:48.3219,lng:8.943,desc:"Le ch√¢teau de Hohenzollern fut reconstruit trois fois au m√™me endroit. La version actuelle, n√©ogothique, date de 1867. Il abrite la couronne de Prusse et l'uniforme dans lequel Fr√©d√©ric le Grand mourut ‚Äî des reliques du royaume prussien qui unifia l'Allemagne.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stammburg des Hohenzollern, troisi√®me reconstruction achev√©e en 1867, Schw√§bische Alb, Bade-Wurtemberg"},
+  {name:"Ch‚teau de Hohenzollern ó Allemagne",lat:48.3219,lng:8.943,desc:"Le ch‚teau de Hohenzollern fut reconstruit trois fois au mÍme endroit. La version actuelle, nÈogothique, date de 1867. Il abrite la couronne de Prusse et l'uniforme dans lequel FrÈdÈric le Grand mourut ó des reliques du royaume prussien qui unifia l'Allemagne.",photo:"photos/chateau_de_blarney.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stammburg des Hohenzollern, troisiËme reconstruction achevÈe en 1867, Schw‰bische Alb, Bade-Wurtemberg"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sommet du mont Hohenzollern (855 m), commune de Bisingen, Bade-Wurtemberg"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau ancestral de la dynastie prussienne des Hohenzollern, Allemagne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Hohenzollern en Allemagne"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau ancestral de la dynastie prussienne des Hohenzollern, Allemagne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Hohenzollern en Allemagne"}
   ]},
-  {name:"Biblioth√®que du Congr√®s ‚Äî Washington D.C., USA",lat:38.8887,lng:-77.0047,desc:"La Biblioth√®que du Congr√®s de Washington poss√®de l'un des deux exemplaires connus de la Bible de Gutenberg imprim√©e en 1455, ainsi qu'un des rares exemplaires de la D√©claration d'ind√©pendance de 1776 √©crits √† la main. Elle re√ßoit 17 000 nouvelles publications chaque jour.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Thomas Jefferson Building, inaugur√© en 1897, plus grande biblioth√®que du monde (170 millions de documents), Capitol Hill"},
+  {name:"BibliothËque du CongrËs ó Washington D.C., USA",lat:38.8887,lng:-77.0047,desc:"La BibliothËque du CongrËs de Washington possËde l'un des deux exemplaires connus de la Bible de Gutenberg imprimÈe en 1455, ainsi qu'un des rares exemplaires de la DÈclaration d'indÈpendance de 1776 Ècrits ‡ la main. Elle reÁoit 17 000 nouvelles publications chaque jour.",photo:"photos/bibliotheque_de_l_universite_d_helsinki.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Thomas Jefferson Building, inaugurÈ en 1897, plus grande bibliothËque du monde (170 millions de documents), Capitol Hill"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Capitol Hill, face au Capitole, Washington D.C."},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande biblioth√®que du monde, Washington D.C."},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Biblioth√®que du Congr√®s √† Washington D.C., USA"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande bibliothËque du monde, Washington D.C."},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le BibliothËque du CongrËs ‡ Washington D.C., USA"}
   ]},
-  {name:"Op√©ra Garnier ‚Äî Paris, France",lat:48.8719,lng:2.3316,desc:"L'Op√©ra Garnier abrite un v√©ritable lac souterrain, cr√©√© involontairement lors de la construction pour drainer les eaux de la nappe phr√©atique. Ce lac, utilis√© pour entra√Æner les pompiers √† la nage, inspira directement Gaston Leroux pour son roman ¬´Le Fant√¥me de l'Op√©ra¬ª en 1910.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais Garnier, con√ßu par Charles Garnier, inaugur√© en 1875 par Mac-Mahon, √©crin du plafond de Chagall"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place de l'Op√©ra, 9√®me arrondissement, au bout du boulevard des Capucines"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Op√©ra embl√©matique de Paris, cadre du Fant√¥me de l'Op√©ra"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Op√©ra Garnier √† Paris, France"}
+  {name:"OpÈra Garnier ó Paris, France",lat:48.8719,lng:2.3316,desc:"L'OpÈra Garnier abrite un vÈritable lac souterrain, crÈÈ involontairement lors de la construction pour drainer les eaux de la nappe phrÈatique. Ce lac, utilisÈ pour entraÓner les pompiers ‡ la nage, inspira directement Gaston Leroux pour son roman ´Le FantÙme de l'OpÈraª en 1910.",photo:"https://upload.wikimedia.org/wikipedia/commons/6/6d/Paris_Palais_Garnier_2010-04-06_16.55.07.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais Garnier, conÁu par Charles Garnier, inaugurÈ en 1875 par Mac-Mahon, Ècrin du plafond de Chagall"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place de l'OpÈra, 9Ëme arrondissement, au bout du boulevard des Capucines"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"OpÈra emblÈmatique de Paris, cadre du FantÙme de l'OpÈra"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'OpÈra Garnier ‡ Paris, France"}
   ]},
-  {name:"Temple Sens?-ji ‚Äî Tokyo, Japon",lat:35.7148,lng:139.7967,desc:"Le temple Senso-ji d'Asakusa est le plus ancien et le plus visit√© de Tokyo avec 30 millions de visiteurs par an. La Nakamise-dori, la rue commer√ßante menant au temple, vend des souvenirs depuis l'√©poque Edo. Les marchands actuels sont souvent les descendants directs des premiers commer√ßants du XVIIe si√®cle.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Senso-ji, plus ancien temple de la m√©galopole, fond√© en 628, d√©di√© √† Kannon, quartier d'Asakusa, Tait?"},
+  {name:"Temple Sens?-ji ó Tokyo, Japon",lat:35.7148,lng:139.7967,desc:"Le temple Senso-ji d'Asakusa est le plus ancien et le plus visitÈ de Tokyo avec 30 millions de visiteurs par an. La Nakamise-dori, la rue commerÁante menant au temple, vend des souvenirs depuis l'Èpoque Edo. Les marchands actuels sont souvent les descendants directs des premiers commerÁants du XVIIe siËcle.",photo:"photos/temple_sens_ji.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Senso-ji, plus ancien temple de la mÈgalopole, fondÈ en 628, dÈdiÈ ‡ Kannon, quartier d'Asakusa, Tait?"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nakamise-d?ri, quartier d'Asakusa, arrondissement de Tait?"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancien et plus visit√© temple bouddhiste de Tokyo"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple Sens?-ji √† Tokyo, Japon"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancien et plus visitÈ temple bouddhiste de Tokyo"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple Sens?-ji ‡ Tokyo, Japon"}
   ]},
-  {name:"Temple d'Or ‚Äî Kyoto, Japon",lat:35.0394,lng:135.7292,desc:"Le Temple d'Or recouvre 750 kg de feuilles d'or pur. Les Sikhs cuisinent et servent gratuitement 100 000 repas par jour √† tous les visiteurs sans distinction de religion, de caste ou de nationalit√©.",hints:[
+  {name:"Temple d'Or ó Kyoto, Japon",lat:35.0394,lng:135.7292,desc:"Le Temple d'Or recouvre 750 kg de feuilles d'or pur. Les Sikhs cuisinent et servent gratuitement 100 000 repas par jour ‡ tous les visiteurs sans distinction de religion, de caste ou de nationalitÈ.",photo:"photos/temple_d_or_harmandir_sahib.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kinkaku-ji (Rokuon-ji), pavillon recouvert de feuilles d'or, construit en 1397 pour le shogun Ashikaga Yoshimitsu"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Kita-ku, nord de Kyoto, surplombant l'√©tang Ky?ko-chi"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pavillon dor√© du temple Kinkaku-ji, embl√®me de Kyoto, Japon"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple d'Or √† Kyoto, Japon"}
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Kita-ku, nord de Kyoto, surplombant l'Ètang Ky?ko-chi"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pavillon dorÈ du temple Kinkaku-ji, emblËme de Kyoto, Japon"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple d'Or ‡ Kyoto, Japon"}
   ]},
-  {name:"Palais de Potala ‚Äî Lhassa, Tibet",lat:29.6578,lng:91.1175,desc:"Le Palais du Potala de Lhassa fut construit √† 3 700 m√®tres d'altitude et compte 13 √©tages, 1 000 pi√®ces et 10 000 autels. Il abritait les tr√¥nes et tombeaux des Dala√Ø-Lamas, dont les corps embaum√©s sont conserv√©s dans des stupas plaqu√©s d'or.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"R√©sidence hivernale du Dala√Ø-Lama, 13 √©tages, 1000 pi√®ces, √©rig√© sur la Colline Rouge √† 3 700 m d'altitude"},
+  {name:"Palais de Potala ó Lhassa, Tibet",lat:29.6578,lng:91.1175,desc:"Le Palais du Potala de Lhassa fut construit ‡ 3 700 mËtres d'altitude et compte 13 Ètages, 1 000 piËces et 10 000 autels. Il abritait les trÙnes et tombeaux des DalaÔ-Lamas, dont les corps embaumÈs sont conservÈs dans des stupas plaquÈs d'or.",photo:"photos/palais_de_buckingham.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"RÈsidence hivernale du DalaÔ-Lama, 13 Ètages, 1000 piËces, ÈrigÈ sur la Colline Rouge ‡ 3 700 m d'altitude"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline de Marpo Ri, centre de la capitale spirituelle d'un plateau himalayen"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais du Dala√Ø-Lama dominant Lhassa, Tibet"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Potala √† Lhassa, Tibet"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais du DalaÔ-Lama dominant Lhassa, Tibet"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Potala ‡ Lhassa, Tibet"}
   ]},
-  {name:"Temple de Borobudur ‚Äî Java, Indon√©sie",lat:-7.6079,lng:110.2038,desc:"Le temple de Borobudur fut enseveli sous les cendres volcaniques et la v√©g√©tation pendant 800 ans. Il fut red√©couvert par Sir Thomas Raffles en 1814 et restaur√© dans les ann√©es 1970 dans le cadre du plus grand projet de restauration jamais entrepris par l'UNESCO.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mandala bouddhiste mahayana du IXe si√®cle, 2 672 panneaux de bas-reliefs, 504 statues de Bouddha, dynasties Sailendra"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion de Java central, √† 40 km d'une ancienne capitale royale, plateau volcanique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple bouddhiste du monde, Java, Indon√©sie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple de Borobudur √† Java, Indon√©sie"}
+  {name:"Temple de Borobudur ó Java, IndonÈsie",lat:-7.6079,lng:110.2038,desc:"Le temple de Borobudur fut enseveli sous les cendres volcaniques et la vÈgÈtation pendant 800 ans. Il fut redÈcouvert par Sir Thomas Raffles en 1814 et restaurÈ dans les annÈes 1970 dans le cadre du plus grand projet de restauration jamais entrepris par l'UNESCO.",photo:"photos/temple_de_borodurur.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mandala bouddhiste mahayana du IXe siËcle, 2 672 panneaux de bas-reliefs, 504 statues de Bouddha, dynasties Sailendra"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion de Java central, ‡ 40 km d'une ancienne capitale royale, plateau volcanique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple bouddhiste du monde, Java, IndonÈsie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple de Borobudur ‡ Java, IndonÈsie"}
   ]},
-  {name:"Hagia Sophia ‚Äî Istanbul, Turquie",lat:41.0086,lng:28.9802,desc:"Sainte-Sophie fut la plus grande cath√©drale du monde pendant pr√®s de 1 000 ans. Son d√¥me de 55 m√®tres de diam√®tre, construit sans calculs modernes, est soutenu par 40 fen√™tres qui cr√©ent l'illusion qu'il flotte dans les airs.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Construite de 532 √† 537 par Justinien, Anth√©mios de Tralles et Isidore de Milet, d√¥me de 55,6m, reconvertie en mosqu√©e en 2020"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sultanahmet, p√©ninsule historique d'Istanbul, face √† la Mer de Marmara"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancienne cath√©drale byzantine devenue mosqu√©e, symbole d'Istanbul"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hagia Sophia √† Istanbul, Turquie"}
+  {name:"Hagia Sophia ó Istanbul, Turquie",lat:41.0086,lng:28.9802,desc:"Sainte-Sophie fut la plus grande cathÈdrale du monde pendant prËs de 1 000 ans. Son dÙme de 55 mËtres de diamËtre, construit sans calculs modernes, est soutenu par 40 fenÍtres qui crÈent l'illusion qu'il flotte dans les airs.",photo:"https://upload.wikimedia.org/wikipedia/commons/4/4a/Hagia_Sophia_%28228968325%29.jpeg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Construite de 532 ‡ 537 par Justinien, AnthÈmios de Tralles et Isidore de Milet, dÙme de 55,6m, reconvertie en mosquÈe en 2020"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sultanahmet, pÈninsule historique d'Istanbul, face ‡ la Mer de Marmara"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancienne cathÈdrale byzantine devenue mosquÈe, symbole d'Istanbul"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hagia Sophia ‡ Istanbul, Turquie"}
   ]},
-  {name:"Temple de Preah Vihear ‚Äî Cambodge",lat:14.3924,lng:104.6804,desc:"Le temple de Preah Vihear fit l'objet d'un diff√©rend territorial entre le Cambodge et la Tha√Ølande pendant des d√©cennies. En 2013, la Cour internationale de justice confirma la souverainet√© cambodgienne ‚Äî une victoire symbolique pour un pays qui souhaitait aussi faire classer le site √† l'UNESCO.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple hindou khmer d√©di√© √† Shiva, construit entre le IXe et XIIe si√®cle, sommet du plateau de D√¢ngr√™k √† 625m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province du nord du pays, sur un plateau calcaire, √† la fronti√®re avec un pays voisin"},
+  {name:"Temple de Preah Vihear ó Cambodge",lat:14.3924,lng:104.6804,desc:"Le temple de Preah Vihear fit l'objet d'un diffÈrend territorial entre le Cambodge et la ThaÔlande pendant des dÈcennies. En 2013, la Cour internationale de justice confirma la souverainetÈ cambodgienne ó une victoire symbolique pour un pays qui souhaitait aussi faire classer le site ‡ l'UNESCO.",photo:"photos/temple_de_preah_vihear.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple hindou khmer dÈdiÈ ‡ Shiva, construit entre le IXe et XIIe siËcle, sommet du plateau de D‚ngrÍk ‡ 625m"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province du nord du pays, sur un plateau calcaire, ‡ la frontiËre avec un pays voisin"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple khmer spectaculaire au sommet d'une falaise, Cambodge"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple de Preah Vihear au Cambodge"}
   ]},
-  {name:"Palais de Mysore ‚Äî Inde",lat:12.3052,lng:76.6552,desc:"Le palais de Mysore est illumin√© par 97 000 ampoules chaque dimanche soir et lors des f√™tes religieuses. Ce spectacle attire des millions de visiteurs et du palais brille depuis la ville comme une √©toile. La famille royale des Wadiyar vit encore dans une partie du complexe.",hints:[
+  {name:"Palais de Mysore ó Inde",lat:12.3052,lng:76.6552,desc:"Le palais de Mysore est illuminÈ par 97 000 ampoules chaque dimanche soir et lors des fÍtes religieuses. Ce spectacle attire des millions de visiteurs et du palais brille depuis la ville comme une Ètoile. La famille royale des Wadiyar vit encore dans une partie du complexe.",photo:"photos/palais_de_mysore.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Amba Vilas, reconstruit en 1912 par Henry Irwin pour le maharaja Krishna Raja Wadiyar IV, style indo-sarrasin"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Mysore, Karnataka, √† 150 km de Bangalore"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais royal indo-sarrasin illumin√© par 100 000 ampoules, Mysore, Inde"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Mysore, Karnataka, ‡ 150 km de Bangalore"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais royal indo-sarrasin illuminÈ par 100 000 ampoules, Mysore, Inde"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Mysore en Inde"}
   ]},
-  {name:"Palais de Shakhrisabz ‚Äî Ouzb√©kistan",lat:39.0533,lng:66.8306,desc:"Le palais d'Ak-Saray de Shakhrisabz fut la r√©sidence d'√©t√© de Tamerlan, construite au XIVe si√®cle. Ses deux pyl√¥nes d'entr√©e atteignaient 65 m√®tres ‚Äî les plus hauts d'Asie centrale. Shakhrisabz, qui signifie ¬´ville verte¬ª, est la ville natale de Tamerlan.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ak-Saray, palais d'√©t√© de Tamerlan, commenc√© en 1380, portail d'entr√©e de 65m, Shakhrisabz"},
+  {name:"Palais de Shakhrisabz ó OuzbÈkistan",lat:39.0533,lng:66.8306,desc:"Le palais d'Ak-Saray de Shakhrisabz fut la rÈsidence d'ÈtÈ de Tamerlan, construite au XIVe siËcle. Ses deux pylÙnes d'entrÈe atteignaient 65 mËtres ó les plus hauts d'Asie centrale. Shakhrisabz, qui signifie ´ville verteª, est la ville natale de Tamerlan.",photo:"photos/palais_de_shakhrisabz.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ak-Saray, palais d'ÈtÈ de Tamerlan, commencÈ en 1380, portail d'entrÈe de 65m, Shakhrisabz"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre historique d'une ville de la Route de la Soie, province d'Asie centrale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines du palais de Tamerlan, ville natale du conqu√©rant, Ouzb√©kistan"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Shakhrisabz en Ouzb√©kistan"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines du palais de Tamerlan, ville natale du conquÈrant, OuzbÈkistan"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Shakhrisabz en OuzbÈkistan"}
   ]},
-  {name:"Mosqu√©e Sultan Ahmed ‚Äî Istanbul, Turquie",lat:41.0054,lng:28.9768,desc:"La Mosqu√©e Bleue, construite de 1609 √† 1616, est la seule mosqu√©e d'Istanbul √† poss√©der six minarets ‚Äî une audace qui scandalisa la Mecque, qui n'en avait alors que quatre. L'int√©rieur est rev√™tu de 20 000 carreaux d'Iznik bleus, dont chacun fut peint √† la main.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosqu√©e Bleue, construite de 1609 √† 1616 par Sedefk√¢r Mehmed A?a sous Ahmed Ier, seule mosqu√©e √† 6 minarets ‚Äî scandale de l'√©poque"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sultanahmet, face √† Sainte-Sophie, p√©ninsule historique d'Istanbul"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mosqu√©e Bleue aux 6 minarets, face √† Sainte-Sophie, Istanbul"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mosqu√©e Sultan Ahmed √† Istanbul, Turquie"}
+  {name:"MosquÈe Sultan Ahmed ó Istanbul, Turquie",lat:41.0054,lng:28.9768,desc:"La MosquÈe Bleue, construite de 1609 ‡ 1616, est la seule mosquÈe d'Istanbul ‡ possÈder six minarets ó une audace qui scandalisa la Mecque, qui n'en avait alors que quatre. L'intÈrieur est revÍtu de 20 000 carreaux d'Iznik bleus, dont chacun fut peint ‡ la main.",photo:"photos/mosquee_sultan_ahmed.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"MosquÈe Bleue, construite de 1609 ‡ 1616 par Sedefk‚r Mehmed A?a sous Ahmed Ier, seule mosquÈe ‡ 6 minarets ó scandale de l'Èpoque"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sultanahmet, face ‡ Sainte-Sophie, pÈninsule historique d'Istanbul"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"MosquÈe Bleue aux 6 minarets, face ‡ Sainte-Sophie, Istanbul"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La MosquÈe Sultan Ahmed ‡ Istanbul, Turquie"}
   ]},
-  {name:"Palais d'√©t√© ‚Äî P√©kin, Chine",lat:39.9999,lng:116.2755,desc:"Le Palais d'√ât√© de P√©kin fut pill√© et incendi√© par les troupes franco-britanniques en 1860. L'imp√©ratrice Cixi le fit enti√®rement reconstruire en 1888 en d√©tournant les fonds destin√©s √† la modernisation de la marine militaire chinoise ‚Äî une d√©cision qui contribua √† la d√©faite lors de la guerre sino-japonaise.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Yiheyuan, construit sous l'imp√©ratrice Cixi en 1886, lac Kunming creus√© √† la main, colline de la Long√©vit√©"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Banlieue nord-ouest de la capitale, √† 15 km du centre-ville"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"R√©sidence imp√©riale d'√©t√©, vaste lac artificiel et jardins de la cour des Qing, banlieue de P√©kin"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais d'√©t√© √† P√©kin, Chine"}
+  {name:"Palais d'ÈtÈ ó PÈkin, Chine",lat:39.9999,lng:116.2755,desc:"Le Palais d'…tÈ de PÈkin fut pillÈ et incendiÈ par les troupes franco-britanniques en 1860. L'impÈratrice Cixi le fit entiËrement reconstruire en 1888 en dÈtournant les fonds destinÈs ‡ la modernisation de la marine militaire chinoise ó une dÈcision qui contribua ‡ la dÈfaite lors de la guerre sino-japonaise.",photo:"photos/mosquee_sultan_ahmed.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Yiheyuan, construit sous l'impÈratrice Cixi en 1886, lac Kunming creusÈ ‡ la main, colline de la LongÈvitÈ"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Banlieue nord-ouest de la capitale, ‡ 15 km du centre-ville"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"RÈsidence impÈriale d'ÈtÈ, vaste lac artificiel et jardins de la cour des Qing, banlieue de PÈkin"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais d'ÈtÈ ‡ PÈkin, Chine"}
   ]},
-  {name:"Pont d'Umeda ‚Äî Osaka, Japon",lat:34.7024,lng:135.4959,desc:"Le Sky Building d'Umeda √† Osaka est form√© de deux tours reli√©es √† leur sommet par un jardin suspendu circulaire √† 170 m√®tres de hauteur. Ses escaliers m√©caniques traversent le vide entre les deux tours en diagonale ‚Äî une travers√©e spectaculaire de 50 m√®tres dans le ciel.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Umeda Sky Building, tours jumelles de 173 m reli√©es par le Floating Garden Observatory, con√ßu par Hiroshi Hara en 1993"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Kita-ku, quartier d'Umeda, nord d'Osaka, pr√®s de la gare de Shin-Osaka"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tours jumelles reli√©es par un observatoire suspendu, Osaka, Japon"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont d'Umeda √† Osaka, Japon"}
+  {name:"Pont d'Umeda ó Osaka, Japon",lat:34.7024,lng:135.4959,desc:"Le Sky Building d'Umeda ‡ Osaka est formÈ de deux tours reliÈes ‡ leur sommet par un jardin suspendu circulaire ‡ 170 mËtres de hauteur. Ses escaliers mÈcaniques traversent le vide entre les deux tours en diagonale ó une traversÈe spectaculaire de 50 mËtres dans le ciel.",photo:"photos/pont_d_umeda.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Umeda Sky Building, tours jumelles de 173 m reliÈes par le Floating Garden Observatory, conÁu par Hiroshi Hara en 1993"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Kita-ku, quartier d'Umeda, nord d'Osaka, prËs de la gare de Shin-Osaka"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tours jumelles reliÈes par un observatoire suspendu, Osaka, Japon"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont d'Umeda ‡ Osaka, Japon"}
   ]},
-  {name:"Temple de Confucius ‚Äî Qufu, Chine",lat:35.5967,lng:116.9839,desc:"Le temple de Confucius √† Qufu est le plus grand complexe confuc√©en du monde avec 466 b√¢timents. Construit en -478, un an apr√®s la mort du philosophe, il fut agrandi par chaque dynasties chinoise pendant 2 500 ans. Les descendants directs de Confucius y vivent encore aujourd'hui.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kong Miao, temple d√©di√© √† Confucius dans sa ville natale, 466 salles, √©rig√© en 478 av. J.-C. un an apr√®s sa mort"},
+  {name:"Temple de Confucius ó Qufu, Chine",lat:35.5967,lng:116.9839,desc:"Le temple de Confucius ‡ Qufu est le plus grand complexe confucÈen du monde avec 466 b‚timents. Construit en -478, un an aprËs la mort du philosophe, il fut agrandi par chaque dynasties chinoise pendant 2 500 ans. Les descendants directs de Confucius y vivent encore aujourd'hui.",photo:"photos/temple_de_borodurur.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kong Miao, temple dÈdiÈ ‡ Confucius dans sa ville natale, 466 salles, ÈrigÈ en 478 av. J.-C. un an aprËs sa mort"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Qufu, province du Shandong, est du pays"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand temple d√©di√© √† Confucius dans sa ville natale, Shandong, Chine"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple de Confucius √† Qufu, Chine"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand temple dÈdiÈ ‡ Confucius dans sa ville natale, Shandong, Chine"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple de Confucius ‡ Qufu, Chine"}
   ]},
-  {name:"Rocher de Sigiriya ‚Äî Sri Lanka",lat:7.957,lng:80.7603,desc:"Le Rocher de Sigiriya abrite 500 fresques de femmes c√©lestes (apsaras) dont seulement 22 ont surv√©cu aux intemp√©ries. Ce sont parmi les seules peintures la√Øques √† grande √©chelle du 5e si√®cle encore visibles dans le monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lion Rock, forteresse-palais du roi Kashyapa I, √©rig√©e au Ve si√®cle ap. J.-C. sur un rocher de 200m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province centrale d'une √Æle de l'oc√©an Indien, rocher forteresse √† 200m de la plaine"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rocher-forteresse g√©ant et jardins royaux du Ve si√®cle, Sri Lanka"},
+  {name:"Rocher de Sigiriya ó Sri Lanka",lat:7.957,lng:80.7603,desc:"Le Rocher de Sigiriya abrite 500 fresques de femmes cÈlestes (apsaras) dont seulement 22 ont survÈcu aux intempÈries. Ce sont parmi les seules peintures laÔques ‡ grande Èchelle du 5e siËcle encore visibles dans le monde.",photo:"photos/rocher_de_sigiriya.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lion Rock, forteresse-palais du roi Kashyapa I, ÈrigÈe au Ve siËcle ap. J.-C. sur un rocher de 200m"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province centrale d'une Óle de l'ocÈan Indien, rocher forteresse ‡ 200m de la plaine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rocher-forteresse gÈant et jardins royaux du Ve siËcle, Sri Lanka"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Rocher de Sigiriya au Sri Lanka"}
   ]},
-  {name:"Tour CN ‚Äî Toronto, Canada",lat:43.6426,lng:-79.3871,desc:"La tour CN de Toronto fut construite en 1976 par les chemins de fer canadiens pour d√©montrer la solidit√© de leur b√©ton. √Ä 553 m√®tres, elle fut la plus haute structure autoportante du monde pendant 30 ans. Son restaurant tourne sur 360¬∞ en 72 minutes, et par temps clair, on aper√ßoit les chutes du Niagara √† 100 km.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Communication tower de 553 m inaugur√©e en 1976, d√©tient le record mondial jusqu'en 2007, restaurant tournant √† 351 m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Front Street West, quartier Harbourfront, bord d'un grand lac int√©rieur"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour embl√©matique de Toronto, symbole du Canada"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour CN √† Toronto, Canada"}
+  {name:"Tour CN ó Toronto, Canada",lat:43.6426,lng:-79.3871,desc:"La tour CN de Toronto fut construite en 1976 par les chemins de fer canadiens pour dÈmontrer la soliditÈ de leur bÈton. ¿ 553 mËtres, elle fut la plus haute structure autoportante du monde pendant 30 ans. Son restaurant tourne sur 360∞ en 72 minutes, et par temps clair, on aperÁoit les chutes du Niagara ‡ 100 km.",photo:"photos/tour_cn.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Communication tower de 553 m inaugurÈe en 1976, dÈtient le record mondial jusqu'en 2007, restaurant tournant ‡ 351 m"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Front Street West, quartier Harbourfront, bord d'un grand lac intÈrieur"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour emblÈmatique de Toronto, symbole du Canada"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour CN ‡ Toronto, Canada"}
   ]},
-  {name:"Mausol√©e de Khomeini ‚Äî T√©h√©ran, Iran",lat:35.5593,lng:51.416,desc:"Le mausol√©e de l'imam Khomeini √† T√©h√©ran est l'un des plus grands complexes religieux du monde islamique. Son d√¥me dor√© de 72 m√®tres est visible de toute la ville. Il attire des millions de p√®lerins chiites par an et est en expansion permanente ‚Äî sa construction n'est pas encore officiellement termin√©e.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Harameyn, mausol√©e dor√© en construction depuis 1989, 4 minarets de 91m, accueille 20 millions de p√®lerins/an"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Autoroute T√©h√©ran-Qom, quartier de Rey, banlieue sud de T√©h√©ran"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand mausol√©e de l'ayatollah Khomeini, banlieue de T√©h√©ran, Iran"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mausol√©e de Khomeini √† T√©h√©ran, Iran"}
+  {name:"MausolÈe de Khomeini ó TÈhÈran, Iran",lat:35.5593,lng:51.416,desc:"Le mausolÈe de l'imam Khomeini ‡ TÈhÈran est l'un des plus grands complexes religieux du monde islamique. Son dÙme dorÈ de 72 mËtres est visible de toute la ville. Il attire des millions de pËlerins chiites par an et est en expansion permanente ó sa construction n'est pas encore officiellement terminÈe.",photo:"photos/mausolee_de_khomeini.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Harameyn, mausolÈe dorÈ en construction depuis 1989, 4 minarets de 91m, accueille 20 millions de pËlerins/an"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Autoroute TÈhÈran-Qom, quartier de Rey, banlieue sud de TÈhÈran"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand mausolÈe de l'ayatollah Khomeini, banlieue de TÈhÈran, Iran"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le MausolÈe de Khomeini ‡ TÈhÈran, Iran"}
   ]},
-  {name:"Mosqu√©e de Djenn√© ‚Äî Mali",lat:13.9056,lng:-4.5556,desc:"La Grande Mosqu√©e de Djenn√© est enti√®rement reconstruite √† la main chaque ann√©e lors d'une f√™te collective. Des milliers de villageois repl√¢trent les murs avec de la boue fra√Æche ‚Äî une tradition vieille de plusieurs si√®cles.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande Mosqu√©e de Djenn√©, reconstruite en 1907 dans le style soudano-sah√©lien, plus grande construction en adobe du monde"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place du march√© d'une ville du delta int√©rieur d'un grand fleuve africain"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande mosqu√©e en terre crue du monde, Djenn√©, Mali"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mosqu√©e de Djenn√© au Mali"}
+  {name:"MosquÈe de DjennÈ ó Mali",lat:13.9056,lng:-4.5556,desc:"La Grande MosquÈe de DjennÈ est entiËrement reconstruite ‡ la main chaque annÈe lors d'une fÍte collective. Des milliers de villageois repl‚trent les murs avec de la boue fraÓche ó une tradition vieille de plusieurs siËcles.",photo:"photos/mosquee_de_djenne.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande MosquÈe de DjennÈ, reconstruite en 1907 dans le style soudano-sahÈlien, plus grande construction en adobe du monde"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place du marchÈ d'une ville du delta intÈrieur d'un grand fleuve africain"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande mosquÈe en terre crue du monde, DjennÈ, Mali"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La MosquÈe de DjennÈ au Mali"}
   ]},
-  {name:"Cit√©s de Lalibela ‚Äî √âthiopie",lat:12.0317,lng:39.0448,desc:"Les 11 √©glises de Lalibela furent taill√©es √† m√™me le roc en seulement 24 ans au XIIe si√®cle. Selon la l√©gende, les anges travaillaient la nuit pendant que les hommes se reposaient, permettant un avancement miraculeux du chantier.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"11 √©glises monolithiques taill√©es dans le tuf volcanique rouge, command√©es par le roi Gebre Mesqel Lalibela au XIIe si√®cle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Zone de North Wollo, r√©gion Amhara, highlands √©thiopiens, √† 2 500 m d'altitude"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√âglises souterraines taill√©es dans la roche, J√©rusalem d'Afrique, √âthiopie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cit√©s de Lalibela en √âthiopie"}
+  {name:"CitÈs de Lalibela ó …thiopie",lat:12.0317,lng:39.0448,desc:"Les 11 Èglises de Lalibela furent taillÈes ‡ mÍme le roc en seulement 24 ans au XIIe siËcle. Selon la lÈgende, les anges travaillaient la nuit pendant que les hommes se reposaient, permettant un avancement miraculeux du chantier.",photo:"photos/cites_de_lalibela.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"11 Èglises monolithiques taillÈes dans le tuf volcanique rouge, commandÈes par le roi Gebre Mesqel Lalibela au XIIe siËcle"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Zone de North Wollo, rÈgion Amhara, highlands Èthiopiens, ‡ 2 500 m d'altitude"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"…glises souterraines taillÈes dans la roche, JÈrusalem d'Afrique, …thiopie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La CitÈs de Lalibela en …thiopie"}
   ]},
-  {name:"√éle de Gor√©e ‚Äî S√©n√©gal",lat:14.6678,lng:-17.3986,desc:"Gor√©e √©tait si prosp√®re gr√¢ce au commerce des esclaves que les marchands europ√©ens se disputaient sa possession pendant deux si√®cles. L'√Æle changea de mains 7 fois entre Portugais, Hollandais, Anglais et Fran√ßais.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√éle de 0,36 km¬≤, centre majeur de la traite n√©gri√®re aux XVIIe-XIXe si√®cles, Maison des Esclaves construite en 1776"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Baie d'une grande capitale ouest-africaine, √† 3 km de la c√¥te continentale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éle symbole de la traite n√©gri√®re, face √† Dakar, S√©n√©gal"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'√éle de Gor√©e au S√©n√©gal"}
+  {name:"Œle de GorÈe ó SÈnÈgal",lat:14.6678,lng:-17.3986,desc:"GorÈe Ètait si prospËre gr‚ce au commerce des esclaves que les marchands europÈens se disputaient sa possession pendant deux siËcles. L'Óle changea de mains 7 fois entre Portugais, Hollandais, Anglais et FranÁais.",photo:"photos/ile_de_goree.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Œle de 0,36 km≤, centre majeur de la traite nÈgriËre aux XVIIe-XIXe siËcles, Maison des Esclaves construite en 1776"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Baie d'une grande capitale ouest-africaine, ‡ 3 km de la cÙte continentale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œle symbole de la traite nÈgriËre, face ‡ Dakar, SÈnÈgal"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Œle de GorÈe au SÈnÈgal"}
   ]},
-  {name:"Chutes d'Iguazu ‚Äî Argentine/Br√©sil",lat:-25.6953,lng:-54.4367,desc:"Les chutes d'Iguazu sont si larges que Eleanor Roosevelt s'√©cria ¬´Poor Niagara!¬ª en les voyant pour la premi√®re fois. Elles forment la fronti√®re naturelle entre l'Argentine et le Br√©sil, et les deux pays se disput√®rent leur souverainet√© pendant des d√©cennies.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"275 chutes sur 2,7 km de large, d√©bit moyen 1 746 m¬≥/s, dont la Garganta del Diablo de 82m, fronti√®re entre deux pays d'Am√©rique du Sud"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fronti√®re entre deux pays d'Am√©rique du Sud, delta fluvial subtropical"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus larges chutes du monde, fronti√®re Argentine-Br√©sil"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes d'Iguazu en Argentine/Br√©sil"}
+  {name:"Chutes d'Iguazu ó Argentine/BrÈsil",lat:-25.6953,lng:-54.4367,desc:"Les chutes d'Iguazu sont si larges que Eleanor Roosevelt s'Ècria ´Poor Niagara!ª en les voyant pour la premiËre fois. Elles forment la frontiËre naturelle entre l'Argentine et le BrÈsil, et les deux pays se disputËrent leur souverainetÈ pendant des dÈcennies.",photo:"photos/chutes_d_iguazu.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"275 chutes sur 2,7 km de large, dÈbit moyen 1 746 m≥/s, dont la Garganta del Diablo de 82m, frontiËre entre deux pays d'AmÈrique du Sud"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"FrontiËre entre deux pays d'AmÈrique du Sud, delta fluvial subtropical"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus larges chutes du monde, frontiËre Argentine-BrÈsil"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes d'Iguazu en Argentine/BrÈsil"}
   ]},
-  {name:"D√©sert du Namib ‚Äî Namibie",lat:-24.7333,lng:15.5167,desc:"Le d√©sert du Namib est le plus ancien d√©sert du monde ‚Äî aride depuis au moins 55 millions d'ann√©es. Son ¬´Deadlei¬ª (marais mort) abrite des squelettes d'arbres camelthorn de 900 ans, conserv√©s par la s√©cheresse extr√™me. Ses dunes de Sossusvlei, parmi les plus hautes du monde (325 m), doivent leur couleur rouge √† l'oxydation du fer.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sossusvlei, dunes de sable rouge atteignant 325 m dont la Dune 45, d√©sert c√¥tier le plus ancien du monde (80 millions d'ans)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national d'un d√©sert c√¥tier atlantique, dunes parmi les plus hautes du monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dunes de sable rouge atteignant 325 m, d√©sert c√¥tier le plus ancien du monde, Namibie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le D√©sert du Namib en Namibie"}
+  {name:"DÈsert du Namib ó Namibie",lat:-24.7333,lng:15.5167,desc:"Le dÈsert du Namib est le plus ancien dÈsert du monde ó aride depuis au moins 55 millions d'annÈes. Son ´Deadleiª (marais mort) abrite des squelettes d'arbres camelthorn de 900 ans, conservÈs par la sÈcheresse extrÍme. Ses dunes de Sossusvlei, parmi les plus hautes du monde (325 m), doivent leur couleur rouge ‡ l'oxydation du fer.",photo:"photos/desert_du_namib.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sossusvlei, dunes de sable rouge atteignant 325 m dont la Dune 45, dÈsert cÙtier le plus ancien du monde (80 millions d'ans)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national d'un dÈsert cÙtier atlantique, dunes parmi les plus hautes du monde"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dunes de sable rouge atteignant 325 m, dÈsert cÙtier le plus ancien du monde, Namibie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le DÈsert du Namib en Namibie"}
   ]},
-  {name:"Parc national Kruger ‚Äî Afrique du Sud",lat:-23.9884,lng:31.5547,desc:"Le parc Kruger est le plus grand parc national d'Afrique du Sud avec 20 000 km¬≤. Il abrite les ¬´Big Five¬ª (lion, √©l√©phant, buffle, l√©opard, rhinoc√©ros) en densit√©s parmi les plus √©lev√©es d'Afrique. Sa cl√¥ture √©lectrifi√©e de 800 km fut construite dans les ann√©es 1970 ‚Äî le plus long p√©rim√®tre de cl√¥ture d'une r√©serve naturelle au monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fond√© en 1898 par Paul Kruger, 19 485 km¬≤, abritant les Big Five, Province du Limpopo et Mpumalanga"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nord-est d'un pays d'Afrique australe, fronti√®res de deux pays voisins, Big Five"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande r√©serve d'Afrique du Sud, c√©l√®bre pour les Big Five"},
+  {name:"Parc national Kruger ó Afrique du Sud",lat:-23.9884,lng:31.5547,desc:"Le parc Kruger est le plus grand parc national d'Afrique du Sud avec 20 000 km≤. Il abrite les ´Big Fiveª (lion, ÈlÈphant, buffle, lÈopard, rhinocÈros) en densitÈs parmi les plus ÈlevÈes d'Afrique. Sa clÙture ÈlectrifiÈe de 800 km fut construite dans les annÈes 1970 ó le plus long pÈrimËtre de clÙture d'une rÈserve naturelle au monde.",photo:"photos/parc_national_kruger.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"FondÈ en 1898 par Paul Kruger, 19 485 km≤, abritant les Big Five, Province du Limpopo et Mpumalanga"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nord-est d'un pays d'Afrique australe, frontiËres de deux pays voisins, Big Five"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande rÈserve d'Afrique du Sud, cÈlËbre pour les Big Five"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc national Kruger en Afrique du Sud"}
   ]},
-  {name:"Karnak ‚Äî Louxor, √âgypte",lat:25.7188,lng:32.6573,desc:"La salle hypostyle de Karnak, avec ses 134 colonnes de 23 m√®tres de haut, est si grande qu'on pourrait y faire tenir la cath√©drale Notre-Dame de Paris tout enti√®re. L'√©lever prit 200 ans ‚Äî soit le travail de 30 g√©n√©rations d'artisans.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple d'Amon, complexe de 100 hectares construit sur 2000 ans, 134 colonnes de la salle hypostyle, Nouvelle-Th√®bes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive est du Nil, Louxor, Haute-√âgypte, √† 500 km au sud du Caire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple de l'√âgypte antique, Louxor, Haute-√âgypte"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Karnak √† Louxor, √âgypte"}
+  {name:"Karnak ó Louxor, …gypte",lat:25.7188,lng:32.6573,desc:"La salle hypostyle de Karnak, avec ses 134 colonnes de 23 mËtres de haut, est si grande qu'on pourrait y faire tenir la cathÈdrale Notre-Dame de Paris tout entiËre. L'Èlever prit 200 ans ó soit le travail de 30 gÈnÈrations d'artisans.",photo:"photos/karnak.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple d'Amon, complexe de 100 hectares construit sur 2000 ans, 134 colonnes de la salle hypostyle, Nouvelle-ThËbes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive est du Nil, Louxor, Haute-…gypte, ‡ 500 km au sud du Caire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple de l'…gypte antique, Louxor, Haute-…gypte"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Karnak ‡ Louxor, …gypte"}
   ]},
-  {name:"Cap de Bonne-Esp√©rance ‚Äî Afrique du Sud",lat:-34.3568,lng:18.4702,desc:"Le cap de Bonne-Esp√©rance ne marque pas le point le plus m√©ridional d'Afrique ‚Äî c'est le cap Agulhas, √† 150 km √† l'est. Mais c'est l√† que les vents d'ouest et les courants marins se rejoignent, cr√©ant des conditions de navigation particuli√®rement dangereuses. Bartolomeu Dias le doubla en 1488, ouvrant la route des Indes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Promontoire rocheux d√©couvert par Bartolomeu Dias en 1488, Parc national de Table Mountain, p√©ninsule du Cap"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Extr√©mit√© sud-ouest de la p√©ninsule du Cap, province du Cap-Occidental, Afrique du Sud"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cap rocheux l√©gendaire √† la pointe de l'Afrique australe"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cap de Bonne-Esp√©rance en Afrique du Sud"}
+  {name:"Cap de Bonne-EspÈrance ó Afrique du Sud",lat:-34.3568,lng:18.4702,desc:"Le cap de Bonne-EspÈrance ne marque pas le point le plus mÈridional d'Afrique ó c'est le cap Agulhas, ‡ 150 km ‡ l'est. Mais c'est l‡ que les vents d'ouest et les courants marins se rejoignent, crÈant des conditions de navigation particuliËrement dangereuses. Bartolomeu Dias le doubla en 1488, ouvrant la route des Indes.",photo:"photos/cap_de_bonne_esperance.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Promontoire rocheux dÈcouvert par Bartolomeu Dias en 1488, Parc national de Table Mountain, pÈninsule du Cap"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ExtrÈmitÈ sud-ouest de la pÈninsule du Cap, province du Cap-Occidental, Afrique du Sud"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cap rocheux lÈgendaire ‡ la pointe de l'Afrique australe"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cap de Bonne-EspÈrance en Afrique du Sud"}
   ]},
-  {name:"Table Mountain ‚Äî Le Cap, Afrique du Sud",lat:-33.9628,lng:18.4098,desc:"La Table Mountain est l'une des plus anciennes montagnes du monde ‚Äî estim√©e √† 260 millions d'ann√©es. Son plateau sommital, qui accueille le c√©l√®bre ¬´tablecloth¬ª de nuages, abrite plus d'esp√®ces v√©g√©tales que toute la Grande-Bretagne.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Montagne √† sommet plat de 1 086 m, form√©e il y a 600 millions d'ann√©es, visible √† 200 km en mer, t√©l√©ph√©rique depuis 1929"},
+  {name:"Table Mountain ó Le Cap, Afrique du Sud",lat:-33.9628,lng:18.4098,desc:"La Table Mountain est l'une des plus anciennes montagnes du monde ó estimÈe ‡ 260 millions d'annÈes. Son plateau sommital, qui accueille le cÈlËbre ´tableclothª de nuages, abrite plus d'espËces vÈgÈtales que toute la Grande-Bretagne.",photo:"photos/table_mountain.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Montagne ‡ sommet plat de 1 086 m, formÈe il y a 600 millions d'annÈes, visible ‡ 200 km en mer, tÈlÈphÈrique depuis 1929"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Dominant la ville du Cap, province du Cap-Occidental, Afrique du Sud"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Montagne √† plateau embl√©matique dominant Le Cap, Afrique du Sud"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Table Mountain √† Le Cap, Afrique du Sud"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Montagne ‡ plateau emblÈmatique dominant Le Cap, Afrique du Sud"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Table Mountain ‡ Le Cap, Afrique du Sud"}
   ]},
-  {name:"Mosqu√©e Hassan II ‚Äî Casablanca, Maroc",lat:33.6086,lng:-7.6327,desc:"La mosqu√©e Hassan II de Casablanca est construite en partie sur la mer, avec un plancher en verre permettant de voir l'oc√©an Atlantique en dessous. Son minaret de 210 m projette un rayon laser vers La Mecque chaque nuit.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Inaugur√©e en 1993, minaret de 210 m (plus haut du monde), construite en partie sur la mer, Michel Pinseau architecte"},
+  {name:"MosquÈe Hassan II ó Casablanca, Maroc",lat:33.6086,lng:-7.6327,desc:"La mosquÈe Hassan II de Casablanca est construite en partie sur la mer, avec un plancher en verre permettant de voir l'ocÈan Atlantique en dessous. Son minaret de 210 m projette un rayon laser vers La Mecque chaque nuit.",photo:"photos/mosquee_hassan_ii.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"InaugurÈe en 1993, minaret de 210 m (plus haut du monde), construite en partie sur la mer, Michel Pinseau architecte"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord de l'Atlantique, quartier de l'Ain Diab, Casablanca"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande mosqu√©e d'Afrique, minaret le plus haut du monde, Casablanca"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mosqu√©e Hassan II √† Casablanca, Maroc"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande mosquÈe d'Afrique, minaret le plus haut du monde, Casablanca"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La MosquÈe Hassan II ‡ Casablanca, Maroc"}
   ]},
-  {name:"Chute Angel ‚Äî Venezuela",lat:5.97,lng:-62.535,desc:"La chute Angel est si haute que son eau se vaporise en grande partie avant d'atteindre le sol en saison s√®che. Apr√®s une chute de 979 m√®tres, l'eau arrive sous forme de bruine ou de ruisseau, selon les conditions m√©t√©o.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Salto √ùngel, 979 m de chute libre ininterrompue sur le plateau du Tepui Auyan, d√©couverte par Jimmy Angel en 1933"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gran Sabana, tepuis et cascades, parc national d'Am√©rique du Sud"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute cascade du monde (979m), dans la jungle v√©n√©zu√©lienne"},
+  {name:"Chute Angel ó Venezuela",lat:5.97,lng:-62.535,desc:"La chute Angel est si haute que son eau se vaporise en grande partie avant d'atteindre le sol en saison sËche. AprËs une chute de 979 mËtres, l'eau arrive sous forme de bruine ou de ruisseau, selon les conditions mÈtÈo.",photo:"photos/chute_angel.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Salto ›ngel, 979 m de chute libre ininterrompue sur le plateau du Tepui Auyan, dÈcouverte par Jimmy Angel en 1933"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gran Sabana, tepuis et cascades, parc national d'AmÈrique du Sud"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute cascade du monde (979m), dans la jungle vÈnÈzuÈlienne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Chute Angel au Venezuela"}
   ]},
-  {name:"Canal de Panama",lat:9.0798,lng:-79.6816,desc:"Le canal de Panama raccourcit de 15 000 km le trajet entre les oc√©ans Atlantique et Pacifique. Sa construction co√ªta la vie √† 25 000 ouvriers entre 1881 et 1914, principalement √† cause de la malaria et de la fi√®vre jaune.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Voie navigable de 80 km inaugur√©e le 15 ao√ªt 1914, √©cluses de Gat√∫n, Pedro Miguel et Miraflores, 14 000 navires/an"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Isthme de Panama, reliant l'oc√©an Atlantique au Pacifique, province de Col√≥n √† Panama City"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canal reliant l'Atlantique au Pacifique, grande ≈ìuvre du XXe si√®cle"},
+  {name:"Canal de Panama",lat:9.0798,lng:-79.6816,desc:"Le canal de Panama raccourcit de 15 000 km le trajet entre les ocÈans Atlantique et Pacifique. Sa construction co˚ta la vie ‡ 25 000 ouvriers entre 1881 et 1914, principalement ‡ cause de la malaria et de la fiËvre jaune.",photo:"photos/canal_de_panama.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Voie navigable de 80 km inaugurÈe le 15 ao˚t 1914, Ècluses de Gat˙n, Pedro Miguel et Miraflores, 14 000 navires/an"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Isthme de Panama, reliant l'ocÈan Atlantique au Pacifique, province de ColÛn ‡ Panama City"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canal reliant l'Atlantique au Pacifique, grande úuvre du XXe siËcle"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Canal de Panama"}
   ]},
-  {name:"√éle de P√¢ques ‚Äî Chili",lat:-27.1127,lng:-109.3497,desc:"Juste sous la surface de la mer entourant l'√Æle de P√¢ques se trouvent des milliers de moa√Ø submerg√©s ‚Äî les arch√©ologues n'ont fouill√© qu'une infime partie des fonds marins. Les t√™tes visibles sont en r√©alit√© des statues enti√®res dont le corps est enfoui.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rano Raraku, carri√®re volcanique d'o√π sont extraits les 887 moai, √Æle volcanique isol√©e √† 3 700 km de la c√¥te continentale"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle volcanique polyn√©sienne isol√©e dans le Pacifique Sud, territoire d'outre-mer"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éle des statues g√©antes moai, Pacifique Sud, territoire chilien"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'√éle de P√¢ques au Chili"}
+  {name:"Œle de P‚ques ó Chili",lat:-27.1127,lng:-109.3497,desc:"Juste sous la surface de la mer entourant l'Óle de P‚ques se trouvent des milliers de moaÔ submergÈs ó les archÈologues n'ont fouillÈ qu'une infime partie des fonds marins. Les tÍtes visibles sont en rÈalitÈ des statues entiËres dont le corps est enfoui.",photo:"photos/ile_de_paques.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rano Raraku, carriËre volcanique d'o˘ sont extraits les 887 moai, Óle volcanique isolÈe ‡ 3 700 km de la cÙte continentale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle volcanique polynÈsienne isolÈe dans le Pacifique Sud, territoire d'outre-mer"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œle des statues gÈantes moai, Pacifique Sud, territoire chilien"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Œle de P‚ques au Chili"}
   ]},
-  {name:"Cath√©drale de Brasilia ‚Äî Br√©sil",lat:-15.7988,lng:-47.8758,desc:"La cath√©drale de Brasilia, con√ßue par Oscar Niemeyer et inaugur√©e en 1970, est une sculpture hyperbolo√Øde de 16 colonnes d'acier incurv√©es pesant 90 tonnes chacune. Son entr√©e se fait par un tunnel souterrain sombre pour que les fid√®les jaillissent dans la lumi√®re blanche de la nef vitr√©e ‚Äî une m√©taphore de la r√©surrection.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Catedral Metropolitana Nossa Senhora Aparecida, con√ßue par Oscar Niemeyer, inaugur√©e en 1970, 16 colonnes hyperbolo√Ødes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Esplanade des Minist√®res d'une capitale construite ex nihilo, district f√©d√©ral"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale futuriste de Niemeyer, capitale du Br√©sil"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cath√©drale de Brasilia au Br√©sil"}
+  {name:"CathÈdrale de Brasilia ó BrÈsil",lat:-15.7988,lng:-47.8758,desc:"La cathÈdrale de Brasilia, conÁue par Oscar Niemeyer et inaugurÈe en 1970, est une sculpture hyperboloÔde de 16 colonnes d'acier incurvÈes pesant 90 tonnes chacune. Son entrÈe se fait par un tunnel souterrain sombre pour que les fidËles jaillissent dans la lumiËre blanche de la nef vitrÈe ó une mÈtaphore de la rÈsurrection.",photo:"photos/cathedrale_de_brasilia.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Catedral Metropolitana Nossa Senhora Aparecida, conÁue par Oscar Niemeyer, inaugurÈe en 1970, 16 colonnes hyperboloÔdes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Esplanade des MinistËres d'une capitale construite ex nihilo, district fÈdÈral"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CathÈdrale futuriste de Niemeyer, capitale du BrÈsil"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La CathÈdrale de Brasilia au BrÈsil"}
   ]},
-  {name:"Parc Yellowstone ‚Äî Wyoming, USA",lat:44.428,lng:-110.5885,desc:"Yellowstone est pos√© sur une supervolcan dont la derni√®re √©ruption massive remonte √† 640 000 ans. Si elle se reproduisait, elle couvrirait les √âtats-Unis d'une couche de cendres de 1 √† 3 m√®tres. Le Grand Prismatic Spring, source chaude de 90 m√®tres de diam√®tre, doit ses couleurs aux bact√©ries thermophiles.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Premier parc national du monde (1872), supervolcan actif, Old Faithful geyser √©ruptant toutes les 90 min, 89 000 km¬≤"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau volcanique du Wyoming, chevauchant Idaho et Montana, Rocheuses am√©ricaines"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc national embl√©matique, geysers et bisons, Wyoming, USA"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc Yellowstone √† Wyoming, USA"}
+  {name:"Parc Yellowstone ó Wyoming, USA",lat:44.428,lng:-110.5885,desc:"Yellowstone est posÈ sur une supervolcan dont la derniËre Èruption massive remonte ‡ 640 000 ans. Si elle se reproduisait, elle couvrirait les …tats-Unis d'une couche de cendres de 1 ‡ 3 mËtres. Le Grand Prismatic Spring, source chaude de 90 mËtres de diamËtre, doit ses couleurs aux bactÈries thermophiles.",photo:"photos/parc_yellowstone.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Premier parc national du monde (1872), supervolcan actif, Old Faithful geyser Èruptant toutes les 90 min, 89 000 km≤"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau volcanique du Wyoming, chevauchant Idaho et Montana, Rocheuses amÈricaines"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc national emblÈmatique, geysers et bisons, Wyoming, USA"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc Yellowstone ‡ Wyoming, USA"}
   ]},
-  {name:"Gal√°pagos ‚Äî √âquateur",lat:-0.9538,lng:-90.9656,desc:"L'archipel des Gal√°pagos est le laboratoire de l'√©volution de Charles Darwin, qui y s√©journa en 1835. L'isolement de ses √Æles cr√©a des esp√®ces uniques au monde : iguanes marins, pinsons de Darwin aux becs adapt√©s √† chaque √Æle, tortues g√©antes de 200 kg. 97% de l'archipel est parc national intangible.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Archipel de 19 √Æles volcaniques, Darwin y d√©veloppe sa th√©orie de l'√©volution en 1835, tortues g√©antes et iguanes marins"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel volcanique isol√© en plein Pacifique, √† 1 000 km du continent"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éles de Darwin, faune end√©mique unique, √âquateur, Pacifique"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gal√°pagos en √âquateur"}
+  {name:"Gal·pagos ó …quateur",lat:-0.9538,lng:-90.9656,desc:"L'archipel des Gal·pagos est le laboratoire de l'Èvolution de Charles Darwin, qui y sÈjourna en 1835. L'isolement de ses Óles crÈa des espËces uniques au monde : iguanes marins, pinsons de Darwin aux becs adaptÈs ‡ chaque Óle, tortues gÈantes de 200 kg. 97% de l'archipel est parc national intangible.",photo:"photos/parc_yellowstone.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Archipel de 19 Óles volcaniques, Darwin y dÈveloppe sa thÈorie de l'Èvolution en 1835, tortues gÈantes et iguanes marins"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel volcanique isolÈ en plein Pacifique, ‡ 1 000 km du continent"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œles de Darwin, faune endÈmique unique, …quateur, Pacifique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gal·pagos en …quateur"}
   ]},
-  {name:"Times Square ‚Äî New York, USA",lat:40.758,lng:-73.9855,desc:"Times Square doit son nom au New York Times qui y installa son si√®ge en 1904 et y fit tomber pour la premi√®re fois la ¬´ball drop¬ª du Nouvel An. Avec 50 millions de visiteurs par an, c'est le lieu le plus cher pour la publicit√© au monde ‚Äî un panneau peut co√ªter 50 000 dollars par jour.",hints:[
+  {name:"Times Square ó New York, USA",lat:40.758,lng:-73.9855,desc:"Times Square doit son nom au New York Times qui y installa son siËge en 1904 et y fit tomber pour la premiËre fois la ´ball dropª du Nouvel An. Avec 50 millions de visiteurs par an, c'est le lieu le plus cher pour la publicitÈ au monde ó un panneau peut co˚ter 50 000 dollars par jour.",photo:"photos/times_square.JPG",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Intersection de Broadway et 7th Avenue, carrefour commercial dont le nom vient d'un grand quotidien, boule du Nouvel An"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier central de la plus grande m√©tropole du continent, entre deux avenues num√©rot√©es"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Carrefour des n√©ons, c≈ìur de Manhattan, New York"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Times Square √† New York, USA"}
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier central de la plus grande mÈtropole du continent, entre deux avenues numÈrotÈes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Carrefour des nÈons, cúur de Manhattan, New York"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Times Square ‡ New York, USA"}
   ]},
-  {name:"Cap Canaveral ‚Äî Floride, USA",lat:28.3922,lng:-80.6077,desc:"Cap Canaveral est le berceau de l'√®re spatiale am√©ricaine depuis 1950. Son pas de tir 39A vit partir Apollo 11 vers la Lune en 1969. Rachet√© par SpaceX en 2014, ce m√™me site historique accueille aujourd'hui les fus√©es Falcon 9 et Starship ‚Äî une continuit√© symbolique entre deux √©poques de l'exploration spatiale.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kennedy Space Center, Pad 39A d'o√π sont partis Apollo 11 (1969) et la navette spatiale, c√¥te est du continent am√©ricain"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Merritt Island, comt√© de Brevard, c√¥te est de la Floride, face √† l'Atlantique"},
+  {name:"Cap Canaveral ó Floride, USA",lat:28.3922,lng:-80.6077,desc:"Cap Canaveral est le berceau de l'Ëre spatiale amÈricaine depuis 1950. Son pas de tir 39A vit partir Apollo 11 vers la Lune en 1969. RachetÈ par SpaceX en 2014, ce mÍme site historique accueille aujourd'hui les fusÈes Falcon 9 et Starship ó une continuitÈ symbolique entre deux Èpoques de l'exploration spatiale.",photo:"photos/cap_canaveral.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kennedy Space Center, Pad 39A d'o˘ sont partis Apollo 11 (1969) et la navette spatiale, cÙte est du continent amÈricain"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Merritt Island, comtÈ de Brevard, cÙte est de la Floride, face ‡ l'Atlantique"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Centre spatial Kennedy, lieu de lancement d'Apollo 11, Floride"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cap Canaveral √† Floride, USA"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cap Canaveral ‡ Floride, USA"}
   ]},
-  {name:"Patagonie ‚Äî Argentine",lat:-50.9423,lng:-73.4068,desc:"La Patagonie couvre 900 000 km¬≤ ‚Äî soit une surface plus grande que la France et l'Espagne r√©unies. Avec seulement 2 habitants au km¬≤, c'est l'une des r√©gions les moins peupl√©es de la plan√®te, habit√©e surtout par des guanacos et des condors.",hints:[
+  {name:"Patagonie ó Argentine",lat:-50.9423,lng:-73.4068,desc:"La Patagonie couvre 900 000 km≤ ó soit une surface plus grande que la France et l'Espagne rÈunies. Avec seulement 2 habitants au km≤, c'est l'une des rÈgions les moins peuplÈes de la planËte, habitÈe surtout par des guanacos et des condors.",photo:"photos/cap_canaveral.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cerro Torre (3 128 m), aiguille granitique dans le Parc national Los Glaciares, province de Santa Cruz"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de Patagonie, √† la fronti√®re entre deux pays sud-am√©ricains"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Aiguille granitique dans un parc national de l'extr√™me sud argentin"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de Patagonie, ‡ la frontiËre entre deux pays sud-amÈricains"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Aiguille granitique dans un parc national de l'extrÍme sud argentin"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Patagonie en Argentine"}
   ]},
-  {name:"Teotihuacan ‚Äî Mexique",lat:19.6925,lng:-98.8438,desc:"Teotihuacan √©tait l'une des plus grandes villes du monde en l'an 500 ap. J.-C., avec 200 000 habitants. Personne ne sait quelle civilisation la construisit ‚Äî les Azt√®ques, qui la d√©couvrirent des si√®cles plus tard, la nomm√®rent ¬´le lieu o√π les hommes deviennent des dieux¬ª.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pyramide du Soleil (65m), Pyramide de la Lune, Avenue des Morts, cit√© pr√©colombienne fond√©e vers -200, d√©peupl√©e en 650"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Municipalit√© de San Juan Teotihuacan, √âtat de Mexico, √† 40 km de Mexico City"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© azt√®que aux grandes pyramides, √† 40 km de Mexico"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le site arch√©ologique de Teotihuacan, Mexique"}
+  {name:"Teotihuacan ó Mexique",lat:19.6925,lng:-98.8438,desc:"Teotihuacan Ètait l'une des plus grandes villes du monde en l'an 500 ap. J.-C., avec 200 000 habitants. Personne ne sait quelle civilisation la construisit ó les AztËques, qui la dÈcouvrirent des siËcles plus tard, la nommËrent ´le lieu o˘ les hommes deviennent des dieuxª.",photo:"photos/teotihuacan.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pyramide du Soleil (65m), Pyramide de la Lune, Avenue des Morts, citÈ prÈcolombienne fondÈe vers -200, dÈpeuplÈe en 650"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"MunicipalitÈ de San Juan Teotihuacan, …tat de Mexico, ‡ 40 km de Mexico City"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ aztËque aux grandes pyramides, ‡ 40 km de Mexico"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le site archÈologique de Teotihuacan, Mexique"}
   ]},
-  {name:"Great Barrier Reef ‚Äî Queensland, Australie",lat:-18.2861,lng:147.6992,desc:"Le Grand R√©cif corallien est le plus grand organisme vivant de la plan√®te ‚Äî visible depuis l'espace. Sa surface est inf√©rieure de moiti√© √† celle de 1960 √† cause du r√©chauffement climatique et de l'acidification des oc√©ans. Des chercheurs travaillent √† congeler des fragments de corail pour permettre une future restauration.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand syst√®me r√©cifal du monde, 2 300 km, 2 900 r√©cifs individuels, visible depuis l'espace, Queensland"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mer de Corail, c√¥te nord-est du Queensland, entre Bundaberg et Torres Strait"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand r√©cif corallien du monde, Queensland, Australie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Great Barrier Reef √† Queensland, Australie"}
+  {name:"Great Barrier Reef ó Queensland, Australie",lat:-18.2861,lng:147.6992,desc:"Le Grand RÈcif corallien est le plus grand organisme vivant de la planËte ó visible depuis l'espace. Sa surface est infÈrieure de moitiÈ ‡ celle de 1960 ‡ cause du rÈchauffement climatique et de l'acidification des ocÈans. Des chercheurs travaillent ‡ congeler des fragments de corail pour permettre une future restauration.",photo:"photos/teotihuacan.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand systËme rÈcifal du monde, 2 300 km, 2 900 rÈcifs individuels, visible depuis l'espace, Queensland"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mer de Corail, cÙte nord-est du Queensland, entre Bundaberg et Torres Strait"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand rÈcif corallien du monde, Queensland, Australie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Great Barrier Reef ‡ Queensland, Australie"}
   ]},
-  {name:"Sky Tower ‚Äî Auckland, Nouvelle-Z√©lande",lat:-36.8681,lng:174.7622,desc:"La Sky Tower d'Auckland, inaugur√©e en 1997, est la structure la plus haute de l'h√©misph√®re sud avec ses 328 m√®tres. Elle repose sur une seule colonne de b√©ton ancr√©e dans le roc volcanique d'Auckland, con√ßue pour r√©sister √† un tremblement de terre de magnitude 8. Des parachutistes y sautent depuis le sommet lors d'√©v√©nements sp√©ciaux.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pyl√¥ne de t√©l√©communications de 328 m inaugur√© en 1997, Gordon Moller architecte, saut en chute libre depuis la plateforme"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Victoria Street West, centre CBD d'Auckland, √Æle du Nord, Nouvelle-Z√©lande"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour embl√©matique d'Auckland, plus haute tour de l'h√©misph√®re sud"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Sky Tower √† Auckland, Nouvelle-Z√©lande"}
+  {name:"Sky Tower ó Auckland, Nouvelle-ZÈlande",lat:-36.8681,lng:174.7622,desc:"La Sky Tower d'Auckland, inaugurÈe en 1997, est la structure la plus haute de l'hÈmisphËre sud avec ses 328 mËtres. Elle repose sur une seule colonne de bÈton ancrÈe dans le roc volcanique d'Auckland, conÁue pour rÈsister ‡ un tremblement de terre de magnitude 8. Des parachutistes y sautent depuis le sommet lors d'ÈvÈnements spÈciaux.",photo:"photos/sky_tower.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"PylÙne de tÈlÈcommunications de 328 m inaugurÈ en 1997, Gordon Moller architecte, saut en chute libre depuis la plateforme"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Victoria Street West, centre CBD d'Auckland, Óle du Nord, Nouvelle-ZÈlande"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour emblÈmatique d'Auckland, plus haute tour de l'hÈmisphËre sud"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Sky Tower ‡ Auckland, Nouvelle-ZÈlande"}
   ]},
-  {name:"Fiordland ‚Äî Milford Sound, Nouvelle-Z√©lande",lat:-44.6413,lng:167.9263,desc:"Le parc national de Fiordland re√ßoit jusqu'√† 9 m√®tres de pluie par an ‚Äî l'un des endroits les plus pluvieux du monde. Cette eau cr√©e des centaines de cascades √©ph√©m√®res qui cascadent des parois √† pic pendant et apr√®s chaque pluie.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Piopiotahi, fjord de 16 km de long taill√© par les glaciers, pic de Mitre 1 692 m, class√© UNESCO, √Æle du Sud"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de Fiordland, district de Southland, √Æle du Sud, Nouvelle-Z√©lande"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fjord de Milford Sound, paysage de montagne et cascades, Nouvelle-Z√©lande"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Fiordland √† Milford Sound, Nouvelle-Z√©lande"}
+  {name:"Fiordland ó Milford Sound, Nouvelle-ZÈlande",lat:-44.6413,lng:167.9263,desc:"Le parc national de Fiordland reÁoit jusqu'‡ 9 mËtres de pluie par an ó l'un des endroits les plus pluvieux du monde. Cette eau crÈe des centaines de cascades ÈphÈmËres qui cascadent des parois ‡ pic pendant et aprËs chaque pluie.",photo:"photos/fiordland.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Piopiotahi, fjord de 16 km de long taillÈ par les glaciers, pic de Mitre 1 692 m, classÈ UNESCO, Óle du Sud"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de Fiordland, district de Southland, Óle du Sud, Nouvelle-ZÈlande"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fjord de Milford Sound, paysage de montagne et cascades, Nouvelle-ZÈlande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Fiordland ‡ Milford Sound, Nouvelle-ZÈlande"}
   ]},
-  {name:"Bora Bora ‚Äî Polyn√©sie fran√ßaise",lat:-16.5004,lng:-151.7415,desc:"Le lagon de Bora Bora est un ancien crat√®re volcanique envahi par la mer. La barri√®re de corail qui l'entoure est si peu profonde qu'on peut la traverser √† pied √† mar√©e basse dans certains endroits, cr√©ant une exp√©rience unique de marche sur l'eau.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√éle volcanique de 38 km¬≤, entour√©e d'un lagon turquoise et d'un r√©cif barri√®re, archipel de la Soci√©t√©, Polyn√©sie"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel de la Soci√©t√©, Polyn√©sie fran√ßaise, √† 260 km √† l'ouest de Tahiti"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éle paradisiaque √† lagon turquoise, Polyn√©sie fran√ßaise"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bora Bora en Polyn√©sie fran√ßaise"}
+  {name:"Bora Bora ó PolynÈsie franÁaise",lat:-16.5004,lng:-151.7415,desc:"Le lagon de Bora Bora est un ancien cratËre volcanique envahi par la mer. La barriËre de corail qui l'entoure est si peu profonde qu'on peut la traverser ‡ pied ‡ marÈe basse dans certains endroits, crÈant une expÈrience unique de marche sur l'eau.",photo:"photos/bora_bora.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Œle volcanique de 38 km≤, entourÈe d'un lagon turquoise et d'un rÈcif barriËre, archipel de la SociÈtÈ, PolynÈsie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel de la SociÈtÈ, PolynÈsie franÁaise, ‡ 260 km ‡ l'ouest de Tahiti"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œle paradisiaque ‡ lagon turquoise, PolynÈsie franÁaise"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bora Bora en PolynÈsie franÁaise"}
   ]},
-  {name:"Palau ‚Äî Micron√©sie",lat:7.3419,lng:134.4791,desc:"Le lac des m√©duses de Palau est le seul endroit au monde o√π l'on peut nager en s√©curit√© entour√© de millions de m√©duses. Ces m√©duses ont perdu leur venin au fil de l'√©volution car elles n'avaient plus de pr√©dateurs dans ce lac ferm√©. Chaque jour, elles ¬´nagent¬ª litt√©ralement en suivant la lumi√®re du soleil.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Jellyfish Lake (Ongeim'l Tketau), lac marin de 460 m de long peupl√© de 5 millions de m√©duses dor√©es sans venin, √Æle de Eil Malk"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel des Rock Islands, √âtat de Koror, R√©publique des Palaos, Micron√©sie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac marin peupl√© de millions de m√©duses sans venin, archipel de Micron√©sie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palau en Micron√©sie"}
+  {name:"Palau ó MicronÈsie",lat:7.3419,lng:134.4791,desc:"Le lac des mÈduses de Palau est le seul endroit au monde o˘ l'on peut nager en sÈcuritÈ entourÈ de millions de mÈduses. Ces mÈduses ont perdu leur venin au fil de l'Èvolution car elles n'avaient plus de prÈdateurs dans ce lac fermÈ. Chaque jour, elles ´nagentª littÈralement en suivant la lumiËre du soleil.",photo:"photos/palau.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Jellyfish Lake (Ongeim'l Tketau), lac marin de 460 m de long peuplÈ de 5 millions de mÈduses dorÈes sans venin, Óle de Eil Malk"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel des Rock Islands, …tat de Koror, RÈpublique des Palaos, MicronÈsie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac marin peuplÈ de millions de mÈduses sans venin, archipel de MicronÈsie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palau en MicronÈsie"}
   ]},
-  {name:"Mosqu√©e Al-Aqsa ‚Äî J√©rusalem",lat:31.7761,lng:35.2358,desc:"La mosqu√©e Al-Aqsa est le troisi√®me lieu saint de l'Islam, sur l'esplanade des Mosqu√©es de J√©rusalem. Selon la tradition islamique, c'est le site du voyage nocturne du Proph√®te Mahomet (isra et mi'raj) depuis La Mecque. Elle fut construite en 705 ap. J.-C. par le calife omeyyade al-Walid Ier sur un site sacr√© depuis l'Antiquit√©.",hints:[
+  {name:"MosquÈe Al-Aqsa ó JÈrusalem",lat:31.7761,lng:35.2358,desc:"La mosquÈe Al-Aqsa est le troisiËme lieu saint de l'Islam, sur l'esplanade des MosquÈes de JÈrusalem. Selon la tradition islamique, c'est le site du voyage nocturne du ProphËte Mahomet (isra et mi'raj) depuis La Mecque. Elle fut construite en 705 ap. J.-C. par le calife omeyyade al-Walid Ier sur un site sacrÈ depuis l'AntiquitÈ.",photo:"photos/mosquee_al_aqsa.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Masjid al-Aqsa, 3e lieu saint de l'Islam, construite en 705 par Abd al-Malik, esplanade du mont du Temple"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mont du Temple, Vieille Ville de J√©rusalem, quartier musulman"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"3e lieu saint de l'Islam, sur l'esplanade des Mosqu√©es, J√©rusalem"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mosqu√©e Al-Aqsa √† J√©rusalem"}
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mont du Temple, Vieille Ville de JÈrusalem, quartier musulman"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"3e lieu saint de l'Islam, sur l'esplanade des MosquÈes, JÈrusalem"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La MosquÈe Al-Aqsa ‡ JÈrusalem"}
   ]},
-  {name:"Palmyre ‚Äî Syrie",lat:34.5503,lng:38.2688,desc:"La reine de Palmyre, Z√©nobie, d√©fia Rome en 270 ap. J.-C. en conqu√©rant l'√âgypte et l'Anatolie avec son arm√©e. Captur√©e par l'empereur Aur√©lien, elle fut exhib√©e √† Rome encha√Æn√©e d'or massif ‚Äî un hommage paradoxal √† sa grandeur.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tadmor, oasis caravani√®re nabat√©enne, temple de B√™l (32 ap. J.-C.), partiellement d√©truit par Daech en 2015"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gouvernorat de Homs, d√©sert syrien, √† 210 km de Damas"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© antique de la Reine Z√©nobie, d√©sert de Syrie"},
+  {name:"Palmyre ó Syrie",lat:34.5503,lng:38.2688,desc:"La reine de Palmyre, ZÈnobie, dÈfia Rome en 270 ap. J.-C. en conquÈrant l'…gypte et l'Anatolie avec son armÈe. CapturÈe par l'empereur AurÈlien, elle fut exhibÈe ‡ Rome enchaÓnÈe d'or massif ó un hommage paradoxal ‡ sa grandeur.",photo:"photos/palmyre.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tadmor, oasis caravaniËre nabatÈenne, temple de BÍl (32 ap. J.-C.), partiellement dÈtruit par Daech en 2015"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gouvernorat de Homs, dÈsert syrien, ‡ 210 km de Damas"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ antique de la Reine ZÈnobie, dÈsert de Syrie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palmyre en Syrie"}
   ]},
-  {name:"Pers√©polis ‚Äî Iran",lat:29.9348,lng:52.8913,desc:"Pers√©polis √©tait le symbole de la richesse et du pouvoir ach√©m√©nide. Ses bas-reliefs repr√©sentent 23 nations soumises portant des tributes ‚Äî une carte vivante de l'empire le plus vaste de l'Antiquit√©, qui s'√©tendait de la Gr√®ce √† l'Inde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale c√©r√©monielle de l'Empire ach√©m√©nide, fond√©e par Darius Ier vers -515, Apadana et porte de toutes les nations"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plaine de Marvdasht, Province de Fars, √† 60 km d'une grande ville historique"},
+  {name:"PersÈpolis ó Iran",lat:29.9348,lng:52.8913,desc:"PersÈpolis Ètait le symbole de la richesse et du pouvoir achÈmÈnide. Ses bas-reliefs reprÈsentent 23 nations soumises portant des tributes ó une carte vivante de l'empire le plus vaste de l'AntiquitÈ, qui s'Ètendait de la GrËce ‡ l'Inde.",photo:"photos/persepolis.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale cÈrÈmonielle de l'Empire achÈmÈnide, fondÈe par Darius Ier vers -515, Apadana et porte de toutes les nations"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plaine de Marvdasht, Province de Fars, ‡ 60 km d'une grande ville historique"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines de la capitale perse de Darius, Iran"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pers√©polis en Iran"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le PersÈpolis en Iran"}
   ]},
-  {name:"Coupole du Rocher ‚Äî J√©rusalem",lat:31.7781,lng:35.2354,desc:"Le D√¥me du Rocher, sanctuaire islamique construit en 691, recouvre le rocher d'o√π le proph√®te Mahomet serait mont√© au ciel lors de son voyage nocturne. Ses mosa√Øques et carreaux de fa√Øence furent enti√®rement restaur√©s par la Jordanie en 1959 et 2016. Son d√¥me dor√© est recouvert de 5 000 plaques d'or.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Qubbat al-Sakhra, sanctuaire islamique √©rig√© en 691 par Abd al-Malik ibn Marwan, recouvrant le rocher de l'Ascension"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mont du Temple, Esplanade des Mosqu√©es, Vieille Ville de J√©rusalem"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sanctuaire dor√© de l'esplanade des Mosqu√©es, J√©rusalem"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Coupole du Rocher √† J√©rusalem"}
+  {name:"Coupole du Rocher ó JÈrusalem",lat:31.7781,lng:35.2354,desc:"Le DÙme du Rocher, sanctuaire islamique construit en 691, recouvre le rocher d'o˘ le prophËte Mahomet serait montÈ au ciel lors de son voyage nocturne. Ses mosaÔques et carreaux de faÔence furent entiËrement restaurÈs par la Jordanie en 1959 et 2016. Son dÙme dorÈ est recouvert de 5 000 plaques d'or.",photo:"photos/coupole_du_rocher.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Qubbat al-Sakhra, sanctuaire islamique ÈrigÈ en 691 par Abd al-Malik ibn Marwan, recouvrant le rocher de l'Ascension"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mont du Temple, Esplanade des MosquÈes, Vieille Ville de JÈrusalem"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sanctuaire dorÈ de l'esplanade des MosquÈes, JÈrusalem"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Coupole du Rocher ‡ JÈrusalem"}
   ]},
-  {name:"Cappadoce ‚Äî Turquie",lat:38.6431,lng:34.8289,desc:"Les chemin√©es de f√©es de Cappadoce furent habit√©es pendant des mill√©naires. Les premi√®res communaut√©s chr√©tiennes y creus√®rent des villes souterraines enti√®res pour √©chapper aux pers√©cutions romaines ‚Äî certaines pouvaient abriter 20 000 personnes sur 8 niveaux.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"G√∂reme, chemin√©es de f√©es en tuf volcanique cr√©√©es par l'√©rosion de la caldeira du Erciyes, habitations rupestres du IVe si√®cle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Nev?ehir, Anatolie centrale, √† 280 km d'Ankara"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage lunaire aux chemin√©es de f√©es en tuf volcanique, Anatolie centrale, Turquie"},
+  {name:"Cappadoce ó Turquie",lat:38.6431,lng:34.8289,desc:"Les cheminÈes de fÈes de Cappadoce furent habitÈes pendant des millÈnaires. Les premiËres communautÈs chrÈtiennes y creusËrent des villes souterraines entiËres pour Èchapper aux persÈcutions romaines ó certaines pouvaient abriter 20 000 personnes sur 8 niveaux.",photo:"photos/cappadoce.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gˆreme, cheminÈes de fÈes en tuf volcanique crÈÈes par l'Èrosion de la caldeira du Erciyes, habitations rupestres du IVe siËcle"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Nev?ehir, Anatolie centrale, ‡ 280 km d'Ankara"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage lunaire aux cheminÈes de fÈes en tuf volcanique, Anatolie centrale, Turquie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cappadoce en Turquie"}
   ]},
-  {name:"Ch√¢teau de Kronborg ‚Äî Elseneur, Danemark",lat:56.039,lng:12.6213,desc:"Le ch√¢teau de Kronborg inspira Shakespeare pour son Hamlet, bien que le dramaturge n'ait probablement jamais visit√© le Danemark. La l√©gende dit que le h√©ros Viking Holger Danske dort dans ses caves et se r√©veillera si le Danemark est en danger.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Slot Kronborg, forteresse Renaissance de 1574, cadre d'Hamlet de Shakespeare, d√©troit de l'√òresund"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville c√¥ti√®re du nord d'une p√©ninsule europ√©enne, bord d'√©troit face √† un pays voisin"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau d'Hamlet, class√© UNESCO, Danemark"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Kronborg √† Elseneur, Danemark"}
+  {name:"Ch‚teau de Kronborg ó Elseneur, Danemark",lat:56.039,lng:12.6213,desc:"Le ch‚teau de Kronborg inspira Shakespeare pour son Hamlet, bien que le dramaturge n'ait probablement jamais visitÈ le Danemark. La lÈgende dit que le hÈros Viking Holger Danske dort dans ses caves et se rÈveillera si le Danemark est en danger.",photo:"photos/chateau_de_kronborg.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Slot Kronborg, forteresse Renaissance de 1574, cadre d'Hamlet de Shakespeare, dÈtroit de l'ÿresund"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville cÙtiËre du nord d'une pÈninsule europÈenne, bord d'Ètroit face ‡ un pays voisin"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau d'Hamlet, classÈ UNESCO, Danemark"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Kronborg ‡ Elseneur, Danemark"}
   ]},
-  {name:"Op√©ra de Copenhague ‚Äî Danemark",lat:55.6786,lng:12.5997,desc:"L'Op√©ra de Copenhague, inaugur√© en 2005, fut enti√®rement financ√© par le magnat de la marine M√¶rsk Mc-Kinney M√∏ller pour 500 millions d'euros. Ses 14 m√®tres de porte-√†-faux et son toit dor√© de 32 m√®tres surplombant le port en font l'un des op√©ras les plus modernes et chers jamais construits.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Operaen, con√ßu par Henning Larsen, inaugur√© en 2005, offert par M√¶rsk McKinney M√∏ller, √Æle de Holmen"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle de Holmen, port de Copenhague, face au palais d'Amalienborg"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Op√©ra moderne sur le port de Copenhague, Danemark"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Op√©ra de Copenhague, Danemark"}
+  {name:"OpÈra de Copenhague ó Danemark",lat:55.6786,lng:12.5997,desc:"L'OpÈra de Copenhague, inaugurÈ en 2005, fut entiËrement financÈ par le magnat de la marine MÊrsk Mc-Kinney M¯ller pour 500 millions d'euros. Ses 14 mËtres de porte-‡-faux et son toit dorÈ de 32 mËtres surplombant le port en font l'un des opÈras les plus modernes et chers jamais construits.",photo:"photos/opera_de_copenhague.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Operaen, conÁu par Henning Larsen, inaugurÈ en 2005, offert par MÊrsk McKinney M¯ller, Óle de Holmen"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle de Holmen, port de Copenhague, face au palais d'Amalienborg"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"OpÈra moderne sur le port de Copenhague, Danemark"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'OpÈra de Copenhague, Danemark"}
   ]},
-  {name:"Vieux-Port de Stockholm ‚Äî Su√®de",lat:59.3245,lng:18.0726,desc:"Gamla Stan est construite sur une √Æle artificielle cr√©√©e au XIIIe si√®cle. Ses ruelles les plus √©troites ne mesurent que 90 cm de large ‚Äî soit exactement la largeur des tra√Æneaux √† chevaux de l'√©poque m√©di√©vale.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gamla Stan, √Æle Stadsholmen, vieille ville m√©di√©vale fond√©e en 1252, Stortorget et ruelles pav√©es"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle de Stadsholmen, centre historique de Stockholm, entre le lac M√§laren et la Baltique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gamla Stan, vieille ville m√©di√©vale de Stockholm, Su√®de"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Vieux-Port de Stockholm en Su√®de"}
+  {name:"Vieux-Port de Stockholm ó SuËde",lat:59.3245,lng:18.0726,desc:"Gamla Stan est construite sur une Óle artificielle crÈÈe au XIIIe siËcle. Ses ruelles les plus Ètroites ne mesurent que 90 cm de large ó soit exactement la largeur des traÓneaux ‡ chevaux de l'Èpoque mÈdiÈvale.",photo:"photos/vieux_port_de_stockholm.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gamla Stan, Óle Stadsholmen, vieille ville mÈdiÈvale fondÈe en 1252, Stortorget et ruelles pavÈes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle de Stadsholmen, centre historique de Stockholm, entre le lac M‰laren et la Baltique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gamla Stan, vieille ville mÈdiÈvale de Stockholm, SuËde"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Vieux-Port de Stockholm en SuËde"}
   ]},
-  {name:"Palais Royal de Stockholm ‚Äî Su√®de",lat:59.3268,lng:18.0717,desc:"Le palais royal de Stockholm, achev√© en 1754, est l'une des plus grandes r√©sidences royales encore en service avec ses 1 430 pi√®ces. Contrairement √† Buckingham, il est ouvert au public l'√©t√© entier. La garde royale d√©file chaque jour √† midi dans une c√©r√©monie tr√®s populaire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kungliga Slottet, 1 430 pi√®ces, construit de 1697 √† 1760 par Nicodemus Tessin le Jeune sur l'√Æle Stadsholmen"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gamla Stan, √Æle historique, r√©sidence officielle du monarque, bord de la mer Baltique"},
+  {name:"Palais Royal de Stockholm ó SuËde",lat:59.3268,lng:18.0717,desc:"Le palais royal de Stockholm, achevÈ en 1754, est l'une des plus grandes rÈsidences royales encore en service avec ses 1 430 piËces. Contrairement ‡ Buckingham, il est ouvert au public l'ÈtÈ entier. La garde royale dÈfile chaque jour ‡ midi dans une cÈrÈmonie trËs populaire.",photo:"photos/palais_royal_de_bangkok.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kungliga Slottet, 1 430 piËces, construit de 1697 ‡ 1760 par Nicodemus Tessin le Jeune sur l'Óle Stadsholmen"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gamla Stan, Óle historique, rÈsidence officielle du monarque, bord de la mer Baltique"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand palais royal du monde en usage, Stockholm"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais Royal de Stockholm en Su√®de"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais Royal de Stockholm en SuËde"}
   ]},
-  {name:"Biblioth√®que de l'Universit√© d'Helsinki ‚Äî Finlande",lat:60.1699,lng:24.9384,desc:"La biblioth√®que nationale de Finlande, b√¢tie en 1840 par Carl Ludwig Engel, est le chef-d'≈ìuvre n√©oclassique d'Helsinki. Son architecture sobre et majestueuse fut con√ßue pour rivaliser avec les grandes biblioth√®ques europ√©ennes. Elle abrite un exemplaire de chaque livre publi√© en Finlande depuis 1707 ‚Äî un d√©p√¥t l√©gal exceptionnel.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cath√©drale luth√©rienne n√©oclassique con√ßue par Carl Ludwig Engel, consacr√©e en 1852, sur la place du S√©nat"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Senate Square (Senaatintori), c≈ì≈ìur de la capitale la plus nordique d'Europe continentale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale blanche n√©oclassique dominant le centre d'Helsinki"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Biblioth√®que de l'Universit√© d'Helsinki en Finlande"}
+  {name:"BibliothËque de l'UniversitÈ d'Helsinki ó Finlande",lat:60.1699,lng:24.9384,desc:"La bibliothËque nationale de Finlande, b‚tie en 1840 par Carl Ludwig Engel, est le chef-d'úuvre nÈoclassique d'Helsinki. Son architecture sobre et majestueuse fut conÁue pour rivaliser avec les grandes bibliothËques europÈennes. Elle abrite un exemplaire de chaque livre publiÈ en Finlande depuis 1707 ó un dÈpÙt lÈgal exceptionnel.",photo:"photos/bibliotheque_de_l_universite_d_helsinki.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CathÈdrale luthÈrienne nÈoclassique conÁue par Carl Ludwig Engel, consacrÈe en 1852, sur la place du SÈnat"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Senate Square (Senaatintori), cúúur de la capitale la plus nordique d'Europe continentale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CathÈdrale blanche nÈoclassique dominant le centre d'Helsinki"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le BibliothËque de l'UniversitÈ d'Helsinki en Finlande"}
   ]},
-  {name:"Vieux-Tallinn ‚Äî Estonie",lat:59.437,lng:24.7453,desc:"Tallinn poss√®de l'une des vieilles villes m√©di√©vales les mieux pr√©serv√©es d'Europe du Nord. Sa pharmacie, fond√©e en 1422, est l'une des plus anciennes pharmacies encore en activit√© au monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Centre m√©di√©val de Tallinn, Toompea (colline de la Cath√©drale) et Ville basse hanseatique, class√© UNESCO en 1997"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Presqu'√Æle baignant dans un golfe de la mer Baltique, vieille ville m√©di√©vale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille ville m√©di√©vale la mieux pr√©serv√©e de la Baltique, Estonie"},
+  {name:"Vieux-Tallinn ó Estonie",lat:59.437,lng:24.7453,desc:"Tallinn possËde l'une des vieilles villes mÈdiÈvales les mieux prÈservÈes d'Europe du Nord. Sa pharmacie, fondÈe en 1422, est l'une des plus anciennes pharmacies encore en activitÈ au monde.",photo:"photos/vieux_tallinn.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Centre mÈdiÈval de Tallinn, Toompea (colline de la CathÈdrale) et Ville basse hanseatique, classÈ UNESCO en 1997"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Presqu'Óle baignant dans un golfe de la mer Baltique, vieille ville mÈdiÈvale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille ville mÈdiÈvale la mieux prÈservÈe de la Baltique, Estonie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Vieux-Tallinn en Estonie"}
   ]},
-  {name:"Ch√¢teau de Trakai ‚Äî Lituanie",lat:54.6479,lng:24.9347,desc:"Le ch√¢teau de Trakai, b√¢ti sur une √Æle du lac Galv? au XIVe si√®cle, est le ch√¢teau insulaire le plus oriental d'Europe. Il fut la r√©sidence du Grand-Duc Vytautas qui √©tendit la Lituanie jusqu'√† la mer Noire, cr√©ant le plus grand √âtat d'Europe m√©di√©vale.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pilis, ch√¢teau insulaire gothique du XIVe si√®cle sur le lac Galv?, r√©sidence du Grand-Duc Vytautas"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle d'un lac glaciaire, ancienne capitale m√©di√©vale, √† 28 km de la capitale actuelle"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau insulaire m√©di√©val sur un lac, Lituanie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Trakai sur son lac, Lituanie"}
+  {name:"Ch‚teau de Trakai ó Lituanie",lat:54.6479,lng:24.9347,desc:"Le ch‚teau de Trakai, b‚ti sur une Óle du lac Galv? au XIVe siËcle, est le ch‚teau insulaire le plus oriental d'Europe. Il fut la rÈsidence du Grand-Duc Vytautas qui Ètendit la Lituanie jusqu'‡ la mer Noire, crÈant le plus grand …tat d'Europe mÈdiÈvale.",photo:"photos/chateau_de_blarney.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pilis, ch‚teau insulaire gothique du XIVe siËcle sur le lac Galv?, rÈsidence du Grand-Duc Vytautas"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle d'un lac glaciaire, ancienne capitale mÈdiÈvale, ‡ 28 km de la capitale actuelle"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau insulaire mÈdiÈval sur un lac, Lituanie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Trakai sur son lac, Lituanie"}
   ]},
-  {name:"Vieille ville de Dubrovnik ‚Äî Croatie",lat:42.6507,lng:18.0944,desc:"Les remparts de Dubrovnik furent construits √† partir du XIIIe si√®cle et n'ont jamais √©t√© perc√©s par un ennemi. La cit√©-√©tat de Raguse fut l'une des premi√®res r√©publiques marchandes √† abolir l'esclavage, en 1418, trois si√®cles avant les nations modernes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Raguse, cit√©-√©tat ind√©pendante jusqu'en 1808, remparts de 1 940 m, Fort Lovrijenac et Stradun, c√¥te dalmate"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Extr√©mit√© sud de la c√¥te dalmate croate, mer Adriatique, comt√© de Dubrovnik-Neretva"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Perle de l'Adriatique, vieille ville fortifi√©e de Croatie, UNESCO"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La vieille ville fortifi√©e de Dubrovnik, Croatie"}
+  {name:"Vieille ville de Dubrovnik ó Croatie",lat:42.6507,lng:18.0944,desc:"Les remparts de Dubrovnik furent construits ‡ partir du XIIIe siËcle et n'ont jamais ÈtÈ percÈs par un ennemi. La citÈ-Ètat de Raguse fut l'une des premiËres rÈpubliques marchandes ‡ abolir l'esclavage, en 1418, trois siËcles avant les nations modernes.",photo:"https://upload.wikimedia.org/wikipedia/commons/3/3d/Dubrovnik_crop.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Raguse, citÈ-Ètat indÈpendante jusqu'en 1808, remparts de 1 940 m, Fort Lovrijenac et Stradun, cÙte dalmate"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ExtrÈmitÈ sud de la cÙte dalmate croate, mer Adriatique, comtÈ de Dubrovnik-Neretva"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Perle de l'Adriatique, vieille ville fortifiÈe de Croatie, UNESCO"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La vieille ville fortifiÈe de Dubrovnik, Croatie"}
   ]},
-  {name:"Pont de Mostar ‚Äî Bosnie-Herz√©govine",lat:43.337,lng:17.8156,desc:"Le Stari Most de Mostar, pont ottoman construit en 1566, fut d√©lib√©r√©ment d√©truit par des obus croates en novembre 1993. Sa reconstruction, achev√©e en 2004, utilisa les m√™mes techniques du XVIe si√®cle et la m√™me pierre locale ‚Äî le tenelija. La reconstruction de ce pont devint un symbole de r√©conciliation.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stari Most, pont ottoman en pierre calcaire construit en 1566 par Mimar Hayruddin, d√©truit en 1993 et reconstruit en 2004"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre historique d'une ville des Balkans, vall√©e de la Neretva, pont ottoman du XVIe s."},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieux pont ottoman de Mostar, symbole de r√©conciliation, Bosnie-Herz√©govine"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont de Mostar en Bosnie-Herz√©govine"}
+  {name:"Pont de Mostar ó Bosnie-HerzÈgovine",lat:43.337,lng:17.8156,desc:"Le Stari Most de Mostar, pont ottoman construit en 1566, fut dÈlibÈrÈment dÈtruit par des obus croates en novembre 1993. Sa reconstruction, achevÈe en 2004, utilisa les mÍmes techniques du XVIe siËcle et la mÍme pierre locale ó le tenelija. La reconstruction de ce pont devint un symbole de rÈconciliation.",photo:"https://upload.wikimedia.org/wikipedia/commons/1/1d/Mostar-StariMost.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stari Most, pont ottoman en pierre calcaire construit en 1566 par Mimar Hayruddin, dÈtruit en 1993 et reconstruit en 2004"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre historique d'une ville des Balkans, vallÈe de la Neretva, pont ottoman du XVIe s."},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieux pont ottoman de Mostar, symbole de rÈconciliation, Bosnie-HerzÈgovine"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont de Mostar en Bosnie-HerzÈgovine"}
   ]},
-  {name:"Monast√®re de Meteora ‚Äî Gr√®ce",lat:39.7217,lng:21.6306,desc:"Les monast√®res de M√©t√©ora sont construits au sommet de pitons rocheux de gr√®s atteignant 600 m√®tres. Fond√©s au XIVe si√®cle par des moines fuyant les invasions ottomanes, ils √©taient accessibles uniquement par des √©chelles amovibles ou des paniers hiss√©s par des treuils ‚Äî pour d√©courager les intrus.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Complexe de 6 monast√®res orthodoxes actifs perch√©s sur des pitons de gr√®s (400-600m), fond√©s aux XIVe-XVIe si√®cles"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plaine de Thessalie, commune de Kalambaka, r√©gion de Thessalie centrale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monast√®res suspendus sur des rochers g√©ants, merveille de Gr√®ce, UNESCO"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Monast√®re de Meteora en Gr√®ce"}
+  {name:"MonastËre de Meteora ó GrËce",lat:39.7217,lng:21.6306,desc:"Les monastËres de MÈtÈora sont construits au sommet de pitons rocheux de grËs atteignant 600 mËtres. FondÈs au XIVe siËcle par des moines fuyant les invasions ottomanes, ils Ètaient accessibles uniquement par des Èchelles amovibles ou des paniers hissÈs par des treuils ó pour dÈcourager les intrus.",photo:"photos/monastere_de_meteora.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Complexe de 6 monastËres orthodoxes actifs perchÈs sur des pitons de grËs (400-600m), fondÈs aux XIVe-XVIe siËcles"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plaine de Thessalie, commune de Kalambaka, rÈgion de Thessalie centrale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"MonastËres suspendus sur des rochers gÈants, merveille de GrËce, UNESCO"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le MonastËre de Meteora en GrËce"}
   ]},
-  {name:"Place Wenceslas ‚Äî Prague, R√©p. Tch√®que",lat:50.0813,lng:14.4281,desc:"La place Venceslas de Prague n'est pas une place mais un boulevard de 750 m√®tres. C'est le centre politique de la Boh√™me depuis le Moyen √Çge. Jan Palach s'y immola par le feu en 1969 pour protester contre l'invasion sovi√©tique. En 1989, des centaines de milliers de personnes y manifest√®rent lors de la R√©volution de velours.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"V√°clavsk√© n√°m?st√≠, boulevard de 750m, c≈ìur politique des r√©volutions de 1848, 1968 et 1989 (R√©volution de velours)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nov√© M?sto (Nouvelle Ville), centre de Prague, entre la gare centrale et le mus√©e national"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande place-boulevard au c≈ìur de Prague, t√©moin de la R√©volution de Velours"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Place Wenceslas √† Prague, R√©p. Tch√®que"}
+  {name:"Place Wenceslas ó Prague, RÈp. TchËque",lat:50.0813,lng:14.4281,desc:"La place Venceslas de Prague n'est pas une place mais un boulevard de 750 mËtres. C'est le centre politique de la BohÍme depuis le Moyen ¬ge. Jan Palach s'y immola par le feu en 1969 pour protester contre l'invasion soviÈtique. En 1989, des centaines de milliers de personnes y manifestËrent lors de la RÈvolution de velours.",photo:"photos/place_wenceslas.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"V·clavskÈ n·m?stÌ, boulevard de 750m, cúur politique des rÈvolutions de 1848, 1968 et 1989 (RÈvolution de velours)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"NovÈ M?sto (Nouvelle Ville), centre de Prague, entre la gare centrale et le musÈe national"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande place-boulevard au cúur de Prague, tÈmoin de la RÈvolution de Velours"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Place Wenceslas ‡ Prague, RÈp. TchËque"}
   ]},
-  {name:"Ch√¢teau de Wawel ‚Äî Cracovie, Pologne",lat:50.054,lng:19.9354,desc:"Le ch√¢teau de Wawel abrite la crypte royale o√π sont enterr√©s les rois, h√©ros et po√®tes nationaux polonais. Il conserve aussi la ¬´dent de dragon¬ª ‚Äî en r√©alit√© une dent de mammouth ou de rhinoc√©ros laineux ‚Äî suspendue √† une cha√Æne √† l'entr√©e depuis le Moyen √Çge.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wawel Royal Castle, r√©sidence des rois jusqu'en 1596, colline de Wawel dominant la Vistule, cath√©drale gothique"},
+  {name:"Ch‚teau de Wawel ó Cracovie, Pologne",lat:50.054,lng:19.9354,desc:"Le ch‚teau de Wawel abrite la crypte royale o˘ sont enterrÈs les rois, hÈros et poËtes nationaux polonais. Il conserve aussi la ´dent de dragonª ó en rÈalitÈ une dent de mammouth ou de rhinocÈros laineux ó suspendue ‡ une chaÓne ‡ l'entrÈe depuis le Moyen ¬ge.",photo:"photos/chateau_de_wawel.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wawel Royal Castle, rÈsidence des rois jusqu'en 1596, colline de Wawel dominant la Vistule, cathÈdrale gothique"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline du Wawel, rive gauche de la Vistule, vieille ville de Cracovie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau royal et cath√©drale sur la colline du Wawel, Cracovie, Pologne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Wawel √† Cracovie, Pologne"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau royal et cathÈdrale sur la colline du Wawel, Cracovie, Pologne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Wawel ‡ Cracovie, Pologne"}
   ]},
-  {name:"Auschwitz-Birkenau ‚Äî Pologne",lat:50.0341,lng:19.1783,desc:"Auschwitz-Birkenau fut lib√©r√© le 27 janvier 1945 par l'arm√©e sovi√©tique. Ce jour est devenu la Journ√©e internationale de la m√©moire des victimes de l'Holocauste. Le site, class√© UNESCO, re√ßoit plus de 2 millions de visiteurs par an.",hints:[
+  {name:"Auschwitz-Birkenau ó Pologne",lat:50.0341,lng:19.1783,desc:"Auschwitz-Birkenau fut libÈrÈ le 27 janvier 1945 par l'armÈe soviÈtique. Ce jour est devenu la JournÈe internationale de la mÈmoire des victimes de l'Holocauste. Le site, classÈ UNESCO, reÁoit plus de 2 millions de visiteurs par an.",photo:"photos/chateau_de_wawel.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Konzentrationslager Auschwitz-Birkenau, plus grand camp d'extermination nazi, 1,1 million de victimes, 1940-1945"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'Europe centrale, √† 60 km d'une grande cit√© royale, camp d'extermination"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"M√©morial du camp d'extermination nazi, class√© UNESCO, Pologne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'Europe centrale, ‡ 60 km d'une grande citÈ royale, camp d'extermination"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"MÈmorial du camp d'extermination nazi, classÈ UNESCO, Pologne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Auschwitz-Birkenau en Pologne"}
   ]},
-  {name:"Ch√¢teau de Bran ‚Äî Roumanie",lat:45.5152,lng:25.367,desc:"Le ch√¢teau de Bran fut associ√© √† Dracula par des touristes et √©diteurs anglais qui cherchaient un d√©cor r√©el pour le roman de Bram Stoker (1897). Stoker ne visita jamais la Roumanie et s'inspira uniquement de livres. Vlad l'Empaleur, le vrai prince valaque cruel, n'y s√©journa probablement que tr√®s bri√®vement.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Castelul Bran, forteresse teutonique de 1382 sur un rocher, associ√©e √† la l√©gende de Dracula de Bram Stoker"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'un col des Carpates entre deux r√©gions historiques d'Europe de l'Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau de Dracula dans les Carpates, Transylvanie, Roumanie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Bran en Roumanie"}
+  {name:"Ch‚teau de Bran ó Roumanie",lat:45.5152,lng:25.367,desc:"Le ch‚teau de Bran fut associÈ ‡ Dracula par des touristes et Èditeurs anglais qui cherchaient un dÈcor rÈel pour le roman de Bram Stoker (1897). Stoker ne visita jamais la Roumanie et s'inspira uniquement de livres. Vlad l'Empaleur, le vrai prince valaque cruel, n'y sÈjourna probablement que trËs briËvement.",photo:"photos/chateau_de_bran.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Castelul Bran, forteresse teutonique de 1382 sur un rocher, associÈe ‡ la lÈgende de Dracula de Bram Stoker"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'un col des Carpates entre deux rÈgions historiques d'Europe de l'Est"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau de Dracula dans les Carpates, Transylvanie, Roumanie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Bran en Roumanie"}
   ]},
-  {name:"Lavra de Kiev ‚Äî Ukraine",lat:50.4347,lng:30.5578,desc:"La Laure de Kiev-Petchersk, fond√©e en 1051, est le plus ancien monast√®re de la Russie ki√©vienne. Ses catacombes abritent les corps momifi√©s naturellement de moines m√©di√©vaux ‚Äî une attraction macabre vieille de neuf si√®cles. Elle fut inscrite au patrimoine mondial de l'UNESCO en 1990.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kyevo-Pechersk? Lavra, monast√®re orthodoxe fond√© en 1051, catacombes avec momies de saints, colline du Dniepr"},
+  {name:"Lavra de Kiev ó Ukraine",lat:50.4347,lng:30.5578,desc:"La Laure de Kiev-Petchersk, fondÈe en 1051, est le plus ancien monastËre de la Russie kiÈvienne. Ses catacombes abritent les corps momifiÈs naturellement de moines mÈdiÈvaux ó une attraction macabre vieille de neuf siËcles. Elle fut inscrite au patrimoine mondial de l'UNESCO en 1990.",photo:"photos/lavra_de_kiev.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kyevo-Pechersk? Lavra, monastËre orthodoxe fondÈ en 1051, catacombes avec momies de saints, colline du Dniepr"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive droite d'un grand fleuve d'Europe orientale, quartier des grottes monastiques"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monast√®re des Grottes, haut lieu de l'orthodoxie slave, Kiev"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"MonastËre des Grottes, haut lieu de l'orthodoxie slave, Kiev"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lavra de Kiev en Ukraine"}
   ]},
-  {name:"Cliffs of Moher ‚Äî Irlande",lat:52.9715,lng:-9.4309,desc:"Les falaises de Moher servirent de d√©cor dans Harry Potter et les Reliques de la Mort. Elles sont habit√©es par 30 000 oiseaux de mer de 20 esp√®ces diff√©rentes, dont des macareux qui creusent leurs terriers dans le sommet herbeux des falaises.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Falaises de 214 m de hauteur sur 8 km de long, √¢ge de 320 millions d'ann√©es, comt√© de Clare, c√¥te atlantique"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"C√¥te ouest d'une √Æle de l'Atlantique nord, falaises vertigineuses de 200m"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Falaises spectaculaires de l'Atlantique, embl√®me de l'Irlande"},
+  {name:"Cliffs of Moher ó Irlande",lat:52.9715,lng:-9.4309,desc:"Les falaises de Moher servirent de dÈcor dans Harry Potter et les Reliques de la Mort. Elles sont habitÈes par 30 000 oiseaux de mer de 20 espËces diffÈrentes, dont des macareux qui creusent leurs terriers dans le sommet herbeux des falaises.",photo:"photos/cliffs_of_moher.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Falaises de 214 m de hauteur sur 8 km de long, ‚ge de 320 millions d'annÈes, comtÈ de Clare, cÙte atlantique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"CÙte ouest d'une Óle de l'Atlantique nord, falaises vertigineuses de 200m"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Falaises spectaculaires de l'Atlantique, emblËme de l'Irlande"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cliffs of Moher en Irlande"}
   ]},
-  {name:"Ch√¢teau de Blarney ‚Äî Irlande",lat:51.9293,lng:-8.5718,desc:"La Pierre d'√âloquence du ch√¢teau de Blarney, encastr√©e sous le parapet √† 25 m√®tres de hauteur, s'embrasse en se penchant en arri√®re. Selon la l√©gende, qui l'embrasse re√ßoit le don de flattery ‚Äî l'art de parler avec charme et conviction. Winston Churchill et Mick Jagger l'auraient embrass√©e.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Blarney Castle, tour m√©di√©vale de 1446, Pierre d'√âloquence (Blarney Stone) au sommet, comt√© de Cork"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Village √† 8 km d'une grande ville portuaire, ch√¢teau m√©di√©val et sa pierre l√©gendaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau de la Pierre d'√âloquence, pr√®s de Cork, Irlande"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Blarney en Irlande"}
+  {name:"Ch‚teau de Blarney ó Irlande",lat:51.9293,lng:-8.5718,desc:"La Pierre d'…loquence du ch‚teau de Blarney, encastrÈe sous le parapet ‡ 25 mËtres de hauteur, s'embrasse en se penchant en arriËre. Selon la lÈgende, qui l'embrasse reÁoit le don de flattery ó l'art de parler avec charme et conviction. Winston Churchill et Mick Jagger l'auraient embrassÈe.",photo:"photos/chateau_de_blarney.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Blarney Castle, tour mÈdiÈvale de 1446, Pierre d'…loquence (Blarney Stone) au sommet, comtÈ de Cork"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Village ‡ 8 km d'une grande ville portuaire, ch‚teau mÈdiÈval et sa pierre lÈgendaire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau de la Pierre d'…loquence, prËs de Cork, Irlande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Blarney en Irlande"}
   ]},
-  {name:"Cath√©drale de Cologne ‚Äî Allemagne",lat:50.9413,lng:6.9583,desc:"La cath√©drale de Cologne fut construite sur 632 ans (1248-1880) ‚Äî la plus longue construction cath√©drale gothique de l'Histoire. Ses fl√®ches jumelles de 157 m√®tres furent le b√¢timent le plus haut du monde de 1880 √† 1884. Elle abrite les reliques suppos√©es des Rois Mages, apport√©es de Milan en 1164 ‚Äî ce qui en fit le plus grand p√®lerinage m√©di√©val du nord de l'Europe.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"K√∂lner Dom, construction entam√©e en 1248, achev√©e en 1880, 157m de hauteur, abritant les reliques des Rois Mages"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord du Rhin, face au pont Hohenzollern, centre de Cologne, Rh√©nanie-du-Nord-Westphalie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale gothique de Cologne, 2e monument le plus visit√© d'Allemagne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cath√©drale de Cologne en Allemagne"}
+  {name:"CathÈdrale de Cologne ó Allemagne",lat:50.9413,lng:6.9583,desc:"La cathÈdrale de Cologne fut construite sur 632 ans (1248-1880) ó la plus longue construction cathÈdrale gothique de l'Histoire. Ses flËches jumelles de 157 mËtres furent le b‚timent le plus haut du monde de 1880 ‡ 1884. Elle abrite les reliques supposÈes des Rois Mages, apportÈes de Milan en 1164 ó ce qui en fit le plus grand pËlerinage mÈdiÈval du nord de l'Europe.",photo:"photos/cathedrale_de_cologne.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kˆlner Dom, construction entamÈe en 1248, achevÈe en 1880, 157m de hauteur, abritant les reliques des Rois Mages"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord du Rhin, face au pont Hohenzollern, centre de Cologne, RhÈnanie-du-Nord-Westphalie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CathÈdrale gothique de Cologne, 2e monument le plus visitÈ d'Allemagne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La CathÈdrale de Cologne en Allemagne"}
   ]},
-  {name:"For√™t-Noire ‚Äî Bade-Wurtemberg, Allemagne",lat:47.999,lng:8.227,desc:"La For√™t-Noire est le berceau de la coucou-horloge et du g√¢teau For√™t-Noire. Ses for√™ts d'√©pic√©as inspir√®rent les fr√®res Grimm pour Blanche-Neige, Hansel et Gretel. La Schwarzwaldbahn, ligne de chemin de fer inaugur√©e en 1873, traverse 37 tunnels et 163 viaducs dans un paysage de conte de f√©es.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Schwarzwald, massif hercynien de 160km de long, source du Danube √† Donaueschingen, horlogerie coucou, Triberg"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bade-Wurtemberg, entre le Rhin et le plateau souabe, massif forestier c√©l√®bre"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Massif forestier embl√©matique, g√¢teaux et coucous, sud-ouest de l'Allemagne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La For√™t-Noire √† Bade-Wurtemberg, Allemagne"}
+  {name:"ForÍt-Noire ó Bade-Wurtemberg, Allemagne",lat:47.999,lng:8.227,desc:"La ForÍt-Noire est le berceau de la coucou-horloge et du g‚teau ForÍt-Noire. Ses forÍts d'ÈpicÈas inspirËrent les frËres Grimm pour Blanche-Neige, Hansel et Gretel. La Schwarzwaldbahn, ligne de chemin de fer inaugurÈe en 1873, traverse 37 tunnels et 163 viaducs dans un paysage de conte de fÈes.",photo:"photos/cathedrale_de_cologne.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Schwarzwald, massif hercynien de 160km de long, source du Danube ‡ Donaueschingen, horlogerie coucou, Triberg"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bade-Wurtemberg, entre le Rhin et le plateau souabe, massif forestier cÈlËbre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Massif forestier emblÈmatique, g‚teaux et coucous, sud-ouest de l'Allemagne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La ForÍt-Noire ‡ Bade-Wurtemberg, Allemagne"}
   ]},
-  {name:"Ch√¢teau de Chillon ‚Äî Suisse",lat:46.4142,lng:6.9274,desc:"Lord Byron grava son nom sur une colonne de la prison du ch√¢teau de Chillon lors de sa visite en 1816. Il y √©crivit ensuite ¬´Le Prisonnier de Chillon¬ª, po√®me inspir√© de Fran√ßois Bonivard, emprisonn√© 4 ans dans les caves pour s'√™tre oppos√© au duc de Savoie.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch√¢teau insulaire du XIIe si√®cle sur un rocher du lac L√©man, prison de Fran√ßois Bonivard, immortalis√© par Byron"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord du lac L√©man, commune de Veytaux, canton de Vaud, entre Montreux et Villeneuve"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau m√©di√©val sur le lac L√©man, Montreux, Suisse"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Chillon au bord du lac L√©man, Suisse"}
+  {name:"Ch‚teau de Chillon ó Suisse",lat:46.4142,lng:6.9274,desc:"Lord Byron grava son nom sur une colonne de la prison du ch‚teau de Chillon lors de sa visite en 1816. Il y Ècrivit ensuite ´Le Prisonnier de Chillonª, poËme inspirÈ de FranÁois Bonivard, emprisonnÈ 4 ans dans les caves pour s'Ítre opposÈ au duc de Savoie.",photo:"photos/chateau_de_chillon.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch‚teau insulaire du XIIe siËcle sur un rocher du lac LÈman, prison de FranÁois Bonivard, immortalisÈ par Byron"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord du lac LÈman, commune de Veytaux, canton de Vaud, entre Montreux et Villeneuve"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau mÈdiÈval sur le lac LÈman, Montreux, Suisse"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Chillon au bord du lac LÈman, Suisse"}
   ]},
-  {name:"Jet d'eau ‚Äî Gen√®ve, Suisse",lat:46.2044,lng:6.1557,desc:"Le jet d'eau de Gen√®ve jaillit √† 500 litres par seconde et monte √† 140 m√®tres de hauteur. Il fut cr√©√© en 1891 pour r√©guler la pression hydraulique du r√©seau d'eau de la ville. Par vent fort, il peut doucher des passants √† plusieurs centaines de m√®tres ‚Äî les Genevois l'appellent affectueusement ¬´la grande douche¬ª.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Jet d'eau de Gen√®ve, 140 m de hauteur, d√©bit de 500 litres/seconde, vitesse de 200 km/h, inaugur√© en 1891"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rade de Gen√®ve, lac L√©man, Quai Gustave Ador, Gen√®ve"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fontaine g√©ante sur le lac L√©man, symbole de Gen√®ve, Suisse"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Jet d'eau √† Gen√®ve, Suisse"}
+  {name:"Jet d'eau ó GenËve, Suisse",lat:46.2044,lng:6.1557,desc:"Le jet d'eau de GenËve jaillit ‡ 500 litres par seconde et monte ‡ 140 mËtres de hauteur. Il fut crÈÈ en 1891 pour rÈguler la pression hydraulique du rÈseau d'eau de la ville. Par vent fort, il peut doucher des passants ‡ plusieurs centaines de mËtres ó les Genevois l'appellent affectueusement ´la grande doucheª.",photo:"photos/jet_d_eau.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Jet d'eau de GenËve, 140 m de hauteur, dÈbit de 500 litres/seconde, vitesse de 200 km/h, inaugurÈ en 1891"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rade de GenËve, lac LÈman, Quai Gustave Ador, GenËve"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fontaine gÈante sur le lac LÈman, symbole de GenËve, Suisse"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Jet d'eau ‡ GenËve, Suisse"}
   ]},
-  {name:"Lac Ba√Økal ‚Äî Sib√©rie, Russie",lat:53.5587,lng:108.165,desc:"Le lac Ba√Økal est si profond qu'on pourrait y empiler 6 tours Eiffel sans les voir d√©passer. Sa rive orientale abrite des phoques d'eau douce ‚Äî les seuls au monde ‚Äî dont l'anc√™tre aurait migr√© depuis l'Arctique il y a 20 millions d'ann√©es.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus ancien (25 Ma) et profond (1 642 m) lac du monde, 20% des r√©serves d'eau douce liquide de la plan√®te"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sib√©rie m√©ridionale, oblast d'Irkoutsk et Bouriatie, √† 66 km d'Irkoutsk"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac le plus profond du monde, Sib√©rie, Russie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac Ba√Økal √† Sib√©rie, Russie"}
+  {name:"Lac BaÔkal ó SibÈrie, Russie",lat:53.5587,lng:108.165,desc:"Le lac BaÔkal est si profond qu'on pourrait y empiler 6 tours Eiffel sans les voir dÈpasser. Sa rive orientale abrite des phoques d'eau douce ó les seuls au monde ó dont l'ancÍtre aurait migrÈ depuis l'Arctique il y a 20 millions d'annÈes.",photo:"photos/lac_baikal.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus ancien (25 Ma) et profond (1 642 m) lac du monde, 20% des rÈserves d'eau douce liquide de la planËte"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"SibÈrie mÈridionale, oblast d'Irkoutsk et Bouriatie, ‡ 66 km d'Irkoutsk"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac le plus profond du monde, SibÈrie, Russie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac BaÔkal ‡ SibÈrie, Russie"}
   ]},
-  {name:"Registan ‚Äî Samarcande, Ouzb√©kistan",lat:39.6558,lng:66.9758,desc:"La place du Registan de Samarcande est orn√©e de carreaux de c√©ramique vieux de 600 ans dont les couleurs sont aussi vives qu'au premier jour. Le secret des artisans timourides pour produire ce bleu lapis-lazuli immuable n'a jamais √©t√© totalement √©lucid√©.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Place centrale de Samarcande, trois m√©dersas timourides (Ulugh Beg 1420, Shir-Dor 1636, Tilya-Kori 1660)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre d'une ville mythique de la Route de la Soie, mosqu√©es de majolique bleue"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus belle place d'Asie centrale, trois m√©dersas dor√©es, Samarcande"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Registan √† Samarcande, Ouzb√©kistan"}
+  {name:"Registan ó Samarcande, OuzbÈkistan",lat:39.6558,lng:66.9758,desc:"La place du Registan de Samarcande est ornÈe de carreaux de cÈramique vieux de 600 ans dont les couleurs sont aussi vives qu'au premier jour. Le secret des artisans timourides pour produire ce bleu lapis-lazuli immuable n'a jamais ÈtÈ totalement ÈlucidÈ.",photo:"photos/registan.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Place centrale de Samarcande, trois mÈdersas timourides (Ulugh Beg 1420, Shir-Dor 1636, Tilya-Kori 1660)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre d'une ville mythique de la Route de la Soie, mosquÈes de majolique bleue"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus belle place d'Asie centrale, trois mÈdersas dorÈes, Samarcande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Registan ‡ Samarcande, OuzbÈkistan"}
   ]},
-  {name:"Palais de Topkapi ‚Äî Istanbul, Turquie",lat:41.0115,lng:28.9833,desc:"Le palais de Topkapi fut le centre de l'Empire ottoman pendant 400 ans. Son Harem abritait jusqu'√† 600 femmes et eunuques. Le palais conserve les reliques les plus sacr√©es de l'Islam : le manteau et l'√©p√©e du proph√®te Mahomet, ainsi qu'une dent et un cheveu lui appartenant selon la tradition.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Topkap? Saray?, r√©sidence des sultans ottomans de 1465 √† 1856, abritant le manteau du proph√®te et 86 carats du Diamant du Spoonmak"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pointe du S√©rail, p√©ninsule historique, entre la Corne d'Or et le Bosphore"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais des sultans ottomans, tr√©sor imp√©rial, Istanbul"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Topkapi √† Istanbul, Turquie"}
+  {name:"Palais de Topkapi ó Istanbul, Turquie",lat:41.0115,lng:28.9833,desc:"Le palais de Topkapi fut le centre de l'Empire ottoman pendant 400 ans. Son Harem abritait jusqu'‡ 600 femmes et eunuques. Le palais conserve les reliques les plus sacrÈes de l'Islam : le manteau et l'ÈpÈe du prophËte Mahomet, ainsi qu'une dent et un cheveu lui appartenant selon la tradition.",photo:"photos/palais_de_topkapi.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Topkap? Saray?, rÈsidence des sultans ottomans de 1465 ‡ 1856, abritant le manteau du prophËte et 86 carats du Diamant du Spoonmak"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pointe du SÈrail, pÈninsule historique, entre la Corne d'Or et le Bosphore"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais des sultans ottomans, trÈsor impÈrial, Istanbul"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Topkapi ‡ Istanbul, Turquie"}
   ]},
-  {name:"Pamukkale ‚Äî Turquie",lat:37.92,lng:29.12,desc:"Pamukkale ‚Äî ¬´ch√¢teau de coton¬ª en turc ‚Äî est un site naturel unique : des sources thermales √† 35¬∞C charg√©es de carbonate de calcium ont cr√©√© des terrasses et cascades de travertin blanc sur 2 700 m√®tres. La cit√© antique d'Hi√©rapolis construite au-dessus comptait 100 000 habitants √† son apog√©e romaine.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch√¢teau de coton, terrasses calcaires blanches form√©es par des sources thermales √† 35¬∞C riches en carbonate de calcium, Hi√©rapolis"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Denizli, vall√©e du B√ºy√ºk Menderes, Anatolie occidentale"},
+  {name:"Pamukkale ó Turquie",lat:37.92,lng:29.12,desc:"Pamukkale ó ´ch‚teau de cotonª en turc ó est un site naturel unique : des sources thermales ‡ 35∞C chargÈes de carbonate de calcium ont crÈÈ des terrasses et cascades de travertin blanc sur 2 700 mËtres. La citÈ antique d'HiÈrapolis construite au-dessus comptait 100 000 habitants ‡ son apogÈe romaine.",photo:"photos/pamukkale.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch‚teau de coton, terrasses calcaires blanches formÈes par des sources thermales ‡ 35∞C riches en carbonate de calcium, HiÈrapolis"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Denizli, vallÈe du B¸y¸k Menderes, Anatolie occidentale"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Terrasses de travertin blanc et bassins thermaux, merveille naturelle de Turquie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pamukkale en Turquie"}
   ]},
-  {name:"Bagan ‚Äî Myanmar",lat:21.1717,lng:94.8585,desc:"Les temples de Bagan sont peints de fresques repr√©sentant la vie du Bouddha. Apr√®s le tremblement de terre de 1975, des restaurations controvers√©es utilisant du b√©ton et des briques modernes furent critiqu√©es par les arch√©ologues ‚Äî Bagan ne peut pas obtenir le statut UNESCO √† cause de ces restaurations.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plaine de plus de 2 000 temples bouddhistes et st√ªpas, ancienne capitale du Royaume de Pagan (849-1297 ap. J.-C.)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord de l'Irrawaddy, zone s√®che centrale d'un pays d'Asie du Sud-Est"},
+  {name:"Bagan ó Myanmar",lat:21.1717,lng:94.8585,desc:"Les temples de Bagan sont peints de fresques reprÈsentant la vie du Bouddha. AprËs le tremblement de terre de 1975, des restaurations controversÈes utilisant du bÈton et des briques modernes furent critiquÈes par les archÈologues ó Bagan ne peut pas obtenir le statut UNESCO ‡ cause de ces restaurations.",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plaine de plus de 2 000 temples bouddhistes et st˚pas, ancienne capitale du Royaume de Pagan (849-1297 ap. J.-C.)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord de l'Irrawaddy, zone sËche centrale d'un pays d'Asie du Sud-Est"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plaine aux milliers de temples bouddhistes, Myanmar (Birmanie)"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bagan au Myanmar"}
   ]},
-  {name:"Ha Long Bay ‚Äî Vietnam",lat:20.9101,lng:107.1839,desc:"La baie d'Ha Long compte 1 969 √Ælots calcaires form√©s il y a 500 millions d'ann√©es. Selon la l√©gende vietnamienne, un dragon descendit du ciel en battant de la queue, ses coups cr√©ant les vall√©es et les baies. La baie abriterait aussi des grottes marines habit√©es par des villages flottants de p√™cheurs.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"2 000 √Ælots et pitons calcaires karstiques sur 1 553 km¬≤, grotte de Hang ??u G?, province de Qu?ng Ninh"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Golfe d'une mer int√©rieure d'Asie du Sud-Est, baie aux 1 600 √Ælots calcaires"},
+  {name:"Ha Long Bay ó Vietnam",lat:20.9101,lng:107.1839,desc:"La baie d'Ha Long compte 1 969 Ólots calcaires formÈs il y a 500 millions d'annÈes. Selon la lÈgende vietnamienne, un dragon descendit du ciel en battant de la queue, ses coups crÈant les vallÈes et les baies. La baie abriterait aussi des grottes marines habitÈes par des villages flottants de pÍcheurs.",photo:"photos/ha_long_bay.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"2 000 Ólots et pitons calcaires karstiques sur 1 553 km≤, grotte de Hang ??u G?, province de Qu?ng Ninh"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Golfe d'une mer intÈrieure d'Asie du Sud-Est, baie aux 1 600 Ólots calcaires"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Baie aux dragons, pitons calcaires dans la mer de Chine, Vietnam"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Ha Long Bay au Vietnam"}
   ]},
-  {name:"Rizi√®res en terrasses de Banaue ‚Äî Philippines",lat:16.9176,lng:121.0583,desc:"Les rizi√®res en terrasses de Banaue dans le Cordillera furent construites il y a 2 000 ans par le peuple Ifugao sans outils en m√©tal ni plans √©crits. Sculpt√©es √† flanc de montagne sur 1 500 m√®tres d'altitude, elles forment un total de 10 000 km¬≤ ‚Äî suffisant pour ceinturer la plan√®te 2,5 fois si mises bout √† bout.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ifugao Rice Terraces, creus√©es il y a 2 000 ans par le peuple Ifugao, 10 360 km¬≤ de terrasses, montagne Cordill√®re"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province montagneuse d'une grande √Æle tropicale, terrasses de riz vieilles de 2 000 ans"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Terrasses de riz mill√©naires dans les montagnes de Lu√ßon, Philippines"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Rizi√®res en terrasses de Banaue, Philippines"}
+  {name:"RiziËres en terrasses de Banaue ó Philippines",lat:16.9176,lng:121.0583,desc:"Les riziËres en terrasses de Banaue dans le Cordillera furent construites il y a 2 000 ans par le peuple Ifugao sans outils en mÈtal ni plans Ècrits. SculptÈes ‡ flanc de montagne sur 1 500 mËtres d'altitude, elles forment un total de 10 000 km≤ ó suffisant pour ceinturer la planËte 2,5 fois si mises bout ‡ bout.",photo:"photos/rizieres_en_terrasses_de_banaue.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ifugao Rice Terraces, creusÈes il y a 2 000 ans par le peuple Ifugao, 10 360 km≤ de terrasses, montagne CordillËre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province montagneuse d'une grande Óle tropicale, terrasses de riz vieilles de 2 000 ans"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Terrasses de riz millÈnaires dans les montagnes de LuÁon, Philippines"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les RiziËres en terrasses de Banaue, Philippines"}
   ]},
-  {name:"Lac Tonl√© Sap ‚Äî Cambodge",lat:12.8679,lng:104.043,desc:"Le Tonl√© Sap est le seul lac au monde dont le fleuve change de sens deux fois par an. En saison des pluies, le M√©kong refoule ses eaux dans le lac qui quintuple de taille. En saison s√®che, le flux s'inverse et le lac se vide progressivement.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand lac d'eau douce d'Asie du Sud-Est, superficie variant de 2 500 km¬≤ (saison s√®che) √† 16 000 km¬≤ (mousson)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre du pays, grand lac aliment√© par le plus long fleuve d'Asie du Sud-Est"},
+  {name:"Lac TonlÈ Sap ó Cambodge",lat:12.8679,lng:104.043,desc:"Le TonlÈ Sap est le seul lac au monde dont le fleuve change de sens deux fois par an. En saison des pluies, le MÈkong refoule ses eaux dans le lac qui quintuple de taille. En saison sËche, le flux s'inverse et le lac se vide progressivement.",photo:"photos/lac_tonle_sapJPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand lac d'eau douce d'Asie du Sud-Est, superficie variant de 2 500 km≤ (saison sËche) ‡ 16 000 km≤ (mousson)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre du pays, grand lac alimentÈ par le plus long fleuve d'Asie du Sud-Est"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand lac d'Asie du Sud-Est, villages flottants, Cambodge"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac Tonl√© Sap au Cambodge"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac TonlÈ Sap au Cambodge"}
   ]},
-  {name:"Gunung Bromo ‚Äî Java, Indon√©sie",lat:-7.9425,lng:112.953,desc:"Le mont Bromo est un volcan actif dans une caldeira g√©ante o√π vivent encore 30 000 personnes du peuple Tengger. Chaque ann√©e lors du festival Yadnya Kasada, ils jettent des offrandes ‚Äî fleurs, riz, poules, ch√®vres ‚Äî dans le crat√®re fumant pour remercier les dieux.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Volcan actif de 2 329 m dans la caldeira de Tengger, crat√®re de 800 m de diam√®tre, brume sulfureuse permanente"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de l'est d'une grande √Æle tropicale, caldeira volcanique et mer de sable"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Volcan fumant dans une mer de sable, Java, Indon√©sie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gunung Bromo √† Java, Indon√©sie"}
+  {name:"Gunung Bromo ó Java, IndonÈsie",lat:-7.9425,lng:112.953,desc:"Le mont Bromo est un volcan actif dans une caldeira gÈante o˘ vivent encore 30 000 personnes du peuple Tengger. Chaque annÈe lors du festival Yadnya Kasada, ils jettent des offrandes ó fleurs, riz, poules, chËvres ó dans le cratËre fumant pour remercier les dieux.",photo:"photos/gunung_bromo.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Volcan actif de 2 329 m dans la caldeira de Tengger, cratËre de 800 m de diamËtre, brume sulfureuse permanente"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de l'est d'une grande Óle tropicale, caldeira volcanique et mer de sable"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Volcan fumant dans une mer de sable, Java, IndonÈsie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gunung Bromo ‡ Java, IndonÈsie"}
   ]},
-  {name:"Mrauk U ‚Äî Myanmar",lat:20.5947,lng:93.2019,desc:"Mrauk U fut la capitale du royaume d'Arakan du XVe au XVIIIe si√®cle, une des villes les plus riches d'Asie du Sud-Est. Ses 700 temples en brique, enfouis dans la jungle, sont compar√©s √† Bagan mais trois fois moins connus. Le site reste accessible uniquement par bateau sur la rivi√®re Kaladan ‚Äî son isolement le pr√©serve du tourisme de masse.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancienne capitale du royaume d'Arakan (1430-1784), temples bouddhistes sur collines, acc√®s uniquement par bateau"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√âtat c√¥tier du nord-ouest d'un pays d'Asie du Sud-Est, ancienne capitale royale sur une rivi√®re"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© arch√©ologique oubli√©e, temples sur collines, √âtat Rakhine, Myanmar"},
+  {name:"Mrauk U ó Myanmar",lat:20.5947,lng:93.2019,desc:"Mrauk U fut la capitale du royaume d'Arakan du XVe au XVIIIe siËcle, une des villes les plus riches d'Asie du Sud-Est. Ses 700 temples en brique, enfouis dans la jungle, sont comparÈs ‡ Bagan mais trois fois moins connus. Le site reste accessible uniquement par bateau sur la riviËre Kaladan ó son isolement le prÈserve du tourisme de masse.",photo:"photos/mrauk_u.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancienne capitale du royaume d'Arakan (1430-1784), temples bouddhistes sur collines, accËs uniquement par bateau"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"…tat cÙtier du nord-ouest d'un pays d'Asie du Sud-Est, ancienne capitale royale sur une riviËre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ archÈologique oubliÈe, temples sur collines, …tat Rakhine, Myanmar"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mrauk U au Myanmar"}
   ]},
-  {name:"Mosqu√©e de D√¥me des Umayyades ‚Äî Damas, Syrie",lat:33.5114,lng:36.3069,desc:"La Grande Mosqu√©e des Omeyyades de Damas est l'une des plus anciennes mosqu√©es du monde (715 ap. J.-C.). Elle fut construite sur une √©glise byzantine, elle-m√™me b√¢tie sur un temple romain √† Jupiter. Selon la tradition, la t√™te de Jean-Baptiste y est conserv√©e dans un sanctuaire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande Mosqu√©e des Omeyyades, construite par Al-Walid Ier de 706 √† 715, abritant le tombeau de Saladin et la t√™te de Jean-Baptiste"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vieille ville de la capitale historique du Proche-Orient, l'une des plus anciennes cit√©s au monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mosqu√©e des Omeyyades, joyau de l'architecture islamique, Damas"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mosqu√©e de D√¥me des Umayyades √† Damas, Syrie"}
+  {name:"MosquÈe de DÙme des Umayyades ó Damas, Syrie",lat:33.5114,lng:36.3069,desc:"La Grande MosquÈe des Omeyyades de Damas est l'une des plus anciennes mosquÈes du monde (715 ap. J.-C.). Elle fut construite sur une Èglise byzantine, elle-mÍme b‚tie sur un temple romain ‡ Jupiter. Selon la tradition, la tÍte de Jean-Baptiste y est conservÈe dans un sanctuaire.",photo:"photos/mosquee_de_dome_des_umayyades.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande MosquÈe des Omeyyades, construite par Al-Walid Ier de 706 ‡ 715, abritant le tombeau de Saladin et la tÍte de Jean-Baptiste"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vieille ville de la capitale historique du Proche-Orient, l'une des plus anciennes citÈs au monde"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"MosquÈe des Omeyyades, joyau de l'architecture islamique, Damas"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La MosquÈe de DÙme des Umayyades ‡ Damas, Syrie"}
   ]},
-  {name:"Massif de l'Alta√Ø ‚Äî Mongolie",lat:48.9,lng:89.5,desc:"Le massif de l'Alta√Ø mongol est la r√©gion natale de Gengis Khan et le berceau de la civilisation nomade des steppes. Ses montagnes abritent les aigles dor√©es dress√©es par les Kazakhs mongols pour la chasse ‚Äî une tradition de 4 000 ans perp√©tu√©e par les derniers ¬´berkutchi¬ª. Chaque automne, un festival des aigles y rassemble ces chasseurs.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kh√ºiten Peak (4 374 m), point culminant du pays, massif glaciaire aux p√©troglyphes vieux de 12 000 ans"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Bayan-√ñlgii, extr√™me ouest du pays, tripoint entre trois nations"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Massif glaciaire de l'extr√™me ouest mongol, nomades kazakhs aigliers, steppes"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Massif de l'Alta√Ø en Mongolie"}
+  {name:"Massif de l'AltaÔ ó Mongolie",lat:48.9,lng:89.5,desc:"Le massif de l'AltaÔ mongol est la rÈgion natale de Gengis Khan et le berceau de la civilisation nomade des steppes. Ses montagnes abritent les aigles dorÈes dressÈes par les Kazakhs mongols pour la chasse ó une tradition de 4 000 ans perpÈtuÈe par les derniers ´berkutchiª. Chaque automne, un festival des aigles y rassemble ces chasseurs.",photo:"photos/massif_de_l_altai.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kh¸iten Peak (4 374 m), point culminant du pays, massif glaciaire aux pÈtroglyphes vieux de 12 000 ans"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Bayan-÷lgii, extrÍme ouest du pays, tripoint entre trois nations"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Massif glaciaire de l'extrÍme ouest mongol, nomades kazakhs aigliers, steppes"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Massif de l'AltaÔ en Mongolie"}
   ]},
-  {name:"Tombouctu ‚Äî Mali",lat:16.7735,lng:3.0074,desc:"Tombouctou, surnomm√©e ¬´la ville aux 333 saints¬ª, fut au XVe si√®cle la capitale intellectuelle et spirituelle de l'Afrique avec 25 000 √©tudiants et une universit√© r√©put√©e dans tout le monde islamique. Ses 700 000 manuscrits m√©di√©vaux pr√©serv√©s dans des biblioth√®ques priv√©es repr√©sentent une archive unique de la pens√©e africaine pr√©coloniale.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© mythique du Sahel, carrefour caravanier de l'or et du sel aux XIVe-XVIe si√®cles, mosqu√©es de Djingareyber et Sankor√©"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive nord d'un grand fleuve africain, bordure sud du Sahara, cit√© caravan√®re l√©gendaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© mythique du d√©sert, capitale des manuscrits islamiques, Mali"},
+  {name:"Tombouctu ó Mali",lat:16.7735,lng:3.0074,desc:"Tombouctou, surnommÈe ´la ville aux 333 saintsª, fut au XVe siËcle la capitale intellectuelle et spirituelle de l'Afrique avec 25 000 Ètudiants et une universitÈ rÈputÈe dans tout le monde islamique. Ses 700 000 manuscrits mÈdiÈvaux prÈservÈs dans des bibliothËques privÈes reprÈsentent une archive unique de la pensÈe africaine prÈcoloniale.",photo:"photos/tombouctu.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ mythique du Sahel, carrefour caravanier de l'or et du sel aux XIVe-XVIe siËcles, mosquÈes de Djingareyber et SankorÈ"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive nord d'un grand fleuve africain, bordure sud du Sahara, citÈ caravanËre lÈgendaire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ mythique du dÈsert, capitale des manuscrits islamiques, Mali"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tombouctu au Mali"}
   ]},
-  {name:"D√©sert du Sahara ‚Äî Alg√©rie (Tassili)",lat:25.4167,lng:8.4167,desc:"Le Tassili n'Ajjer en Alg√©rie est un vaste plateau rocheux abritant 15 000 peintures et gravures rupestres r√©alis√©es entre -10 000 et -2 000 av. J.-C. Ces ≈ìuvres repr√©sentent des √©l√©phants, hippopotames et crocodiles ‚Äî preuve que le Sahara √©tait autrefois une savane verdoyante. L'UNESCO le classe double patrimoine naturel et culturel.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tassili n'Ajjer, plateau gr√©seux √† 1 800 m, 15 000 p√©troglyphes et peintures rupestres, UNESCO, Sahara central"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Profond Sahara, massif rocheux du Hoggar √† proximit√©, extr√™me sud du pays"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plateau rupestre du Tassili n'Ajjer, art rupestre pr√©historique, Alg√©rie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le D√©sert du Sahara en Alg√©rie (Tassili)"}
+  {name:"DÈsert du Sahara ó AlgÈrie (Tassili)",lat:25.4167,lng:8.4167,desc:"Le Tassili n'Ajjer en AlgÈrie est un vaste plateau rocheux abritant 15 000 peintures et gravures rupestres rÈalisÈes entre -10 000 et -2 000 av. J.-C. Ces úuvres reprÈsentent des ÈlÈphants, hippopotames et crocodiles ó preuve que le Sahara Ètait autrefois une savane verdoyante. L'UNESCO le classe double patrimoine naturel et culturel.",photo:"photos/desert_du_sahara.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tassili n'Ajjer, plateau grÈseux ‡ 1 800 m, 15 000 pÈtroglyphes et peintures rupestres, UNESCO, Sahara central"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Profond Sahara, massif rocheux du Hoggar ‡ proximitÈ, extrÍme sud du pays"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plateau rupestre du Tassili n'Ajjer, art rupestre prÈhistorique, AlgÈrie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le DÈsert du Sahara en AlgÈrie (Tassili)"}
   ]},
-  {name:"M√©dina de F√®s ‚Äî Maroc",lat:34.0633,lng:-5.0039,desc:"La m√©dina de F√®s el-Bali, fond√©e en 808, est la plus grande zone urbaine pi√©tonne au monde ‚Äî aucune voiture n'y passe. Ses 9 400 ruelles labyrinthiques peuvent faire tourner en rond m√™me les habitants. Les tanneries Chouara, actives depuis le XIe si√®cle, produisent du cuir selon des m√©thodes inchang√©es ‚Äî cuves de pigments naturels creus√©es dans la roche.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"F√®s el-Bali, fond√©e en 789 par Idriss Ier, plus grande m√©dina du monde sans v√©hicule, Universit√© Al Quaraouiyine (859)"},
+  {name:"MÈdina de FËs ó Maroc",lat:34.0633,lng:-5.0039,desc:"La mÈdina de FËs el-Bali, fondÈe en 808, est la plus grande zone urbaine piÈtonne au monde ó aucune voiture n'y passe. Ses 9 400 ruelles labyrinthiques peuvent faire tourner en rond mÍme les habitants. Les tanneries Chouara, actives depuis le XIe siËcle, produisent du cuir selon des mÈthodes inchangÈes ó cuves de pigments naturels creusÈes dans la roche.",photo:"photos/medina_de_fes.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"FËs el-Bali, fondÈe en 789 par Idriss Ier, plus grande mÈdina du monde sans vÈhicule, UniversitÈ Al Quaraouiyine (859)"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre-nord, entre le Moyen Atlas et les collines du Zerhoun"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancienne universit√© du monde, m√©dina m√©di√©vale de F√®s, Maroc"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le M√©dina de F√®s au Maroc"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancienne universitÈ du monde, mÈdina mÈdiÈvale de FËs, Maroc"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le MÈdina de FËs au Maroc"}
   ]},
-  {name:"Ch√¢teau de Gor√©e ‚Äî S√©n√©gal (Fort d'Estr√©es)",lat:14.6685,lng:-17.3991,desc:"Le Fort d'Estr√©es sur l'√Æle de Gor√©e fut construit par les Hollandais en 1659 puis captur√© par la France. L'√Æle de Gor√©e fut pendant trois si√®cles la principale plaque tournante de la traite n√©gri√®re vers les Am√©riques. La Maison des Esclaves, avec sa ¬´porte du voyage sans retour¬ª ouverte sur l'Atlantique, est devenue un m√©morial mondial.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fort d'Estr√©es construit par les Hollandais en 1650, actuellement mus√©e de la Mer, √Æle de Gor√©e"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle d'une grande baie ouest-africaine, √† 3 km du continent"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fort colonial devenu mus√©e, √Æle de Gor√©e, S√©n√©gal"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Gor√©e au S√©n√©gal (Fort d'Estr√©es)"}
+  {name:"Ch‚teau de GorÈe ó SÈnÈgal (Fort d'EstrÈes)",lat:14.6685,lng:-17.3991,desc:"Le Fort d'EstrÈes sur l'Óle de GorÈe fut construit par les Hollandais en 1659 puis capturÈ par la France. L'Óle de GorÈe fut pendant trois siËcles la principale plaque tournante de la traite nÈgriËre vers les AmÈriques. La Maison des Esclaves, avec sa ´porte du voyage sans retourª ouverte sur l'Atlantique, est devenue un mÈmorial mondial.",photo:"photos/chateau_de_goree.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fort d'EstrÈes construit par les Hollandais en 1650, actuellement musÈe de la Mer, Óle de GorÈe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle d'une grande baie ouest-africaine, ‡ 3 km du continent"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fort colonial devenu musÈe, Óle de GorÈe, SÈnÈgal"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de GorÈe au SÈnÈgal (Fort d'EstrÈes)"}
   ]},
-  {name:"Serengeti ‚Äî Tanzanie",lat:-2.3333,lng:34.8333,desc:"La Grande Migration du Serengeti est guid√©e uniquement par l'instinct collectif et la d√©tection de l'herbe fra√Æche par les gnous. Aucun animal ne ¬´dirige¬ª le mouvement ‚Äî c'est un ph√©nom√®ne d'intelligence collective qui d√©place 1,5 million d'animaux sur 1 800 km.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siringet (plaine sans fin en Maasa√Ø), 14 763 km¬≤, Grande Migration de 2 millions de gnous, z√®bres et gazelles"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nord-ouest du pays, √† la fronti√®re du grand parc voisin, Rift Valley"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande migration annuelle de 2 millions de gnous et z√®bres, vaste parc de Tanzanie"},
+  {name:"Serengeti ó Tanzanie",lat:-2.3333,lng:34.8333,desc:"La Grande Migration du Serengeti est guidÈe uniquement par l'instinct collectif et la dÈtection de l'herbe fraÓche par les gnous. Aucun animal ne ´dirigeª le mouvement ó c'est un phÈnomËne d'intelligence collective qui dÈplace 1,5 million d'animaux sur 1 800 km.",photo:"photos/chateau_de_goree.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siringet (plaine sans fin en MaasaÔ), 14 763 km≤, Grande Migration de 2 millions de gnous, zËbres et gazelles"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nord-ouest du pays, ‡ la frontiËre du grand parc voisin, Rift Valley"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande migration annuelle de 2 millions de gnous et zËbres, vaste parc de Tanzanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Serengeti en Tanzanie"}
   ]},
-  {name:"Masai Mara ‚Äî Kenya",lat:-1.5,lng:35.15,desc:"La travers√©e de la rivi√®re Mara par les gnous est l'un des spectacles naturels les plus dramatiques du monde. Des centaines d'animaux plongent dans des eaux infest√©es de crocodiles du Nil ‚Äî certains crocodiles de la Mara p√®sent plus de 700 kg et attendent les migrations depuis des d√©cennies.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"R√©serve nationale de 1 510 km¬≤, travers√©e par la Mara River, Grande Migration juillet-octobre, Triangle de Mara"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comt√© du sud-ouest du pays, grande migration animale, continuation d'un parc voisin"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"R√©serve k√©nyane c√©l√®bre pour le Big Five et la grande migration, continuation du Serengeti"},
+  {name:"Masai Mara ó Kenya",lat:-1.5,lng:35.15,desc:"La traversÈe de la riviËre Mara par les gnous est l'un des spectacles naturels les plus dramatiques du monde. Des centaines d'animaux plongent dans des eaux infestÈes de crocodiles du Nil ó certains crocodiles de la Mara pËsent plus de 700 kg et attendent les migrations depuis des dÈcennies.",photo:"https://upload.wikimedia.org/wikipedia/commons/1/17/Masai_Mara_at_Sunset.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"RÈserve nationale de 1 510 km≤, traversÈe par la Mara River, Grande Migration juillet-octobre, Triangle de Mara"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ComtÈ du sud-ouest du pays, grande migration animale, continuation d'un parc voisin"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"RÈserve kÈnyane cÈlËbre pour le Big Five et la grande migration, continuation du Serengeti"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Masai Mara au Kenya"}
   ]},
-  {name:"Chutes de Kalandula ‚Äî Angola",lat:-9.0667,lng:15.95,desc:"Les chutes de Kalandula en Angola sont les deuxi√®mes plus grandes d'Afrique par leur d√©bit. Tombant de 105 m√®tres sur une largeur de 400 m√®tres, elles cr√©ent une brume permanente qui maintient une v√©g√©tation tropicale luxuriante dans un rayon d'un kilom√®tre.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Duque de Bragan√ßa, 105 m de hauteur sur 400 m de large, rivi√®re Lucala, 2e plus grandes chutes d'Afrique"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau de l'int√©rieur d'un pays d'Afrique centrale-ouest, chutes dans la savane"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Deuxi√®mes plus grandes chutes d'Afrique, province de Malanje, Angola"},
+  {name:"Chutes de Kalandula ó Angola",lat:-9.0667,lng:15.95,desc:"Les chutes de Kalandula en Angola sont les deuxiËmes plus grandes d'Afrique par leur dÈbit. Tombant de 105 mËtres sur une largeur de 400 mËtres, elles crÈent une brume permanente qui maintient une vÈgÈtation tropicale luxuriante dans un rayon d'un kilomËtre.",photo:"photos/chutes_de_kalandula.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Duque de BraganÁa, 105 m de hauteur sur 400 m de large, riviËre Lucala, 2e plus grandes chutes d'Afrique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau de l'intÈrieur d'un pays d'Afrique centrale-ouest, chutes dans la savane"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"DeuxiËmes plus grandes chutes d'Afrique, province de Malanje, Angola"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes de Kalandula en Angola"}
   ]},
-  {name:"Grand Zimbabwe ‚Äî Zimbabwe",lat:-20.2667,lng:30.9333,desc:"Le Grand Zimbabwe, dont le nom signifie ¬´maison de pierre¬ª en shona, est le plus grand complexe de ruines d'Afrique subsaharienne hors √âgypte. Ses murs de 11 m√®tres de haut furent construits sans mortier avec une pr√©cision stup√©fiante. Il donna son nom au pays lors de l'ind√©pendance en 1980.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale d'un empire m√©di√©val d'Afrique australe (XIe-XVe si√®cles), enceinte elliptique de 244m sans mortier"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province du centre d'un pays d'Afrique australe, ruines d'une cit√© royale m√©di√©vale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines de la capitale m√©di√©vale du Zimbabwe, plus grand site en pierre d'Afrique subsaharienne"},
+  {name:"Grand Zimbabwe ó Zimbabwe",lat:-20.2667,lng:30.9333,desc:"Le Grand Zimbabwe, dont le nom signifie ´maison de pierreª en shona, est le plus grand complexe de ruines d'Afrique subsaharienne hors …gypte. Ses murs de 11 mËtres de haut furent construits sans mortier avec une prÈcision stupÈfiante. Il donna son nom au pays lors de l'indÈpendance en 1980.",photo:"photos/grand_zimbabwe.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale d'un empire mÈdiÈval d'Afrique australe (XIe-XVe siËcles), enceinte elliptique de 244m sans mortier"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province du centre d'un pays d'Afrique australe, ruines d'une citÈ royale mÈdiÈvale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines de la capitale mÈdiÈvale du Zimbabwe, plus grand site en pierre d'Afrique subsaharienne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grand Zimbabwe au Zimbabwe"}
   ]},
-  {name:"Vall√©e des Rois ‚Äî Louxor, √âgypte",lat:25.7402,lng:32.6014,desc:"Tout√¢nkhamon est le seul pharaon de la Vall√©e des Rois √† avoir eu sa tombe retrouv√©e quasi intacte. Howard Carter l'ouvrit en 1922 apr√®s 10 ans de fouilles. La mal√©diction qui aurait frapp√© les fouilleurs est aujourd'hui attribu√©e √† des moisissures ou des spores pathog√®nes conserv√©es dans l'air confin√©.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wadi el-Muluk, n√©cropole royale de la Nouvelle √âgypte (1550-1070 av. J.-C.), 63 tombes dont celle de Tout√¢nkhamon (KV62)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive ouest du Nil, face √† Louxor (Th√®bes), haute √âgypte, collines de Deir el-Bahari"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"N√©cropole des pharaons, tombes de Tout√¢nkhamon et Rams√®s II, Louxor"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Vall√©e des Rois √† Louxor, √âgypte"}
+  {name:"VallÈe des Rois ó Louxor, …gypte",lat:25.7402,lng:32.6014,desc:"Tout‚nkhamon est le seul pharaon de la VallÈe des Rois ‡ avoir eu sa tombe retrouvÈe quasi intacte. Howard Carter l'ouvrit en 1922 aprËs 10 ans de fouilles. La malÈdiction qui aurait frappÈ les fouilleurs est aujourd'hui attribuÈe ‡ des moisissures ou des spores pathogËnes conservÈes dans l'air confinÈ.",photo:"photos/vallee_des_rois.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wadi el-Muluk, nÈcropole royale de la Nouvelle …gypte (1550-1070 av. J.-C.), 63 tombes dont celle de Tout‚nkhamon (KV62)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive ouest du Nil, face ‡ Louxor (ThËbes), haute …gypte, collines de Deir el-Bahari"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"NÈcropole des pharaons, tombes de Tout‚nkhamon et RamsËs II, Louxor"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La VallÈe des Rois ‡ Louxor, …gypte"}
   ]},
-  {name:"Yellowknife ‚Äî Territoires du Nord-Ouest, Canada",lat:62.454,lng:-114.3718,desc:"Yellowknife est la meilleure ville au monde pour observer les aurores bor√©ales, avec 240 nuits d'aurores par an. Sa latitude (62¬∞N) la place exactement sous ¬´l'ovale auroral¬ª ‚Äî la zone maximale d'activit√© magn√©tique. Les aurores y sont visibles √† l'≈ìil nu d√®s la tomb√©e de la nuit en automne et hiver.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale des Territoires du Nord-Ouest, meilleur endroit au monde pour observer l'aurore bor√©ale, bord du Grand Lac des Esclaves"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord d'un grand lac arctique, 62¬∞ de latitude Nord, r√©gion subarctique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Capitale des Territoires du Nord-Ouest, aurores bor√©ales, Grand Nord canadien"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Yellowknife √† Territoires du Nord-Ouest, Canada"}
+  {name:"Yellowknife ó Territoires du Nord-Ouest, Canada",lat:62.454,lng:-114.3718,desc:"Yellowknife est la meilleure ville au monde pour observer les aurores borÈales, avec 240 nuits d'aurores par an. Sa latitude (62∞N) la place exactement sous ´l'ovale auroralª ó la zone maximale d'activitÈ magnÈtique. Les aurores y sont visibles ‡ l'úil nu dËs la tombÈe de la nuit en automne et hiver.",photo:"photos/yellowknife.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale des Territoires du Nord-Ouest, meilleur endroit au monde pour observer l'aurore borÈale, bord du Grand Lac des Esclaves"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord d'un grand lac arctique, 62∞ de latitude Nord, rÈgion subarctique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Capitale des Territoires du Nord-Ouest, aurores borÈales, Grand Nord canadien"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Yellowknife ‡ Territoires du Nord-Ouest, Canada"}
   ]},
-  {name:"Queb√©c ‚Äî Canada",lat:46.8139,lng:-71.208,desc:"La ville de Qu√©bec est la seule ville fortifi√©e au nord du Mexique en Am√©rique du Nord. Ses remparts du XVIIe si√®cle, longs de 4,6 km, sont encore parfaitement conserv√©s. Le ch√¢teau Frontenac, h√¥tel le plus photographi√© au monde selon Guinness, domine le cap Diamant depuis 1893.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch√¢teau Frontenac, h√¥tel inaugur√© en 1893 par la Compagnie du Chemin de fer du Pacifique Canadien, Haute-Ville de Qu√©bec"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Haute-Ville de Qu√©bec, cap Diamant, bord du fleuve Saint-Laurent, Province de Qu√©bec"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau Frontenac dominant la seule ville fortifi√©e d'Am√©rique du Nord, Qu√©bec"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La ville de Qu√©bec, Canada"}
+  {name:"QuebÈc ó Canada",lat:46.8139,lng:-71.208,desc:"La ville de QuÈbec est la seule ville fortifiÈe au nord du Mexique en AmÈrique du Nord. Ses remparts du XVIIe siËcle, longs de 4,6 km, sont encore parfaitement conservÈs. Le ch‚teau Frontenac, hÙtel le plus photographiÈ au monde selon Guinness, domine le cap Diamant depuis 1893.",photo:"photos/quebec.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch‚teau Frontenac, hÙtel inaugurÈ en 1893 par la Compagnie du Chemin de fer du Pacifique Canadien, Haute-Ville de QuÈbec"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Haute-Ville de QuÈbec, cap Diamant, bord du fleuve Saint-Laurent, Province de QuÈbec"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau Frontenac dominant la seule ville fortifiÈe d'AmÈrique du Nord, QuÈbec"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La ville de QuÈbec, Canada"}
   ]},
-  {name:"Parc Banff ‚Äî Alberta, Canada",lat:51.4968,lng:-115.9281,desc:"Le parc national de Banff est le plus ancien du Canada, fond√© en 1885 apr√®s la d√©couverte de sources thermales. Son lac Louise, aliment√© par la fonte du glacier Victoria, est d'un turquoise si intense qu'il para√Æt artificiel. Le Ch√¢teau Lake Louise, construit par les Chemins de fer canadiens en 1890, en fit l'endroit le plus romantique du Canada.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Premier parc national de la r√©gion (1885), Lac Louise aux eaux turquoise, Champ de glace Columbia, Rocheuses"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rocheuses canadiennes, Alberta, √† 130 km √† l'ouest de Calgary"},
+  {name:"Parc Banff ó Alberta, Canada",lat:51.4968,lng:-115.9281,desc:"Le parc national de Banff est le plus ancien du Canada, fondÈ en 1885 aprËs la dÈcouverte de sources thermales. Son lac Louise, alimentÈ par la fonte du glacier Victoria, est d'un turquoise si intense qu'il paraÓt artificiel. Le Ch‚teau Lake Louise, construit par les Chemins de fer canadiens en 1890, en fit l'endroit le plus romantique du Canada.",photo:"photos/parc_banff.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Premier parc national de la rÈgion (1885), Lac Louise aux eaux turquoise, Champ de glace Columbia, Rocheuses"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rocheuses canadiennes, Alberta, ‡ 130 km ‡ l'ouest de Calgary"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac Louise et Rocheuses canadiennes, parc national de Banff, Alberta"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc Banff √† Alberta, Canada"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc Banff ‡ Alberta, Canada"}
   ]},
-  {name:"Monument Valley ‚Äî Arizona/Utah, USA",lat:36.9991,lng:-110.0985,desc:"Monument Valley est la propri√©t√© priv√©e de la Nation Navajo qui en contr√¥le strictement le tourisme. Les formations rocheuses rouges, appel√©es ¬´buttes¬ª, sont si embl√©matiques de l'Ouest am√©ricain qu'elles ont servi de d√©cor √† des dizaines de westerns de John Ford.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Navajo Tribal Park, mesas et buttes de gr√®s rouge de la Formation Cutler, The Mittens, John Ford Point"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fronti√®re Arizona-Utah, Nation Navajo, Colorado Plateau"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage de l'Ouest am√©ricain aux mesas rouges, westerns de John Ford"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Monument Valley √† Arizona/Utah, USA"}
+  {name:"Monument Valley ó Arizona/Utah, USA",lat:36.9991,lng:-110.0985,desc:"Monument Valley est la propriÈtÈ privÈe de la Nation Navajo qui en contrÙle strictement le tourisme. Les formations rocheuses rouges, appelÈes ´buttesª, sont si emblÈmatiques de l'Ouest amÈricain qu'elles ont servi de dÈcor ‡ des dizaines de westerns de John Ford.",photo:"photos/parc_banff.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Navajo Tribal Park, mesas et buttes de grËs rouge de la Formation Cutler, The Mittens, John Ford Point"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"FrontiËre Arizona-Utah, Nation Navajo, Colorado Plateau"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage de l'Ouest amÈricain aux mesas rouges, westerns de John Ford"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Monument Valley ‡ Arizona/Utah, USA"}
   ]},
-  {name:"Antelope Canyon ‚Äî Arizona, USA",lat:36.8619,lng:-111.3743,desc:"Antelope Canyon est un ¬´slot canyon¬ª cr√©√© par des mill√©naires d'√©rosion par les crues soudaines. Des rais de lumi√®re p√©n√®trent par l'ouverture en √©t√© et cr√©ent des ¬´colonnes de lumi√®re¬ª dans la poussi√®re ‚Äî parmi les photographies les plus reproduites au monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Slot canyon en gr√®s navajo creus√© par l'√©rosion √©olienne et les crues √©clairs, r√©servation Navajo, Page, Arizona"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©servation Navajo, ville de Page, nord de l'Arizona, bord du Lake Powell"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyon aux vagues de gr√®s orange, canyon-fente le plus photographi√© du monde, Arizona"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Antelope Canyon √† Arizona, USA"}
+  {name:"Antelope Canyon ó Arizona, USA",lat:36.8619,lng:-111.3743,desc:"Antelope Canyon est un ´slot canyonª crÈÈ par des millÈnaires d'Èrosion par les crues soudaines. Des rais de lumiËre pÈnËtrent par l'ouverture en ÈtÈ et crÈent des ´colonnes de lumiËreª dans la poussiËre ó parmi les photographies les plus reproduites au monde.",photo:"https://upload.wikimedia.org/wikipedia/commons/b/b5/USA_Antelope-Canyon.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Slot canyon en grËs navajo creusÈ par l'Èrosion Èolienne et les crues Èclairs, rÈservation Navajo, Page, Arizona"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈservation Navajo, ville de Page, nord de l'Arizona, bord du Lake Powell"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyon aux vagues de grËs orange, canyon-fente le plus photographiÈ du monde, Arizona"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Antelope Canyon ‡ Arizona, USA"}
   ]},
-  {name:"Parc de Yellowstone ‚Äî USA (Grand Prismatic)",lat:44.5248,lng:-110.8381,desc:"Le Grand Prismatic Spring de Yellowstone est la plus grande source chaude des √âtats-Unis et la troisi√®me du monde. Ses anneaux color√©s (bleu, vert, jaune, orange, rouge) r√©sultent de diff√©rentes esp√®ces de bact√©ries adapt√©es √† des temp√©ratures pr√©cises, de 93¬∞C au centre √† 50¬∞C sur les bords.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grand Prismatic Spring, plus grande source thermale du parc (91m de diam√®tre), couleurs dues aux bact√©ries thermophiles"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Midway Geyser Basin, Firehole River, Wyoming, parc national de Yellowstone"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Source thermale aux couleurs arc-en-ciel, parc Yellowstone, Wyoming"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc de Yellowstone en USA (Grand Prismatic)"}
+    {name:"Ligne Nazc? ó PÈrou",lat:-14.739,lng:-75.13,desc:"Les lignes de Nazca furent crÈÈes en Ùtant les pierres sombres du dÈsert pour rÈvÈler le sable clair en dessous. Elles couvrent 450 km≤ et reprÈsentent 70 animaux et plantes, 300 figures gÈomÈtriques. Maria Reiche consacra 50 ans de sa vie ‡ les Ètudier, vivant seule dans le dÈsert pour les protÈger.",photo:"photos/ligne_nazc.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"GÈoglyphes tracÈs par la culture Nazca entre 500 av. J.-C. et 500 ap. J.-C., colibri (96m), singe (55m), visible uniquement d'avio"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pampas de Jumana, plaine aride d'un dÈsert cÙtier andin, gÈoglyphes de 200-800 m"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"GÈoglyphes mystÈrieux tracÈs dans le dÈsert, UNESCO, PÈrou"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ligne Nazc? au PÈrou"}
   ]},
-  {name:"Ligne Nazc? ‚Äî P√©rou",lat:-14.739,lng:-75.13,desc:"Les lignes de Nazca furent cr√©√©es en √¥tant les pierres sombres du d√©sert pour r√©v√©ler le sable clair en dessous. Elles couvrent 450 km¬≤ et repr√©sentent 70 animaux et plantes, 300 figures g√©om√©triques. Maria Reiche consacra 50 ans de sa vie √† les √©tudier, vivant seule dans le d√©sert pour les prot√©ger.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"G√©oglyphes trac√©s par la culture Nazca entre 500 av. J.-C. et 500 ap. J.-C., colibri (96m), singe (55m), visible uniquement d'avio"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pampas de Jumana, plaine aride d'un d√©sert c√¥tier andin, g√©oglyphes de 200-800 m"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"G√©oglyphes myst√©rieux trac√©s dans le d√©sert, UNESCO, P√©rou"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ligne Nazc? au P√©rou"}
-  ]},
-  {name:"Galeries d'art de Buenos Aires ‚Äî Argentine",lat:-34.6037,lng:-58.3816,desc:"Buenos Aires est la capitale culturelle d'Am√©rique du Sud, avec plus de librairies par habitant que toute autre ville du monde. Son quartier de San Telmo, avec ses march√©s aux puces et ses galeries d'art, est le centre de la sc√®ne artistique d'Argentine. La ville abrite aussi le plus grand op√©ra d'Am√©rique latine.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"La Boca, Caminito, ruelles color√©es peintes en t√¥le ondul√©e, berceau du tango et quartier des immigr√©s italiens"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier color√© d'une grande capitale sud-am√©ricaine, bord d'un canal portuaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Caminito, ruelle aux maisons color√©es, berceau du tango, Buenos Aires"},
+  {name:"Galeries d'art de Buenos Aires ó Argentine",lat:-34.6037,lng:-58.3816,desc:"Buenos Aires est la capitale culturelle d'AmÈrique du Sud, avec plus de librairies par habitant que toute autre ville du monde. Son quartier de San Telmo, avec ses marchÈs aux puces et ses galeries d'art, est le centre de la scËne artistique d'Argentine. La ville abrite aussi le plus grand opÈra d'AmÈrique latine.",photo:"photos/galeries_d_art_de_buenos_aires.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"La Boca, Caminito, ruelles colorÈes peintes en tÙle ondulÈe, berceau du tango et quartier des immigrÈs italiens"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier colorÈ d'une grande capitale sud-amÈricaine, bord d'un canal portuaire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Caminito, ruelle aux maisons colorÈes, berceau du tango, Buenos Aires"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Galeries d'art de Buenos Aires en Argentine"}
   ]},
-  {name:"Carnaval de Rio ‚Äî Sambodrome, Br√©sil",lat:-22.9122,lng:-43.1971,desc:"Le Carnaval de Rio est le plus grand du monde avec 2 millions de personnes par jour dans les rues. Le Samb√≥dromo, con√ßu par Oscar Niemeyer en 1984, peut accueillir 90 000 spectateurs. Les √©coles de samba travaillent toute l'ann√©e sur leurs chars et costumes ‚Äî un budget annuel de plusieurs millions de dollars chacune.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Samb√≥dromo Marqu√™s de Sapuca√≠, con√ßu par Oscar Niemeyer (1984), 700m de piste, 90 000 spectateurs, Marqu√™s de Sapuca√≠"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier central de la Cidade Maravilhosa, avenue c√©l√®bre du carnaval"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sambodrome au d√©fil√© des √©coles de samba, plus grand carnaval du monde, Rio de Janeiro"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Carnaval de Rio √† Sambodrome, Br√©sil"}
+  {name:"Carnaval de Rio ó Sambodrome, BrÈsil",lat:-22.9122,lng:-43.1971,desc:"Le Carnaval de Rio est le plus grand du monde avec 2 millions de personnes par jour dans les rues. Le SambÛdromo, conÁu par Oscar Niemeyer en 1984, peut accueillir 90 000 spectateurs. Les Ècoles de samba travaillent toute l'annÈe sur leurs chars et costumes ó un budget annuel de plusieurs millions de dollars chacune.",photo:"photos/carnaval_de_barranquilla.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"SambÛdromo MarquÍs de SapucaÌ, conÁu par Oscar Niemeyer (1984), 700m de piste, 90 000 spectateurs, MarquÍs de SapucaÌ"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier central de la Cidade Maravilhosa, avenue cÈlËbre du carnaval"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sambodrome au dÈfilÈ des Ècoles de samba, plus grand carnaval du monde, Rio de Janeiro"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Carnaval de Rio ‡ Sambodrome, BrÈsil"}
   ]},
-  {name:"Lac Titicaca ‚Äî Bolivie/P√©rou",lat:-15.8402,lng:-69.3329,desc:"Le lac Titicaca abrite les √Æles flottantes des Uros, construites enti√®rement en roseaux totora sur l'eau. Les habitants renouvellent constamment leur √Æle en ajoutant des couches fra√Æches par-dessus les couches en d√©composition.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus haut lac navigable du monde (3 812 m), 8 372 km¬≤, √éle du Soleil (origine inca), √Æles flottantes des Uros en totora"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Altiplano andin, lac navigable le plus haut du monde, fronti√®re entre deux pays"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haut lac navigable du monde, Altiplano, fronti√®re P√©rou-Bolivie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac Titicaca en Bolivie/P√©rou"}
+  {name:"Lac Titicaca ó Bolivie/PÈrou",lat:-15.8402,lng:-69.3329,desc:"Le lac Titicaca abrite les Óles flottantes des Uros, construites entiËrement en roseaux totora sur l'eau. Les habitants renouvellent constamment leur Óle en ajoutant des couches fraÓches par-dessus les couches en dÈcomposition.",photo:"photos/lac_titicaca.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus haut lac navigable du monde (3 812 m), 8 372 km≤, Œle du Soleil (origine inca), Óles flottantes des Uros en totora"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Altiplano andin, lac navigable le plus haut du monde, frontiËre entre deux pays"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haut lac navigable du monde, Altiplano, frontiËre PÈrou-Bolivie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac Titicaca en Bolivie/PÈrou"}
   ]},
-  {name:"Salar d'Uyuni ‚Äî Bolivie",lat:-20.1338,lng:-67.4891,desc:"Le salar d'Uyuni contient 70% des r√©serves mondiales de lithium, la mati√®re premi√®re des batteries des voitures √©lectriques. Le Belize entier se couvre d'un miroir parfait de quelques centim√®tres d'eau apr√®s les pluies.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand d√©sert de sel du monde (10 582 km¬≤), vestige du lac Minchin dess√©ch√©, 70% des r√©serves mondiales de lithium"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"D√©partement de Potos√≠, Altiplano bolivien, √† 3 656 m d'altitude"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand d√©sert de sel du monde, reflets c√©lestes, Bolivie"},
+  {name:"Salar d'Uyuni ó Bolivie",lat:-20.1338,lng:-67.4891,desc:"Le salar d'Uyuni contient 70% des rÈserves mondiales de lithium, la matiËre premiËre des batteries des voitures Èlectriques. Le Belize entier se couvre d'un miroir parfait de quelques centimËtres d'eau aprËs les pluies.",photo:"photos/salar_d_uyuni.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand dÈsert de sel du monde (10 582 km≤), vestige du lac Minchin dessÈchÈ, 70% des rÈserves mondiales de lithium"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"DÈpartement de PotosÌ, Altiplano bolivien, ‡ 3 656 m d'altitude"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand dÈsert de sel du monde, reflets cÈlestes, Bolivie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Salar d'Uyuni en Bolivie"}
   ]},
-  {name:"Orinoco ‚Äî Venezuela (Delta)",lat:8.6,lng:-61,desc:"Le delta de l'Or√©noque, le troisi√®me plus long fleuve d'Am√©rique du Sud, est habit√© par les Warao ‚Äî ¬´peuple des cano√´s¬ª ‚Äî depuis des mill√©naires. Ses 44 000 km¬≤ de for√™ts inond√©es abritent dauphins de rivi√®re, loutres g√©antes et anacondas. De grandes gisements de p√©trole ont √©t√© d√©couverts sous son lit.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Delta de l'Or√©noque, 36 000 km¬≤, 40 ca√±os navigables, peuple Warao sur pilotis, √âtat Delta Amacuro"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Delta d'un grand fleuve tropical, golfe des Cara√Øbes, labyrinthes fluviaux"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Delta de l'Or√©noque, jungle et villages sur pilotis, Venezuela"},
+  {name:"Orinoco ó Venezuela (Delta)",lat:8.6,lng:-61,desc:"Le delta de l'OrÈnoque, le troisiËme plus long fleuve d'AmÈrique du Sud, est habitÈ par les Warao ó ´peuple des canoÎsª ó depuis des millÈnaires. Ses 44 000 km≤ de forÍts inondÈes abritent dauphins de riviËre, loutres gÈantes et anacondas. De grandes gisements de pÈtrole ont ÈtÈ dÈcouverts sous son lit.",photo:"photos/salar_d_uyuni.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Delta de l'OrÈnoque, 36 000 km≤, 40 caÒos navigables, peuple Warao sur pilotis, …tat Delta Amacuro"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Delta d'un grand fleuve tropical, golfe des CaraÔbes, labyrinthes fluviaux"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Delta de l'OrÈnoque, jungle et villages sur pilotis, Venezuela"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Orinoco au Venezuela (Delta)"}
   ]},
-  {name:"Daintree Rainforest ‚Äî Queensland, Australie",lat:-16.17,lng:145.418,desc:"La for√™t de Daintree est plus ancienne de 10 fois que la for√™t amazonienne. Ses esp√®ces v√©g√©tales primitives ‚Äî foug√®res arborescentes, platanes primitifs, Idiospermum ‚Äî n'ont pas chang√© depuis l'√®re des dinosaures. C'est un mus√©e vivant de l'√©volution.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus ancienne for√™t tropicale du monde (135 Ma), Wet Tropics UNESCO, cassowary et platypus, Cap Tribulation"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion tropicale au nord d'une grande ville c√¥ti√®re, for√™t pluviale primaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancienne for√™t tropicale du monde, Far North Queensland, Australie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Daintree Rainforest √† Queensland, Australie"}
+  {name:"Daintree Rainforest ó Queensland, Australie",lat:-16.17,lng:145.418,desc:"La forÍt de Daintree est plus ancienne de 10 fois que la forÍt amazonienne. Ses espËces vÈgÈtales primitives ó fougËres arborescentes, platanes primitifs, Idiospermum ó n'ont pas changÈ depuis l'Ëre des dinosaures. C'est un musÈe vivant de l'Èvolution.",photo:"photos/daintree_rainforest.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus ancienne forÍt tropicale du monde (135 Ma), Wet Tropics UNESCO, cassowary et platypus, Cap Tribulation"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion tropicale au nord d'une grande ville cÙtiËre, forÍt pluviale primaire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancienne forÍt tropicale du monde, Far North Queensland, Australie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Daintree Rainforest ‡ Queensland, Australie"}
   ]},
-  {name:"Rotorua ‚Äî Nouvelle-Z√©lande",lat:-38.1368,lng:176.2497,desc:"Rotorua sent constamment le soufre ‚Äî les habitants plaisantent en disant que ¬´√ßa pue, mais √ßa enrichit¬ª. Les sources g√©othermiques chauffent naturellement les maisons et alimentent une centrale √©lectrique. La boue bouillonnante atteint parfois 200¬∞C.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Zone g√©othermique de Whakarewarewa, geysers Pohutu (30m), piscines de boue bouillonnante, village maori Te Puia"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion de Bay of Plenty, √Æle du Nord, lac Rotorua, Nouvelle-Z√©lande"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Geysers et boues bouillonnantes, capitale maorie, Nouvelle-Z√©lande"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Rotorua en Nouvelle-Z√©lande"}
+  {name:"Rotorua ó Nouvelle-ZÈlande",lat:-38.1368,lng:176.2497,desc:"Rotorua sent constamment le soufre ó les habitants plaisantent en disant que ´Áa pue, mais Áa enrichitª. Les sources gÈothermiques chauffent naturellement les maisons et alimentent une centrale Èlectrique. La boue bouillonnante atteint parfois 200∞C.",photo:"photos/rotorua.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Zone gÈothermique de Whakarewarewa, geysers Pohutu (30m), piscines de boue bouillonnante, village maori Te Puia"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion de Bay of Plenty, Óle du Nord, lac Rotorua, Nouvelle-ZÈlande"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Geysers et boues bouillonnantes, capitale maorie, Nouvelle-ZÈlande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Rotorua en Nouvelle-ZÈlande"}
   ]},
-  {name:"√éles Marquises ‚Äî Polyn√©sie fran√ßaise",lat:-9,lng:-139.5,desc:"Les √Æles Marquises sont les √Æles habit√©es les plus isol√©es du monde ‚Äî √† 1 400 km de Tahiti et 4 000 km de la c√¥te am√©ricaine la plus proche. Paul Gauguin y mourut en 1903 apr√®s y avoir peint ses tableaux les plus c√©l√®bres. Jacques Brel y repose √©galement, dans le m√™me cimeti√®re que Gauguin √† Hiva Oa.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Archipel volcanique de 12 √Æles, Nuku Hiva (chant√©e par Brel), tikis et marae, peuplement originel de la Polyn√©sie"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Polyn√©sie fran√ßaise, Pacifique Sud, √† 1 400 km au nord-est de Tahiti"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Archipel volcanique isol√© aux tikis de pierre, Polyn√©sie fran√ßaise, √Æles les plus recul√©es du monde habit√©"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les √éles Marquises en Polyn√©sie fran√ßaise"}
+  {name:"Œles Marquises ó PolynÈsie franÁaise",lat:-9,lng:-139.5,desc:"Les Óles Marquises sont les Óles habitÈes les plus isolÈes du monde ó ‡ 1 400 km de Tahiti et 4 000 km de la cÙte amÈricaine la plus proche. Paul Gauguin y mourut en 1903 aprËs y avoir peint ses tableaux les plus cÈlËbres. Jacques Brel y repose Ègalement, dans le mÍme cimetiËre que Gauguin ‡ Hiva Oa.",photo:"photos/iles_marquises.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Archipel volcanique de 12 Óles, Nuku Hiva (chantÈe par Brel), tikis et marae, peuplement originel de la PolynÈsie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"PolynÈsie franÁaise, Pacifique Sud, ‡ 1 400 km au nord-est de Tahiti"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Archipel volcanique isolÈ aux tikis de pierre, PolynÈsie franÁaise, Óles les plus reculÈes du monde habitÈ"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Œles Marquises en PolynÈsie franÁaise"}
   ]},
-  {name:"Parc national de Fiordland ‚Äî Nouvelle-Z√©lande",lat:-45.4142,lng:167.7192,desc:"Le parc national de Fiordland re√ßoit jusqu'√† 9 m√®tres de pluie par an ‚Äî l'un des endroits les plus pluvieux du monde. Cette eau cr√©e des centaines de cascades √©ph√©m√®res qui cascadent des parois √† pic pendant et apr√®s chaque pluie.",hints:[
+  {name:"Parc national de Fiordland ó Nouvelle-ZÈlande",lat:-45.4142,lng:167.7192,desc:"Le parc national de Fiordland reÁoit jusqu'‡ 9 mËtres de pluie par an ó l'un des endroits les plus pluvieux du monde. Cette eau crÈe des centaines de cascades ÈphÈmËres qui cascadent des parois ‡ pic pendant et aprËs chaque pluie.",photo:"photos/parc_national_de_fiordland.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Te Wahipounamu, 1,26 million d'hectares, Doubtful Sound (340 m de profondeur), sandflies et dauphins"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District de Southland, extr√™me sud-ouest de l'√Æle du Sud, Nouvelle-Z√©lande"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand parc national de Nouvelle-Z√©lande, fjords et wilderness"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc national de Fiordland en Nouvelle-Z√©lande"}
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District de Southland, extrÍme sud-ouest de l'Óle du Sud, Nouvelle-ZÈlande"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand parc national de Nouvelle-ZÈlande, fjords et wilderness"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc national de Fiordland en Nouvelle-ZÈlande"}
   ]},
-  {name:"Nauru ‚Äî Micron√©sie",lat:-0.5228,lng:166.9315,desc:"Nauru fut, dans les ann√©es 1980, le pays √† revenu par habitant le plus √©lev√© du monde gr√¢ce √† ses gisements de phosphate. Apr√®s l'√©puisement des ressources, l'√Æle est aujourd'hui l'un des pays les plus endett√©s et souffre d'une ob√©sit√© end√©mique li√©e √† un r√©gime alimentaire ultra-transform√© import√©.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"3e plus petit √âtat du monde (21 km¬≤), ancienne √©conomie bas√©e sur le phosphate, Buada Lagoon, √Æle corallienne"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle corallienne isol√©e du Pacifique central, √† 4 000 km du continent voisin"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"3e plus petit pays du monde, √Æle phosphat√©e du Pacifique"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Nauru en Micron√©sie"}
+  {name:"Nauru ó MicronÈsie",lat:-0.5228,lng:166.9315,desc:"Nauru fut, dans les annÈes 1980, le pays ‡ revenu par habitant le plus ÈlevÈ du monde gr‚ce ‡ ses gisements de phosphate. AprËs l'Èpuisement des ressources, l'Óle est aujourd'hui l'un des pays les plus endettÈs et souffre d'une obÈsitÈ endÈmique liÈe ‡ un rÈgime alimentaire ultra-transformÈ importÈ.",photo:"photos/parc_national_de_fiordland.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"3e plus petit …tat du monde (21 km≤), ancienne Èconomie basÈe sur le phosphate, Buada Lagoon, Óle corallienne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle corallienne isolÈe du Pacifique central, ‡ 4 000 km du continent voisin"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"3e plus petit pays du monde, Óle phosphatÈe du Pacifique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Nauru en MicronÈsie"}
   ]},
-  {name:"Vatnaj√∂kull ‚Äî Islande",lat:64.4173,lng:-16.8007,desc:"Le glacier Vatnaj√∂kull cache sous sa glace plusieurs volcans actifs. Lors des √©ruptions, la chaleur fait fondre d'immenses quantit√©s de glace en quelques heures, cr√©ant des j√∂kulhlaups ‚Äî inondations glaciaires cataclysmiques qui ont fa√ßonn√© le paysage islandais.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand glacier d'Europe (7 900 km¬≤), recouvrant le volcan B√°r√∞arbunga, grottes de glace et lac J√∂kuls√°rl√≥n"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sud-est d'une √Æle volcanique subarctique, plus grand glacier d'Europe"},
+  {name:"Vatnajˆkull ó Islande",lat:64.4173,lng:-16.8007,desc:"Le glacier Vatnajˆkull cache sous sa glace plusieurs volcans actifs. Lors des Èruptions, la chaleur fait fondre d'immenses quantitÈs de glace en quelques heures, crÈant des jˆkulhlaups ó inondations glaciaires cataclysmiques qui ont faÁonnÈ le paysage islandais.",photo:"photos/vatnajokull.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand glacier d'Europe (7 900 km≤), recouvrant le volcan B·rarbunga, grottes de glace et lac Jˆkuls·rlÛn"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sud-est d'une Óle volcanique subarctique, plus grand glacier d'Europe"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand glacier d'Europe, lac aux icebergs, Islande"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Vatnaj√∂kull en Islande"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Vatnajˆkull en Islande"}
   ]},
-  {name:"Colonne de Trajan ‚Äî Rome, Italie",lat:41.8957,lng:12.4842,desc:"La colonne de Trajan, inaugur√©e en 113 ap. J.-C., est orn√©e d'une frise en spirale de 190 m√®tres de long repr√©sentant les deux guerres daciques en 2 500 figures. C'est l'un des premiers ¬´bandes dessin√©es¬ª de l'Histoire. Elle fut coiff√©e d'une statue de Trajan, remplac√©e par celle de Saint-Pierre par le pape Sixte V en 1588.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Columna Traiani, f√ªt de marbre de 38m inaugur√© en 113 ap. J.-C. relatant les guerres daciques, forum de Trajan"},
+  {name:"Colonne de Trajan ó Rome, Italie",lat:41.8957,lng:12.4842,desc:"La colonne de Trajan, inaugurÈe en 113 ap. J.-C., est ornÈe d'une frise en spirale de 190 mËtres de long reprÈsentant les deux guerres daciques en 2 500 figures. C'est l'un des premiers ´bandes dessinÈesª de l'Histoire. Elle fut coiffÈe d'une statue de Trajan, remplacÈe par celle de Saint-Pierre par le pape Sixte V en 1588.",photo:"photos/colonne_de_trajan.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Columna Traiani, f˚t de marbre de 38m inaugurÈ en 113 ap. J.-C. relatant les guerres daciques, forum de Trajan"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Forum de Trajan (Foro Traiano), entre le Capitole et le Quirinal"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Colonne triomphale romaine, 2 662 figures sculpt√©es en spirale, Rome"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Colonne de Trajan √† Rome, Italie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Colonne triomphale romaine, 2 662 figures sculptÈes en spirale, Rome"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Colonne de Trajan ‡ Rome, Italie"}
   ]},
-  {name:"Fontaine de Trevi ‚Äî Rome, Italie",lat:41.9009,lng:12.4833,desc:"La fontaine de Trevi, achev√©e en 1762 par Salvi, collecte chaque ann√©e plus de 1,5 million d'euros de pi√®ces lanc√©es par les touristes. Cet argent est revers√© √† Caritas Roma pour aider les pauvres. La tradition de lancer une pi√®ce dans le dos pour revenir √† Rome fut popularis√©e par le film ¬´Vacances romaines¬ª (1953) avec Audrey Hepburn.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fontana di Trevi, termin√©e en 1762 par Nicola Salvi, 26m de hauteur, point d'arriv√©e de l'Aqua Virgo antique"},
+  {name:"Fontaine de Trevi ó Rome, Italie",lat:41.9009,lng:12.4833,desc:"La fontaine de Trevi, achevÈe en 1762 par Salvi, collecte chaque annÈe plus de 1,5 million d'euros de piËces lancÈes par les touristes. Cet argent est reversÈ ‡ Caritas Roma pour aider les pauvres. La tradition de lancer une piËce dans le dos pour revenir ‡ Rome fut popularisÈe par le film ´Vacances romainesª (1953) avec Audrey Hepburn.",photo:"photos/fontaine_de_trevi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fontana di Trevi, terminÈe en 1762 par Nicola Salvi, 26m de hauteur, point d'arrivÈe de l'Aqua Virgo antique"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Piazza di Trevi, quartier Trevi, rione II, au carrefour de trois rues"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande fontaine baroque de Rome, tradition de la pi√®ce jet√©e"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Fontaine de Trevi √† Rome, Italie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande fontaine baroque de Rome, tradition de la piËce jetÈe"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Fontaine de Trevi ‡ Rome, Italie"}
   ]},
-  {name:"Panth√©on ‚Äî Rome, Italie",lat:41.8986,lng:12.4769,desc:"Le Panth√©on de Rome, construit en 125 ap. J.-C. par Hadrien, poss√®de un d√¥me de 43,3 m√®tres de diam√®tre ‚Äî rest√© le plus grand d√¥me non arm√© du monde pendant 1 300 ans. Son oculus de 9 m√®tres au sommet est la seule source de lumi√®re. Par jour de pluie, l'eau tombe directement sur le sol en marbre, √©vacu√©e par un drainage souterrain romain.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple de tous les dieux, reconstruit par Hadrien entre 118 et 125, oculus de 8,7m, d√¥me en b√©ton le mieux conserv√© de l'Antiquit√©"},
+  {name:"PanthÈon ó Rome, Italie",lat:41.8986,lng:12.4769,desc:"Le PanthÈon de Rome, construit en 125 ap. J.-C. par Hadrien, possËde un dÙme de 43,3 mËtres de diamËtre ó restÈ le plus grand dÙme non armÈ du monde pendant 1 300 ans. Son oculus de 9 mËtres au sommet est la seule source de lumiËre. Par jour de pluie, l'eau tombe directement sur le sol en marbre, ÈvacuÈe par un drainage souterrain romain.",photo:"photos/pantheon.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple de tous les dieux, reconstruit par Hadrien entre 118 et 125, oculus de 8,7m, dÙme en bÈton le mieux conservÈ de l'AntiquitÈ"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Piazza della Rotonda, rione Pigna, centre historique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple romain le mieux conserv√©, d√¥me √† oculus, Rome"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Panth√©on √† Rome, Italie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple romain le mieux conservÈ, dÙme ‡ oculus, Rome"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le PanthÈon ‡ Rome, Italie"}
   ]},
-  {name:"Piazza San Marco ‚Äî Venise, Italie",lat:45.4341,lng:12.3388,desc:"La place Saint-Marc de Venise est la seule place de la ville que Napol√©on appela ¬´le plus beau salon de l'Europe¬ª. Ses 200 millions de visiteurs par an l'inondent r√©guli√®rement ‚Äî la place est submerg√©e lors des mar√©es hautes (acqua alta). Son campanile, effondr√© en 1902, fut reconstruit identique et r√©ouvert le 25 avril 1912, jour anniversaire de sa chute.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Unique place d'une cit√© insulaire nomm√©e campo, basilique dor√©e du XIe si√®cle, campanile de 99m, acqua alta"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sestiere de San Marco, bord de la lagune v√©nitienne, extr√©mit√© est du Grand Canal"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Place Saint-Marc, c≈ìur de Venise, basilique byzantine et campanile"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Piazza San Marco √† Venise, Italie"}
+  {name:"Piazza San Marco ó Venise, Italie",lat:45.4341,lng:12.3388,desc:"La place Saint-Marc de Venise est la seule place de la ville que NapolÈon appela ´le plus beau salon de l'Europeª. Ses 200 millions de visiteurs par an l'inondent rÈguliËrement ó la place est submergÈe lors des marÈes hautes (acqua alta). Son campanile, effondrÈ en 1902, fut reconstruit identique et rÈouvert le 25 avril 1912, jour anniversaire de sa chute.",photo:"photos/piazza_san_marco.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Unique place d'une citÈ insulaire nommÈe campo, basilique dorÈe du XIe siËcle, campanile de 99m, acqua alta"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sestiere de San Marco, bord de la lagune vÈnitienne, extrÈmitÈ est du Grand Canal"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Place Saint-Marc, cúur de Venise, basilique byzantine et campanile"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Piazza San Marco ‡ Venise, Italie"}
   ]},
-  {name:"Pomp√©i ‚Äî Campanie, Italie",lat:40.7502,lng:14.4869,desc:"Pomp√©i a √©t√© pr√©serv√©e √† l'√©tat de coquille par les cendres du V√©suve ‚Äî certains habitants furent surpris en plein repas, leurs squelettes retrouv√©s avec encore de la nourriture devant eux. Moins d'un tiers du site a √©t√© fouill√© √† ce jour.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ville romaine ensevelie sous 6m de cendres le 24 ao√ªt 79 ap. J.-C. lors de l'√©ruption du V√©suve, 66 hectares excav√©s"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Pomp√©i, golfe de Naples, province de Naples, Campanie, au pied du V√©suve"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© romaine fig√©e par le V√©suve en 79 ap. J.-C., Campanie, Italie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pomp√©i √† Campanie, Italie"}
+  {name:"PompÈi ó Campanie, Italie",lat:40.7502,lng:14.4869,desc:"PompÈi a ÈtÈ prÈservÈe ‡ l'Ètat de coquille par les cendres du VÈsuve ó certains habitants furent surpris en plein repas, leurs squelettes retrouvÈs avec encore de la nourriture devant eux. Moins d'un tiers du site a ÈtÈ fouillÈ ‡ ce jour.",photo:"photos/pompei.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ville romaine ensevelie sous 6m de cendres le 24 ao˚t 79 ap. J.-C. lors de l'Èruption du VÈsuve, 66 hectares excavÈs"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de PompÈi, golfe de Naples, province de Naples, Campanie, au pied du VÈsuve"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ romaine figÈe par le VÈsuve en 79 ap. J.-C., Campanie, Italie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le PompÈi ‡ Campanie, Italie"}
   ]},
-  {name:"D√¥me de Florence ‚Äî Italie",lat:43.7731,lng:11.256,desc:"Pascal fit monter du mercure au sommet du Puy de D√¥me en 1648 pour prouver que la pression atmosph√©rique diminuait avec l'altitude ‚Äî une exp√©rience fondatrice de la physique moderne. Il ne fit pas l'ascension lui-m√™me, mais demanda √† son beau-fr√®re.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cattedrale di Santa Maria del Fiore, coupole de Brunelleschi (1436), 114,5m de hauteur, premi√®re grande coupole de la Renaissance"},
+  {name:"DÙme de Florence ó Italie",lat:43.7731,lng:11.256,desc:"Pascal fit monter du mercure au sommet du Puy de DÙme en 1648 pour prouver que la pression atmosphÈrique diminuait avec l'altitude ó une expÈrience fondatrice de la physique moderne. Il ne fit pas l'ascension lui-mÍme, mais demanda ‡ son beau-frËre.",photo:"photos/dome_de_florence.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cattedrale di Santa Maria del Fiore, coupole de Brunelleschi (1436), 114,5m de hauteur, premiËre grande coupole de la Renaissance"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Piazza del Duomo, centre de Florence, Toscane, bord de l'Arno"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"D√¥me de Brunelleschi, symbole de la Renaissance florentine, Toscane"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le D√¥me de Florence en Italie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"DÙme de Brunelleschi, symbole de la Renaissance florentine, Toscane"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le DÙme de Florence en Italie"}
   ]},
-  {name:"Galerie des Offices ‚Äî Florence, Italie",lat:43.7677,lng:11.2553,desc:"La Galerie des Offices de Florence abrite la plus grande collection de peintures de la Renaissance italienne : La Naissance de V√©nus et Le Printemps de Botticelli, L'Annonciation de L√©onard de Vinci. Vasari la con√ßut en 1560 pour les M√©dicis. La Vasari Corridor, galerie secr√®te suspendue au-dessus de l'Arno, relie les Offices au Palazzo Pitti.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Galleria degli Uffizi, palais con√ßu par Vasari en 1560, abritant La Naissance de V√©nus et Le Printemps de Botticelli"},
+  {name:"Galerie des Offices ó Florence, Italie",lat:43.7677,lng:11.2553,desc:"La Galerie des Offices de Florence abrite la plus grande collection de peintures de la Renaissance italienne : La Naissance de VÈnus et Le Printemps de Botticelli, L'Annonciation de LÈonard de Vinci. Vasari la conÁut en 1560 pour les MÈdicis. La Vasari Corridor, galerie secrËte suspendue au-dessus de l'Arno, relie les Offices au Palazzo Pitti.",photo:"photos/dome_de_florence.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Galleria degli Uffizi, palais conÁu par Vasari en 1560, abritant La Naissance de VÈnus et Le Printemps de Botticelli"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Piazzale degli Uffizi, bord de l'Arno, Oltrarno, Florence, Toscane"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand mus√©e d'art de la Renaissance italienne, Florence"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Galerie des Offices √† Florence, Italie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand musÈe d'art de la Renaissance italienne, Florence"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Galerie des Offices ‡ Florence, Italie"}
   ]},
-  {name:"Parc national des Cinque Terre ‚Äî Italie",lat:44.1461,lng:9.6439,desc:"Les terrasses viticoles des Cinque Terre furent construites √† la main sans machines sur des falaises verticales. Des si√®cles de travail ont cr√©√© plus de 100 km de murs de pierres s√®ches ‚Äî plus que la Grande Muraille de Chine √† l'√©chelle du territoire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cinq villages (Monterosso, Vernazza, Corniglia, Manarola, Riomaggiore) accroch√©s aux falaises de Ligurie, class√©s UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"C√¥te de Ligurie, province de La Spezia, mer de Ligurie, c√¥te nord-ouest"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cinq villages color√©s sur des falaises ligures, Cinque Terre, Italie"},
+  {name:"Parc national des Cinque Terre ó Italie",lat:44.1461,lng:9.6439,desc:"Les terrasses viticoles des Cinque Terre furent construites ‡ la main sans machines sur des falaises verticales. Des siËcles de travail ont crÈÈ plus de 100 km de murs de pierres sËches ó plus que la Grande Muraille de Chine ‡ l'Èchelle du territoire.",photo:"photos/parc_national_des_cinque_terre.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cinq villages (Monterosso, Vernazza, Corniglia, Manarola, Riomaggiore) accrochÈs aux falaises de Ligurie, classÈs UNESCO"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"CÙte de Ligurie, province de La Spezia, mer de Ligurie, cÙte nord-ouest"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cinq villages colorÈs sur des falaises ligures, Cinque Terre, Italie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc national des Cinque Terre en Italie"}
   ]},
-  {name:"Ch√¢teau de Windsor ‚Äî Angleterre, Royaume-Uni",lat:51.4839,lng:-0.6044,desc:"Le ch√¢teau de Windsor poss√®de la plus longue all√©e plant√©e d'arbres au monde : the Long Walk, une avenue de 4,8 km bord√©e de platanes et de marronniers. Elle fut plant√©e en 1685 et constitue l'axe central du Grand Parc de Windsor.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"R√©sidence royale la plus grande du monde (45 000 m¬≤), fond√©e par Guillaume le Conqu√©rant vers 1070, Ordre de la Jarreti√®re"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Windsor, Berkshire, bord de la Tamise, √† 34 km √† l'ouest de la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande r√©sidence royale habit√©e au monde, forteresse m√©di√©vale, Berkshire, Angleterre"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Windsor √† Angleterre, Royaume-Uni"}
-  ]},
-  {name:"Parc de Blenheim ‚Äî Oxfordshire, Royaume-Uni",lat:51.8414,lng:-1.3617,desc:"Le palais de Blenheim est le seul palais non royal d'Angleterre ‚Äî offert par la nation au duc de Marlborough apr√®s sa victoire √† Blenheim en 1704. Winston Churchill y naquit en 1874. Son parc, dessin√© par Capability Brown, est consid√©r√© comme le chef-d'≈ìuvre du paysagisme anglais naturel.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Blenheim Palace, construit de 1705 √† 1722 pour John Churchill, 1er duc de Marlborough, lieu de naissance de Winston Churchill"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Village de Woodstock, Oxfordshire, √† 13 km au nord d'Oxford"},
+    {name:"Parc de Blenheim ó Oxfordshire, Royaume-Uni",lat:51.8414,lng:-1.3617,desc:"Le palais de Blenheim est le seul palais non royal d'Angleterre ó offert par la nation au duc de Marlborough aprËs sa victoire ‡ Blenheim en 1704. Winston Churchill y naquit en 1874. Son parc, dessinÈ par Capability Brown, est considÈrÈ comme le chef-d'úuvre du paysagisme anglais naturel.",photo:"photos/parc_de_blenheim.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Blenheim Palace, construit de 1705 ‡ 1722 pour John Churchill, 1er duc de Marlborough, lieu de naissance de Winston Churchill"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Village de Woodstock, Oxfordshire, ‡ 13 km au nord d'Oxford"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais baroque de Blenheim, lieu de naissance de Churchill, Oxfordshire"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc de Blenheim √† Oxfordshire, Royaume-Uni"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc de Blenheim ‡ Oxfordshire, Royaume-Uni"}
   ]},
-  {name:"Tower Bridge ‚Äî Londres, Royaume-Uni",lat:51.5055,lng:-0.0754,desc:"Le Tower Bridge peut s'ouvrir en 5 minutes pour laisser passer les grands navires ‚Äî ce qui se produit encore environ 800 fois par an. Ses deux tours de style m√©di√©val cachent une structure en acier de 11 000 tonnes. Inaugur√© en 1894, il fut initialement peint en chocolat et cr√®me ‚Äî sa couleur bleu-gris actuelle date de 1977.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pont basculant de 244m de long inaugur√© en 1894, deux tours n√©o-gothiques de 65m, c√¢bles de 38,7m de port√©e"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tamise, entre la Tour m√©di√©vale (rive nord) et Bermondsey (rive sud)"},
+  {name:"Tower Bridge ó Londres, Royaume-Uni",lat:51.5055,lng:-0.0754,desc:"Le Tower Bridge peut s'ouvrir en 5 minutes pour laisser passer les grands navires ó ce qui se produit encore environ 800 fois par an. Ses deux tours de style mÈdiÈval cachent une structure en acier de 11 000 tonnes. InaugurÈ en 1894, il fut initialement peint en chocolat et crËme ó sa couleur bleu-gris actuelle date de 1977.",photo:"photos/parc_de_blenheim.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pont basculant de 244m de long inaugurÈ en 1894, deux tours nÈo-gothiques de 65m, c‚bles de 38,7m de portÈe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tamise, entre la Tour mÈdiÈvale (rive nord) et Bermondsey (rive sud)"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pont symbole de Londres, double tour basculant sur la Tamise"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tower Bridge √† Londres, Royaume-Uni"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tower Bridge ‡ Londres, Royaume-Uni"}
   ]},
-  {name:"Cath√©drale de Canterbury ‚Äî Royaume-Uni",lat:51.2798,lng:1.0829,desc:"La cath√©drale de Canterbury est le si√®ge de l'archev√™que de Canterbury, chef spirituel de l'√âglise anglicane mondiale. Thomas Becket y fut assassin√© en 1170 sur ordre d'Henri II. Son martyrologe en fit l'un des p√®lerinages les plus importants d'Europe m√©di√©vale ‚Äî immortalis√© par les Contes de Canterbury de Chaucer.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Si√®ge de l'archev√™que primat, meurtre de Thomas Becket en 1170, p√®lerinage des Canterbury Tales, p√®lerinage de Chaucer"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Canterbury, comt√© du Kent, sud-est du pays, √† 90 km de la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Si√®ge de l'√âglise anglicane mondiale, lieu du martyre de Thomas Becket, Kent, Angleterre"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cath√©drale de Canterbury, Angleterre (Royaume-Uni)"}
+  {name:"CathÈdrale de Canterbury ó Royaume-Uni",lat:51.2798,lng:1.0829,desc:"La cathÈdrale de Canterbury est le siËge de l'archevÍque de Canterbury, chef spirituel de l'…glise anglicane mondiale. Thomas Becket y fut assassinÈ en 1170 sur ordre d'Henri II. Son martyrologe en fit l'un des pËlerinages les plus importants d'Europe mÈdiÈvale ó immortalisÈ par les Contes de Canterbury de Chaucer.",photo:"photos/cathedrale_de_brasilia.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"SiËge de l'archevÍque primat, meurtre de Thomas Becket en 1170, pËlerinage des Canterbury Tales, pËlerinage de Chaucer"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Canterbury, comtÈ du Kent, sud-est du pays, ‡ 90 km de la capitale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"SiËge de l'…glise anglicane mondiale, lieu du martyre de Thomas Becket, Kent, Angleterre"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La CathÈdrale de Canterbury, Angleterre (Royaume-Uni)"}
   ]},
-  {name:"Sagrada Fam√≠lia ‚Äî Vue a√©rienne, Barcelone",lat:41.4036,lng:2.1745,desc:"Gaud√≠ consacra les 43 derni√®res ann√©es de sa vie √† cette cath√©drale. Renvers√© par un tramway en 1926, il fut enterr√© dans sa propre √©glise. La construction, financ√©e uniquement par les entr√©es des visiteurs, devrait s'achever en 2026.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vue satellite : 18 tours pr√©vues dont la tour de J√©sus-Christ (172,5m), croix de 31m visible √† 600m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Eixample dret (droite), intersection Carrer de Mallorca et Carrer de Proven√ßa"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Basilique de Gaud√≠ vue du ciel, Barcelone, Espagne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Sagrada Fam√≠lia √† Vue a√©rienne, Barcelone"}
+    {name:"Parc G¸ell ó Barcelone, Espagne",lat:41.4145,lng:2.1527,desc:"Le parc G¸ell fut conÁu par GaudÌ entre 1900 et 1914 comme citÈ-jardin privÈe pour 60 familles ó seules 2 maisons furent construites, dont celle de GaudÌ. FinancÈ par Eusebi G¸ell qui voulait une citÈ idÈale, le projet commercial fut un Èchec total mais donna naissance ‡ l'un des parcs les plus visitÈs du monde.",photo:"https://upload.wikimedia.org/wikipedia/commons/b/b8/Barcelone_-_Parc_G%C3%BCell_-_Entr%C3%A9e.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc conÁu par Antoni GaudÌ de 1900 ‡ 1914, mosaÔques de trencadÌs, viaduc de la Bugade, rÈsidence GaudÌ"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline du Carmel, quartier de Gr‡cia, nord de la ville, vue panoramique sur la mer"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc de mosaÔques colorÈes de GaudÌ, terrasse avec banc sinueux, Barcelone"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc G¸ell ‡ Barcelone, Espagne"}
   ]},
-  {name:"Parc G√ºell ‚Äî Barcelone, Espagne",lat:41.4145,lng:2.1527,desc:"Le parc G√ºell fut con√ßu par Gaud√≠ entre 1900 et 1914 comme cit√©-jardin priv√©e pour 60 familles ‚Äî seules 2 maisons furent construites, dont celle de Gaud√≠. Financ√© par Eusebi G√ºell qui voulait une cit√© id√©ale, le projet commercial fut un √©chec total mais donna naissance √† l'un des parcs les plus visit√©s du monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc con√ßu par Antoni Gaud√≠ de 1900 √† 1914, mosa√Øques de trencad√≠s, viaduc de la Bugade, r√©sidence Gaud√≠"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline du Carmel, quartier de Gr√†cia, nord de la ville, vue panoramique sur la mer"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc de mosa√Øques color√©es de Gaud√≠, terrasse avec banc sinueux, Barcelone"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc G√ºell √† Barcelone, Espagne"}
-  ]},
-  {name:"Santiago de Compostela ‚Äî Espagne",lat:42.8805,lng:-8.5456,desc:"La cath√©drale de Santiago de Compostela est le point d'arriv√©e du Chemin de Compostelle. Son encensoir g√©ant, le ¬´Botafumeiro¬ª, p√®se 80 kg et oscille √† 68 km/h au bout d'une corde de 65 m√®tres lors des grandes messes. Son r√¥le original √©tait d'assainir l'air satur√© par les milliers de p√®lerins malodorants.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cath√©drale de Saint-Jacques, tombeau suppos√© de l'ap√¥tre Jacques, terminus du Camino, portico de la Gloria, botafumeiro (encensoir"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Praza do Obradoiro, vieille ville de Saint-Jacques-de-Compostelle, Galice, nord-ouest de la p√©ninsule ib√©rique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale terminus du p√®lerinage de Saint-Jacques, Galice, Espagne"},
+  {name:"Santiago de Compostela ó Espagne",lat:42.8805,lng:-8.5456,desc:"La cathÈdrale de Santiago de Compostela est le point d'arrivÈe du Chemin de Compostelle. Son encensoir gÈant, le ´Botafumeiroª, pËse 80 kg et oscille ‡ 68 km/h au bout d'une corde de 65 mËtres lors des grandes messes. Son rÙle original Ètait d'assainir l'air saturÈ par les milliers de pËlerins malodorants.",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Flag_of_Santiago_de_Compostela.svg/langfr-330px-Flag_of_Santiago_de_Compostela.svg.png",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CathÈdrale de Saint-Jacques, tombeau supposÈ de l'apÙtre Jacques, terminus du Camino, portico de la Gloria, botafumeiro (encensoir"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Praza do Obradoiro, vieille ville de Saint-Jacques-de-Compostelle, Galice, nord-ouest de la pÈninsule ibÈrique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CathÈdrale terminus du pËlerinage de Saint-Jacques, Galice, Espagne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Santiago de Compostela en Espagne"}
   ]},
-  {name:"Parc national de Do√±ana ‚Äî Espagne",lat:36.996,lng:-6.342,desc:"Do√±ana est la plus grande r√©serve naturelle d'Europe occidentale et le principal refuge du lynx ib√©rique ‚Äî l'un des f√©lins les plus menac√©s du monde avec 400 individus. Les flamants roses, aigrettes et pygargues y nichent par milliers. Ses dunes mobiles avancent de 5 √† 6 m√®tres par an, englobant progressivement la for√™t de pins.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"543 km¬≤ de zones humides, dunes, marais et maquis, refuge du lynx ib√©rique et de l'aigle imp√©rial, embouchure du Guadalquivir"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Huelva et S√©ville, Andalousie, embouchure du Guadalquivir, golfe de Cadix"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande r√©serve naturelle d'Europe occidentale, lynx ib√©rique, Espagne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc national de Do√±ana en Espagne"}
+  {name:"Parc national de DoÒana ó Espagne",lat:36.996,lng:-6.342,desc:"DoÒana est la plus grande rÈserve naturelle d'Europe occidentale et le principal refuge du lynx ibÈrique ó l'un des fÈlins les plus menacÈs du monde avec 400 individus. Les flamants roses, aigrettes et pygargues y nichent par milliers. Ses dunes mobiles avancent de 5 ‡ 6 mËtres par an, englobant progressivement la forÍt de pins.",photo:"photos/parc_national_de_fiordland.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"543 km≤ de zones humides, dunes, marais et maquis, refuge du lynx ibÈrique et de l'aigle impÈrial, embouchure du Guadalquivir"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Huelva et SÈville, Andalousie, embouchure du Guadalquivir, golfe de Cadix"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande rÈserve naturelle d'Europe occidentale, lynx ibÈrique, Espagne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc national de DoÒana en Espagne"}
   ]},
-  {name:"Acueducto de Segovia ‚Äî Espagne",lat:40.9483,lng:-4.1179,desc:"L'aqueduc de S√©govie, construit sans ciment entre 50 et 100 ap. J.-C., repose sur 166 arches doubles de 9 m√®tres de large ‚Äî 30 000 blocs de granite pos√©s par friction et gravit√©. Il alimenta la ville en eau depuis la Sierra de Guadarrama jusqu'en 1973. Ses pierres portent les marques des l√©gions romaines qui le construisirent.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Aqueduc romain du Ier si√®cle, 728m de long, 166 arches de granit assembl√©es sans mortier, 28m de hauteur maximale"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plaza del Azoguejo, entr√©e de la vieille ville de S√©govie, Castille-et-Le√≥n"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Aqueduc romain parfaitement conserv√©, embl√®me de S√©govie, Castille"},
+  {name:"Acueducto de Segovia ó Espagne",lat:40.9483,lng:-4.1179,desc:"L'aqueduc de SÈgovie, construit sans ciment entre 50 et 100 ap. J.-C., repose sur 166 arches doubles de 9 mËtres de large ó 30 000 blocs de granite posÈs par friction et gravitÈ. Il alimenta la ville en eau depuis la Sierra de Guadarrama jusqu'en 1973. Ses pierres portent les marques des lÈgions romaines qui le construisirent.",photo:"https://upload.wikimedia.org/wikipedia/commons/f/f4/Aqueduct_of_Segovia_08.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Aqueduc romain du Ier siËcle, 728m de long, 166 arches de granit assemblÈes sans mortier, 28m de hauteur maximale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plaza del Azoguejo, entrÈe de la vieille ville de SÈgovie, Castille-et-LeÛn"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Aqueduc romain parfaitement conservÈ, emblËme de SÈgovie, Castille"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Acueducto de Segovia en Espagne"}
   ]},
-  {name:"√âvora ‚Äî Portugal",lat:38.5744,lng:-7.908,desc:"√âvora, vieille ville romaine d'Alentejo, abrite un temple de Diane du Ier si√®cle parfaitement conserv√© et une Capela dos Ossos (chapelle des cr√¢nes) tapiss√©e des ossements de 5 000 moines ‚Äî son inscription dit : ¬´N√≥s ossos que aqui estamos pelos vossos esperamos¬ª (Nous, les os ici, attendons les v√¥tres).",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple romain de Diana (Ier si√®cle), Capela dos Ossos (5 000 cr√¢nes), class√©e 'mus√©e √† ciel ouvert' de l'Alentejo"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Chef-lieu du district d'√âvora, Alentejo, centre-sud, √† 135 km de Lisbonne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville-mus√©e de l'Alentejo, temple romain et chapelle des ossements, Portugal"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'√âvora au Portugal"}
+  {name:"…vora ó Portugal",lat:38.5744,lng:-7.908,desc:"…vora, vieille ville romaine d'Alentejo, abrite un temple de Diane du Ier siËcle parfaitement conservÈ et une Capela dos Ossos (chapelle des cr‚nes) tapissÈe des ossements de 5 000 moines ó son inscription dit : ´NÛs ossos que aqui estamos pelos vossos esperamosª (Nous, les os ici, attendons les vÙtres).",photo:"https://upload.wikimedia.org/wikipedia/commons/0/00/Pt-evr1.png",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple romain de Diana (Ier siËcle), Capela dos Ossos (5 000 cr‚nes), classÈe 'musÈe ‡ ciel ouvert' de l'Alentejo"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Chef-lieu du district d'…vora, Alentejo, centre-sud, ‡ 135 km de Lisbonne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville-musÈe de l'Alentejo, temple romain et chapelle des ossements, Portugal"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'…vora au Portugal"}
   ]},
-  {name:"Palais de Sintra ‚Äî Portugal",lat:38.7876,lng:-9.3906,desc:"Le palais national de Sintra est le seul palais m√©di√©val du Portugal conserv√© en √©tat. Ses deux chemin√©es coniques jumelles de 33 m√®tres sont visibles depuis la mer. Lord Byron visita Sintra en 1809 et la d√©crivit comme ¬´l'√âden¬ª dans son po√®me Childe Harold.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pal√°cio da Pena, construit de 1842 √† 1854 par Ferdinand II en style romantique, chemin√©es de fa√Øence, for√™t de nuages"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sommet de la Serra de Sintra (529m), commune de Sintra, r√©gion de Lisbonne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais color√© de Pena sur les hauteurs de Sintra, romantisme portugais"},
+  {name:"Palais de Sintra ó Portugal",lat:38.7876,lng:-9.3906,desc:"Le palais national de Sintra est le seul palais mÈdiÈval du Portugal conservÈ en Ètat. Ses deux cheminÈes coniques jumelles de 33 mËtres sont visibles depuis la mer. Lord Byron visita Sintra en 1809 et la dÈcrivit comme ´l'…denª dans son poËme Childe Harold.",photo:"photos/palais_de_sintra.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pal·cio da Pena, construit de 1842 ‡ 1854 par Ferdinand II en style romantique, cheminÈes de faÔence, forÍt de nuages"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sommet de la Serra de Sintra (529m), commune de Sintra, rÈgion de Lisbonne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais colorÈ de Pena sur les hauteurs de Sintra, romantisme portugais"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Sintra au Portugal"}
   ]},
-  {name:"Grand-Place ‚Äî Bruxelles, Belgique",lat:50.8467,lng:4.3525,desc:"La Grand-Place de Bruxelles fut d√©crite par Victor Hugo comme ¬´le th√©√¢tre le plus beau du monde¬ª. Sa Maison du Roi et ses guildes de corporations dor√©es datent du XVe si√®cle. Chaque √©t√© impair, elle est recouverte d'un tapis de 700 000 fleurs fra√Æches dispos√©es en motifs g√©om√©triques par des fleuristes belges et hollandais.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grote Markt, class√©e UNESCO en 1998, maisons de guildes dor√©es des XVIIe-XVIIIe si√®cles, H√¥tel de Ville gothique de 1402"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pentagone (centre historique), 1√®re commune de Bruxelles"},
+  {name:"Grand-Place ó Bruxelles, Belgique",lat:50.8467,lng:4.3525,desc:"La Grand-Place de Bruxelles fut dÈcrite par Victor Hugo comme ´le thÈ‚tre le plus beau du mondeª. Sa Maison du Roi et ses guildes de corporations dorÈes datent du XVe siËcle. Chaque ÈtÈ impair, elle est recouverte d'un tapis de 700 000 fleurs fraÓches disposÈes en motifs gÈomÈtriques par des fleuristes belges et hollandais.",photo:"photos/palais_de_sintra.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grote Markt, classÈe UNESCO en 1998, maisons de guildes dorÈes des XVIIe-XVIIIe siËcles, HÙtel de Ville gothique de 1402"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pentagone (centre historique), 1Ëre commune de Bruxelles"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus belle place du monde selon Victor Hugo, Bruxelles"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grand-Place √† Bruxelles, Belgique"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grand-Place ‡ Bruxelles, Belgique"}
   ]},
-  {name:"Cath√©drale Notre-Dame d'Anvers ‚Äî Belgique",lat:51.221,lng:4.4002,desc:"La cath√©drale Notre-Dame d'Anvers est la plus grande cath√©drale gothique de Belgique avec sa fl√®che de 123 m√®tres. Elle abrite quatre tableaux de Rubens dont La Descente de Croix ‚Äî consid√©r√©s comme ses chefs-d'≈ìuvre absolus. Rubens v√©cut et mourut √† Anvers, sa maison-mus√©e est √† quelques centaines de m√®tres.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Onze-Lieve-Vrouwekathedraal, fl√®che de 123m, construction de 1352 √† 1521, abritant 4 triptyques de Rubens"},
+  {name:"CathÈdrale Notre-Dame d'Anvers ó Belgique",lat:51.221,lng:4.4002,desc:"La cathÈdrale Notre-Dame d'Anvers est la plus grande cathÈdrale gothique de Belgique avec sa flËche de 123 mËtres. Elle abrite quatre tableaux de Rubens dont La Descente de Croix ó considÈrÈs comme ses chefs-d'úuvre absolus. Rubens vÈcut et mourut ‡ Anvers, sa maison-musÈe est ‡ quelques centaines de mËtres.",photo:"photos/cathedrale_notre_dame_d_anvers.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Onze-Lieve-Vrouwekathedraal, flËche de 123m, construction de 1352 ‡ 1521, abritant 4 triptyques de Rubens"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Groenplaats, centre historique d'Anvers, province d'Anvers"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale gothique aux triptyques de Rubens, Anvers, Belgique"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cath√©drale Notre-Dame d'Anvers, Belgique"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CathÈdrale gothique aux triptyques de Rubens, Anvers, Belgique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La CathÈdrale Notre-Dame d'Anvers, Belgique"}
   ]},
-  {name:"Ch√¢teau de Vianden ‚Äî Luxembourg",lat:49.9358,lng:6.2017,desc:"Le ch√¢teau de Vianden est l'un des plus grands ch√¢teaux romans-gothiques d'Europe occidentale. Victor Hugo y s√©journa plusieurs fois en exil et y √©crivit certaines pages des Mis√©rables. Sa silhouette au-dessus de la vall√©e de l'Our est le symbole touristique du Luxembourg.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch√¢teau m√©di√©val des Xe-XIVe si√®cles, r√©sidence des comtes de Vianden puis des Nassau, dominant l'Our"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville du nord d'un petit pays europ√©en enclav√©, ch√¢teau m√©di√©val au-dessus de l'Our"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus beau ch√¢teau du Luxembourg, dominant la vall√©e de l'Our"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Vianden au Luxembourg"}
+  {name:"Ch‚teau de Vianden ó Luxembourg",lat:49.9358,lng:6.2017,desc:"Le ch‚teau de Vianden est l'un des plus grands ch‚teaux romans-gothiques d'Europe occidentale. Victor Hugo y sÈjourna plusieurs fois en exil et y Ècrivit certaines pages des MisÈrables. Sa silhouette au-dessus de la vallÈe de l'Our est le symbole touristique du Luxembourg.",photo:"photos/chateau_de_vianden.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch‚teau mÈdiÈval des Xe-XIVe siËcles, rÈsidence des comtes de Vianden puis des Nassau, dominant l'Our"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville du nord d'un petit pays europÈen enclavÈ, ch‚teau mÈdiÈval au-dessus de l'Our"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus beau ch‚teau du Luxembourg, dominant la vallÈe de l'Our"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Vianden au Luxembourg"}
   ]},
-  {name:"Moulin de Kinderdijk ‚Äî Pays-Bas",lat:51.8833,lng:4.6333,desc:"Kinderdijk abrite le plus grand ensemble de moulins √† vent anciens des Pays-Bas avec 19 moulins du XVIIIe si√®cle. Ils pompaient l'eau de la r√©gion d'Alblasserwaard, en dessous du niveau de la mer, vers les rivi√®res et la mer. Ce syst√®me hydraulique ing√©nieux √©vita l'inondation de terres cultiv√©es pendant des si√®cles.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"19 moulins √† vent construits vers 1740 dans le Alblasserwaard pour pomper l'eau, class√©s UNESCO en 1997"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Polder d'Alblasserwaard, commune de Molenlanden, Hollande-M√©ridionale, √† 15 km de Rotterdam"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"19 moulins √† vent sur un polder, symbole des Pays-Bas, UNESCO"},
+  {name:"Moulin de Kinderdijk ó Pays-Bas",lat:51.8833,lng:4.6333,desc:"Kinderdijk abrite le plus grand ensemble de moulins ‡ vent anciens des Pays-Bas avec 19 moulins du XVIIIe siËcle. Ils pompaient l'eau de la rÈgion d'Alblasserwaard, en dessous du niveau de la mer, vers les riviËres et la mer. Ce systËme hydraulique ingÈnieux Èvita l'inondation de terres cultivÈes pendant des siËcles.",photo:"photos/moulin_de_kinderdijk.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"19 moulins ‡ vent construits vers 1740 dans le Alblasserwaard pour pomper l'eau, classÈs UNESCO en 1997"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Polder d'Alblasserwaard, commune de Molenlanden, Hollande-MÈridionale, ‡ 15 km de Rotterdam"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"19 moulins ‡ vent sur un polder, symbole des Pays-Bas, UNESCO"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Moulins de Kinderdijk aux Pays-Bas"}
   ]},
-  {name:"Keukenhof ‚Äî Lisse, Pays-Bas",lat:52.2697,lng:4.5469,desc:"Keukenhof, le plus grand jardin de fleurs du monde avec 7 millions de bulbes plant√©s chaque automne sur 32 hectares, n'ouvre que 8 semaines par an au printemps. Chaque ann√©e, son th√®me change et ses 900 vari√©t√©s de tulipes cr√©ent un tapis multicolore visible depuis les airs. Il re√ßoit 1,5 million de visiteurs en deux mois.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"32 hectares de bulbes √† fleurs, 7 millions de tulipes, jacinthes et narcisses, ouvert 8 semaines/an au printemps"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Lisse, province de Hollande-M√©ridionale, entre deux grandes villes"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand parc floral du monde, 7 millions de bulbes par saison, Hollande-M√©ridionale"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Keukenhof √† Lisse, Pays-Bas"}
+  {name:"Keukenhof ó Lisse, Pays-Bas",lat:52.2697,lng:4.5469,desc:"Keukenhof, le plus grand jardin de fleurs du monde avec 7 millions de bulbes plantÈs chaque automne sur 32 hectares, n'ouvre que 8 semaines par an au printemps. Chaque annÈe, son thËme change et ses 900 variÈtÈs de tulipes crÈent un tapis multicolore visible depuis les airs. Il reÁoit 1,5 million de visiteurs en deux mois.",photo:"photos/keukenhof.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"32 hectares de bulbes ‡ fleurs, 7 millions de tulipes, jacinthes et narcisses, ouvert 8 semaines/an au printemps"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Lisse, province de Hollande-MÈridionale, entre deux grandes villes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand parc floral du monde, 7 millions de bulbes par saison, Hollande-MÈridionale"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Keukenhof ‡ Lisse, Pays-Bas"}
   ]},
-  {name:"Ch√¢teau de Hohensalzburg ‚Äî Autriche",lat:47.7954,lng:13.0472,desc:"La forteresse de Hohensalzburg, dominant Salzbourg depuis 1077, est l'un des ch√¢teaux m√©di√©vaux les mieux conserv√©s d'Europe. Elle ne fut jamais prise par un ennemi en 900 ans. Un funiculaire la relie √† la ville depuis 1892 ‚Äî l'un des plus anciens d'Autriche encore en service.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Festung Hohensalzburg, forteresse m√©di√©vale la mieux conserv√©e d'Europe centrale, construite en 1077 par l'archev√™que Gebhard"},
+  {name:"Ch‚teau de Hohensalzburg ó Autriche",lat:47.7954,lng:13.0472,desc:"La forteresse de Hohensalzburg, dominant Salzbourg depuis 1077, est l'un des ch‚teaux mÈdiÈvaux les mieux conservÈs d'Europe. Elle ne fut jamais prise par un ennemi en 900 ans. Un funiculaire la relie ‡ la ville depuis 1892 ó l'un des plus anciens d'Autriche encore en service.",photo:"photos/chateau_de_hohensalzburg.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Festung Hohensalzburg, forteresse mÈdiÈvale la mieux conservÈe d'Europe centrale, construite en 1077 par l'archevÍque Gebhard"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Festungsberg, dominant le Vieux-Salzach et la vieille ville de Salzbourg"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse m√©di√©vale dominant Salzbourg, ville de Mozart, Autriche"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Hohensalzburg en Autriche"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse mÈdiÈvale dominant Salzbourg, ville de Mozart, Autriche"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Hohensalzburg en Autriche"}
   ]},
-  {name:"Palais de Sch√∂nbrunn ‚Äî Vienne, Autriche",lat:48.1845,lng:16.3122,desc:"Le palais de Sch√∂nbrunn comptait 1 441 pi√®ces dont seulement 40 sont ouvertes au public. Mozart joua ici √† l'√¢ge de 6 ans devant l'imp√©ratrice Marie-Th√©r√®se qui, dit-on, le prit sur ses genoux apr√®s sa performance.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"1 441 pi√®ces, r√©sidence d'√©t√© des Habsbourg, Grand Parterre et Gloriette de 1775, Mozart y joua √† 6 ans en 1762"},
+  {name:"Palais de Schˆnbrunn ó Vienne, Autriche",lat:48.1845,lng:16.3122,desc:"Le palais de Schˆnbrunn comptait 1 441 piËces dont seulement 40 sont ouvertes au public. Mozart joua ici ‡ l'‚ge de 6 ans devant l'impÈratrice Marie-ThÈrËse qui, dit-on, le prit sur ses genoux aprËs sa performance.",photo:"photos/palais_de_schonbrunn.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"1 441 piËces, rÈsidence d'ÈtÈ des Habsbourg, Grand Parterre et Gloriette de 1775, Mozart y joua ‡ 6 ans en 1762"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Hietzing (13e arrondissement), banlieue ouest de Vienne"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais baroque des Habsbourg, Versailles autrichien, Vienne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Sch√∂nbrunn √† Vienne, Autriche"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Schˆnbrunn ‡ Vienne, Autriche"}
   ]},
-  {name:"Hofburg ‚Äî Vienne, Autriche",lat:48.2066,lng:16.3656,desc:"Le Hofburg, r√©sidence des Habsbourg pendant 600 ans, est un labyrinthe de 2 600 pi√®ces construit du XIIIe au XXe si√®cle. Il abrite les joyaux de la couronne des Habsbourg, les Lipizzans de l'√âcole espagnole d'√©quitation et les appartements de Sissi. Aujourd'hui si√®ge de la pr√©sidence autrichienne, il reste ouvert aux visites.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais imp√©rial des Habsbourg depuis 1279, 18 ailes, 19 cours, 2 600 pi√®ces, Spanische Hofreitschule, Sisi Museum"},
+  {name:"Hofburg ó Vienne, Autriche",lat:48.2066,lng:16.3656,desc:"Le Hofburg, rÈsidence des Habsbourg pendant 600 ans, est un labyrinthe de 2 600 piËces construit du XIIIe au XXe siËcle. Il abrite les joyaux de la couronne des Habsbourg, les Lipizzans de l'…cole espagnole d'Èquitation et les appartements de Sissi. Aujourd'hui siËge de la prÈsidence autrichienne, il reste ouvert aux visites.",photo:"photos/hofburg.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais impÈrial des Habsbourg depuis 1279, 18 ailes, 19 cours, 2 600 piËces, Spanische Hofreitschule, Sisi Museum"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"1er arrondissement (Innere Stadt), centre de Vienne, bord du Ring"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais imp√©rial habsbourgeois au c≈ìur de Vienne, Autriche"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hofburg √† Vienne, Autriche"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais impÈrial habsbourgeois au cúur de Vienne, Autriche"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hofburg ‡ Vienne, Autriche"}
   ]},
-  {name:"Lac de Hallstatt ‚Äî Autriche",lat:47.5622,lng:13.6493,desc:"Le cimeti√®re de Hallstatt est si petit que les os exhum√©s apr√®s 10-12 ans sont d√©cor√©s de motifs et plac√©s dans une chapelle √† cr√¢nes ‚Äî la Beinhaus. Cette tradition unique perp√©tue la m√©moire des d√©funts dans une ville o√π les morts d√©passent les vivants.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Village de 780 habitants sur une falaise au bord du Hallst√§ttersee, mine de sel la plus ancienne du monde (-5000 av. J.-C.)"},
+  {name:"Lac de Hallstatt ó Autriche",lat:47.5622,lng:13.6493,desc:"Le cimetiËre de Hallstatt est si petit que les os exhumÈs aprËs 10-12 ans sont dÈcorÈs de motifs et placÈs dans une chapelle ‡ cr‚nes ó la Beinhaus. Cette tradition unique perpÈtue la mÈmoire des dÈfunts dans une ville o˘ les morts dÈpassent les vivants.",photo:"photos/lac_de_hallstatt.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Village de 780 habitants sur une falaise au bord du Hallst‰ttersee, mine de sel la plus ancienne du monde (-5000 av. J.-C.)"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lac de Salzkammergut, entre deux grandes villes alpines, village aux maisons sur l'eau"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Village alpin sur le lac, mine de sel mill√©naire, Salzkammergut, Autriche"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Village alpin sur le lac, mine de sel millÈnaire, Salzkammergut, Autriche"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac de Hallstatt en Autriche"}
   ]},
-  {name:"Pont Charles ‚Äî Prague, R√©p. Tch√®que",lat:50.0865,lng:14.4114,desc:"Le pont Charles de Prague fut construit selon la num√©rologie m√©di√©vale : la premi√®re pierre fut pos√©e le 9 juillet 1357 √† 5h31 du matin, formant la s√©quence palindromique 1357 9 7 5 31. Cette date ¬´magique¬ª devait assurer la solidit√© √©ternelle du pont.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Karl?v most, construit de 1357 √† 1402 par Charles IV, 516m, 30 statues baroques, premi√®re pierre pos√©e le 9 juillet 1357"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Enjambant la Vltava entre Mal√° Strana et Star√© M?sto, Prague, Tch√©quie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pont m√©di√©val aux 30 statues baroques, symbole de Prague"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont Charles √† Prague, R√©p. Tch√®que"}
-  ]},
-  {name:"Mines de sel de Wieliczka ‚Äî Pologne",lat:49.9833,lng:20.0553,desc:"Les ouvriers des mines de sel de Wieliczka utilisaient les 300 km de galeries pour se rep√©rer en sculptant des chapelles, des statues et m√™me une reconstitution de la C√®ne dans le sel. La chapelle Sainte-Kinga, enti√®rement taill√©e dans le sel, mesure 54 m de long pour 12 m de hauteur.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wieliczka Salt Mine, exploit√©e depuis le XIIIe si√®cle, 287km de galeries, chapelle Sainte-Kinga taill√©e dans le sel √† 101m de prof"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville √† 14 km d'une cit√© royale, mines de sel mill√©naires, cath√©drale souterraine"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mine de sel mill√©naire avec chapelle sculpt√©e, Wieliczka, Pologne"},
+    {name:"Mines de sel de Wieliczka ó Pologne",lat:49.9833,lng:20.0553,desc:"Les ouvriers des mines de sel de Wieliczka utilisaient les 300 km de galeries pour se repÈrer en sculptant des chapelles, des statues et mÍme une reconstitution de la CËne dans le sel. La chapelle Sainte-Kinga, entiËrement taillÈe dans le sel, mesure 54 m de long pour 12 m de hauteur.",photo:"photos/mines_de_sel_de_wieliczka.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wieliczka Salt Mine, exploitÈe depuis le XIIIe siËcle, 287km de galeries, chapelle Sainte-Kinga taillÈe dans le sel ‡ 101m de prof"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville ‡ 14 km d'une citÈ royale, mines de sel millÈnaires, cathÈdrale souterraine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mine de sel millÈnaire avec chapelle sculptÈe, Wieliczka, Pologne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Mines de sel de Wieliczka, Pologne"}
   ]},
-  {name:"Ch√¢teau de Malbork ‚Äî Pologne",lat:54.0395,lng:19.0289,desc:"Le ch√¢teau de Malbork, construit en briques rouges sur une √Æle de la rivi√®re Nogat, est la plus grande forteresse m√©di√©vale du monde. Les Chevaliers Teutoniques l'√©rig√®rent avec 4 millions de briques fabriqu√©es dans des fours locaux.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ordensburg Marienburg, plus grande forteresse m√©di√©vale du monde en brique (210 000 m¬≤), si√®ge de l'Ordre Teutonique 1309-1457"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord de la Nogat, Pom√©ranie, nord d'un pays d'Europe centrale, plus grand ch√¢teau de briques du monde"},
+  {name:"Ch‚teau de Malbork ó Pologne",lat:54.0395,lng:19.0289,desc:"Le ch‚teau de Malbork, construit en briques rouges sur une Óle de la riviËre Nogat, est la plus grande forteresse mÈdiÈvale du monde. Les Chevaliers Teutoniques l'ÈrigËrent avec 4 millions de briques fabriquÈes dans des fours locaux.",photo:"photos/chateau_de_malbork.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ordensburg Marienburg, plus grande forteresse mÈdiÈvale du monde en brique (210 000 m≤), siËge de l'Ordre Teutonique 1309-1457"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord de la Nogat, PomÈranie, nord d'un pays d'Europe centrale, plus grand ch‚teau de briques du monde"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande forteresse de brique du monde, Malbork, nord de la Pologne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Malbork en Pologne"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Malbork en Pologne"}
   ]},
-  {name:"Chantier naval de Gda?sk ‚Äî Pologne",lat:54.3609,lng:18.6509,desc:"Le chantier naval L√©nine de Gda?sk fut le berceau de Solidarno?? (Solidarit√©), le syndicat fond√© par Lech Wa??sa en 1980. Cette r√©volution ouvri√®re non-violente contribua √† la chute du communisme en Europe de l'Est. Les 21 revendications des ouvriers, affich√©es sur une porte du chantier, sont class√©es au registre de la M√©moire du Monde de l'UNESCO.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stocznia Gda?ska, berceau de Solidarno?? (Solidarit√©), gr√®ves de 1980, Lech Wa??sa, centre europ√©en de la solidarit√©"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Wrzeszcz, bord de la Mot?awa, Gda?sk, Pom√©ranie, mer Baltique"},
+  {name:"Chantier naval de Gda?sk ó Pologne",lat:54.3609,lng:18.6509,desc:"Le chantier naval LÈnine de Gda?sk fut le berceau de Solidarno?? (SolidaritÈ), le syndicat fondÈ par Lech Wa??sa en 1980. Cette rÈvolution ouvriËre non-violente contribua ‡ la chute du communisme en Europe de l'Est. Les 21 revendications des ouvriers, affichÈes sur une porte du chantier, sont classÈes au registre de la MÈmoire du Monde de l'UNESCO.",photo:"photos/chantier_naval_de_gda_sk.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stocznia Gda?ska, berceau de Solidarno?? (SolidaritÈ), grËves de 1980, Lech Wa??sa, centre europÈen de la solidaritÈ"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Wrzeszcz, bord de la Mot?awa, Gda?sk, PomÈranie, mer Baltique"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chantier naval berceau de Solidarno??, Gda?sk, Pologne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chantier naval de Gda?sk en Pologne"}
   ]},
-  {name:"Forteresse de Narva ‚Äî Estonie",lat:59.3773,lng:28.1728,desc:"La forteresse de Narva fait face au ch√¢teau d'Ivangorod russe √† seulement 150 m√®tres ‚Äî deux forteresses m√©di√©vales de pays diff√©rents se regardant √† travers la rivi√®re Narva, fronti√®re entre l'Union europ√©enne et la Russie. La ville de Narva fut d√©truite √† 98% pendant la Seconde Guerre mondiale et enti√®rement reconstruite.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hermanni linnus, forteresse m√©di√©vale face √† une forteresse rivale, s√©par√©es par une rivi√®re fronti√®re"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord de la Narva, est d'un pays balte, deux forteresses face √† face de part et d'autre de la fronti√®re"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse m√©di√©vale √† la fronti√®re Estonie-Russie, face √† Ivangorod"},
+  {name:"Forteresse de Narva ó Estonie",lat:59.3773,lng:28.1728,desc:"La forteresse de Narva fait face au ch‚teau d'Ivangorod russe ‡ seulement 150 mËtres ó deux forteresses mÈdiÈvales de pays diffÈrents se regardant ‡ travers la riviËre Narva, frontiËre entre l'Union europÈenne et la Russie. La ville de Narva fut dÈtruite ‡ 98% pendant la Seconde Guerre mondiale et entiËrement reconstruite.",photo:"photos/forteresse_de_narva.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hermanni linnus, forteresse mÈdiÈvale face ‡ une forteresse rivale, sÈparÈes par une riviËre frontiËre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord de la Narva, est d'un pays balte, deux forteresses face ‡ face de part et d'autre de la frontiËre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse mÈdiÈvale ‡ la frontiËre Estonie-Russie, face ‡ Ivangorod"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Forteresse de Narva en Estonie"}
   ]},
-  {name:"Colline de Gediminas ‚Äî Vilnius, Lituanie",lat:54.6868,lng:25.2922,desc:"La colline de Gediminas, √† 48 m√®tres au-dessus de la vieille ville, abrite la tour gothique du Grand-Duc Gediminas (XIVe si√®cle), symbole de la Lituanie. C'est de cette colline que Gediminas r√™va d'un loup d'acier hurlant ‚Äî un oracle lui ordonnant de fonder une ville √† cet endroit, qui deviendrait Vilnius.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tour Gediminien du XIVe si√®cle, r√©sidu du ch√¢teau sup√©rieur de Vilnius, fond√© par Gediminas vers 1322, confluence Neris-Vilnia"},
+  {name:"Colline de Gediminas ó Vilnius, Lituanie",lat:54.6868,lng:25.2922,desc:"La colline de Gediminas, ‡ 48 mËtres au-dessus de la vieille ville, abrite la tour gothique du Grand-Duc Gediminas (XIVe siËcle), symbole de la Lituanie. C'est de cette colline que Gediminas rÍva d'un loup d'acier hurlant ó un oracle lui ordonnant de fonder une ville ‡ cet endroit, qui deviendrait Vilnius.",photo:"photos/colline_de_gediminas.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tour Gediminien du XIVe siËcle, rÈsidu du ch‚teau supÈrieur de Vilnius, fondÈ par Gediminas vers 1322, confluence Neris-Vilnia"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline de Gediminas, dominant la vieille ville baroque, capitale d'un pays balte"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour m√©di√©vale embl√®me de Vilnius, capitale de la Lituanie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Colline de Gediminas √† Vilnius, Lituanie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour mÈdiÈvale emblËme de Vilnius, capitale de la Lituanie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Colline de Gediminas ‡ Vilnius, Lituanie"}
   ]},
-  {name:"Ch√¢teau de Sigulda ‚Äî Lettonie",lat:57.1539,lng:24.8555,desc:"Le ch√¢teau de Sigulda fut fond√© par les Fr√®res Porte-Glaive en 1207. La r√©gion de Sigulda, surnomm√©e ¬´la Suisse de la Lettonie¬ª, abrite la seule piste de bobsleigh naturelle des pays baltes, construite pour les Jeux olympiques de 1994 jamais organis√©s en Lettonie.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch√¢teau de l'Ordre de Livonie (1207), vall√©e de la Gauja, for√™t automnale rousse, piste de bobsleigh olympique"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vall√©e de la Gauja, Vidzeme, √† 50 km de la capitale d'un pays balte, paysages de collines bois√©es"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau m√©di√©val dans la Suisse livonienne, Sigulda, Lettonie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Sigulda en Lettonie"}
+  {name:"Ch‚teau de Sigulda ó Lettonie",lat:57.1539,lng:24.8555,desc:"Le ch‚teau de Sigulda fut fondÈ par les FrËres Porte-Glaive en 1207. La rÈgion de Sigulda, surnommÈe ´la Suisse de la Lettonieª, abrite la seule piste de bobsleigh naturelle des pays baltes, construite pour les Jeux olympiques de 1994 jamais organisÈs en Lettonie.",photo:"photos/chateau_de_sigulda.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ch‚teau de l'Ordre de Livonie (1207), vallÈe de la Gauja, forÍt automnale rousse, piste de bobsleigh olympique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"VallÈe de la Gauja, Vidzeme, ‡ 50 km de la capitale d'un pays balte, paysages de collines boisÈes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau mÈdiÈval dans la Suisse livonienne, Sigulda, Lettonie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Sigulda en Lettonie"}
   ]},
-  {name:"Maison de la Blackhead ‚Äî Tallinn, Estonie",lat:59.437,lng:24.746,desc:"La Maison des T√™tes-Noires de Tallinn √©tait le si√®ge de la confr√©rie des marchands c√©libataires hanseatiques. Son portail Renaissance de 1597 est l'un des plus beaux de la Baltique. La confr√©rie dut dissoudre en 1940 lors de l'occupation sovi√©tique, mais renaquit en 1995 et occupe de nouveau la maison.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Maison de la Confr√©rie des T√™tes-Noires (marchands c√©libataires), fa√ßade Renaissance de 1597, Raekoja plats, Tallinn"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vieille ville m√©di√©vale d'une capitale baltique, Pikk t√§nav (Grande rue)"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√âdifice Renaissance de la vieille ville de Tallinn, Estonie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Maison de la Blackhead √† Tallinn, Estonie"}
+  {name:"Maison de la Blackhead ó Tallinn, Estonie",lat:59.437,lng:24.746,desc:"La Maison des TÍtes-Noires de Tallinn Ètait le siËge de la confrÈrie des marchands cÈlibataires hanseatiques. Son portail Renaissance de 1597 est l'un des plus beaux de la Baltique. La confrÈrie dut dissoudre en 1940 lors de l'occupation soviÈtique, mais renaquit en 1995 et occupe de nouveau la maison.",photo:"photos/maison_de_la_blackhead.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Maison de la ConfrÈrie des TÍtes-Noires (marchands cÈlibataires), faÁade Renaissance de 1597, Raekoja plats, Tallinn"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vieille ville mÈdiÈvale d'une capitale baltique, Pikk t‰nav (Grande rue)"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"…difice Renaissance de la vieille ville de Tallinn, Estonie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Maison de la Blackhead ‡ Tallinn, Estonie"}
   ]},
-  {name:"Ch√¢teau de Predjama ‚Äî Slov√©nie",lat:45.8167,lng:14.1228,desc:"Le ch√¢teau de Predjama est le plus grand ch√¢teau rupestre du monde, encastr√© dans une falaise de 123 m√®tres. Au XVe si√®cle, le chevalier Erazem Lueger y r√©sista pendant un an √† un si√®ge. Il fut finalement trahi par un serviteur qui signala √† l'ennemi le moment o√π Erazem utilisait les latrines.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Forteresse Renaissance int√©gr√©e dans la paroi d'une falaise de 123m, r√©sidence d'Erasmus de Lueg au XVe si√®cle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Village de Carniole int√©rieure d'un pays alpin, ch√¢teau suspendu dans une falaise"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau dans la falaise le plus grand au monde, Slov√©nie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Predjama, Slov√©nie"}
+  {name:"Ch‚teau de Predjama ó SlovÈnie",lat:45.8167,lng:14.1228,desc:"Le ch‚teau de Predjama est le plus grand ch‚teau rupestre du monde, encastrÈ dans une falaise de 123 mËtres. Au XVe siËcle, le chevalier Erazem Lueger y rÈsista pendant un an ‡ un siËge. Il fut finalement trahi par un serviteur qui signala ‡ l'ennemi le moment o˘ Erazem utilisait les latrines.",photo:"photos/chateau_de_predjama.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Forteresse Renaissance intÈgrÈe dans la paroi d'une falaise de 123m, rÈsidence d'Erasmus de Lueg au XVe siËcle"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Village de Carniole intÈrieure d'un pays alpin, ch‚teau suspendu dans une falaise"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau dans la falaise le plus grand au monde, SlovÈnie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Predjama, SlovÈnie"}
   ]},
-  {name:"Lac de Bled ‚Äî Slov√©nie",lat:46.3683,lng:14.0933,desc:"Le lac de Bled est la seule √Æle naturelle de Slov√©nie. La tradition veut que les mari√©s rament jusqu'√† l'√Æle, que l'√©poux porte sa femme sur les 99 marches menant √† l'√©glise et sonne la cloche aux v≈ìux pour un mariage heureux.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac glaciaire aux eaux √©meraude, √Æle au c≈ìur du lac avec l'√©glise Marie-M√®re de Dieu (1465), ch√¢teau du XIe si√®cle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Au pied des Alpes juliennes, nord-ouest d'un pays alpin, √Æle et ch√¢teau dans un lac glaciaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac √©meraude avec √Æle et ch√¢teau, joyau des Alpes slov√®nes"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac de Bled en Slov√©nie"}
+  {name:"Lac de Bled ó SlovÈnie",lat:46.3683,lng:14.0933,desc:"Le lac de Bled est la seule Óle naturelle de SlovÈnie. La tradition veut que les mariÈs rament jusqu'‡ l'Óle, que l'Èpoux porte sa femme sur les 99 marches menant ‡ l'Èglise et sonne la cloche aux vúux pour un mariage heureux.",photo:"photos/lac_de_bled.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac glaciaire aux eaux Èmeraude, Óle au cúur du lac avec l'Èglise Marie-MËre de Dieu (1465), ch‚teau du XIe siËcle"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Au pied des Alpes juliennes, nord-ouest d'un pays alpin, Óle et ch‚teau dans un lac glaciaire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac Èmeraude avec Óle et ch‚teau, joyau des Alpes slovËnes"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac de Bled en SlovÈnie"}
   ]},
-  {name:"Plitvice ‚Äî Croatie",lat:44.8654,lng:15.582,desc:"Les 16 lacs de Plitvice sont reli√©s par 92 cascades et changent perp√©tuellement de taille et de position. De nouveaux barrages naturels en travertin se forment sous l'action des algues, mouvant les cascades de quelques centim√®tres chaque ann√©e ‚Äî le paysage est en transformation constante.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"16 lacs en cascade reli√©s par 92 chutes d'eau, couleur bleue-verte due aux min√©raux, barrages de travertin naturel"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comt√© d'un pays adriatique, √† 130 km de la capitale, cascades turquoise en √©tag√®res"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Seize lacs en cascade reli√©s par 92 chutes d'eau turquoise, parc national de Croatie centrale"},
+  {name:"Plitvice ó Croatie",lat:44.8654,lng:15.582,desc:"Les 16 lacs de Plitvice sont reliÈs par 92 cascades et changent perpÈtuellement de taille et de position. De nouveaux barrages naturels en travertin se forment sous l'action des algues, mouvant les cascades de quelques centimËtres chaque annÈe ó le paysage est en transformation constante.",photo:"photos/plitvice.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"16 lacs en cascade reliÈs par 92 chutes d'eau, couleur bleue-verte due aux minÈraux, barrages de travertin naturel"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ComtÈ d'un pays adriatique, ‡ 130 km de la capitale, cascades turquoise en ÈtagËres"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Seize lacs en cascade reliÈs par 92 chutes d'eau turquoise, parc national de Croatie centrale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Plitvice en Croatie"}
   ]},
-  {name:"Cath√©drale de Sagrada Fam√≠lia nuit ‚Äî Barcelone",lat:41.4037,lng:2.1741,desc:"Gaud√≠ consacra les 43 derni√®res ann√©es de sa vie √† cette cath√©drale. Renvers√© par un tramway en 1926, il fut enterr√© dans sa propre √©glise. La construction, financ√©e uniquement par les entr√©es des visiteurs, devrait s'achever en 2026.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Illumination nocturne des fa√ßades de la Nativit√© et de la Passion, 18 clochers pr√©vus, vitraux colorant la nef le matin"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Carrer de Proven√ßa, Eixample esquerre"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sagrada Fam√≠lia de nuit, Barcelone, Espagne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Sagrada Fam√≠lia de nuit, √† Barcelone, Espagne"}
+  {name:"CathÈdrale de Sagrada FamÌlia nuit ó Barcelone",lat:41.4037,lng:2.1741,desc:"GaudÌ consacra les 43 derniËres annÈes de sa vie ‡ cette cathÈdrale. RenversÈ par un tramway en 1926, il fut enterrÈ dans sa propre Èglise. La construction, financÈe uniquement par les entrÈes des visiteurs, devrait s'achever en 2026.",photo:"photos/cathedrale_de_sagrada_familia_nuit.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Illumination nocturne des faÁades de la NativitÈ et de la Passion, 18 clochers prÈvus, vitraux colorant la nef le matin"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Carrer de ProvenÁa, Eixample esquerre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sagrada FamÌlia de nuit, Barcelone, Espagne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Sagrada FamÌlia de nuit, ‡ Barcelone, Espagne"}
   ]},
-  {name:"Tour de Belfort ‚Äî France",lat:47.6405,lng:6.8626,desc:"La tour de Belfort servit de prison d'√âtat sous l'Ancien R√©gime. C'est √† son pied que se dresse le Lion de Belfort sculpt√© par Bartholdi ‚Äî le m√™me artiste qui cr√©a la Statue de la Libert√©. Ce lion de gr√®s rose de 11 m√®tres symbolise la r√©sistance de la ville lors du si√®ge de 1870.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Citadelle de Vauban dominant la Trou√©e de Belfort, lion de Bartholdi (1880, 11m), r√©sistance de Denfert-Rochereau en 1870-71"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline du ch√¢teau, centre de Belfort, Territoire de Belfort, entre Alsace et Franche-Comt√©"},
+  {name:"Tour de Belfort ó France",lat:47.6405,lng:6.8626,desc:"La tour de Belfort servit de prison d'…tat sous l'Ancien RÈgime. C'est ‡ son pied que se dresse le Lion de Belfort sculptÈ par Bartholdi ó le mÍme artiste qui crÈa la Statue de la LibertÈ. Ce lion de grËs rose de 11 mËtres symbolise la rÈsistance de la ville lors du siËge de 1870.",photo:"photos/tour_de_belfort.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Citadelle de Vauban dominant la TrouÈe de Belfort, lion de Bartholdi (1880, 11m), rÈsistance de Denfert-Rochereau en 1870-71"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline du ch‚teau, centre de Belfort, Territoire de Belfort, entre Alsace et Franche-ComtÈ"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Citadelle de Vauban et lion de Bartholdi, Belfort, est de la France"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour de Belfort en France"}
   ]},
-  {name:"Cath√©drale de Chartres ‚Äî France",lat:48.4474,lng:1.4877,desc:"La cath√©drale de Chartres est l'une des rares √† avoir conserv√© ses vitraux m√©di√©vaux d'origine. Pendant la Seconde Guerre mondiale, les Chartranais d√©pos√®rent les 176 vitraux et les enfouirent dans des caisses dans des caves pour les prot√©ger des bombardements.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cath√©drale Notre-Dame de Chartres, gothique flamboyant du XIIe si√®cle, 176 vitraux m√©di√©vaux, voile de la Vierge"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Chartres, Eure-et-Loir, √† 80 km de la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale gothique aux 176 vitraux m√©di√©vaux, Chartres, France"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cath√©drale de Chartres en France"}
+    {name:"Cirque de Gavarnie ó Hautes-PyrÈnÈes, France",lat:42.7274,lng:-0.0167,desc:"La grande cascade de Gavarnie, avec ses 422 mËtres, est la plus haute de France. Le cirque fut dÈcrit par Victor Hugo comme ´le plus grand Èdifice que le Dieu ait faitª lors de son passage en 1843.",photo:"photos/cirque_de_gavarnie.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"AmphithÈ‚tre naturel de 14 km de circonfÈrence, Grande Cascade (423m), brËche de Roland (100m), Hautes-PyrÈnÈes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Gavarnie, canton d'ArgelËs-Gazost, Hautes-PyrÈnÈes, frontiËre espagnole"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cirque glaciaire aux parois de 1 500m, PyrÈnÈes, UNESCO, France"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cirque de Gavarnie ‡ Hautes-PyrÈnÈes, France"}
   ]},
-  {name:"Cirque de Gavarnie ‚Äî Hautes-Pyr√©n√©es, France",lat:42.7274,lng:-0.0167,desc:"La grande cascade de Gavarnie, avec ses 422 m√®tres, est la plus haute de France. Le cirque fut d√©crit par Victor Hugo comme ¬´le plus grand √©difice que le Dieu ait fait¬ª lors de son passage en 1843.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Amphith√©√¢tre naturel de 14 km de circonf√©rence, Grande Cascade (423m), br√®che de Roland (100m), Hautes-Pyr√©n√©es"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Gavarnie, canton d'Argel√®s-Gazost, Hautes-Pyr√©n√©es, fronti√®re espagnole"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cirque glaciaire aux parois de 1 500m, Pyr√©n√©es, UNESCO, France"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cirque de Gavarnie √† Hautes-Pyr√©n√©es, France"}
-  ]},
-  {name:"Aiguille du Midi ‚Äî Chamonix, France",lat:45.879,lng:6.8873,desc:"L'Aiguille du Midi est accessible depuis Chamonix par le t√©l√©ph√©rique le plus haut d'Europe, s'√©levant de 1 035 m √† 3 842 m en 20 minutes. Son ¬´Pas dans le vide¬ª, une cabine de verre suspendue √† 3 842 m√®tres, permet de marcher litt√©ralement dans le ciel au-dessus du vide.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sommet de 3 842m, t√©l√©ph√©rique depuis Chamonix en deux √©tapes (1955), vue sur Mont Blanc (4 808m), passerelle dans le vide"},
+  {name:"Aiguille du Midi ó Chamonix, France",lat:45.879,lng:6.8873,desc:"L'Aiguille du Midi est accessible depuis Chamonix par le tÈlÈphÈrique le plus haut d'Europe, s'Èlevant de 1 035 m ‡ 3 842 m en 20 minutes. Son ´Pas dans le videª, une cabine de verre suspendue ‡ 3 842 mËtres, permet de marcher littÈralement dans le ciel au-dessus du vide.",photo:"photos/aiguille_du_midi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sommet de 3 842m, tÈlÈphÈrique depuis Chamonix en deux Ètapes (1955), vue sur Mont Blanc (4 808m), passerelle dans le vide"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massif du Mont-Blanc, commune de Chamonix, Haute-Savoie, plus haut sommet d'Europe occidentale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sommet alpin de 3 842 m accessible en t√©l√©ph√©rique, vue sur le plus haut sommet d'Europe, Haute-Savoie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Aiguille du Midi √† Chamonix, France"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sommet alpin de 3 842 m accessible en tÈlÈphÈrique, vue sur le plus haut sommet d'Europe, Haute-Savoie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Aiguille du Midi ‡ Chamonix, France"}
   ]},
-  {name:"Gorges du Verdon ‚Äî France",lat:43.721,lng:6.344,desc:"Le Verdon doit ses eaux d'un turquoise irr√©el aux particules de calcaire en suspension qui r√©fractent la lumi√®re bleue. La gorge, jusqu'√† 700 m√®tres de profondeur, ne fut explor√©e pour la premi√®re fois qu'en 1905 par le g√©ographe √âdouard-Alfred Martel.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canyon de 25 km de long et jusqu'√† 700m de profondeur creus√© par le Verdon, lac de Sainte-Croix (9,5 km¬≤)"},
+  {name:"Gorges du Verdon ó France",lat:43.721,lng:6.344,desc:"Le Verdon doit ses eaux d'un turquoise irrÈel aux particules de calcaire en suspension qui rÈfractent la lumiËre bleue. La gorge, jusqu'‡ 700 mËtres de profondeur, ne fut explorÈe pour la premiËre fois qu'en 1905 par le gÈographe …douard-Alfred Martel.",photo:"photos/aiguille_du_midi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canyon de 25 km de long et jusqu'‡ 700m de profondeur creusÈ par le Verdon, lac de Sainte-Croix (9,5 km≤)"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Var et Alpes-de-Haute-Provence, Provence, entre Moustiers et Castellane"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand Canyon fran√ßais, 700 m de profondeur, lac turquoise, Provence"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand Canyon franÁais, 700 m de profondeur, lac turquoise, Provence"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Gorges du Verdon en France"}
   ]},
-  {name:"Abbaye du Mont Saint-Michel ‚Äî Normandie",lat:48.6361,lng:-1.5115,desc:"La baie du Mont-Saint-Michel poss√®de le coefficient de mar√©e le plus fort d'Europe continentale. En 1879, la construction d'une digue pour relier le Mont au continent acc√©l√©ra l'envasement de la baie. La digue fut d√©mantel√©e et remplac√©e par un pont en 2014 pour laisser circuler les eaux.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Abbaye b√©n√©dictine sur l'√Ælot granitique, mar√©es les plus importantes d'Europe (14m), acc√®s par digue depuis 1878"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Baie du Mont-Saint-Michel, commune du Mont-Saint-Michel, Manche, Normandie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Abbaye perch√©e sur son rocher en Normandie, merveille de France"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Abbaye du Mont Saint-Michel en Normandie"}
-  ]},
-  {name:"Ch√¢teau de Carcassonne ‚Äî France",lat:43.2076,lng:2.3644,desc:"La double enceinte de Carcassonne inspira le jeu de soci√©t√© √©ponyme, vendu √† 70 millions d'exemplaires dans le monde. Dans ce jeu, les joueurs construisent villes et routes en posant des tuiles ‚Äî une m√©canique n√©e de la contemplation des remparts m√©di√©vaux.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© m√©di√©vale fortifi√©e, 3 km de remparts, 52 tours, restaur√©e par Viollet-le-Duc entre 1853 et 1879, bord de l'Aude"},
+    {name:"Ch‚teau de Carcassonne ó France",lat:43.2076,lng:2.3644,desc:"La double enceinte de Carcassonne inspira le jeu de sociÈtÈ Èponyme, vendu ‡ 70 millions d'exemplaires dans le monde. Dans ce jeu, les joueurs construisent villes et routes en posant des tuiles ó une mÈcanique nÈe de la contemplation des remparts mÈdiÈvaux.",photo:"photos/chateau_de_carcassonne.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ mÈdiÈvale fortifiÈe, 3 km de remparts, 52 tours, restaurÈe par Viollet-le-Duc entre 1853 et 1879, bord de l'Aude"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Carcassonne, Aude, Occitanie, bord de l'Aude et du Canal du Midi"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© m√©di√©vale fortifi√©e de Carcassonne, Occitanie, France"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Carcassonne en France"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ mÈdiÈvale fortifiÈe de Carcassonne, Occitanie, France"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Carcassonne en France"}
   ]},
-  {name:"Palais des Papes ‚Äî Avignon, France",lat:43.9493,lng:4.8059,desc:"Le Palais des Papes d'Avignon est la plus grande construction gothique m√©di√©vale du monde avec ses 15 000 m¬≤ habitables. La papaut√© s'y installa de 1309 √† 1377, fuyant les troubles de Rome. √Ä son apog√©e, la cour d'Avignon √©tait plus riche et plus influente que celle de Paris.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais pontifical construit de 1335 √† 1364, si√®ge de 7 papes d'Avignon (1309-1377), plus grand palais gothique m√©di√©val"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place du Palais, Avignon, Vaucluse, Provence, bord du Rh√¥ne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand palais gothique m√©di√©val au monde, si√®ge de la papaut√© au XIVe si√®cle, Provence"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais des Papes √† Avignon, France"}
+  {name:"Palais des Papes ó Avignon, France",lat:43.9493,lng:4.8059,desc:"Le Palais des Papes d'Avignon est la plus grande construction gothique mÈdiÈvale du monde avec ses 15 000 m≤ habitables. La papautÈ s'y installa de 1309 ‡ 1377, fuyant les troubles de Rome. ¿ son apogÈe, la cour d'Avignon Ètait plus riche et plus influente que celle de Paris.",photo:"photos/palais_des_papes.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais pontifical construit de 1335 ‡ 1364, siËge de 7 papes d'Avignon (1309-1377), plus grand palais gothique mÈdiÈval"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place du Palais, Avignon, Vaucluse, Provence, bord du RhÙne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand palais gothique mÈdiÈval au monde, siËge de la papautÈ au XIVe siËcle, Provence"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais des Papes ‡ Avignon, France"}
   ]},
-  {name:"Ch√¢teau de Fontainebleau ‚Äî France",lat:48.4023,lng:2.7014,desc:"Ch√¢teau de Fontainebleau est un lieu historique remarquable situ√© en Europe.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"R√©sidence de chasse des rois depuis le XIIe si√®cle, Galerie Fran√ßois Ier, 1 900 pi√®ces, for√™t de 17 000 ha"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"For√™t royale de Seine-et-Marne, √† 55 km au sud-est de la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau royal Renaissance de Fontainebleau, for√™t giboyeuse, France"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Fontainebleau en France"}
+  {name:"Ch‚teau de Fontainebleau ó France",lat:48.4023,lng:2.7014,desc:"Ch‚teau de Fontainebleau est un lieu historique remarquable situÈ en Europe.",photo:"photos/chateau_de_blarney.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"RÈsidence de chasse des rois depuis le XIIe siËcle, Galerie FranÁois Ier, 1 900 piËces, forÍt de 17 000 ha"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ForÍt royale de Seine-et-Marne, ‡ 55 km au sud-est de la capitale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau royal Renaissance de Fontainebleau, forÍt giboyeuse, France"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Fontainebleau en France"}
   ]},
-  {name:"Falaises d'√âtretat ‚Äî Normandie, France",lat:49.7071,lng:0.2047,desc:"Les falaises d'√âtretat, sculpt√©es dans la craie blanche par la mer, furent immortalis√©es par Monet (qui y peignit 20 tableaux), par Maupassant (n√© √† 10 km) et par Ars√®ne Lupin dans les romans de Maurice Leblanc. La ¬´Chambre des Demoiselles¬ª, grotte marine accessible √† mar√©e basse, inspira le roman Aiguille Creuse.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Falaises d'alb√¢tre perc√©es de trois arches naturelles (Aval, Amont, Manneporte), peintes par Monet, Guy de Maupassant"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'√âtretat, Seine-Maritime, Pays de Caux, Normandie, Manche"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Falaises d'alb√¢tre d'√âtretat aux arches naturelles, Normandie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Falaises d'√âtretat √† Normandie, France"}
+  {name:"Falaises d'…tretat ó Normandie, France",lat:49.7071,lng:0.2047,desc:"Les falaises d'…tretat, sculptÈes dans la craie blanche par la mer, furent immortalisÈes par Monet (qui y peignit 20 tableaux), par Maupassant (nÈ ‡ 10 km) et par ArsËne Lupin dans les romans de Maurice Leblanc. La ´Chambre des Demoisellesª, grotte marine accessible ‡ marÈe basse, inspira le roman Aiguille Creuse.",photo:"photos/falaises_d_etretat.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Falaises d'alb‚tre percÈes de trois arches naturelles (Aval, Amont, Manneporte), peintes par Monet, Guy de Maupassant"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'…tretat, Seine-Maritime, Pays de Caux, Normandie, Manche"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Falaises d'alb‚tre d'…tretat aux arches naturelles, Normandie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Falaises d'…tretat ‡ Normandie, France"}
   ]},
-  {name:"Calanques de Marseille ‚Äî France",lat:43.2151,lng:5.4317,desc:"Les calanques de Marseille sont creus√©es dans du calcaire vieux de 45 millions d'ann√©es. Leurs eaux turquoise doivent leur couleur √† leur puret√© exceptionnelle et √† leur faible profondeur qui r√©fl√©chit le fond rocheux blanc. La baignade y est restreinte en √©t√© pour prot√©ger l'√©cosyst√®me.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc national des Calanques, 20km de c√¥tes calcaires entre Marseille et Cassis, Calanque d'En-Vau et de Port-Miou"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massif de Marseilleveyre, entre Marseille et Cassis, Bouches-du-Rh√¥ne, M√©diterran√©e"},
+  {name:"Calanques de Marseille ó France",lat:43.2151,lng:5.4317,desc:"Les calanques de Marseille sont creusÈes dans du calcaire vieux de 45 millions d'annÈes. Leurs eaux turquoise doivent leur couleur ‡ leur puretÈ exceptionnelle et ‡ leur faible profondeur qui rÈflÈchit le fond rocheux blanc. La baignade y est restreinte en ÈtÈ pour protÈger l'ÈcosystËme.",photo:"photos/calanques_de_marseille.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc national des Calanques, 20km de cÙtes calcaires entre Marseille et Cassis, Calanque d'En-Vau et de Port-Miou"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massif de Marseilleveyre, entre Marseille et Cassis, Bouches-du-RhÙne, MÈditerranÈe"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Calanques aux eaux turquoise, parc national entre Marseille et Cassis"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Calanques de Marseille en France"}
   ]},
-  {name:"Giverny ‚Äî Normandie, France",lat:49.0766,lng:1.534,desc:"Le jardin de Giverny fut cr√©√© de toutes pi√®ces par Claude Monet qui y v√©cut de 1883 √† 1926. Son bassin de nymph√©as aux ponts japonais inspira sa s√©rie ¬´Les Nymph√©as¬ª en 250 tableaux ‚Äî son ≈ìuvre majeure. Monet fit creuser l'√©tang, d√©river une rivi√®re et planter les esp√®ces exactes qu'il souhaitait peindre.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Maison et jardin de Claude Monet (1883-1926), pont japonais sur l'√©tang aux nymph√©as, source des Nymph√©as √† l'Orangerie"},
+  {name:"Giverny ó Normandie, France",lat:49.0766,lng:1.534,desc:"Le jardin de Giverny fut crÈÈ de toutes piËces par Claude Monet qui y vÈcut de 1883 ‡ 1926. Son bassin de nymphÈas aux ponts japonais inspira sa sÈrie ´Les NymphÈasª en 250 tableaux ó son úuvre majeure. Monet fit creuser l'Ètang, dÈriver une riviËre et planter les espËces exactes qu'il souhaitait peindre.",photo:"photos/giverny.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Maison et jardin de Claude Monet (1883-1926), pont japonais sur l'Ètang aux nymphÈas, source des NymphÈas ‡ l'Orangerie"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Giverny, Eure, Normandie, confluence Seine-Epte"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Jardin de Claude Monet avec son c√©l√®bre √©tang aux nymph√©as, Eure, Normandie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Giverny √† Normandie, France"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Jardin de Claude Monet avec son cÈlËbre Ètang aux nymphÈas, Eure, Normandie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Giverny ‡ Normandie, France"}
   ]},
-  {name:"Palais Royal de Bangkok ‚Äî Tha√Ølande",lat:13.75,lng:100.4913,desc:"Le Grand Palais de Bangkok fut construit en 1782 √† la fondation de la nouvelle capitale. Ses toits en tuiles verniss√©es multicolores et ses nombreuses fl√®ches dor√©es en font l'un des ensembles architecturaux les plus spectaculaires d'Asie du Sud-Est.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grand Palais, Wat Phra Kaew (Temple du Bouddha d'√âmeraude), r√©sidence royale depuis 1782, Rattanakosin Island"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle de Rattanakosin, bord du Chao Phraya, district Phra Nakhon, Bangkok"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand Palais et Temple du Bouddha d'√âmeraude, Bangkok, Tha√Ølande"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais Royal de Bangkok en Tha√Ølande"}
+  {name:"Palais Royal de Bangkok ó ThaÔlande",lat:13.75,lng:100.4913,desc:"Le Grand Palais de Bangkok fut construit en 1782 ‡ la fondation de la nouvelle capitale. Ses toits en tuiles vernissÈes multicolores et ses nombreuses flËches dorÈes en font l'un des ensembles architecturaux les plus spectaculaires d'Asie du Sud-Est.",photo:"photos/palais_royal_de_bangkok.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grand Palais, Wat Phra Kaew (Temple du Bouddha d'…meraude), rÈsidence royale depuis 1782, Rattanakosin Island"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle de Rattanakosin, bord du Chao Phraya, district Phra Nakhon, Bangkok"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand Palais et Temple du Bouddha d'…meraude, Bangkok, ThaÔlande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais Royal de Bangkok en ThaÔlande"}
   ]},
-  {name:"Temple de Wat Pho ‚Äî Bangkok, Tha√Ølande",lat:13.7466,lng:100.493,desc:"La dent du Bouddha de Kandy fut cach√©e dans les cheveux d'une princesse pour √™tre sortie clandestinement d'Inde. La relique est si sacr√©e que seuls les plus hauts dignitaires religieux et politiques peuvent l'approcher ‚Äî elle est envelopp√©e dans 7 coffrets imbriqu√©s.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wat Phra Chetuphon, fond√© au XVIe si√®cle, Bouddha couch√© de 46m recouvert de feuilles d'or, √©cole de massage tha√Ø"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle royale d'une grande capitale d'Asie du Sud-Est, adjacent au Grand Palais"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple du Bouddha couch√©, plus grand de Bangkok, Tha√Ølande"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple de Wat Pho √† Bangkok, Tha√Ølande"}
+  {name:"Temple de Wat Pho ó Bangkok, ThaÔlande",lat:13.7466,lng:100.493,desc:"La dent du Bouddha de Kandy fut cachÈe dans les cheveux d'une princesse pour Ítre sortie clandestinement d'Inde. La relique est si sacrÈe que seuls les plus hauts dignitaires religieux et politiques peuvent l'approcher ó elle est enveloppÈe dans 7 coffrets imbriquÈs.",photo:"photos/temple_de_wat_pho.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wat Phra Chetuphon, fondÈ au XVIe siËcle, Bouddha couchÈ de 46m recouvert de feuilles d'or, Ècole de massage thaÔ"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle royale d'une grande capitale d'Asie du Sud-Est, adjacent au Grand Palais"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple du Bouddha couchÈ, plus grand de Bangkok, ThaÔlande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple de Wat Pho ‡ Bangkok, ThaÔlande"}
   ]},
-  {name:"Temple de Doi Suthep ‚Äî Chiang Mai, Tha√Ølande",lat:18.8048,lng:98.9219,desc:"La dent du Bouddha de Kandy fut cach√©e dans les cheveux d'une princesse pour √™tre sortie clandestinement d'Inde. La relique est si sacr√©e que seuls les plus hauts dignitaires religieux et politiques peuvent l'approcher ‚Äî elle est envelopp√©e dans 7 coffrets imbriqu√©s.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wat Phra That Doi Suthep, fond√© en 1383, stupa dor√© √† 1 073m d'altitude, 309 marches, relique du Bouddha"},
+  {name:"Temple de Doi Suthep ó Chiang Mai, ThaÔlande",lat:18.8048,lng:98.9219,desc:"La dent du Bouddha de Kandy fut cachÈe dans les cheveux d'une princesse pour Ítre sortie clandestinement d'Inde. La relique est si sacrÈe que seuls les plus hauts dignitaires religieux et politiques peuvent l'approcher ó elle est enveloppÈe dans 7 coffrets imbriquÈs.",photo:"photos/temple_de_doi_suthep.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wat Phra That Doi Suthep, fondÈ en 1383, stupa dorÈ ‡ 1 073m d'altitude, 309 marches, relique du Bouddha"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mont dominant une grande ville du nord, parc national d'un pays d'Asie du Sud-Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple dor√© perch√© √† 1 073m, vue sur Chiang Mai, Tha√Ølande du Nord"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple de Doi Suthep √† Chiang Mai, Tha√Ølande"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple dorÈ perchÈ ‡ 1 073m, vue sur Chiang Mai, ThaÔlande du Nord"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple de Doi Suthep ‡ Chiang Mai, ThaÔlande"}
   ]},
-  {name:"Parc national de Khao Yai ‚Äî Tha√Ølande",lat:14.4418,lng:101.3794,desc:"Khao Yai est le premier parc national de Tha√Ølande, fond√© en 1962. Ses for√™ts tropicales couvrent 2 168 km¬≤ et abritent √©l√©phants sauvages, gaurs, gibbons √† mains noires et hornbills. On y trouve aussi les orchid√©es sauvages les plus riches d'Asie du Sud-Est. Il est class√© au patrimoine mondial UNESCO depuis 2005.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Premier parc national du pays (1962), 2 168 km¬≤, √©l√©phants, gaurs, gibbons √† favoris blancs, chutes de Haew Narok"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Carrefour de quatre provinces du centre du pays, premier parc national de la r√©gion"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc national aux √©l√©phants et gibbons, Tha√Ølande, UNESCO"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc national de Khao Yai en Tha√Ølande"}
+  {name:"Parc national de Khao Yai ó ThaÔlande",lat:14.4418,lng:101.3794,desc:"Khao Yai est le premier parc national de ThaÔlande, fondÈ en 1962. Ses forÍts tropicales couvrent 2 168 km≤ et abritent ÈlÈphants sauvages, gaurs, gibbons ‡ mains noires et hornbills. On y trouve aussi les orchidÈes sauvages les plus riches d'Asie du Sud-Est. Il est classÈ au patrimoine mondial UNESCO depuis 2005.",photo:"photos/parc_national_de_khao_yai.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Premier parc national du pays (1962), 2 168 km≤, ÈlÈphants, gaurs, gibbons ‡ favoris blancs, chutes de Haew Narok"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Carrefour de quatre provinces du centre du pays, premier parc national de la rÈgion"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc national aux ÈlÈphants et gibbons, ThaÔlande, UNESCO"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc national de Khao Yai en ThaÔlande"}
   ]},
-  {name:"Harrods ‚Äî Londres, Royaume-Uni",lat:51.4994,lng:-0.1632,desc:"Harrods, fond√© en 1849 par Charles Henry Harrod, est le grand magasin le plus c√©l√®bre du monde avec ses 330 rayons sur 7 √©tages. Son c√©l√®bre Hall alimentaire d√©cor√© de carrelages victoriens vend les produits les plus luxueux du monde. La boutique de jouets pr√©sente chaque No√´l un √©l√©phant vivant ‚Äî une tradition du XIXe si√®cle.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grand magasin fond√© par Charles Henry Harrod en 1849, 7 √©tages et 330 rayons, motto 'Omnia Omnibus Ubique', Knightsbridge"},
+  {name:"Harrods ó Londres, Royaume-Uni",lat:51.4994,lng:-0.1632,desc:"Harrods, fondÈ en 1849 par Charles Henry Harrod, est le grand magasin le plus cÈlËbre du monde avec ses 330 rayons sur 7 Ètages. Son cÈlËbre Hall alimentaire dÈcorÈ de carrelages victoriens vend les produits les plus luxueux du monde. La boutique de jouets prÈsente chaque NoÎl un ÈlÈphant vivant ó une tradition du XIXe siËcle.",photo:"photos/harrods.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grand magasin fondÈ par Charles Henry Harrod en 1849, 7 Ètages et 330 rayons, motto 'Omnia Omnibus Ubique', Knightsbridge"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"87-135 Brompton Road, Knightsbridge, Royal Borough of Kensington and Chelsea"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"C√©l√®bre grand magasin de luxe √† 7 √©tages, Knightsbridge, Londres"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Harrods √† Londres, Royaume-Uni"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CÈlËbre grand magasin de luxe ‡ 7 Ètages, Knightsbridge, Londres"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Harrods ‡ Londres, Royaume-Uni"}
   ]},
-  {name:"Mus√©e national du Palais ‚Äî Taipei, Ta√Øwan",lat:25.1024,lng:121.5486,desc:"Le Mus√©e national du Palais de Taipei abrite la plus grande collection d'art chinois classique au monde ‚Äî 700 000 pi√®ces, dont la plupart furent emport√©es de P√©kin par le gouvernement nationaliste en 1949 lors de leur retrait √† Ta√Øwan. Il faudrait 30 ans pour tout voir si on passait 3 minutes devant chaque pi√®ce.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"696 000 artefacts imp√©riaux chinois dont le Jadeite Cabbage (1 cm¬≤) et le Meat-shaped Stone, exfiltr√©s de la Cit√© Interdite en 194"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District nord d'une grande capitale insulaire, mus√©e abritant les tr√©sors imp√©riaux"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande collection d'art chinois imp√©rial au monde, Taipei, Ta√Øwan"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mus√©e national du Palais √† Taipei, Ta√Øwan"}
+  {name:"MusÈe national du Palais ó Taipei, TaÔwan",lat:25.1024,lng:121.5486,desc:"Le MusÈe national du Palais de Taipei abrite la plus grande collection d'art chinois classique au monde ó 700 000 piËces, dont la plupart furent emportÈes de PÈkin par le gouvernement nationaliste en 1949 lors de leur retrait ‡ TaÔwan. Il faudrait 30 ans pour tout voir si on passait 3 minutes devant chaque piËce.",photo:"photos/musee_national_du_palais.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"696 000 artefacts impÈriaux chinois dont le Jadeite Cabbage (1 cm≤) et le Meat-shaped Stone, exfiltrÈs de la CitÈ Interdite en 194"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District nord d'une grande capitale insulaire, musÈe abritant les trÈsors impÈriaux"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande collection d'art chinois impÈrial au monde, Taipei, TaÔwan"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le MusÈe national du Palais ‡ Taipei, TaÔwan"}
   ]},
-  {name:"Taipei 101 ‚Äî Ta√Øwan",lat:25.0338,lng:121.5645,desc:"Taipei 101 poss√®de le plus grand amortisseur de masse au monde ‚Äî une sph√®re d'acier de 660 tonnes suspendue au 92e √©tage. Visible depuis un pont d'observation, elle se balance de 1,5 m√®tre pour absorber les vibrations des typhons et des s√©ismes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"508m de hauteur, inaugur√© en 2004, amortisseur √† pendule de 660 tonnes (TMD), plus haute structure du monde 2004-2010"},
+  {name:"Taipei 101 ó TaÔwan",lat:25.0338,lng:121.5645,desc:"Taipei 101 possËde le plus grand amortisseur de masse au monde ó une sphËre d'acier de 660 tonnes suspendue au 92e Ètage. Visible depuis un pont d'observation, elle se balance de 1,5 mËtre pour absorber les vibrations des typhons et des sÈismes.",photo:"photos/musee_national_du_palais.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"508m de hauteur, inaugurÈ en 2004, amortisseur ‡ pendule de 660 tonnes (TMD), plus haute structure du monde 2004-2010"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District financier d'une grande capitale insulaire, gratte-ciel le plus haut d'Asie de l'Est pendant 6 ans"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour de 508m, symbole de Taipei, plus haute d'Asie √† sa construction"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Taipei 101 √† Taipei, Ta√Øwan"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour de 508m, symbole de Taipei, plus haute d'Asie ‡ sa construction"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Taipei 101 ‡ Taipei, TaÔwan"}
   ]},
-  {name:"Gyeongbokgung ‚Äî S√©oul, Cor√©e du Sud",lat:37.5796,lng:126.977,desc:"La rel√®ve de la garde au palais Gyeongbokgung se d√©roule dans des costumes Joseon du XIVe si√®cle. Les soldats ‚Äî recrut√©s par concours parmi les touristes volontaires ‚Äî passent une journ√©e enti√®re en tenue d'√©poque. Ce rituel, reconstitu√© apr√®s l'ind√©pendance, est l'un des plus photographi√©s de S√©oul.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais de la Prosp√©rit√© Brillante, construit en 1395 par la dynastie Joseon, 7 700 salles, Gwanghwamun Gate"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Jongno-gu, c≈ìur historique d'une grande capitale asiatique, au pied d'une montagne bois√©e"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal palais royal de S√©oul, changement de garde, Cor√©e du Sud"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gyeongbokgung √† S√©oul, Cor√©e du Sud"}
+  {name:"Gyeongbokgung ó SÈoul, CorÈe du Sud",lat:37.5796,lng:126.977,desc:"La relËve de la garde au palais Gyeongbokgung se dÈroule dans des costumes Joseon du XIVe siËcle. Les soldats ó recrutÈs par concours parmi les touristes volontaires ó passent une journÈe entiËre en tenue d'Èpoque. Ce rituel, reconstituÈ aprËs l'indÈpendance, est l'un des plus photographiÈs de SÈoul.",photo:"photos/gyeongbokgung.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais de la ProspÈritÈ Brillante, construit en 1395 par la dynastie Joseon, 7 700 salles, Gwanghwamun Gate"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Jongno-gu, cúur historique d'une grande capitale asiatique, au pied d'une montagne boisÈe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal palais royal de SÈoul, changement de garde, CorÈe du Sud"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gyeongbokgung ‡ SÈoul, CorÈe du Sud"}
   ]},
-  {name:"Tour N Seoul ‚Äî Cor√©e du Sud",lat:37.5512,lng:126.9882,desc:"La tour N Seoul, √† 480 m√®tres d'altitude sur le mont Namsan, offre une vue √† 360¬∞ sur la capitale cor√©enne. Elle est couverte de millions de cadenas pos√©s par des amoureux ‚Äî une tradition si massive que les garde-fous ont d√ª √™tre renforc√©s pour supporter le poids.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Namsan Seoul Tower, 236m sur le mont Namsan (262m), point le plus visible de S√©oul, cadenas d'amour sur la rambarde"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mont Namsan, district central d'une grande m√©tropole asiatique, tour de t√©l√©communications panoramique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour embl√©matique de S√©oul, cadenas d'amour, mont Namsan"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour N Seoul, Cor√©e du Sud"}
+  {name:"Tour N Seoul ó CorÈe du Sud",lat:37.5512,lng:126.9882,desc:"La tour N Seoul, ‡ 480 mËtres d'altitude sur le mont Namsan, offre une vue ‡ 360∞ sur la capitale corÈenne. Elle est couverte de millions de cadenas posÈs par des amoureux ó une tradition si massive que les garde-fous ont d˚ Ítre renforcÈs pour supporter le poids.",photo:"photos/tour_n_seoul.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Namsan Seoul Tower, 236m sur le mont Namsan (262m), point le plus visible de SÈoul, cadenas d'amour sur la rambarde"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mont Namsan, district central d'une grande mÈtropole asiatique, tour de tÈlÈcommunications panoramique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour emblÈmatique de SÈoul, cadenas d'amour, mont Namsan"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour N Seoul, CorÈe du Sud"}
   ]},
-  {name:"DMZ ‚Äî Panmunjom, Cor√©e",lat:37.9533,lng:126.6786,desc:"La Zone d√©militaris√©e cor√©enne est paradoxalement l'une des zones naturelles les plus pr√©serv√©es d'Asie, car aucune activit√© humaine n'y est permise depuis 1953. Grues du Japon en voie d'extinction, tigres de Sib√©rie et ours noirs d'Asie y vivent sans perturbation humaine depuis 70 ans.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Zone D√©militaris√©e, ligne d'armistice de 1953, Maison de la Paix (Panmun-gak), n√©gociations entre deux √âtats divis√©s"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Joint Security Area (JSA), √† 60 km au nord de S√©oul, fronti√®re des deux Cor√©es, 38e parall√®le"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Zone d√©militaris√©e entre les deux Cor√©es, Panmunjom"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le DMZ √† Panmunjom, Cor√©e"}
+  {name:"DMZ ó Panmunjom, CorÈe",lat:37.9533,lng:126.6786,desc:"La Zone dÈmilitarisÈe corÈenne est paradoxalement l'une des zones naturelles les plus prÈservÈes d'Asie, car aucune activitÈ humaine n'y est permise depuis 1953. Grues du Japon en voie d'extinction, tigres de SibÈrie et ours noirs d'Asie y vivent sans perturbation humaine depuis 70 ans.",photo:"photos/dmz.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Zone DÈmilitarisÈe, ligne d'armistice de 1953, Maison de la Paix (Panmun-gak), nÈgociations entre deux …tats divisÈs"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Joint Security Area (JSA), ‡ 60 km au nord de SÈoul, frontiËre des deux CorÈes, 38e parallËle"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Zone dÈmilitarisÈe entre les deux CorÈes, Panmunjom"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le DMZ ‡ Panmunjom, CorÈe"}
   ]},
-  {name:"Ch√¢teau de Matsumoto ‚Äî Japon",lat:36.2383,lng:137.972,desc:"Le ch√¢teau de Matsumoto est l'un des rares ch√¢teaux japonais originaux du XVIe si√®cle encore debout ‚Äî la plupart furent reconstruits en b√©ton apr√®s la guerre. Ses murs noirs lui valent le surnom de ¬´ch√¢teau corbeau¬ª. Ses escaliers int√©rieurs sont si raides qu'ils atteignent 61¬∞ d'inclinaison.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Matsumoto-jo, ch√¢teau aux murs noirs (Karasu-jo, le Ch√¢teau-Corbeau), construit entre 1592 et 1614, donjon d'origine intacte"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Matsumoto, pr√©fecture de Nagano, r√©gion de Chubu, Honsh?"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau noir Matsumoto, un des plus beaux donjons originaux du Japon"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Matsumoto au Japon"}
+  {name:"Ch‚teau de Matsumoto ó Japon",lat:36.2383,lng:137.972,desc:"Le ch‚teau de Matsumoto est l'un des rares ch‚teaux japonais originaux du XVIe siËcle encore debout ó la plupart furent reconstruits en bÈton aprËs la guerre. Ses murs noirs lui valent le surnom de ´ch‚teau corbeauª. Ses escaliers intÈrieurs sont si raides qu'ils atteignent 61∞ d'inclinaison.",photo:"photos/chateau_de_matsumoto.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Matsumoto-jo, ch‚teau aux murs noirs (Karasu-jo, le Ch‚teau-Corbeau), construit entre 1592 et 1614, donjon d'origine intacte"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Matsumoto, prÈfecture de Nagano, rÈgion de Chubu, Honsh?"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau noir Matsumoto, un des plus beaux donjons originaux du Japon"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Matsumoto au Japon"}
   ]},
-  {name:"Sanctuaire Fushimi Inari ‚Äî Kyoto, Japon",lat:34.9671,lng:135.7727,desc:"Le sanctuaire Fushimi Inari poss√®de 10 000 torii vermillon offerts par des entreprises et des particuliers pour s'attirer les faveurs d'Inari, dieu du renard et de la prosp√©rit√©. Ces portiques forment des tunnels de 4 km √† flanc de montagne. Les renards en pierre qui gardent le sanctuaire portent dans la gueule une cl√©, une gerbe ou un joyau.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"10 000 torii vermillons sur 4 km formant des tunnels jusqu'au mont Inari (233m), d√©di√© √† Inari, divinit√© du riz et des affaires"},
+  {name:"Sanctuaire Fushimi Inari ó Kyoto, Japon",lat:34.9671,lng:135.7727,desc:"Le sanctuaire Fushimi Inari possËde 10 000 torii vermillon offerts par des entreprises et des particuliers pour s'attirer les faveurs d'Inari, dieu du renard et de la prospÈritÈ. Ces portiques forment des tunnels de 4 km ‡ flanc de montagne. Les renards en pierre qui gardent le sanctuaire portent dans la gueule une clÈ, une gerbe ou un joyau.",photo:"photos/sanctuaire_fushimi_inari.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"10 000 torii vermillons sur 4 km formant des tunnels jusqu'au mont Inari (233m), dÈdiÈ ‡ Inari, divinitÈ du riz et des affaires"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fushimi-ku, sud de Kyoto, bord du mont Inari"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tunnels de 10 000 torii vermillon sur 4 km, sanctuaire shinto d√©di√© √† la d√©esse du riz, Kyoto"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Sanctuaire Fushimi Inari √† Kyoto, Japon"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tunnels de 10 000 torii vermillon sur 4 km, sanctuaire shinto dÈdiÈ ‡ la dÈesse du riz, Kyoto"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Sanctuaire Fushimi Inari ‡ Kyoto, Japon"}
   ]},
-  {name:"Ch√¢teau d'Osaka ‚Äî Japon",lat:34.6873,lng:135.5262,desc:"Le ch√¢teau d'Osaka fut construit par Toyotomi Hideyoshi en 1583 sur les vestiges d'un temple bouddhiste. Apr√®s deux incendies et reconstructions, la tour actuelle date de 1931. Ses cerisiers du Nishinomaru Garden attirent des centaines de milliers de visiteurs chaque printemps pour les hanami.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Osaka-jo, construit par Toyotomi Hideyoshi en 1583, reconstruit en 1931, donjon de 5 √©tages entour√© de douves, fleurs de cerisier"},
+  {name:"Ch‚teau d'Osaka ó Japon",lat:34.6873,lng:135.5262,desc:"Le ch‚teau d'Osaka fut construit par Toyotomi Hideyoshi en 1583 sur les vestiges d'un temple bouddhiste. AprËs deux incendies et reconstructions, la tour actuelle date de 1931. Ses cerisiers du Nishinomaru Garden attirent des centaines de milliers de visiteurs chaque printemps pour les hanami.",photo:"photos/chateau_d_osaka.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Osaka-jo, construit par Toyotomi Hideyoshi en 1583, reconstruit en 1931, donjon de 5 Ètages entourÈ de douves, fleurs de cerisier"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc Osaka-jo, quartier Chuo, Osaka, Kinki, Honsh?"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau embl√©matique d'Osaka, donjon dor√©, Japon"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau d'Osaka au Japon"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau emblÈmatique d'Osaka, donjon dorÈ, Japon"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau d'Osaka au Japon"}
   ]},
-  {name:"Himeji-jo ‚Äî Japon",lat:34.8394,lng:134.6939,desc:"Le ch√¢teau de Himeji, surnomm√© ¬´le H√©ron Blanc¬ª pour sa couleur immacul√©e, est le mieux conserv√© des ch√¢teaux m√©di√©vaux japonais. Sa structure labyrinthique, con√ßue pour d√©router les envahisseurs, comprend des couloirs cul-de-sac, des embrasures et des pierres disjointes intentionnelles pour perturber l'ennemi.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Heron Castle (Shirasagi-jo), ch√¢teau blanc √† 6 √©tages construit entre 1601 et 1609, 83 b√¢timents, pr√©fecture de Hyogo"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre d'Himeji, pr√©fecture de Hyogo, r√©gion du Kansai, Honsh?"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau H√©ron blanc, mieux conserv√© du Japon, Himeji, Kansai"},
+  {name:"Himeji-jo ó Japon",lat:34.8394,lng:134.6939,desc:"Le ch‚teau de Himeji, surnommÈ ´le HÈron Blancª pour sa couleur immaculÈe, est le mieux conservÈ des ch‚teaux mÈdiÈvaux japonais. Sa structure labyrinthique, conÁue pour dÈrouter les envahisseurs, comprend des couloirs cul-de-sac, des embrasures et des pierres disjointes intentionnelles pour perturber l'ennemi.",photo:"photos/himeji_jo.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Heron Castle (Shirasagi-jo), ch‚teau blanc ‡ 6 Ètages construit entre 1601 et 1609, 83 b‚timents, prÈfecture de Hyogo"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre d'Himeji, prÈfecture de Hyogo, rÈgion du Kansai, Honsh?"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau HÈron blanc, mieux conservÈ du Japon, Himeji, Kansai"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Himeji-jo au Japon"}
   ]},
-  {name:"Lac de Kawaguchi ‚Äî Japon",lat:35.5112,lng:138.7556,desc:"Le lac Kawaguchi est l'un des cinq lacs de Fuji, form√©s par les √©ruptions volcaniques. Par temps clair, la r√©flexion parfaite du mont Fuji dans ses eaux cr√©e l'une des images les plus embl√©matiques du Japon. La cerisaie sur ses rives attire chaque printemps des millions de photographes du monde entier.",hints:[
+  {name:"Lac de Kawaguchi ó Japon",lat:35.5112,lng:138.7556,desc:"Le lac Kawaguchi est l'un des cinq lacs de Fuji, formÈs par les Èruptions volcaniques. Par temps clair, la rÈflexion parfaite du mont Fuji dans ses eaux crÈe l'une des images les plus emblÈmatiques du Japon. La cerisaie sur ses rives attire chaque printemps des millions de photographes du monde entier.",photo:"photos/lac_de_kawaguchi.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kawaguchiko, un des Cinq Lacs de Fuji, meilleur reflet du Fuji, vue depuis la pagode Chureito avec fleurs de cerisier"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Prefecture de Yamanashi, district de Minamitsuru, aux pieds du mont Fuji"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac Kawaguchi, reflet du Mont Fuji, pagode Chureito, Yamanashi"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac de Kawaguchi au Japon"}
   ]},
-  {name:"Shanghai ‚Äî Chine (Bund)",lat:31.2397,lng:121.4898,desc:"Le Bund de Shanghai est un boulevard de 1,5 km bord√© de 52 b√¢timents Art D√©co et n√©oclassiques construits dans les ann√©es 1930 par les concessions √©trang√®res. Face √† lui, de l'autre c√¥t√© de la rivi√®re Huangpu, se dressent les gratte-ciels ultramodernes de Pudong ‚Äî un dialogue saisissant entre deux Shanghais.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Le Bund (??), 1,5 km de b√¢timents n√©oclassiques et Art D√©co des ann√©es 1920-30, face au Pudong et la Tour de Perle d'Orient"},
+  {name:"Shanghai ó Chine (Bund)",lat:31.2397,lng:121.4898,desc:"Le Bund de Shanghai est un boulevard de 1,5 km bordÈ de 52 b‚timents Art DÈco et nÈoclassiques construits dans les annÈes 1930 par les concessions ÈtrangËres. Face ‡ lui, de l'autre cÙtÈ de la riviËre Huangpu, se dressent les gratte-ciels ultramodernes de Pudong ó un dialogue saisissant entre deux Shanghais.",photo:"photos/shanghai.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Le Bund (??), 1,5 km de b‚timents nÈoclassiques et Art DÈco des annÈes 1920-30, face au Pudong et la Tour de Perle d'Orient"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord du Huangpu, arrondissement de Huangpu, Shanghai orientale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Promenade coloniale des ann√©es 1920-30 face aux gratte-ciels ultramodernes, plus grande ville de Chine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Promenade coloniale des annÈes 1920-30 face aux gratte-ciels ultramodernes, plus grande ville de Chine"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bund de Shanghai, Chine"}
   ]},
-  {name:"Tour de Perle d'Orient ‚Äî Shanghai, Chine",lat:31.2397,lng:121.4998,desc:"La Tour de la Perle d'Orient fut le gratte-ciel embl√©matique de Shanghai de 1994 √† 2007. Ses deux sph√®res roses suspendues √† 90 et 350 m√®tres symbolisent des perles √©mergeant du fleuve Huangpu. Sa plateforme d'observation √† 350 m√®tres offre une vue sur l'une des lignes d'horizon les plus denses du monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Oriental Pearl Tower, 468m inaugur√©e en 1994, deux sph√®res roses de 50m et 45m, Lujiazui, Pudong, Shanghai"},
+  {name:"Tour de Perle d'Orient ó Shanghai, Chine",lat:31.2397,lng:121.4998,desc:"La Tour de la Perle d'Orient fut le gratte-ciel emblÈmatique de Shanghai de 1994 ‡ 2007. Ses deux sphËres roses suspendues ‡ 90 et 350 mËtres symbolisent des perles Èmergeant du fleuve Huangpu. Sa plateforme d'observation ‡ 350 mËtres offre une vue sur l'une des lignes d'horizon les plus denses du monde.",photo:"photos/tour_de_perle_d_orient.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Oriental Pearl Tower, 468m inaugurÈe en 1994, deux sphËres roses de 50m et 45m, Lujiazui, Pudong, Shanghai"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lujiazui Finance and Trade Zone, Pudong, bord du Huangpu, Shanghai"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour de t√©l√©vision embl√©matique de Shanghai, symbole du Pudong"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour de Perle d'Orient √† Shanghai, Chine"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour de tÈlÈvision emblÈmatique de Shanghai, symbole du Pudong"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour de Perle d'Orient ‡ Shanghai, Chine"}
   ]},
-  {name:"Guilin ‚Äî Guangxi, Chine",lat:24.876,lng:110.32,desc:"Les pitons karstiques de Guilin furent form√©s par la dissolution du calcaire sur 300 millions d'ann√©es. Ils inspir√®rent des g√©n√©rations de peintres chinois et figurent sur le billet de 20 yuans. Les p√™cheurs cormorans sur la rivi√®re Li, qui enseignent √† leurs oiseaux √† attraper les poissons sans les avaler, perp√©tuent une tradition de 1 000 ans.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Karst de la rivi√®re Li, pitons calcaires de 20 Ma, Xingping et Yangshuo, p√™cheurs au cormoran, imprim√© sur billet de 20 yuan"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Guangxi Zhuang, rivi√®re Li entre Guilin et Yangshuo"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage de pitons karstiques sur une rivi√®re, imprim√© sur le billet de 20 yuans, Guangxi, Chine"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Guilin √† Guangxi, Chine"}
+  {name:"Guilin ó Guangxi, Chine",lat:24.876,lng:110.32,desc:"Les pitons karstiques de Guilin furent formÈs par la dissolution du calcaire sur 300 millions d'annÈes. Ils inspirËrent des gÈnÈrations de peintres chinois et figurent sur le billet de 20 yuans. Les pÍcheurs cormorans sur la riviËre Li, qui enseignent ‡ leurs oiseaux ‡ attraper les poissons sans les avaler, perpÈtuent une tradition de 1 000 ans.",photo:"photos/guilin.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Karst de la riviËre Li, pitons calcaires de 20 Ma, Xingping et Yangshuo, pÍcheurs au cormoran, imprimÈ sur billet de 20 yuan"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Guangxi Zhuang, riviËre Li entre Guilin et Yangshuo"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage de pitons karstiques sur une riviËre, imprimÈ sur le billet de 20 yuans, Guangxi, Chine"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Guilin ‡ Guangxi, Chine"}
   ]},
-  {name:"Mausole de l'Arm√©e de Terre Cuite ‚Äî Xi'an, Chine",lat:34.3847,lng:109.2737,desc:"L'Arm√©e de terre cuite de Xi'an compte 8 000 soldats, 130 chars et 670 chevaux enterr√©s pour prot√©ger l'empereur Qin Shi Huang dans l'au-del√†. Chaque soldat a un visage unique. Le tombeau central de l'empereur n'a pas encore √©t√© ouvert ‚Äî la Chine attend d'avoir les technologies pour le pr√©server sans l'endommager.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"8 000 soldats et chevaux en terre cuite grandeur nature, mausol√©e de Qin Shi Huang (-210), d√©couverts en 1974 par des paysans"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lintong, √† 35 km √† l'est de Xi'an, Shaanxi centrale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Arm√©e de terre cuite de Qin Shi Huang, Xi'an, Chine"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mausole de l'Arm√©e de Terre Cuite √† Xi'an, Chine"}
+  {name:"Mausole de l'ArmÈe de Terre Cuite ó Xi'an, Chine",lat:34.3847,lng:109.2737,desc:"L'ArmÈe de terre cuite de Xi'an compte 8 000 soldats, 130 chars et 670 chevaux enterrÈs pour protÈger l'empereur Qin Shi Huang dans l'au-del‡. Chaque soldat a un visage unique. Le tombeau central de l'empereur n'a pas encore ÈtÈ ouvert ó la Chine attend d'avoir les technologies pour le prÈserver sans l'endommager.",photo:"photos/mausole_de_l_armee_de_terre_cuite.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"8 000 soldats et chevaux en terre cuite grandeur nature, mausolÈe de Qin Shi Huang (-210), dÈcouverts en 1974 par des paysans"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lintong, ‡ 35 km ‡ l'est de Xi'an, Shaanxi centrale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"ArmÈe de terre cuite de Qin Shi Huang, Xi'an, Chine"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mausole de l'ArmÈe de Terre Cuite ‡ Xi'an, Chine"}
   ]},
-  {name:"Kowloon ‚Äî Hong Kong",lat:22.3193,lng:114.1694,desc:"L'ancienne Cit√© fortifi√©e de Kowloon, d√©molie en 1994, √©tait la zone la plus dens√©ment peupl√©e de l'histoire humaine avec 35 000 habitants sur 0,03 km¬≤. Ses 300 immeubles imbriqu√©s formaient un labyrinthe quasi-anarchique de 14 √©tages sans lumi√®re naturelle. Un parc fut construit √† son emplacement.",hints:[
+  {name:"Kowloon ó Hong Kong",lat:22.3193,lng:114.1694,desc:"L'ancienne CitÈ fortifiÈe de Kowloon, dÈmolie en 1994, Ètait la zone la plus densÈment peuplÈe de l'histoire humaine avec 35 000 habitants sur 0,03 km≤. Ses 300 immeubles imbriquÈs formaient un labyrinthe quasi-anarchique de 14 Ètages sans lumiËre naturelle. Un parc fut construit ‡ son emplacement.",photo:"photos/mausole_de_l_armee_de_terre_cuite.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoria Harbour depuis Tsim Sha Tsui, promenade Avenue of Stars, skyline de 8 000 gratte-ciels, show laser Symphony of Lights"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"P√©ninsule urbaine d'une ancienne colonie britannique, skyline de gratte-ciel face √† une √Æle"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"PÈninsule urbaine d'une ancienne colonie britannique, skyline de gratte-ciel face ‡ une Óle"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vue sur le Victoria Harbour, skyline spectaculaire de Hong Kong"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Kowloon √† Hong Kong"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Kowloon ‡ Hong Kong"}
   ]},
-  {name:"Colline de Batu ‚Äî Kuala Lumpur, Malaisie",lat:3.2379,lng:101.684,desc:"Les grottes de Batu sont un sanctuaire hindou creus√© dans un massif calcaire vieux de 400 millions d'ann√©es. Un escalier de 272 marches m√®ne √† la grotte principale orn√©e d'une statue de Murugan dor√©e de 42,7 m√®tres. Chaque ann√©e, pendant le festival de Thaipusam, des centaines de milliers de p√®lerins gravissent les marches avec des kavadis transperc√©s dans la peau.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grottes de calcaire de Batu Caves, statue de Murugan de 42,7m (dor√©e 2006), 272 marches arc-en-ciel, sanctuaire tamoul"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Banlieue nord d'une grande capitale de la p√©ninsule malaise, temple dans une grotte calcaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grottes sacr√©es et statue g√©ante de Murugan, Kuala Lumpur, Malaisie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Colline de Batu √† Kuala Lumpur, Malaisie"}
+  {name:"Colline de Batu ó Kuala Lumpur, Malaisie",lat:3.2379,lng:101.684,desc:"Les grottes de Batu sont un sanctuaire hindou creusÈ dans un massif calcaire vieux de 400 millions d'annÈes. Un escalier de 272 marches mËne ‡ la grotte principale ornÈe d'une statue de Murugan dorÈe de 42,7 mËtres. Chaque annÈe, pendant le festival de Thaipusam, des centaines de milliers de pËlerins gravissent les marches avec des kavadis transpercÈs dans la peau.",photo:"photos/colline_de_batu.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grottes de calcaire de Batu Caves, statue de Murugan de 42,7m (dorÈe 2006), 272 marches arc-en-ciel, sanctuaire tamoul"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Banlieue nord d'une grande capitale de la pÈninsule malaise, temple dans une grotte calcaire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grottes sacrÈes et statue gÈante de Murugan, Kuala Lumpur, Malaisie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Colline de Batu ‡ Kuala Lumpur, Malaisie"}
   ]},
-  {name:"Tours Petronas ‚Äî Kuala Lumpur, Malaisie",lat:3.1579,lng:101.7119,desc:"Les tours Petronas furent les plus hautes du monde de 1998 √† 2004. Con√ßues par C√©sar Pelli, leur plan au sol dessine deux √©toiles √† 8 branches entrelac√©es ‚Äî un symbole islamique. Le skybridge du 41e √©tage ne repose pas sur les tours elles-m√™mes mais sur ses propres fondations, pouvant glisser de 30 cm lors des balancements.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Petronas Twin Towers, 452m (88 √©tages), con√ßues par C√©sar Pelli, inaugur√©es en 1998, Skybridge au 41e √©tage, motif islamique"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"KLCC, quartier central des affaires d'une m√©tropole tropicale, jumelles en acier et verre"},
+  {name:"Tours Petronas ó Kuala Lumpur, Malaisie",lat:3.1579,lng:101.7119,desc:"Les tours Petronas furent les plus hautes du monde de 1998 ‡ 2004. ConÁues par CÈsar Pelli, leur plan au sol dessine deux Ètoiles ‡ 8 branches entrelacÈes ó un symbole islamique. Le skybridge du 41e Ètage ne repose pas sur les tours elles-mÍmes mais sur ses propres fondations, pouvant glisser de 30 cm lors des balancements.",photo:"photos/colline_de_batu.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Petronas Twin Towers, 452m (88 Ètages), conÁues par CÈsar Pelli, inaugurÈes en 1998, Skybridge au 41e Ètage, motif islamique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"KLCC, quartier central des affaires d'une mÈtropole tropicale, jumelles en acier et verre"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tours jumelles Petronas, plus hautes du monde 1998-2004, Kuala Lumpur"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Tours Petronas √† Kuala Lumpur, Malaisie"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Tours Petronas ‡ Kuala Lumpur, Malaisie"}
   ]},
-  {name:"M√©kong ‚Äî Laos (Luang Prabang)",lat:19.8929,lng:102.1348,desc:"Luang Prabang, ville de 700 moines, est class√©e UNESCO pour sa pr√©servation exceptionnelle. Chaque aube, des centaines de moines saffran descendent les rues en silence pour recevoir les offrandes des fid√®les ‚Äî le ¬´tak bat¬ª. Cette tradition mill√©naire se d√©roule √† 5h30 chaque matin, quelle que soit la saison.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Luang Prabang, confluence Nam Khan et M√©kong, 33 temples bouddhistes, aum√¥ne matinale (tak bat), class√© UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province du nord d'un pays enclav√© d'Asie du Sud-Est, bord du M√©kong, ville-temple"},
+  {name:"MÈkong ó Laos (Luang Prabang)",lat:19.8929,lng:102.1348,desc:"Luang Prabang, ville de 700 moines, est classÈe UNESCO pour sa prÈservation exceptionnelle. Chaque aube, des centaines de moines saffran descendent les rues en silence pour recevoir les offrandes des fidËles ó le ´tak batª. Cette tradition millÈnaire se dÈroule ‡ 5h30 chaque matin, quelle que soit la saison.",photo:"https://upload.wikimedia.org/wikipedia/commons/9/9f/Mekong-River-Near-Luang-Prabang.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Luang Prabang, confluence Nam Khan et MÈkong, 33 temples bouddhistes, aumÙne matinale (tak bat), classÈ UNESCO"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province du nord d'un pays enclavÈ d'Asie du Sud-Est, bord du MÈkong, ville-temple"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancienne capitale royale bouddhiste au confluent de deux fleuves, nord du Laos, UNESCO"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le M√©kong au Laos (Luang Prabang)"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le MÈkong au Laos (Luang Prabang)"}
   ]},
-  {name:"Katmandou ‚Äî N√©pal (Bodnath)",lat:27.7215,lng:85.362,desc:"Le stupa de Boudhanath est le plus grand d'Asie du Sud et le c≈ìur spirituel de la communaut√© tib√©taine en exil au N√©pal. Ses 13 anneaux dor√©s symbolisent les √©tapes vers l'√©veil bouddhiste. Entour√© de 50 monast√®res tib√©tains, il reste l'un des sites de p√®lerinage les plus actifs du bouddhisme vajrayana.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Boudhanath Stupa, stupa bouddhiste tib√©tain de 36m, 5e si√®cle, yeux du Bouddha, plus grand d'Asie du Sud, p√®lerinage tib√©tain"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Boudha, √† 11 km du centre d'une capitale himalayenne, plus grande stupa du sous-continent"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand stupa d'Asie du Sud, centre de la communaut√© tib√©taine en exil, capitale himalayenne du N√©pal"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Katmandou au N√©pal (Bodnath)"}
+  {name:"Katmandou ó NÈpal (Bodnath)",lat:27.7215,lng:85.362,desc:"Le stupa de Boudhanath est le plus grand d'Asie du Sud et le cúur spirituel de la communautÈ tibÈtaine en exil au NÈpal. Ses 13 anneaux dorÈs symbolisent les Ètapes vers l'Èveil bouddhiste. EntourÈ de 50 monastËres tibÈtains, il reste l'un des sites de pËlerinage les plus actifs du bouddhisme vajrayana.",photo:"photos/katmandou.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Boudhanath Stupa, stupa bouddhiste tibÈtain de 36m, 5e siËcle, yeux du Bouddha, plus grand d'Asie du Sud, pËlerinage tibÈtain"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Boudha, ‡ 11 km du centre d'une capitale himalayenne, plus grande stupa du sous-continent"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand stupa d'Asie du Sud, centre de la communautÈ tibÈtaine en exil, capitale himalayenne du NÈpal"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Katmandou au NÈpal (Bodnath)"}
   ]},
-  {name:"Everest Base Camp ‚Äî N√©pal",lat:28.0025,lng:86.8528,desc:"Des milliers de tonnes de d√©chets ont √©t√© abandonn√©es sur les flancs de l'Everest par les exp√©ditions depuis 1953. Le N√©pal oblige d√©sormais chaque alpiniste √† redescendre au moins 8 kg de d√©chets ‚Äî en plus de leur √©quipement.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Camp de base sud √† 5 364m, glacier de Khumbu, trekking de 12 jours depuis Lukla, 8 849m pour le sommet (Chomolungma)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion de Khumbu, haute Himalaya, camp de base au pied du plus haut sommet du monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Camp de base de l'Everest, plus haute montagne du monde, Himalaya n√©palais"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Everest Base Camp au N√©pal"}
+  {name:"Everest Base Camp ó NÈpal",lat:28.0025,lng:86.8528,desc:"Des milliers de tonnes de dÈchets ont ÈtÈ abandonnÈes sur les flancs de l'Everest par les expÈditions depuis 1953. Le NÈpal oblige dÈsormais chaque alpiniste ‡ redescendre au moins 8 kg de dÈchets ó en plus de leur Èquipement.",photo:"photos/everest_base_camp.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Camp de base sud ‡ 5 364m, glacier de Khumbu, trekking de 12 jours depuis Lukla, 8 849m pour le sommet (Chomolungma)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion de Khumbu, haute Himalaya, camp de base au pied du plus haut sommet du monde"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Camp de base de l'Everest, plus haute montagne du monde, Himalaya nÈpalais"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Everest Base Camp au NÈpal"}
   ]},
-  {name:"Varanasi ‚Äî Inde",lat:25.3176,lng:83.0062,desc:"Le Gange √† Varanasi est si sacr√© que les Hindous croient qu'y mourir assure la lib√©ration du cycle des renaissances. Des milliers de personnes viennent mourir √† Varanasi chaque ann√©e, confi√©s aux ¬´Dom¬ª ‚Äî les intouchables qui veillent sur les cr√©mations du ghat Manikarnika, actives 24h/24 depuis des si√®cles.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kashi, ville sainte de Shiva, 88 ghats sur le Gange, cr√©mations au Manikarnika Ghat, 3 000 ans d'occupation continue"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord du Gange, Uttar Pradesh centrale, entre Allahabad et Patna"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus sainte ville de l'hindouisme, ghats de cr√©mation sur le Gange, Uttar Pradesh"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Varanasi en Inde"}
-  ]},
-  {name:"Jaipur ‚Äî Inde (Hawa Mahal)",lat:26.9239,lng:75.8267,desc:"Le Hawa Mahal, ¬´palais des vents¬ª, fut construit en 1799 avec 953 petites fen√™tres orn√©es de moucharabi√©s permettant aux femmes de la cour d'observer la vie de la rue sans √™tre vues. Sa fa√ßade de 5 √©tages en gr√®s rose ressemble √† une ruche ‚Äî une architecture unique au monde sans cour int√©rieure.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais des Vents (Hawa Mahal), 953 petites fen√™tres en nid d'abeille, 5 √©tages, construit en 1799 par Sawai Pratap Singh"},
+    {name:"Jaipur ó Inde (Hawa Mahal)",lat:26.9239,lng:75.8267,desc:"Le Hawa Mahal, ´palais des ventsª, fut construit en 1799 avec 953 petites fenÍtres ornÈes de moucharabiÈs permettant aux femmes de la cour d'observer la vie de la rue sans Ítre vues. Sa faÁade de 5 Ètages en grËs rose ressemble ‡ une ruche ó une architecture unique au monde sans cour intÈrieure.",photo:"photos/jaipur.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais des Vents (Hawa Mahal), 953 petites fenÍtres en nid d'abeille, 5 Ètages, construit en 1799 par Sawai Pratap Singh"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Badi Chaupar, vieille ville de Jaipur (Ville Rose), Rajasthan du Nord"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais aux 953 fen√™tres en nid d'abeille, Ville Rose du Rajasthan"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais aux 953 fenÍtres en nid d'abeille, Ville Rose du Rajasthan"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Jaipur en Inde (Hawa Mahal)"}
   ]},
-  {name:"Kerala ‚Äî Backwaters, Inde",lat:9.1673,lng:76.46,desc:"Les backwaters du Kerala forment un r√©seau de 900 km de lagunes, lacs et canaux parall√®les √† la c√¥te de la mer d'Arabie. Ces voies navigables, bord√©es de cocotiers et de rizi√®res, sont sillonn√©es par des houseboats (kettuvallam) ‚Äî d'anciens bateaux de riz convertis en h√¥tels flottants.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"900 km de lagunes, canaux et lacs entre une mer et les terres int√©rieures, houseboats kettuvallam, Alleppey (Alappuzha)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District d'Alappuzha (Alleppey), Kerala, c√¥te de Malabar, sud-ouest"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"R√©seau de lagunes et canaux long√©s par des houseboats, c√¥te de Malabar, sud-ouest de l'Inde"},
+  {name:"Kerala ó Backwaters, Inde",lat:9.1673,lng:76.46,desc:"Les backwaters du Kerala forment un rÈseau de 900 km de lagunes, lacs et canaux parallËles ‡ la cÙte de la mer d'Arabie. Ces voies navigables, bordÈes de cocotiers et de riziËres, sont sillonnÈes par des houseboats (kettuvallam) ó d'anciens bateaux de riz convertis en hÙtels flottants.",photo:"photos/kerala.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"900 km de lagunes, canaux et lacs entre une mer et les terres intÈrieures, houseboats kettuvallam, Alleppey (Alappuzha)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District d'Alappuzha (Alleppey), Kerala, cÙte de Malabar, sud-ouest"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"RÈseau de lagunes et canaux longÈs par des houseboats, cÙte de Malabar, sud-ouest de l'Inde"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Backwaters du Kerala, Inde"}
   ]},
-  {name:"Hampi ‚Äî Karnataka, Inde",lat:15.335,lng:76.46,desc:"Le march√© central de Hampi, une rue √† colonnes de 800 m√®tres de long, √©tait jadis bord√© de boutiques vendant des soieries, des √©pices et des pierres pr√©cieuses. Les femmes de haut rang portaient des joyaux si lourds qu'elles devaient √™tre soutenues par des servantes pour marcher.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vijayanagara, capitale de l'Empire Vijayanagara (1336-1646), 500 monuments sur 26 km¬≤, temple Virupaksha du VIIe si√®cle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District de Ballari, Karnataka, bord de la rivi√®re Tungabhadra du Sud"},
+  {name:"Hampi ó Karnataka, Inde",lat:15.335,lng:76.46,desc:"Le marchÈ central de Hampi, une rue ‡ colonnes de 800 mËtres de long, Ètait jadis bordÈ de boutiques vendant des soieries, des Èpices et des pierres prÈcieuses. Les femmes de haut rang portaient des joyaux si lourds qu'elles devaient Ítre soutenues par des servantes pour marcher.",photo:"photos/kerala.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vijayanagara, capitale de l'Empire Vijayanagara (1336-1646), 500 monuments sur 26 km≤, temple Virupaksha du VIIe siËcle"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District de Ballari, Karnataka, bord de la riviËre Tungabhadra du Sud"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancienne capitale de l'Empire Vijayanagara, 500 monuments dans un paysage de rochers, Karnataka"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hampi √† Karnataka, Inde"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hampi ‡ Karnataka, Inde"}
   ]},
-  {name:"Ayutthaya ‚Äî Tha√Ølande",lat:14.3692,lng:100.5567,desc:"Ayutthaya fut d√©truite par les Birmans en 1767 apr√®s un si√®ge de 14 mois. La ville, qui comptait un million d'habitants, fut r√©duite en cendres en une semaine. Les t√™tes de Bouddha ench√¢ss√©es dans les racines d'un figuier de banian sont le symbole le plus photographi√© de la Tha√Ølande.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancienne capitale du Royaume de Siam (1350-1767), t√™te de Bouddha ench√¢ss√©e dans les racines de Bodhi, d√©truite par les Birmans"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle fluviale au confluent de trois rivi√®res, ancienne capitale d'un royaume asiatique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines bouddhistes d'une ancienne capitale siamoise d√©truite par les Birmans en 1767, Tha√Ølande centrale"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Ayutthaya en Tha√Ølande"}
+  {name:"Ayutthaya ó ThaÔlande",lat:14.3692,lng:100.5567,desc:"Ayutthaya fut dÈtruite par les Birmans en 1767 aprËs un siËge de 14 mois. La ville, qui comptait un million d'habitants, fut rÈduite en cendres en une semaine. Les tÍtes de Bouddha ench‚ssÈes dans les racines d'un figuier de banian sont le symbole le plus photographiÈ de la ThaÔlande.",photo:"https://upload.wikimedia.org/wikipedia/commons/a/a2/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%AA%E0%B8%A3%E0%B8%A3%E0%B9%80%E0%B8%9E%E0%B8%8A%E0%B8%8D%E0%B9%8C348.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancienne capitale du Royaume de Siam (1350-1767), tÍte de Bouddha ench‚ssÈe dans les racines de Bodhi, dÈtruite par les Birmans"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle fluviale au confluent de trois riviËres, ancienne capitale d'un royaume asiatique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines bouddhistes d'une ancienne capitale siamoise dÈtruite par les Birmans en 1767, ThaÔlande centrale"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Ayutthaya en ThaÔlande"}
   ]},
-  {name:"Carthage ‚Äî Tunisie",lat:36.8525,lng:10.3233,desc:"Carthage fut la rivale de Rome pendant deux si√®cles. Apr√®s sa destruction finale en 146 av. J.-C., Rome aurait sem√© du sel sur ses ruines pour les rendre st√©riles ‚Äî cette histoire est probablement un mythe du XIXe si√®cle, mais le symbole perdure.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Qart Hadasht, fond√©e par les Ph√©niciens vers -814, rivale, d√©truite en 146 av. J.-C., thermes d'Antonin au bord de mer"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Banlieue nord de la capitale, golfe m√©diterran√©en, site arch√©ologique antique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines de la cit√© punique rivale de Rome, bord du golfe de Tunis, Tunisie"},
+  {name:"Carthage ó Tunisie",lat:36.8525,lng:10.3233,desc:"Carthage fut la rivale de Rome pendant deux siËcles. AprËs sa destruction finale en 146 av. J.-C., Rome aurait semÈ du sel sur ses ruines pour les rendre stÈriles ó cette histoire est probablement un mythe du XIXe siËcle, mais le symbole perdure.",photo:"https://upload.wikimedia.org/wikipedia/commons/b/b2/Vue_Carthage_Byrsa.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Qart Hadasht, fondÈe par les PhÈniciens vers -814, rivale, dÈtruite en 146 av. J.-C., thermes d'Antonin au bord de mer"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Banlieue nord de la capitale, golfe mÈditerranÈen, site archÈologique antique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines de la citÈ punique rivale de Rome, bord du golfe de Tunis, Tunisie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Carthage en Tunisie"}
   ]},
-  {name:"Amphith√©√¢tre d'El Djem ‚Äî Tunisie",lat:35.2958,lng:10.7053,desc:"L'amphith√©√¢tre d'El Djem est le troisi√®me plus grand amphith√©√¢tre romain du monde, apr√®s le Colis√©e et celui de Capoue. Construit au IIIe si√®cle ap. J.-C. en Afrique romaine, il pouvait accueillir 35 000 spectateurs. Il servit de forteresse au VIIe si√®cle lors de la r√©sistance berb√®re √† la conqu√™te arabe.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Thysdrus, colis√©e romain de 30 000 places construit vers 238 ap. J.-C., 3e plus grand du monde antique, mieux conserv√© d'Afrique"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gouvernorat central du pays, √† 195 km au sud de la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Amphith√©√¢tre romain d'El Djem, plus impressionnant d'Afrique, Tunisie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Amphith√©√¢tre d'El Djem en Tunisie"}
+  {name:"AmphithÈ‚tre d'El Djem ó Tunisie",lat:35.2958,lng:10.7053,desc:"L'amphithÈ‚tre d'El Djem est le troisiËme plus grand amphithÈ‚tre romain du monde, aprËs le ColisÈe et celui de Capoue. Construit au IIIe siËcle ap. J.-C. en Afrique romaine, il pouvait accueillir 35 000 spectateurs. Il servit de forteresse au VIIe siËcle lors de la rÈsistance berbËre ‡ la conquÍte arabe.",photo:"https://upload.wikimedia.org/wikipedia/commons/3/36/Anfiteatro%2C_El_Jem%2C_T%C3%BAnez%2C_2016-09-04%2C_DD_55-66_HDR_PAN.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Thysdrus, colisÈe romain de 30 000 places construit vers 238 ap. J.-C., 3e plus grand du monde antique, mieux conservÈ d'Afrique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gouvernorat central du pays, ‡ 195 km au sud de la capitale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"AmphithÈ‚tre romain d'El Djem, plus impressionnant d'Afrique, Tunisie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'AmphithÈ‚tre d'El Djem en Tunisie"}
   ]},
-  {name:"Djemaa el-Fna ‚Äî Marrakech, Maroc",lat:31.626,lng:-7.989,desc:"La place Djemaa el-Fna de Marrakech est class√©e par l'UNESCO comme patrimoine immat√©riel de l'humanit√© ‚Äî une premi√®re pour un espace public. Elle se transforme chaque soir en gigantesque restaurant en plein air avec des dizaines de stands de cuisine.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Place de l'Assembl√©e des morts, mosa√Øque orale reconnue par l'UNESCO (2001), charmeurs de serpents, conteurs, henn√©"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"M√©dina de Marrakech, place centrale, entre la Koutoubia et les souks"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande place anim√©e de Marrakech, marchands et conteurs, Maroc"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Djemaa el-Fna √† Marrakech, Maroc"}
+  {name:"Djemaa el-Fna ó Marrakech, Maroc",lat:31.626,lng:-7.989,desc:"La place Djemaa el-Fna de Marrakech est classÈe par l'UNESCO comme patrimoine immatÈriel de l'humanitÈ ó une premiËre pour un espace public. Elle se transforme chaque soir en gigantesque restaurant en plein air avec des dizaines de stands de cuisine.",photo:"https://upload.wikimedia.org/wikipedia/commons/7/79/Djemaa_el_Fna.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Place de l'AssemblÈe des morts, mosaÔque orale reconnue par l'UNESCO (2001), charmeurs de serpents, conteurs, hennÈ"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"MÈdina de Marrakech, place centrale, entre la Koutoubia et les souks"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande place animÈe de Marrakech, marchands et conteurs, Maroc"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Djemaa el-Fna ‡ Marrakech, Maroc"}
   ]},
-  {name:"Kasbah d'A√Øt Benhaddou ‚Äî Maroc",lat:31.0472,lng:-7.1267,desc:"A√Øt Benhaddou servit de d√©cor √† plus de 20 films et s√©ries, dont Gladiator, Game of Thrones et Lawrence d'Arabie. Seules cinq familles habitent encore dans l'enceinte du ksar, le reste de la population ayant migr√© vers le village moderne.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ksar (village fortifi√©) en pis√© rouge, √©tape caravani√®re sur la route des √©pices, d√©cor de Gladiator et Game of Thrones"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Ouarzazate, vall√©e de l'Ounila, versant sud du Haut Atlas"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Kasbah en pis√© d√©cor de films, A√Øt Benhaddou, vall√©e du Draa, Maroc"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kasbah d'A√Øt Benhaddou au Maroc"}
+  {name:"Kasbah d'AÔt Benhaddou ó Maroc",lat:31.0472,lng:-7.1267,desc:"AÔt Benhaddou servit de dÈcor ‡ plus de 20 films et sÈries, dont Gladiator, Game of Thrones et Lawrence d'Arabie. Seules cinq familles habitent encore dans l'enceinte du ksar, le reste de la population ayant migrÈ vers le village moderne.",photo:"https://upload.wikimedia.org/wikipedia/commons/d/d2/Alger_algiers_casbah_1900.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ksar (village fortifiÈ) en pisÈ rouge, Ètape caravaniËre sur la route des Èpices, dÈcor de Gladiator et Game of Thrones"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Ouarzazate, vallÈe de l'Ounila, versant sud du Haut Atlas"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Kasbah en pisÈ dÈcor de films, AÔt Benhaddou, vallÈe du Draa, Maroc"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kasbah d'AÔt Benhaddou au Maroc"}
   ]},
-  {name:"Rivi√®re Okavango ‚Äî Botswana",lat:-19.2833,lng:22.9167,desc:"Le delta de l'Okavango est une anomalie g√©ographique unique : c'est l'une des seules rivi√®res au monde qui ne se jette pas dans la mer mais meurt dans le d√©sert du Kalahari. Chaque ann√©e, ses crues cr√©ent une oasis √©ph√©m√®re de 15 000 km¬≤ qui attire une faune extraordinaire avant de s'√©vaporer progressivement.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Delta int√©rieur de l'Okavango, 15 000 km¬≤, fleuve se perdant dans le Kalahari, elephants et hippos, Moremi Game Reserve"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nord-ouest d'un pays enclav√© d'Afrique australe, delta int√©rieur sans d√©bouch√© sur la mer"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Delta de l'Okavango, oasis faunique dans le d√©sert du Kalahari, Botswana"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Rivi√®re Okavango au Botswana"}
+  {name:"RiviËre Okavango ó Botswana",lat:-19.2833,lng:22.9167,desc:"Le delta de l'Okavango est une anomalie gÈographique unique : c'est l'une des seules riviËres au monde qui ne se jette pas dans la mer mais meurt dans le dÈsert du Kalahari. Chaque annÈe, ses crues crÈent une oasis ÈphÈmËre de 15 000 km≤ qui attire une faune extraordinaire avant de s'Èvaporer progressivement.",photo:"photos/riviere_okavango.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Delta intÈrieur de l'Okavango, 15 000 km≤, fleuve se perdant dans le Kalahari, elephants et hippos, Moremi Game Reserve"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nord-ouest d'un pays enclavÈ d'Afrique australe, delta intÈrieur sans dÈbouchÈ sur la mer"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Delta de l'Okavango, oasis faunique dans le dÈsert du Kalahari, Botswana"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La RiviËre Okavango au Botswana"}
   ]},
-  {name:"Chutes de Tisisat ‚Äî √âthiopie",lat:11.5097,lng:37.587,desc:"Les chutes de Tisisat sur le Nil Bleu signifient ¬´fum√©e qui fait feu¬ª en amharique. Elles se trouvent √† la sortie du lac Tana, source du Nil Bleu qui apporte 85% des eaux du Nil. En saison des pluies, leur d√©bit peut atteindre 400 m√®tres de largeur ‚Äî un spectacle comparable aux Victoria Falls.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Blue Nile Falls (Tis Abay), chutes du Nil Bleu √† sa sortie du lac Tana, 400m de large et 45m de chute, r√©duites par barrage"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rivi√®re du Nil Bleu, √† 30 km d'une ville lacustre, r√©gion d'Amhara, Afrique de l'Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chutes du Nil Bleu, puissantes cascades d'√âthiopie, Bahir Dar"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes de Tisisat en √âthiopie"}
+  {name:"Chutes de Tisisat ó …thiopie",lat:11.5097,lng:37.587,desc:"Les chutes de Tisisat sur le Nil Bleu signifient ´fumÈe qui fait feuª en amharique. Elles se trouvent ‡ la sortie du lac Tana, source du Nil Bleu qui apporte 85% des eaux du Nil. En saison des pluies, leur dÈbit peut atteindre 400 mËtres de largeur ó un spectacle comparable aux Victoria Falls.",photo:"photos/chutes_de_tisisat.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Blue Nile Falls (Tis Abay), chutes du Nil Bleu ‡ sa sortie du lac Tana, 400m de large et 45m de chute, rÈduites par barrage"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RiviËre du Nil Bleu, ‡ 30 km d'une ville lacustre, rÈgion d'Amhara, Afrique de l'Est"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chutes du Nil Bleu, puissantes cascades d'…thiopie, Bahir Dar"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes de Tisisat en …thiopie"}
   ]},
-  {name:"Zanzibar ‚Äî Tanzanie",lat:-6.1622,lng:39.1875,desc:"Zanzibar est le lieu de naissance de Freddie Mercury, le chanteur de Queen. Sa maison natale dans Stone Town est devenue un lieu de p√®lerinage pour les fans du monde entier. Il quitta l'√Æle √† 7 ans pour ne plus jamais y revenir.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stone Town (Mji Mkongwe), vieille ville swahili √† l'architecture arabe, lieu de naissance de Freddie Mercury, commerce d'esclaves"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Stone Town, grande √Æle de l'archipel, oc√©an Indien occidental"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille cit√© swahili class√©e UNESCO, √Æle aux √©pices de l'oc√©an Indien, Tanzanie"},
+  {name:"Zanzibar ó Tanzanie",lat:-6.1622,lng:39.1875,desc:"Zanzibar est le lieu de naissance de Freddie Mercury, le chanteur de Queen. Sa maison natale dans Stone Town est devenue un lieu de pËlerinage pour les fans du monde entier. Il quitta l'Óle ‡ 7 ans pour ne plus jamais y revenir.",photo:"photos/zanzibar.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stone Town (Mji Mkongwe), vieille ville swahili ‡ l'architecture arabe, lieu de naissance de Freddie Mercury, commerce d'esclaves"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Stone Town, grande Óle de l'archipel, ocÈan Indien occidental"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille citÈ swahili classÈe UNESCO, Óle aux Èpices de l'ocÈan Indien, Tanzanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Zanzibar en Tanzanie"}
   ]},
-  {name:"Chutes de Murchison ‚Äî Ouganda",lat:2.2783,lng:31.6819,desc:"Les chutes de Murchison sont les plus puissantes au monde en termes de d√©bit par unit√© de surface. Le fleuve Victoria Nil y est forc√© de passer √† travers une fissure de seulement 7 m√®tres de large ‚Äî g√©n√©rant une pression hydraulique extraordinaire qui projette l'eau √† des dizaines de m√®tres.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus puissantes chutes du monde, Nil Victoria forc√© dans une gorge de 7m de large, Parc national de Murchison Falls"},
+  {name:"Chutes de Murchison ó Ouganda",lat:2.2783,lng:31.6819,desc:"Les chutes de Murchison sont les plus puissantes au monde en termes de dÈbit par unitÈ de surface. Le fleuve Victoria Nil y est forcÈ de passer ‡ travers une fissure de seulement 7 mËtres de large ó gÈnÈrant une pression hydraulique extraordinaire qui projette l'eau ‡ des dizaines de mËtres.",photo:"photos/chutes_de_murchison.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus puissantes chutes du monde, Nil Victoria forcÈ dans une gorge de 7m de large, Parc national de Murchison Falls"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national du nord du pays, chutes du plus long fleuve d'Afrique"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chutes du Nil les plus puissantes au monde, Ouganda"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes de Murchison en Ouganda"}
   ]},
-  {name:"√éle de Gor√©e ‚Äî S√©n√©gal (Maison des Esclaves)",lat:14.6689,lng:-17.3983,desc:"Gor√©e √©tait si prosp√®re gr√¢ce au commerce des esclaves que les marchands europ√©ens se disputaient sa possession pendant deux si√®cles. L'√Æle changea de mains 7 fois entre Portugais, Hollandais, Anglais et Fran√ßais.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Maison des Esclaves construite en 1776, porte du voyage sans retour, propri√©taire Nicolas P√©pin, dernier port avant les Am√©riques"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle d'une grande baie ouest-africaine, Maison des Esclaves, face au continent"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Maison des Esclaves de Gor√©e, m√©morial de la traite n√©gri√®re, S√©n√©gal"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'√éle de Gor√©e au S√©n√©gal (Maison des Esclaves)"}
-  ]},
-  {name:"Chutes de Ruacana ‚Äî Namibie/Angola",lat:-17.4004,lng:14.2159,desc:"Les chutes de Ruacana sur la rivi√®re Kunene, √† la fronti√®re Angola-Namibie, sont parmi les plus larges d'Afrique avec 700 m√®tres de largeur. En saison des pluies, leur d√©bit est si puissant que les habitants des villages voisins peuvent l'entendre √† plusieurs kilom√®tres. Une centrale hydro√©lectrique y fut construite dans les ann√©es 1970.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chutes d'un fleuve fronti√®re entre deux pays d'Afrique australe, 120m de hauteur et 700m de large"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District aride du nord-ouest, Kaokoland, fronti√®re fluviale entre deux pays"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chutes du Kunene √† la fronti√®re Namibie-Angola, Kaokoland"},
+    {name:"Chutes de Ruacana ó Namibie/Angola",lat:-17.4004,lng:14.2159,desc:"Les chutes de Ruacana sur la riviËre Kunene, ‡ la frontiËre Angola-Namibie, sont parmi les plus larges d'Afrique avec 700 mËtres de largeur. En saison des pluies, leur dÈbit est si puissant que les habitants des villages voisins peuvent l'entendre ‡ plusieurs kilomËtres. Une centrale hydroÈlectrique y fut construite dans les annÈes 1970.",photo:"photos/chutes_de_ruacana.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chutes d'un fleuve frontiËre entre deux pays d'Afrique australe, 120m de hauteur et 700m de large"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District aride du nord-ouest, Kaokoland, frontiËre fluviale entre deux pays"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chutes du Kunene ‡ la frontiËre Namibie-Angola, Kaokoland"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes de Ruacana en Namibie/Angola"}
   ]},
-  {name:"Washington D.C. ‚Äî USA (Capitole)",lat:38.8899,lng:-77.009,desc:"Le Capitole des √âtats-Unis, achev√© en 1800, est surmont√© d'une coupole en fonte qui p√®se 3 800 tonnes. Sa construction continua pendant la Guerre de S√©cession ‚Äî Abraham Lincoln y insista, affirmant que l'ach√®vement du d√¥me symboliserait la survie de l'Union. La Rotonde abrite 8 peintures de la taille d'une maison.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"United States Capitol, si√®ge du Congr√®s, coupole de 88m inaugur√©e en 1800, architecte William Thornton puis Latrobe"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Capitol Hill, √† l'est du National Mall, Washington D.C."},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Si√®ge du Congr√®s am√©ricain, coupole de 88 m, colline dominant la capitale am√©ricaine"},
+  {name:"Washington D.C. ó USA (Capitole)",lat:38.8899,lng:-77.009,desc:"Le Capitole des …tats-Unis, achevÈ en 1800, est surmontÈ d'une coupole en fonte qui pËse 3 800 tonnes. Sa construction continua pendant la Guerre de SÈcession ó Abraham Lincoln y insista, affirmant que l'achËvement du dÙme symboliserait la survie de l'Union. La Rotonde abrite 8 peintures de la taille d'une maison.",photo:"photos/washington_d_c.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"United States Capitol, siËge du CongrËs, coupole de 88m inaugurÈe en 1800, architecte William Thornton puis Latrobe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Capitol Hill, ‡ l'est du National Mall, Washington D.C."},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"SiËge du CongrËs amÈricain, coupole de 88 m, colline dominant la capitale amÈricaine"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Washington D.C. en USA (Capitole)"}
   ]},
-  {name:"NASA Kennedy ‚Äî Cap Canaveral, USA",lat:28.5721,lng:-80.648,desc:"Le Kennedy Space Center est l'un des sites de lancement les plus actifs du monde, avec 50 √† 60 lancements par an aujourd'hui. Sa Vehicle Assembly Building (160 m de haut) est si grande que des nuages peuvent se former √† l'int√©rieur par temps humide. Depuis Apollo 11 en 1969, plus de 150 missions habit√©es y ont pris leur envol.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Launch Complex 39A, aire de lancement d'Apollo 11 (1969) et des navettes spatiales, d√©sormais lou√© par SpaceX"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre spatial Kennedy, Merritt Island, Brevard County, c√¥te est de la Floride"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Complexe de lancement de la NASA, Apollo 11 et navettes, Floride"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le NASA Kennedy √† Cap Canaveral, USA"}
+    {name:"Golden Gate ó San Francisco, USA",lat:37.8199,lng:-122.4783,desc:"Les ingÈnieurs du Golden Gate conÁurent les premiers Èquipements de sÈcuritÈ modernes pour travailler en hauteur : casques, lunettes de sÈcuritÈ, crËmes solaires. Un filet de sÈcuritÈ sous le pont sauva 19 vies ó les survivants formËrent le ´Halfway to Hell Clubª.",photo:"photos/golden_gate.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pont suspendu de 1 280m de travÈe centrale inaugurÈ en 1937, pylÙnes de 227m, brouillard de la baie de San Francisco"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"DÈtroit du Golden Gate, entre San Francisco et Marin County, baie de San Francisco, Californie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pont suspendu rouge emblËme de San Francisco, Californie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Golden Gate ‡ San Francisco, USA"}
   ]},
-  {name:"Golden Gate ‚Äî San Francisco, USA",lat:37.8199,lng:-122.4783,desc:"Les ing√©nieurs du Golden Gate con√ßurent les premiers √©quipements de s√©curit√© modernes pour travailler en hauteur : casques, lunettes de s√©curit√©, cr√®mes solaires. Un filet de s√©curit√© sous le pont sauva 19 vies ‚Äî les survivants form√®rent le ¬´Halfway to Hell Club¬ª.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pont suspendu de 1 280m de trav√©e centrale inaugur√© en 1937, pyl√¥nes de 227m, brouillard de la baie de San Francisco"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"D√©troit du Golden Gate, entre San Francisco et Marin County, baie de San Francisco, Californie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pont suspendu rouge embl√®me de San Francisco, Californie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Golden Gate √† San Francisco, USA"}
+  {name:"Alcatraz ó San Francisco, USA",lat:37.8267,lng:-122.4233,desc:"Al Capone, l'un des prisonniers les plus cÈlËbres d'Alcatraz, y jouait dans un groupe de jazz appelÈ ´The Rock Islandersª. L'Óle fut choisie car ses courants et ses eaux froides rendaient toute tentative d'Èvasion ‡ la nage quasi suicidaire.",photo:"photos/alcatraz.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Œle-prison fÈdÈrale de 1934 ‡ 1963, prisonniers cÈlËbres Al Capone et Machine Gun Kelly, baie de San Francisco"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle d'Alcatraz, baie de San Francisco, comtÈ de San Francisco, Californie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œle-prison fÈdÈrale dans une baie californienne, fermÈe en 1963, accueillait Al Capone"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Alcatraz ‡ San Francisco, USA"}
   ]},
-  {name:"Alcatraz ‚Äî San Francisco, USA",lat:37.8267,lng:-122.4233,desc:"Al Capone, l'un des prisonniers les plus c√©l√®bres d'Alcatraz, y jouait dans un groupe de jazz appel√© ¬´The Rock Islanders¬ª. L'√Æle fut choisie car ses courants et ses eaux froides rendaient toute tentative d'√©vasion √† la nage quasi suicidaire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√éle-prison f√©d√©rale de 1934 √† 1963, prisonniers c√©l√®bres Al Capone et Machine Gun Kelly, baie de San Francisco"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle d'Alcatraz, baie de San Francisco, comt√© de San Francisco, Californie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éle-prison f√©d√©rale dans une baie californienne, ferm√©e en 1963, accueillait Al Capone"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Alcatraz √† San Francisco, USA"}
+  {name:"Monument aux pËres fondateurs ó Dakota du Sud, USA",lat:43.8791,lng:-103.4591,desc:"Mount Rushmore fut sculptÈ par Gutzon Borglum et 400 ouvriers de 1927 ‡ 1941 ‡ la dynamite et au burin. DerriËre la tÍte de Lincoln, une salle secrËte fut creusÈe pour abriter les archives les plus importantes de l'histoire amÈricaine ó elle attend encore sa porte Ètanche finale. Le projet original prÈvoyait les prÈsidents jusqu'‡ la taille.",photo:"photos/monument_aux_peres_fondateurs.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mount Rushmore, 4 visages de 18m taillÈs dans le granite (Washington, Jefferson, T. Roosevelt, Lincoln) par Gutzon Borglum 1927-19"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Keystone, comtÈ de Pennington, Dakota du Sud, Black Hills"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mont Rushmore, 4 prÈsidents amÈricains sculptÈs dans la roche, Dakota du Sud"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Monument aux pËres fondateurs ‡ Dakota du Sud, USA"}
   ]},
-  {name:"Monument aux p√®res fondateurs ‚Äî Dakota du Sud, USA",lat:43.8791,lng:-103.4591,desc:"Mount Rushmore fut sculpt√© par Gutzon Borglum et 400 ouvriers de 1927 √† 1941 √† la dynamite et au burin. Derri√®re la t√™te de Lincoln, une salle secr√®te fut creus√©e pour abriter les archives les plus importantes de l'histoire am√©ricaine ‚Äî elle attend encore sa porte √©tanche finale. Le projet original pr√©voyait les pr√©sidents jusqu'√† la taille.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mount Rushmore, 4 visages de 18m taill√©s dans le granite (Washington, Jefferson, T. Roosevelt, Lincoln) par Gutzon Borglum 1927-19"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Keystone, comt√© de Pennington, Dakota du Sud, Black Hills"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mont Rushmore, 4 pr√©sidents am√©ricains sculpt√©s dans la roche, Dakota du Sud"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Monument aux p√®res fondateurs √† Dakota du Sud, USA"}
+  {name:"Parc national de Zion ó Utah, USA",lat:37.2982,lng:-113.0263,desc:"Le parc de Zion est le rÈsultat de 240 millions d'annÈes d'Èrosion de grËs Navajo par la riviËre Virgin. Sa ´Narrowsª, gorge de 800 mËtres de large et 60 mËtres de profondeur, se parcourt en marchant dans l'eau. La randonnÈe Angels Landing, avec ses chaÓnes d'acier dans la falaise, nÈcessite un permis tirÈ au sort depuis 2022.",photo:"photos/parc_national_de_fiordland.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Angels Landing (1 763m), Narrows du Virgin River, grËs Navajo rouge de 610m, 4,3 millions de visiteurs/an"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ComtÈ de Washington, Utah, Plateau du Colorado, ‡ 160 km au nord-est de Las Vegas"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyons de grËs rouge, Angels Landing, Zion National Park, Utah"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc national de Zion ‡ Utah, USA"}
   ]},
-  {name:"Parc national de Zion ‚Äî Utah, USA",lat:37.2982,lng:-113.0263,desc:"Le parc de Zion est le r√©sultat de 240 millions d'ann√©es d'√©rosion de gr√®s Navajo par la rivi√®re Virgin. Sa ¬´Narrows¬ª, gorge de 800 m√®tres de large et 60 m√®tres de profondeur, se parcourt en marchant dans l'eau. La randonn√©e Angels Landing, avec ses cha√Ænes d'acier dans la falaise, n√©cessite un permis tir√© au sort depuis 2022.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Angels Landing (1 763m), Narrows du Virgin River, gr√®s Navajo rouge de 610m, 4,3 millions de visiteurs/an"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comt√© de Washington, Utah, Plateau du Colorado, √† 160 km au nord-est de Las Vegas"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyons de gr√®s rouge, Angels Landing, Zion National Park, Utah"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc national de Zion √† Utah, USA"}
+  {name:"Las Vegas Strip ó Nevada, USA",lat:36.1147,lng:-115.1728,desc:"Le Strip de Las Vegas est l'endroit qui consomme le plus d'ÈlectricitÈ par kilomËtre carrÈ aux …tats-Unis. L'hÙtel Bellagio possËde la plus grande fontaine du monde avec ses 1 200 jets atteignant 46 mËtres. Las Vegas recycle l'eau de ses hÙtels-casinos ‡ 99% ó malgrÈ ses milliers de piscines, c'est une des villes les plus Èconomes en eau d'AmÈrique.",photo:"photos/las_vegas_strip.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Las Vegas Boulevard South, 6,7 km de casinos gÈants, inaugurÈ par El Rancho Vegas en 1941, 150 000 km≤ de publicitÈs lumineuses"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Paradise, comtÈ de Clark, Nevada, dÈsert de Mojave"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Avenue des casinos gÈants et hÙtels thÈmatiques, dÈsert de Mojave, Nevada"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Las Vegas Strip ‡ Nevada, USA"}
   ]},
-  {name:"Las Vegas Strip ‚Äî Nevada, USA",lat:36.1147,lng:-115.1728,desc:"Le Strip de Las Vegas est l'endroit qui consomme le plus d'√©lectricit√© par kilom√®tre carr√© aux √âtats-Unis. L'h√¥tel Bellagio poss√®de la plus grande fontaine du monde avec ses 1 200 jets atteignant 46 m√®tres. Las Vegas recycle l'eau de ses h√¥tels-casinos √† 99% ‚Äî malgr√© ses milliers de piscines, c'est une des villes les plus √©conomes en eau d'Am√©rique.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Las Vegas Boulevard South, 6,7 km de casinos g√©ants, inaugur√© par El Rancho Vegas en 1941, 150 000 km¬≤ de publicit√©s lumineuses"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Paradise, comt√© de Clark, Nevada, d√©sert de Mojave"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Avenue des casinos g√©ants et h√¥tels th√©matiques, d√©sert de Mojave, Nevada"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Las Vegas Strip √† Nevada, USA"}
+  {name:"Everglades ó Floride, USA",lat:25.2866,lng:-80.8987,desc:"Les Everglades ne sont pas un marais mais une immense riviËre plate qui coule au ralenti ó ‡ peine 0,3 km/h ó du lac Okeechobee vers le golfe du Mexique. Ce ´River of Grassª long de 160 km est le seul endroit au monde o˘ alligators et crocodiles coexistent naturellement.",photo:"photos/las_vegas_strip.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand parc subtropical du continent, 6 105 km≤, seul habitat au monde o˘ alligators et crocodiles coexistent, lac Okeechobee"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ExtrÈmitÈ sud de la Floride, comtÈ de Miami-Dade et Monroe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Unique parc subtropical des USA, seul endroit au monde o˘ alligators et crocodiles coexistent, sud de la Floride"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Everglades ‡ Floride, USA"}
   ]},
-  {name:"Everglades ‚Äî Floride, USA",lat:25.2866,lng:-80.8987,desc:"Les Everglades ne sont pas un marais mais une immense rivi√®re plate qui coule au ralenti ‚Äî √† peine 0,3 km/h ‚Äî du lac Okeechobee vers le golfe du Mexique. Ce ¬´River of Grass¬ª long de 160 km est le seul endroit au monde o√π alligators et crocodiles coexistent naturellement.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand parc subtropical du continent, 6 105 km¬≤, seul habitat au monde o√π alligators et crocodiles coexistent, lac Okeechobee"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Extr√©mit√© sud de la Floride, comt√© de Miami-Dade et Monroe"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Unique parc subtropical des USA, seul endroit au monde o√π alligators et crocodiles coexistent, sud de la Floride"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Everglades √† Floride, USA"}
+  {name:"Tenochtitlan ó Mexico, Mexique",lat:19.4342,lng:-99.1333,desc:"Tenochtitlan, capitale aztËque fondÈe en 1325 sur une Óle au milieu du lac Texcoco, Ètait la plus grande ville d'AmÈrique prÈcolombienne. Elle fut dÈtruite par CortÈs en 1521 et le lac fut assÈchÈ. Mexico fut construite directement au-dessus ó le ZÛcalo actuel se trouve exactement sur l'ancienne place centrale aztËque.",photo:"photos/tenochtitlan.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Templo Mayor aztËque, fouilles depuis 1978, grand temple ‡ deux sanctuaires (Huitzilopochtli et Tlaloc), au cúur de la capitale pr"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centro HistÛrico d'une mÈgalopole, grande place centrale, cúúur de l'ancienne Tenochtitlan"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Templo Mayor aztËque, cúur de l'ancienne capitale aztËque, Mexico"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tenochtitlan ‡ Mexico, Mexique"}
   ]},
-  {name:"Tenochtitlan ‚Äî Mexico, Mexique",lat:19.4342,lng:-99.1333,desc:"Tenochtitlan, capitale azt√®que fond√©e en 1325 sur une √Æle au milieu du lac Texcoco, √©tait la plus grande ville d'Am√©rique pr√©colombienne. Elle fut d√©truite par Cort√©s en 1521 et le lac fut ass√©ch√©. Mexico fut construite directement au-dessus ‚Äî le Z√≥calo actuel se trouve exactement sur l'ancienne place centrale azt√®que.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Templo Mayor azt√®que, fouilles depuis 1978, grand temple √† deux sanctuaires (Huitzilopochtli et Tlaloc), au c≈ìur de la capitale pr"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centro Hist√≥rico d'une m√©galopole, grande place centrale, c≈ì≈ìur de l'ancienne Tenochtitlan"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Templo Mayor azt√®que, c≈ìur de l'ancienne capitale azt√®que, Mexico"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tenochtitlan √† Mexico, Mexique"}
-  ]},
-  {name:"Oaxaca ‚Äî Mexique",lat:17.0619,lng:-96.7218,desc:"Oaxaca est la capitale de la gastronomie mexicaine, avec 7 vari√©t√©s de mole (dont le mythique mole negro), le mezcal artisanal et le chocolat de tablette. La Guelaguetza, festival de danses r√©gionales tenu en juillet, r√©unit les 16 peuples indig√®nes de l'√âtat dans une c√©l√©bration unique de diversit√© culturelle.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monte Alb√°n, capitale zapot√®que du Ve si√®cle av. J.-C. au XVe si√®cle ap. J.-C., Monte Alb√°n Plataforma sur, 400m d'altitude"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√Ä 9 km d'une grande ville coloniale, site zapot√®que sur un plateau montagneux"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© zapot√®que sur un plateau dominant une vall√©e, √âtat m√©ridional du Mexique"},
+  {name:"Oaxaca ó Mexique",lat:17.0619,lng:-96.7218,desc:"Oaxaca est la capitale de la gastronomie mexicaine, avec 7 variÈtÈs de mole (dont le mythique mole negro), le mezcal artisanal et le chocolat de tablette. La Guelaguetza, festival de danses rÈgionales tenu en juillet, rÈunit les 16 peuples indigËnes de l'…tat dans une cÈlÈbration unique de diversitÈ culturelle.",photo:"photos/oaxaca.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monte Alb·n, capitale zapotËque du Ve siËcle av. J.-C. au XVe siËcle ap. J.-C., Monte Alb·n Plataforma sur, 400m d'altitude"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"¿ 9 km d'une grande ville coloniale, site zapotËque sur un plateau montagneux"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ zapotËque sur un plateau dominant une vallÈe, …tat mÈridional du Mexique"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Oaxaca au Mexique"}
   ]},
-  {name:"Copper Canyon ‚Äî Chihuahua, Mexique",lat:27.52,lng:-107.68,desc:"Le Copper Canyon est parcouru par le train Chepe, consid√©r√© comme l'un des plus beaux trajets ferroviaires du monde. Il traverse 86 tunnels et 37 ponts en serpentant dans un canyon plus profond que le Grand Canyon ‚Äî un voyage de 16 heures entre la montagne et la mer.",hints:[
+  {name:"Copper Canyon ó Chihuahua, Mexique",lat:27.52,lng:-107.68,desc:"Le Copper Canyon est parcouru par le train Chepe, considÈrÈ comme l'un des plus beaux trajets ferroviaires du monde. Il traverse 86 tunnels et 37 ponts en serpentant dans un canyon plus profond que le Grand Canyon ó un voyage de 16 heures entre la montagne et la mer.",photo:"photos/copper_canyon.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Barrancas del Cobre, 6 canyons plus grands et profonds que le Grand Canyon (1 870m), peuple Tarahumara, Chepe (train)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sierra Madre Occidentale, canyon plus profond que le Grand Canyon, r√©seau ferroviaire c√©l√®bre"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Syst√®me de canyons plus profond que le Grand Canyon, Sierra Madre Occidentale, nord du Mexique"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Copper Canyon √† Chihuahua, Mexique"}
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sierra Madre Occidentale, canyon plus profond que le Grand Canyon, rÈseau ferroviaire cÈlËbre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"SystËme de canyons plus profond que le Grand Canyon, Sierra Madre Occidentale, nord du Mexique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Copper Canyon ‡ Chihuahua, Mexique"}
   ]},
-  {name:"Cartagena ‚Äî Colombie",lat:10.3932,lng:-75.4795,desc:"Les murs de Cartagena de Indias furent construits apr√®s que le pirate Francis Drake pilla la ville en 1586. Ironiquement, ces fortifications espagnoles figurent aujourd'hui parmi les mieux conserv√©es des Am√©riques et sont class√©es UNESCO.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© coloniale fond√©e en 1533, remparts de 11 km, Castillo San Felipe de Barajas (1657), port de la traite n√©gri√®re"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"D√©partement c√¥tier d'Am√©rique du Sud, vieille ville fortifi√©e coloniale sur la mer des Cara√Øbes"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© coloniale fortifi√©e de Carthag√®ne des Indes, Colombie, Cara√Øbes"},
+  {name:"Cartagena ó Colombie",lat:10.3932,lng:-75.4795,desc:"Les murs de Cartagena de Indias furent construits aprËs que le pirate Francis Drake pilla la ville en 1586. Ironiquement, ces fortifications espagnoles figurent aujourd'hui parmi les mieux conservÈes des AmÈriques et sont classÈes UNESCO.",photo:"photos/cartagena.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ coloniale fondÈe en 1533, remparts de 11 km, Castillo San Felipe de Barajas (1657), port de la traite nÈgriËre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"DÈpartement cÙtier d'AmÈrique du Sud, vieille ville fortifiÈe coloniale sur la mer des CaraÔbes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ coloniale fortifiÈe de CarthagËne des Indes, Colombie, CaraÔbes"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cartagena en Colombie"}
   ]},
-  {name:"Los Roques ‚Äî Venezuela",lat:11.86,lng:-66.67,desc:"Los Roques est un archipel de 350 √Æles coralliennes dans la mer des Cara√Øbes, int√©gralement parc national depuis 1972. Ses lagons peu profonds d'un bleu irr√©el sont parmi les plus transparents des Cara√Øbes. Les plages de sable blanc sont inaccessibles en voiture ‚Äî tout l'archipel se visite √† pied ou en bateau.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Archipel de 350 √Ælots coraliens, parc national depuis 1972, eaux turquoise √† 30¬∞C, kitesurf et p√™che sportive"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel de la mer des Cara√Øbes, √† 168 km des c√¥tes continentales, eaux turquoise"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Archipel de 350 √Ælots coraliens, eaux turquoise, Cara√Øbes au nord de Caracas"},
+  {name:"Los Roques ó Venezuela",lat:11.86,lng:-66.67,desc:"Los Roques est un archipel de 350 Óles coralliennes dans la mer des CaraÔbes, intÈgralement parc national depuis 1972. Ses lagons peu profonds d'un bleu irrÈel sont parmi les plus transparents des CaraÔbes. Les plages de sable blanc sont inaccessibles en voiture ó tout l'archipel se visite ‡ pied ou en bateau.",photo:"photos/los_roques.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Archipel de 350 Ólots coraliens, parc national depuis 1972, eaux turquoise ‡ 30∞C, kitesurf et pÍche sportive"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel de la mer des CaraÔbes, ‡ 168 km des cÙtes continentales, eaux turquoise"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Archipel de 350 Ólots coraliens, eaux turquoise, CaraÔbes au nord de Caracas"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Los Roques au Venezuela"}
   ]},
-  {name:"Choquequirao ‚Äî P√©rou",lat:-13.5393,lng:-72.8498,desc:"Choquequirao est parfois surnomm√©e ¬´Machu Picchu de luxe¬ª car elle n'est accessible qu'√† pied apr√®s 2 jours de marche. Sa taille √©gale celle de Machu Picchu mais elle accueille seulement 30 visiteurs par jour contre 5 000. Un projet de t√©l√©ph√©rique menace d'en faire la prochaine destination de masse du P√©rou.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© inca √† 3 085m, terrasses d√©cor√©es de lamas en pierre, berceau du soleil, accessible uniquement √† pied (2 jours)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de La Convenci√≥n, Cusco, canyon de l'Apur√≠mac, Andes p√©ruviennes"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© inca dans les nuages accessible uniquement √† pied, s≈ìur oubli√©e d'une c√©l√®bre cit√© andine, P√©rou"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Choquequirao au P√©rou"}
+  {name:"Choquequirao ó PÈrou",lat:-13.5393,lng:-72.8498,desc:"Choquequirao est parfois surnommÈe ´Machu Picchu de luxeª car elle n'est accessible qu'‡ pied aprËs 2 jours de marche. Sa taille Ègale celle de Machu Picchu mais elle accueille seulement 30 visiteurs par jour contre 5 000. Un projet de tÈlÈphÈrique menace d'en faire la prochaine destination de masse du PÈrou.",photo:"photos/choquequirao.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ inca ‡ 3 085m, terrasses dÈcorÈes de lamas en pierre, berceau du soleil, accessible uniquement ‡ pied (2 jours)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de La ConvenciÛn, Cusco, canyon de l'ApurÌmac, Andes pÈruviennes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ inca dans les nuages accessible uniquement ‡ pied, súur oubliÈe d'une cÈlËbre citÈ andine, PÈrou"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Choquequirao au PÈrou"}
   ]},
-  {name:"Sucre ‚Äî Bolivie",lat:-19.0196,lng:-65.2619,desc:"Sucre, capitale constitutionnelle de Bolivie, est surnomm√©e ¬´la ville blanche¬ª pour ses fa√ßades coloniales immacul√©es. Elle abrite l'une des pi√®ces les plus importantes de l'histoire sudam√©ricaine : l'original de la D√©claration d'ind√©pendance de la Bolivie de 1825, sign√©e par Sim√≥n Bol√≠var.",hints:[
+  {name:"Sucre ó Bolivie",lat:-19.0196,lng:-65.2619,desc:"Sucre, capitale constitutionnelle de Bolivie, est surnommÈe ´la ville blancheª pour ses faÁades coloniales immaculÈes. Elle abrite l'une des piËces les plus importantes de l'histoire sudamÈricaine : l'original de la DÈclaration d'indÈpendance de la Bolivie de 1825, signÈe par SimÛn BolÌvar.",photo:"photos/sucre.png",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ciudad Blanca, capitale constitutionnelle d'un pays andin, Casa de la Libertad (1825), altitude 2 810m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vall√©e des Cordill√®res, capitale constitutionnelle d'un pays andin, centro blanc colonial"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"VallÈe des CordillËres, capitale constitutionnelle d'un pays andin, centro blanc colonial"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville blanche, capitale constitutionnelle de la Bolivie, Casa de la Libertad (1825), UNESCO"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Sucre en Bolivie"}
   ]},
-  {name:"Trinidad ‚Äî Cuba",lat:21.8024,lng:-79.9836,desc:"Trinidad de Cuba est une ville coloniale fig√©e dans le temps, interdite aux voitures dans son centre depuis des d√©cennies. Ses rues pav√©es de galets, ses maisons ocre et ses musiciens de son cubano en font l'un des endroits les plus authentiques des Cara√Øbes. Elle fut class√©e UNESCO en 1988 avec sa vall√©e sucri√®re adjacente.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ville coloniale fond√©e en 1514, Plaza Mayor, maisons color√©es, ex-capitale de l'industrie sucri√®re, Valle de los Ingenios"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province centrale d'une √Æle des Cara√Øbes, ville coloniale class√©e, √† 80 km d'une c√¥te"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Joyau colonial cubain fig√© dans le temps, ancienne capitale de l'industrie sucri√®re, UNESCO"},
+  {name:"Trinidad ó Cuba",lat:21.8024,lng:-79.9836,desc:"Trinidad de Cuba est une ville coloniale figÈe dans le temps, interdite aux voitures dans son centre depuis des dÈcennies. Ses rues pavÈes de galets, ses maisons ocre et ses musiciens de son cubano en font l'un des endroits les plus authentiques des CaraÔbes. Elle fut classÈe UNESCO en 1988 avec sa vallÈe sucriËre adjacente.",photo:"photos/trinidad.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ville coloniale fondÈe en 1514, Plaza Mayor, maisons colorÈes, ex-capitale de l'industrie sucriËre, Valle de los Ingenios"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province centrale d'une Óle des CaraÔbes, ville coloniale classÈe, ‡ 80 km d'une cÙte"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Joyau colonial cubain figÈ dans le temps, ancienne capitale de l'industrie sucriËre, UNESCO"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La ville coloniale de Trinidad, Cuba"}
   ]},
-  {name:"La Havane ‚Äî Cuba",lat:23.1136,lng:-82.3666,desc:"La Havane abrite le plus grand ensemble d'architecture coloniale baroque des Am√©riques. Ses vieilles voitures am√©ricaines des ann√©es 1950, embargo oblige, sont toujours en circulation ‚Äî entretenues par des m√©caniciens cubains qui fabriquent eux-m√™mes les pi√®ces manquantes. Le Malec√≥n, promenade bordant l'oc√©an, est le salon √† ciel ouvert de la ville.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Habana Vieja, Malec√≥n de 8 km, Capitolio Nacional (1929), Floridita bar d'Hemingway, voitures am√©ricaines des ann√©es 50"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande baie de la capitale d'une √Æle cara√Øbe, face au d√©troit qui la s√©pare du continent"},
+  {name:"La Havane ó Cuba",lat:23.1136,lng:-82.3666,desc:"La Havane abrite le plus grand ensemble d'architecture coloniale baroque des AmÈriques. Ses vieilles voitures amÈricaines des annÈes 1950, embargo oblige, sont toujours en circulation ó entretenues par des mÈcaniciens cubains qui fabriquent eux-mÍmes les piËces manquantes. Le MalecÛn, promenade bordant l'ocÈan, est le salon ‡ ciel ouvert de la ville.",photo:"photos/trinidad.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Habana Vieja, MalecÛn de 8 km, Capitolio Nacional (1929), Floridita bar d'Hemingway, voitures amÈricaines des annÈes 50"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande baie de la capitale d'une Óle caraÔbe, face au dÈtroit qui la sÈpare du continent"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Capitale de Cuba, vieille ville coloniale baroque et promenade en bord de mer"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Havane, capitale de Cuba"}
   ]},
-  {name:"Chichen Itza ‚Äî Cenote Sagrado, Mexique",lat:20.6829,lng:-88.5686,desc:"La c√©note sacr√©e de Chichen Itza fut le th√©√¢tre de sacrifices mayas pendant des si√®cles. Au fond de ce puits de 60 m√®tres de diam√®tre, les arch√©ologues retrouv√®rent en 1904 des ossements de victimes, des bijoux de jade et des objets d'or. L'explorateur Edward Thompson les remontait √† la grue depuis son hacienda priv√©e.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cenote Sagrado (60m de diam√®tre, 27m de profondeur), puits rituel maya o√π l'on jetait offrandes et sacrifices humains"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Site arch√©ologique maya, nord d'une p√©ninsule calcaire tropicale, pyramide √† 9 niveaux"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cenote sacr√© des Mayas √† Chich√©n Itz√°, p√©ninsule du Yucat√°n"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chichen Itza √† Cenote Sagrado, Mexique"}
+    {name:"Twelve Apostles ó Victoria, Australie",lat:-38.6643,lng:143.1051,desc:"Les Douze ApÙtres sur la Great Ocean Road en Australie ne sont plus que huit ó quatre se sont effondrÈs dans la mer en raison de l'Èrosion marine. Ironiquement, ils n'Ètaient que neuf lors de leur baptÍme en 1922 et furent initialement appelÈs ´Les Douze Porcinsª avant que les autoritÈs touristiques ne rebaptisent le site.",photo:"photos/twelve_apostles.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Huit (il en reste 8) piliers calcaires de 45m ÈrodÈs par les vagues de l'ocÈan Austral, Great Ocean Road, Port Campbell"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de la Great Ocean Road, cÙte des Naufrages, falaises calcaires"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Douze ApÙtres, piliers calcaires sur l'ocÈan Austral, Victoria, Australie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Twelve Apostles ‡ Victoria, Australie"}
   ]},
-  {name:"Twelve Apostles ‚Äî Victoria, Australie",lat:-38.6643,lng:143.1051,desc:"Les Douze Ap√¥tres sur la Great Ocean Road en Australie ne sont plus que huit ‚Äî quatre se sont effondr√©s dans la mer en raison de l'√©rosion marine. Ironiquement, ils n'√©taient que neuf lors de leur bapt√™me en 1922 et furent initialement appel√©s ¬´Les Douze Porcins¬ª avant que les autorit√©s touristiques ne rebaptisent le site.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Huit (il en reste 8) piliers calcaires de 45m √©rod√©s par les vagues de l'oc√©an Austral, Great Ocean Road, Port Campbell"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de la Great Ocean Road, c√¥te des Naufrages, falaises calcaires"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Douze Ap√¥tres, piliers calcaires sur l'oc√©an Austral, Victoria, Australie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Twelve Apostles √† Victoria, Australie"}
-  ]},
-  {name:"Parc de Kakadu ‚Äî Territoire du Nord, Australie",lat:-12.6751,lng:132.52,desc:"Le parc national de Kakadu abrite des peintures rupestres aborig√®nes vieilles de 20 000 ans qui constituent un almanach vivant. Les artistes actuels continuent d'ajouter des peintures aux parois, maintenant une tradition ininterrompue depuis la pr√©histoire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"50 000 km¬≤, peintures rupestres des Bininj/Mungguy vieilles de 40 000 ans, estuaires, crocodiles marins, chutes Jim Jim"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion aride de l'int√©rieur du continent, √† 250 km √† l'est d'une ville c√¥ti√®re"},
+  {name:"Parc de Kakadu ó Territoire du Nord, Australie",lat:-12.6751,lng:132.52,desc:"Le parc national de Kakadu abrite des peintures rupestres aborigËnes vieilles de 20 000 ans qui constituent un almanach vivant. Les artistes actuels continuent d'ajouter des peintures aux parois, maintenant une tradition ininterrompue depuis la prÈhistoire.",photo:"photos/parc_de_kakadu.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"50 000 km≤, peintures rupestres des Bininj/Mungguy vieilles de 40 000 ans, estuaires, crocodiles marins, chutes Jim Jim"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion aride de l'intÈrieur du continent, ‡ 250 km ‡ l'est d'une ville cÙtiËre"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Kakadu, parc aux peintures rupestres et crocodiles, Territoire du Nord"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc de Kakadu √† Territoire du Nord, Australie"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc de Kakadu ‡ Territoire du Nord, Australie"}
   ]},
-  {name:"Lake Hillier ‚Äî Australie-Occidentale",lat:-34.0935,lng:123.2017,desc:"Le lac Hillier en Australie-Occidentale est naturellement rose bubblegum ‚Äî une couleur qui ne dispara√Æt pas m√™me si on prend l'eau dans un verre. Sa teinte est due √† la combinaison de bact√©ries halophiles, d'algues Dunaliella salina et de sel. Le lac est entour√© d'eucalyptus et de sable blanc.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac rose d√ª √† l'algue Dunaliella salina et aux bact√©ries Salinibacter ruber, √Æle Middle de l'archipel des Recherches"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel c√¥tier au large d'une c√¥te m√©ridionale, eaux turquoise m√©ridionales"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac rose embl√©matique, Hillier Lake, Australie-Occidentale"},
+  {name:"Lake Hillier ó Australie-Occidentale",lat:-34.0935,lng:123.2017,desc:"Le lac Hillier en Australie-Occidentale est naturellement rose bubblegum ó une couleur qui ne disparaÓt pas mÍme si on prend l'eau dans un verre. Sa teinte est due ‡ la combinaison de bactÈries halophiles, d'algues Dunaliella salina et de sel. Le lac est entourÈ d'eucalyptus et de sable blanc.",photo:"photos/lake_hillier.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac rose d˚ ‡ l'algue Dunaliella salina et aux bactÈries Salinibacter ruber, Óle Middle de l'archipel des Recherches"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel cÙtier au large d'une cÙte mÈridionale, eaux turquoise mÈridionales"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac rose emblÈmatique, Hillier Lake, Australie-Occidentale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lake Hillier en Australie-Occidentale"}
   ]},
-  {name:"Aoraki Mount Cook ‚Äî Nouvelle-Z√©lande",lat:-43.595,lng:170.1418,desc:"Aoraki Mount Cook, √† 3 724 m√®tres, est le plus haut sommet de Nouvelle-Z√©lande. Sir Edmund Hillary, premier homme √† gravir l'Everest en 1953, s'y entra√Æna. Son parc national est class√© au sein du ¬´Dark Sky Reserve¬ª ‚Äî l'une des 20 plus belles zones d'observation astronomique au monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus haute montagne de Nouvelle-Z√©lande (3 724m), glacier de Tasman (27 km), Hillary s'y entra√Æna avant l'Everest"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national d'Aoraki/Mount Cook, district de Mackenzie, √Æle du Sud, Nouvelle-Z√©lande"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute montagne de Nouvelle-Z√©lande, glacier de 27 km, Alpes du Sud, √Æle du Sud"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Aoraki Mount Cook en Nouvelle-Z√©lande"}
+  {name:"Aoraki Mount Cook ó Nouvelle-ZÈlande",lat:-43.595,lng:170.1418,desc:"Aoraki Mount Cook, ‡ 3 724 mËtres, est le plus haut sommet de Nouvelle-ZÈlande. Sir Edmund Hillary, premier homme ‡ gravir l'Everest en 1953, s'y entraÓna. Son parc national est classÈ au sein du ´Dark Sky Reserveª ó l'une des 20 plus belles zones d'observation astronomique au monde.",photo:"photos/aoraki_mount_cook.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus haute montagne de Nouvelle-ZÈlande (3 724m), glacier de Tasman (27 km), Hillary s'y entraÓna avant l'Everest"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national d'Aoraki/Mount Cook, district de Mackenzie, Óle du Sud, Nouvelle-ZÈlande"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute montagne de Nouvelle-ZÈlande, glacier de 27 km, Alpes du Sud, Óle du Sud"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Aoraki Mount Cook en Nouvelle-ZÈlande"}
   ]},
-  {name:"Hobbiton ‚Äî Waikato, Nouvelle-Z√©lande",lat:-37.8722,lng:175.6821,desc:"Hobbiton dans la r√©gion de Waikato fut construite pour le tournage du Seigneur des Anneaux (2001) sur une ferme familiale. Peter Jackson la fit reconstruire en dur pour Le Hobbit (2012) pour en faire une attraction permanente. Les 44 portes rondes des Hobbits sont habit√©es par des plantes soigneusement choisies pour para√Ætre √† taille hobbit.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"D√©cor du Shire des films LOTR de Peter Jackson, ferme Alexander Farm, 44 maisons de hobbits permanentes depuis 2011"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Matamata, Waikato, √Æle du Nord, Nouvelle-Z√©lande, √† 170 km d'Auckland"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"D√©cor du Shire du Seigneur des Anneaux reconstruit en dur, ferme de Matamata, √Æle du Nord"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hobbiton √† Waikato, Nouvelle-Z√©lande"}
+  {name:"Hobbiton ó Waikato, Nouvelle-ZÈlande",lat:-37.8722,lng:175.6821,desc:"Hobbiton dans la rÈgion de Waikato fut construite pour le tournage du Seigneur des Anneaux (2001) sur une ferme familiale. Peter Jackson la fit reconstruire en dur pour Le Hobbit (2012) pour en faire une attraction permanente. Les 44 portes rondes des Hobbits sont habitÈes par des plantes soigneusement choisies pour paraÓtre ‡ taille hobbit.",photo:"photos/hobbiton.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"DÈcor du Shire des films LOTR de Peter Jackson, ferme Alexander Farm, 44 maisons de hobbits permanentes depuis 2011"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Matamata, Waikato, Óle du Nord, Nouvelle-ZÈlande, ‡ 170 km d'Auckland"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"DÈcor du Shire du Seigneur des Anneaux reconstruit en dur, ferme de Matamata, Óle du Nord"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hobbiton ‡ Waikato, Nouvelle-ZÈlande"}
   ]},
-  {name:"Vall√©e de Franz Josef ‚Äî Nouvelle-Z√©lande",lat:-43.454,lng:170.1831,desc:"Le glacier Franz Josef est l'un des glaciers les plus rapides du monde : il avance de 70 cm par jour. Sa langue de glace descend jusqu'√† 300 m√®tres d'altitude dans une for√™t tropicale humide ‚Äî une coexistence unique sur Terre. Des h√©liport√©es permettent de poser sur sa surface cribl√©e de crevasses.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Glaciers de Franz Josef (12 km) et Fox (13 km), uniques glaciers temp√©r√©s du monde descendant jusqu'√† la for√™t tropicale"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District de Westland, c√¥te ouest de l'√Æle du Sud, parc national de Westland Tai Poutini, Nouvelle-Z√©lande"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Glaciers de Franz Josef et Fox, c√¥te ouest de l'√Æle du Sud, Nouvelle-Z√©lande"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Vall√©e de Franz Josef en Nouvelle-Z√©lande"}
+  {name:"VallÈe de Franz Josef ó Nouvelle-ZÈlande",lat:-43.454,lng:170.1831,desc:"Le glacier Franz Josef est l'un des glaciers les plus rapides du monde : il avance de 70 cm par jour. Sa langue de glace descend jusqu'‡ 300 mËtres d'altitude dans une forÍt tropicale humide ó une coexistence unique sur Terre. Des hÈliportÈes permettent de poser sur sa surface criblÈe de crevasses.",photo:"photos/vallee_de_franz_josef.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Glaciers de Franz Josef (12 km) et Fox (13 km), uniques glaciers tempÈrÈs du monde descendant jusqu'‡ la forÍt tropicale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District de Westland, cÙte ouest de l'Óle du Sud, parc national de Westland Tai Poutini, Nouvelle-ZÈlande"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Glaciers de Franz Josef et Fox, cÙte ouest de l'Óle du Sud, Nouvelle-ZÈlande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La VallÈe de Franz Josef en Nouvelle-ZÈlande"}
   ]},
-  {name:"Tonga ‚Äî Pacifique Sud",lat:-20.0137,lng:-175.2014,desc:"Les √Æles Tonga sont le dernier royaume polyn√©sien encore en existence. C'est l'unique nation du Pacifique √† n'avoir jamais √©t√© colonis√©e. Ses lagons abritent les baleines √† bosse pendant leur migration annuelle d'ao√ªt √† novembre ‚Äî les seuls endroits au monde o√π l'on peut nager l√©galement avec ces c√©tac√©s.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Royaume de Tonga, seule monarchie polyn√©sienne ininterrompue, 170 √Æles dont Tongatapu, plong√©e avec les baleines √† bosse"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle principale d'un archipel polyn√©sien, Pacifique Sud, √† 2 000 km d'un grand continent"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dernier royaume polyn√©sien, seule nation du Pacifique jamais colonis√©e, nage avec les baleines"},
+  {name:"Tonga ó Pacifique Sud",lat:-20.0137,lng:-175.2014,desc:"Les Óles Tonga sont le dernier royaume polynÈsien encore en existence. C'est l'unique nation du Pacifique ‡ n'avoir jamais ÈtÈ colonisÈe. Ses lagons abritent les baleines ‡ bosse pendant leur migration annuelle d'ao˚t ‡ novembre ó les seuls endroits au monde o˘ l'on peut nager lÈgalement avec ces cÈtacÈs.",photo:"photos/tonga.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Royaume de Tonga, seule monarchie polynÈsienne ininterrompue, 170 Óles dont Tongatapu, plongÈe avec les baleines ‡ bosse"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle principale d'un archipel polynÈsien, Pacifique Sud, ‡ 2 000 km d'un grand continent"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dernier royaume polynÈsien, seule nation du Pacifique jamais colonisÈe, nage avec les baleines"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Royaume de Tonga, Pacifique Sud"}
   ]},
-  {name:"√éle de Moorea ‚Äî Polyn√©sie fran√ßaise",lat:-17.5327,lng:-149.8322,desc:"L'√Æle de Moorea, visible depuis Tahiti √† 17 km, est un ancien volcan dont le crat√®re effondr√© forma deux baies en forme de c≈ìur. Le biologiste James Cook l'appela ¬´l'√éle de la paix¬ª. Jacques Brel y v√©cut ses derni√®res ann√©es dans les ann√©es 1970, naviguant entre ses √Æles ador√©es dans son voilier.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√éle de basalte s≈ìur de Tahiti, piques volcaniques du Mont Rotui (899m), baies d'Opunohu et de Cook, requins dormeurs"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√Ä 17 km √† l'ouest de Tahiti, archipel de la Soci√©t√©, Polyn√©sie fran√ßaise, Pacifique Sud"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Moorea, √Æle s≈ìur de Tahiti aux piques volcaniques, Polyn√©sie fran√ßaise"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'√éle de Moorea en Polyn√©sie fran√ßaise"}
+  {name:"Œle de Moorea ó PolynÈsie franÁaise",lat:-17.5327,lng:-149.8322,desc:"L'Óle de Moorea, visible depuis Tahiti ‡ 17 km, est un ancien volcan dont le cratËre effondrÈ forma deux baies en forme de cúur. Le biologiste James Cook l'appela ´l'Œle de la paixª. Jacques Brel y vÈcut ses derniËres annÈes dans les annÈes 1970, naviguant entre ses Óles adorÈes dans son voilier.",photo:"photos/ile_de_moorea.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Œle de basalte súur de Tahiti, piques volcaniques du Mont Rotui (899m), baies d'Opunohu et de Cook, requins dormeurs"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"¿ 17 km ‡ l'ouest de Tahiti, archipel de la SociÈtÈ, PolynÈsie franÁaise, Pacifique Sud"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Moorea, Óle súur de Tahiti aux piques volcaniques, PolynÈsie franÁaise"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Œle de Moorea en PolynÈsie franÁaise"}
   ]},
-  {name:"Atoll de Bikini ‚Äî √éles Marshall",lat:11.6041,lng:165.3854,desc:"L'atoll de Bikini fut le th√©√¢tre de 23 essais nucl√©aires am√©ricains entre 1946 et 1958, dont la bombe H ¬´Castle Bravo¬ª 1 000 fois plus puissante qu'Hiroshima. Ses habitants furent d√©plac√©s et ne purent jamais revenir. L'atoll reste contamin√©, les naufrag√©s de ses tests sont devenus les √©paves les plus radioactives plong√©es au monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Site de 23 essais nucl√©aires am√©ricains entre 1946 et 1958 (dont Castle Bravo), √©paves de navires coul√©s dans le lagon, class√© UNE"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éles Marshall, archipel des Ralik, Micron√©sie, Pacifique Nord"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Site de 23 essais nucl√©aires am√©ricains (1946-1958), √©paves radioactives, UNESCO, Micron√©sie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Atoll de Bikini, √éles Marshall (Pacifique)"}
+  {name:"Atoll de Bikini ó Œles Marshall",lat:11.6041,lng:165.3854,desc:"L'atoll de Bikini fut le thÈ‚tre de 23 essais nuclÈaires amÈricains entre 1946 et 1958, dont la bombe H ´Castle Bravoª 1 000 fois plus puissante qu'Hiroshima. Ses habitants furent dÈplacÈs et ne purent jamais revenir. L'atoll reste contaminÈ, les naufragÈs de ses tests sont devenus les Èpaves les plus radioactives plongÈes au monde.",photo:"photos/atoll_de_bikini.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Site de 23 essais nuclÈaires amÈricains entre 1946 et 1958 (dont Castle Bravo), Èpaves de navires coulÈs dans le lagon, classÈ UNE"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œles Marshall, archipel des Ralik, MicronÈsie, Pacifique Nord"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Site de 23 essais nuclÈaires amÈricains (1946-1958), Èpaves radioactives, UNESCO, MicronÈsie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Atoll de Bikini, Œles Marshall (Pacifique)"}
   ]},
-  {name:"√éles Fidji ‚Äî Pacifique Sud",lat:-17.7134,lng:178.065,desc:"Les Fidji comptent 330 √Æles dont 110 habit√©es. Leur culture du kava ‚Äî boisson √† base de racine de poivrier polyn√©sien ‚Äî est centrale √† leur vie sociale. Chaque visiteur est accueilli par une c√©r√©monie du kava. L'eau des Fidji fut class√©e source d'eau min√©rale la plus pure au monde pendant des ann√©es.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"333 √Æles dont Viti Levu (capitale Suva) et Vanua Levu, plong√©e √† Beqa Lagoon, meke (danse), kava (boisson rituelle)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"M√©lan√©sie occidentale, Pacifique Sud, archipel tropical √† 2 000 km au nord-est d'une grande m√©tropole"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Archipel de 333 √Æles m√©lan√©siennes, c√©r√©monies du kava, plong√©es aux requins, Pacifique Sud"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les √éles Fidji, Pacifique Sud"}
+  {name:"Œles Fidji ó Pacifique Sud",lat:-17.7134,lng:178.065,desc:"Les Fidji comptent 330 Óles dont 110 habitÈes. Leur culture du kava ó boisson ‡ base de racine de poivrier polynÈsien ó est centrale ‡ leur vie sociale. Chaque visiteur est accueilli par une cÈrÈmonie du kava. L'eau des Fidji fut classÈe source d'eau minÈrale la plus pure au monde pendant des annÈes.",photo:"photos/atoll_de_bikini.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"333 Óles dont Viti Levu (capitale Suva) et Vanua Levu, plongÈe ‡ Beqa Lagoon, meke (danse), kava (boisson rituelle)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"MÈlanÈsie occidentale, Pacifique Sud, archipel tropical ‡ 2 000 km au nord-est d'une grande mÈtropole"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Archipel de 333 Óles mÈlanÈsiennes, cÈrÈmonies du kava, plongÈes aux requins, Pacifique Sud"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Œles Fidji, Pacifique Sud"}
   ]},
-  {name:"Cath√©drale Notre-Dame de Chartres ‚Äî France",lat:48.4469,lng:1.4886,desc:"La cath√©drale de Chartres est l'une des rares √† avoir conserv√© ses vitraux m√©di√©vaux d'origine. Pendant la Seconde Guerre mondiale, les Chartranais d√©pos√®rent les 176 vitraux et les enfouirent dans des caisses dans des caves pour les prot√©ger des bombardements.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chef-d'≈ìuvre gothique consacr√© en 1220, 176 vitraux m√©di√©vaux dont la c√©l√®bre rose nord, Eure-et-Loir"},
+  {name:"CathÈdrale Notre-Dame de Chartres ó France",lat:48.4469,lng:1.4886,desc:"La cathÈdrale de Chartres est l'une des rares ‡ avoir conservÈ ses vitraux mÈdiÈvaux d'origine. Pendant la Seconde Guerre mondiale, les Chartranais dÈposËrent les 176 vitraux et les enfouirent dans des caisses dans des caves pour les protÈger des bombardements.",photo:"photos/cathedrale_de_brasilia.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chef-d'úuvre gothique consacrÈ en 1220, 176 vitraux mÈdiÈvaux dont la cÈlËbre rose nord, Eure-et-Loir"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Chartres, Eure-et-Loir, plaine de Beauce"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale gothique aux vitraux c√©l√®bres, Chartres, France"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cath√©drale Notre-Dame de Chartres en France"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CathÈdrale gothique aux vitraux cÈlËbres, Chartres, France"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La CathÈdrale Notre-Dame de Chartres en France"}
   ]},
-  {name:"Abbaye du Mont Cassin ‚Äî Italie",lat:41.4895,lng:13.8138,desc:"L'acoustique de l'abbaye du Thoronet est si parfaite que les moines cisterciens pouvaient chanter a cappella dans la nef sans aucun √©quipement d'amplification. Le musicien am√©ricain Jonathan Harvey y composa une ≈ìuvre inspir√©e par sa r√©verb√©ration de 1,8 secondes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fond√©e par Saint-Beno√Æt en 529, d√©truite et reconstruite quatre fois, site de la bataille de Monte Cassino (1944)"},
+  {name:"Abbaye du Mont Cassin ó Italie",lat:41.4895,lng:13.8138,desc:"L'acoustique de l'abbaye du Thoronet est si parfaite que les moines cisterciens pouvaient chanter a cappella dans la nef sans aucun Èquipement d'amplification. Le musicien amÈricain Jonathan Harvey y composa une úuvre inspirÈe par sa rÈverbÈration de 1,8 secondes.",photo:"photos/abbaye_du_mont_cassin.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"FondÈe par Saint-BenoÓt en 529, dÈtruite et reconstruite quatre fois, site de la bataille de Monte Cassino (1944)"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sommet du mont Cassino (520 m), province de Frosinone, Latium"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Abbaye b√©n√©dictine-m√®re, lieu de la f√©roce bataille de 1944, Latium"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Abbaye bÈnÈdictine-mËre, lieu de la fÈroce bataille de 1944, Latium"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Abbaye du Mont Cassin en Italie"}
   ]},
-  {name:"Ar√®ne de V√©rone ‚Äî Italie",lat:45.4385,lng:10.9942,desc:"L'ar√®ne de V√©rone, amphith√©√¢tre romain du Ier si√®cle, est l'un des trois mieux conserv√©s du monde avec ses galeries ext√©rieures quasi intactes. Depuis 1913, elle accueille chaque √©t√© le festival d'op√©ra le plus populaire au monde ‚Äî 22 000 spectateurs munis de bougies assistent √† des repr√©sentations de Verdi en plein air.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Amphith√©√¢tre romain du Ier si√®cle, 30 000 places, l'un des mieux conserv√©s du monde, op√©ra en plein air depuis 1913"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Piazza Bra, centre de V√©rone, province de V√©rone, V√©n√©tie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Amphith√©√¢tre romain accueillant l'op√©ra en plein air, V√©rone, Italie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Ar√®ne de V√©rone en Italie"}
+  {name:"ArËne de VÈrone ó Italie",lat:45.4385,lng:10.9942,desc:"L'arËne de VÈrone, amphithÈ‚tre romain du Ier siËcle, est l'un des trois mieux conservÈs du monde avec ses galeries extÈrieures quasi intactes. Depuis 1913, elle accueille chaque ÈtÈ le festival d'opÈra le plus populaire au monde ó 22 000 spectateurs munis de bougies assistent ‡ des reprÈsentations de Verdi en plein air.",photo:"photos/abbaye_du_mont_cassin.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"AmphithÈ‚tre romain du Ier siËcle, 30 000 places, l'un des mieux conservÈs du monde, opÈra en plein air depuis 1913"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Piazza Bra, centre de VÈrone, province de VÈrone, VÈnÈtie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"AmphithÈ‚tre romain accueillant l'opÈra en plein air, VÈrone, Italie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'ArËne de VÈrone en Italie"}
   ]},
-  {name:"Piazza del Campo ‚Äî Sienne, Italie",lat:43.3183,lng:11.3313,desc:"La place del Campo de Sienne est en forme de coquille inclin√©e √† 0,5¬∞ pour √©vacuer les eaux de pluie. Le Palio de Sienne, course de chevaux en 90 secondes autour de cette place, se d√©roule deux fois par an depuis le XIIIe si√®cle. Les chevaux participent au nom des 17 contrade (quartiers) ‚Äî une rivalit√© si intense qu'elle a g√©n√©r√© des si√®cles de strat√©gies, de trahisons et d'alliances.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Place en forme de coquille, Palazzo Pubblico du XIVe si√®cle, Torre del Mangia (102m), Palio di Siena deux fois par an"},
+  {name:"Piazza del Campo ó Sienne, Italie",lat:43.3183,lng:11.3313,desc:"La place del Campo de Sienne est en forme de coquille inclinÈe ‡ 0,5∞ pour Èvacuer les eaux de pluie. Le Palio de Sienne, course de chevaux en 90 secondes autour de cette place, se dÈroule deux fois par an depuis le XIIIe siËcle. Les chevaux participent au nom des 17 contrade (quartiers) ó une rivalitÈ si intense qu'elle a gÈnÈrÈ des siËcles de stratÈgies, de trahisons et d'alliances.",photo:"photos/piazza_del_campo.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Place en forme de coquille, Palazzo Pubblico du XIVe siËcle, Torre del Mangia (102m), Palio di Siena deux fois par an"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre historique de Sienne, province de Sienne, Toscane"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus belle place m√©di√©vale d'Italie, Sienne, Toscane"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Piazza del Campo √† Sienne, Italie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus belle place mÈdiÈvale d'Italie, Sienne, Toscane"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Piazza del Campo ‡ Sienne, Italie"}
   ]},
-  {name:"Cath√©drale de S√©ville ‚Äî Espagne",lat:37.3861,lng:-5.9934,desc:"La cath√©drale de S√©ville est la plus grande √©glise gothique du monde. Elle fut construite sur la Grande Mosqu√©e almohade, dont elle conserva le minaret transform√© en clocher ‚Äî la Giralda. Christophe Colomb y est enterr√©, ses cendres port√©es symboliquement par les statues des quatre rois d'Espagne.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande cath√©drale gothique du monde, construite sur la grande mosqu√©e almohade, Giralda (97m), tombeau de Christophe Colomb"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vieille ville de S√©ville, Andalousie, bord du Guadalquivir"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande cath√©drale gothique du monde, avec la Giralda, S√©ville"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cath√©drale de S√©ville en Espagne"}
+  {name:"CathÈdrale de SÈville ó Espagne",lat:37.3861,lng:-5.9934,desc:"La cathÈdrale de SÈville est la plus grande Èglise gothique du monde. Elle fut construite sur la Grande MosquÈe almohade, dont elle conserva le minaret transformÈ en clocher ó la Giralda. Christophe Colomb y est enterrÈ, ses cendres portÈes symboliquement par les statues des quatre rois d'Espagne.",photo:"photos/cathedrale_de_seville.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande cathÈdrale gothique du monde, construite sur la grande mosquÈe almohade, Giralda (97m), tombeau de Christophe Colomb"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vieille ville de SÈville, Andalousie, bord du Guadalquivir"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande cathÈdrale gothique du monde, avec la Giralda, SÈville"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La CathÈdrale de SÈville en Espagne"}
   ]},
-  {name:"Palais Royal de Madrid ‚Äî Espagne",lat:40.4178,lng:-3.7143,desc:"Le palais royal de Madrid, achev√© en 1764, est le plus grand palais royal d'Europe occidentale avec ses 3 418 pi√®ces. Il abrite la seule Stradivarius quartet encore accord√© et utilisable au monde ‚Äî cinq violons, deux altos et deux violoncelles du luthier l√©gendaire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palacio Real, 3 418 pi√®ces, construit de 1738 √† 1764 par Juan Bautista Sachetti pour Philippe V, r√©sidence officielle non habit√©e"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande place centrale de la capitale, face √† l'op√©ra royal et aux jardins"},
+  {name:"Palais Royal de Madrid ó Espagne",lat:40.4178,lng:-3.7143,desc:"Le palais royal de Madrid, achevÈ en 1764, est le plus grand palais royal d'Europe occidentale avec ses 3 418 piËces. Il abrite la seule Stradivarius quartet encore accordÈ et utilisable au monde ó cinq violons, deux altos et deux violoncelles du luthier lÈgendaire.",photo:"photos/palais_royal_de_madrid.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palacio Real, 3 418 piËces, construit de 1738 ‡ 1764 par Juan Bautista Sachetti pour Philippe V, rÈsidence officielle non habitÈe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande place centrale de la capitale, face ‡ l'opÈra royal et aux jardins"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand palais royal d'Europe occidentale, Madrid"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais Royal de Madrid en Espagne"}
   ]},
-  {name:"Tour des Belem ‚Äî Porto, Portugal",lat:41.1407,lng:-8.6753,desc:"La Livraria Lello de Porto, fond√©e en 1906, est l'une des plus belles librairies du monde. Son escalier en colima√ßon en bois rouge et sa verri√®re color√©e auraient inspir√© J.K. Rowling lors de son s√©jour √† Porto dans les ann√©es 1990. Elle vend aujourd'hui plus de billets d'entr√©e que de livres.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Livraria Lello, librairie n√©o-gothique de 1906, escalier en colima√ßon rouge ayant inspir√© Harry Potter, Rua das Carmelitas"},
+  {name:"Tour des Belem ó Porto, Portugal",lat:41.1407,lng:-8.6753,desc:"La Livraria Lello de Porto, fondÈe en 1906, est l'une des plus belles librairies du monde. Son escalier en colimaÁon en bois rouge et sa verriËre colorÈe auraient inspirÈ J.K. Rowling lors de son sÈjour ‡ Porto dans les annÈes 1990. Elle vend aujourd'hui plus de billets d'entrÈe que de livres.",photo:"photos/tour_des_belem.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Livraria Lello, librairie nÈo-gothique de 1906, escalier en colimaÁon rouge ayant inspirÈ Harry Potter, Rua das Carmelitas"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rue das Carmelitas, quartier des Clercs, centre historique de Porto"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Librairie Lello, parmi les plus belles du monde, Porto, Portugal"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour des Belem √† Porto, Portugal"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour des Belem ‡ Porto, Portugal"}
   ]},
-  {name:"Couvent du Christ ‚Äî Tomar, Portugal",lat:39.604,lng:-8.411,desc:"Le Couvent du Christ de Tomar fut fond√© par les Templiers au XIIe si√®cle. Lors de la dissolution de l'Ordre du Temple en 1312, le Portugal cr√©a l'Ordre du Christ pour r√©cup√©rer ses biens. Sa fameuse fen√™tre manu√©line, couverte de symboles marins, de cordes et de sph√®res armillaires, est l'embl√®me de l'art manu√©lin.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Convento de Cristo, forteresse templi√®re du XIIe si√®cle, fen√™tre manu√©line embl√©matique, si√®ge des Chevaliers du Christ"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline de Tomar, district de Santar√©m, Ribatejo"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse templi√®re et couvent manu√©lin, Tomar, Portugal"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Couvent du Christ √† Tomar, Portugal"}
+  {name:"Couvent du Christ ó Tomar, Portugal",lat:39.604,lng:-8.411,desc:"Le Couvent du Christ de Tomar fut fondÈ par les Templiers au XIIe siËcle. Lors de la dissolution de l'Ordre du Temple en 1312, le Portugal crÈa l'Ordre du Christ pour rÈcupÈrer ses biens. Sa fameuse fenÍtre manuÈline, couverte de symboles marins, de cordes et de sphËres armillaires, est l'emblËme de l'art manuÈlin.",photo:"photos/couvent_du_christ.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Convento de Cristo, forteresse templiËre du XIIe siËcle, fenÍtre manuÈline emblÈmatique, siËge des Chevaliers du Christ"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline de Tomar, district de SantarÈm, Ribatejo"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse templiËre et couvent manuÈlin, Tomar, Portugal"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Couvent du Christ ‡ Tomar, Portugal"}
   ]},
-  {name:"Grottes d'Altamira ‚Äî Espagne",lat:43.3797,lng:-4.1033,desc:"Les peintures d'Altamira, r√©alis√©es il y a 14 500 ans, sont si r√©alistes que l'arch√©ologue Marcelino Sanz de Sautuola fut accus√© de fraude lors de leur d√©couverte en 1879. On ne le crut qu'en 1902, deux ans apr√®s sa mort. Picasso, apr√®s les avoir vues, aurait dit : ¬´Apr√®s Altamira, tout n'est que d√©cadence.¬ª",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cueva de Altamira, 35 peintures pari√©tales de bisons du Pal√©olithique sup√©rieur (14 500 av. J.-C.), d√©couvertes en 1879"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Santillana del Mar, Cantabrie, c√¥te verte du nord"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grottes aux peintures rupestres pr√©historiques, Cantabrie, nord de l'Espagne"},
+  {name:"Grottes d'Altamira ó Espagne",lat:43.3797,lng:-4.1033,desc:"Les peintures d'Altamira, rÈalisÈes il y a 14 500 ans, sont si rÈalistes que l'archÈologue Marcelino Sanz de Sautuola fut accusÈ de fraude lors de leur dÈcouverte en 1879. On ne le crut qu'en 1902, deux ans aprËs sa mort. Picasso, aprËs les avoir vues, aurait dit : ´AprËs Altamira, tout n'est que dÈcadence.ª",photo:"photos/grottes_d_altamira.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cueva de Altamira, 35 peintures pariÈtales de bisons du PalÈolithique supÈrieur (14 500 av. J.-C.), dÈcouvertes en 1879"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Santillana del Mar, Cantabrie, cÙte verte du nord"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grottes aux peintures rupestres prÈhistoriques, Cantabrie, nord de l'Espagne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Grottes d'Altamira en Espagne"}
   ]},
-  {name:"Alcazar de S√©ville ‚Äî Espagne",lat:37.3839,lng:-5.9929,desc:"L'Alcazar de S√©ville est le plus ancien palais royal encore en usage dans le monde occidental. Pierre Ier le fit construire en style mud√©jar en 1364 avec des artisans de Grenade et de Tol√®de. Il fut utilis√© comme d√©cor pour Dorne dans la s√©rie Game of Thrones. La famille royale espagnole y s√©journe encore.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Real Alc√°zar, palais fortifi√© construit en 913, agrandi par Pierre Ier en style mud√©jar en 1364, plus ancien palais royal en usage"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Barrio de Santa Cruz, centre historique de S√©ville, Andalousie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais mud√©jar de S√©ville, plus ancien palais royal en usage d'Europe"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Alcazar de S√©ville en Espagne"}
+  {name:"Alcazar de SÈville ó Espagne",lat:37.3839,lng:-5.9929,desc:"L'Alcazar de SÈville est le plus ancien palais royal encore en usage dans le monde occidental. Pierre Ier le fit construire en style mudÈjar en 1364 avec des artisans de Grenade et de TolËde. Il fut utilisÈ comme dÈcor pour Dorne dans la sÈrie Game of Thrones. La famille royale espagnole y sÈjourne encore.",photo:"photos/alcazar_de_seville.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Real Alc·zar, palais fortifiÈ construit en 913, agrandi par Pierre Ier en style mudÈjar en 1364, plus ancien palais royal en usage"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Barrio de Santa Cruz, centre historique de SÈville, Andalousie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais mudÈjar de SÈville, plus ancien palais royal en usage d'Europe"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Alcazar de SÈville en Espagne"}
   ]},
-  {name:"Grottes de Lascaux ‚Äî France",lat:45.0453,lng:1.1682,desc:"Les peintures de Lascaux furent d√©couvertes par quatre adolescents en 1940 en cherchant leur chien. Apr√®s avoir √©t√© ouvertes au public, les grottes furent ferm√©es en 1963 car la respiration des visiteurs faisait appara√Ætre des algues et des champignons sur les fresques.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grotte orn√©e du Pal√©olithique sup√©rieur (-17 000 ans), 1 900 figures animales, Salle des Taureaux, Dordogne"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Montignac-Lascaux, Dordogne, P√©rigord, Nouvelle-Aquitaine"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grottes pr√©historiques aux peintures rupestres, Dordogne, France"},
+  {name:"Grottes de Lascaux ó France",lat:45.0453,lng:1.1682,desc:"Les peintures de Lascaux furent dÈcouvertes par quatre adolescents en 1940 en cherchant leur chien. AprËs avoir ÈtÈ ouvertes au public, les grottes furent fermÈes en 1963 car la respiration des visiteurs faisait apparaÓtre des algues et des champignons sur les fresques.",photo:"photos/grottes_de_lascaux.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grotte ornÈe du PalÈolithique supÈrieur (-17 000 ans), 1 900 figures animales, Salle des Taureaux, Dordogne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Montignac-Lascaux, Dordogne, PÈrigord, Nouvelle-Aquitaine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grottes prÈhistoriques aux peintures rupestres, Dordogne, France"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Grottes de Lascaux en France"}
   ]},
-  {name:"Cirque de Gavarnie ‚Äî France",lat:42.7286,lng:0.0114,desc:"La grande cascade de Gavarnie, avec ses 422 m√®tres, est la plus haute de France. Le cirque fut d√©crit par Victor Hugo comme ¬´le plus grand √©difice que le Dieu ait fait¬ª lors de son passage en 1843.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cirque glaciaire de 3,5 km de diam√®tre, Grande Cascade de 422 m, Hautes-Pyr√©n√©es, fronti√®re espagnole, UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Gavarnie, Hautes-Pyr√©n√©es, parc national des Pyr√©n√©es, √† 50 km de Lourdes"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cirque glaciaire pyr√©n√©en, UNESCO, Hautes-Pyr√©n√©es, France"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cirque de Gavarnie en France"}
-  ]},
-  {name:"Carcassonne ‚Äî France",lat:43.2119,lng:2.3641,desc:"La double enceinte de Carcassonne inspira le jeu de soci√©t√© √©ponyme, vendu √† 70 millions d'exemplaires dans le monde. Dans ce jeu, les joueurs construisent villes et routes en posant des tuiles ‚Äî une m√©canique n√©e de la contemplation des remparts m√©di√©vaux.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© m√©di√©vale fortifi√©e, 3 km de remparts, 52 tours, restaur√©e par Viollet-le-Duc en 1853, si√®ge cathare du XIIIe si√®cle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline dominant l'Aude, commune de Carcassonne, Occitanie, √† 90 km de Toulouse"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© m√©di√©vale fortifi√©e, class√©e UNESCO, Occitanie, France"},
+    {name:"Carcassonne ó France",lat:43.2119,lng:2.3641,desc:"La double enceinte de Carcassonne inspira le jeu de sociÈtÈ Èponyme, vendu ‡ 70 millions d'exemplaires dans le monde. Dans ce jeu, les joueurs construisent villes et routes en posant des tuiles ó une mÈcanique nÈe de la contemplation des remparts mÈdiÈvaux.",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ mÈdiÈvale fortifiÈe, 3 km de remparts, 52 tours, restaurÈe par Viollet-le-Duc en 1853, siËge cathare du XIIIe siËcle"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline dominant l'Aude, commune de Carcassonne, Occitanie, ‡ 90 km de Toulouse"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ mÈdiÈvale fortifiÈe, classÈe UNESCO, Occitanie, France"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Carcassonne en France"}
   ]},
-  {name:"Mus√©e d'Orsay ‚Äî Paris, France",lat:48.86,lng:2.3266,desc:"La transformation de la gare d'Orsay en mus√©e pr√©serva un b√¢timent condamn√© √† la d√©molition. En 1970, un promoteur immobilier avait d√©j√† achet√© la gare pour la remplacer par un h√¥tel. Des artistes et intellectuels men√®rent une campagne de sauvegarde qui aboutit en 1986.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancienne gare d'Orsay (1900), reconvertie en mus√©e en 1986, abritant la plus grande collection impressionniste mondiale"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive gauche d'un grand fleuve, dans une ancienne gare reconvertie en mus√©e"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mus√©e de l'impressionnisme dans une gare r√©nov√©e, Paris"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mus√©e d'Orsay √† Paris, France"}
+  {name:"MusÈe d'Orsay ó Paris, France",lat:48.86,lng:2.3266,desc:"La transformation de la gare d'Orsay en musÈe prÈserva un b‚timent condamnÈ ‡ la dÈmolition. En 1970, un promoteur immobilier avait dÈj‡ achetÈ la gare pour la remplacer par un hÙtel. Des artistes et intellectuels menËrent une campagne de sauvegarde qui aboutit en 1986.",photo:"photos/grottes_de_lascaux.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancienne gare d'Orsay (1900), reconvertie en musÈe en 1986, abritant la plus grande collection impressionniste mondiale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive gauche d'un grand fleuve, dans une ancienne gare reconvertie en musÈe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"MusÈe de l'impressionnisme dans une gare rÈnovÈe, Paris"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le MusÈe d'Orsay ‡ Paris, France"}
   ]},
-  {name:"Centre Pompidou ‚Äî Paris, France",lat:48.8607,lng:2.3523,desc:"Le Centre Pompidou ¬´retourna¬ª son b√¢timent : toutes les structures (escaliers, ascenseurs, conduits) sont √† l'ext√©rieur, cod√©es par couleur (bleu = air, vert = eau, jaune = √©lectricit√©, rouge = circulation). Le r√©sultat, critiqu√© lors de l'inauguration, est aujourd'hui une ic√¥ne architecturale.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Beaubourg, con√ßu par Piano et Rogers (1977), tuyaux et structures apparents color√©s, 20 000 visiteurs/jour"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place Georges-Pompidou, quartier du Marais, 4√®me arrondissement"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mus√©e d'art moderne aux tuyaux color√©s en fa√ßade, Paris"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Centre Pompidou √† Paris, France"}
+  {name:"Centre Pompidou ó Paris, France",lat:48.8607,lng:2.3523,desc:"Le Centre Pompidou ´retournaª son b‚timent : toutes les structures (escaliers, ascenseurs, conduits) sont ‡ l'extÈrieur, codÈes par couleur (bleu = air, vert = eau, jaune = ÈlectricitÈ, rouge = circulation). Le rÈsultat, critiquÈ lors de l'inauguration, est aujourd'hui une icÙne architecturale.",photo:"photos/centre_pompidou.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Beaubourg, conÁu par Piano et Rogers (1977), tuyaux et structures apparents colorÈs, 20 000 visiteurs/jour"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place Georges-Pompidou, quartier du Marais, 4Ëme arrondissement"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"MusÈe d'art moderne aux tuyaux colorÈs en faÁade, Paris"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Centre Pompidou ‡ Paris, France"}
   ]},
-  {name:"Mus√©e du Louvre ‚Äî Paris, France",lat:48.8606,lng:2.3376,desc:"Avec 73 000 m¬≤ d'expositions, il faudrait 9 semaines enti√®res √† raison de 8 heures par jour pour voir chaque ≈ìuvre du Louvre 30 secondes. La Joconde, qui d√©√ßoit souvent les visiteurs par sa petite taille (77 cm √ó 53 cm), attire n√©anmoins 6 millions de personnes par an.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand mus√©e du monde (73 000 m¬≤), pyramide de verre de Pei (1989), 9 millions de visiteurs/an, Joconde et V√©nus de Milo"},
+  {name:"MusÈe du Louvre ó Paris, France",lat:48.8606,lng:2.3376,desc:"Avec 73 000 m≤ d'expositions, il faudrait 9 semaines entiËres ‡ raison de 8 heures par jour pour voir chaque úuvre du Louvre 30 secondes. La Joconde, qui dÈÁoit souvent les visiteurs par sa petite taille (77 cm ◊ 53 cm), attire nÈanmoins 6 millions de personnes par an.",photo:"photos/musee_du_louvre.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand musÈe du monde (73 000 m≤), pyramide de verre de Pei (1989), 9 millions de visiteurs/an, Joconde et VÈnus de Milo"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rue de Rivoli, 1er arrondissement, bord de la Seine, ancienne forteresse royale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand mus√©e du monde, pyramide de verre, Paris"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mus√©e du Louvre √† Paris, France"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand musÈe du monde, pyramide de verre, Paris"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le MusÈe du Louvre ‡ Paris, France"}
   ]},
-  {name:"Arc de Triomphe ‚Äî Paris, France",lat:48.8738,lng:2.295,desc:"L'Arc de Triomphe fut command√© par Napol√©on apr√®s la victoire d'Austerlitz en 1805 mais il ne le vit jamais termin√©. C'est sous les vo√ªtes de l'Arc que br√ªle depuis 1921 la Flamme du Soldat Inconnu ‚Äî raviv√©e chaque soir √† 18h30 sans interruption depuis un si√®cle.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Command√© par Napol√©on en 1806, achev√© en 1836, 50 m de hauteur, tombe du Soldat Inconnu, Place de l'√âtoile"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place Charles-de-Gaulle (√âtoile), 8√®me arrondissement, au bout des Champs-√âlys√©es"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument de 50 m √† l'√©toile des Champs-√âlys√©es, tombe du Soldat Inconnu, Paris"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Arc de Triomphe √† Paris, France"}
+  {name:"Arc de Triomphe ó Paris, France",lat:48.8738,lng:2.295,desc:"L'Arc de Triomphe fut commandÈ par NapolÈon aprËs la victoire d'Austerlitz en 1805 mais il ne le vit jamais terminÈ. C'est sous les vo˚tes de l'Arc que br˚le depuis 1921 la Flamme du Soldat Inconnu ó ravivÈe chaque soir ‡ 18h30 sans interruption depuis un siËcle.",photo:"photos/arc_de_triomphe.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CommandÈ par NapolÈon en 1806, achevÈ en 1836, 50 m de hauteur, tombe du Soldat Inconnu, Place de l'…toile"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place Charles-de-Gaulle (…toile), 8Ëme arrondissement, au bout des Champs-…lysÈes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument de 50 m ‡ l'Ètoile des Champs-…lysÈes, tombe du Soldat Inconnu, Paris"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Arc de Triomphe ‡ Paris, France"}
   ]},
-  {name:"Big Ben ‚Äî Westminster, Royaume-Uni",lat:51.5007,lng:-0.1246,desc:"Big Ben ne d√©signe pas la tour mais la cloche de 13,7 tonnes qu'elle abrite. Silenci√©e pour restauration de 2017 √† 2022, elle a retenti √† nouveau pour le couronnement de Charles III en mai 2023.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tour Elizabeth, 96m, horloge depuis 1859, cloche Big Ben de 13,7 tonnes, r√©nov√©e de 2017 √† 2022"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Palace of Westminster, bord de la Tamise, Westminster"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour de l'horloge du Parlement britannique, Londres"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Big Ben √† Westminster, Royaume-Uni"}
+    {name:"British Museum ó Londres, Royaume-Uni",lat:51.5194,lng:-0.127,desc:"Le British Museum fut fondÈ en 1753 avec la collection de Sir Hans Sloane ó 71 000 objets lÈguÈs ‡ la nation contre 20 000 livres sterling. Son Great Court, coiffÈ d'un toit de verre de 3 312 panneaux uniques conÁu par Norman Foster, est la plus grande place couverte d'Europe.",photo:"photos/british_museum.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"FondÈ en 1753, 8 millions d'objets dont la Pierre de Rosette et les marbres du ParthÈnon, Great Court de Foster (2000)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Great Russell Street, Bloomsbury, ‡ 500m de Covent Garden"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Premier musÈe national au monde, Pierre de Rosette, Londres"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le British Museum ‡ Londres, Royaume-Uni"}
   ]},
-  {name:"British Museum ‚Äî Londres, Royaume-Uni",lat:51.5194,lng:-0.127,desc:"Le British Museum fut fond√© en 1753 avec la collection de Sir Hans Sloane ‚Äî 71 000 objets l√©gu√©s √† la nation contre 20 000 livres sterling. Son Great Court, coiff√© d'un toit de verre de 3 312 panneaux uniques con√ßu par Norman Foster, est la plus grande place couverte d'Europe.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fond√© en 1753, 8 millions d'objets dont la Pierre de Rosette et les marbres du Parth√©non, Great Court de Foster (2000)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Great Russell Street, Bloomsbury, √† 500m de Covent Garden"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Premier mus√©e national au monde, Pierre de Rosette, Londres"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le British Museum √† Londres, Royaume-Uni"}
+  {name:"Palais de Buckingham ó Londres, Royaume-Uni",lat:51.5014,lng:-0.1419,desc:"Buckingham Palace compte 775 piËces dont 188 chambres de personnels. La Reine possÈdait officiellement tous les dauphins et cygnes dans les eaux territoriales britanniques. La relËve de la garde, supprimÈe en 1939, fut rÈtablie en 1959 et attire chaque jour des milliers de visiteurs.",photo:"photos/palais_de_buckingham.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"RÈsidence officielle du souverain depuis Victoria (1837), 775 piËces, relËve de la garde ‡ 11h30, balcon des apparitions royales"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"The Mall, City of Westminster, face au MÈmorial de Victoria"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"RÈsidence officielle du roi d'Angleterre, relËve de la garde, Londres"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Buckingham ‡ Londres, Royaume-Uni"}
   ]},
-  {name:"Palais de Buckingham ‚Äî Londres, Royaume-Uni",lat:51.5014,lng:-0.1419,desc:"Buckingham Palace compte 775 pi√®ces dont 188 chambres de personnels. La Reine poss√©dait officiellement tous les dauphins et cygnes dans les eaux territoriales britanniques. La rel√®ve de la garde, supprim√©e en 1939, fut r√©tablie en 1959 et attire chaque jour des milliers de visiteurs.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"R√©sidence officielle du souverain depuis Victoria (1837), 775 pi√®ces, rel√®ve de la garde √† 11h30, balcon des apparitions royales"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"The Mall, City of Westminster, face au M√©morial de Victoria"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"R√©sidence officielle du roi d'Angleterre, rel√®ve de la garde, Londres"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Buckingham √† Londres, Royaume-Uni"}
-  ]},
-  {name:"Tour de Londres ‚Äî Royaume-Uni",lat:51.5081,lng:-0.0759,desc:"La Tour de Londres fut fond√©e par Guillaume le Conqu√©rant en 1066 et servit successivement de forteresse, de palais royal, de prison et de tr√©sor. Ses Ravens ‚Äî six corbeaux r√©sidents ‚Äî sont gard√©s par un Ravenmaster : selon la l√©gende, si les corbeaux partent, la Tour et la Couronne s'effondreront.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Her Majesty's Royal Palace and Fortress, fond√©e par Guillaume le Conqu√©rant en 1066, gardes Beefeaters, joyaux de la Couronne"},
+  {name:"Tour de Londres ó Royaume-Uni",lat:51.5081,lng:-0.0759,desc:"La Tour de Londres fut fondÈe par Guillaume le ConquÈrant en 1066 et servit successivement de forteresse, de palais royal, de prison et de trÈsor. Ses Ravens ó six corbeaux rÈsidents ó sont gardÈs par un Ravenmaster : selon la lÈgende, si les corbeaux partent, la Tour et la Couronne s'effondreront.",photo:"photos/tour_de_londres.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Her Majesty's Royal Palace and Fortress, fondÈe par Guillaume le ConquÈrant en 1066, gardes Beefeaters, joyaux de la Couronne"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tower Hill, London Borough of Tower Hamlets, bord de la Tamise"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse m√©di√©vale, joyaux de la Couronne britannique, Londres"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse mÈdiÈvale, joyaux de la Couronne britannique, Londres"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour de Londres, Royaume-Uni"}
   ]},
-  {name:"Palais de Hampton Court ‚Äî Royaume-Uni",lat:51.4034,lng:-0.3376,desc:"Le labyrinthe de Hampton Court, plant√© en 1690, est le plus vieux labyrinthe d'haies taill√©es encore en usage au monde. Ses 800 m√®tres de haies d'ifs forment un parcours qui peut prendre jusqu'√† une heure √† r√©soudre ‚Äî une distraction royale pour les courtisans d'Henri VIII.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais Tudor d'Henri VIII (1515), jardins baroques de William III, labyrinthe de 1690, bord de la Tamise √† Richmond"},
+  {name:"Palais de Hampton Court ó Royaume-Uni",lat:51.4034,lng:-0.3376,desc:"Le labyrinthe de Hampton Court, plantÈ en 1690, est le plus vieux labyrinthe d'haies taillÈes encore en usage au monde. Ses 800 mËtres de haies d'ifs forment un parcours qui peut prendre jusqu'‡ une heure ‡ rÈsoudre ó une distraction royale pour les courtisans d'Henri VIII.",photo:"photos/palais_de_hampton_court.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais Tudor d'Henri VIII (1515), jardins baroques de William III, labyrinthe de 1690, bord de la Tamise ‡ Richmond"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"East Molesey, Surrey, bord de la Tamise"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais Tudor d'Henri VIII avec labyrinthe et jardins baroques, Angleterre"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Hampton Court, Angleterre (Royaume-Uni)"}
   ]},
-  {name:"Cath√©drale de Durham ‚Äî Royaume-Uni",lat:54.7733,lng:-1.5762,desc:"La cath√©drale de Durham, avec ses colonnes √† zigzag normandes, fut choisie par le magazine Time comme le b√¢timent le plus grandiose jamais construit. Sa position sur un promontoire au-dessus de la Wear et sa masse aust√®re en font l'un des paysages les plus dramatiques d'Angleterre.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chef-d'≈ìuvre roman normand commenc√© en 1093, abritant les reliques de Saint-Cuthbert et B√®de le V√©n√©rable, promontoire sur la Wear"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Presqu'√Æle de la rivi√®re Wear, Durham, nord-est de l'Angleterre"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale romane normande, UNESCO, Durham, nord de l'Angleterre"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cath√©drale de Durham, Angleterre (Royaume-Uni)"}
+  {name:"CathÈdrale de Durham ó Royaume-Uni",lat:54.7733,lng:-1.5762,desc:"La cathÈdrale de Durham, avec ses colonnes ‡ zigzag normandes, fut choisie par le magazine Time comme le b‚timent le plus grandiose jamais construit. Sa position sur un promontoire au-dessus de la Wear et sa masse austËre en font l'un des paysages les plus dramatiques d'Angleterre.",photo:"photos/cathedrale_de_durham.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chef-d'úuvre roman normand commencÈ en 1093, abritant les reliques de Saint-Cuthbert et BËde le VÈnÈrable, promontoire sur la Wear"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Presqu'Óle de la riviËre Wear, Durham, nord-est de l'Angleterre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CathÈdrale romane normande, UNESCO, Durham, nord de l'Angleterre"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La CathÈdrale de Durham, Angleterre (Royaume-Uni)"}
   ]},
-  {name:"Kelvingrove ‚Äî Glasgow, √âcosse",lat:55.8683,lng:-4.288,desc:"Le mus√©e Kelvingrove de Glasgow contient un avion Spitfire suspendu dans ses galeries ‚Äî l'un des symboles de la Seconde Guerre mondiale. Le b√¢timent fut construit ¬´√† l'envers¬ª selon une l√©gende locale : l'entr√©e principale se trouverait du mauvais c√¥t√©. En r√©alit√©, le plan fut simplement mal interpr√©t√© par les architectes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kelvingrove Art Gallery, palais baroque inaugur√© en 1901, Dal√≠ Christ of St John, avion Spitfire suspendu au plafond"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Argyle Street, West End de Glasgow, bord de la Kelvin, √âcosse"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mus√©e d'art et curiosit√©s embl√©matique de Glasgow, √âcosse"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kelvingrove √† Glasgow, √âcosse"}
+  {name:"Kelvingrove ó Glasgow, …cosse",lat:55.8683,lng:-4.288,desc:"Le musÈe Kelvingrove de Glasgow contient un avion Spitfire suspendu dans ses galeries ó l'un des symboles de la Seconde Guerre mondiale. Le b‚timent fut construit ´‡ l'enversª selon une lÈgende locale : l'entrÈe principale se trouverait du mauvais cÙtÈ. En rÈalitÈ, le plan fut simplement mal interprÈtÈ par les architectes.",photo:"photos/kelvingrove.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kelvingrove Art Gallery, palais baroque inaugurÈ en 1901, DalÌ Christ of St John, avion Spitfire suspendu au plafond"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Argyle Street, West End de Glasgow, bord de la Kelvin, …cosse"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"MusÈe d'art et curiositÈs emblÈmatique de Glasgow, …cosse"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kelvingrove ‡ Glasgow, …cosse"}
   ]},
-  {name:"P√©ninsule de Dingle ‚Äî Irlande",lat:52.1401,lng:-10.2677,desc:"La p√©ninsule de Dingle compte plus de 2 000 monuments arch√©ologiques en 150 km¬≤ ‚Äî l'une des plus fortes densit√©s au monde. Certains oratoires en pierre et dolmens datent de 6 000 ans, permettant de marcher litt√©ralement dans un paysage pr√©historique toujours intact.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Slea Head Drive, oratoires en pierre de Gallarus du VIIe si√®cle, forts pr√©historiques, promontoire sur l'Atlantique, Kerry"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"P√©ninsule de l'extr√™me ouest d'une √Æle atlantique, montagnes et oratorios chr√©tiens c√©ltiques"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"P√©ninsule atlantique sauvage du Kerry, monuments celtiques, Irlande"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La P√©ninsule de Dingle en Irlande"}
+  {name:"PÈninsule de Dingle ó Irlande",lat:52.1401,lng:-10.2677,desc:"La pÈninsule de Dingle compte plus de 2 000 monuments archÈologiques en 150 km≤ ó l'une des plus fortes densitÈs au monde. Certains oratoires en pierre et dolmens datent de 6 000 ans, permettant de marcher littÈralement dans un paysage prÈhistorique toujours intact.",photo:"photos/peninsule_de_dingle.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Slea Head Drive, oratoires en pierre de Gallarus du VIIe siËcle, forts prÈhistoriques, promontoire sur l'Atlantique, Kerry"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"PÈninsule de l'extrÍme ouest d'une Óle atlantique, montagnes et oratorios chrÈtiens cÈltiques"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"PÈninsule atlantique sauvage du Kerry, monuments celtiques, Irlande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La PÈninsule de Dingle en Irlande"}
   ]},
-  {name:"Cath√©drale de Cologne ‚Äî Rh√©nanie, Allemagne",lat:50.9413,lng:6.9583,desc:"La cath√©drale de Cologne fut construite sur 632 ans (1248-1880) ‚Äî la plus longue construction d'une cath√©drale gothique. Ses fl√®ches jumelles de 157 m√®tres furent le b√¢timent le plus haut du monde de 1880 √† 1884. Elle abritent les reliques suppos√©es des Rois Mages, apport√©es de Milan en 1164 ‚Äî ce qui en fit le plus grand p√®lerinage m√©di√©val d'Europe du Nord.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"K√∂lner Dom, construction entam√©e en 1248, achev√©e en 1880, 157m, reliques des Rois Mages"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Domplatz, bord du Rhin, Cologne, Rh√©nanie-du-Nord-Westphalie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cath√©drale gothique de Cologne, symbole de la ville, Rhin"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cath√©drale de Cologne √† Rh√©nanie, Allemagne"}
-  ]},
-  {name:"Speicherstadt ‚Äî Hambourg, Allemagne",lat:53.5431,lng:9.994,desc:"Les entrep√¥ts de la Speicherstadt de Hambourg furent construits sur des pieux de ch√™ne plant√©s dans l'eau de l'Elbe. Ce quartier de briques rouges abrita pendant un si√®cle les √©pices, tapis et cacao de l'empire commercial allemand. Aujourd'hui, il accueille des mus√©es et des agences de cr√©ation.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand complexe d'entrep√¥ts sur pilotis du monde, construit de 1883 √† 1927, briques rouges, canaux de l'Elbe, UNESCO 2015"},
+    {name:"Speicherstadt ó Hambourg, Allemagne",lat:53.5431,lng:9.994,desc:"Les entrepÙts de la Speicherstadt de Hambourg furent construits sur des pieux de chÍne plantÈs dans l'eau de l'Elbe. Ce quartier de briques rouges abrita pendant un siËcle les Èpices, tapis et cacao de l'empire commercial allemand. Aujourd'hui, il accueille des musÈes et des agences de crÈation.",photo:"photos/speicherstadt.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand complexe d'entrepÙts sur pilotis du monde, construit de 1883 ‡ 1927, briques rouges, canaux de l'Elbe, UNESCO 2015"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier HafenCity, bord de l'Elbe, grande ville portuaire du nord"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Quartier d'entrep√¥ts victoriens sur canaux, UNESCO, Hambourg"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Speicherstadt √† Hambourg, Allemagne"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Quartier d'entrepÙts victoriens sur canaux, UNESCO, Hambourg"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Speicherstadt ‡ Hambourg, Allemagne"}
   ]},
-  {name:"Ch√¢teau d'Heidelberg ‚Äî Allemagne",lat:49.4104,lng:8.7147,desc:"Le ch√¢teau de Heidelberg renferme le plus grand tonneau de vin du monde avec ses 221 726 litres. Construit en 1751 pour le prince-√©lecteur Karl Theodor, ce tonneau ne fut jamais rempli √† plus de la moiti√© ‚Äî sa contenance √©tait davantage symbolique que pratique.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Schloss Heidelberg, ruines Renaissance-gothiques sur le K√∂nigstuhl, d√©truit par Louis XIV en 1689, plus grand tonneau de vin (221 "},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline du K√∂nigstuhl dominant Heidelberg, Bade-Wurtemberg, vall√©e du Neckar"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines du ch√¢teau Renaissance, dominant Heidelberg et le Neckar"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau d'Heidelberg en Allemagne"}
+  {name:"Ch‚teau d'Heidelberg ó Allemagne",lat:49.4104,lng:8.7147,desc:"Le ch‚teau de Heidelberg renferme le plus grand tonneau de vin du monde avec ses 221 726 litres. Construit en 1751 pour le prince-Èlecteur Karl Theodor, ce tonneau ne fut jamais rempli ‡ plus de la moitiÈ ó sa contenance Ètait davantage symbolique que pratique.",photo:"photos/chateau_d_heidelberg.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Schloss Heidelberg, ruines Renaissance-gothiques sur le Kˆnigstuhl, dÈtruit par Louis XIV en 1689, plus grand tonneau de vin (221 "},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline du Kˆnigstuhl dominant Heidelberg, Bade-Wurtemberg, vallÈe du Neckar"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines du ch‚teau Renaissance, dominant Heidelberg et le Neckar"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau d'Heidelberg en Allemagne"}
   ]},
-  {name:"Porte de Brandebourg ‚Äî Berlin, Allemagne",lat:52.5163,lng:13.3777,desc:"La Porte de Brandebourg fut le symbole de la division de Berlin pendant 28 ans : elle se trouvait exactement sur le trac√© du mur, inaccessible des deux c√¥t√©s. La nuit du 9 novembre 1989, des milliers de Berlinois se r√©unirent spontan√©ment devant elle pour f√™ter sa r√©ouverture.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Brandenburger Tor, porte n√©oclassique de 1791 par Carl Gotthard Langhans, Quadrige de la Victoire, symbole de r√©unification"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pariser Platz, Mitte, √† l'extr√©mit√© est de la Stra√üe des 17. Juni"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Porte n√©oclassique de 1791, symbole de la r√©unification, au bout de la Stra√üe des 17. Juni, Berlin"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Porte de Brandebourg √† Berlin, Allemagne"}
+  {name:"Porte de Brandebourg ó Berlin, Allemagne",lat:52.5163,lng:13.3777,desc:"La Porte de Brandebourg fut le symbole de la division de Berlin pendant 28 ans : elle se trouvait exactement sur le tracÈ du mur, inaccessible des deux cÙtÈs. La nuit du 9 novembre 1989, des milliers de Berlinois se rÈunirent spontanÈment devant elle pour fÍter sa rÈouverture.",photo:"photos/chateau_d_heidelberg.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Brandenburger Tor, porte nÈoclassique de 1791 par Carl Gotthard Langhans, Quadrige de la Victoire, symbole de rÈunification"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pariser Platz, Mitte, ‡ l'extrÈmitÈ est de la Straﬂe des 17. Juni"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Porte nÈoclassique de 1791, symbole de la rÈunification, au bout de la Straﬂe des 17. Juni, Berlin"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Porte de Brandebourg ‡ Berlin, Allemagne"}
   ]},
-  {name:"Philharmonie de Berlin ‚Äî Allemagne",lat:52.5098,lng:13.3694,desc:"La Philharmonie de Berlin, inaugur√©e en 1963, fut le premier concert hall √† placer l'orchestre au centre entour√© du public ‚Äî une r√©volution architecturale. Son acoustique, consid√©r√©e comme la meilleure du monde, r√©sulte d'un calcul complexe int√©grant la forme de chaque si√®ge en bois.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande salle de concert avant-gardiste con√ßue par Hans Scharoun (1963), salle en tente avec 2 440 places en amphith√©√¢tre autour de"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Herbert-von-Karajan-Stra√üe, Kulturforum, quartier du Tiergarten"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Salle de concert avant-gardiste de 1963, orchestre central entour√© du public, Kulturforum Berlin"},
+  {name:"Philharmonie de Berlin ó Allemagne",lat:52.5098,lng:13.3694,desc:"La Philharmonie de Berlin, inaugurÈe en 1963, fut le premier concert hall ‡ placer l'orchestre au centre entourÈ du public ó une rÈvolution architecturale. Son acoustique, considÈrÈe comme la meilleure du monde, rÈsulte d'un calcul complexe intÈgrant la forme de chaque siËge en bois.",photo:"https://upload.wikimedia.org/wikipedia/commons/4/4a/Berlin_Philharmonie_asv2018-05_img2.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande salle de concert avant-gardiste conÁue par Hans Scharoun (1963), salle en tente avec 2 440 places en amphithÈ‚tre autour de"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Herbert-von-Karajan-Straﬂe, Kulturforum, quartier du Tiergarten"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Salle de concert avant-gardiste de 1963, orchestre central entourÈ du public, Kulturforum Berlin"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Philharmonie de Berlin en Allemagne"}
   ]},
-  {name:"Berne ‚Äî Suisse (Zytglogge)",lat:46.9481,lng:7.4474,desc:"La Zytglogge de Berne, tour de l'horloge du XIIIe si√®cle, d√©clencha une r√©volution de la physique : c'est en la regardant depuis son tram en 1905 qu'Albert Einstein imagina sa th√©orie de la relativit√© restreinte. Il se demanda ce qu'il verrait si le tram roulait √† la vitesse de la lumi√®re.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Zytglogge, tour de l'horloge m√©di√©vale de 1218, automates astronomiques, Kramgasse o√π Einstein habitait au n¬∞49"},
+  {name:"Berne ó Suisse (Zytglogge)",lat:46.9481,lng:7.4474,desc:"La Zytglogge de Berne, tour de l'horloge du XIIIe siËcle, dÈclencha une rÈvolution de la physique : c'est en la regardant depuis son tram en 1905 qu'Albert Einstein imagina sa thÈorie de la relativitÈ restreinte. Il se demanda ce qu'il verrait si le tram roulait ‡ la vitesse de la lumiËre.",photo:"https://upload.wikimedia.org/wikipedia/commons/1/18/Bern_Panorama_07.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Zytglogge, tour de l'horloge mÈdiÈvale de 1218, automates astronomiques, Kramgasse o˘ Einstein habitait au n∞49"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Kramgasse, vieille ville de Berne (Altstadt), boucle de l'Aar"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Zytglogge, tour de l'horloge m√©di√©vale de la capitale suisse"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Zytglogge √† Berne, capitale de la Suisse"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Zytglogge, tour de l'horloge mÈdiÈvale de la capitale suisse"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Zytglogge ‡ Berne, capitale de la Suisse"}
   ]},
-  {name:"Mus√©e olympique ‚Äî Lausanne, Suisse",lat:46.5083,lng:6.6374,desc:"Lausanne est la capitale olympique mondiale depuis 1915 et abrite le Mus√©e olympique inaugur√© en 1993. Le CIO y d√©cide de l'attribution des Jeux et y conserve les archives de tous les Jeux depuis Ath√®nes 1896. Lausanne accueille aussi le Tribunal Arbitral du Sport, qui tranche tous les litiges sportifs mondiaux.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Si√®ge du CIO depuis 1915, mus√©e olympique sur les rives du L√©man, parc du Ch√¢teau d'Ouchy, inaugur√© en 1993"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quai d'Ouchy, bord du lac L√©man, Lausanne, canton de Vaud"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Si√®ge mondial du Comit√© Olympique International, bord du lac L√©man, Lausanne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mus√©e olympique √† Lausanne, Suisse"}
+  {name:"MusÈe olympique ó Lausanne, Suisse",lat:46.5083,lng:6.6374,desc:"Lausanne est la capitale olympique mondiale depuis 1915 et abrite le MusÈe olympique inaugurÈ en 1993. Le CIO y dÈcide de l'attribution des Jeux et y conserve les archives de tous les Jeux depuis AthËnes 1896. Lausanne accueille aussi le Tribunal Arbitral du Sport, qui tranche tous les litiges sportifs mondiaux.",photo:"https://upload.wikimedia.org/wikipedia/commons/0/08/Losanna%2C_museo_olimpico%2C_int%2C_torce_olimpiche.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"SiËge du CIO depuis 1915, musÈe olympique sur les rives du LÈman, parc du Ch‚teau d'Ouchy, inaugurÈ en 1993"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quai d'Ouchy, bord du lac LÈman, Lausanne, canton de Vaud"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"SiËge mondial du ComitÈ Olympique International, bord du lac LÈman, Lausanne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le MusÈe olympique ‡ Lausanne, Suisse"}
   ]},
-  {name:"Abbaye de Westminster ‚Äî Londres",lat:51.4994,lng:-0.1273,desc:"L'abbaye de Westminster est le lieu de couronnement de tous les souverains britanniques depuis Guillaume le Conqu√©rant en 1066. Dix-sept monarques y sont enterr√©s. La Pierre du Destin, sur laquelle les rois d'√âcosse √©taient couronn√©s depuis -840, y fut int√©gr√©e lors du couronnement de Charles III en 2023.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Collegiate Church of St Peter, fond√©e en 960, lieu de couronnement depuis Guillaume en 1066, s√©pulture de Newton et Darwin"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Dean's Yard, City of Westminster, √† c√¥t√© du Parlement"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Abbaye des couronnements royaux et panth√©on britannique, Londres"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Abbaye de Westminster √† Londres, Royaume-Uni"}
+  {name:"Abbaye de Westminster ó Londres",lat:51.4994,lng:-0.1273,desc:"L'abbaye de Westminster est le lieu de couronnement de tous les souverains britanniques depuis Guillaume le ConquÈrant en 1066. Dix-sept monarques y sont enterrÈs. La Pierre du Destin, sur laquelle les rois d'…cosse Ètaient couronnÈs depuis -840, y fut intÈgrÈe lors du couronnement de Charles III en 2023.",photo:"photos/abbaye_de_fontevraud.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Collegiate Church of St Peter, fondÈe en 960, lieu de couronnement depuis Guillaume en 1066, sÈpulture de Newton et Darwin"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Dean's Yard, City of Westminster, ‡ cÙtÈ du Parlement"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Abbaye des couronnements royaux et panthÈon britannique, Londres"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Abbaye de Westminster ‡ Londres, Royaume-Uni"}
   ]},
-  {name:"Ch√¢teau de Windsor ‚Äî Royaume-Uni",lat:51.4839,lng:-0.6044,desc:"Le ch√¢teau de Windsor poss√®de la plus longue all√©e plant√©e d'arbres au monde : the Long Walk, une avenue de 4,8 km bord√©e de platanes et de marronniers. Elle fut plant√©e en 1685 et constitue l'axe central du Grand Parc de Windsor.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus vieux ch√¢teau royal habit√© au monde, fond√© par Guillaume en 1070, r√©sidence royale depuis 900 ans, Round Tower"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Windsor, Berkshire, r√©sidence royale au bord de la Tamise"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus vieux ch√¢teau royal habit√© du monde, Windsor, Angleterre"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Windsor, Angleterre (Royaume-Uni)"}
+  {name:"Ch‚teau de Windsor ó Royaume-Uni",lat:51.4839,lng:-0.6044,desc:"Le ch‚teau de Windsor possËde la plus longue allÈe plantÈe d'arbres au monde : the Long Walk, une avenue de 4,8 km bordÈe de platanes et de marronniers. Elle fut plantÈe en 1685 et constitue l'axe central du Grand Parc de Windsor.",photo:"photos/chateau_de_blarney.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus vieux ch‚teau royal habitÈ au monde, fondÈ par Guillaume en 1070, rÈsidence royale depuis 900 ans, Round Tower"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Windsor, Berkshire, rÈsidence royale au bord de la Tamise"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus vieux ch‚teau royal habitÈ du monde, Windsor, Angleterre"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Windsor, Angleterre (Royaume-Uni)"}
   ]},
-  {name:"Ch√¢teau de Bled ‚Äî Slov√©nie",lat:46.3683,lng:14.1033,desc:"Le ch√¢teau de Bled est mentionn√© pour la premi√®re fois en 1011 dans un document de l'empereur Henri II, qui l'offrit √† l'√©v√™ch√© de Brixen. Perch√© √† 130 m√®tres au-dessus du lac, il domine l'une des vues les plus photographi√©es d'Europe : le lac, l'√Æle et ses montagnes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Blejski Grad, ch√¢teau m√©di√©val du XIe si√®cle sur falaise de 130m dominant le lac de Bled avec l'√Æle √† l'√©glise baroque"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord d'un lac glaciaire alpin, √Æle baroque et ch√¢teau m√©di√©val en Haute-Carniole"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau sur falaise dominant le lac de Bled √† l'√Æle romantique, Slov√©nie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Bled en Slov√©nie"}
+  {name:"Ch‚teau de Bled ó SlovÈnie",lat:46.3683,lng:14.1033,desc:"Le ch‚teau de Bled est mentionnÈ pour la premiËre fois en 1011 dans un document de l'empereur Henri II, qui l'offrit ‡ l'ÈvÍchÈ de Brixen. PerchÈ ‡ 130 mËtres au-dessus du lac, il domine l'une des vues les plus photographiÈes d'Europe : le lac, l'Óle et ses montagnes.",photo:"photos/chateau_de_blarney.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Blejski Grad, ch‚teau mÈdiÈval du XIe siËcle sur falaise de 130m dominant le lac de Bled avec l'Óle ‡ l'Èglise baroque"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord d'un lac glaciaire alpin, Óle baroque et ch‚teau mÈdiÈval en Haute-Carniole"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau sur falaise dominant le lac de Bled ‡ l'Óle romantique, SlovÈnie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Bled en SlovÈnie"}
   ]},
-  {name:"Kotor ‚Äî Montenegro",lat:42.4247,lng:18.7712,desc:"Les remparts de Kotor grimpent 260 m√®tres √† flanc de falaise jusqu'au fort Saint-Jean ‚Äî les monter √† pied prend une heure. La cit√© fortifi√©e v√©nitienne, au fond d'une baie ressemblant √† un fjord, est si pr√©serv√©e que les habitants vivent encore dans les m√™mes maisons du XVe si√®cle.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vieille ville v√©nitienne fortifi√©e, 4,5 km de remparts grimpant 260m sur le mont Saint-Jean, baie de Kotor, UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fond d'une baie de la mer Adriatique, vieille ville fortifi√©e m√©di√©vale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille ville fortifi√©e au fond d'un fjord m√©diterran√©en, Mont√©n√©gro"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La vieille ville de Kotor au Mont√©n√©gro"}
+  {name:"Kotor ó Montenegro",lat:42.4247,lng:18.7712,desc:"Les remparts de Kotor grimpent 260 mËtres ‡ flanc de falaise jusqu'au fort Saint-Jean ó les monter ‡ pied prend une heure. La citÈ fortifiÈe vÈnitienne, au fond d'une baie ressemblant ‡ un fjord, est si prÈservÈe que les habitants vivent encore dans les mÍmes maisons du XVe siËcle.",photo:"https://upload.wikimedia.org/wikipedia/commons/c/c8/Flag_of_Kotor%2C_Montenegro.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vieille ville vÈnitienne fortifiÈe, 4,5 km de remparts grimpant 260m sur le mont Saint-Jean, baie de Kotor, UNESCO"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fond d'une baie de la mer Adriatique, vieille ville fortifiÈe mÈdiÈvale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille ville fortifiÈe au fond d'un fjord mÈditerranÈen, MontÈnÈgro"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La vieille ville de Kotor au MontÈnÈgro"}
   ]},
-  {name:"Plovdiv ‚Äî Bulgarie (vieille ville)",lat:42.1429,lng:24.7498,desc:"Plovdiv est la plus ancienne ville habit√©e en permanence d'Europe, avec 8 000 ans d'histoire. Ses collines abritent des vestiges thraces, romains et byzantins. Son amphith√©√¢tre romain du IIe si√®cle, red√©couvert en 1972 apr√®s un glissement de terrain, accueille aujourd'hui des concerts et op√©ras en plein air avec une acoustique exceptionnelle.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus ancienne ville d'Europe habit√©e en continu, Philippopolis fond√©e par Philippe II de Mac√©doine en -342, amphith√©√¢tre romain"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Collines de Nebet Tepe, vieille ville d'une cit√© th√©atrale des Balkans, bord de la Maritza"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancienne ville habit√©e d'Europe en continu, amphith√©√¢tre romain du IIe si√®cle, Bulgarie"},
+  {name:"Plovdiv ó Bulgarie (vieille ville)",lat:42.1429,lng:24.7498,desc:"Plovdiv est la plus ancienne ville habitÈe en permanence d'Europe, avec 8 000 ans d'histoire. Ses collines abritent des vestiges thraces, romains et byzantins. Son amphithÈ‚tre romain du IIe siËcle, redÈcouvert en 1972 aprËs un glissement de terrain, accueille aujourd'hui des concerts et opÈras en plein air avec une acoustique exceptionnelle.",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Plovdiv_flag.svg/langfr-330px-Plovdiv_flag.svg.png",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus ancienne ville d'Europe habitÈe en continu, Philippopolis fondÈe par Philippe II de MacÈdoine en -342, amphithÈ‚tre romain"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Collines de Nebet Tepe, vieille ville d'une citÈ thÈatrale des Balkans, bord de la Maritza"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancienne ville habitÈe d'Europe en continu, amphithÈ‚tre romain du IIe siËcle, Bulgarie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La vieille ville de Plovdiv, Bulgarie"}
   ]},
-  {name:"Rila Monastery ‚Äî Bulgarie",lat:42.1333,lng:23.3403,desc:"Le monast√®re de Rila fut fond√© au Xe si√®cle par Saint Jean de Rila qui v√©cut dans une grotte proche. Ses fresques color√©es couvrent 1 200 m¬≤ et furent r√©alis√©es par des ma√Ætres artisans bulgares en seulement deux ans au XIXe si√®cle ‚Äî une cadence ph√©nom√©nale.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monast√®re de Rila, fond√© au Xe si√®cle par Jean de Rila, frescoes de 1847, forteresse Hrelyu, UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gorge de la Rilska Reka, massif de Rila, Sofia Province, √† 120 km de Sofia"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand monast√®re de Bulgarie dans les montagnes Rila, UNESCO"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Monast√®re de Rila en Bulgarie"}
+  {name:"Rila Monastery ó Bulgarie",lat:42.1333,lng:23.3403,desc:"Le monastËre de Rila fut fondÈ au Xe siËcle par Saint Jean de Rila qui vÈcut dans une grotte proche. Ses fresques colorÈes couvrent 1 200 m≤ et furent rÈalisÈes par des maÓtres artisans bulgares en seulement deux ans au XIXe siËcle ó une cadence phÈnomÈnale.",photo:"https://upload.wikimedia.org/wikipedia/commons/4/46/Rila_Monastery%2C_August_2013.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"MonastËre de Rila, fondÈ au Xe siËcle par Jean de Rila, frescoes de 1847, forteresse Hrelyu, UNESCO"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gorge de la Rilska Reka, massif de Rila, Sofia Province, ‡ 120 km de Sofia"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand monastËre de Bulgarie dans les montagnes Rila, UNESCO"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le MonastËre de Rila en Bulgarie"}
   ]},
-  {name:"Wieliczka ‚Äî Pologne (mines de sel)",lat:49.9841,lng:20.0553,desc:"Les ouvriers des mines de sel de Wieliczka utilisaient les 300 km de galeries pour se rep√©rer en sculptant des chapelles, des statues et m√™me une reconstitution de la C√®ne dans le sel. La chapelle Sainte-Kinga, enti√®rement taill√©e dans le sel, mesure 54 m de long pour 12 m de hauteur.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mine de sel en exploitation depuis le XIIIe si√®cle, chapelle Sainte-Kinga (54m de long) enti√®rement taill√©e dans le sel, UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune √† 14 km d'une cit√© royale historique, mines de sel mill√©naires, cath√©drale souterraine"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mines de sel exploit√©es depuis le XIIIe si√®cle, chapelle taill√©e dans le sel √† 101 m de profondeur, Pologne"},
+  {name:"Wieliczka ó Pologne (mines de sel)",lat:49.9841,lng:20.0553,desc:"Les ouvriers des mines de sel de Wieliczka utilisaient les 300 km de galeries pour se repÈrer en sculptant des chapelles, des statues et mÍme une reconstitution de la CËne dans le sel. La chapelle Sainte-Kinga, entiËrement taillÈe dans le sel, mesure 54 m de long pour 12 m de hauteur.",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/POL_Wieliczka_flag.svg/langfr-330px-POL_Wieliczka_flag.svg.png",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mine de sel en exploitation depuis le XIIIe siËcle, chapelle Sainte-Kinga (54m de long) entiËrement taillÈe dans le sel, UNESCO"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune ‡ 14 km d'une citÈ royale historique, mines de sel millÈnaires, cathÈdrale souterraine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mines de sel exploitÈes depuis le XIIIe siËcle, chapelle taillÈe dans le sel ‡ 101 m de profondeur, Pologne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Wieliczka en Pologne (mines de sel)"}
   ]},
-  {name:"Bia?owie?a ‚Äî Pologne/Bi√©lorussie",lat:52.7083,lng:23.861,desc:"La for√™t de Bia?owie?a est la derni√®re for√™t primaire de plaine d'Europe ‚Äî jamais exploit√©e industriellement. On y trouve des arbres vieux de 500 ans, des champignons g√©ants et des insectes disparus partout ailleurs. Le bison europ√©en (Bison bonasus), r√©introduit en 1952 apr√®s avoir √©t√© extermin√© en 1927, y prosp√®re avec 600 individus.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Derni√®re for√™t primaire de plaine d'Europe, habitat du bison europ√©en (Bison bonasus), fronti√®re entre deux pays"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Podlachie oriental, fronti√®re entre deux pays d'Europe centrale, derni√®re for√™t vierge de plaine"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Derni√®re for√™t primaire d'Europe, bisons sauvages, Pologne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bia?owie?a en Pologne/Bi√©lorussie"}
+  {name:"Bia?owie?a ó Pologne/BiÈlorussie",lat:52.7083,lng:23.861,desc:"La forÍt de Bia?owie?a est la derniËre forÍt primaire de plaine d'Europe ó jamais exploitÈe industriellement. On y trouve des arbres vieux de 500 ans, des champignons gÈants et des insectes disparus partout ailleurs. Le bison europÈen (Bison bonasus), rÈintroduit en 1952 aprËs avoir ÈtÈ exterminÈ en 1927, y prospËre avec 600 individus.",photo:"photos/bia_owie_a.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"DerniËre forÍt primaire de plaine d'Europe, habitat du bison europÈen (Bison bonasus), frontiËre entre deux pays"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Podlachie oriental, frontiËre entre deux pays d'Europe centrale, derniËre forÍt vierge de plaine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"DerniËre forÍt primaire d'Europe, bisons sauvages, Pologne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bia?owie?a en Pologne/BiÈlorussie"}
   ]},
-  {name:"Red Fort ‚Äî Delhi, Inde",lat:28.6562,lng:77.241,desc:"Le Fort Rouge de Delhi fut construit en marbre blanc et calcaire rouge pendant 10 ans. La d√©claration d'ind√©pendance de l'Inde fut proclam√©e depuis ses remparts le 15 ao√ªt 1947 par Jawaharlal Nehru ‚Äî une tradition que chaque Premier ministre perp√©tue chaque ann√©e.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lal Qila, forteresse moghole en gr√®s rouge construite par Shah Jahan de 1638 √† 1648, symbole de l'ind√©pendance indienne"},
+  {name:"Red Fort ó Delhi, Inde",lat:28.6562,lng:77.241,desc:"Le Fort Rouge de Delhi fut construit en marbre blanc et calcaire rouge pendant 10 ans. La dÈclaration d'indÈpendance de l'Inde fut proclamÈe depuis ses remparts le 15 ao˚t 1947 par Jawaharlal Nehru ó une tradition que chaque Premier ministre perpÈtue chaque annÈe.",photo:"photos/red_fort.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lal Qila, forteresse moghole en grËs rouge construite par Shah Jahan de 1638 ‡ 1648, symbole de l'indÈpendance indienne"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Old Delhi (Shahjahanabad), rive de la Yamuna, New Delhi"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fort Rouge de Delhi, forteresse moghole symbole de l'ind√©pendance"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Red Fort √† Delhi, Inde"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fort Rouge de Delhi, forteresse moghole symbole de l'indÈpendance"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Red Fort ‡ Delhi, Inde"}
   ]},
-  {name:"Qutb Minar ‚Äî Delhi, Inde",lat:28.5245,lng:77.1855,desc:"La colonne de fer du Qutb Minar r√©siste √† la rouille depuis 1 600 ans gr√¢ce √† sa composition unique : elle contient 0,15% de phosphore qui forme une couche protectrice d'hydrog√®ne phosphate de fer. Cet acier damas naturel reste un myst√®re pour les m√©tallurgistes modernes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Minaret de 72,5m en gr√®s rouge, construit par Qutb ud-Din Aibak en 1193, le plus haut minaret de brique du monde"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mehrauli, sud de New Delhi, complexe arch√©ologique du sultanat de Delhi"},
+  {name:"Qutb Minar ó Delhi, Inde",lat:28.5245,lng:77.1855,desc:"La colonne de fer du Qutb Minar rÈsiste ‡ la rouille depuis 1 600 ans gr‚ce ‡ sa composition unique : elle contient 0,15% de phosphore qui forme une couche protectrice d'hydrogËne phosphate de fer. Cet acier damas naturel reste un mystËre pour les mÈtallurgistes modernes.",photo:"photos/red_fort.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Minaret de 72,5m en grËs rouge, construit par Qutb ud-Din Aibak en 1193, le plus haut minaret de brique du monde"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mehrauli, sud de New Delhi, complexe archÈologique du sultanat de Delhi"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haut minaret de brique du monde, Delhi, Inde"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Qutb Minar √† Delhi, Inde"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Qutb Minar ‡ Delhi, Inde"}
   ]},
-  {name:"Ranakpur ‚Äî Rajasthan, Inde",lat:25.1167,lng:73.4667,desc:"Le temple ja√Øn de Ranakpur, construit en 1437, poss√®de 1 444 colonnes de marbre blanc, toutes sculpt√©es diff√©remment. Sa coupole centrale est soutenue par 20 colonnes dispos√©es en cercle parfait. La structure est si complexe que l'architecte original, Dharna Shah, y consacra toute sa fortune.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple ja√Øn de Chaturmukha Dharana Vihara (1437), 1 444 colonnes de marbre toutes diff√©rentes, d√©di√© √† Adinatha"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"For√™t d'Aravalli, district de Pali, Rajasthan, √† 90 km de Jodhpur"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple ja√Øn aux 1444 colonnes de marbre, Rajasthan, Inde"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ranakpur √† Rajasthan, Inde"}
+  {name:"Ranakpur ó Rajasthan, Inde",lat:25.1167,lng:73.4667,desc:"Le temple jaÔn de Ranakpur, construit en 1437, possËde 1 444 colonnes de marbre blanc, toutes sculptÈes diffÈremment. Sa coupole centrale est soutenue par 20 colonnes disposÈes en cercle parfait. La structure est si complexe que l'architecte original, Dharna Shah, y consacra toute sa fortune.",photo:"https://upload.wikimedia.org/wikipedia/commons/0/0f/Jain_Temple_Ranakpur.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple jaÔn de Chaturmukha Dharana Vihara (1437), 1 444 colonnes de marbre toutes diffÈrentes, dÈdiÈ ‡ Adinatha"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ForÍt d'Aravalli, district de Pali, Rajasthan, ‡ 90 km de Jodhpur"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple jaÔn aux 1444 colonnes de marbre, Rajasthan, Inde"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ranakpur ‡ Rajasthan, Inde"}
   ]},
-  {name:"Jaisalmer ‚Äî Rajasthan, Inde",lat:26.9157,lng:70.9083,desc:"La forteresse de Jaisalmer est habit√©e en continu depuis 900 ans. Environ 3 000 personnes y vivent encore aujourd'hui ‚Äî h√¥teliers, commer√ßants, familles. C'est l'une des seules forteresses du monde m√©di√©val encore peupl√©e.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fort d'or de gr√®s jaune (1156), l'une des rares forteresses vivantes, Sonar Quila, 99 bastions, d√©sert du Thar"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"D√©sert du Thar, district de Jaisalmer, Rajasthan occidental, √† 300 km de Jodhpur"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville d'or dans le d√©sert du Thar, fort m√©di√©val, Rajasthan"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Jaisalmer √† Rajasthan, Inde"}
+  {name:"Jaisalmer ó Rajasthan, Inde",lat:26.9157,lng:70.9083,desc:"La forteresse de Jaisalmer est habitÈe en continu depuis 900 ans. Environ 3 000 personnes y vivent encore aujourd'hui ó hÙteliers, commerÁants, familles. C'est l'une des seules forteresses du monde mÈdiÈval encore peuplÈe.",photo:"photos/jaisalmer.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fort d'or de grËs jaune (1156), l'une des rares forteresses vivantes, Sonar Quila, 99 bastions, dÈsert du Thar"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"DÈsert du Thar, district de Jaisalmer, Rajasthan occidental, ‡ 300 km de Jodhpur"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville d'or dans le dÈsert du Thar, fort mÈdiÈval, Rajasthan"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Jaisalmer ‡ Rajasthan, Inde"}
   ]},
-  {name:"Varanasi ‚Äî Uttar Pradesh, Inde",lat:25.3176,lng:83.0061,desc:"Le Gange √† Varanasi est si sacr√© que les Hindous croient qu'y mourir assure la lib√©ration du cycle des renaissances. Des milliers de personnes viennent mourir √† Varanasi chaque ann√©e, confi√©s aux ¬´Dom¬ª ‚Äî les intouchables qui veillent sur les cr√©mations du ghat Manikarnika, actives 24h/24 depuis des si√®cles.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kashi, plus ancienne ville habit√©e du monde (-3000 av. J.-C.), 87 ghats sur le Gange, cr√©mations √† Manikarnika Ghat"},
+  {name:"Varanasi ó Uttar Pradesh, Inde",lat:25.3176,lng:83.0061,desc:"Le Gange ‡ Varanasi est si sacrÈ que les Hindous croient qu'y mourir assure la libÈration du cycle des renaissances. Des milliers de personnes viennent mourir ‡ Varanasi chaque annÈe, confiÈs aux ´Domª ó les intouchables qui veillent sur les crÈmations du ghat Manikarnika, actives 24h/24 depuis des siËcles.",photo:"photos/varanasi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kashi, plus ancienne ville habitÈe du monde (-3000 av. J.-C.), 87 ghats sur le Gange, crÈmations ‡ Manikarnika Ghat"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive ouest du Gange, Varanasi, est de l'Uttar Pradesh"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville sainte hindoue sur le Gange, cr√©mations et ghats, Inde"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Varanasi √† Uttar Pradesh, Inde"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville sainte hindoue sur le Gange, crÈmations et ghats, Inde"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Varanasi ‡ Uttar Pradesh, Inde"}
   ]},
-  {name:"Meenakshi Temple ‚Äî Madurai, Inde",lat:9.9195,lng:78.1193,desc:"Le temple de Meenakshi √† Madurai compte 33 000 sculptures sur ses 14 tours (gopurams), chacune peinte de couleurs vives. Les tours sont renduites et repeintes tous les 12 ans lors d'une c√©r√©monie appel√©e Kumbhabhishekam qui dure plusieurs jours.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Meenakshi Amman Temple, 12 gopurams couverts de 33 000 sculptures color√©es, consacr√© √† Meenakshi et Sundareshvara"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Madurai, Tamil Nadu, √† 450 km de Chennai"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple dravidien aux tours sculpt√©es multicolores, Madurai, Tamil Nadu"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Meenakshi Temple √† Madurai, Inde"}
+  {name:"Meenakshi Temple ó Madurai, Inde",lat:9.9195,lng:78.1193,desc:"Le temple de Meenakshi ‡ Madurai compte 33 000 sculptures sur ses 14 tours (gopurams), chacune peinte de couleurs vives. Les tours sont renduites et repeintes tous les 12 ans lors d'une cÈrÈmonie appelÈe Kumbhabhishekam qui dure plusieurs jours.",photo:"photos/meenakshi_temple.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Meenakshi Amman Temple, 12 gopurams couverts de 33 000 sculptures colorÈes, consacrÈ ‡ Meenakshi et Sundareshvara"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Madurai, Tamil Nadu, ‡ 450 km de Chennai"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple dravidien aux tours sculptÈes multicolores, Madurai, Tamil Nadu"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Meenakshi Temple ‡ Madurai, Inde"}
   ]},
-  {name:"Ellora Caves ‚Äî Maharashtra, Inde",lat:20.0268,lng:75.1795,desc:"Les grottes d'Ellora abritent le temple Kailash, taill√© √† partir d'un seul bloc de roche de haut en bas ‚Äî une prouesse sans √©quivalent. Pour extraire le temple, il fallut retirer 200 000 tonnes de roche sur 100 ans, sans aucun plan pr√©alable ne semble-t-il.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"34 monast√®res et temples taill√©s dans la roche basaltique du IVe au XIe si√®cle, Kailash Temple monolithique de 8 000 tonnes excav√©"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District d'Aurangabad, Maharashtra, √† 30 km d'Aurangabad, Deccan"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grottes rupestres bouddhistes, hindoues et ja√Ønes, Maharashtra, Inde"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Ellora Caves √† Maharashtra, Inde"}
+  {name:"Ellora Caves ó Maharashtra, Inde",lat:20.0268,lng:75.1795,desc:"Les grottes d'Ellora abritent le temple Kailash, taillÈ ‡ partir d'un seul bloc de roche de haut en bas ó une prouesse sans Èquivalent. Pour extraire le temple, il fallut retirer 200 000 tonnes de roche sur 100 ans, sans aucun plan prÈalable ne semble-t-il.",photo:"photos/ellora_caves.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"34 monastËres et temples taillÈs dans la roche basaltique du IVe au XIe siËcle, Kailash Temple monolithique de 8 000 tonnes excavÈ"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District d'Aurangabad, Maharashtra, ‡ 30 km d'Aurangabad, Deccan"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grottes rupestres bouddhistes, hindoues et jaÔnes, Maharashtra, Inde"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Ellora Caves ‡ Maharashtra, Inde"}
   ]},
-  {name:"Shibuya Crossing ‚Äî Tokyo, Japon",lat:35.6595,lng:139.7006,desc:"Le carrefour de Shibuya traite 500 000 pi√©tons par jour. Contrairement √† ce que beaucoup pensent, le ¬´scramble crossing¬ª n'est pas une invention japonaise ‚Äî il fut import√© de Los Angeles dans les ann√©es 1970. Tokyo l'a simplement port√© √† son paroxysme.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Carrefour pi√©ton de Shibuya, 3 000 personnes par feu vert, Scramble Square, Love-Hachi le chien fid√®le"},
+  {name:"Shibuya Crossing ó Tokyo, Japon",lat:35.6595,lng:139.7006,desc:"Le carrefour de Shibuya traite 500 000 piÈtons par jour. Contrairement ‡ ce que beaucoup pensent, le ´scramble crossingª n'est pas une invention japonaise ó il fut importÈ de Los Angeles dans les annÈes 1970. Tokyo l'a simplement portÈ ‡ son paroxysme.",photo:"photos/shibuya_crossing.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Carrefour piÈton de Shibuya, 3 000 personnes par feu vert, Scramble Square, Love-Hachi le chien fidËle"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Shibuya, arondissement Shibuya, au pied de la gare"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Carrefour pi√©ton le plus fr√©quent√© du monde, Shibuya, Tokyo"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Shibuya Crossing √† Tokyo, Japon"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Carrefour piÈton le plus frÈquentÈ du monde, Shibuya, Tokyo"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Shibuya Crossing ‡ Tokyo, Japon"}
   ]},
-  {name:"Osaka Castle ‚Äî Osaka, Japon",lat:34.6873,lng:135.5261,desc:"Le ch√¢teau d'Osaka est entour√© du plus grand march√© de cerisiers en fleur du Kansai. Sa fondation fut r√©alis√©e avec des pierres g√©antes portant des inscriptions ‚Äî les daimyos rivaux prouvaient leur loyaut√© en contribuant des blocs de pierre. La plus grande pierre, ¬´Higo no Ishi¬ª, p√®se 130 tonnes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"?saka-j?, construit par Toyotomi Hideyoshi en 1583, tour de 5 √©tages, cerisiers du Nishinomaru Garden"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ch??-ku, parc du ch√¢teau d'Osaka, rive de l'Okawa, Osaka"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau d'Osaka de Toyotomi Hideyoshi, Japon"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Osaka Castle √† Osaka, Japon"}
-  ]},
-  {name:"Nara ‚Äî Japon (Grand Bouddha)",lat:34.6884,lng:135.8395,desc:"Le T?dai-ji de Nara abrite le plus grand Bouddha en bronze du monde ‚Äî 15 m√®tres et 500 tonnes. Une narine de l'une de ses colonnes de bois a exactement la taille du nez du Bouddha : quiconque passe √† travers est assur√© d'atteindre l'illumination. Des centaines de touristes tentent chaque jour de se glisser dans ce trou.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"T?dai-ji, temple bouddhiste de 745, plus grand b√¢timent en bois du monde, Daibutsu-den abritant le Bouddha de bronze de 15m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nara Park, pr√©fecture de Nara, √Æle de Honsh?, √† 45 km d'Osaka, daims en libert√©"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Immense Bouddha en bronze de 15 m dans le plus grand b√¢timent en bois du monde, premi√®re capitale du Japon"},
+    {name:"Nara ó Japon (Grand Bouddha)",lat:34.6884,lng:135.8395,desc:"Le T?dai-ji de Nara abrite le plus grand Bouddha en bronze du monde ó 15 mËtres et 500 tonnes. Une narine de l'une de ses colonnes de bois a exactement la taille du nez du Bouddha : quiconque passe ‡ travers est assurÈ d'atteindre l'illumination. Des centaines de touristes tentent chaque jour de se glisser dans ce trou.",photo:"photos/nara.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"T?dai-ji, temple bouddhiste de 745, plus grand b‚timent en bois du monde, Daibutsu-den abritant le Bouddha de bronze de 15m"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nara Park, prÈfecture de Nara, Óle de Honsh?, ‡ 45 km d'Osaka, daims en libertÈ"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Immense Bouddha en bronze de 15 m dans le plus grand b‚timent en bois du monde, premiËre capitale du Japon"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Nara au Japon (Grand Bouddha)"}
   ]},
-  {name:"Itsukushima ‚Äî Hiroshima, Japon",lat:34.2959,lng:132.3197,desc:"La bombe atomique d'Hiroshima n'a pas d√©truit le D√¥me de Genbaku uniquement parce qu'elle explosa presque exactement au-dessus de lui. La d√©flagration verticale √©pargna le b√¢timent qu'une onde horizontale aurait ras√©. Il est maintenant symbole universel de paix.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Torii flottant de Miyajima, grand portail shinto orange dans la mer, √Æle sacr√©e o√π naissances et morts √©taient interdites"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle de Miyajima, mer int√©rieure de Seto, pr√©fecture d'Hiroshima"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Torii flottant sacr√© dans la mer, √Æle de Miyajima, Hiroshima"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Itsukushima √† Hiroshima, Japon"}
+  {name:"Itsukushima ó Hiroshima, Japon",lat:34.2959,lng:132.3197,desc:"La bombe atomique d'Hiroshima n'a pas dÈtruit le DÙme de Genbaku uniquement parce qu'elle explosa presque exactement au-dessus de lui. La dÈflagration verticale Èpargna le b‚timent qu'une onde horizontale aurait rasÈ. Il est maintenant symbole universel de paix.",photo:"photos/itsukushima.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Torii flottant de Miyajima, grand portail shinto orange dans la mer, Óle sacrÈe o˘ naissances et morts Ètaient interdites"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle de Miyajima, mer intÈrieure de Seto, prÈfecture d'Hiroshima"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Torii flottant sacrÈ dans la mer, Óle de Miyajima, Hiroshima"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Itsukushima ‡ Hiroshima, Japon"}
   ]},
-  {name:"Hiroshima Peace Memorial ‚Äî Japon",lat:34.3955,lng:132.4536,desc:"La bombe atomique d'Hiroshima n'a pas d√©truit le D√¥me de Genbaku uniquement parce qu'elle explosa presque exactement au-dessus de lui. La d√©flagration verticale √©pargna le b√¢timent qu'une onde horizontale aurait ras√©. Il est maintenant symbole universel de paix.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Genbaku Dome, D√¥me de la bombe A, seul b√¢timent debout √† l'√©picentre du 6 ao√ªt 1945, 600m de l'hypocentre"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle de Nakajimacho, bord de l'?ta, Hiroshima"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"D√¥me de la bombe atomique d'Hiroshima, m√©morial UNESCO"},
+  {name:"Hiroshima Peace Memorial ó Japon",lat:34.3955,lng:132.4536,desc:"La bombe atomique d'Hiroshima n'a pas dÈtruit le DÙme de Genbaku uniquement parce qu'elle explosa presque exactement au-dessus de lui. La dÈflagration verticale Èpargna le b‚timent qu'une onde horizontale aurait rasÈ. Il est maintenant symbole universel de paix.",photo:"photos/hiroshima_peace_memorial.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Genbaku Dome, DÙme de la bombe A, seul b‚timent debout ‡ l'Èpicentre du 6 ao˚t 1945, 600m de l'hypocentre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle de Nakajimacho, bord de l'?ta, Hiroshima"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"DÙme de la bombe atomique d'Hiroshima, mÈmorial UNESCO"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hiroshima Peace Memorial au Japon"}
   ]},
-  {name:"Demilitarized Zone ‚Äî Cor√©e",lat:37.9526,lng:126.6708,desc:"La zone d√©militaris√©e cor√©enne est paradoxalement l'une des zones les plus pr√©serv√©es d'Asie ‚Äî 70 ans sans activit√© humaine. Des grues de Mandchourie en voie d'extinction y nichent, des tigres de Sib√©rie y ont √©t√© aper√ßus. Les deux tours de Panmunjom, entour√©es de champs de mines, restent le seul endroit o√π soldats nord et sud-cor√©ens se font face √† 50 centim√®tres.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Zone d√©militaris√©e cor√©enne, bande de 4 km de large sur 248 km, Panmunjeom (village de la paix/tente bleue), depuis 1953"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fronti√®re militaris√©e entre deux √âtats divis√©s, 38e parall√®le nord, zone tampon"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Zone d√©militaris√©e entre les deux Cor√©es, Panmunjeom"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Zone D√©militaris√©e (DMZ) entre les deux Cor√©es"}
+  {name:"Demilitarized Zone ó CorÈe",lat:37.9526,lng:126.6708,desc:"La zone dÈmilitarisÈe corÈenne est paradoxalement l'une des zones les plus prÈservÈes d'Asie ó 70 ans sans activitÈ humaine. Des grues de Mandchourie en voie d'extinction y nichent, des tigres de SibÈrie y ont ÈtÈ aperÁus. Les deux tours de Panmunjom, entourÈes de champs de mines, restent le seul endroit o˘ soldats nord et sud-corÈens se font face ‡ 50 centimËtres.",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Zone dÈmilitarisÈe corÈenne, bande de 4 km de large sur 248 km, Panmunjeom (village de la paix/tente bleue), depuis 1953"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"FrontiËre militarisÈe entre deux …tats divisÈs, 38e parallËle nord, zone tampon"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Zone dÈmilitarisÈe entre les deux CorÈes, Panmunjeom"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Zone DÈmilitarisÈe (DMZ) entre les deux CorÈes"}
   ]},
-  {name:"Jeju Island ‚Äî Cor√©e du Sud",lat:33.4996,lng:126.5312,desc:"L'√Æle de Jeju est gouvern√©e par les haenyeo ‚Äî les femmes plongeuses qui r√©coltent ormeaux, oursins et pieuvres en apn√©e depuis 1 500 ans. Ces femmes, qui plongent jusqu'√† 20 m√®tres sans √©quipement, peuvent travailler jusqu'√† 70 ans.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√éle volcanique du Hallasan (1 950 m), Manjanggul (7,4 km de tube de lave), haenyeo plongeuses, UNESCO triple couronne"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province insulaire volcanique, mer Jaune, √† 80 km au sud-ouest du continent"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éle volcanique aux tubes de lave et plongeuses haenyeo, Cor√©e du Sud"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'√éle de Jeju, Cor√©e du Sud"}
+  {name:"Jeju Island ó CorÈe du Sud",lat:33.4996,lng:126.5312,desc:"L'Óle de Jeju est gouvernÈe par les haenyeo ó les femmes plongeuses qui rÈcoltent ormeaux, oursins et pieuvres en apnÈe depuis 1 500 ans. Ces femmes, qui plongent jusqu'‡ 20 mËtres sans Èquipement, peuvent travailler jusqu'‡ 70 ans.",photo:"photos/jeju_island.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Œle volcanique du Hallasan (1 950 m), Manjanggul (7,4 km de tube de lave), haenyeo plongeuses, UNESCO triple couronne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province insulaire volcanique, mer Jaune, ‡ 80 km au sud-ouest du continent"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œle volcanique aux tubes de lave et plongeuses haenyeo, CorÈe du Sud"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Œle de Jeju, CorÈe du Sud"}
   ]},
-  {name:"Taroko Gorge ‚Äî Ta√Øwan",lat:24.1569,lng:121.6219,desc:"La gorge de Taroko est creus√©e dans le marbre par la rivi√®re Liwu depuis 2 millions d'ann√©es. √Ä certains endroits, les parois de marbre vein√© ne laissent passer que 2 √† 3 m√®tres de lumi√®re. La route qui la traverse fut construite de 1956 √† 1960 par 10 000 soldats ‚Äî 212 y perdirent la vie.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gorge de marbre de 19 km taill√©e par une rivi√®re dans une cha√Æne montagneuse, Tunnel des neuf tournants"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national d'une √Æle montagneuse d'Asie de l'Est, gorge de marbre et tunnels"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gorge de marbre spectaculaire dans les Alpes centrales, Ta√Øwan"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Gorges de Taroko √† Ta√Øwan"}
+  {name:"Taroko Gorge ó TaÔwan",lat:24.1569,lng:121.6219,desc:"La gorge de Taroko est creusÈe dans le marbre par la riviËre Liwu depuis 2 millions d'annÈes. ¿ certains endroits, les parois de marbre veinÈ ne laissent passer que 2 ‡ 3 mËtres de lumiËre. La route qui la traverse fut construite de 1956 ‡ 1960 par 10 000 soldats ó 212 y perdirent la vie.",photo:"photos/taroko_gorge.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gorge de marbre de 19 km taillÈe par une riviËre dans une chaÓne montagneuse, Tunnel des neuf tournants"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national d'une Óle montagneuse d'Asie de l'Est, gorge de marbre et tunnels"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gorge de marbre spectaculaire dans les Alpes centrales, TaÔwan"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Gorges de Taroko ‡ TaÔwan"}
   ]},
-  {name:"Halong Bay ‚Äî Vietnam (Cat Ba)",lat:20.7833,lng:107.05,desc:"L'√Æle de Cat Ba est la plus grande √Æle de la baie d'Ha Long. Sa for√™t primaire abrite le langur de Cat Ba, l'un des primates les plus menac√©s au monde avec seulement 60 √† 70 individus survivants. Ses grottes pr√©historiques furent habit√©es d√®s -7000 av. J.-C.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√éle de Cat Ba, plus grande √Æle de la baie de Ha Long, grottes de Phong Nha, mangroves et village flottant de Cai Beo"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel du golfe du Tonkin, province c√¥ti√®re nord d'un pays d'Asie du Sud-Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éle principale de la baie de Ha Long, grottes et mangroves, Vietnam"},
+  {name:"Halong Bay ó Vietnam (Cat Ba)",lat:20.7833,lng:107.05,desc:"L'Óle de Cat Ba est la plus grande Óle de la baie d'Ha Long. Sa forÍt primaire abrite le langur de Cat Ba, l'un des primates les plus menacÈs au monde avec seulement 60 ‡ 70 individus survivants. Ses grottes prÈhistoriques furent habitÈes dËs -7000 av. J.-C.",photo:"photos/halong_bay.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Œle de Cat Ba, plus grande Óle de la baie de Ha Long, grottes de Phong Nha, mangroves et village flottant de Cai Beo"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel du golfe du Tonkin, province cÙtiËre nord d'un pays d'Asie du Sud-Est"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œle principale de la baie de Ha Long, grottes et mangroves, Vietnam"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Halong Bay au Vietnam (Cat Ba)"}
   ]},
-  {name:"Hoi An ‚Äî Vietnam",lat:15.8794,lng:108.335,desc:"La ville d'Hoi An √©tait le port le plus important d'Asie du Sud-Est aux XVIe et XVIIe si√®cles, avant que son fleuve ne s'ensable. Son centre historique est si bien conserv√© qu'il semble suspendu dans le temps, √† l'exception des lampions color√©s qui s'allument chaque soir.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancien port marchand du XVIe si√®cle, pont japonais couvert de 1593, maisons chinoises et entrep√¥ts n√©erlandais, Qu?ng Nam"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province centrale d'un long pays d'Asie du Sud-Est, port marchand du XVe au XVIIe si√®cle"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancien port marchand du XVIe si√®cle aux lanternes color√©es, class√© UNESCO, province de Qu?ng Nam"},
+  {name:"Hoi An ó Vietnam",lat:15.8794,lng:108.335,desc:"La ville d'Hoi An Ètait le port le plus important d'Asie du Sud-Est aux XVIe et XVIIe siËcles, avant que son fleuve ne s'ensable. Son centre historique est si bien conservÈ qu'il semble suspendu dans le temps, ‡ l'exception des lampions colorÈs qui s'allument chaque soir.",photo:"photos/hoi_an.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancien port marchand du XVIe siËcle, pont japonais couvert de 1593, maisons chinoises et entrepÙts nÈerlandais, Qu?ng Nam"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province centrale d'un long pays d'Asie du Sud-Est, port marchand du XVe au XVIIe siËcle"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancien port marchand du XVIe siËcle aux lanternes colorÈes, classÈ UNESCO, province de Qu?ng Nam"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hoi An au Vietnam"}
   ]},
-  {name:"Wat Phra Kaew ‚Äî Bangkok, Tha√Ølande",lat:13.7516,lng:100.4919,desc:"Le Bouddha d'√âmeraude du temple Phra Kaew ne mesure que 66 cm ‚Äî une taille modeste pour la statue la plus sacr√©e de Tha√Ølande. Taill√© dans une seule pi√®ce de jade (et non d'√©meraude), il est rev√™tu de trois costumes diff√©rents que le roi change personnellement √† chaque saison.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple du Bouddha d'√âmeraude, dans l'enceinte du Grand Palais, statue de jade de 66cm, v√™tements chang√©s 3x par an par le roi"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ko Rattanakosin, √Æle du Grand Palais, bord du Chao Phraya, Bangkok"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple du Bouddha d'√âmeraude dans le Grand Palais, Bangkok"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Wat Phra Kaew √† Bangkok, Tha√Ølande"}
+  {name:"Wat Phra Kaew ó Bangkok, ThaÔlande",lat:13.7516,lng:100.4919,desc:"Le Bouddha d'…meraude du temple Phra Kaew ne mesure que 66 cm ó une taille modeste pour la statue la plus sacrÈe de ThaÔlande. TaillÈ dans une seule piËce de jade (et non d'Èmeraude), il est revÍtu de trois costumes diffÈrents que le roi change personnellement ‡ chaque saison.",photo:"photos/wat_phra_kaew.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple du Bouddha d'…meraude, dans l'enceinte du Grand Palais, statue de jade de 66cm, vÍtements changÈs 3x par an par le roi"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ko Rattanakosin, Óle du Grand Palais, bord du Chao Phraya, Bangkok"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple du Bouddha d'…meraude dans le Grand Palais, Bangkok"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Wat Phra Kaew ‡ Bangkok, ThaÔlande"}
   ]},
-  {name:"Kuala Lumpur ‚Äî Tours Petronas, Malaisie",lat:3.1578,lng:101.7119,desc:"Les Tours Petronas de Kuala Lumpur furent con√ßues par C√©sar Pelli en s'inspirant de l'architecture islamique ‚Äî leurs plans au sol forment deux √©toiles √† 8 branches entrelac√©es. La tour 1 (c√¥t√© gauche en regardant depuis la rue) fut construite par une entreprise japonaise, la tour 2 par une entreprise cor√©enne.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Menara Berkembar Petronas, 451,9 m, con√ßues par C√©sar Pelli, sky bridge au 41e √©tage reliant les deux tours, 1998-2004"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Golden Triangle d'une grande capitale tropicale, jumelles g√©antes parmi les plus hautes du monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tours jumelles de 452 m reli√©es par un skybridge au 41e √©tage, capitale de la Malaisie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kuala Lumpur √† Tours Petronas, Malaisie"}
+  {name:"Kuala Lumpur ó Tours Petronas, Malaisie",lat:3.1578,lng:101.7119,desc:"Les Tours Petronas de Kuala Lumpur furent conÁues par CÈsar Pelli en s'inspirant de l'architecture islamique ó leurs plans au sol forment deux Ètoiles ‡ 8 branches entrelacÈes. La tour 1 (cÙtÈ gauche en regardant depuis la rue) fut construite par une entreprise japonaise, la tour 2 par une entreprise corÈenne.",photo:"photos/kuala_lumpur.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Menara Berkembar Petronas, 451,9 m, conÁues par CÈsar Pelli, sky bridge au 41e Ètage reliant les deux tours, 1998-2004"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Golden Triangle d'une grande capitale tropicale, jumelles gÈantes parmi les plus hautes du monde"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tours jumelles de 452 m reliÈes par un skybridge au 41e Ètage, capitale de la Malaisie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kuala Lumpur ‡ Tours Petronas, Malaisie"}
   ]},
-  {name:"Prambanan ‚Äî Java, Indon√©sie",lat:-7.752,lng:110.4915,desc:"La l√©gende du temple de Prambanan conte l'histoire d'un pr√©tendant qui dut construire 1 000 temples en une nuit pour gagner la main d'une princesse. √Ä l'aube, n'en ayant √©rig√© que 999, la princesse alluma des feux pour simuler le lever du soleil et le stoppa.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Complexe de temples hindous trimurti (IXe si√®cle), 47m de hauteur, d√©di√©s √† Brahma, Vishnu et Shiva, dynastie Sanjaya"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fronti√®re de deux r√©gions d'une grande √Æle tropicale, temple bouddhiste du IXe si√®cle"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temples hindous du IXe si√®cle, Java, Indon√©sie, UNESCO"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Prambanan √† Java, Indon√©sie"}
+  {name:"Prambanan ó Java, IndonÈsie",lat:-7.752,lng:110.4915,desc:"La lÈgende du temple de Prambanan conte l'histoire d'un prÈtendant qui dut construire 1 000 temples en une nuit pour gagner la main d'une princesse. ¿ l'aube, n'en ayant ÈrigÈ que 999, la princesse alluma des feux pour simuler le lever du soleil et le stoppa.",photo:"photos/prambanan.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Complexe de temples hindous trimurti (IXe siËcle), 47m de hauteur, dÈdiÈs ‡ Brahma, Vishnu et Shiva, dynastie Sanjaya"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"FrontiËre de deux rÈgions d'une grande Óle tropicale, temple bouddhiste du IXe siËcle"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temples hindous du IXe siËcle, Java, IndonÈsie, UNESCO"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Prambanan ‡ Java, IndonÈsie"}
   ]},
-  {name:"Kairouan ‚Äî Tunisie",lat:35.6781,lng:10.0963,desc:"Kairouan est la 4e ville sainte de l'Islam et la plus sainte d'Afrique du Nord. Sa Grande Mosqu√©e, fond√©e en 670, contient le plus ancien mihrab et le plus ancien minbar encore en place dans le monde islamique.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande Mosqu√©e de Kairouan (Sidi Oqba), fond√©e en 670 par Uqba ibn Nafi, 4e ville sainte de l'Islam, minaret le plus ancien"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gouvernorat central du pays, √† 160 km au sud de la capitale, 4e ville sainte de l'Islam"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"4e ville sainte de l'Islam, grande mosqu√©e du VIIe si√®cle, Tunisie"},
+  {name:"Kairouan ó Tunisie",lat:35.6781,lng:10.0963,desc:"Kairouan est la 4e ville sainte de l'Islam et la plus sainte d'Afrique du Nord. Sa Grande MosquÈe, fondÈe en 670, contient le plus ancien mihrab et le plus ancien minbar encore en place dans le monde islamique.",photo:"photos/kairouan.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande MosquÈe de Kairouan (Sidi Oqba), fondÈe en 670 par Uqba ibn Nafi, 4e ville sainte de l'Islam, minaret le plus ancien"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gouvernorat central du pays, ‡ 160 km au sud de la capitale, 4e ville sainte de l'Islam"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"4e ville sainte de l'Islam, grande mosquÈe du VIIe siËcle, Tunisie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kairouan en Tunisie"}
   ]},
-  {name:"Pyramide de M√©ro√© ‚Äî Soudan",lat:16.9393,lng:33.7475,desc:"Les pyramides soudanaises de M√©ro√© sont plus nombreuses que celles d'√âgypte ‚Äî on en compte plus de 200 ‚Äî mais elles sont bien plus √©troites et moins connues. Un aventurier italien en fit exploser le sommet de plusieurs au XIXe si√®cle, croyant y trouver des tr√©sors.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"N√©cropole royale de M√©ro√©, 200+ pyramides kushites plus √©troites que les √©gyptiennes (70¬∞), reino de Kush IVe s. av. J.-C."},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"D√©sert de Nubie, √âtat de Nahr an-Nil, √† 200 km au nord de Khartoum, Soudan"},
+  {name:"Pyramide de MÈroÈ ó Soudan",lat:16.9393,lng:33.7475,desc:"Les pyramides soudanaises de MÈroÈ sont plus nombreuses que celles d'…gypte ó on en compte plus de 200 ó mais elles sont bien plus Ètroites et moins connues. Un aventurier italien en fit exploser le sommet de plusieurs au XIXe siËcle, croyant y trouver des trÈsors.",photo:"photos/pyramide_de_meroe.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"NÈcropole royale de MÈroÈ, 200+ pyramides kushites plus Ètroites que les Ègyptiennes (70∞), reino de Kush IVe s. av. J.-C."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"DÈsert de Nubie, …tat de Nahr an-Nil, ‡ 200 km au nord de Khartoum, Soudan"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pyramides nubienne du royaume de Kush, Soudan, Afrique du Nord-Est"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Pyramides de M√©ro√© au Soudan"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Pyramides de MÈroÈ au Soudan"}
   ]},
-  {name:"Tsingy de Bemaraha ‚Äî Madagascar",lat:-18.45,lng:44.75,desc:"Les for√™ts de Tsingy de Madagascar sont des for√™ts de lames calcaires si ac√©r√©es qu'elles tranchent les semelles de chaussures. Leur nom malgache signifie ¬´o√π on ne peut pas marcher pieds nus¬ª.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"For√™t de pitons calcaires ac√©r√©s (tsingy en malgache), karst spectaculaire, l√©muriens end√©miques, UNESCO 1990"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion Melaky, ouest de Madagascar, province de Mahajanga"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"For√™t de pierres calcaires ac√©r√©es, parc national, Madagascar"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tsingy de Bemaraha √† Madagascar"}
+  {name:"Tsingy de Bemaraha ó Madagascar",lat:-18.45,lng:44.75,desc:"Les forÍts de Tsingy de Madagascar sont des forÍts de lames calcaires si acÈrÈes qu'elles tranchent les semelles de chaussures. Leur nom malgache signifie ´o˘ on ne peut pas marcher pieds nusª.",photo:"photos/tsingy_de_bemaraha.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"ForÍt de pitons calcaires acÈrÈs (tsingy en malgache), karst spectaculaire, lÈmuriens endÈmiques, UNESCO 1990"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion Melaky, ouest de Madagascar, province de Mahajanga"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"ForÍt de pierres calcaires acÈrÈes, parc national, Madagascar"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tsingy de Bemaraha ‡ Madagascar"}
   ]},
-  {name:"Chutes Kaieteur ‚Äî Guyana",lat:5.174,lng:-59.482,desc:"Les chutes Kaieteur du Guyana sont entour√©es d'une for√™t si vierge et inaccessible qu'elles ne furent vues par un Europ√©en qu'en 1870. La seule fa√ßon d'y acc√©der reste un petit avion qui atterrit sur une piste herbeuse en pleine jungle ‚Äî il n'y a pas de route.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chute de 226m de hauteur sur la rivi√®re Potaro, 5 fois plus haute que les Niagara, d√©bit de 663 m¬≥/s, tepui du Pakaraima"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion centrale d'un petit pays d'Am√©rique du Sud, une des plus puissantes chutes du monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chute de 226 m sur la rivi√®re Potaro, parmi les plus puissantes au monde, jungle guyanaise"},
+  {name:"Chutes Kaieteur ó Guyana",lat:5.174,lng:-59.482,desc:"Les chutes Kaieteur du Guyana sont entourÈes d'une forÍt si vierge et inaccessible qu'elles ne furent vues par un EuropÈen qu'en 1870. La seule faÁon d'y accÈder reste un petit avion qui atterrit sur une piste herbeuse en pleine jungle ó il n'y a pas de route.",photo:"photos/chutes_kaieteur.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chute de 226m de hauteur sur la riviËre Potaro, 5 fois plus haute que les Niagara, dÈbit de 663 m≥/s, tepui du Pakaraima"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion centrale d'un petit pays d'AmÈrique du Sud, une des plus puissantes chutes du monde"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chute de 226 m sur la riviËre Potaro, parmi les plus puissantes au monde, jungle guyanaise"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes Kaieteur au Guyana"}
   ]},
-  {name:"Lac Rose ‚Äî S√©n√©gal",lat:14.84,lng:-17.23,desc:"Le lac Retba du S√©n√©gal doit sa couleur rose √† une bact√©rie halophile (Dunaliella salina) qui produit un pigment rouge pour se prot√©ger du sel. Avec une salinit√© 10 fois sup√©rieure √† celle de l'oc√©an, les r√©colteurs de sel flottent sans effort comme dans la mer Morte.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac de couleur rose d√ª √† la bact√©rie Dunaliella salina, salinit√© de 380g/L (10x l'oc√©an), ancien terminus d'un c√©l√®bre rallye auto"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Presqu'√Æle √† 35 km au nord-est d'une grande capitale ouest-africaine, lac saum√¢tre rose"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac d'un rose naturel intense d√ª √† une bact√©rie halophile, salinit√© 10√ó l'oc√©an, S√©n√©gal"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac Rose au S√©n√©gal"}
+  {name:"Lac Rose ó SÈnÈgal",lat:14.84,lng:-17.23,desc:"Le lac Retba du SÈnÈgal doit sa couleur rose ‡ une bactÈrie halophile (Dunaliella salina) qui produit un pigment rouge pour se protÈger du sel. Avec une salinitÈ 10 fois supÈrieure ‡ celle de l'ocÈan, les rÈcolteurs de sel flottent sans effort comme dans la mer Morte.",photo:"photos/lac_rose.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac de couleur rose d˚ ‡ la bactÈrie Dunaliella salina, salinitÈ de 380g/L (10x l'ocÈan), ancien terminus d'un cÈlËbre rallye auto"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Presqu'Óle ‡ 35 km au nord-est d'une grande capitale ouest-africaine, lac saum‚tre rose"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac d'un rose naturel intense d˚ ‡ une bactÈrie halophile, salinitÈ 10◊ l'ocÈan, SÈnÈgal"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac Rose au SÈnÈgal"}
   ]},
-  {name:"Parc des Volcans ‚Äî Rwanda",lat:-1.4833,lng:29.5667,desc:"Le parc des Volcans du Rwanda abrite environ 480 gorilles des montagnes ‚Äî soit pr√®s de la moiti√© de la population mondiale. Les tourists paient 1 500 dollars par personne pour une heure de trekking. Dian Fossey, qui y √©tudia les gorilles pendant 18 ans, fut retrouv√©e assassin√©e dans son camp en 1985.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc Virunga rwandais, habitat des gorilles des montagnes, Dian Fossey y √©tudia les gorilles de 1967 √† 1985"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cha√Æne des Virunga, tripoint de trois pays d'Afrique centrale, gorilles de montagne"},
+  {name:"Parc des Volcans ó Rwanda",lat:-1.4833,lng:29.5667,desc:"Le parc des Volcans du Rwanda abrite environ 480 gorilles des montagnes ó soit prËs de la moitiÈ de la population mondiale. Les tourists paient 1 500 dollars par personne pour une heure de trekking. Dian Fossey, qui y Ètudia les gorilles pendant 18 ans, fut retrouvÈe assassinÈe dans son camp en 1985.",photo:"photos/parc_des_volcans.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc Virunga rwandais, habitat des gorilles des montagnes, Dian Fossey y Ètudia les gorilles de 1967 ‡ 1985"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ChaÓne des Virunga, tripoint de trois pays d'Afrique centrale, gorilles de montagne"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gorilles des montagnes de Dian Fossey, Virunga, Rwanda"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc des Volcans au Rwanda"}
   ]},
-  {name:"Erg Chebbi ‚Äî Maroc",lat:31.15,lng:-3.95,desc:"L'Erg Chebbi, avec ses dunes atteignant 150 m√®tres pr√®s de Merzouga, est l'une des deux seules vraies mers de sable du Maroc. La dune la plus haute change de couleur selon la lumi√®re : orang√©e le matin, rouge vif √† midi, dor√©e au coucher du soleil. Des bivouacs nomades permettent de dormir sous les √©toiles du Sahara.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dunes de sable de 150m de haut √† Merzouga, seules vraies dunes de sable, bivouacs de nuit sous les √©toiles"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province d'Errachidia, bordure du Sahara, √† 50 km de Rissani, plus grande erg du pays"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dunes de sable de 150 m de haut pr√®s de Merzouga, seules vraies dunes du Maroc"},
+  {name:"Erg Chebbi ó Maroc",lat:31.15,lng:-3.95,desc:"L'Erg Chebbi, avec ses dunes atteignant 150 mËtres prËs de Merzouga, est l'une des deux seules vraies mers de sable du Maroc. La dune la plus haute change de couleur selon la lumiËre : orangÈe le matin, rouge vif ‡ midi, dorÈe au coucher du soleil. Des bivouacs nomades permettent de dormir sous les Ètoiles du Sahara.",photo:"photos/erg_chebbi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dunes de sable de 150m de haut ‡ Merzouga, seules vraies dunes de sable, bivouacs de nuit sous les Ètoiles"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province d'Errachidia, bordure du Sahara, ‡ 50 km de Rissani, plus grande erg du pays"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dunes de sable de 150 m de haut prËs de Merzouga, seules vraies dunes du Maroc"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Erg Chebbi au Maroc"}
   ]},
-  {name:"Dj√©mila ‚Äî Alg√©rie",lat:36.3167,lng:5.7333,desc:"Dj√©mila (anciennement Cuicul) est consid√©r√©e comme le meilleur exemple de cit√© romaine montagnarde d'Afrique du Nord. Ses temples, forums et th√©√¢tres du IIe si√®cle sont rest√©s intacts pendant 1 500 ans sous les d√©combres. L'√©crivain Albert Camus y trouva l'inspiration pour son essai ¬´Le Vent √† Dj√©mila¬ª.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cuicul, cit√© romaine fond√©e sous Nerva (96 ap. J.-C.), forum, temples, arc de Caracalla, amphith√©√¢tre, UNESCO 1982"},
+  {name:"DjÈmila ó AlgÈrie",lat:36.3167,lng:5.7333,desc:"DjÈmila (anciennement Cuicul) est considÈrÈe comme le meilleur exemple de citÈ romaine montagnarde d'Afrique du Nord. Ses temples, forums et thÈ‚tres du IIe siËcle sont restÈs intacts pendant 1 500 ans sous les dÈcombres. L'Ècrivain Albert Camus y trouva l'inspiration pour son essai ´Le Vent ‡ DjÈmilaª.",photo:"photos/djemila.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cuicul, citÈ romaine fondÈe sous Nerva (96 ap. J.-C.), forum, temples, arc de Caracalla, amphithÈ‚tre, UNESCO 1982"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massif du Bibans, 900m d'altitude, hauts plateaux du nord-est du pays"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© romaine du IIe si√®cle parmi les mieux conserv√©es d'Afrique du Nord, class√©e UNESCO, Alg√©rie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Dj√©mila en Alg√©rie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ romaine du IIe siËcle parmi les mieux conservÈes d'Afrique du Nord, classÈe UNESCO, AlgÈrie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le DjÈmila en AlgÈrie"}
   ]},
-  {name:"Leptis Magna ‚Äî Libye",lat:32.6386,lng:14.295,desc:"Leptis Magna est l'une des cit√©s romaines les mieux conserv√©es du monde ‚Äî prot√©g√©e pendant des si√®cles par les sables du Sahara. Lieu de naissance de l'empereur Septime S√©v√®re, elle fut embellie de monuments colossaux √† sa gloire. Son arc de triomphe √† quatre faces est unique dans l'Empire romain.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© romaine natale de Septime S√©v√®re, arc de triomphe, amphith√©√¢tre, basilique, forum aux 52 colonnes, UNESCO 1982"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Khoms, bord de la M√©diterran√©e, Libye, √† 130 km √† l'est de Tripoli"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© romaine natale de Septime S√©v√®re, les mieux pr√©serv√©es au monde, c√¥te m√©diterran√©enne de Libye"},
+  {name:"Leptis Magna ó Libye",lat:32.6386,lng:14.295,desc:"Leptis Magna est l'une des citÈs romaines les mieux conservÈes du monde ó protÈgÈe pendant des siËcles par les sables du Sahara. Lieu de naissance de l'empereur Septime SÈvËre, elle fut embellie de monuments colossaux ‡ sa gloire. Son arc de triomphe ‡ quatre faces est unique dans l'Empire romain.",photo:"photos/leptis_magna.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ romaine natale de Septime SÈvËre, arc de triomphe, amphithÈ‚tre, basilique, forum aux 52 colonnes, UNESCO 1982"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Khoms, bord de la MÈditerranÈe, Libye, ‡ 130 km ‡ l'est de Tripoli"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ romaine natale de Septime SÈvËre, les mieux prÈservÈes au monde, cÙte mÈditerranÈenne de Libye"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Leptis Magna en Libye"}
   ]},
-  {name:"Aksum ‚Äî √âthiopie",lat:14.1305,lng:38.7167,desc:"Les ob√©lisques d'Aksoum sont des st√®les fun√©raires monolithiques pouvant atteindre 33 m√®tres. L'une d'elles, emport√©e par Mussolini en 1937, fut finalement restitu√©e √† l'√âthiopie en 2008 apr√®s 70 ans de n√©gociations.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Obelisques d'Axoum (st√®les), capitale de l'Empire aksumite (Ier-VIIe si√®cles), √©glise Notre-Dame de Sion abritant (selon tradition"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion nord d'un pays d'Afrique de l'Est, ob√©lisques et st√®les antiques"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancienne capitale d'un grand empire africain, ob√©lisques fun√©raires et reliques chr√©tiennes, Tigr√©, √âthiopie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Aksum en √âthiopie"}
+  {name:"Aksum ó …thiopie",lat:14.1305,lng:38.7167,desc:"Les obÈlisques d'Aksoum sont des stËles funÈraires monolithiques pouvant atteindre 33 mËtres. L'une d'elles, emportÈe par Mussolini en 1937, fut finalement restituÈe ‡ l'…thiopie en 2008 aprËs 70 ans de nÈgociations.",photo:"photos/aksum.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Obelisques d'Axoum (stËles), capitale de l'Empire aksumite (Ier-VIIe siËcles), Èglise Notre-Dame de Sion abritant (selon tradition"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion nord d'un pays d'Afrique de l'Est, obÈlisques et stËles antiques"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancienne capitale d'un grand empire africain, obÈlisques funÈraires et reliques chrÈtiennes, TigrÈ, …thiopie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Aksum en …thiopie"}
   ]},
-  {name:"Rift Valley ‚Äî Kenya (Lac Nakuru)",lat:-0.3667,lng:36.0833,desc:"Le lac Nakuru, lac sodique alcalin du Rift africain, accueillait jusqu'√† 2 millions de flamants roses ‚Äî la plus grande concentration de flamants au monde. La mont√©e des eaux depuis 2010 a modifi√© la salinit√© et chass√© les flamants, mais le lac reste un sanctuaire pour les rhinoc√©ros noirs et blancs du Kenya.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lake Nakuru, c√©l√®bre pour ses nu√©es de flamants roses (jusqu'√† 2 millions), rhinoc√©ros blancs et noirs, rift est-africain"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande Vall√©e du Rift, province de la m√™me vall√©e, √† 160 km de la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac sodique aux nu√©es de flamants roses, sanctuaire aux rhinoc√©ros noirs et blancs, Kenya"},
+  {name:"Rift Valley ó Kenya (Lac Nakuru)",lat:-0.3667,lng:36.0833,desc:"Le lac Nakuru, lac sodique alcalin du Rift africain, accueillait jusqu'‡ 2 millions de flamants roses ó la plus grande concentration de flamants au monde. La montÈe des eaux depuis 2010 a modifiÈ la salinitÈ et chassÈ les flamants, mais le lac reste un sanctuaire pour les rhinocÈros noirs et blancs du Kenya.",photo:"photos/rift_valley.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lake Nakuru, cÈlËbre pour ses nuÈes de flamants roses (jusqu'‡ 2 millions), rhinocÈros blancs et noirs, rift est-africain"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande VallÈe du Rift, province de la mÍme vallÈe, ‡ 160 km de la capitale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac sodique aux nuÈes de flamants roses, sanctuaire aux rhinocÈros noirs et blancs, Kenya"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Rift Valley au Kenya (Lac Nakuru)"}
   ]},
-  {name:"Stone Town ‚Äî Zanzibar, Tanzanie",lat:-6.1633,lng:39.19,desc:"Zanzibar est le lieu de naissance de Freddie Mercury, le chanteur de Queen. Sa maison natale dans Stone Town est devenue un lieu de p√®lerinage pour les fans du monde entier. Il quitta l'√Æle √† 7 ans pour ne plus jamais y revenir.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ville des Pierres, centre historique de Zanzibar City, march√© aux esclaves, maison natale de Freddie Mercury, architecture swahili"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle principale d'un archipel de l'oc√©an Indien, canal du Mozambique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille cit√© swahili class√©e UNESCO, march√© aux esclaves, maison natale de Freddie Mercury, Tanzanie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Stone Town √† Zanzibar, Tanzanie"}
+  {name:"Stone Town ó Zanzibar, Tanzanie",lat:-6.1633,lng:39.19,desc:"Zanzibar est le lieu de naissance de Freddie Mercury, le chanteur de Queen. Sa maison natale dans Stone Town est devenue un lieu de pËlerinage pour les fans du monde entier. Il quitta l'Óle ‡ 7 ans pour ne plus jamais y revenir.",photo:"photos/stone_town.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ville des Pierres, centre historique de Zanzibar City, marchÈ aux esclaves, maison natale de Freddie Mercury, architecture swahili"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle principale d'un archipel de l'ocÈan Indien, canal du Mozambique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille citÈ swahili classÈe UNESCO, marchÈ aux esclaves, maison natale de Freddie Mercury, Tanzanie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Stone Town ‡ Zanzibar, Tanzanie"}
   ]},
-  {name:"Sossusvlei ‚Äî Namibie",lat:-24.7333,lng:15.35,desc:"Les dunes de Sossusvlei sont parmi les plus hautes du monde avec 325 m√®tres. Leur couleur rouge-orang√© intense vient de l'oxydation du fer contenu dans le sable. La plaine de Deadvlei, anciennement un lac, arbore des arbres camelthorn morts il y a 900 ans ‚Äî conserv√©s par la s√©cheresse extr√™me.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dunes √©toil√©es de sable rouge ocre dont Dune 45 et Big Daddy (325 m), Deadvlei (arbres morts de 900 ans), d√©sert du Namib"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national d'un d√©sert c√¥tier, √† 60 km de Sesriem, dunes orange aux contours parfaits"},
+  {name:"Sossusvlei ó Namibie",lat:-24.7333,lng:15.35,desc:"Les dunes de Sossusvlei sont parmi les plus hautes du monde avec 325 mËtres. Leur couleur rouge-orangÈ intense vient de l'oxydation du fer contenu dans le sable. La plaine de Deadvlei, anciennement un lac, arbore des arbres camelthorn morts il y a 900 ans ó conservÈs par la sÈcheresse extrÍme.",photo:"photos/sossusvlei.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dunes ÈtoilÈes de sable rouge ocre dont Dune 45 et Big Daddy (325 m), Deadvlei (arbres morts de 900 ans), dÈsert du Namib"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national d'un dÈsert cÙtier, ‡ 60 km de Sesriem, dunes orange aux contours parfaits"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dunes de sable rouge et arbres morts de Deadvlei, Namibie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Sossusvlei en Namibie"}
   ]},
-  {name:"Chobe ‚Äî Botswana",lat:-17.8,lng:24.5,desc:"Le parc de Chobe accueille la plus grande concentration d'√©l√©phants d'Afrique avec 120 000 individus. En saison s√®che, les √©l√©phants viennent par centaines boire √† la rivi√®re Chobe ‚Äî cr√©ant des embouteillages d'√©l√©phants sur les rives qui font le bonheur des photographes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc national au nord d'un pays enclav√©, plus grande concentration d'√©l√©phants d'Afrique (120 000), rivi√®re Chobe"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nord d'un pays enclav√© d'Afrique australe, quadripoint de quatre pays, plus grand troupeau d'√©l√©phants"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande concentration d'√©l√©phants d'Afrique, 120 000 individus, nord du Botswana"},
+  {name:"Chobe ó Botswana",lat:-17.8,lng:24.5,desc:"Le parc de Chobe accueille la plus grande concentration d'ÈlÈphants d'Afrique avec 120 000 individus. En saison sËche, les ÈlÈphants viennent par centaines boire ‡ la riviËre Chobe ó crÈant des embouteillages d'ÈlÈphants sur les rives qui font le bonheur des photographes.",photo:"photos/chobe.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc national au nord d'un pays enclavÈ, plus grande concentration d'ÈlÈphants d'Afrique (120 000), riviËre Chobe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nord d'un pays enclavÈ d'Afrique australe, quadripoint de quatre pays, plus grand troupeau d'ÈlÈphants"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande concentration d'ÈlÈphants d'Afrique, 120 000 individus, nord du Botswana"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chobe au Botswana"}
   ]},
-  {name:"Empire State Building ‚Äî New York, USA",lat:40.7484,lng:-73.9857,desc:"L'Empire State Building fut construit √† une cadence record de 4,5 √©tages par semaine. En 1945, un bombardier B-25 percuta le 79e √©tage dans le brouillard, tuant 14 personnes ‚Äî le b√¢timent resta ouvert au public le jour m√™me.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"102 √©tages, 443m (sans antenne), construit en 410 jours (1930-31), plus haut b√¢timent du monde jusqu'en 1971"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"350 Fifth Avenue, Midtown d'une grande m√©tropole, angle d'une avenue num√©rot√©e"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gratte-ciel Art D√©co embl√©matique de New York, Midtown Manhattan"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Empire State Building √† New York, USA"}
+  {name:"Empire State Building ó New York, USA",lat:40.7484,lng:-73.9857,desc:"L'Empire State Building fut construit ‡ une cadence record de 4,5 Ètages par semaine. En 1945, un bombardier B-25 percuta le 79e Ètage dans le brouillard, tuant 14 personnes ó le b‚timent resta ouvert au public le jour mÍme.",photo:"photos/chobe.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"102 Ètages, 443m (sans antenne), construit en 410 jours (1930-31), plus haut b‚timent du monde jusqu'en 1971"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"350 Fifth Avenue, Midtown d'une grande mÈtropole, angle d'une avenue numÈrotÈe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gratte-ciel Art DÈco emblÈmatique de New York, Midtown Manhattan"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Empire State Building ‡ New York, USA"}
   ]},
-  {name:"Monument aux soldats inconnus ‚Äî Washington D.C.",lat:38.8893,lng:-77.0502,desc:"Le Lincoln Memorial √† Washington D.C. fut le cadre du discours ¬´I Have a Dream¬ª de Martin Luther King Jr. le 28 ao√ªt 1963, devant 250 000 manifestants. La statue de Lincoln par Daniel Chester French mesure 5,8 m√®tres ‚Äî si Lincoln se levait, il mesurerait 9 m√®tres. Son regard fixe le Washington Monument.",hints:[
+  {name:"Monument aux soldats inconnus ó Washington D.C.",lat:38.8893,lng:-77.0502,desc:"Le Lincoln Memorial ‡ Washington D.C. fut le cadre du discours ´I Have a Dreamª de Martin Luther King Jr. le 28 ao˚t 1963, devant 250 000 manifestants. La statue de Lincoln par Daniel Chester French mesure 5,8 mËtres ó si Lincoln se levait, il mesurerait 9 mËtres. Son regard fixe le Washington Monument.",photo:"photos/monument_aux_soldats_inconnus.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lincoln Memorial, temple grec de 1922, statue de Lincoln de 5,8m par Daniel Chester French, discours 'I Have A Dream' de MLK en 19"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Extr√©mit√© ouest du National Mall, bord du Reflecting Pool, Washington D.C."},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lincoln Memorial, temple d√©di√© √† Lincoln, National Mall, Washington D.C."},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lincoln Memorial √† Washington D.C., √âtats-Unis"}
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ExtrÈmitÈ ouest du National Mall, bord du Reflecting Pool, Washington D.C."},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lincoln Memorial, temple dÈdiÈ ‡ Lincoln, National Mall, Washington D.C."},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lincoln Memorial ‡ Washington D.C., …tats-Unis"}
   ]},
-  {name:"Kennedy Space Center ‚Äî Floride, USA",lat:28.5731,lng:-80.649,desc:"Le Kennedy Space Center fut le berceau du programme Apollo. Sa Vehicle Assembly Building (VAB), haute de 160 m√®tres, est si grande que des nuages se forment parfois √† l'int√©rieur par temps humide. Depuis 2014, SpaceX loue le pas de tir 39A d'o√π d√©coll√®rent les missions Apollo.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vehicle Assembly Building (160m), Launch Complex 39 d'o√π partirent Apollo 11 et les navettes, inaugur√© en 1962"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Merritt Island, comt√© de Brevard, c√¥te est de la Floride, √† 80 km d'Orlando"},
+  {name:"Kennedy Space Center ó Floride, USA",lat:28.5731,lng:-80.649,desc:"Le Kennedy Space Center fut le berceau du programme Apollo. Sa Vehicle Assembly Building (VAB), haute de 160 mËtres, est si grande que des nuages se forment parfois ‡ l'intÈrieur par temps humide. Depuis 2014, SpaceX loue le pas de tir 39A d'o˘ dÈcollËrent les missions Apollo.",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vehicle Assembly Building (160m), Launch Complex 39 d'o˘ partirent Apollo 11 et les navettes, inaugurÈ en 1962"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Merritt Island, comtÈ de Brevard, cÙte est de la Floride, ‡ 80 km d'Orlando"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Centre spatial de la NASA, lanceurs Apollo et navettes, Floride"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kennedy Space Center √† Floride, USA"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kennedy Space Center ‡ Floride, USA"}
   ]},
-  {name:"Mount Rushmore ‚Äî Dakota du Sud, USA",lat:43.8791,lng:-103.4591,desc:"Le Mount Rushmore fut sculpt√© entre 1927 et 1941 par Gutzon Borglum et 400 ouvriers √† la dynamite et au burin. Derri√®re la t√™te de Lincoln, une salle secr√®te fut creus√©e pour abriter des archives de l'histoire am√©ricaine ‚Äî elle attend toujours sa porte √©tanche. Le projet original pr√©voyait de sculpter les pr√©sidents jusqu'√† la taille.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sculptures de 18m des pr√©sidents Washington, Jefferson, Roosevelt et Lincoln taill√©es par Gutzon Borglum de 1927 √† 1941"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Black Hills, comt√© de Pennington, Dakota du Sud, √† 25 km de Rapid City"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument aux 4 pr√©sidents sculpt√© dans la roche, Dakota du Sud"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mount Rushmore √† Dakota du Sud, USA"}
+  {name:"Mount Rushmore ó Dakota du Sud, USA",lat:43.8791,lng:-103.4591,desc:"Le Mount Rushmore fut sculptÈ entre 1927 et 1941 par Gutzon Borglum et 400 ouvriers ‡ la dynamite et au burin. DerriËre la tÍte de Lincoln, une salle secrËte fut creusÈe pour abriter des archives de l'histoire amÈricaine ó elle attend toujours sa porte Ètanche. Le projet original prÈvoyait de sculpter les prÈsidents jusqu'‡ la taille.",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sculptures de 18m des prÈsidents Washington, Jefferson, Roosevelt et Lincoln taillÈes par Gutzon Borglum de 1927 ‡ 1941"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Black Hills, comtÈ de Pennington, Dakota du Sud, ‡ 25 km de Rapid City"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument aux 4 prÈsidents sculptÈ dans la roche, Dakota du Sud"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mount Rushmore ‡ Dakota du Sud, USA"}
   ]},
-  {name:"New Orleans French Quarter ‚Äî USA",lat:29.9584,lng:-90.0644,desc:"La Nouvelle-Orl√©ans est construite sur un delta mar√©cageux, en partie sous le niveau de la mer. Apr√®s l'ouragan Katrina en 2005, 80% de la ville fut inond√©e. Le fait que ses habitants aient reb√¢ti et que la musique soit revenue plus forte encore est devenu un symbole de r√©silience am√©ricaine.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vieux Carr√©, quartier colonial fran√ßais fond√© en 1718, balcons en fer forg√© de Bourbon Street, jazz de Preservation Hall"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord du Mississippi, centre historique de La Nouvelle-Orl√©ans, Louisiane"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"French Quarter de La Nouvelle-Orl√©ans, berceau du jazz, Louisiane"},
+  {name:"New Orleans French Quarter ó USA",lat:29.9584,lng:-90.0644,desc:"La Nouvelle-OrlÈans est construite sur un delta marÈcageux, en partie sous le niveau de la mer. AprËs l'ouragan Katrina en 2005, 80% de la ville fut inondÈe. Le fait que ses habitants aient reb‚ti et que la musique soit revenue plus forte encore est devenu un symbole de rÈsilience amÈricaine.",photo:"photos/new_orleans_french_quarter.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vieux CarrÈ, quartier colonial franÁais fondÈ en 1718, balcons en fer forgÈ de Bourbon Street, jazz de Preservation Hall"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord du Mississippi, centre historique de La Nouvelle-OrlÈans, Louisiane"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"French Quarter de La Nouvelle-OrlÈans, berceau du jazz, Louisiane"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le New Orleans French Quarter en USA"}
   ]},
-  {name:"Mesa Verde ‚Äî Colorado, USA",lat:37.1853,lng:-108.4618,desc:"Les habitations rupestres de Mesa Verde furent abandonn√©es subitement vers 1300 ‚Äî les arch√©ologues ne savent toujours pas pourquoi. S√©cheresse prolong√©e, conflits ou migration spirituelle ? La civilisation ancestrale pueblo disparut sans laisser d'explication √©crite.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cliff Palace, plus grande habitation rupestre d'Am√©rique du Nord, 150 pi√®ces et 23 kivas, culture ancestrale pueblo XIIIe s."},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comt√© de Montezuma, sud-ouest du Colorado, Rocheuses am√©ricaines"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Habitations rupestres ancestrales pueblo du XIIIe si√®cle, plus grandes d'Am√©rique du Nord, Colorado"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mesa Verde √† Colorado, USA"}
+  {name:"Mesa Verde ó Colorado, USA",lat:37.1853,lng:-108.4618,desc:"Les habitations rupestres de Mesa Verde furent abandonnÈes subitement vers 1300 ó les archÈologues ne savent toujours pas pourquoi. SÈcheresse prolongÈe, conflits ou migration spirituelle ? La civilisation ancestrale pueblo disparut sans laisser d'explication Ècrite.",photo:"photos/mesa_verde.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cliff Palace, plus grande habitation rupestre d'AmÈrique du Nord, 150 piËces et 23 kivas, culture ancestrale pueblo XIIIe s."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ComtÈ de Montezuma, sud-ouest du Colorado, Rocheuses amÈricaines"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Habitations rupestres ancestrales pueblo du XIIIe siËcle, plus grandes d'AmÈrique du Nord, Colorado"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mesa Verde ‡ Colorado, USA"}
   ]},
-  {name:"Graceland ‚Äî Memphis, Tennessee, USA",lat:35.0472,lng:-90.0232,desc:"Graceland fut achet√©e par Elvis Presley en 1957 pour 102 500 dollars √† l'√¢ge de 22 ans. Il y v√©cut jusqu'√† sa mort en 1977. La maison est rest√©e quasi intacte depuis lors ‚Äî son style ¬´jungle room¬ª avec fontaine d'int√©rieur et fourrure synth√©tique est une capsule temporelle des ann√©es 70. 650 000 personnes la visitent chaque ann√©e.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"R√©sidence d'Elvis Presley achet√©e en 1957 pour 102 500$, Jungle Room, salle de billard, tombeau dans le Jardin de M√©ditation"},
+  {name:"Graceland ó Memphis, Tennessee, USA",lat:35.0472,lng:-90.0232,desc:"Graceland fut achetÈe par Elvis Presley en 1957 pour 102 500 dollars ‡ l'‚ge de 22 ans. Il y vÈcut jusqu'‡ sa mort en 1977. La maison est restÈe quasi intacte depuis lors ó son style ´jungle roomª avec fontaine d'intÈrieur et fourrure synthÈtique est une capsule temporelle des annÈes 70. 650 000 personnes la visitent chaque annÈe.",photo:"photos/graceland.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"RÈsidence d'Elvis Presley achetÈe en 1957 pour 102 500$, Jungle Room, salle de billard, tombeau dans le Jardin de MÈditation"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Elvis Presley Boulevard, Whitehaven, Memphis, Tennessee"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Manoir d'Elvis Presley, p√®lerinage du rock'n'roll, Memphis, Tennessee"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Graceland √† Memphis, Tennessee, USA"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Manoir d'Elvis Presley, pËlerinage du rock'n'roll, Memphis, Tennessee"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Graceland ‡ Memphis, Tennessee, USA"}
   ]},
-  {name:"Banff ‚Äî Alberta (Lac Moraine), Canada",lat:51.3217,lng:-116.186,desc:"Le lac Moraine doit sa couleur turquoise intense √† la ¬´farine de roche¬ª produite par les glaciers environnants qui broient la roche en particules infimes. Ces particules en suspension diffractent la lumi√®re bleue. Le lac fut l'image du billet de 20 dollars canadien de 1969 √† 1979.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac Moraine, billet de 20$ canadien, eau turquoise due √† la farine de roche glaciaire, Vall√©e des Dix Pics, Rocheuses"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de Banff, Improvement District No.9, Alberta, √† 56 km de Banff Village"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac aux eaux turquoise d√ª √† la farine de roche glaciaire, Vall√©e des Dix Pics, Rocheuses canadiennes"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Banff √† Alberta (Lac Moraine), Canada"}
+  {name:"Banff ó Alberta (Lac Moraine), Canada",lat:51.3217,lng:-116.186,desc:"Le lac Moraine doit sa couleur turquoise intense ‡ la ´farine de rocheª produite par les glaciers environnants qui broient la roche en particules infimes. Ces particules en suspension diffractent la lumiËre bleue. Le lac fut l'image du billet de 20 dollars canadien de 1969 ‡ 1979.",photo:"photos/graceland.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac Moraine, billet de 20$ canadien, eau turquoise due ‡ la farine de roche glaciaire, VallÈe des Dix Pics, Rocheuses"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de Banff, Improvement District No.9, Alberta, ‡ 56 km de Banff Village"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac aux eaux turquoise d˚ ‡ la farine de roche glaciaire, VallÈe des Dix Pics, Rocheuses canadiennes"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Banff ‡ Alberta (Lac Moraine), Canada"}
   ]},
-  {name:"Whistler ‚Äî Colombie-Britannique, Canada",lat:50.1163,lng:-122.9574,desc:"Whistler Blackcomb est le plus grand domaine skiable d'Am√©rique du Nord avec 8 171 hectares de terrain skiable. Sa Peak 2 Peak gondola, reliant les deux sommets √† 436 m√®tres au-dessus d'une vall√©e, est la t√©l√©cabine la plus longue et la plus haute du monde avec son tron√ßon de 3,03 km sans pyl√¥ne.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Station de ski Whistler Blackcomb, plus grand domaine skiable d'Am√©rique du Nord, Peak 2 Peak gondola record, JO 2010"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sea-to-Sky Corridor, montagnes de la c√¥te Pacifique, √† 125 km d'une grande ville c√¥ti√®re"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand domaine skiable d'Am√©rique du Nord, t√©l√©cabine record entre deux sommets, Colombie-Britannique"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Whistler √† Colombie-Britannique, Canada"}
+  {name:"Whistler ó Colombie-Britannique, Canada",lat:50.1163,lng:-122.9574,desc:"Whistler Blackcomb est le plus grand domaine skiable d'AmÈrique du Nord avec 8 171 hectares de terrain skiable. Sa Peak 2 Peak gondola, reliant les deux sommets ‡ 436 mËtres au-dessus d'une vallÈe, est la tÈlÈcabine la plus longue et la plus haute du monde avec son tronÁon de 3,03 km sans pylÙne.",photo:"photos/whistler.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Station de ski Whistler Blackcomb, plus grand domaine skiable d'AmÈrique du Nord, Peak 2 Peak gondola record, JO 2010"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sea-to-Sky Corridor, montagnes de la cÙte Pacifique, ‡ 125 km d'une grande ville cÙtiËre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand domaine skiable d'AmÈrique du Nord, tÈlÈcabine record entre deux sommets, Colombie-Britannique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Whistler ‡ Colombie-Britannique, Canada"}
   ]},
-  {name:"Parc Torres del Paine ‚Äî Chili",lat:-51,lng:-73,desc:"Le nom ¬´Paine¬ª (prononc√© Pa√Ø-n√©) vient du peuple Tehuelche qui signifie ¬´bleu¬ª en r√©f√©rence √† la couleur des glaciers. Ces ¬´Cornes de Paine¬ª √©mergent de champs de glace vieux de 12 000 ans et alimentent des rivi√®res qui coulent jusqu'√† l'Atlantique.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Torri granitiques de 2 500m (Cuernos del Paine), glacier Grey, guanacos, pumas, pl√©siosaure fossilis√©, Patagonie chilienne"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province d'√öltima Esperanza, Regi√≥n de Magallanes, Patagonie chilienne, √† 400 km de Punta Arenas"},
+  {name:"Parc Torres del Paine ó Chili",lat:-51,lng:-73,desc:"Le nom ´Paineª (prononcÈ PaÔ-nÈ) vient du peuple Tehuelche qui signifie ´bleuª en rÈfÈrence ‡ la couleur des glaciers. Ces ´Cornes de Paineª Èmergent de champs de glace vieux de 12 000 ans et alimentent des riviËres qui coulent jusqu'‡ l'Atlantique.",photo:"photos/parc_torres_del_paine.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Torri granitiques de 2 500m (Cuernos del Paine), glacier Grey, guanacos, pumas, plÈsiosaure fossilisÈ, Patagonie chilienne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province d'⁄ltima Esperanza, RegiÛn de Magallanes, Patagonie chilienne, ‡ 400 km de Punta Arenas"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tours de granit et glacier, Torres del Paine, Patagonie chilienne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc Torres del Paine au Chili"}
   ]},
-  {name:"Atacama ‚Äî Chili",lat:-22.9087,lng:-68.2003,desc:"Le d√©sert d'Atacama est si sec que certaines de ses zones n'ont jamais re√ßu de pluie mesurable depuis que les instruments m√©t√©o existent. Pourtant, une ¬´explosion florale¬ª survient certaines ann√©es apr√®s des pluies exceptionnelles, couvrant le d√©sert de fleurs en 24 heures.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"D√©sert le plus aride du monde, Valle de la Luna, geysers del Tatio √† 4 300m, ALMA observatory, salar d'Atacama au lithium"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Entre la cordill√®re des Andes et la c√¥te Pacifique, d√©sert le plus aride du monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"D√©sert le plus aride du monde, geysers √† 4 300 m, salar au lithium, nord du Chili"},
+  {name:"Atacama ó Chili",lat:-22.9087,lng:-68.2003,desc:"Le dÈsert d'Atacama est si sec que certaines de ses zones n'ont jamais reÁu de pluie mesurable depuis que les instruments mÈtÈo existent. Pourtant, une ´explosion floraleª survient certaines annÈes aprËs des pluies exceptionnelles, couvrant le dÈsert de fleurs en 24 heures.",photo:"photos/atacama.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"DÈsert le plus aride du monde, Valle de la Luna, geysers del Tatio ‡ 4 300m, ALMA observatory, salar d'Atacama au lithium"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Entre la cordillËre des Andes et la cÙte Pacifique, dÈsert le plus aride du monde"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"DÈsert le plus aride du monde, geysers ‡ 4 300 m, salar au lithium, nord du Chili"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Atacama au Chili"}
   ]},
-  {name:"Galer√≠a Kaufmann ‚Äî Buenos Aires, Argentine",lat:-34.613,lng:-58.3772,desc:"Le Teatro Col√≥n de Buenos Aires, inaugur√© en 1908, est consid√©r√© comme l'un des cinq meilleurs op√©ras au monde. Sa salle de 2 500 places jouit d'une acoustique l√©gendaire. Enrico Caruso, Maria Callas et Rudolf Noureev s'y sont produits. Sa coupole de 20 m√®tres fut peinte par des artistes argentins en 2010.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Teatro Col√≥n, inaugur√© en 1908, 2 500 places, acoustique dans le top 5 mondial, Toscanini et Caruso y ont chant√©"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Centro d'une grande capitale sud-am√©ricaine, face √† une grande place"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Teatro Col√≥n, op√©ra mythique de Buenos Aires, Argentine"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Galer√≠a Kaufmann √† Buenos Aires, Argentine"}
+  {name:"GalerÌa Kaufmann ó Buenos Aires, Argentine",lat:-34.613,lng:-58.3772,desc:"Le Teatro ColÛn de Buenos Aires, inaugurÈ en 1908, est considÈrÈ comme l'un des cinq meilleurs opÈras au monde. Sa salle de 2 500 places jouit d'une acoustique lÈgendaire. Enrico Caruso, Maria Callas et Rudolf Noureev s'y sont produits. Sa coupole de 20 mËtres fut peinte par des artistes argentins en 2010.",photo:"photos/galeria_kaufmann.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Teatro ColÛn, inaugurÈ en 1908, 2 500 places, acoustique dans le top 5 mondial, Toscanini et Caruso y ont chantÈ"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Centro d'une grande capitale sud-amÈricaine, face ‡ une grande place"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Teatro ColÛn, opÈra mythique de Buenos Aires, Argentine"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le GalerÌa Kaufmann ‡ Buenos Aires, Argentine"}
   ]},
-  {name:"√éles Gal√°pagos ‚Äî √âquateur (Fernandina)",lat:-0.3742,lng:-91.55,desc:"L'√Æle Fernandina des Gal√°pagos est la plus jeune et la plus pr√©serv√©e de l'archipel ‚Äî aucune esp√®ce envahissante n'y a jamais √©tabli de population permanente. Son volcan La Cumbre est l'un des plus actifs au monde, en √©ruption quasi permanente. En 2019, une tortue g√©ante de Fernandina fut retrouv√©e vivante ‚Äî son esp√®ce √©tait crue √©teinte.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Isla Fernandina, √Æle la plus jeune et pristine, volcan La Cumbre actif, iguanes marins uniques, otaries, Darwin finch"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel volcanique isol√© dans le Pacifique, √† 1 000 km du continent, biodiversit√© unique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gal√°pagos, √Æles de Darwin, faune end√©mique unique, √âquateur"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les √éles Gal√°pagos en √âquateur (Fernandina)"}
+  {name:"Œles Gal·pagos ó …quateur (Fernandina)",lat:-0.3742,lng:-91.55,desc:"L'Óle Fernandina des Gal·pagos est la plus jeune et la plus prÈservÈe de l'archipel ó aucune espËce envahissante n'y a jamais Ètabli de population permanente. Son volcan La Cumbre est l'un des plus actifs au monde, en Èruption quasi permanente. En 2019, une tortue gÈante de Fernandina fut retrouvÈe vivante ó son espËce Ètait crue Èteinte.",photo:"photos/galeria_kaufmann.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Isla Fernandina, Óle la plus jeune et pristine, volcan La Cumbre actif, iguanes marins uniques, otaries, Darwin finch"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel volcanique isolÈ dans le Pacifique, ‡ 1 000 km du continent, biodiversitÈ unique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gal·pagos, Óles de Darwin, faune endÈmique unique, …quateur"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Œles Gal·pagos en …quateur (Fernandina)"}
   ]},
-  {name:"Tikal ‚Äî Guatemala",lat:17.222,lng:-89.6237,desc:"Les temples mayas de Tikal servirent de d√©cor √† la plan√®te Yavin 4 dans Star Wars en 1977. George Lucas fit filmer les s√©quences de la R√©bellion dans la for√™t guat√©malt√®que, attirant depuis des millions de fans.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© maya classique (Ier s. - Xe s.), Tempio I (Gran Jaguar, 47m), 6 pyramides d√©passant la canop√©e, for√™t tropicale du plateau gu"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"D√©partement tropical d'Am√©rique centrale, jungle de la Selva Maya, cit√© maya"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© maya classique aux temples d√©passant la canop√©e, nord du Guatemala, c√©l√®bre pour Star Wars"},
+  {name:"Tikal ó Guatemala",lat:17.222,lng:-89.6237,desc:"Les temples mayas de Tikal servirent de dÈcor ‡ la planËte Yavin 4 dans Star Wars en 1977. George Lucas fit filmer les sÈquences de la RÈbellion dans la forÍt guatÈmaltËque, attirant depuis des millions de fans.",photo:"https://upload.wikimedia.org/wikipedia/commons/0/06/Tikal_Temple1_2006_08_11.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ maya classique (Ier s. - Xe s.), Tempio I (Gran Jaguar, 47m), 6 pyramides dÈpassant la canopÈe, forÍt tropicale du plateau gu"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"DÈpartement tropical d'AmÈrique centrale, jungle de la Selva Maya, citÈ maya"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ maya classique aux temples dÈpassant la canopÈe, nord du Guatemala, cÈlËbre pour Star Wars"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le site maya de Tikal au Guatemala"}
   ]},
-  {name:"Monteverde ‚Äî Costa Rica",lat:10.3,lng:-84.8167,desc:"La for√™t de Monteverde au Costa Rica fut fond√©e par des Quakers am√©ricains qui refus√®rent le service militaire et √©migr√®rent en 1951. En achetant et prot√©geant les terres, ces pacifistes cr√©√®rent inadvertamment l'une des r√©serves naturelles les plus visit√©es d'Am√©rique centrale.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"R√©serve biologique du Nuage de Monteverde, 90 esp√®ces d'orchid√©es, quetzal resplendissant, ponts suspendus dans la canop√©e"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cordill√®re de Tilar√°n, province de Puntarenas, Costa Rica, √† 167 km de San Jos√©"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"R√©serve de for√™t nuageuse aux 90 esp√®ces d'orchid√©es et quetzals, fond√©e par des Quakers, Costa Rica"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La R√©serve de Monteverde au Costa Rica"}
+  {name:"Monteverde ó Costa Rica",lat:10.3,lng:-84.8167,desc:"La forÍt de Monteverde au Costa Rica fut fondÈe par des Quakers amÈricains qui refusËrent le service militaire et ÈmigrËrent en 1951. En achetant et protÈgeant les terres, ces pacifistes crÈËrent inadvertamment l'une des rÈserves naturelles les plus visitÈes d'AmÈrique centrale.",photo:"photos/monteverde.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"RÈserve biologique du Nuage de Monteverde, 90 espËces d'orchidÈes, quetzal resplendissant, ponts suspendus dans la canopÈe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"CordillËre de Tilar·n, province de Puntarenas, Costa Rica, ‡ 167 km de San JosÈ"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"RÈserve de forÍt nuageuse aux 90 espËces d'orchidÈes et quetzals, fondÈe par des Quakers, Costa Rica"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La RÈserve de Monteverde au Costa Rica"}
   ]},
-  {name:"Canal de Corinthe ‚Äî Gr√®ce",lat:37.9378,lng:22.987,desc:"Le canal de Corinthe, long de 6,3 km et large de seulement 21 m√®tres, fut creus√© de 1882 √† 1893 dans le calcaire de l'isthme. L'id√©e remontait √† l'Antiquit√© ‚Äî N√©ron en creusa lui-m√™me les premiers coups de pioche en 67 ap. J.-C. avant d'abandonner. Ses parois de 90 m√®tres donnent aux bateaux l'impression de naviguer dans un gouffre.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canal de 6,3 km creus√© de 1882 √† 1893, 8m de large et 8m de profondeur, parois rocheuses de 90m, r√™ve de N√©ron"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Isthme s√©parant la p√©ninsule du P√©loponn√®se du continent, canal de 6 km creus√© en 1893"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canal traversant l'isthme de Corinthe, Gr√®ce"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Canal de Corinthe en Gr√®ce"}
+  {name:"Canal de Corinthe ó GrËce",lat:37.9378,lng:22.987,desc:"Le canal de Corinthe, long de 6,3 km et large de seulement 21 mËtres, fut creusÈ de 1882 ‡ 1893 dans le calcaire de l'isthme. L'idÈe remontait ‡ l'AntiquitÈ ó NÈron en creusa lui-mÍme les premiers coups de pioche en 67 ap. J.-C. avant d'abandonner. Ses parois de 90 mËtres donnent aux bateaux l'impression de naviguer dans un gouffre.",photo:"photos/monteverde.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canal de 6,3 km creusÈ de 1882 ‡ 1893, 8m de large et 8m de profondeur, parois rocheuses de 90m, rÍve de NÈron"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Isthme sÈparant la pÈninsule du PÈloponnËse du continent, canal de 6 km creusÈ en 1893"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canal traversant l'isthme de Corinthe, GrËce"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Canal de Corinthe en GrËce"}
   ]},
-  {name:"Santorin ‚Äî Gr√®ce",lat:36.4618,lng:25.376,desc:"Santorin est le vestige d'un volcan g√©ant dont l'√©ruption vers -1600 fut l'une des plus puissantes de l'Histoire humaine. Elle provoqua un tsunami d√©vastateur pour la civilisation minoenne de Cr√®te. Certains historiens pensent que cette catastrophe donna naissance au mythe de l'Atlantide chez Platon.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Thira, caldeira volcanique de 12x7km, maisons blanches √† d√¥mes bleus d'Oia, coucher de soleil, √©ruption minoenne -1600"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel de Santorin (Cyclades), mer √âg√©e, √† 250 km d'Ath√®nes"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Caldeira volcanique aux maisons blanches et d√¥mes bleus, coucher de soleil l√©gendaire, Cyclades, Gr√®ce"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Santorin en Gr√®ce"}
+  {name:"Santorin ó GrËce",lat:36.4618,lng:25.376,desc:"Santorin est le vestige d'un volcan gÈant dont l'Èruption vers -1600 fut l'une des plus puissantes de l'Histoire humaine. Elle provoqua un tsunami dÈvastateur pour la civilisation minoenne de CrËte. Certains historiens pensent que cette catastrophe donna naissance au mythe de l'Atlantide chez Platon.",photo:"https://upload.wikimedia.org/wikipedia/commons/e/e4/Santorini_Montage_L.png",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Thira, caldeira volcanique de 12x7km, maisons blanches ‡ dÙmes bleus d'Oia, coucher de soleil, Èruption minoenne -1600"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel de Santorin (Cyclades), mer …gÈe, ‡ 250 km d'AthËnes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Caldeira volcanique aux maisons blanches et dÙmes bleus, coucher de soleil lÈgendaire, Cyclades, GrËce"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Santorin en GrËce"}
   ]},
-  {name:"Mykonos ‚Äî Gr√®ce",lat:37.4415,lng:25.344,desc:"Mykonos, √Æle des Cyclades, fut pendant des si√®cles un repaire de pirates avant de devenir, dans les ann√©es 1960, une destination de la jet-set internationale. Ses c√©l√®bres moulins √† vent, construits par les V√©nitiens au XVIe si√®cle, broyaient le bl√© des √Æles voisines pour alimenter les flottes marchandes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√éle des Cyclades, Chora aux ruelles labyrinthiques, Kato Mili (5 moulins √† vent), port mondain des Grecs"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cyclades centrales, mer √âg√©e, √† 150 km d'Ath√®nes"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éle blanche des Cyclades aux moulins √† vent v√©nitiens, ruelles labyrinthiques, mer √âg√©e"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mykonos en Gr√®ce"}
+  {name:"Mykonos ó GrËce",lat:37.4415,lng:25.344,desc:"Mykonos, Óle des Cyclades, fut pendant des siËcles un repaire de pirates avant de devenir, dans les annÈes 1960, une destination de la jet-set internationale. Ses cÈlËbres moulins ‡ vent, construits par les VÈnitiens au XVIe siËcle, broyaient le blÈ des Óles voisines pour alimenter les flottes marchandes.",photo:"photos/mykonos.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Œle des Cyclades, Chora aux ruelles labyrinthiques, Kato Mili (5 moulins ‡ vent), port mondain des Grecs"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cyclades centrales, mer …gÈe, ‡ 150 km d'AthËnes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œle blanche des Cyclades aux moulins ‡ vent vÈnitiens, ruelles labyrinthiques, mer …gÈe"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mykonos en GrËce"}
   ]},
-  {name:"Delphes ‚Äî Gr√®ce",lat:38.4824,lng:22.501,desc:"L'oracle de Delphes √©tait si influent que les Grecs et les rois √©trangers venaient le consulter avant toute d√©cision majeure. La Pythie rendait ses oracles dans une transe caus√©e par des vapeurs g√©ologiques ‚Äî des chercheurs ont confirm√© en 2001 l'existence de failles √©mettant de l'√©thyl√®ne sous le temple d'Apollon.",hints:[
+  {name:"Delphes ó GrËce",lat:38.4824,lng:22.501,desc:"L'oracle de Delphes Ètait si influent que les Grecs et les rois Ètrangers venaient le consulter avant toute dÈcision majeure. La Pythie rendait ses oracles dans une transe causÈe par des vapeurs gÈologiques ó des chercheurs ont confirmÈ en 2001 l'existence de failles Èmettant de l'ÈthylËne sous le temple d'Apollon.",photo:"photos/mykonos.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Oracle de Delphes (Temple d'Apollon), nombril du monde (omphalos), Pythie rendant ses oracles, flanc du Parnasse, UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Flanc sud du mont Parnasse, Phocide centrale, √† 180 km d'Ath√®nes"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Site de l'Oracle le plus consult√© de l'Antiquit√©, nombril du monde, flanc du Parnasse, Gr√®ce"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Delphes en Gr√®ce"}
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Flanc sud du mont Parnasse, Phocide centrale, ‡ 180 km d'AthËnes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Site de l'Oracle le plus consultÈ de l'AntiquitÈ, nombril du monde, flanc du Parnasse, GrËce"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Delphes en GrËce"}
   ]},
-  {name:"√âpidaure ‚Äî Gr√®ce",lat:37.5979,lng:23.0765,desc:"Le th√©√¢tre d'√âpidaure est c√©l√®bre pour son acoustique prodigieuse : depuis le dernier rang, √† 60 m√®tres de la sc√®ne, on entend parfaitement une pi√®ce de monnaie tomber au centre de l'orchestra. Cette perfection acoustique r√©sulte d'un angle de 26¬∞ des gradins calcul√© pour absorber les bruits de fond.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Th√©√¢tre d'√âpidaure de 14 000 places du IVe s. av. J.-C. par Polycl√®te le Jeune, acoustique parfaite, utilis√© encore aujourd'hui"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sanctuaire d'Ascl√©pios, Argolide, P√©loponn√®se, √† 150 km d'Ath√®nes"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Th√©√¢tre grec du IVe si√®cle √† l'acoustique prodigieuse, 14 000 places encore utilis√©es, P√©loponn√®se"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'√âpidaure en Gr√®ce"}
+  {name:"…pidaure ó GrËce",lat:37.5979,lng:23.0765,desc:"Le thÈ‚tre d'…pidaure est cÈlËbre pour son acoustique prodigieuse : depuis le dernier rang, ‡ 60 mËtres de la scËne, on entend parfaitement une piËce de monnaie tomber au centre de l'orchestra. Cette perfection acoustique rÈsulte d'un angle de 26∞ des gradins calculÈ pour absorber les bruits de fond.",photo:"photos/epidaure.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"ThÈ‚tre d'…pidaure de 14 000 places du IVe s. av. J.-C. par PolyclËte le Jeune, acoustique parfaite, utilisÈ encore aujourd'hui"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sanctuaire d'AsclÈpios, Argolide, PÈloponnËse, ‡ 150 km d'AthËnes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"ThÈ‚tre grec du IVe siËcle ‡ l'acoustique prodigieuse, 14 000 places encore utilisÈes, PÈloponnËse"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'…pidaure en GrËce"}
   ]},
-  {name:"Olympie ‚Äî Gr√®ce",lat:37.6386,lng:21.63,desc:"Les Jeux olympiques antiques se tinrent √† Olympie tous les quatre ans pendant 1 169 ans, de -776 √† 394 ap. J.-C. La flamme olympique est allum√©e ici √† chaque √©dition moderne par le soleil concentr√© dans une coupe parabolique. Le site abrite les ruines du temple de Zeus et de sa statue chrys√©l√©phantine.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sanctuaire de Zeus, berceau des Jeux Olympiques (-776 av. J.-C.), statue chrys√©l√©phantine de Zeus (merveille du monde), palestre"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Confluence de l'Alph√©e et du Clad√©e, √âlide, P√©loponn√®se occidental"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Berceau des Jeux Olympiques, sanctuaire de Zeus, P√©loponn√®se"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Olympie en Gr√®ce"}
+  {name:"Olympie ó GrËce",lat:37.6386,lng:21.63,desc:"Les Jeux olympiques antiques se tinrent ‡ Olympie tous les quatre ans pendant 1 169 ans, de -776 ‡ 394 ap. J.-C. La flamme olympique est allumÈe ici ‡ chaque Èdition moderne par le soleil concentrÈ dans une coupe parabolique. Le site abrite les ruines du temple de Zeus et de sa statue chrysÈlÈphantine.",photo:"photos/olympie.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sanctuaire de Zeus, berceau des Jeux Olympiques (-776 av. J.-C.), statue chrysÈlÈphantine de Zeus (merveille du monde), palestre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Confluence de l'AlphÈe et du CladÈe, …lide, PÈloponnËse occidental"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Berceau des Jeux Olympiques, sanctuaire de Zeus, PÈloponnËse"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Olympie en GrËce"}
   ]},
-  {name:"Mont Etna ‚Äî Sicile, Italie",lat:37.751,lng:14.9934,desc:"L'Etna est le volcan le plus actif d'Europe avec une √©ruption presque chaque ann√©e. Ses coul√©es de lave fertilisent le sol sicilien, ce qui explique pourquoi les habitants ne l'abandonnent pas malgr√© le risque ‚Äî les tomates de ses flancs sont parmi les meilleures du monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stratovolcan de 3 357 m, plus haut et actif volcan d'Europe, 250 √©ruptions historiques, forgeron H√©pha√Østos selon la mythologie"},
+  {name:"Mont Etna ó Sicile, Italie",lat:37.751,lng:14.9934,desc:"L'Etna est le volcan le plus actif d'Europe avec une Èruption presque chaque annÈe. Ses coulÈes de lave fertilisent le sol sicilien, ce qui explique pourquoi les habitants ne l'abandonnent pas malgrÈ le risque ó les tomates de ses flancs sont parmi les meilleures du monde.",photo:"photos/mont_etna.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stratovolcan de 3 357 m, plus haut et actif volcan d'Europe, 250 Èruptions historiques, forgeron HÈphaÔstos selon la mythologie"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Catane, nord-est de la Sicile, visible depuis la mer Ionienne"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Volcan Etna, plus haut et actif d'Europe, Sicile, Italie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mont Etna √† Sicile, Italie"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mont Etna ‡ Sicile, Italie"}
   ]},
-  {name:"Tropea ‚Äî Calabre, Italie",lat:38.6764,lng:15.8954,desc:"Tropea est perch√© sur une falaise de tuf volcanique surplombant une plage de sable blanc et une mer turquoise d'une clart√© exceptionnelle. Class√©e parmi les plus belles villes d'Italie, elle est c√©l√®bre pour sa cipolla rossa IGP ‚Äî un oignon rouge doux si r√©put√© qu'on en fait des confitures, des bi√®res et des glaces.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Borgo m√©di√©val sur falaise de tuf, Santa Maria dell'Isola sur rocher, oignon rouge IGP, mer Tyrrh√©nienne, Calabre"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Vibo Valentia, Calabre, mer Tyrrh√©nienne, extr√™me sud de la botte"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Village m√©di√©val sur falaise de tuf dominant une plage blanche, mer Tyrrh√©nienne, Calabre"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tropea √† Calabre, Italie"}
+  {name:"Tropea ó Calabre, Italie",lat:38.6764,lng:15.8954,desc:"Tropea est perchÈ sur une falaise de tuf volcanique surplombant une plage de sable blanc et une mer turquoise d'une clartÈ exceptionnelle. ClassÈe parmi les plus belles villes d'Italie, elle est cÈlËbre pour sa cipolla rossa IGP ó un oignon rouge doux si rÈputÈ qu'on en fait des confitures, des biËres et des glaces.",photo:"photos/tropea.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Borgo mÈdiÈval sur falaise de tuf, Santa Maria dell'Isola sur rocher, oignon rouge IGP, mer TyrrhÈnienne, Calabre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Vibo Valentia, Calabre, mer TyrrhÈnienne, extrÍme sud de la botte"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Village mÈdiÈval sur falaise de tuf dominant une plage blanche, mer TyrrhÈnienne, Calabre"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tropea ‡ Calabre, Italie"}
   ]},
-  {name:"Valle d'Itria ‚Äî Puglia, Italie",lat:40.7322,lng:17.2376,desc:"La Valle d'Itria abrite Alberobello et ses trulli, mais aussi Locorotondo, Ostuni et Cisternino ‚Äî des villages blancs perch√©s sur des collines couvertes d'oliviers et de vignes. La r√©gion produit la Primitivo et le Negroamaro, deux des vins rouges les plus puissants d'Italie, longtemps utilis√©s pour ¬´booster¬ª les vins du Nord.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Alberobello, village aux trulli (constructions en pierre s√®che conique sans mortier), patrimoine UNESCO depuis 1996, Rione Monti"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vall√©e d'Itria, province de Bari, Puglia, village aux toits coniques sans mortier"},
+  {name:"Valle d'Itria ó Puglia, Italie",lat:40.7322,lng:17.2376,desc:"La Valle d'Itria abrite Alberobello et ses trulli, mais aussi Locorotondo, Ostuni et Cisternino ó des villages blancs perchÈs sur des collines couvertes d'oliviers et de vignes. La rÈgion produit la Primitivo et le Negroamaro, deux des vins rouges les plus puissants d'Italie, longtemps utilisÈs pour ´boosterª les vins du Nord.",photo:"photos/valle_d_itria.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Alberobello, village aux trulli (constructions en pierre sËche conique sans mortier), patrimoine UNESCO depuis 1996, Rione Monti"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"VallÈe d'Itria, province de Bari, Puglia, village aux toits coniques sans mortier"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Alberobello, maisons coniques trulli, Puglia, Italie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Valle d'Itria √† Puglia, Italie"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Valle d'Itria ‡ Puglia, Italie"}
   ]},
-  {name:"Civita di Bagnoregio ‚Äî Latium, Italie",lat:42.6276,lng:12.1136,desc:"Civita di Bagnoregio est surnomm√©e ¬´la ville mourante¬ª ‚Äî son piton de tuf s'√©rode de 2 m√®tres par an, et ses 12 habitants permanents ne sont reli√©s au monde que par un pont pi√©ton unique. Fond√©e par les √âtrusques il y a 2 500 ans, la ville r√©tr√©cit inexorablement. Dans quelques d√©cennies, il ne restera peut-√™tre qu'un rocher nu.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© mourant sur piton de tuf, 12 habitants permanents, reli√©e par un pont pi√©ton unique depuis 1965, fond√©e par les √âtrusques"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Viterbe, Latium septentrional, √† 120 km, vall√©e des gorges du Calanchi"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© √©trusque mourante sur piton de tuf, reli√©e au monde par un seul pont pi√©ton, Latium"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Civita di Bagnoregio √† Latium, Italie"}
+  {name:"Civita di Bagnoregio ó Latium, Italie",lat:42.6276,lng:12.1136,desc:"Civita di Bagnoregio est surnommÈe ´la ville mouranteª ó son piton de tuf s'Èrode de 2 mËtres par an, et ses 12 habitants permanents ne sont reliÈs au monde que par un pont piÈton unique. FondÈe par les …trusques il y a 2 500 ans, la ville rÈtrÈcit inexorablement. Dans quelques dÈcennies, il ne restera peut-Ítre qu'un rocher nu.",photo:"photos/civita_di_bagnoregio.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ mourant sur piton de tuf, 12 habitants permanents, reliÈe par un pont piÈton unique depuis 1965, fondÈe par les …trusques"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Viterbe, Latium septentrional, ‡ 120 km, vallÈe des gorges du Calanchi"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ Ètrusque mourante sur piton de tuf, reliÈe au monde par un seul pont piÈton, Latium"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Civita di Bagnoregio ‡ Latium, Italie"}
   ]},
-  {name:"Cinque Terre ‚Äî Ligurie, Italie",lat:44.1461,lng:9.6439,desc:"Les terrasses viticoles des Cinque Terre furent construites √† la main sans machines sur des falaises verticales. Des si√®cles de travail ont cr√©√© plus de 100 km de murs de pierres s√®ches ‚Äî plus que la Grande Muraille de Chine √† l'√©chelle du territoire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"5 villages (Monterosso, Vernazza, Corniglia, Manarola, Riomaggiore) accroch√©s aux falaises, vignobles en terrasses, UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"C√¥te ligure, province de La Spezia, Ligurie, entre G√™nes et La Spezia"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cinq villages color√©s accroch√©s √† des falaises, vignobles en terrasses, Ligurie, UNESCO"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cinque Terre √† Ligurie, Italie"}
+  {name:"Cinque Terre ó Ligurie, Italie",lat:44.1461,lng:9.6439,desc:"Les terrasses viticoles des Cinque Terre furent construites ‡ la main sans machines sur des falaises verticales. Des siËcles de travail ont crÈÈ plus de 100 km de murs de pierres sËches ó plus que la Grande Muraille de Chine ‡ l'Èchelle du territoire.",photo:"photos/cinque_terre.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"5 villages (Monterosso, Vernazza, Corniglia, Manarola, Riomaggiore) accrochÈs aux falaises, vignobles en terrasses, UNESCO"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"CÙte ligure, province de La Spezia, Ligurie, entre GÍnes et La Spezia"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cinq villages colorÈs accrochÈs ‡ des falaises, vignobles en terrasses, Ligurie, UNESCO"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cinque Terre ‡ Ligurie, Italie"}
   ]},
-  {name:"Portofino ‚Äî Ligurie, Italie",lat:44.3031,lng:9.2097,desc:"Portofino, village de 500 habitants, est l'une des destinations les plus ch√®res d'Europe. Ses maisons en trompe-l'≈ìil ‚Äî la fa√ßade peinte de fen√™tres, balcons et d√©cors imaginaires ‚Äî sont une tradition ligure vieille de plusieurs si√®cles. Un week-end de location dans l'une de ces maisons peut co√ªter autant qu'une voiture.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Village de p√™cheurs aux maisons peintes en trompe-l'≈ìil, Castello Brown (1870), Piazzetta centro mondain, golfe du Tigullio"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Promontoire de Portofino, province de G√™nes, Ligurie, mer Ligure"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Petit village de p√™cheurs aux maisons en trompe-l'≈ìil, golfe du Tigullio, Riviera ligure"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Portofino √† Ligurie, Italie"}
+  {name:"Portofino ó Ligurie, Italie",lat:44.3031,lng:9.2097,desc:"Portofino, village de 500 habitants, est l'une des destinations les plus chËres d'Europe. Ses maisons en trompe-l'úil ó la faÁade peinte de fenÍtres, balcons et dÈcors imaginaires ó sont une tradition ligure vieille de plusieurs siËcles. Un week-end de location dans l'une de ces maisons peut co˚ter autant qu'une voiture.",photo:"photos/cinque_terre.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Village de pÍcheurs aux maisons peintes en trompe-l'úil, Castello Brown (1870), Piazzetta centro mondain, golfe du Tigullio"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Promontoire de Portofino, province de GÍnes, Ligurie, mer Ligure"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Petit village de pÍcheurs aux maisons en trompe-l'úil, golfe du Tigullio, Riviera ligure"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Portofino ‡ Ligurie, Italie"}
   ]},
-  {name:"Abou Simbel ‚Äî √âgypte",lat:22.336,lng:31.6257,desc:"En 1968, une op√©ration unique dans l'histoire d√©pla√ßa les temples d'Abou Simbel de 65 m√®tres en hauteur et en arri√®re, bloc par bloc, pour les sauver de la mont√©e des eaux du lac Nasser. 50 nations particip√®rent √† ce sauvetage financ√© par l'UNESCO.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Deux temples rupestres de Rams√®s II (-1264 av. J.-C.), d√©plac√©s de 65m en 1968 pour le barrage d'Assouan, 4 colosses de 20m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lac Nasser, Assouan Governorate, Nubie, extr√™me sud de l'√âgypte, proche fronti√®re soudanaise"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temples de Rams√®s II d√©plac√©s pour le barrage d'Assouan, √âgypte"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Abou Simbel en √âgypte"}
+  {name:"Abou Simbel ó …gypte",lat:22.336,lng:31.6257,desc:"En 1968, une opÈration unique dans l'histoire dÈplaÁa les temples d'Abou Simbel de 65 mËtres en hauteur et en arriËre, bloc par bloc, pour les sauver de la montÈe des eaux du lac Nasser. 50 nations participËrent ‡ ce sauvetage financÈ par l'UNESCO.",photo:"https://upload.wikimedia.org/wikipedia/commons/d/d2/AbuSimbelEgypt_2007jan9-34_byDanielCsorfoly.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Deux temples rupestres de RamsËs II (-1264 av. J.-C.), dÈplacÈs de 65m en 1968 pour le barrage d'Assouan, 4 colosses de 20m"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lac Nasser, Assouan Governorate, Nubie, extrÍme sud de l'…gypte, proche frontiËre soudanaise"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temples de RamsËs II dÈplacÈs pour le barrage d'Assouan, …gypte"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Abou Simbel en …gypte"}
   ]},
-  {name:"Wadi Rum ‚Äî Jordanie",lat:29.5756,lng:35.422,desc:"Les B√©douins de Wadi Rum ont habit√© ce d√©sert de gr√®s rouge pendant des milliers d'ann√©es. Les inscriptions nabat√©ennes grav√©es sur les parois retracent les routes commerciales de l'encens et des √©pices. Lawrence d'Arabie y campa lors de sa campagne arabe de 1917-1918.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vall√©e de la Lune, gr√®s et granit rouge, pont de Um Fruth (15m), campements b√©douins, d√©cors cin√©matographiques c√©l√®bres"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gouvernorat du sud du pays, d√©sert de gr√®s rouges, proche d'une ville portuaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"D√©sert de gr√®s rouge aux pitons de granit, paysage lunaire de Jordanie, campements b√©douins"},
+  {name:"Wadi Rum ó Jordanie",lat:29.5756,lng:35.422,desc:"Les BÈdouins de Wadi Rum ont habitÈ ce dÈsert de grËs rouge pendant des milliers d'annÈes. Les inscriptions nabatÈennes gravÈes sur les parois retracent les routes commerciales de l'encens et des Èpices. Lawrence d'Arabie y campa lors de sa campagne arabe de 1917-1918.",photo:"https://upload.wikimedia.org/wikipedia/commons/d/da/21_Lawrence_of_Arabia_Spring_-_Magnificent_Views_at_the_Top_of_the_Trail_-_panoramio.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"VallÈe de la Lune, grËs et granit rouge, pont de Um Fruth (15m), campements bÈdouins, dÈcors cinÈmatographiques cÈlËbres"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gouvernorat du sud du pays, dÈsert de grËs rouges, proche d'une ville portuaire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"DÈsert de grËs rouge aux pitons de granit, paysage lunaire de Jordanie, campements bÈdouins"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Wadi Rum en Jordanie"}
   ]},
-  {name:"Masada ‚Äî Isra√´l",lat:31.3157,lng:35.3535,desc:"La chute de Masada en 73 ap. J.-C. fit entrer l'expression ¬´Masada ne tombera plus¬ª dans la culture isra√©lienne moderne. Cette phrase symbolise la d√©termination √† ne jamais capituler ‚Äî chaque soldat de Tsahal pr√™te serment sur ce site.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Forteresse h√©rodienne sur mesa de 400m, si√®ge romain de 73 ap. J.-C., 960 z√©lotes pr√©f√©rant le suicide √† la capitulation"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District sud, bord occidental de la mer Morte, d√©sert du N√©guev"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse h√©rodienne sur une mesa de 400 m, symbole de r√©sistance nationale isra√©lienne, bord de la mer Morte"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Masada en Isra√´l"}
+  {name:"Masada ó IsraÎl",lat:31.3157,lng:35.3535,desc:"La chute de Masada en 73 ap. J.-C. fit entrer l'expression ´Masada ne tombera plusª dans la culture israÈlienne moderne. Cette phrase symbolise la dÈtermination ‡ ne jamais capituler ó chaque soldat de Tsahal prÍte serment sur ce site.",photo:"photos/masada.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Forteresse hÈrodienne sur mesa de 400m, siËge romain de 73 ap. J.-C., 960 zÈlotes prÈfÈrant le suicide ‡ la capitulation"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District sud, bord occidental de la mer Morte, dÈsert du NÈguev"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse hÈrodienne sur une mesa de 400 m, symbole de rÈsistance nationale israÈlienne, bord de la mer Morte"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Masada en IsraÎl"}
   ]},
-  {name:"Mer Morte ‚Äî Isra√´l/Jordanie",lat:31.559,lng:35.4732,desc:"La mer Morte, √† 430 m√®tres sous le niveau de la mer, est le point le plus bas de la surface terrestre. Sa salinit√© de 34% (contre 3,5% pour les oc√©ans) rend la nage impossible ‚Äî les baigneurs flottent naturellement sans effort. Elle r√©tr√©cit de 1 m√®tre par an √† cause des d√©tournements des eaux du Jourdain.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac hypersalin √† -430m (point le plus bas des terres √©merg√©es), 34,2% de sel (10x l'oc√©an), min√©raux th√©rapeutiques"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vall√©e du Jourdain, point le plus bas de la surface terrestre, fronti√®re entre deux pays"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac hypersalin √† 430 m sous le niveau de la mer, point le plus bas des terres √©merg√©es, fronti√®re Isra√´l-Jordanie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mer Morte en Isra√´l/Jordanie"}
+  {name:"Mer Morte ó IsraÎl/Jordanie",lat:31.559,lng:35.4732,desc:"La mer Morte, ‡ 430 mËtres sous le niveau de la mer, est le point le plus bas de la surface terrestre. Sa salinitÈ de 34% (contre 3,5% pour les ocÈans) rend la nage impossible ó les baigneurs flottent naturellement sans effort. Elle rÈtrÈcit de 1 mËtre par an ‡ cause des dÈtournements des eaux du Jourdain.",photo:"photos/masada.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac hypersalin ‡ -430m (point le plus bas des terres ÈmergÈes), 34,2% de sel (10x l'ocÈan), minÈraux thÈrapeutiques"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"VallÈe du Jourdain, point le plus bas de la surface terrestre, frontiËre entre deux pays"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac hypersalin ‡ 430 m sous le niveau de la mer, point le plus bas des terres ÈmergÈes, frontiËre IsraÎl-Jordanie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mer Morte en IsraÎl/Jordanie"}
   ]},
-  {name:"Cappadoce G√∂reme ‚Äî Turquie",lat:38.6431,lng:34.8289,desc:"Les chemin√©es de f√©es de Cappadoce furent habit√©es pendant des mill√©naires. Les premi√®res communaut√©s chr√©tiennes y creus√®rent des villes souterraines enti√®res pour √©chapper aux pers√©cutions romaines ‚Äî certaines pouvaient abriter 20 000 personnes sur 8 niveaux.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vall√©e de G√∂reme, chemin√©es de f√©es (p√©ribacalar?), 365 pigeonniers taill√©s dans le tuf, vols en montgolfi√®re √† l'aube"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Nev?ehir, Anatolie centrale, √† 280 km d'Ankara"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chemin√©es de f√©es et montgolfi√®res, Cappadoce, Turquie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cappadoce G√∂reme en Turquie"}
+  {name:"Cappadoce Gˆreme ó Turquie",lat:38.6431,lng:34.8289,desc:"Les cheminÈes de fÈes de Cappadoce furent habitÈes pendant des millÈnaires. Les premiËres communautÈs chrÈtiennes y creusËrent des villes souterraines entiËres pour Èchapper aux persÈcutions romaines ó certaines pouvaient abriter 20 000 personnes sur 8 niveaux.",photo:"photos/cappadoce_goreme.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"VallÈe de Gˆreme, cheminÈes de fÈes (pÈribacalar?), 365 pigeonniers taillÈs dans le tuf, vols en montgolfiËre ‡ l'aube"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Nev?ehir, Anatolie centrale, ‡ 280 km d'Ankara"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CheminÈes de fÈes et montgolfiËres, Cappadoce, Turquie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cappadoce Gˆreme en Turquie"}
   ]},
-  {name:"Pont Charles ‚Äî Prague, R√©publique Tch√®que",lat:50.0865,lng:14.4114,desc:"Le pont Charles de Prague fut construit selon la num√©rologie m√©di√©vale : la premi√®re pierre fut pos√©e le 9 juillet 1357 √† 5h31 du matin, formant la s√©quence palindromique 1357 9 7 5 31. Cette date ¬´magique¬ª devait assurer la solidit√© √©ternelle du pont.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Karl?v most, pont de pierre de 516m construit de 1357 √† 1402 par Charles IV, 30 statues baroques, tour de la vieille ville"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Enjambe la Vltava entre la Vieille Ville et Mal√° Strana, Prague, R√©publique Tch√®que"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pont m√©di√©val de 516 m aux 30 statues baroques enjambant la Vltava, Prague"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont Charles √† Prague, R√©publique Tch√®que"}
+  {name:"Pont Charles ó Prague, RÈpublique TchËque",lat:50.0865,lng:14.4114,desc:"Le pont Charles de Prague fut construit selon la numÈrologie mÈdiÈvale : la premiËre pierre fut posÈe le 9 juillet 1357 ‡ 5h31 du matin, formant la sÈquence palindromique 1357 9 7 5 31. Cette date ´magiqueª devait assurer la soliditÈ Èternelle du pont.",photo:"photos/pont_charles.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Karl?v most, pont de pierre de 516m construit de 1357 ‡ 1402 par Charles IV, 30 statues baroques, tour de la vieille ville"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Enjambe la Vltava entre la Vieille Ville et Mal· Strana, Prague, RÈpublique TchËque"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pont mÈdiÈval de 516 m aux 30 statues baroques enjambant la Vltava, Prague"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont Charles ‡ Prague, RÈpublique TchËque"}
   ]},
-  {name:"Horloge astronomique ‚Äî Prague, R√©publique Tch√®que",lat:50.0872,lng:14.4205,desc:"L'Orloj de Prague est l'une des horloges astronomiques les plus anciennes encore en fonctionnement (1410). Selon la l√©gende, le conseil municipal fit aveugler son cr√©ateur Ma√Ætre Hanu≈° pour qu'il ne puisse jamais construire une horloge aussi parfaite ailleurs.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Orloj, horloge astronomique m√©di√©vale de 1410 sur la tour de l'h√¥tel de ville, d√©fil√© des 12 ap√¥tres toutes les heures"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place de la Vieille Ville (Starom?stsk√© n√°m?st√≠), Prague, R√©publique Tch√®que"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"M√©canisme m√©di√©val de 1410 sur la tour de l'h√¥tel de ville, d√©fil√© des 12 ap√¥tres toutes les heures, Prague"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Horloge astronomique √† Prague, R√©publique Tch√®que"}
+  {name:"Horloge astronomique ó Prague, RÈpublique TchËque",lat:50.0872,lng:14.4205,desc:"L'Orloj de Prague est l'une des horloges astronomiques les plus anciennes encore en fonctionnement (1410). Selon la lÈgende, le conseil municipal fit aveugler son crÈateur MaÓtre Hanuö pour qu'il ne puisse jamais construire une horloge aussi parfaite ailleurs.",photo:"https://upload.wikimedia.org/wikipedia/commons/2/2d/Czech-2013-Prague-Astronomical_clock_face.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Orloj, horloge astronomique mÈdiÈvale de 1410 sur la tour de l'hÙtel de ville, dÈfilÈ des 12 apÙtres toutes les heures"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place de la Vieille Ville (Starom?stskÈ n·m?stÌ), Prague, RÈpublique TchËque"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"MÈcanisme mÈdiÈval de 1410 sur la tour de l'hÙtel de ville, dÈfilÈ des 12 apÙtres toutes les heures, Prague"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Horloge astronomique ‡ Prague, RÈpublique TchËque"}
   ]},
-  {name:"Ch√¢teau de Bojnice ‚Äî Slovaquie",lat:48.7796,lng:18.5793,desc:"Le ch√¢teau de Bojnice est le ch√¢teau le plus visit√© de Slovaquie. Il fut profond√©ment remani√© en style n√©o-gothique romantique au XIXe si√®cle par le comte J√°nos P√°lffy qui voulait cr√©er un d√©cor de conte de f√©es. Ses sous-sols abritent une grotte pr√©historique naturelle int√©gr√©e au complexe.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bojnick√Ω z√°mok, romantique ch√¢teau n√©ogothique remani√© par Jean-Palffy en 1889, foss√©, tour ronde, catacombes, Haute-Nitra"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'un pays d'Europe centrale, ch√¢teau de conte de f√©es, √† 20 km d'une ville mini√®re"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus visit√© des ch√¢teaux slovaques, remaniement n√©ogothique romantique au XIXe si√®cle, Haute-Nitra"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Bojnice en Slovaquie"}
+  {name:"Ch‚teau de Bojnice ó Slovaquie",lat:48.7796,lng:18.5793,desc:"Le ch‚teau de Bojnice est le ch‚teau le plus visitÈ de Slovaquie. Il fut profondÈment remaniÈ en style nÈo-gothique romantique au XIXe siËcle par le comte J·nos P·lffy qui voulait crÈer un dÈcor de conte de fÈes. Ses sous-sols abritent une grotte prÈhistorique naturelle intÈgrÈe au complexe.",photo:"photos/chateau_de_blarney.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bojnick˝ z·mok, romantique ch‚teau nÈogothique remaniÈ par Jean-Palffy en 1889, fossÈ, tour ronde, catacombes, Haute-Nitra"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'un pays d'Europe centrale, ch‚teau de conte de fÈes, ‡ 20 km d'une ville miniËre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus visitÈ des ch‚teaux slovaques, remaniement nÈogothique romantique au XIXe siËcle, Haute-Nitra"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Bojnice en Slovaquie"}
   ]},
-  {name:"Ch√¢teau de Hrad Spi≈°sk√Ω ‚Äî Slovaquie",lat:49.0004,lng:20.768,desc:"Le ch√¢teau de Spi≈° est la plus grande forteresse m√©di√©vale d'Europe centrale avec ses 41 000 m¬≤. Construit au XIIe si√®cle sur une colline calcaire, il abrita des rois de Hongrie, des comtes palatins et r√©sista √† l'invasion mongole de 1241. Un incendie le d√©truisit partiellement en 1780.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Spi¬ösk√Ω hrad, plus grand ch√¢teau d'Europe centrale (41 500 m¬≤), fond√© au XIIe si√®cle, Haute Tatra, UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Est d'un pays d'Europe centrale, Haute Tatra, plus grande ruine de ch√¢teau m√©di√©val d'Europe"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch√¢teau de Spi¬ö, plus grande forteresse d'Europe centrale, Slovaquie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau de Spi¬ö (Spi¬ösk√Ω hrad) en Slovaquie"}
+  {name:"Ch‚teau de Hrad Spiösk˝ ó Slovaquie",lat:49.0004,lng:20.768,desc:"Le ch‚teau de Spiö est la plus grande forteresse mÈdiÈvale d'Europe centrale avec ses 41 000 m≤. Construit au XIIe siËcle sur une colline calcaire, il abrita des rois de Hongrie, des comtes palatins et rÈsista ‡ l'invasion mongole de 1241. Un incendie le dÈtruisit partiellement en 1780.",photo:"photos/chateau_de_hrad_spissky.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Spi?sk˝ hrad, plus grand ch‚teau d'Europe centrale (41 500 m≤), fondÈ au XIIe siËcle, Haute Tatra, UNESCO"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Est d'un pays d'Europe centrale, Haute Tatra, plus grande ruine de ch‚teau mÈdiÈval d'Europe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ch‚teau de Spi?, plus grande forteresse d'Europe centrale, Slovaquie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau de Spi? (Spi?sk˝ hrad) en Slovaquie"}
   ]},
-  {name:"Hallstatt ‚Äî Autriche",lat:47.5622,lng:13.6493,desc:"Le cimeti√®re de Hallstatt est si petit que les os exhum√©s apr√®s 10-12 ans sont d√©cor√©s de motifs et plac√©s dans une chapelle √† cr√¢nes ‚Äî la Beinhaus. Cette tradition unique perp√©tue la m√©moire des d√©funts dans une ville o√π les morts d√©passent les vivants.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Village lacustre du Salzkammergut, 7 000 ans d'exploitation du sel, maisons sur pilotis au bord du Hallst√§ttersee, UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Salzkammergut, r√©gion lacustre alpine, bord d'un lac, village aux maisons sur l'eau"},
+  {name:"Hallstatt ó Autriche",lat:47.5622,lng:13.6493,desc:"Le cimetiËre de Hallstatt est si petit que les os exhumÈs aprËs 10-12 ans sont dÈcorÈs de motifs et placÈs dans une chapelle ‡ cr‚nes ó la Beinhaus. Cette tradition unique perpÈtue la mÈmoire des dÈfunts dans une ville o˘ les morts dÈpassent les vivants.",photo:"photos/chateau_de_hrad_spissky.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Village lacustre du Salzkammergut, 7 000 ans d'exploitation du sel, maisons sur pilotis au bord du Hallst‰ttersee, UNESCO"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Salzkammergut, rÈgion lacustre alpine, bord d'un lac, village aux maisons sur l'eau"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Village lacustre de 780 habitants, mine de sel la plus ancienne du monde, Salzkammergut, Autriche"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hallstatt en Autriche"}
   ]},
-  {name:"Op√©ra de Vienne ‚Äî Autriche",lat:48.2031,lng:16.3694,desc:"L'Op√©ra de Vienne pr√©sente 300 repr√©sentations par an avec quasi z√©ro r√©p√©titions : les chanteurs sont engag√©s pour un soir seulement. Son c√©l√®bre Bal de l'Op√©ra en f√©vrier est l'√©v√©nement mondain le plus couru d'Autriche, diffus√© en direct √† la t√©l√©vision nationale.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wiener Staatsoper, inaugur√© en 1869, Ring style n√©o-Renaissance, 285 repr√©sentations par an, bal de l'Op√©ra en f√©vrier"},
+  {name:"OpÈra de Vienne ó Autriche",lat:48.2031,lng:16.3694,desc:"L'OpÈra de Vienne prÈsente 300 reprÈsentations par an avec quasi zÈro rÈpÈtitions : les chanteurs sont engagÈs pour un soir seulement. Son cÈlËbre Bal de l'OpÈra en fÈvrier est l'ÈvÈnement mondain le plus couru d'Autriche, diffusÈ en direct ‡ la tÈlÈvision nationale.",photo:"photos/opera_de_vienne.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wiener Staatsoper, inaugurÈ en 1869, Ring style nÈo-Renaissance, 285 reprÈsentations par an, bal de l'OpÈra en fÈvrier"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Opernring 2, 1er arrondissement, sur le Ring, Vienne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple de l'op√©ra de style n√©o-Renaissance, 285 repr√©sentations par an, bal annuel c√©l√®bre, Vienne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Op√©ra de Vienne en Autriche"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple de l'opÈra de style nÈo-Renaissance, 285 reprÈsentations par an, bal annuel cÈlËbre, Vienne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'OpÈra de Vienne en Autriche"}
   ]},
-  {name:"Grossglockner ‚Äî Autriche",lat:47.074,lng:12.693,desc:"Le Grossglockner (3 798 m) est le plus haut sommet d'Autriche et le point culminant de l'arc alpin oriental. Sa route panoramique √† p√©age, l'une des plus belles d'Europe, grimpe √† 2 504 m√®tres avec 36 virages en √©pingle. Le glacier Pasterze visible depuis la route a recul√© de 3,5 km depuis 1850 ‚Äî le plus rapide recul glaciaire d'Autriche.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"3 798 m, plus haut sommet du pays, glaciers Pasterze (7 km), route alpine √† p√©age Grossglockner Hochalpenstra√üe (1935)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fronti√®re Carinthie-Salzbourg, Alpes centrales autrichiennes, parc national du Hohe Tauern"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haut sommet d'Autriche √† 3 798 m, glacier de 7 km en recul rapide, route alpine panoramique"},
+  {name:"Grossglockner ó Autriche",lat:47.074,lng:12.693,desc:"Le Grossglockner (3 798 m) est le plus haut sommet d'Autriche et le point culminant de l'arc alpin oriental. Sa route panoramique ‡ pÈage, l'une des plus belles d'Europe, grimpe ‡ 2 504 mËtres avec 36 virages en Èpingle. Le glacier Pasterze visible depuis la route a reculÈ de 3,5 km depuis 1850 ó le plus rapide recul glaciaire d'Autriche.",photo:"photos/grossglockner.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"3 798 m, plus haut sommet du pays, glaciers Pasterze (7 km), route alpine ‡ pÈage Grossglockner Hochalpenstraﬂe (1935)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"FrontiËre Carinthie-Salzbourg, Alpes centrales autrichiennes, parc national du Hohe Tauern"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haut sommet d'Autriche ‡ 3 798 m, glacier de 7 km en recul rapide, route alpine panoramique"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grossglockner en Autriche"}
   ]},
-  {name:"Lac Bled ‚Äî Slov√©nie (√Æle)",lat:46.3631,lng:14.0944,desc:"L'√Æle de Bled est la seule √Æle naturelle de Slov√©nie. Sa cloche, fondue en 1534, est une des cloches ¬´magiques¬ª d'Europe : selon la tradition, les mari√©s qui gravissent ses 99 marches en portant leur √©pouse et sonnent la cloche trois fois voient leur v≈ìu exauc√©.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Otok, √Æle de 2 270 m¬≤ avec l'√©glise baroque de l'Assomption, tradition de la cloche aux v≈ìux, seule √Æle naturelle du pays"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lac glaciaire de Haute-Carniole, Alpes juliennes, √Æle avec √©glise baroque"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éle et √©glise baroque du lac de Bled, Slov√©nie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac Bled en Slov√©nie (√Æle)"}
+  {name:"Lac Bled ó SlovÈnie (Óle)",lat:46.3631,lng:14.0944,desc:"L'Óle de Bled est la seule Óle naturelle de SlovÈnie. Sa cloche, fondue en 1534, est une des cloches ´magiquesª d'Europe : selon la tradition, les mariÈs qui gravissent ses 99 marches en portant leur Èpouse et sonnent la cloche trois fois voient leur vúu exaucÈ.",photo:"photos/lac_bled.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Otok, Óle de 2 270 m≤ avec l'Èglise baroque de l'Assomption, tradition de la cloche aux vúux, seule Óle naturelle du pays"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lac glaciaire de Haute-Carniole, Alpes juliennes, Óle avec Èglise baroque"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œle et Èglise baroque du lac de Bled, SlovÈnie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac Bled en SlovÈnie (Óle)"}
   ]},
-  {name:"Grottes de Postojna ‚Äî Slov√©nie",lat:45.7783,lng:14.2044,desc:"Les grottes de Postojna abritent le ¬´prot√©e¬ª (Proteus anguinus), un amphibien aveugle qui peut vivre jusqu'√† 100 ans et rester sans manger 12 ans. Cet animal translucide et d√©pourvu de pigmentation est surnomm√© ¬´le dragon de caverne¬ª.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Postojnska jama, 24 km de galeries, train √©lectrique souterrain depuis 1872, prot√©e (Proteus anguinus), 2e grotte la plus visit√©e "},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Carniole int√©rieure, √† 50 km de la capitale, plus grande grotte touristique d'Europe"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"24 km de galeries karstiques visitables en train √©lectrique, habitat du prot√©e aveugle, Slov√©nie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Grottes de Postojna en Slov√©nie"}
+  {name:"Grottes de Postojna ó SlovÈnie",lat:45.7783,lng:14.2044,desc:"Les grottes de Postojna abritent le ´protÈeª (Proteus anguinus), un amphibien aveugle qui peut vivre jusqu'‡ 100 ans et rester sans manger 12 ans. Cet animal translucide et dÈpourvu de pigmentation est surnommÈ ´le dragon de caverneª.",photo:"photos/grottes_de_postojna.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Postojnska jama, 24 km de galeries, train Èlectrique souterrain depuis 1872, protÈe (Proteus anguinus), 2e grotte la plus visitÈe "},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Carniole intÈrieure, ‡ 50 km de la capitale, plus grande grotte touristique d'Europe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"24 km de galeries karstiques visitables en train Èlectrique, habitat du protÈe aveugle, SlovÈnie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Grottes de Postojna en SlovÈnie"}
   ]},
-  {name:"Vall√©e de la So?a ‚Äî Slov√©nie",lat:46.34,lng:13.65,desc:"La Statue de la Libert√© fut offerte par la France mais les Am√©ricains durent financer eux-m√™mes son pi√©destal. Joseph Pulitzer lan√ßa une collecte publique dans son journal, r√©coltant 100 000 dollars en moins de six mois.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Isonzo, rivi√®re aux eaux √©meraude, th√©√¢tre des 12 batailles de l'Isonzo (1915-1917), source dans les Alpes juliennes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Alpes juliennes, Gori¬öka, fronti√®re entre deux pays, gorges et eaux √©meraude"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rivi√®re So?a aux eaux √©meraude, Alpes juliennes, Slov√©nie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Vall√©e de la So?a en Slov√©nie"}
+  {name:"VallÈe de la So?a ó SlovÈnie",lat:46.34,lng:13.65,desc:"La So?a (Isonzo en italien) est une riviËre aux eaux d\'un bleu-vert Èmeraude unique, prenant sa source dans les Alpes juliennes slovËnes. Sa vallÈe fut le thÈ‚tre des batailles de l\'Isonzo (1915-1917) et est aujourd\'hui un paradis naturel rÈputÈ pour ses gorges spectaculaires et sports d\'eau vive.",photo:"photos/vallee_de_franz_josef.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Isonzo, riviËre aux eaux Èmeraude, thÈ‚tre des 12 batailles de l'Isonzo (1915-1917), source dans les Alpes juliennes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Alpes juliennes, Gori?ka, frontiËre entre deux pays, gorges et eaux Èmeraude"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"RiviËre So?a aux eaux Èmeraude, Alpes juliennes, SlovÈnie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La VallÈe de la So?a en SlovÈnie"}
   ]},
-  {name:"March√© central ‚Äî Budapest, Hongrie",lat:47.487,lng:19.06,desc:"La Grande Halle de Budapest fut inaugur√©e en 1897 et couvre 10 000 m¬≤. Ses galeries du premier √©tage proposent de la broderie hongroise et du paprika depuis un si√®cle. Son toit en tuiles verniss√©es Zsolnay est orn√© de motifs inspir√©s de l'art populaire magyar ‚Äî une caract√©ristique de l'architecture Art Nouveau budapestois.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Nagy V√°s√°rcsarnok, plus grande halle couverte du pays (1897), toits en tuiles Zsolnay, paprika, tokay et foie gras"},
+  {name:"MarchÈ central ó Budapest, Hongrie",lat:47.487,lng:19.06,desc:"La Grande Halle de Budapest fut inaugurÈe en 1897 et couvre 10 000 m≤. Ses galeries du premier Ètage proposent de la broderie hongroise et du paprika depuis un siËcle. Son toit en tuiles vernissÈes Zsolnay est ornÈ de motifs inspirÈs de l'art populaire magyar ó une caractÈristique de l'architecture Art Nouveau budapestois.",photo:"photos/marche_central.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Nagy V·s·rcsarnok, plus grande halle couverte du pays (1897), toits en tuiles Zsolnay, paprika, tokay et foie gras"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive du Danube, grande halle couverte d'une capitale au croisement de l'Europe"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande halle couverte de Hongrie (1897), toits en tuiles Zsolnay color√©es, Budapest"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le March√© central √† Budapest, Hongrie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande halle couverte de Hongrie (1897), toits en tuiles Zsolnay colorÈes, Budapest"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le MarchÈ central ‡ Budapest, Hongrie"}
   ]},
-  {name:"Thermes Sz√©chenyi ‚Äî Budapest, Hongrie",lat:47.5189,lng:19.0823,desc:"Les thermes Sz√©chenyi, inaugur√©s en 1913, sont aliment√©s par deux sources thermales naturelles jaillissant √† 74¬∞C et 77¬∞C. Avec leurs 18 bassins, ils sont les plus grands bains thermaux d'Europe. Les Budapestois y jouent aux √©checs dans les piscines ext√©rieures ‚Äî une tradition photographi√©e dans le monde entier.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sz√©chenyi gy√≥gyf√ºrd?, plus grands bains thermaux d'Europe (1913), eau √† 74-76¬∞C, 3 piscines ext√©rieures, V√°rosliget"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"V√°rosliget, parc urbain d'une capitale danubienne, complexe thermal n√©o-baroque"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grands bains thermaux d'Europe, sources √† 74¬∞C, joueurs d'√©checs dans les bassins ext√©rieurs, Budapest"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Thermes Sz√©chenyi √† Budapest, Hongrie"}
+  {name:"Thermes SzÈchenyi ó Budapest, Hongrie",lat:47.5189,lng:19.0823,desc:"Les thermes SzÈchenyi, inaugurÈs en 1913, sont alimentÈs par deux sources thermales naturelles jaillissant ‡ 74∞C et 77∞C. Avec leurs 18 bassins, ils sont les plus grands bains thermaux d'Europe. Les Budapestois y jouent aux Èchecs dans les piscines extÈrieures ó une tradition photographiÈe dans le monde entier.",photo:"photos/thermes_szechenyi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"SzÈchenyi gyÛgyf¸rd?, plus grands bains thermaux d'Europe (1913), eau ‡ 74-76∞C, 3 piscines extÈrieures, V·rosliget"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"V·rosliget, parc urbain d'une capitale danubienne, complexe thermal nÈo-baroque"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grands bains thermaux d'Europe, sources ‡ 74∞C, joueurs d'Èchecs dans les bassins extÈrieurs, Budapest"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Thermes SzÈchenyi ‡ Budapest, Hongrie"}
   ]},
-  {name:"Ch√¢teau d'If ‚Äî Marseille, France",lat:43.2796,lng:5.325,desc:"Le ch√¢teau d'If, forteresse construite en 1524 sur une √Æle du large de Marseille, abrita les prisonniers d'√âtat les plus dangereux, dont le ¬´masque de fer¬ª. Alexandre Dumas en fit la prison fictive du Comte de Monte-Cristo ‚Äî le roman lui valut un tel succ√®s que des touristes vinrent chercher ¬´la cellule de Dant√®s¬ª.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Forteresse de 1524 sur l'√Æle d'If, prison d'√âtat o√π le Masque de Fer fut pr√©tendument d√©tenu, cadre du Comte de Monte-Cristo"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel du Frioul, large du Vieux-Port de Marseille, Bouches-du-Rh√¥ne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse insulaire de 1524, prison d'√âtat et cadre du Comte de Monte-Cristo, large de Marseille"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau d'If √† Marseille, France"}
+  {name:"Ch‚teau d'If ó Marseille, France",lat:43.2796,lng:5.325,desc:"Le ch‚teau d'If, forteresse construite en 1524 sur une Óle du large de Marseille, abrita les prisonniers d'…tat les plus dangereux, dont le ´masque de ferª. Alexandre Dumas en fit la prison fictive du Comte de Monte-Cristo ó le roman lui valut un tel succËs que des touristes vinrent chercher ´la cellule de DantËsª.",photo:"photos/chateau_d_heidelberg.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Forteresse de 1524 sur l'Óle d'If, prison d'…tat o˘ le Masque de Fer fut prÈtendument dÈtenu, cadre du Comte de Monte-Cristo"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel du Frioul, large du Vieux-Port de Marseille, Bouches-du-RhÙne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse insulaire de 1524, prison d'…tat et cadre du Comte de Monte-Cristo, large de Marseille"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau d'If ‡ Marseille, France"}
   ]},
-  {name:"√âtangs de Camargue ‚Äî France",lat:43.525,lng:4.56,desc:"La Camargue abrite la plus grande colonie de flamants roses d'Europe avec 10 000 couples nicheurs. Ce delta du Rh√¥ne h√©berge aussi les seuls chevaux et taureaux sauvages de France. Les gardians ‚Äî cowboys camarguais ‚Äî perp√©tuent une tradition d'√©levage vieille de plusieurs si√®cles.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Delta du Rh√¥ne, 930 km¬≤, flamants roses de l'√©tang de Vaccar√®s, chevaux blancs de Camargue, taureaux, gardians"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Delta du Rh√¥ne, Bouches-du-Rh√¥ne et Gard, entre Arles et la M√©diterran√©e"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Camargue, delta du Rh√¥ne, flamants roses et chevaux blancs, Provence"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les √âtangs de Camargue en France"}
+  {name:"…tangs de Camargue ó France",lat:43.525,lng:4.56,desc:"La Camargue abrite la plus grande colonie de flamants roses d'Europe avec 10 000 couples nicheurs. Ce delta du RhÙne hÈberge aussi les seuls chevaux et taureaux sauvages de France. Les gardians ó cowboys camarguais ó perpÈtuent une tradition d'Èlevage vieille de plusieurs siËcles.",photo:"photos/etangs_de_camargue.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Delta du RhÙne, 930 km≤, flamants roses de l'Ètang de VaccarËs, chevaux blancs de Camargue, taureaux, gardians"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Delta du RhÙne, Bouches-du-RhÙne et Gard, entre Arles et la MÈditerranÈe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Camargue, delta du RhÙne, flamants roses et chevaux blancs, Provence"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les …tangs de Camargue en France"}
   ]},
-  {name:"Ch√¢teau des Baux-de-Provence ‚Äî France",lat:43.7441,lng:4.7972,desc:"Les Baux-de-Provence furent l'un des plus puissants seigneuries de Provence au Moyen √Çge. Le village est creus√© dans la roche calcaire des Alpilles et domine une plaine d'oliviers et de vignes. Ses Carri√®res de Lumi√®res projettent des spectacles num√©riques monumentaux sur des parois de 14 m√®tres de haut.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© m√©di√©vale perch√©e sur une cr√™te de bauxite, seigneurs des Baux (XIe-XIVe s.), spectacles de chevalerie, Alpilles"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Alpilles, commune des Baux-de-Provence, Bouches-du-Rh√¥ne, √† 20 km d'Arles"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Les Baux-de-Provence, village perch√© dans les Alpilles"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch√¢teau des Baux-de-Provence en France"}
+  {name:"Ch‚teau des Baux-de-Provence ó France",lat:43.7441,lng:4.7972,desc:"Les Baux-de-Provence furent l'un des plus puissants seigneuries de Provence au Moyen ¬ge. Le village est creusÈ dans la roche calcaire des Alpilles et domine une plaine d'oliviers et de vignes. Ses CarriËres de LumiËres projettent des spectacles numÈriques monumentaux sur des parois de 14 mËtres de haut.",photo:"photos/chateau_de_blarney.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ mÈdiÈvale perchÈe sur une crÍte de bauxite, seigneurs des Baux (XIe-XIVe s.), spectacles de chevalerie, Alpilles"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Alpilles, commune des Baux-de-Provence, Bouches-du-RhÙne, ‡ 20 km d'Arles"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Les Baux-de-Provence, village perchÈ dans les Alpilles"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ch‚teau des Baux-de-Provence en France"}
   ]},
-  {name:"Gorges de l'Ard√®che ‚Äî France",lat:44.331,lng:4.42,desc:"Le Pont d'Arc, arche naturelle de 60 m√®tres de haut et 59 de large dans les gorges de l'Ard√®che, est le plus grand arc naturel d'Europe. La grotte Chauvet, d√©couverte √† 2 km, abrite les peintures rupestres les plus anciennes du monde (-36 000 ans), class√©es UNESCO en 2014.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Aven d'Orgnac, pont d'Arc (60m de haut, 59m de large), 30 km de gorges en cano√´, Grotte Chauvet (-36 000 ans) proche"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ard√®che m√©ridionale, entre Vallon-Pont-d'Arc et Saint-Martin-d'Ard√®che, Auvergne-Rh√¥ne-Alpes"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand arc naturel d'Europe (60 m), 30 km de gorges calcaires en cano√´, Ard√®che"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Gorges de l'Ard√®che en France"}
+  {name:"Gorges de l'ArdËche ó France",lat:44.331,lng:4.42,desc:"Le Pont d'Arc, arche naturelle de 60 mËtres de haut et 59 de large dans les gorges de l'ArdËche, est le plus grand arc naturel d'Europe. La grotte Chauvet, dÈcouverte ‡ 2 km, abrite les peintures rupestres les plus anciennes du monde (-36 000 ans), classÈes UNESCO en 2014.",photo:"photos/gorges_de_l_ardeche.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Aven d'Orgnac, pont d'Arc (60m de haut, 59m de large), 30 km de gorges en canoÎ, Grotte Chauvet (-36 000 ans) proche"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ArdËche mÈridionale, entre Vallon-Pont-d'Arc et Saint-Martin-d'ArdËche, Auvergne-RhÙne-Alpes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand arc naturel d'Europe (60 m), 30 km de gorges calcaires en canoÎ, ArdËche"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Gorges de l'ArdËche en France"}
   ]},
-  {name:"√éle de R√© ‚Äî France",lat:46.2,lng:-1.42,desc:"La citadelle de Saint-Martin-de-R√©, sur l'√Æle de R√©, fut utilis√©e comme prison d'o√π partaient les condamn√©s au bagne de Guyane jusqu'en 1938. Albert Camus s'y inspira pour √©crire ¬´L'√âtranger¬ª lors d'un s√©jour sur l'√Æle.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√éle de Charente-Maritime, 85 km¬≤, citadelle de Saint-Martin class√©e UNESCO, marais salants et vignes de pineau"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Charente-Maritime, golfe de Gascogne, reli√©e √† La Rochelle par un pont de 2,9 km depuis 1988"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éle blanche reli√©e au continent par pont, citadelle UNESCO, marais salants, large de La Rochelle"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'√éle de R√© en France"}
+  {name:"Œle de RÈ ó France",lat:46.2,lng:-1.42,desc:"La citadelle de Saint-Martin-de-RÈ, sur l'Óle de RÈ, fut utilisÈe comme prison d'o˘ partaient les condamnÈs au bagne de Guyane jusqu'en 1938. Albert Camus s'y inspira pour Ècrire ´L'…trangerª lors d'un sÈjour sur l'Óle.",photo:"photos/gorges_de_l_ardeche.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Œle de Charente-Maritime, 85 km≤, citadelle de Saint-Martin classÈe UNESCO, marais salants et vignes de pineau"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Charente-Maritime, golfe de Gascogne, reliÈe ‡ La Rochelle par un pont de 2,9 km depuis 1988"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œle blanche reliÈe au continent par pont, citadelle UNESCO, marais salants, large de La Rochelle"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Œle de RÈ en France"}
   ]},
-  {name:"Phare de Cordouan ‚Äî France",lat:45.5825,lng:-1.1748,desc:"Le phare de Cordouan, surnomm√© ¬´le Roi des phares¬ª, est le plus ancien phare habit√© de France encore en activit√©. Construit √† partir de 1584 par Louis de Foix, il poss√®de une chapelle royale, un appartement pour le roi et des appartements pour les gardiens. Class√© UNESCO en 2021.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Phare royal de Louis de Foix (1611), 68m sur √Æle √† mar√©e, class√© UNESCO 2021, Roi des phares, estuaire de la Gironde"},
+  {name:"Phare de Cordouan ó France",lat:45.5825,lng:-1.1748,desc:"Le phare de Cordouan, surnommÈ ´le Roi des pharesª, est le plus ancien phare habitÈ de France encore en activitÈ. Construit ‡ partir de 1584 par Louis de Foix, il possËde une chapelle royale, un appartement pour le roi et des appartements pour les gardiens. ClassÈ UNESCO en 2021.",photo:"photos/phare_de_cordouan.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Phare royal de Louis de Foix (1611), 68m sur Óle ‡ marÈe, classÈ UNESCO 2021, Roi des phares, estuaire de la Gironde"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Estuaire de la Gironde, entre Pointe de Grave et Royan, Gironde, Nouvelle-Aquitaine"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancien phare habit√© de France encore en activit√©, chapelle royale int√©gr√©e, estuaire de la Gironde"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancien phare habitÈ de France encore en activitÈ, chapelle royale intÈgrÈe, estuaire de la Gironde"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Phare de Cordouan en France"}
   ]},
-  {name:"Puy de D√¥me ‚Äî Auvergne, France",lat:45.7723,lng:2.9651,desc:"Pascal fit monter du mercure au sommet du Puy de D√¥me en 1648 pour prouver que la pression atmosph√©rique diminuait avec l'altitude ‚Äî une exp√©rience fondatrice de la physique moderne. Il ne fit pas l'ascension lui-m√™me, mais demanda √† son beau-fr√®re.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stratovolcan de 1 465 m, cha√Æne des Puys, Pascal y d√©montra la pression atmosph√©rique en 1648, cr√©maill√®re √† cr√©maill√®re"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cha√Æne des Puys, Puy-de-D√¥me, Auvergne, √† 15 km de Clermont-Ferrand"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haut volcan de la cha√Æne volcanique auvergnate, Pascal y d√©montra la pression atmosph√©rique"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Puy de D√¥me √† Auvergne, France"}
+  {name:"Puy de DÙme ó Auvergne, France",lat:45.7723,lng:2.9651,desc:"Pascal fit monter du mercure au sommet du Puy de DÙme en 1648 pour prouver que la pression atmosphÈrique diminuait avec l'altitude ó une expÈrience fondatrice de la physique moderne. Il ne fit pas l'ascension lui-mÍme, mais demanda ‡ son beau-frËre.",photo:"photos/puy_de_dome.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stratovolcan de 1 465 m, chaÓne des Puys, Pascal y dÈmontra la pression atmosphÈrique en 1648, crÈmaillËre ‡ crÈmaillËre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ChaÓne des Puys, Puy-de-DÙme, Auvergne, ‡ 15 km de Clermont-Ferrand"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haut volcan de la chaÓne volcanique auvergnate, Pascal y dÈmontra la pression atmosphÈrique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Puy de DÙme ‡ Auvergne, France"}
   ]},
-  {name:"Gouffre de Padirac ‚Äî France",lat:44.8724,lng:1.7474,desc:"Le gouffre de Padirac, d√©couvert en 1889 par √âdouard Martel, cache sous terre une rivi√®re souterraine que l'on remonte en barque. La l√©gende m√©di√©vale dit que le gouffre fut ouvert par le diable lui-m√™me, frappant le sol du pied quand Saint-Martin refusa de lui vendre son √¢me.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Puits naturel de 33m de diam√®tre et 103m de profondeur, rivi√®re souterraine, salle du Grand D√¥me (94m), Lot, d√©couvert en 1889"},
+  {name:"Gouffre de Padirac ó France",lat:44.8724,lng:1.7474,desc:"Le gouffre de Padirac, dÈcouvert en 1889 par …douard Martel, cache sous terre une riviËre souterraine que l'on remonte en barque. La lÈgende mÈdiÈvale dit que le gouffre fut ouvert par le diable lui-mÍme, frappant le sol du pied quand Saint-Martin refusa de lui vendre son ‚me.",photo:"photos/puy_de_dome.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Puits naturel de 33m de diamËtre et 103m de profondeur, riviËre souterraine, salle du Grand DÙme (94m), Lot, dÈcouvert en 1889"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Causse de Gramat, commune de Padirac, Lot, Occitanie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Puits naturel de 103 m de profondeur avec rivi√®re souterraine visit√©e en barque, Lot, Occitanie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Puits naturel de 103 m de profondeur avec riviËre souterraine visitÈe en barque, Lot, Occitanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gouffre de Padirac en France"}
   ]},
-  {name:"Abbaye de Fontevraud ‚Äî France",lat:47.1784,lng:0.053,desc:"L'abbaye de Fontevraud est la plus grande abbaye m√©di√©vale de France. Elle renferme les gisants de Richard C≈ìur de Lion, Ali√©nor d'Aquitaine et Henri II Plantagen√™t. Transform√©e en prison napol√©onienne de 1804 √† 1963, elle garde encore les cellules dans sa nef ‚Äî un m√©lange saisissant du sacr√© et du carc√©ral.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fond√©e en 1101 par Robert d'Arbrissel, n√©cropole des Plantagen√™ts dont Richard C≈ìur de Lion, plus grand ensemble monastique"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Fontevraud-l'Abbaye, Maine-et-Loire, √† 15 km de Saumur, val de Loire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande abbaye m√©di√©vale de France, n√©cropole des Plantagen√™ts dont Richard C≈ìur de Lion, Maine-et-Loire"},
+  {name:"Abbaye de Fontevraud ó France",lat:47.1784,lng:0.053,desc:"L'abbaye de Fontevraud est la plus grande abbaye mÈdiÈvale de France. Elle renferme les gisants de Richard Cúur de Lion, AliÈnor d'Aquitaine et Henri II PlantagenÍt. TransformÈe en prison napolÈonienne de 1804 ‡ 1963, elle garde encore les cellules dans sa nef ó un mÈlange saisissant du sacrÈ et du carcÈral.",photo:"photos/abbaye_de_fontevraud.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"FondÈe en 1101 par Robert d'Arbrissel, nÈcropole des PlantagenÍts dont Richard Cúur de Lion, plus grand ensemble monastique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Fontevraud-l'Abbaye, Maine-et-Loire, ‡ 15 km de Saumur, val de Loire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande abbaye mÈdiÈvale de France, nÈcropole des PlantagenÍts dont Richard Cúur de Lion, Maine-et-Loire"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Abbaye de Fontevraud en France"}
   ]},
-  {name:"Cap Blanc-Nez ‚Äî France",lat:50.9217,lng:1.712,desc:"Le Cap Blanc-Nez, falaise de craie de 134 m√®tres face √† l'Angleterre visible √† seulement 34 km, fut l'un des points de d√©part des premiers travers√©es de la Manche √† la nage. Il abrite le monument de Dover Patrol, comm√©morant les milliers de marins franco-britanniques morts en mer durant la Premi√®re Guerre mondiale.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Falaise de craie blanche de 134m, point le plus proche des c√¥tes anglaises (34 km), C√¥te d'Opale, Monument de la Patrouille"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'Escalles, Pas-de-Calais, C√¥te d'Opale, √† 34 km de la c√¥te anglaise"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Falaises de craie blanche √† 34 km de l'Angleterre, C√¥te d'Opale, Pas-de-Calais"},
+  {name:"Cap Blanc-Nez ó France",lat:50.9217,lng:1.712,desc:"Le Cap Blanc-Nez, falaise de craie de 134 mËtres face ‡ l'Angleterre visible ‡ seulement 34 km, fut l'un des points de dÈpart des premiers traversÈes de la Manche ‡ la nage. Il abrite le monument de Dover Patrol, commÈmorant les milliers de marins franco-britanniques morts en mer durant la PremiËre Guerre mondiale.",photo:"photos/cap_blanc_nez.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Falaise de craie blanche de 134m, point le plus proche des cÙtes anglaises (34 km), CÙte d'Opale, Monument de la Patrouille"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'Escalles, Pas-de-Calais, CÙte d'Opale, ‡ 34 km de la cÙte anglaise"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Falaises de craie blanche ‡ 34 km de l'Angleterre, CÙte d'Opale, Pas-de-Calais"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cap Blanc-Nez en France"}
   ]},
-  {name:"Dunes du Pilat ‚Äî Arcachon, France",lat:44.5876,lng:-1.2128,desc:"La dune du Pilat est la plus haute d'Europe et continue de progresser de 1 √† 5 m√®tres par an vers la for√™t de pins. Elle a d√©j√† englouti une route, un camping et une maison depuis le d√©but du XXe si√®cle.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande dune d'Europe (107m, 3km de long, 500m de large), avance de 1 √† 5m/an vers la for√™t, Bassin d'Arcachon"},
+  {name:"Dunes du Pilat ó Arcachon, France",lat:44.5876,lng:-1.2128,desc:"La dune du Pilat est la plus haute d'Europe et continue de progresser de 1 ‡ 5 mËtres par an vers la forÍt de pins. Elle a dÈj‡ englouti une route, un camping et une maison depuis le dÈbut du XXe siËcle.",photo:"photos/dunes_du_pilat.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande dune d'Europe (107m, 3km de long, 500m de large), avance de 1 ‡ 5m/an vers la forÍt, Bassin d'Arcachon"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"La Teste-de-Buch, Bassin d'Arcachon, Gironde, Nouvelle-Aquitaine"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dune du Pilat, plus grande dune d'Europe, Arcachon, France"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Dunes du Pilat √† Arcachon, France"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Dunes du Pilat ‡ Arcachon, France"}
   ]},
-  {name:"Abbaye du Thoronet ‚Äî Provence, France",lat:43.4699,lng:6.3193,desc:"L'acoustique de l'abbaye du Thoronet est si parfaite que les moines cisterciens pouvaient chanter a cappella dans la nef sans aucun √©quipement d'amplification. Le musicien am√©ricain Jonathan Harvey y composa une ≈ìuvre inspir√©e par sa r√©verb√©ration de 1,8 secondes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Abbaye cistercienne fond√©e en 1160, architecture romane aust√®re, acoustique parfaite (1,8s de r√©verb√©ration), Val-de-Thoronet, Var"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune du Thoronet, Var, Provence, √† 30 km de Draguignan"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Abbaye cistercienne du XIIe si√®cle √† l'acoustique parfaite (1,8 s), aust√®re roman proven√ßal, Var"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Abbaye du Thoronet √† Provence, France"}
+  {name:"Abbaye du Thoronet ó Provence, France",lat:43.4699,lng:6.3193,desc:"L'acoustique de l'abbaye du Thoronet est si parfaite que les moines cisterciens pouvaient chanter a cappella dans la nef sans aucun Èquipement d'amplification. Le musicien amÈricain Jonathan Harvey y composa une úuvre inspirÈe par sa rÈverbÈration de 1,8 secondes.",photo:"photos/abbaye_du_thoronet.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Abbaye cistercienne fondÈe en 1160, architecture romane austËre, acoustique parfaite (1,8s de rÈverbÈration), Val-de-Thoronet, Var"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune du Thoronet, Var, Provence, ‡ 30 km de Draguignan"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Abbaye cistercienne du XIIe siËcle ‡ l'acoustique parfaite (1,8 s), austËre roman provenÁal, Var"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Abbaye du Thoronet ‡ Provence, France"}
   ]},
-  {name:"Alberobello ‚Äî Puglia, Italie",lat:40.7882,lng:17.2394,desc:"Les trulli d'Alberobello sont des constructions coniques en calcaire sans mortier h√©rit√©es d'une technique pr√©historique. Au XVIIe si√®cle, leurs toits amovibles permettaient aux habitants de d√©molir rapidement leurs maisons pour √©viter les taxes royales ‚Äî une maison sans toit n'√©tant pas consid√©r√©e comme habit√©e.",hints:[
+  {name:"Alberobello ó Puglia, Italie",lat:40.7882,lng:17.2394,desc:"Les trulli d'Alberobello sont des constructions coniques en calcaire sans mortier hÈritÈes d'une technique prÈhistorique. Au XVIIe siËcle, leurs toits amovibles permettaient aux habitants de dÈmolir rapidement leurs maisons pour Èviter les taxes royales ó une maison sans toit n'Ètant pas considÈrÈe comme habitÈe.",photo:"photos/alberobello.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Trulli d'Alberobello, constructions coniques en calcite sans mortier, Rione Monti (1 030 trulli), Rione Aia Piccola, UNESCO 1996"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville m√©tropolitaine de Bari, Valle d'Itria, Puglia, r√©gion du talon de la botte"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Village aux constructions coniques en calcaire sans mortier, dont les toits √©taient d√©montables pour √©viter les taxes, Puglia"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Alberobello √† Puglia, Italie"}
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville mÈtropolitaine de Bari, Valle d'Itria, Puglia, rÈgion du talon de la botte"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Village aux constructions coniques en calcaire sans mortier, dont les toits Ètaient dÈmontables pour Èviter les taxes, Puglia"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Alberobello ‡ Puglia, Italie"}
   ]},
-  {name:"Parc des Abruzzes ‚Äî Italie",lat:41.85,lng:13.79,desc:"Le parc national des Abruzzes fut cr√©√© en 1923 pour sauver l'ours brun marsican d'une extinction imminente. Il ne restait que 30 individus √† l'√©poque ‚Äî il y en a aujourd'hui 100. Le parc abrite aussi les derniers loups des Apennins et des chamois abruzzais, sous-esp√®ce end√©mique unique √† cette r√©gion.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parco Nazionale d'Abruzzo, Lazio e Molise (1923), ours brun marsican, loup des Apennins, lynx bor√©al, chamois abruzzais"},
+  {name:"Parc des Abruzzes ó Italie",lat:41.85,lng:13.79,desc:"Le parc national des Abruzzes fut crÈÈ en 1923 pour sauver l'ours brun marsican d'une extinction imminente. Il ne restait que 30 individus ‡ l'Èpoque ó il y en a aujourd'hui 100. Le parc abrite aussi les derniers loups des Apennins et des chamois abruzzais, sous-espËce endÈmique unique ‡ cette rÈgion.",photo:"photos/parc_des_abruzzes.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parco Nazionale d'Abruzzo, Lazio e Molise (1923), ours brun marsican, loup des Apennins, lynx borÈal, chamois abruzzais"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Apennins centraux, province de L'Aquila, Abruzzes, Latium et Molise"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc national des Abruzzes, ours et loups des Apennins, Italie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc des Abruzzes en Italie"}
   ]},
-  {name:"Syracuse ‚Äî Sicile, Italie",lat:37.0655,lng:15.2866,desc:"Syracuse fut l'une des plus grandes villes du monde antique au Ve si√®cle av. J.-C., rivalisant avec Ath√®nes et Carthage. Son th√©√¢tre grec taill√© dans le roc accueille toujours des repr√©sentations de trag√©dies grecques chaque printemps. Archim√®de y naquit vers -287 et d√©fendit la ville contre les Romains avec ses machines de guerre.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siracusa, colonie grecque fond√©e en -734, √Æle d'Ortygie, th√©√¢tre grec de 15 000 places, oreille de Denys (latomie)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"C√¥te ionienne, province de Syracuse, Sicile orientale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© grecque antique fond√©e en -734, th√©√¢tre de 15 000 places encore en usage, √Æle d'Ortygie, Sicile"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Syracuse √† Sicile, Italie"}
+  {name:"Syracuse ó Sicile, Italie",lat:37.0655,lng:15.2866,desc:"Syracuse fut l'une des plus grandes villes du monde antique au Ve siËcle av. J.-C., rivalisant avec AthËnes et Carthage. Son thÈ‚tre grec taillÈ dans le roc accueille toujours des reprÈsentations de tragÈdies grecques chaque printemps. ArchimËde y naquit vers -287 et dÈfendit la ville contre les Romains avec ses machines de guerre.",photo:"photos/parc_des_abruzzes.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siracusa, colonie grecque fondÈe en -734, Óle d'Ortygie, thÈ‚tre grec de 15 000 places, oreille de Denys (latomie)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"CÙte ionienne, province de Syracuse, Sicile orientale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ grecque antique fondÈe en -734, thÈ‚tre de 15 000 places encore en usage, Óle d'Ortygie, Sicile"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Syracuse ‡ Sicile, Italie"}
   ]},
-  {name:"Palerme ‚Äî Sicile (Cappella Palatina)",lat:38.1111,lng:13.3554,desc:"La Cappella Palatina de Palerme (1143) est un chef-d'≈ìuvre de l'art normanno-arabe-byzantin : ses mosa√Øques dor√©es byzantines recouvrent des plafonds en bois de style islamique avec des inscriptions en arabe ‚Äî un syncr√©tisme culturel unique du r√®gne de Roger II de Sicile.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cappella Palatina, chapelle palatine normande-arabe-byzantine (1143), mosa√Øques d'or de 6 340 m¬≤, Palazzo dei Normanni"},
+  {name:"Palerme ó Sicile (Cappella Palatina)",lat:38.1111,lng:13.3554,desc:"La Cappella Palatina de Palerme (1143) est un chef-d'úuvre de l'art normanno-arabe-byzantin : ses mosaÔques dorÈes byzantines recouvrent des plafonds en bois de style islamique avec des inscriptions en arabe ó un syncrÈtisme culturel unique du rËgne de Roger II de Sicile.",photo:"photos/palerme.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cappella Palatina, chapelle palatine normande-arabe-byzantine (1143), mosaÔques d'or de 6 340 m≤, Palazzo dei Normanni"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Palazzo dei Normanni, Piazza del Parlamento, Palerme, Sicile"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chapelle normando-arabo-byzantine aux mosa√Øques d'or de 6 340 m¬≤, Sicile"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chapelle normando-arabo-byzantine aux mosaÔques d'or de 6 340 m≤, Sicile"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palerme en Sicile (Cappella Palatina)"}
   ]},
-  {name:"Scala dei Turchi ‚Äî Sicile, Italie",lat:37.2903,lng:13.49,desc:"La Scala dei Turchi doit son nom aux pirates sarrasins qui auraient utilis√© ses gradins de marne blanche comme abri lors de leurs raids. La marne, calcaire tendre, se d√©coupe naturellement en gradins parfaits sous l'action des vagues et du vent.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Falaises de marne blanche en gradins naturels sur la mer, erosion √©olienne et marine, commune de Realmonte, Agrigente"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Realmonte, province d'Agrigente, c√¥te sud de la Sicile"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Falaises de marne blanche naturellement sculpt√©es en gradins par la mer, province d'Agrigente, Sicile"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Scala dei Turchi √† Sicile, Italie"}
+  {name:"Scala dei Turchi ó Sicile, Italie",lat:37.2903,lng:13.49,desc:"La Scala dei Turchi doit son nom aux pirates sarrasins qui auraient utilisÈ ses gradins de marne blanche comme abri lors de leurs raids. La marne, calcaire tendre, se dÈcoupe naturellement en gradins parfaits sous l'action des vagues et du vent.",photo:"photos/scala_dei_turchi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Falaises de marne blanche en gradins naturels sur la mer, erosion Èolienne et marine, commune de Realmonte, Agrigente"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Realmonte, province d'Agrigente, cÙte sud de la Sicile"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Falaises de marne blanche naturellement sculptÈes en gradins par la mer, province d'Agrigente, Sicile"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Scala dei Turchi ‡ Sicile, Italie"}
   ]},
-  {name:"Vall√©e des Temples ‚Äî Agrigente, Italie",lat:37.2908,lng:13.5881,desc:"Les temples grecs d'Agrigente, vieux de 2 500 ans, sont mieux conserv√©s que la plupart des temples de Gr√®ce elle-m√™me. Le Temple de la Concordia doit sa survie au fait qu'il fut transform√© en √©glise chr√©tienne au VIe si√®cle, ce qui √©vita son d√©mant√®lement.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Valle dei Templi, 7 temples doriques grecs du Ve si√®cle av. J.-C., Temple de la Concordia (6m de haut), UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'Agrigente, c√¥te sud de la Sicile, province d'Agrigente"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sept temples doriques du Ve si√®cle av. J.-C., mieux conserv√©s que beaucoup de temples grecs en Gr√®ce, Agrigente"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Vall√©e des Temples √† Agrigente, Italie"}
+  {name:"VallÈe des Temples ó Agrigente, Italie",lat:37.2908,lng:13.5881,desc:"Les temples grecs d'Agrigente, vieux de 2 500 ans, sont mieux conservÈs que la plupart des temples de GrËce elle-mÍme. Le Temple de la Concordia doit sa survie au fait qu'il fut transformÈ en Èglise chrÈtienne au VIe siËcle, ce qui Èvita son dÈmantËlement.",photo:"photos/vallee_des_temples.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Valle dei Templi, 7 temples doriques grecs du Ve siËcle av. J.-C., Temple de la Concordia (6m de haut), UNESCO"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'Agrigente, cÙte sud de la Sicile, province d'Agrigente"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sept temples doriques du Ve siËcle av. J.-C., mieux conservÈs que beaucoup de temples grecs en GrËce, Agrigente"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La VallÈe des Temples ‡ Agrigente, Italie"}
   ]},
-  {name:"Marrakech ‚Äî Maroc (Djemaa el-Fna)",lat:31.6258,lng:-7.9892,desc:"La place Djemaa el-Fna de Marrakech est class√©e par l'UNESCO comme patrimoine immat√©riel de l'humanit√© ‚Äî une premi√®re pour un espace public. Elle se transforme chaque soir en gigantesque restaurant en plein air avec des dizaines de stands de cuisine.",hints:[
+  {name:"Marrakech ó Maroc (Djemaa el-Fna)",lat:31.6258,lng:-7.9892,desc:"La place Djemaa el-Fna de Marrakech est classÈe par l'UNESCO comme patrimoine immatÈriel de l'humanitÈ ó une premiËre pour un espace public. Elle se transforme chaque soir en gigantesque restaurant en plein air avec des dizaines de stands de cuisine.",photo:"photos/vallee_des_temples.JPG",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Place Djemaa el-Fna, conteurs (hlaykia), charmeurs de serpents, acrobates et vendeurs de jus d'orange, UNESCO patrimoine oral 2001"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"M√©dina de Marrakech, province de Marrakech, au pied de l'Atlas"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande place anim√©e de la m√©dina, patrimoine immat√©riel UNESCO, conteurs et charmeurs de serpents, Maroc"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"MÈdina de Marrakech, province de Marrakech, au pied de l'Atlas"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande place animÈe de la mÈdina, patrimoine immatÈriel UNESCO, conteurs et charmeurs de serpents, Maroc"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Marrakech au Maroc (Djemaa el-Fna)"}
   ]},
-  {name:"Palmeraie de Skoura ‚Äî Maroc",lat:31.06,lng:-6.56,desc:"La palmeraie de Skoura abrite des ksour ‚Äî ch√¢teaux de pis√© ‚Äî dont certains sont habit√©s depuis le XVIIe si√®cle. Ces forteresses en terre crue, construites sans architecte, r√©sistent mieux aux s√©ismes que nombre de constructions modernes.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Oasis de 45 000 palmiers-dattiers, ksour fortifi√©s dont Amridil (XVIIe), route des Kasbahs, vall√©e du Draa"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province d'Ouarzazate, route nationale n¬∞10, vall√©e du Dad√®s, pr√©-Sahara"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Oasis de 45 000 palmiers-dattiers et ksour fortifi√©s du XVIIe si√®cle, route des Kasbahs, pr√©-Sahara marocain"},
+  {name:"Palmeraie de Skoura ó Maroc",lat:31.06,lng:-6.56,desc:"La palmeraie de Skoura abrite des ksour ó ch‚teaux de pisÈ ó dont certains sont habitÈs depuis le XVIIe siËcle. Ces forteresses en terre crue, construites sans architecte, rÈsistent mieux aux sÈismes que nombre de constructions modernes.",photo:"photos/palmeraie_de_skoura.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Oasis de 45 000 palmiers-dattiers, ksour fortifiÈs dont Amridil (XVIIe), route des Kasbahs, vallÈe du Draa"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province d'Ouarzazate, route nationale n∞10, vallÈe du DadËs, prÈ-Sahara"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Oasis de 45 000 palmiers-dattiers et ksour fortifiÈs du XVIIe siËcle, route des Kasbahs, prÈ-Sahara marocain"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palmeraie de Skoura au Maroc"}
   ]},
-  {name:"Oasis de Dakhla ‚Äî Maroc",lat:23.7136,lng:-15.9355,desc:"Dakhla est une p√©ninsule de 40 km formant le lagon le plus parfait de l'Atlantique pour les sports de glisse. Ses vents constants de force 4-5 Beaufort et ses eaux peu profondes turquoise en font la capitale mondiale du kitesurf. Jacques-Yves Cousteau l'explorait dans les ann√©es 1970, fascin√© par la richesse de ses fonds marins.",hints:[
+  {name:"Oasis de Dakhla ó Maroc",lat:23.7136,lng:-15.9355,desc:"Dakhla est une pÈninsule de 40 km formant le lagon le plus parfait de l'Atlantique pour les sports de glisse. Ses vents constants de force 4-5 Beaufort et ses eaux peu profondes turquoise en font la capitale mondiale du kitesurf. Jacques-Yves Cousteau l'explorait dans les annÈes 1970, fascinÈ par la richesse de ses fonds marins.",photo:"photos/oasis_de_dakhla.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lagon de 40 km, spot mondial de kitesurf et windsurf, province de Oued ed-Dahab, Sahara occidental sous administration marocaine"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Dakhla-Oued Ed-Dahab, sud du Sahara occidental, c√¥te atlantique africaine"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Dakhla-Oued Ed-Dahab, sud du Sahara occidental, cÙte atlantique africaine"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dakhla, lagon et kitesurf, Sahara occidental, Maroc"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Oasis de Dakhla au Maroc"}
   ]},
-  {name:"Gondar ‚Äî √âthiopie (Fasiladas)",lat:12.603,lng:37.464,desc:"Gondar, surnomm√©e ¬´Camelot africain¬ª, abrite le Fasil Ghebbi ‚Äî enceinte royale du XVIIe si√®cle comprenant 5 ch√¢teaux. L'influence des architectes indiens, arabes et portugais cr√©e un style architectural unique. La piscine de Fasiladas se remplit une fois par an pour le festival Timkat (√âpiphanie) ‚Äî des milliers de fid√®les s'y plongent.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fasil Ghebbi, enceinte royale de 900 x 900m, palais de Fasiladas (1632), Timkat (√©piphanie), piscine de b√©n√©diction"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion d'Amhara, ancienne capitale imp√©riale d'Afrique de l'Est, √† 730 km de la capitale actuelle"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Enceinte royale du XVIIe si√®cle aux cinq ch√¢teaux, piscine de b√©n√©diction du festival Timkat, nord-ouest de l'√âthiopie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gondar en √âthiopie (Fasiladas)"}
+  {name:"Gondar ó …thiopie (Fasiladas)",lat:12.603,lng:37.464,desc:"Gondar, surnommÈe ´Camelot africainª, abrite le Fasil Ghebbi ó enceinte royale du XVIIe siËcle comprenant 5 ch‚teaux. L'influence des architectes indiens, arabes et portugais crÈe un style architectural unique. La piscine de Fasiladas se remplit une fois par an pour le festival Timkat (…piphanie) ó des milliers de fidËles s'y plongent.",photo:"photos/oasis_de_dakhla.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fasil Ghebbi, enceinte royale de 900 x 900m, palais de Fasiladas (1632), Timkat (Èpiphanie), piscine de bÈnÈdiction"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion d'Amhara, ancienne capitale impÈriale d'Afrique de l'Est, ‡ 730 km de la capitale actuelle"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Enceinte royale du XVIIe siËcle aux cinq ch‚teaux, piscine de bÈnÈdiction du festival Timkat, nord-ouest de l'…thiopie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gondar en …thiopie (Fasiladas)"}
   ]},
-  {name:"Parc de l'Etosha ‚Äî Namibie",lat:-18.856,lng:16.329,desc:"La d√©pression sal√©e d'Etosha √©tait autrefois un lac int√©rieur immense. Ass√©ch√© il y a des mill√©naires, son lit de sel blanc est maintenant visible depuis l'espace. En saison s√®che, les √©l√©phants, lions, rhinoc√©ros et z√®bres convergent vers les seuls points d'eau ‚Äî offrant des sc√®nes de safari uniques.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc national d'Etosha, grande d√©pression sal√©e de 4 800 km¬≤, points d'eau √©clair√©s la nuit, rhinos noirs, √©l√©phants, lions"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion du nord d'un pays d'Afrique australe, √† 500 km de la capitale, savane semi-aride"},
+  {name:"Parc de l'Etosha ó Namibie",lat:-18.856,lng:16.329,desc:"La dÈpression salÈe d'Etosha Ètait autrefois un lac intÈrieur immense. AssÈchÈ il y a des millÈnaires, son lit de sel blanc est maintenant visible depuis l'espace. En saison sËche, les ÈlÈphants, lions, rhinocÈros et zËbres convergent vers les seuls points d'eau ó offrant des scËnes de safari uniques.",photo:"photos/parc_de_l_etosha.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc national d'Etosha, grande dÈpression salÈe de 4 800 km≤, points d'eau ÈclairÈs la nuit, rhinos noirs, ÈlÈphants, lions"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion du nord d'un pays d'Afrique australe, ‡ 500 km de la capitale, savane semi-aride"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc d'Etosha, grande plaine de sel, safari nocturne, Namibie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc de l'Etosha en Namibie"}
   ]},
-  {name:"Lamu ‚Äî Kenya",lat:-2.2694,lng:40.9022,desc:"La vieille ville de Lamu est la seule ville swahilie m√©di√©vale encore habit√©e et quasiment intacte. Elle ne compte aucune voiture ni moto ‚Äî les √¢nes et les bateaux sont les seuls moyens de transport, comme depuis des si√®cles.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vieille ville de Lamu, plus ancienne ville swahilie habit√©e d'Afrique de l'Est, pas de voitures, √¢nes et boutres, UNESCO 2001"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle de la c√¥te orientale d'Afrique, oc√©an Indien, plus ancienne ville swahilie habit√©e"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancienne ville swahilie encore habit√©e du Kenya, pas de voitures, √¢nes et boutres, UNESCO"},
+  {name:"Lamu ó Kenya",lat:-2.2694,lng:40.9022,desc:"La vieille ville de Lamu est la seule ville swahilie mÈdiÈvale encore habitÈe et quasiment intacte. Elle ne compte aucune voiture ni moto ó les ‚nes et les bateaux sont les seuls moyens de transport, comme depuis des siËcles.",photo:"photos/lamu.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vieille ville de Lamu, plus ancienne ville swahilie habitÈe d'Afrique de l'Est, pas de voitures, ‚nes et boutres, UNESCO 2001"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle de la cÙte orientale d'Afrique, ocÈan Indien, plus ancienne ville swahilie habitÈe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancienne ville swahilie encore habitÈe du Kenya, pas de voitures, ‚nes et boutres, UNESCO"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lamu au Kenya"}
   ]},
-  {name:"Chutes de Tugela ‚Äî Afrique du Sud",lat:-28.7536,lng:29.2047,desc:"Les chutes de Tugela plongent en 5 sauts successifs depuis le sommet du Drakensberg. En hiver, l'eau g√®le partiellement, cr√©ant des cascades de glace spectaculaires visibles uniquement depuis les hauteurs.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tugela Falls, 948m en 5 sauts, 2e plus haute cascade du monde apr√®s Angel, Mont-aux-Sources, Drakensberg"},
+  {name:"Chutes de Tugela ó Afrique du Sud",lat:-28.7536,lng:29.2047,desc:"Les chutes de Tugela plongent en 5 sauts successifs depuis le sommet du Drakensberg. En hiver, l'eau gËle partiellement, crÈant des cascades de glace spectaculaires visibles uniquement depuis les hauteurs.",photo:"photos/chutes_de_tugela.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tugela Falls, 948m en 5 sauts, 2e plus haute cascade du monde aprËs Angel, Mont-aux-Sources, Drakensberg"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mont-aux-Sources, Drakensberg (uKhahlamba), KwaZulu-Natal, Afrique du Sud"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"2e plus haute cascade du monde (948 m), plonge du Drakensberg en 5 sauts, KwaZulu-Natal"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes de Tugela en Afrique du Sud"}
   ]},
-  {name:"Lac Malawi ‚Äî Malawi",lat:-12,lng:34.5,desc:"Le lac Malawi abrite plus d'esp√®ces de poissons d'eau douce que tout autre lac ‚Äî pr√®s de 1 000 esp√®ces de cichlid√©s end√©miques. Son eau si transparente permet de voir jusqu'√† 20 m√®tres de profondeur. Le lac occupe 20% de la surface du Malawi et repr√©sente la principale ressource en prot√©ines animales du pays.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Niassa, 3e plus grand lac d'Afrique (29 600 km¬≤), 1 000 esp√®ces de cichlid√©s end√©miques, Livingstone l'appela Lac Nyasa"},
+  {name:"Lac Malawi ó Malawi",lat:-12,lng:34.5,desc:"Le lac Malawi abrite plus d'espËces de poissons d'eau douce que tout autre lac ó prËs de 1 000 espËces de cichlidÈs endÈmiques. Son eau si transparente permet de voir jusqu'‡ 20 mËtres de profondeur. Le lac occupe 20% de la surface du Malawi et reprÈsente la principale ressource en protÈines animales du pays.",photo:"photos/lac_malawi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Niassa, 3e plus grand lac d'Afrique (29 600 km≤), 1 000 espËces de cichlidÈs endÈmiques, Livingstone l'appela Lac Nyasa"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grand Rift africain, tripoint de trois pays d'Afrique orientale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"3e plus grand lac d'Afrique, abritant 1 000 esp√®ces de cichlid√©s end√©miques, eaux cristallines, Afrique centrale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"3e plus grand lac d'Afrique, abritant 1 000 espËces de cichlidÈs endÈmiques, eaux cristallines, Afrique centrale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac Malawi (Afrique centrale)"}
   ]},
-  {name:"Boulders Beach ‚Äî Afrique du Sud",lat:-34.1979,lng:18.4511,desc:"La colonie de manchots de Boulders Beach fut fond√©e par seulement deux couples en 1982. Elle compte aujourd'hui plus de 3 000 individus. Ces manchots africains (Spheniscus demersus) sont class√©s ¬´en danger¬ª ‚Äî leur population mondiale a diminu√© de 70% depuis 1970.",hints:[
+  {name:"Boulders Beach ó Afrique du Sud",lat:-34.1979,lng:18.4511,desc:"La colonie de manchots de Boulders Beach fut fondÈe par seulement deux couples en 1982. Elle compte aujourd'hui plus de 3 000 individus. Ces manchots africains (Spheniscus demersus) sont classÈs ´en dangerª ó leur population mondiale a diminuÈ de 70% depuis 1970.",photo:"photos/boulders_beach.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plage de Boulders, Simon's Town, colonie de manchots africains (Spheniscus demersus), seule colonie en Afrique du Sud"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Simon's Town, p√©ninsule du Cap, province du Cap-Occidental, Afrique du Sud"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Simon's Town, pÈninsule du Cap, province du Cap-Occidental, Afrique du Sud"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plage aux manchots africains de Boulders, Cape Peninsula, Afrique du Sud"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Boulders Beach en Afrique du Sud"}
   ]},
-  {name:"Eph√®se ‚Äî Turquie (biblioth√®que)",lat:37.9395,lng:27.3417,desc:"La biblioth√®que de Celse d'√âph√®se, construite en 135 ap. J.-C., abritait 12 000 rouleaux de parchemin. Sa fa√ßade cr√©e une illusion d'optique : des colonnes centrales plus grandes la font para√Ætre plus haute qu'elle n'est. La tombe du consul Ga√Øus Julius Celsus se trouve directement sous le b√¢timent qu'il finan√ßa.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Biblioth√®que de Celse (135 ap. J.-C.), fa√ßade √† 2 √©tages avec niches de statues (Sagesse, Connaissance, Intelligence, Vertu)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cit√© romaine d'√âph√®se, Sel√ßuk, province d'?zmir, c√¥te √©g√©enne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Biblioth√®que de Celse, joyau d'√âph√®se, c√¥te √©g√©enne turque"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Eph√®se en Turquie (biblioth√®que)"}
+  {name:"EphËse ó Turquie (bibliothËque)",lat:37.9395,lng:27.3417,desc:"La bibliothËque de Celse d'…phËse, construite en 135 ap. J.-C., abritait 12 000 rouleaux de parchemin. Sa faÁade crÈe une illusion d'optique : des colonnes centrales plus grandes la font paraÓtre plus haute qu'elle n'est. La tombe du consul GaÔus Julius Celsus se trouve directement sous le b‚timent qu'il finanÁa.",photo:"photos/ephese.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"BibliothËque de Celse (135 ap. J.-C.), faÁade ‡ 2 Ètages avec niches de statues (Sagesse, Connaissance, Intelligence, Vertu)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"CitÈ romaine d'…phËse, SelÁuk, province d'?zmir, cÙte ÈgÈenne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"BibliothËque de Celse, joyau d'…phËse, cÙte ÈgÈenne turque"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'EphËse en Turquie (bibliothËque)"}
   ]},
-  {name:"Aspendos ‚Äî Turquie",lat:36.9384,lng:31.1715,desc:"Le th√©√¢tre d'Aspendos, construit au IIe si√®cle ap. J.-C., peut accueillir 15 000 spectateurs et est si bien conserv√© qu'il accueille encore aujourd'hui le festival international d'op√©ra d'Aspendos chaque √©t√©. Sa sc√®ne de 21 m√®tres de haut est la seule de cette √©poque encore intacte dans le monde m√©diterran√©en.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Th√©√¢tre romain du IIe si√®cle de 15 000 places, un des mieux conserv√©s du monde, Marcus Aurelius, province d'Antalya"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District de Serik, province d'Antalya, c√¥te m√©diterran√©enne, th√©√¢tre de 15 000 places"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Th√©√¢tre romain du IIe si√®cle √† 15 000 places, unique sc√®ne de 21 m encore intacte, province d'Antalya"},
+  {name:"Aspendos ó Turquie",lat:36.9384,lng:31.1715,desc:"Le thÈ‚tre d'Aspendos, construit au IIe siËcle ap. J.-C., peut accueillir 15 000 spectateurs et est si bien conservÈ qu'il accueille encore aujourd'hui le festival international d'opÈra d'Aspendos chaque ÈtÈ. Sa scËne de 21 mËtres de haut est la seule de cette Èpoque encore intacte dans le monde mÈditerranÈen.",photo:"photos/aspendos.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"ThÈ‚tre romain du IIe siËcle de 15 000 places, un des mieux conservÈs du monde, Marcus Aurelius, province d'Antalya"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District de Serik, province d'Antalya, cÙte mÈditerranÈenne, thÈ‚tre de 15 000 places"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"ThÈ‚tre romain du IIe siËcle ‡ 15 000 places, unique scËne de 21 m encore intacte, province d'Antalya"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Aspendos en Turquie"}
   ]},
-  {name:"Yosemite ‚Äî Californie, USA",lat:37.7456,lng:-119.5936,desc:"El Capitan, la paroi granitique verticale de 914 m√®tres de Yosemite, fut gravi pour la premi√®re fois sans √©quipement d'aide en 2017 par Alex Honnold. Cette ascension en solo int√©gral fut qualifi√©e de ¬´plus grande prouesse athl√©tique de tous les temps¬ª.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Yosemite Valley, El Capitan (914m de granit vertical), Half Dome, Bridalveil Fall, John Muir et Roosevelt y camp√®rent en 1903"},
+  {name:"Yosemite ó Californie, USA",lat:37.7456,lng:-119.5936,desc:"El Capitan, la paroi granitique verticale de 914 mËtres de Yosemite, fut gravi pour la premiËre fois sans Èquipement d'aide en 2017 par Alex Honnold. Cette ascension en solo intÈgral fut qualifiÈe de ´plus grande prouesse athlÈtique de tous les tempsª.",photo:"photos/yosemite.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Yosemite Valley, El Capitan (914m de granit vertical), Half Dome, Bridalveil Fall, John Muir et Roosevelt y campËrent en 1903"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sierra Nevada, Mariposa County, Tuolumne County, centre de la Californie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc aux parois granitiques verticales de 900 m, grimp√© en solo en 2017, cascades et s√©quoias g√©ants"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Yosemite √† Californie, USA"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc aux parois granitiques verticales de 900 m, grimpÈ en solo en 2017, cascades et sÈquoias gÈants"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Yosemite ‡ Californie, USA"}
   ]},
-  {name:"Zion Canyon ‚Äî Utah, USA",lat:37.2982,lng:-113.0263,desc:"Angels Landing dans Zion Canyon est l'une des randonn√©es les plus dangereuses d'Am√©rique. 6 personnes sont mortes en chutant depuis 2004, mais l'affluence record de 4 millions de visiteurs par an a conduit √† l'instauration d'un permis de tirage au sort en 2022.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Angels Landing (487m, 1 500 cha√Ænes en acier), Narrows (gorge de 800m large), gr√®s rouge Navajo, Virgin River"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comt√© de Washington, Utah, √† 280 km au nord-est de Las Vegas"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc national de Zion, canyon de gr√®s rouge, Utah"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Zion Canyon √† Utah, USA"}
+  {name:"Zion Canyon ó Utah, USA",lat:37.2982,lng:-113.0263,desc:"Angels Landing dans Zion Canyon est l'une des randonnÈes les plus dangereuses d'AmÈrique. 6 personnes sont mortes en chutant depuis 2004, mais l'affluence record de 4 millions de visiteurs par an a conduit ‡ l'instauration d'un permis de tirage au sort en 2022.",photo:"photos/zion_canyon.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Angels Landing (487m, 1 500 chaÓnes en acier), Narrows (gorge de 800m large), grËs rouge Navajo, Virgin River"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ComtÈ de Washington, Utah, ‡ 280 km au nord-est de Las Vegas"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc national de Zion, canyon de grËs rouge, Utah"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Zion Canyon ‡ Utah, USA"}
   ]},
-  {name:"Bryce Canyon ‚Äî Utah, USA",lat:37.593,lng:-112.1871,desc:"Les ¬´hoodoos¬ª de Bryce Canyon se forment en 3 millions d'ann√©es gr√¢ce √† l'alternance gel-d√©gel qui brise la roche. Le parc perd environ 30 cm de ses formations par tranche de 50 √† 65 ans ‚Äî un d√©clin imperceptible √† l'√©chelle humaine mais constant.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hoodoos de gr√®s rose et orange, amphith√©√¢tre de Thor's Hammer, Silent City, altitude de 2 700m, plateau de Paunsaugunt"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comt√© de Garfield, Utah, √† 2 700m d'altitude, 90 km de Zion"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"For√™t de 2 000 chemin√©es de f√©es en gr√®s rose et orange √† 2 700 m d'altitude, plateau du Colorado, Utah"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bryce Canyon √† Utah, USA"}
+  {name:"Bryce Canyon ó Utah, USA",lat:37.593,lng:-112.1871,desc:"Les ´hoodoosª de Bryce Canyon se forment en 3 millions d'annÈes gr‚ce ‡ l'alternance gel-dÈgel qui brise la roche. Le parc perd environ 30 cm de ses formations par tranche de 50 ‡ 65 ans ó un dÈclin imperceptible ‡ l'Èchelle humaine mais constant.",photo:"photos/bryce_canyon.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hoodoos de grËs rose et orange, amphithÈ‚tre de Thor's Hammer, Silent City, altitude de 2 700m, plateau de Paunsaugunt"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ComtÈ de Garfield, Utah, ‡ 2 700m d'altitude, 90 km de Zion"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"ForÍt de 2 000 cheminÈes de fÈes en grËs rose et orange ‡ 2 700 m d'altitude, plateau du Colorado, Utah"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bryce Canyon ‡ Utah, USA"}
   ]},
-  {name:"Death Valley ‚Äî Californie, USA",lat:36.5232,lng:-116.9325,desc:"La Vall√©e de la Mort d√©tient le record mondial de temp√©rature enregistr√©e (56,7¬∞C en 1913). Paradoxalement, elle accueille des fleurs sauvages spectaculaires lors des ¬´superblooms¬ª rares, quand les graines dormantes germent apr√®s une pluie exceptionnelle.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Badwater Basin (-85m), temp√©rature record de 56,7¬∞C (1913), Racetrack Playa aux pierres glissantes, Zabriskie Point"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comt√©s d'Inyo et Nye, fronti√®re Californie-Nevada, Mojave Desert"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vall√©e de la Mort, point le plus bas et le plus chaud des USA"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Death Valley √† Californie, USA"}
+  {name:"Death Valley ó Californie, USA",lat:36.5232,lng:-116.9325,desc:"La VallÈe de la Mort dÈtient le record mondial de tempÈrature enregistrÈe (56,7∞C en 1913). Paradoxalement, elle accueille des fleurs sauvages spectaculaires lors des ´superbloomsª rares, quand les graines dormantes germent aprËs une pluie exceptionnelle.",photo:"photos/death_valley.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Badwater Basin (-85m), tempÈrature record de 56,7∞C (1913), Racetrack Playa aux pierres glissantes, Zabriskie Point"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ComtÈs d'Inyo et Nye, frontiËre Californie-Nevada, Mojave Desert"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"VallÈe de la Mort, point le plus bas et le plus chaud des USA"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Death Valley ‡ Californie, USA"}
   ]},
-  {name:"Arches National Park ‚Äî Utah, USA",lat:38.7331,lng:-109.5925,desc:"Le parc des Arches contient plus de 2 000 arches naturelles en gr√®s rouge sur une superficie de 300 km¬≤. La Delicate Arch, haute de 16 m√®tres, est l'embl√®me de l'Utah imprim√© sur les plaques d'immatriculation de l'√âtat. En 2008, Wall Arch, l'une des plus grandes, s'effondra brusquement dans la nuit.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Delicate Arch (16m de haut), 2 000 arches naturelles en gr√®s Entrada, Landscape Arch (88m d'envergure), Moab Utah"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comt√© de Grand, Utah, √† 8 km de Moab, plateau Colorado"},
+  {name:"Arches National Park ó Utah, USA",lat:38.7331,lng:-109.5925,desc:"Le parc des Arches contient plus de 2 000 arches naturelles en grËs rouge sur une superficie de 300 km≤. La Delicate Arch, haute de 16 mËtres, est l'emblËme de l'Utah imprimÈ sur les plaques d'immatriculation de l'…tat. En 2008, Wall Arch, l'une des plus grandes, s'effondra brusquement dans la nuit.",photo:"photos/arches_national_park.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Delicate Arch (16m de haut), 2 000 arches naturelles en grËs Entrada, Landscape Arch (88m d'envergure), Moab Utah"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ComtÈ de Grand, Utah, ‡ 8 km de Moab, plateau Colorado"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc des Arches, Delicate Arch, 2000 arches naturelles, Utah"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Arches National Park √† Utah, USA"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Arches National Park ‡ Utah, USA"}
   ]},
-  {name:"Seattle Space Needle ‚Äî USA",lat:47.6205,lng:-122.3493,desc:"La Space Needle de Seattle fut construite en 398 jours pour l'Exposition universelle de 1962. Son restaurant tournant SkyCity effectue une rotation compl√®te en 47 minutes. Elle fut con√ßue pour r√©sister √† des vents de 300 km/h et √† un s√©isme de magnitude 9,1 ‚Äî plus puissant que le grand s√©isme de Seattle de 1965.",hints:[
+  {name:"Seattle Space Needle ó USA",lat:47.6205,lng:-122.3493,desc:"La Space Needle de Seattle fut construite en 398 jours pour l'Exposition universelle de 1962. Son restaurant tournant SkyCity effectue une rotation complËte en 47 minutes. Elle fut conÁue pour rÈsister ‡ des vents de 300 km/h et ‡ un sÈisme de magnitude 9,1 ó plus puissant que le grand sÈisme de Seattle de 1965.",photo:"photos/seattle_space_needle.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tour de 184m construite pour l'Exposition universelle de 1962, restaurant tournant SkyCity, sommet en forme d'OVNI, Seattle Center"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Seattle Center, Uptown, Seattle, √âtat de Washington, nord-ouest"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Seattle Center, Uptown, Seattle, …tat de Washington, nord-ouest"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Space Needle, tour en OVNI de l'Expo 62, Seattle, Washington"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Seattle Space Needle en USA"}
   ]},
-  {name:"Chicago Cloud Gate ‚Äî USA",lat:41.8827,lng:-87.6233,desc:"Cloud Gate d'Anish Kapoor, surnomm√©e ¬´The Bean¬ª, est faite de 168 plaques d'acier inoxydable soud√©es sans aucun joint visible. Elle r√©fl√©chit le skyline de Chicago en le d√©formant. Ses 110 tonnes reposent sur seulement 6 pieds d'ancrage ‚Äî son poids est compens√© par une structure enterr√©e dans le sol du parc.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cloud Gate de Anish Kapoor (2006), sculpture en acier de 110 tonnes surnomm√©e 'The Bean', AT&T Plaza, Millennium Park"},
+  {name:"Chicago Cloud Gate ó USA",lat:41.8827,lng:-87.6233,desc:"Cloud Gate d'Anish Kapoor, surnommÈe ´The Beanª, est faite de 168 plaques d'acier inoxydable soudÈes sans aucun joint visible. Elle rÈflÈchit le skyline de Chicago en le dÈformant. Ses 110 tonnes reposent sur seulement 6 pieds d'ancrage ó son poids est compensÈ par une structure enterrÈe dans le sol du parc.",photo:"photos/chicago_cloud_gate.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cloud Gate de Anish Kapoor (2006), sculpture en acier de 110 tonnes surnommÈe 'The Bean', AT&T Plaza, Millennium Park"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"AT&T Plaza, Millennium Park, Michigan Avenue, Loop, Chicago, Illinois"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cloud Gate, sculpture haricot g√©ante de Chicago, Millennium Park"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cloud Gate, sculpture haricot gÈante de Chicago, Millennium Park"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chicago Cloud Gate en USA"}
   ]},
-  {name:"Niagara on the Lake ‚Äî Canada",lat:43.2554,lng:-79.0713,desc:"Niagara-on-the-Lake fut la premi√®re capitale du Haut-Canada en 1792. Br√ªl√©e par les Am√©ricains en 1813, elle fut reconstruite dans un style g√©orgien homog√®ne. Son architecture victorienne si parfaitement pr√©serv√©e lui vaut le titre de ¬´ville la plus jolie du Canada¬ª.",hints:[
+  {name:"Niagara on the Lake ó Canada",lat:43.2554,lng:-79.0713,desc:"Niagara-on-the-Lake fut la premiËre capitale du Haut-Canada en 1792. Br˚lÈe par les AmÈricains en 1813, elle fut reconstruite dans un style gÈorgien homogËne. Son architecture victorienne si parfaitement prÈservÈe lui vaut le titre de ´ville la plus jolie du Canadaª.",photo:"photos/niagara_on_the_lake.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ville victorienne au bord d'un grand lac, Fort George (1796), Shaw Festival, vignobles sur l'escarpement calcaire"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"P√©ninsule entre deux grands lacs, √† l'embouchure d'une rivi√®re c√©l√®bre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"PÈninsule entre deux grands lacs, ‡ l'embouchure d'une riviËre cÈlËbre"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Niagara-on-the-Lake, ville victorienne et vignobles, Ontario, Canada"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Niagara-on-the-Lake, Ontario, Canada"}
   ]},
-  {name:"Capilano Suspension Bridge ‚Äî Vancouver, Canada",lat:49.3429,lng:-123.1149,desc:"Le pont suspendu de Capilano se balance sous vos pieds √† 70 m√®tres au-dessus d'une rivi√®re glaciale. En 1956, il fut renforc√© avec du c√¢ble en acier ‚Äî son pr√©d√©cesseur en chanvre et c√¢ble de c√®dre continuait √† balancer dangereusement sous les rafales de vent.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pont suspendu de 136m de long √† 70m au-dessus du canyon de la Capilano, construit en 1889 par George Grant Mackay"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive nord d'une grande ville c√¥ti√®re, for√™t pluviale temp√©r√©e, √† 15 km du centre"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pont suspendu de Capilano, for√™t de s√©quoias, Vancouver, Canada"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Capilano Suspension Bridge √† Vancouver, Canada"}
+  {name:"Capilano Suspension Bridge ó Vancouver, Canada",lat:49.3429,lng:-123.1149,desc:"Le pont suspendu de Capilano se balance sous vos pieds ‡ 70 mËtres au-dessus d'une riviËre glaciale. En 1956, il fut renforcÈ avec du c‚ble en acier ó son prÈdÈcesseur en chanvre et c‚ble de cËdre continuait ‡ balancer dangereusement sous les rafales de vent.",photo:"photos/capilano_suspension_bridge.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pont suspendu de 136m de long ‡ 70m au-dessus du canyon de la Capilano, construit en 1889 par George Grant Mackay"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive nord d'une grande ville cÙtiËre, forÍt pluviale tempÈrÈe, ‡ 15 km du centre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pont suspendu de Capilano, forÍt de sÈquoias, Vancouver, Canada"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Capilano Suspension Bridge ‡ Vancouver, Canada"}
   ]},
-  {name:"Gasp√©sie ‚Äî Qu√©bec, Canada",lat:49,lng:-65,desc:"Le Rocher Perc√© de Gasp√©sie compte parmi les plus grandes roches perc√©es au monde ‚Äî son arche mesure 20 m√®tres de haut. L'√Æle Bonaventure voisine h√©berge l'une des plus grandes colonies de fous de Bassan accessibles au monde, avec 100 000 couples nicheurs.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rocher Perc√© (88m), bonaventure avec 100 000 fous de Bassan, parc de la Gasp√©sie, mont Jacques-Cartier (1 268m)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"P√©ninsule gasp√©sienne, golfe d'un grand fleuve, r√©gion francophone d'Am√©rique du Nord"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rocher perc√© parmi les plus grands au monde, 100 000 fous de Bassan sur l'√Æle voisine, golfe du Saint-Laurent"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gasp√©sie √† Qu√©bec, Canada"}
+  {name:"GaspÈsie ó QuÈbec, Canada",lat:49,lng:-65,desc:"Le Rocher PercÈ de GaspÈsie compte parmi les plus grandes roches percÈes au monde ó son arche mesure 20 mËtres de haut. L'Óle Bonaventure voisine hÈberge l'une des plus grandes colonies de fous de Bassan accessibles au monde, avec 100 000 couples nicheurs.",photo:"photos/gaspesie.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rocher PercÈ (88m), bonaventure avec 100 000 fous de Bassan, parc de la GaspÈsie, mont Jacques-Cartier (1 268m)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"PÈninsule gaspÈsienne, golfe d'un grand fleuve, rÈgion francophone d'AmÈrique du Nord"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rocher percÈ parmi les plus grands au monde, 100 000 fous de Bassan sur l'Óle voisine, golfe du Saint-Laurent"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le GaspÈsie ‡ QuÈbec, Canada"}
   ]},
-  {name:"Churchill ‚Äî Manitoba, Canada (ours polaires)",lat:58.7684,lng:-94.165,desc:"Les ours polaires de Churchill se rassemblent en attendant que la baie d'Hudson g√®le pour aller chasser le phoque. La ville est la seule au monde o√π vous pouvez observer des ours polaires sauvages depuis des v√©hicules sp√©ciaux √† l'automne, avant qu'ils ne migrent sur la glace.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale mondiale des ours polaires, 900+ ours attendant la glace de la baie d'Hudson en octobre-novembre, aurores bor√©ales"},
+  {name:"Churchill ó Manitoba, Canada (ours polaires)",lat:58.7684,lng:-94.165,desc:"Les ours polaires de Churchill se rassemblent en attendant que la baie d'Hudson gËle pour aller chasser le phoque. La ville est la seule au monde o˘ vous pouvez observer des ours polaires sauvages depuis des vÈhicules spÈciaux ‡ l'automne, avant qu'ils ne migrent sur la glace.",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale mondiale des ours polaires, 900+ ours attendant la glace de la baie d'Hudson en octobre-novembre, aurores borÈales"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord de la baie d'Hudson, grand nord, accessible uniquement en train ou avion"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Seule ville au monde pour observer des ours polaires sauvages, 240 nuits d'aurores par an, baie d'Hudson"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Churchill √† Manitoba, Canada (ours polaires)"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Churchill ‡ Manitoba, Canada (ours polaires)"}
   ]},
-  {name:"Baie de Fundy ‚Äî Nouveau-Brunswick, Canada",lat:45.2,lng:-65,desc:"Les mar√©es de la Baie de Fundy, les plus grandes du monde, d√©placent 160 milliards de tonnes d'eau √† chaque cycle. Les rochers de Hopewell, qui ressemblent √† des pots de fleurs g√©ants √† mar√©e haute, sont enti√®rement submerg√©s et inaccessibles 6 heures apr√®s.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande mar√©e du monde (16,2m √† Hopewell Rocks), 100 milliards de tonnes d'eau √©chang√©es deux fois par jour"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Entre deux provinces maritimes, golfe d'un grand fleuve, mar√©es parmi les plus fortes au monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grandes mar√©es du monde (16 m), rochers en forme de pots de fleurs g√©ants, est du Canada"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Baie de Fundy √† Nouveau-Brunswick, Canada"}
+  {name:"Baie de Fundy ó Nouveau-Brunswick, Canada",lat:45.2,lng:-65,desc:"Les marÈes de la Baie de Fundy, les plus grandes du monde, dÈplacent 160 milliards de tonnes d'eau ‡ chaque cycle. Les rochers de Hopewell, qui ressemblent ‡ des pots de fleurs gÈants ‡ marÈe haute, sont entiËrement submergÈs et inaccessibles 6 heures aprËs.",photo:"photos/baie_de_fundy.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande marÈe du monde (16,2m ‡ Hopewell Rocks), 100 milliards de tonnes d'eau ÈchangÈes deux fois par jour"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Entre deux provinces maritimes, golfe d'un grand fleuve, marÈes parmi les plus fortes au monde"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grandes marÈes du monde (16 m), rochers en forme de pots de fleurs gÈants, est du Canada"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Baie de Fundy ‡ Nouveau-Brunswick, Canada"}
   ]},
-  {name:"Chichen Itza ‚Äî Mexique (cenote)",lat:20.6776,lng:-88.5681,desc:"La grande c√©note sacr√©e de Chichen Itza livra lors de fouilles au XXe si√®cle des dizaines de squelettes, bijoux de jade et objets en or ‚Äî confirmant les sacrifices mayas. On estime que des milliers d'offrandes reposent encore au fond inaccessible du puits.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cenote Sagrado (Xtoloc), puits de 60m de diam√®tre, sacrifices mayas de jade et d'or, Thompson y plongea en 1904"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cit√© maya d'une p√©ninsule calcaire tropicale, pyramide √† 9 niveaux"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Puits sacr√© de 60 m de diam√®tre, lieu de sacrifices mayas et offrandes d'or, site maya du Yucat√°n"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chichen Itza au Mexique (cenote)"}
+    {name:"Colca Canyon ó PÈrou",lat:-15.5279,lng:-71.8861,desc:"Le Colca Canyon de PÈrou est le canyon le plus profond de l'hÈmisphËre occidental. Le condor des Andes, le plus grand oiseau volant au monde avec ses 3,2 m d'envergure, y plane en cercles depuis le belvÈdËre de la Cruz del CÛndor ó un spectacle quotidien ‡ l'aube.",photo:"photos/colca_canyon.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CaÒon del Colca, 3 270m de profondeur, 2e plus profond du monde, condors des Andes depuis Cruz del Condor, prÈ-inca Collagua"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Caylloma, rÈgion d'Arequipa, Andes pÈruviennes, ‡ 150 km d'Arequipa"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyon du Colca, vol des condors, 2e plus profond du monde, PÈrou"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Colca Canyon au PÈrou"}
   ]},
-  {name:"Colca Canyon ‚Äî P√©rou",lat:-15.5279,lng:-71.8861,desc:"Le Colca Canyon de P√©rou est le canyon le plus profond de l'h√©misph√®re occidental. Le condor des Andes, le plus grand oiseau volant au monde avec ses 3,2 m d'envergure, y plane en cercles depuis le belv√©d√®re de la Cruz del C√≥ndor ‚Äî un spectacle quotidien √† l'aube.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ca√±on del Colca, 3 270m de profondeur, 2e plus profond du monde, condors des Andes depuis Cruz del Condor, pr√©-inca Collagua"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Caylloma, r√©gion d'Arequipa, Andes p√©ruviennes, √† 150 km d'Arequipa"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyon du Colca, vol des condors, 2e plus profond du monde, P√©rou"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Colca Canyon au P√©rou"}
+  {name:"Chan Chan ó Trujillo, PÈrou",lat:-8.1089,lng:-79.0741,desc:"Chan Chan, capitale du royaume Chim˙, fut conquise par les Incas en 1470 ó 50 ans avant l'arrivÈe des Espagnols. Les Incas y admirËrent tant la sophistication de la mÈtallurgie chim˙ qu'ils dÈportËrent des centaines d'orfËvres ‡ Cusco pour travailler ‡ leur cour.",photo:"photos/chan_chan.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande citÈ prÈcolombienne d'AmÈrique du Sud, capitale du royaume Chimu (850-1470), 20 km≤, adobe, UNESCO en pÈril"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"DÈsert cÙtier andin, plus grande citÈ d'adobe prÈcolombienne au monde"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande citÈ prÈcolombienne d'AmÈrique du Sud en adobe, 20 km≤, capitale du royaume Chim˙, PÈrou"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chan Chan ‡ Trujillo, PÈrou"}
   ]},
-  {name:"Chan Chan ‚Äî Trujillo, P√©rou",lat:-8.1089,lng:-79.0741,desc:"Chan Chan, capitale du royaume Chim√∫, fut conquise par les Incas en 1470 ‚Äî 50 ans avant l'arriv√©e des Espagnols. Les Incas y admir√®rent tant la sophistication de la m√©tallurgie chim√∫ qu'ils d√©port√®rent des centaines d'orf√®vres √† Cusco pour travailler √† leur cour.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande cit√© pr√©colombienne d'Am√©rique du Sud, capitale du royaume Chimu (850-1470), 20 km¬≤, adobe, UNESCO en p√©ril"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"D√©sert c√¥tier andin, plus grande cit√© d'adobe pr√©colombienne au monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande cit√© pr√©colombienne d'Am√©rique du Sud en adobe, 20 km¬≤, capitale du royaume Chim√∫, P√©rou"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chan Chan √† Trujillo, P√©rou"}
-  ]},
-  {name:"Carnaval de Barranquilla ‚Äî Colombie",lat:10.9878,lng:-74.7889,desc:"Le carnaval de Barranquilla est le deuxi√®me plus grand carnaval du monde apr√®s Rio. Class√© patrimoine immat√©riel de l'UNESCO en 2003, il fusionne les traditions africaines, indig√®nes et espagnoles. Sa Batalla de Flores (bataille de fleurs), la Grand Parade et le Garabato (danse de la mort et de la vie) durent 4 jours avant le Mardi Gras.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"2e carnaval du monde apr√®s Rio, 4 jours avant Mardi Gras, Cumbia, Mapal√©, Batalla de Flores, UNESCO patrimoine oral 2003"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Barranquilla, d√©partement de l'Atl√°ntico, c√¥te cara√Øbe colombienne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"2e plus grand carnaval au monde apr√®s Rio, patrimoine immat√©riel UNESCO, cumbia et mapal√©, Colombie cara√Øbe"},
+  {name:"Carnaval de Barranquilla ó Colombie",lat:10.9878,lng:-74.7889,desc:"Le carnaval de Barranquilla est le deuxiËme plus grand carnaval du monde aprËs Rio. ClassÈ patrimoine immatÈriel de l'UNESCO en 2003, il fusionne les traditions africaines, indigËnes et espagnoles. Sa Batalla de Flores (bataille de fleurs), la Grand Parade et le Garabato (danse de la mort et de la vie) durent 4 jours avant le Mardi Gras.",photo:"photos/carnaval_de_barranquilla.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"2e carnaval du monde aprËs Rio, 4 jours avant Mardi Gras, Cumbia, MapalÈ, Batalla de Flores, UNESCO patrimoine oral 2003"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Barranquilla, dÈpartement de l'Atl·ntico, cÙte caraÔbe colombienne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"2e plus grand carnaval au monde aprËs Rio, patrimoine immatÈriel UNESCO, cumbia et mapalÈ, Colombie caraÔbe"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Carnaval de Barranquilla en Colombie"}
   ]},
-  {name:"Roraima ‚Äî Venezuela (tepui)",lat:5.143,lng:-60.762,desc:"Le mont Roraima (2 810 m) est un tepui ‚Äî une montagne-table de gr√®s pr√©cambrien vieille de 1,8 milliard d'ann√©es. Son sommet de 31 km¬≤, toujours dans les nuages, abrite des esp√®ces v√©g√©tales uniques dont 35% sont end√©miques. Arthur Conan Doyle s'en inspira pour ¬´Le Monde Perdu¬ª (1912) ‚Äî un plateau o√π dinosaures et cr√©atures primitives survivraient.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mount Roraima (2 810m), tepui de 31 km¬≤ √† sommet plat, tripoint de trois pays d'Am√©rique du Sud, inspiration pour Le Monde Perdu de Conan "},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national d'Amazonie, tepuis √† sommet plat, tripoint de trois pays"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Montagne-table de gr√®s vieille de 1,8 milliard d'ann√©es, sommet dans les nuages, tripoint Venezuela-Br√©sil-Guyana"},
+  {name:"Roraima ó Venezuela (tepui)",lat:5.143,lng:-60.762,desc:"Le mont Roraima (2 810 m) est un tepui ó une montagne-table de grËs prÈcambrien vieille de 1,8 milliard d'annÈes. Son sommet de 31 km≤, toujours dans les nuages, abrite des espËces vÈgÈtales uniques dont 35% sont endÈmiques. Arthur Conan Doyle s'en inspira pour ´Le Monde Perduª (1912) ó un plateau o˘ dinosaures et crÈatures primitives survivraient.",photo:"photos/roraima.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mount Roraima (2 810m), tepui de 31 km≤ ‡ sommet plat, tripoint de trois pays d'AmÈrique du Sud, inspiration pour Le Monde Perdu de Conan "},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national d'Amazonie, tepuis ‡ sommet plat, tripoint de trois pays"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Montagne-table de grËs vieille de 1,8 milliard d'annÈes, sommet dans les nuages, tripoint Venezuela-BrÈsil-Guyana"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Roraima au Venezuela (tepui)"}
   ]},
-  {name:"Len√ß√≥is Maranhenses ‚Äî Br√©sil",lat:-2.4943,lng:-43.1291,desc:"Les dunes des Len√ß√≥is Maranhenses se forment et se d√©placent chaque ann√©e. Malgr√© leur apparence d√©sertique, les lacs qui s'y forment entre juin et septembre accueillent des piranhas, des raies et des tortues aquatiques ‚Äî ramen√©s par les poissons lors des crues.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"155 000 ha de dunes blanches de quartz avec lacs temporaires bleu turquoise de juin √† septembre"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"C√¥te atlantique tropicale, nord-est du sous-continent, dunes blanches et lagon"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dunes de sable blanc aux lacs turquoise temporaires peupl√©s de piranhas, nord-est du sous-continent"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Len√ß√≥is Maranhenses au Br√©sil"}
+  {name:"LenÁÛis Maranhenses ó BrÈsil",lat:-2.4943,lng:-43.1291,desc:"Les dunes des LenÁÛis Maranhenses se forment et se dÈplacent chaque annÈe. MalgrÈ leur apparence dÈsertique, les lacs qui s'y forment entre juin et septembre accueillent des piranhas, des raies et des tortues aquatiques ó ramenÈs par les poissons lors des crues.",photo:"photos/lencois_maranhenses.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"155 000 ha de dunes blanches de quartz avec lacs temporaires bleu turquoise de juin ‡ septembre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"CÙte atlantique tropicale, nord-est du sous-continent, dunes blanches et lagon"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dunes de sable blanc aux lacs turquoise temporaires peuplÈs de piranhas, nord-est du sous-continent"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le LenÁÛis Maranhenses au BrÈsil"}
   ]},
-  {name:"Ouro Preto ‚Äî Minas Gerais, Br√©sil",lat:-20.3867,lng:-43.5036,desc:"Ouro Preto (or brut) fut l'√©picentre de la ru√©e vers l'or du XVIIIe si√®cle qui fit du Br√©sil le premier producteur mondial. La ville draina tellement de richesses que le Portugal put financer la reconstruction de Lisbonne apr√®s le tremblement de terre de 1755.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ville baroque de l'or (1700), 13 √©glises dont Igreja de S√£o Francisco de Assis de l'Aleijadinho, UNESCO 1980"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Serra do Espinha√ßo, √† 95 km d'une grande ville mini√®re, patrimoine baroque"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville baroque de l'or du XVIIIe si√®cle, 13 √©glises dont le chef-d'≈ìuvre de l'Aleijadinho, UNESCO, Minas Gerais"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Ouro Preto √† Minas Gerais, Br√©sil"}
+  {name:"Ouro Preto ó Minas Gerais, BrÈsil",lat:-20.3867,lng:-43.5036,desc:"Ouro Preto (or brut) fut l'Èpicentre de la ruÈe vers l'or du XVIIIe siËcle qui fit du BrÈsil le premier producteur mondial. La ville draina tellement de richesses que le Portugal put financer la reconstruction de Lisbonne aprËs le tremblement de terre de 1755.",photo:"photos/ouro_preto.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ville baroque de l'or (1700), 13 Èglises dont Igreja de S„o Francisco de Assis de l'Aleijadinho, UNESCO 1980"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Serra do EspinhaÁo, ‡ 95 km d'une grande ville miniËre, patrimoine baroque"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville baroque de l'or du XVIIIe siËcle, 13 Èglises dont le chef-d'úuvre de l'Aleijadinho, UNESCO, Minas Gerais"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Ouro Preto ‡ Minas Gerais, BrÈsil"}
   ]},
-  {name:"Salvador de Bahia ‚Äî Br√©sil",lat:-13.0102,lng:-38.5018,desc:"Salvador de Bahia fut le premier port n√©grier de l'histoire et re√ßut 4 millions d'esclaves africains ‚Äî plus que n'importe quelle autre ville du monde. Aujourd'hui, sa culture ‚Äî musique, cuisine, religion ‚Äî reste profond√©ment marqu√©e par l'h√©ritage africain.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pelourinho, quartier historique colonial, √âglise S√£o Francisco aux 800 kg d'or, capoeira et candombl√©, ancienne capitale coloniale"},
+  {name:"Salvador de Bahia ó BrÈsil",lat:-13.0102,lng:-38.5018,desc:"Salvador de Bahia fut le premier port nÈgrier de l'histoire et reÁut 4 millions d'esclaves africains ó plus que n'importe quelle autre ville du monde. Aujourd'hui, sa culture ó musique, cuisine, religion ó reste profondÈment marquÈe par l'hÈritage africain.",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pelourinho, quartier historique colonial, …glise S„o Francisco aux 800 kg d'or, capoeira et candomblÈ, ancienne capitale coloniale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nordeste du sous-continent, baie de Todos os Santos, pelourinho colonial"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Premier port n√©grier du monde, quartier colonial Pelourinho, capoeira et candombl√©, Bahia"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Salvador de Bahia au Br√©sil"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Premier port nÈgrier du monde, quartier colonial Pelourinho, capoeira et candomblÈ, Bahia"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Salvador de Bahia au BrÈsil"}
   ]},
-  {name:"Igua√ßu (c√¥t√© argentin) ‚Äî Argentine",lat:-25.687,lng:-54.444,desc:"Les chutes d'Iguaz√∫ c√¥t√© argentin permettent de marcher sur des passerelles √† quelques m√®tres des chutes, dans les embruns permanents. La Garganta del Diablo (Gorge du Diable), deepest point des chutes √† 82 m√®tres de hauteur, g√©n√®re un brouillard si dense que la visibilit√© devient nulle √† son aplomb.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc national Iguaz√∫, 275 chutes dont Garganta del Diablo (82m), passerelles au ras de l'eau, coatis et tucans"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province subtropicale, nord-est d'un pays sud-am√©ricain, fronti√®re internationale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chutes d'Iguaz√∫ c√¥t√© argentin, passerelles dans les chutes"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Igua√ßu (c√¥t√© argentin) en Argentine"}
-  ]},
-  {name:"Mendoza ‚Äî Argentine (vignobles)",lat:-32.8908,lng:-68.8272,desc:"Le vignoble de Mendoza est irrigu√© depuis des si√®cles par un r√©seau de canaux incas ancestraux, toujours en usage. L'altitude de 800 √† 1 500 m√®tres prot√®ge les vignes des maladies cryptogamiques et permet de produire des vins parmi les plus purs au monde.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Regi√≥n vitivin√≠cola de Luj√°n de Cuyo, Malbec de haute altitude, plus grands domaines Zuccardi et Achaval Ferrer, ombres des Andes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Mendoza, pi√©mont des Andes, √† 1 000m, Argentina vinicole"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vignobles de Malbec √† haute altitude irrigu√©e par des canaux incas, au pied des Andes argentines"},
+    {name:"Mendoza ó Argentine (vignobles)",lat:-32.8908,lng:-68.8272,desc:"Le vignoble de Mendoza est irriguÈ depuis des siËcles par un rÈseau de canaux incas ancestraux, toujours en usage. L'altitude de 800 ‡ 1 500 mËtres protËge les vignes des maladies cryptogamiques et permet de produire des vins parmi les plus purs au monde.",photo:"photos/mendoza.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"RegiÛn vitivinÌcola de Luj·n de Cuyo, Malbec de haute altitude, plus grands domaines Zuccardi et Achaval Ferrer, ombres des Andes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Mendoza, piÈmont des Andes, ‡ 1 000m, Argentina vinicole"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vignobles de Malbec ‡ haute altitude irriguÈe par des canaux incas, au pied des Andes argentines"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mendoza en Argentine (vignobles)"}
   ]},
-  {name:"Rapa Nui ‚Äî √éle de P√¢ques (Ahu Tongariki)",lat:-27.1245,lng:-109.2778,desc:"Juste sous la surface de la mer entourant l'√Æle de P√¢ques se trouvent des milliers de moa√Ø submerg√©s ‚Äî les arch√©ologues n'ont fouill√© qu'une infime partie des fonds marins. Les t√™tes visibles sont en r√©alit√© des statues enti√®res dont le corps est enfoui.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ahu Tongariki, plus grande plate-forme c√©r√©monielle de l'√Æle, 15 moa√Ø restaur√©s apr√®s le tsunami de 1960 par Claudio Cristino"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"C√¥te est d'une √Æle volcanique isol√©e, plateforme d'Ahu Tongariki aux 15 moai r√©√©rig√©s"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ahu Tongariki, 15 moa√Ø face au lever du soleil, √éle de P√¢ques"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'√éle de P√¢ques (Rapa Nui), Chili"}
+  {name:"Rapa Nui ó Œle de P‚ques (Ahu Tongariki)",lat:-27.1245,lng:-109.2778,desc:"Juste sous la surface de la mer entourant l'Óle de P‚ques se trouvent des milliers de moaÔ submergÈs ó les archÈologues n'ont fouillÈ qu'une infime partie des fonds marins. Les tÍtes visibles sont en rÈalitÈ des statues entiËres dont le corps est enfoui.",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ahu Tongariki, plus grande plate-forme cÈrÈmonielle de l'Óle, 15 moaÔ restaurÈs aprËs le tsunami de 1960 par Claudio Cristino"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"CÙte est d'une Óle volcanique isolÈe, plateforme d'Ahu Tongariki aux 15 moai rÈÈrigÈs"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ahu Tongariki, 15 moaÔ face au lever du soleil, Œle de P‚ques"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Œle de P‚ques (Rapa Nui), Chili"}
   ]},
-  {name:"Waitomo ‚Äî Nouvelle-Z√©lande (grottes)",lat:-38.2637,lng:175.1035,desc:"Les vers luisants de Waitomo ne sont pas des vers mais des larves de moucheron Arachnocampa luminosa. Ils produisent leur lumi√®re bleue pour attirer d'autres insectes dans leurs fils de soie collants. Un individu peut produire jusqu'√† 70 fils suspendus pour pi√©ger ses proies.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grottes de Waitomo, Arachnocampa luminosa (vers luisants), plafond de stalactites illumin√© par 10 000 organismes bioluminescents"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District de Waitomo, Waikato, √Æle du Nord, Nouvelle-Z√©lande, √† 200 km d'Auckland"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grottes karstiques aux plafonds illumin√©s par 10 000 larves bioluminescentes, √Æle du Nord, Nouvelle-Z√©lande"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Waitomo en Nouvelle-Z√©lande (grottes)"}
+  {name:"Waitomo ó Nouvelle-ZÈlande (grottes)",lat:-38.2637,lng:175.1035,desc:"Les vers luisants de Waitomo ne sont pas des vers mais des larves de moucheron Arachnocampa luminosa. Ils produisent leur lumiËre bleue pour attirer d'autres insectes dans leurs fils de soie collants. Un individu peut produire jusqu'‡ 70 fils suspendus pour piÈger ses proies.",photo:"photos/mendoza.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grottes de Waitomo, Arachnocampa luminosa (vers luisants), plafond de stalactites illuminÈ par 10 000 organismes bioluminescents"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District de Waitomo, Waikato, Óle du Nord, Nouvelle-ZÈlande, ‡ 200 km d'Auckland"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grottes karstiques aux plafonds illuminÈs par 10 000 larves bioluminescentes, Óle du Nord, Nouvelle-ZÈlande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Waitomo en Nouvelle-ZÈlande (grottes)"}
   ]},
-  {name:"Abel Tasman ‚Äî Nouvelle-Z√©lande",lat:-40.85,lng:173,desc:"Le parc national Abel Tasman est le plus petit mais le plus visit√© de Nouvelle-Z√©lande. Son Abel Tasman Coast Track, l'un des 9 ¬´Great Walks¬ª n√©o-z√©landais, longe des plages de granit dor√© et des laguons de marbre sur 51 km. Des otaries et des manchots √† yeux jaunes y vivent sur les rochers face au d√©troit de Cook.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc national Abel Tasman, c√¥te de granit dor√©e, phoques, plages d'eau turquoise, Abel Tasman Coast Track (51km)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District de Tasman, c√¥te nord de l'√Æle du Sud, Nouvelle-Z√©lande"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus petit mais plus visit√© des parcs nationaux n√©o-z√©landais, plages de granit dor√©, loutres et manchots"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Abel Tasman en Nouvelle-Z√©lande"}
+  {name:"Abel Tasman ó Nouvelle-ZÈlande",lat:-40.85,lng:173,desc:"Le parc national Abel Tasman est le plus petit mais le plus visitÈ de Nouvelle-ZÈlande. Son Abel Tasman Coast Track, l'un des 9 ´Great Walksª nÈo-zÈlandais, longe des plages de granit dorÈ et des laguons de marbre sur 51 km. Des otaries et des manchots ‡ yeux jaunes y vivent sur les rochers face au dÈtroit de Cook.",photo:"https://upload.wikimedia.org/wikipedia/commons/f/f8/AbelTasman.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc national Abel Tasman, cÙte de granit dorÈe, phoques, plages d'eau turquoise, Abel Tasman Coast Track (51km)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"District de Tasman, cÙte nord de l'Óle du Sud, Nouvelle-ZÈlande"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus petit mais plus visitÈ des parcs nationaux nÈo-zÈlandais, plages de granit dorÈ, loutres et manchots"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Abel Tasman en Nouvelle-ZÈlande"}
   ]},
-  {name:"√Æles Cook ‚Äî Rarotonga",lat:-21.2358,lng:-159.7777,desc:"Les √éles Cook furent les premi√®res au monde √† instituer ¬´Te Maeva Nui¬ª ‚Äî une f√™te nationale de danse et de chant polyn√©sien. Jacques Brel, qui v√©cut ses derni√®res ann√©es en Polyn√©sie fran√ßaise voisine, fut profond√©ment touch√© par ces traditions musicales du Pacifique.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√éle principale des Cook, Avarua, lagon int√©rieur et r√©cif barri√®re, Te Manga (652m), Cook Islands Discovery Trail"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel des √éles Cook, Polyn√©sie m√©ridionale, Pacifique Sud, en libre association avec la Nouvelle-Z√©lande"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éle principale d'un archipel polyn√©sien en libre association avec la Nouvelle-Z√©lande, Pacifique Sud"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les √éles Cook (Rarotonga), Pacifique Sud"}
+  {name:"Óles Cook ó Rarotonga",lat:-21.2358,lng:-159.7777,desc:"Les Œles Cook furent les premiËres au monde ‡ instituer ´Te Maeva Nuiª ó une fÍte nationale de danse et de chant polynÈsien. Jacques Brel, qui vÈcut ses derniËres annÈes en PolynÈsie franÁaise voisine, fut profondÈment touchÈ par ces traditions musicales du Pacifique.",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Cook_Islands_on_the_globe_%28small_islands_magnified%29_%28Polynesia_centered%29.svg/langfr-330px-Cook_Islands_on_the_globe_%28small_islands_magnified%29_%28Polynesia_centered%29.svg.png",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Œle principale des Cook, Avarua, lagon intÈrieur et rÈcif barriËre, Te Manga (652m), Cook Islands Discovery Trail"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel des Œles Cook, PolynÈsie mÈridionale, Pacifique Sud, en libre association avec la Nouvelle-ZÈlande"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œle principale d'un archipel polynÈsien en libre association avec la Nouvelle-ZÈlande, Pacifique Sud"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Œles Cook (Rarotonga), Pacifique Sud"}
   ]},
-  {name:"Vanuatu ‚Äî Yasur Volcano",lat:-19.5218,lng:169.4425,desc:"Le mont Yasur au Vanuatu est l'un des rares volcans o√π les visiteurs peuvent approcher √† quelques m√®tres du bord du crat√®re lors des √©ruptions mineures. Les Kastom (autochtones) consid√®rent le volcan comme l'anc√™tre de leur peuple et organisent des c√©r√©monies traditionnelles √† ses pieds.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mont Yasur (361m), volcan le plus accessible du monde, √©ruptions toutes les quelques minutes, √Æle de Tanna, Vanuatu"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle de Tanna, province de Tafea, M√©lan√©sie, Pacifique Sud, archipel d'√Æles volcaniques entre la Nouvelle-Cal√©donie et les Salomon"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Volcan actif le plus accessible au monde, √©ruptions toutes les minutes, √Æle de Tanna, M√©lan√©sie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Volcan Yasur sur l'√Æle de Tanna, Vanuatu"}
+  {name:"Vanuatu ó Yasur Volcano",lat:-19.5218,lng:169.4425,desc:"Le mont Yasur au Vanuatu est l'un des rares volcans o˘ les visiteurs peuvent approcher ‡ quelques mËtres du bord du cratËre lors des Èruptions mineures. Les Kastom (autochtones) considËrent le volcan comme l'ancÍtre de leur peuple et organisent des cÈrÈmonies traditionnelles ‡ ses pieds.",photo:"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Vanuatu_on_the_globe_%28Polynesia_centered%29.svg/langfr-330px-Vanuatu_on_the_globe_%28Polynesia_centered%29.svg.png",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mont Yasur (361m), volcan le plus accessible du monde, Èruptions toutes les quelques minutes, Óle de Tanna, Vanuatu"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle de Tanna, province de Tafea, MÈlanÈsie, Pacifique Sud, archipel d'Óles volcaniques entre la Nouvelle-CalÈdonie et les Salomon"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Volcan actif le plus accessible au monde, Èruptions toutes les minutes, Óle de Tanna, MÈlanÈsie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Volcan Yasur sur l'Óle de Tanna, Vanuatu"}
   ]},
-  {name:"Kakadu ‚Äî Territoire du Nord, Australie",lat:-12.6784,lng:132.8371,desc:"Le parc national de Kakadu abrite des peintures rupestres aborig√®nes vieilles de 20 000 ans qui constituent un almanach vivant. Les artistes actuels continuent d'ajouter des peintures aux parois, maintenant une tradition ininterrompue depuis la pr√©histoire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand parc national du continent (19 804 km¬≤), art rupestre aborig√®ne de 20 000 ans, Nourlangie Rock, crocodiles d'eau sal√©e"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"R√©gion int√©rieure du continent, √† 150 km d'une ville c√¥ti√®re tropicale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand parc national d'Australie, peintures rupestres aborig√®nes de 20 000 ans, crocodiles marins"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kakadu √† Territoire du Nord, Australie"}
+  {name:"Kakadu ó Territoire du Nord, Australie",lat:-12.6784,lng:132.8371,desc:"Le parc national de Kakadu abrite des peintures rupestres aborigËnes vieilles de 20 000 ans qui constituent un almanach vivant. Les artistes actuels continuent d'ajouter des peintures aux parois, maintenant une tradition ininterrompue depuis la prÈhistoire.",photo:"https://upload.wikimedia.org/wikipedia/commons/9/93/Kakadu_2431.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand parc national du continent (19 804 km≤), art rupestre aborigËne de 20 000 ans, Nourlangie Rock, crocodiles d'eau salÈe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"RÈgion intÈrieure du continent, ‡ 150 km d'une ville cÙtiËre tropicale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand parc national d'Australie, peintures rupestres aborigËnes de 20 000 ans, crocodiles marins"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kakadu ‡ Territoire du Nord, Australie"}
   ]},
-  {name:"Blue Mountains ‚Äî Nouvelle-Galles du Sud, Australie",lat:-33.719,lng:150.3113,desc:"Les Blue Mountains doivent leur teinte bleut√©e √† la brume d'huile essentielle d'eucalyptus qui flotte en permanence dans l'air. Les 5 millions d'eucalyptus lib√®rent une huile volatile qui disperse la lumi√®re bleue ‚Äî un ph√©nom√®ne optique unique √† cette r√©gion.",hints:[
+  {name:"Blue Mountains ó Nouvelle-Galles du Sud, Australie",lat:-33.719,lng:150.3113,desc:"Les Blue Mountains doivent leur teinte bleutÈe ‡ la brume d'huile essentielle d'eucalyptus qui flotte en permanence dans l'air. Les 5 millions d'eucalyptus libËrent une huile volatile qui disperse la lumiËre bleue ó un phÈnomËne optique unique ‡ cette rÈgion.",photo:"photos/blue_mountains.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Three Sisters (922m), brume bleue d'huile d'eucalyptus, Jenolan Caves (350 Ma), Scenic Railway le plus raide du monde"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tablelands des Blue Mountains, √† 90 km √† l'ouest d'une grande m√©tropole c√¥ti√®re"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plateau aux falaises de gr√®s avec brume bleue d'eucalyptus, formations des Trois S≈ìurs, Nouvelle-Galles du Sud"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Blue Mountains √† Nouvelle-Galles du Sud, Australie"}
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tablelands des Blue Mountains, ‡ 90 km ‡ l'ouest d'une grande mÈtropole cÙtiËre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plateau aux falaises de grËs avec brume bleue d'eucalyptus, formations des Trois Súurs, Nouvelle-Galles du Sud"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Blue Mountains ‡ Nouvelle-Galles du Sud, Australie"}
   ]},
-  {name:"Nambung ‚Äî Australie-Occidentale (Pinnacles)",lat:-30.602,lng:115.157,desc:"Les Pinnacles d'Australie occidentale sont des formations calcaires cr√©√©es depuis des coquillages marins fossilis√©s. Il y a 6 000 ans, cet endroit √©tait au fond de l'oc√©an. Des milliers de piliers √©mergent aujourd'hui du sable, certains de la taille d'un homme.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc national de Nambung, Pinnacles Desert, milliers de colonnes de calcaire jusqu'√† 3,5m, porosit√© de coquillages fossilis√©s"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Shire c√¥tier semi-aride, √† 250 km au nord d'une grande m√©tropole occidentale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pinnacles Desert, for√™t de colonnes de calcaire, Australie-Occidentale"},
+  {name:"Nambung ó Australie-Occidentale (Pinnacles)",lat:-30.602,lng:115.157,desc:"Les Pinnacles d'Australie occidentale sont des formations calcaires crÈÈes depuis des coquillages marins fossilisÈs. Il y a 6 000 ans, cet endroit Ètait au fond de l'ocÈan. Des milliers de piliers Èmergent aujourd'hui du sable, certains de la taille d'un homme.",photo:"photos/nambung.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc national de Nambung, Pinnacles Desert, milliers de colonnes de calcaire jusqu'‡ 3,5m, porositÈ de coquillages fossilisÈs"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Shire cÙtier semi-aride, ‡ 250 km au nord d'une grande mÈtropole occidentale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pinnacles Desert, forÍt de colonnes de calcaire, Australie-Occidentale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Nambung en Australie-Occidentale (Pinnacles)"}
   ]},
-  {name:"Similan Islands ‚Äî Tha√Ølande",lat:8.65,lng:97.65,desc:"Les eaux des Similan, class√©es parmi les 10 meilleures plong√©es du monde par Cousteau, sont si claires que la visibilit√© peut atteindre 40 m√®tres. Les requins baleines, qui y sont r√©guli√®rement observ√©s, sont les plus grands poissons du monde et se nourrissent uniquement de plancton.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"11 √Æles granitiques, rochers Boulder Beach, visibilit√© 30m, coraux jusqu'√† 30m, requins baleines (Rhincodon typus) et tortues vert"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel granitique, mer d'Andaman, √† 85 km au large d'une c√¥te ouest, parc marin national fond√© en 1982, eaux tropicales √† 28¬∞C"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc marin national en Tha√Ølande, mer d'Andaman, site de plong√©e de classe mondiale, ferm√© chaque saison de mousson"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Similan Islands en Tha√Ølande"}
+  {name:"Similan Islands ó ThaÔlande",lat:8.65,lng:97.65,desc:"Les eaux des Similan, classÈes parmi les 10 meilleures plongÈes du monde par Cousteau, sont si claires que la visibilitÈ peut atteindre 40 mËtres. Les requins baleines, qui y sont rÈguliËrement observÈs, sont les plus grands poissons du monde et se nourrissent uniquement de plancton.",photo:"photos/similan_islands.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"11 Óles granitiques, rochers Boulder Beach, visibilitÈ 30m, coraux jusqu'‡ 30m, requins baleines (Rhincodon typus) et tortues vert"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel granitique, mer d'Andaman, ‡ 85 km au large d'une cÙte ouest, parc marin national fondÈ en 1982, eaux tropicales ‡ 28∞C"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc marin national en ThaÔlande, mer d'Andaman, site de plongÈe de classe mondiale, fermÈ chaque saison de mousson"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Similan Islands en ThaÔlande"}
   ]},
-  {name:"Phong Nha ‚Äî Vietnam",lat:17.5472,lng:106.1286,desc:"La grotte de Son Doong est si grande qu'elle poss√®de sa propre m√©t√©o : nuages, brouillard matinal et pr√©cipitations internes. Des esp√®ces animales end√©miques y vivent, adapt√©es √† l'obscurit√© perp√©tuelle. Seul un guide certifi√© peut accompagner les visiteurs ‚Äî les places sont limit√©es √† 1 000 par an.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Calcaires du Cambrien-Ordovicien (400-450 Ma), sp√©l√©oth√®mes g√©ants, rivi√®res souterraines fossiles, galeries de 150-200m de haut, "},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massif karstique tropical, vall√©e encaiss√©e entre cordill√®re et plaine c√¥ti√®re, √† ~15 km √† l'ouest d'un fleuve c√¥tier, latitude ~1"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande grotte du monde d√©couverte en 1991, karst tropical class√© UNESCO, Vietnam central, accessible en barque sur rivi√®re so"},
+  {name:"Phong Nha ó Vietnam",lat:17.5472,lng:106.1286,desc:"La grotte de Son Doong est si grande qu'elle possËde sa propre mÈtÈo : nuages, brouillard matinal et prÈcipitations internes. Des espËces animales endÈmiques y vivent, adaptÈes ‡ l'obscuritÈ perpÈtuelle. Seul un guide certifiÈ peut accompagner les visiteurs ó les places sont limitÈes ‡ 1 000 par an.",photo:"photos/phong_nha.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Calcaires du Cambrien-Ordovicien (400-450 Ma), spÈlÈothËmes gÈants, riviËres souterraines fossiles, galeries de 150-200m de haut, "},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massif karstique tropical, vallÈe encaissÈe entre cordillËre et plaine cÙtiËre, ‡ ~15 km ‡ l'ouest d'un fleuve cÙtier, latitude ~1"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande grotte du monde dÈcouverte en 1991, karst tropical classÈ UNESCO, Vietnam central, accessible en barque sur riviËre so"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Phong Nha au Vietnam"}
   ]},
-  {name:"Bali ‚Äî Indon√©sie (Tanah Lot)",lat:-8.6215,lng:115.0867,desc:"Bali est l'une des rares √Æles hindoues dans la mer d'√Æles islamiques qu'est l'Indon√©sie. Sa religion balinaise unique m√™le hindouisme, bouddhisme et croyances animistes ancestrales. Chaque village poss√®de au moins 3 temples ‚Äî un pour les dieux, un pour les √¢mes et un pour les mauvais esprits.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pura du XVIe s. attribu√© √† Dang Hyang Nirartha, basalte volcanique, mers de Java, sanctuaire Dewi Danu, serpents sacr√©s gardiens"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rocher isol√© en mer, c√¥te ouest d'une √Æle tropicale volcanique, oc√©an Indien, temple accessible √† mar√©e basse uniquement"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple hindou perch√© sur un rocher marin √©rod√©, cr√©puscule iconique, √Æle indon√©sienne aux rizi√®res en terrasses"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bali en Indon√©sie (Tanah Lot)"}
+  {name:"Bali ó IndonÈsie (Tanah Lot)",lat:-8.6215,lng:115.0867,desc:"Bali est l'une des rares Óles hindoues dans la mer d'Óles islamiques qu'est l'IndonÈsie. Sa religion balinaise unique mÍle hindouisme, bouddhisme et croyances animistes ancestrales. Chaque village possËde au moins 3 temples ó un pour les dieux, un pour les ‚mes et un pour les mauvais esprits.",photo:"photos/phong_nha.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pura du XVIe s. attribuÈ ‡ Dang Hyang Nirartha, basalte volcanique, mers de Java, sanctuaire Dewi Danu, serpents sacrÈs gardiens"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rocher isolÈ en mer, cÙte ouest d'une Óle tropicale volcanique, ocÈan Indien, temple accessible ‡ marÈe basse uniquement"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple hindou perchÈ sur un rocher marin ÈrodÈ, crÈpuscule iconique, Óle indonÈsienne aux riziËres en terrasses"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bali en IndonÈsie (Tanah Lot)"}
   ]},
-  {name:"Ubud ‚Äî Bali, Indon√©sie",lat:-8.5069,lng:115.2625,desc:"Bali est l'une des rares √Æles hindoues dans la mer d'√Æles islamiques qu'est l'Indon√©sie. Sa religion balinaise unique m√™le hindouisme, bouddhisme et croyances animistes ancestrales. Chaque village poss√®de au moins 3 temples ‚Äî un pour les dieux, un pour les √¢mes et un pour les mauvais esprits.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rizi√®res en terrasses de Tegallalang (irrigation subak UNESCO), temples hindous balinais, altitude ~200-300m, for√™t de singes sacr"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre d'une √Æle volcanique indon√©sienne, plateau verdoyant entre volcans et oc√©an, √† ~25 km au nord d'une capitale provinciale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Capitale culturelle de Bali, Indon√©sie, connue pour ses rizi√®res en terrasses, temples et arts traditionnels"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Ubud √† Bali, Indon√©sie"}
+  {name:"Ubud ó Bali, IndonÈsie",lat:-8.5069,lng:115.2625,desc:"Bali est l'une des rares Óles hindoues dans la mer d'Óles islamiques qu'est l'IndonÈsie. Sa religion balinaise unique mÍle hindouisme, bouddhisme et croyances animistes ancestrales. Chaque village possËde au moins 3 temples ó un pour les dieux, un pour les ‚mes et un pour les mauvais esprits.",photo:"photos/ubud.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"RiziËres en terrasses de Tegallalang (irrigation subak UNESCO), temples hindous balinais, altitude ~200-300m, forÍt de singes sacr"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre d'une Óle volcanique indonÈsienne, plateau verdoyant entre volcans et ocÈan, ‡ ~25 km au nord d'une capitale provinciale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Capitale culturelle de Bali, IndonÈsie, connue pour ses riziËres en terrasses, temples et arts traditionnels"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Ubud ‡ Bali, IndonÈsie"}
   ]},
-  {name:"Phuket ‚Äî Tha√Ølande",lat:7.9519,lng:98.3381,desc:"Phuket fut d√©vast√©e par le tsunami de 2004 qui tua 8 000 personnes sur l'√Æle. Sa reconstruction rapide et la modernisation de ses √©quipements touristiques transform√®rent la catastrophe en opportunit√© √©conomique ‚Äî Phuket compte aujourd'hui plus de 10 millions de visiteurs par an.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Statue de 45m en marbre blanc, √©rig√©e en 2004 sur colline Nakkerd, style Maravija, √Æle granitique au d√©troit de Malacca"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande √Æle granitique en mer tropicale entre deux saisons de mousson, d√©troit reliant deux mers, relief collinaire bois√© au nord"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éle tropicale bouddhiste au d√©troit de Malacca, c√©l√®bre Big Buddha et architecture sino-portugaise en Tha√Ølande"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Phuket en Tha√Ølande"}
+  {name:"Phuket ó ThaÔlande",lat:7.9519,lng:98.3381,desc:"Phuket fut dÈvastÈe par le tsunami de 2004 qui tua 8 000 personnes sur l'Óle. Sa reconstruction rapide et la modernisation de ses Èquipements touristiques transformËrent la catastrophe en opportunitÈ Èconomique ó Phuket compte aujourd'hui plus de 10 millions de visiteurs par an.",photo:"photos/ubud.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Statue de 45m en marbre blanc, ÈrigÈe en 2004 sur colline Nakkerd, style Maravija, Óle granitique au dÈtroit de Malacca"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande Óle granitique en mer tropicale entre deux saisons de mousson, dÈtroit reliant deux mers, relief collinaire boisÈ au nord"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œle tropicale bouddhiste au dÈtroit de Malacca, cÈlËbre Big Buddha et architecture sino-portugaise en ThaÔlande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Phuket en ThaÔlande"}
   ]},
-  {name:"Kazbegi ‚Äî G√©orgie",lat:42.6522,lng:44.6345,desc:"L'√©glise de la Trinit√© de Gergeti, √† 2 170 m d'altitude au-dessus de Kazbegi, fut utilis√©e comme cachette pour les tr√©sors de l'√©glise g√©orgienne lors des invasions mongoles. On y montait √† cheval jusqu'aux ann√©es 1990 ‚Äî aujourd'hui on peut y aller en 4x4.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"√âglise de la Trinit√© de Gergeti, XIVe s., calcaire local, 2 170m, √©peron surplombant gorge du Terek, Mtskheta-Mtianeti"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√âperon rocheux √† 2 170m, gorge d'un fleuve traversant le Caucase vers la plaine nord, sommet enneig√© √† 5 047m au nord-est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√âglise m√©di√©vale orthodoxe g√©orgienne perch√©e face √† un volcan de 5 047m dans les montagnes du Caucase"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'√©glise de Gergeti √† Kazbegi, G√©orgie"}
+  {name:"Kazbegi ó GÈorgie",lat:42.6522,lng:44.6345,desc:"L'Èglise de la TrinitÈ de Gergeti, ‡ 2 170 m d'altitude au-dessus de Kazbegi, fut utilisÈe comme cachette pour les trÈsors de l'Èglise gÈorgienne lors des invasions mongoles. On y montait ‡ cheval jusqu'aux annÈes 1990 ó aujourd'hui on peut y aller en 4x4.",photo:"photos/kazbegi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"…glise de la TrinitÈ de Gergeti, XIVe s., calcaire local, 2 170m, Èperon surplombant gorge du Terek, Mtskheta-Mtianeti"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"…peron rocheux ‡ 2 170m, gorge d'un fleuve traversant le Caucase vers la plaine nord, sommet enneigÈ ‡ 5 047m au nord-est"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"…glise mÈdiÈvale orthodoxe gÈorgienne perchÈe face ‡ un volcan de 5 047m dans les montagnes du Caucase"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Èglise de Gergeti ‡ Kazbegi, GÈorgie"}
   ]},
-  {name:"Uplistsikhe ‚Äî G√©orgie",lat:41.9447,lng:44.2078,desc:"Uplistsikhe, ¬´forteresse du Seigneur¬ª en g√©orgien, est une ville rupestre vieille de 3 000 ans creus√©e dans le gr√®s brun au-dessus de la rivi√®re Kura. C'est l'une des plus anciennes villes de la Caucasie, habit√©e jusqu'au Xe si√®cle. On y trouve la plus ancienne salle d'audience √† colonnes de la r√©gion.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© rupestre creus√©e dans le gr√®s rose, 3000 ans, ~700 salles, basilique √† nef centrale, bord d'un grand fleuve transcaucasien or"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau de gr√®s dominant un fleuve, altitude ~600m, versant sud d'une cha√Æne montagneuse, Caucase central, √† quelques km d'une vil"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancienne capitale pr√©christienne du royaume de Kartli, l'une des plus vieilles villes rupestres du Caucase, G√©orgie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le site rupestre d'Uplistsikhe, G√©orgie"}
+  {name:"Uplistsikhe ó GÈorgie",lat:41.9447,lng:44.2078,desc:"Uplistsikhe, ´forteresse du Seigneurª en gÈorgien, est une ville rupestre vieille de 3 000 ans creusÈe dans le grËs brun au-dessus de la riviËre Kura. C'est l'une des plus anciennes villes de la Caucasie, habitÈe jusqu'au Xe siËcle. On y trouve la plus ancienne salle d'audience ‡ colonnes de la rÈgion.",photo:"photos/uplistsikhe.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ rupestre creusÈe dans le grËs rose, 3000 ans, ~700 salles, basilique ‡ nef centrale, bord d'un grand fleuve transcaucasien or"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau de grËs dominant un fleuve, altitude ~600m, versant sud d'une chaÓne montagneuse, Caucase central, ‡ quelques km d'une vil"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancienne capitale prÈchristienne du royaume de Kartli, l'une des plus vieilles villes rupestres du Caucase, GÈorgie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le site rupestre d'Uplistsikhe, GÈorgie"}
   ]},
-  {name:"Gobustan ‚Äî Azerba√Ødjan",lat:40.1083,lng:49.3642,desc:"Le parc national de Gobustan abrite 6 000 p√©troglyphes rupestres couvrant 40 000 ans d'histoire humaine. Le Norv√©gien Thor Heyerdahl y trouva en 1994 des repr√©sentations de bateaux vikings ‚Äî ce qui renfor√ßa sa th√©orie controvers√©e de l'origine nordique des Azerba√Ødjanais. Ses volcans de boue, les plus nombreux au monde, √©ructent en continu.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"P√©troglyphes rupestres dat√©s de -40 000 √† 5 000 av. J.-C., inscrits UNESCO 2007, volcans de boue actifs, plateau calcaire semi-ari"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau c√¥tier semi-aride bordant une mer ferm√©e, √† 65 km au sud-ouest d'une capitale p√©troli√®re sur p√©ninsule"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Site UNESCO abritant des gravures rupestres pr√©historiques et des volcans de boue, en Azerba√Ødjan"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gobustan en Azerba√Ødjan"}
+  {name:"Gobustan ó AzerbaÔdjan",lat:40.1083,lng:49.3642,desc:"Le parc national de Gobustan abrite 6 000 pÈtroglyphes rupestres couvrant 40 000 ans d'histoire humaine. Le NorvÈgien Thor Heyerdahl y trouva en 1994 des reprÈsentations de bateaux vikings ó ce qui renforÁa sa thÈorie controversÈe de l'origine nordique des AzerbaÔdjanais. Ses volcans de boue, les plus nombreux au monde, Èructent en continu.",photo:"photos/gobustan.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"PÈtroglyphes rupestres datÈs de -40 000 ‡ 5 000 av. J.-C., inscrits UNESCO 2007, volcans de boue actifs, plateau calcaire semi-ari"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau cÙtier semi-aride bordant une mer fermÈe, ‡ 65 km au sud-ouest d'une capitale pÈtroliËre sur pÈninsule"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Site UNESCO abritant des gravures rupestres prÈhistoriques et des volcans de boue, en AzerbaÔdjan"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gobustan en AzerbaÔdjan"}
   ]},
-  {name:"Bakou ‚Äî Azerba√Ødjan (vieille ville)",lat:40.366,lng:49.8341,desc:"La vieille ville de Bakou, Icheri Sheher, fut fond√©e au Ve si√®cle. Sa Tour de la Vierge (XIIe si√®cle), visible de la mer Caspienne, n'a jamais servi de forteresse d√©fensive ‚Äî son r√¥le exact reste myst√©rieux. Bakou signifie ¬´ville battue par le vent¬ª en persan ‚Äî des vents violents traversent la ville en permanence.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Enceinte m√©di√©vale du XIIe s., tour cylindrique de 29 m en calcaire coquillier, palais dynastique XVe s., classement UNESCO 2000"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Presqu'√Æle rocheuse sur la c√¥te ouest d'une grande mer ferm√©e, relief plat, climat semi-aride, latitude ~40¬∞N"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille ville fortifi√©e en Azerba√Ødjan, tour cylindrique embl√©matique du XIIe s. et palais m√©di√©val inscrits √† l'UNESCO"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bakou en Azerba√Ødjan (vieille ville)"}
+  {name:"Bakou ó AzerbaÔdjan (vieille ville)",lat:40.366,lng:49.8341,desc:"La vieille ville de Bakou, Icheri Sheher, fut fondÈe au Ve siËcle. Sa Tour de la Vierge (XIIe siËcle), visible de la mer Caspienne, n'a jamais servi de forteresse dÈfensive ó son rÙle exact reste mystÈrieux. Bakou signifie ´ville battue par le ventª en persan ó des vents violents traversent la ville en permanence.",photo:"photos/bakou.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Enceinte mÈdiÈvale du XIIe s., tour cylindrique de 29 m en calcaire coquillier, palais dynastique XVe s., classement UNESCO 2000"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Presqu'Óle rocheuse sur la cÙte ouest d'une grande mer fermÈe, relief plat, climat semi-aride, latitude ~40∞N"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille ville fortifiÈe en AzerbaÔdjan, tour cylindrique emblÈmatique du XIIe s. et palais mÈdiÈval inscrits ‡ l'UNESCO"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bakou en AzerbaÔdjan (vieille ville)"}
   ]},
-  {name:"Tbilissi ‚Äî G√©orgie (Mtskheta)",lat:41.8404,lng:44.721,desc:"Tbilissi signifie ¬´ville des eaux chaudes¬ª en g√©orgien. La ville fut fond√©e au Ve si√®cle par un roi qui, selon la l√©gende, vit un faisan bless√© gu√©rir instantan√©ment en entrant dans une source thermale chaude. Ces sources coulent encore aujourd'hui dans les bains soufr√©s du vieux Tbilissi.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cath√©drale Sveti Tskhoveli, XIe s., tuf calcaire, architecte Arsukisdze, 54m, croix g√©orgienne sur piliers, UNESCO 1994"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Confluence de deux rivi√®res majeures du Caucase, plateau √† ~470m alt., vignobles en terrasses, monast√®re fortifi√© sur colline proc"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancienne capitale et berceau du christianisme en G√©orgie, cath√©drale inscrite √† l'UNESCO, vignobles centenaires"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La cath√©drale Sveti Tskhoveli √† Mtskheta, G√©orgie"}
+  {name:"Tbilissi ó GÈorgie (Mtskheta)",lat:41.8404,lng:44.721,desc:"Tbilissi signifie ´ville des eaux chaudesª en gÈorgien. La ville fut fondÈe au Ve siËcle par un roi qui, selon la lÈgende, vit un faisan blessÈ guÈrir instantanÈment en entrant dans une source thermale chaude. Ces sources coulent encore aujourd'hui dans les bains soufrÈs du vieux Tbilissi.",photo:"photos/tbilissi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CathÈdrale Sveti Tskhoveli, XIe s., tuf calcaire, architecte Arsukisdze, 54m, croix gÈorgienne sur piliers, UNESCO 1994"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Confluence de deux riviËres majeures du Caucase, plateau ‡ ~470m alt., vignobles en terrasses, monastËre fortifiÈ sur colline proc"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancienne capitale et berceau du christianisme en GÈorgie, cathÈdrale inscrite ‡ l'UNESCO, vignobles centenaires"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La cathÈdrale Sveti Tskhoveli ‡ Mtskheta, GÈorgie"}
   ]},
-  {name:"Vardzia ‚Äî G√©orgie",lat:41.389,lng:43.278,desc:"Le monast√®re rupestre de Vardzia, creus√© dans la falaise volcanique au XIIe si√®cle par la reine Tamar, comprend 600 pi√®ces sur 13 niveaux. Un tremblement de terre en 1283 effondra la fa√ßade de la montagne, r√©v√©lant les cellules √† l'air libre. Les fresques repr√©sentant la reine Tamar sont parmi les plus pr√©cieuses de l'art g√©orgien.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monast√®re rupestre XIIe s., ~600 salles sur 13 niveaux dans falaise de tuf volcanique, rive gauche de la Mtkvari, fond√© sous Tamar"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Complexe troglodytique sur falaise basaltique surplombant un fleuve encaiss√©, haute vall√©e orient√©e N-S, altitude ~1300 m, sud du "},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Immense cit√© monastique creus√©e dans la roche au XIIe s., embl√®me du royaume m√©di√©val g√©orgien sous la reine Tamar, G√©orgie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le monast√®re rupestre de Vardzia, G√©orgie"}
+  {name:"Vardzia ó GÈorgie",lat:41.389,lng:43.278,desc:"Le monastËre rupestre de Vardzia, creusÈ dans la falaise volcanique au XIIe siËcle par la reine Tamar, comprend 600 piËces sur 13 niveaux. Un tremblement de terre en 1283 effondra la faÁade de la montagne, rÈvÈlant les cellules ‡ l'air libre. Les fresques reprÈsentant la reine Tamar sont parmi les plus prÈcieuses de l'art gÈorgien.",photo:"photos/vardzia.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"MonastËre rupestre XIIe s., ~600 salles sur 13 niveaux dans falaise de tuf volcanique, rive gauche de la Mtkvari, fondÈ sous Tamar"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Complexe troglodytique sur falaise basaltique surplombant un fleuve encaissÈ, haute vallÈe orientÈe N-S, altitude ~1300 m, sud du "},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Immense citÈ monastique creusÈe dans la roche au XIIe s., emblËme du royaume mÈdiÈval gÈorgien sous la reine Tamar, GÈorgie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le monastËre rupestre de Vardzia, GÈorgie"}
   ]},
-  {name:"Khor Virap ‚Äî Arm√©nie",lat:39.8316,lng:44.5673,desc:"Le mont Ararat, visible depuis Khor Virap, est consid√©r√© comme le berceau de la civilisation arm√©nienne et le symbole national du pays ‚Äî mais il se trouve en Turquie depuis 1921. Les Arm√©niens peuvent le voir depuis leur fronti√®re sans pouvoir y acc√©der.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monast√®re arm√©nien (IVe-XVIIe s.) sur fosse d'emprisonnement de Gr√©goire l'Illuminateur (287-301) ; fa√ßade basalte, vue sur strato"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Monast√®re sur une butte dans une vaste plaine alluviale, √† proximit√© d'une fronti√®re internationale, face √† un stratovolcan enneig"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monast√®re arm√©nien embl√©matique au pied d'un grand volcan enneig√©, symbole national, dans la plaine la plus fertile d'Arm√©nie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Khor Virap en Arm√©nie"}
+  {name:"Khor Virap ó ArmÈnie",lat:39.8316,lng:44.5673,desc:"Le mont Ararat, visible depuis Khor Virap, est considÈrÈ comme le berceau de la civilisation armÈnienne et le symbole national du pays ó mais il se trouve en Turquie depuis 1921. Les ArmÈniens peuvent le voir depuis leur frontiËre sans pouvoir y accÈder.",photo:"photos/khor_virap.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"MonastËre armÈnien (IVe-XVIIe s.) sur fosse d'emprisonnement de GrÈgoire l'Illuminateur (287-301) ; faÁade basalte, vue sur strato"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"MonastËre sur une butte dans une vaste plaine alluviale, ‡ proximitÈ d'une frontiËre internationale, face ‡ un stratovolcan enneig"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"MonastËre armÈnien emblÈmatique au pied d'un grand volcan enneigÈ, symbole national, dans la plaine la plus fertile d'ArmÈnie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Khor Virap en ArmÈnie"}
   ]},
-  {name:"Garni ‚Äî Arm√©nie",lat:40.1119,lng:44.729,desc:"Le temple de Garni est le seul √©difice gr√©co-romain de tout le Caucase. Construit au Ier si√®cle ap. J.-C. par un roi arm√©nien, il surv√©cut √† la christianisation du pays en 301 en √©tant transform√© en bain royal puis en entrep√¥t.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple p√©ript√®re √† 24 colonnes ioniques (Ier s. ap. J.-C.), basalte local, podium √† degr√©s, d√©di√© √† Mihr, gorge volcanique aux org"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Temple sur plateau volcanique, gorge aux colonnes basaltiques, rivi√®re Azat, versant sud du massif du Guegham, Caucase m√©ridional"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Seul temple gr√©co-romain subsistant dans le Caucase, restaur√© au XXe s., dominant une gorge aux orgues basaltiques"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Garni en Arm√©nie"}
+  {name:"Garni ó ArmÈnie",lat:40.1119,lng:44.729,desc:"Le temple de Garni est le seul Èdifice grÈco-romain de tout le Caucase. Construit au Ier siËcle ap. J.-C. par un roi armÈnien, il survÈcut ‡ la christianisation du pays en 301 en Ètant transformÈ en bain royal puis en entrepÙt.",photo:"photos/khor_virap.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple pÈriptËre ‡ 24 colonnes ioniques (Ier s. ap. J.-C.), basalte local, podium ‡ degrÈs, dÈdiÈ ‡ Mihr, gorge volcanique aux org"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Temple sur plateau volcanique, gorge aux colonnes basaltiques, riviËre Azat, versant sud du massif du Guegham, Caucase mÈridional"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Seul temple grÈco-romain subsistant dans le Caucase, restaurÈ au XXe s., dominant une gorge aux orgues basaltiques"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Garni en ArmÈnie"}
   ]},
-  {name:"Chefchaouen ‚Äî Maroc",lat:35.1688,lng:-5.2636,desc:"La ville bleue du Maroc doit sa couleur √† la communaut√© juive s√©pharade expuls√©e d'Espagne en 1492. Ils peignirent les murs en bleu, couleur symbolisant le ciel et la divinit√© dans la tradition juive. La pratique fut adopt√©e par toute la ville.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"M√©dina fond√©e en 1471, maisons chaul√©es bleu-indigo (tradition s√©farade), ruelle principale menant √† la place Uta el-Hammam, mosqu"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massif du Rif, versant sud-ouest, altitude ~600m, confluent de deux oueds, pentes bois√©es de c√®dres et de pins"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville bleue aux ruelles teintes d'indigo et blanc, nich√©e dans les montagnes du Rif, nord du Maroc"},
+  {name:"Chefchaouen ó Maroc",lat:35.1688,lng:-5.2636,desc:"La ville bleue du Maroc doit sa couleur ‡ la communautÈ juive sÈpharade expulsÈe d'Espagne en 1492. Ils peignirent les murs en bleu, couleur symbolisant le ciel et la divinitÈ dans la tradition juive. La pratique fut adoptÈe par toute la ville.",photo:"https://upload.wikimedia.org/wikipedia/commons/2/25/Chefchaouen_%2852189357475%29.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"MÈdina fondÈe en 1471, maisons chaulÈes bleu-indigo (tradition sÈfarade), ruelle principale menant ‡ la place Uta el-Hammam, mosqu"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massif du Rif, versant sud-ouest, altitude ~600m, confluent de deux oueds, pentes boisÈes de cËdres et de pins"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville bleue aux ruelles teintes d'indigo et blanc, nichÈe dans les montagnes du Rif, nord du Maroc"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chefchaouen au Maroc"}
   ]},
-  {name:"A√Øt Benhaddou ‚Äî Maroc",lat:31.0472,lng:-7.1322,desc:"A√Øt Benhaddou servit de d√©cor √† plus de 20 films et s√©ries, dont Gladiator, Game of Thrones et Lawrence d'Arabie. Seules cinq familles habitent encore dans l'enceinte du ksar, le reste de la population ayant migr√© vers le village moderne.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ksar de pis√© du XIe s., tours d√©fensives tronconiques, inscrit UNESCO 1987, d√©cor de Lawrence d'Arabie et Gladiator"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ksar fortifi√© en pis√© sur oued p√©renne, versant nord du Haut Atlas occidental, altitude ~1000 m, zone semi-aride pr√©gnante"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ksar de pis√© class√© UNESCO, c√©l√®bre d√©cor de p√©plums hollywoodiens, Maroc pr√©saharien"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'A√Øt Benhaddou au Maroc"}
+  {name:"AÔt Benhaddou ó Maroc",lat:31.0472,lng:-7.1322,desc:"AÔt Benhaddou servit de dÈcor ‡ plus de 20 films et sÈries, dont Gladiator, Game of Thrones et Lawrence d'Arabie. Seules cinq familles habitent encore dans l'enceinte du ksar, le reste de la population ayant migrÈ vers le village moderne.",photo:"https://upload.wikimedia.org/wikipedia/commons/d/d5/Ksar_A%C3%AFt_Benhaddou%2C_Marocco_%28%D8%A3%D9%8A%D8%AA_%D8%A8%D9%86_%D8%AD%D8%AF%D9%88%D8%8C_%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8%2C_%E2%B4%B0%E2%B5%A2%E2%B5%9C_%E2%B5%83%E2%B4%B0%E2%B4%B7%E2%B4%B7%E2%B5%93%29.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ksar de pisÈ du XIe s., tours dÈfensives tronconiques, inscrit UNESCO 1987, dÈcor de Lawrence d'Arabie et Gladiator"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ksar fortifiÈ en pisÈ sur oued pÈrenne, versant nord du Haut Atlas occidental, altitude ~1000 m, zone semi-aride prÈgnante"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ksar de pisÈ classÈ UNESCO, cÈlËbre dÈcor de pÈplums hollywoodiens, Maroc prÈsaharien"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'AÔt Benhaddou au Maroc"}
   ]},
-  {name:"Vall√©e du Dad√®s ‚Äî Maroc",lat:31.4,lng:-5.975,desc:"Les gorges du Dad√®s, taill√©es par la rivi√®re Dad√®s dans le Haut Atlas, sont surnomm√©es ¬´la Vall√©e des roses¬ª car les villages voisins produisent 60% de la production mondiale d'eau de rose. Chaque mai, des f√™tes de la rose c√©l√®brent la floraison. La route sinueuse √† travers les gorges est consid√©r√©e comme l'une des plus spectaculaires du Maroc.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gorges taill√©es dans le Jurassique rouge, formations rocheuses en ¬´doigts de singe¬ª, kasbahs en pis√© du Haut Atlas, alt. ~1500 m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vall√©e encaiss√©e orient√©e N-S, oued affluent du Dr√¢a, altitude ~1500 m, flancs de gr√®s rouge, versant sud du Haut Atlas"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gorges aux parois de gr√®s rouge, route des Kasbahs, pr√©-Sahara marocain, oasis entre falaises jurassiques"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Vall√©e du Dad√®s au Maroc"}
+  {name:"VallÈe du DadËs ó Maroc",lat:31.4,lng:-5.975,desc:"Les gorges du DadËs, taillÈes par la riviËre DadËs dans le Haut Atlas, sont surnommÈes ´la VallÈe des rosesª car les villages voisins produisent 60% de la production mondiale d'eau de rose. Chaque mai, des fÍtes de la rose cÈlËbrent la floraison. La route sinueuse ‡ travers les gorges est considÈrÈe comme l'une des plus spectaculaires du Maroc.",photo:"photos/vallee_du_dades.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gorges taillÈes dans le Jurassique rouge, formations rocheuses en ´doigts de singeª, kasbahs en pisÈ du Haut Atlas, alt. ~1500 m"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"VallÈe encaissÈe orientÈe N-S, oued affluent du Dr‚a, altitude ~1500 m, flancs de grËs rouge, versant sud du Haut Atlas"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gorges aux parois de grËs rouge, route des Kasbahs, prÈ-Sahara marocain, oasis entre falaises jurassiques"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La VallÈe du DadËs au Maroc"}
   ]},
-  {name:"√éle de Djerba ‚Äî Tunisie",lat:33.8076,lng:10.8451,desc:"Djerba est traditionnellement identifi√©e √† l'√Æle des Lotophages d'Hom√®re, o√π Ulysse et ses compagnons mang√®rent la fleur de lotus qui fit tout oublier. Elle abrite la synagogue El Ghriba, lieu de p√®lerinage juif parmi les plus importants du monde, fond√©e au VIe si√®cle av. J.-C. selon la tradition.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Synagogue √† d√¥mes blancs (VIe s. av. J.-C.), poterie traditionnelle au tour manuel, lagune peu profonde, architecture troglodytique"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"√éle reli√©e au continent par une chauss√©e, golfe peu profond, latitude ~34¬∞N, mer int√©rieure semi-ferm√©e, c√¥te sablonneuse basse"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"√éle m√©diterran√©enne √† majorit√© berb√®re, abritant l'une des plus anciennes synagogues du monde et une importante communaut√© juive h"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'√éle de Djerba en Tunisie"}
+  {name:"Œle de Djerba ó Tunisie",lat:33.8076,lng:10.8451,desc:"Djerba est traditionnellement identifiÈe ‡ l'Óle des Lotophages d'HomËre, o˘ Ulysse et ses compagnons mangËrent la fleur de lotus qui fit tout oublier. Elle abrite la synagogue El Ghriba, lieu de pËlerinage juif parmi les plus importants du monde, fondÈe au VIe siËcle av. J.-C. selon la tradition.",photo:"photos/ile_de_djerba.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Synagogue ‡ dÙmes blancs (VIe s. av. J.-C.), poterie traditionnelle au tour manuel, lagune peu profonde, architecture troglodytique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Œle reliÈe au continent par une chaussÈe, golfe peu profond, latitude ~34∞N, mer intÈrieure semi-fermÈe, cÙte sablonneuse basse"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Œle mÈditerranÈenne ‡ majoritÈ berbËre, abritant l'une des plus anciennes synagogues du monde et une importante communautÈ juive h"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Œle de Djerba en Tunisie"}
   ]},
-  {name:"Tataouine ‚Äî Tunisie (Ksour)",lat:32.9211,lng:10.4518,desc:"Les ksour (greniers collectifs fortifi√©s) du gouvernorat de Tataouine servirent de d√©cors pour la plan√®te Tatooine dans Star Wars. George Lucas tomba amoureux des ghorfas ‚Äî les cellules vo√ªt√©es empil√©es en tours ‚Äî lors d'un rep√©rage en 1975. La ville de Tataouine figura si directement dans le film que Lucas en adopta le nom.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Greniers collectifs fortifi√©s en pierre et gypse, ghorfas vo√ªt√©es sur 2-3 √©tages, XIVe-XVIIIe s., architecture troglodytique berb√®"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau aride du Dahar, entre hamada rocheuse et ergs, √† ~500 m d'altitude, versant oriental du Grand Erg Oriental"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Architecture berb√®re des ksour, greniers collectifs fortifi√©s en pierre, d√©cors embl√©matiques du tournage de Star Wars, Tunisie"},
+  {name:"Tataouine ó Tunisie (Ksour)",lat:32.9211,lng:10.4518,desc:"Les ksour (greniers collectifs fortifiÈs) du gouvernorat de Tataouine servirent de dÈcors pour la planËte Tatooine dans Star Wars. George Lucas tomba amoureux des ghorfas ó les cellules vo˚tÈes empilÈes en tours ó lors d'un repÈrage en 1975. La ville de Tataouine figura si directement dans le film que Lucas en adopta le nom.",photo:"photos/ile_de_djerba.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Greniers collectifs fortifiÈs en pierre et gypse, ghorfas vo˚tÈes sur 2-3 Ètages, XIVe-XVIIIe s., architecture troglodytique berbË"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau aride du Dahar, entre hamada rocheuse et ergs, ‡ ~500 m d'altitude, versant oriental du Grand Erg Oriental"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Architecture berbËre des ksour, greniers collectifs fortifiÈs en pierre, dÈcors emblÈmatiques du tournage de Star Wars, Tunisie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tataouine en Tunisie (Ksour)"}
   ]},
-  {name:"Douz ‚Äî Tunisie (Festival du Sahara)",lat:33.4558,lng:9.0244,desc:"Douz, ¬´porte du Sahara¬ª, accueille chaque d√©cembre le Festival international du Sahara ‚Äî le plus grand rassemblement de culture nomade du monde. Courses de m√©hara, fantasias √©questres, combats de l√©vriers sloughi et musique gnawa font de cet √©v√©nement un plongeon dans la culture nomade du Maghreb.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Festival fond√© en 1967, dunes atteignant 100m, m√©har√©e sur dromadaires Maghrebi, fauconnerie et fantasia, palmeraie de 400 000 pal"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Oasis en bordure du Grand Erg Oriental, √† 400m d'altitude, entre chotts sal√©s et mer de sable, gouvernorat semi-aride"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville-oasis surnomm√©e porte du Sahara, festival annuel en d√©cembre c√©l√©brant culture b√©douine, Tunisie"},
+  {name:"Douz ó Tunisie (Festival du Sahara)",lat:33.4558,lng:9.0244,desc:"Douz, ´porte du Saharaª, accueille chaque dÈcembre le Festival international du Sahara ó le plus grand rassemblement de culture nomade du monde. Courses de mÈhara, fantasias Èquestres, combats de lÈvriers sloughi et musique gnawa font de cet ÈvÈnement un plongeon dans la culture nomade du Maghreb.",photo:"https://upload.wikimedia.org/wikipedia/commons/9/97/Douz_downtown_01.JPG",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Festival fondÈ en 1967, dunes atteignant 100m, mÈharÈe sur dromadaires Maghrebi, fauconnerie et fantasia, palmeraie de 400 000 pal"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Oasis en bordure du Grand Erg Oriental, ‡ 400m d'altitude, entre chotts salÈs et mer de sable, gouvernorat semi-aride"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville-oasis surnommÈe porte du Sahara, festival annuel en dÈcembre cÈlÈbrant culture bÈdouine, Tunisie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Douz en Tunisie (Festival du Sahara)"}
   ]},
-  {name:"Tipaza ‚Äî Alg√©rie",lat:36.589,lng:2.448,desc:"Tipaza, site arch√©ologique sur la c√¥te m√©diterran√©enne alg√©rienne, fut une cit√© punique puis romaine capitale. Albert Camus, Alg√©rien de naissance, lui consacra ses premiers essais : ¬´√Ä Tipasa, j'apprenais que je portais en moi les ruines de cette cit√©¬ª. Il y revenait chaque fois qu'il doutait du sens de la vie.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© punique romanis√©e Ier s. av. J.-C., basilique √† trois nefs IVe s., amphith√©√¢tre 70x45m, opus africanum, class√©e UNESCO 1982"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"C√¥te m√©diterran√©enne nord-africaine, promontoire rocheux entre deux oueds, √† ~70 km √† l'ouest d'une grande capitale c√¥ti√®re"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Site antique punique et romain class√© UNESCO, en Alg√©rie, sur un promontoire m√©diterran√©en parmi vignes et oliviers"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tipaza en Alg√©rie"}
+  {name:"Tipaza ó AlgÈrie",lat:36.589,lng:2.448,desc:"Tipaza, site archÈologique sur la cÙte mÈditerranÈenne algÈrienne, fut une citÈ punique puis romaine capitale. Albert Camus, AlgÈrien de naissance, lui consacra ses premiers essais : ´¿ Tipasa, j'apprenais que je portais en moi les ruines de cette citÈª. Il y revenait chaque fois qu'il doutait du sens de la vie.",photo:"photos/tipaza.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ punique romanisÈe Ier s. av. J.-C., basilique ‡ trois nefs IVe s., amphithÈ‚tre 70x45m, opus africanum, classÈe UNESCO 1982"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"CÙte mÈditerranÈenne nord-africaine, promontoire rocheux entre deux oueds, ‡ ~70 km ‡ l'ouest d'une grande capitale cÙtiËre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Site antique punique et romain classÈ UNESCO, en AlgÈrie, sur un promontoire mÈditerranÈen parmi vignes et oliviers"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tipaza en AlgÈrie"}
   ]},
-  {name:"Volubilis ‚Äî Maroc",lat:34.0736,lng:-5.5554,desc:"Les mosa√Øques de Volubilis, vieilles de 1 800 ans, sont encore en place dans les ruines √† ciel ouvert ‚Äî une raret√© mondiale. La cit√© romaine fut abandonn√©e apr√®s le retrait de l'Empire au IIIe si√®cle et tomba dans l'oubli jusqu'au XIXe si√®cle.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cit√© romaine, arc triomphal d√©di√© √† Caracalla (217 ap. J.-C.), mosa√Øques in situ des thermes de Gordien, inscrite UNESCO 1997"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plaine agricole entre Rif et Atlas moyen, versant nord-ouest, √† ~30 km d'une ville imp√©riale m√©rinide, altitude ~400 m"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines romaines aux mosa√Øques pr√©serv√©es in situ, entour√©es d'oliveraies, au Maroc"},
+  {name:"Volubilis ó Maroc",lat:34.0736,lng:-5.5554,desc:"Les mosaÔques de Volubilis, vieilles de 1 800 ans, sont encore en place dans les ruines ‡ ciel ouvert ó une raretÈ mondiale. La citÈ romaine fut abandonnÈe aprËs le retrait de l'Empire au IIIe siËcle et tomba dans l'oubli jusqu'au XIXe siËcle.",photo:"photos/tipaza.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"CitÈ romaine, arc triomphal dÈdiÈ ‡ Caracalla (217 ap. J.-C.), mosaÔques in situ des thermes de Gordien, inscrite UNESCO 1997"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plaine agricole entre Rif et Atlas moyen, versant nord-ouest, ‡ ~30 km d'une ville impÈriale mÈrinide, altitude ~400 m"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines romaines aux mosaÔques prÈservÈes in situ, entourÈes d'oliveraies, au Maroc"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Volubilis au Maroc"}
   ]},
-  {name:"Essaouira ‚Äî Maroc",lat:31.5085,lng:-9.7595,desc:"Jimi Hendrix s√©journa √† Essaouira en 1969 et aurait voulu y construire un studio. La l√©gende dit qu'il s'inspira de la ville et de sa musique gnaoua pour plusieurs compositions, dont ¬´Castles Made of Sand¬ª.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Remparts en gr√®s oolithique XVIIIe s., bastions Vauban, m√©dina intra-muros ~300m√ó500m, port naturel √† skala nord-sud, fondation ph"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"C√¥te atlantique vent√©e, aliz√©s constants, cit√© fortifi√©e √† bastions bastionn√©s, lagon c√¥tier, plaine littorale semi-aride, orienta"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© des vents au Maroc, remparts bastionn√©s XVIIIe s. sur l'Atlantique, m√©dina class√©e UNESCO 2001, festival de musique Gnaoua an"},
+  {name:"Essaouira ó Maroc",lat:31.5085,lng:-9.7595,desc:"Jimi Hendrix sÈjourna ‡ Essaouira en 1969 et aurait voulu y construire un studio. La lÈgende dit qu'il s'inspira de la ville et de sa musique gnaoua pour plusieurs compositions, dont ´Castles Made of Sandª.",photo:"photos/essaouira.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Remparts en grËs oolithique XVIIIe s., bastions Vauban, mÈdina intra-muros ~300m◊500m, port naturel ‡ skala nord-sud, fondation ph"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"CÙte atlantique ventÈe, alizÈs constants, citÈ fortifiÈe ‡ bastions bastionnÈs, lagon cÙtier, plaine littorale semi-aride, orienta"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ des vents au Maroc, remparts bastionnÈs XVIIIe s. sur l'Atlantique, mÈdina classÈe UNESCO 2001, festival de musique Gnaoua an"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Essaouira au Maroc"}
   ]},
-  {name:"Harar ‚Äî √âthiopie",lat:9.3125,lng:42.1269,desc:"Harar est la 4e ville sainte de l'Islam et la capitale du caf√© ‚Äî l'√âthiopie est le berceau du caf√© arabica. Ses 82 mosqu√©es dans une vieille ville de moins d'1 km¬≤ en font l'une des villes islamiques les plus denses. Chaque soir, des nourrisseurs de hy√®nes attirent les hy√®nes sauvages √† la nuit tombante ‚Äî une tradition centenaire.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"4e ville sainte de l'Islam, 82 mosqu√©es intra-muros, 368 ruelles, enceinte Jugol du XVIe s. perc√©e de 5 portes, tradition du nourr"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau oriental √† ~1850 m, flanc occidental d'un massif tourn√© vers une plaine semi-aride, √† ~525 km est de la capitale f√©d√©rale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cit√© islamique m√©di√©vale d'√âthiopie orientale, class√©e UNESCO, c√©l√®bre pour ses hy√®nes apprivois√©es et ses maisons d√©cor√©es"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Harar en √âthiopie"}
+  {name:"Harar ó …thiopie",lat:9.3125,lng:42.1269,desc:"Harar est la 4e ville sainte de l'Islam et la capitale du cafÈ ó l'…thiopie est le berceau du cafÈ arabica. Ses 82 mosquÈes dans une vieille ville de moins d'1 km≤ en font l'une des villes islamiques les plus denses. Chaque soir, des nourrisseurs de hyËnes attirent les hyËnes sauvages ‡ la nuit tombante ó une tradition centenaire.",photo:"photos/essaouira.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"4e ville sainte de l'Islam, 82 mosquÈes intra-muros, 368 ruelles, enceinte Jugol du XVIe s. percÈe de 5 portes, tradition du nourr"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau oriental ‡ ~1850 m, flanc occidental d'un massif tournÈ vers une plaine semi-aride, ‡ ~525 km est de la capitale fÈdÈrale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"CitÈ islamique mÈdiÈvale d'…thiopie orientale, classÈe UNESCO, cÈlËbre pour ses hyËnes apprivoisÈes et ses maisons dÈcorÈes"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Harar en …thiopie"}
   ]},
-  {name:"Gorilles de Bwindi ‚Äî Ouganda",lat:-1.05,lng:29.6667,desc:"Un permis pour tracker les gorilles de Bwindi co√ªte 700 dollars par personne. Cette somme, revers√©e directement aux communaut√©s locales, a transform√© la protection de la faune en ressource √©conomique majeure et r√©duit consid√©rablement le braconnage.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"For√™t afromontagnarde, alt. 1160-2607m, 331km¬≤, ~half de la pop. mondiale de gorilles des montagnes, class√©e UNESCO 1994"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massif volcanique du Rift albertin, versant oriental, for√™t dense √† 2000m d'altitude, fronti√®re d'un grand lac √©quatorial"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sanctuaire de gorilles des montagnes en Ouganda, l'un des deux seuls habitats naturels de l'esp√®ce au monde"},
+  {name:"Gorilles de Bwindi ó Ouganda",lat:-1.05,lng:29.6667,desc:"Un permis pour tracker les gorilles de Bwindi co˚te 700 dollars par personne. Cette somme, reversÈe directement aux communautÈs locales, a transformÈ la protection de la faune en ressource Èconomique majeure et rÈduit considÈrablement le braconnage.",photo:"photos/gorilles_de_bwindi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"ForÍt afromontagnarde, alt. 1160-2607m, 331km≤, ~half de la pop. mondiale de gorilles des montagnes, classÈe UNESCO 1994"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massif volcanique du Rift albertin, versant oriental, forÍt dense ‡ 2000m d'altitude, frontiËre d'un grand lac Èquatorial"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sanctuaire de gorilles des montagnes en Ouganda, l'un des deux seuls habitats naturels de l'espËce au monde"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Gorilles de Bwindi en Ouganda"}
   ]},
-  {name:"Zanzibar ‚Äî Tanzanie (plage Nungwi)",lat:-5.7294,lng:39.2976,desc:"Zanzibar est le lieu de naissance de Freddie Mercury, le chanteur de Queen. Sa maison natale dans Stone Town est devenue un lieu de p√®lerinage pour les fans du monde entier. Il quitta l'√Æle √† 7 ans pour ne plus jamais y revenir.",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pointe nord d'Unguja, sable corallien blanc, dhows de p√™che, centre de r√©habilitation de tortues vertes, r√©cifs de gr√®s fossilis√©"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Extr√©mit√© nord d'une √Æle de l'oc√©an Indien, lagon peu profond c√¥t√© ouest, bateaux √† voile traditionnels, plage de sable blanc imma"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande √Æle swahilie de l'oc√©an Indien occidental, plage au nord, connue pour ses tortues marines et ses boutres traditionnels"},
+  {name:"Zanzibar ó Tanzanie (plage Nungwi)",lat:-5.7294,lng:39.2976,desc:"Zanzibar est le lieu de naissance de Freddie Mercury, le chanteur de Queen. Sa maison natale dans Stone Town est devenue un lieu de pËlerinage pour les fans du monde entier. Il quitta l'Óle ‡ 7 ans pour ne plus jamais y revenir.",photo:"photos/zanzibar.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pointe nord d'Unguja, sable corallien blanc, dhows de pÍche, centre de rÈhabilitation de tortues vertes, rÈcifs de grËs fossilisÈ"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"ExtrÈmitÈ nord d'une Óle de l'ocÈan Indien, lagon peu profond cÙtÈ ouest, bateaux ‡ voile traditionnels, plage de sable blanc imma"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande Óle swahilie de l'ocÈan Indien occidental, plage au nord, connue pour ses tortues marines et ses boutres traditionnels"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La plage de Nungwi, Zanzibar, Tanzanie"}
   ]}
 ];
