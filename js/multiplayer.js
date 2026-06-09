@@ -253,7 +253,18 @@ function mpHandlePlaying(room) {
   mpClearOtherMarkers();
 
   var seeds = room.roundSeeds||[];
-  var place = (typeof ROUNDS!=='undefined') ? ROUNDS[seeds[rIdx]||0] : null;
+  // Vérifier que les seeds sont bien chargés pour ce round
+  // Si seeds[rIdx] est undefined, Firebase n'a pas encore propagé roundSeeds → attendre
+  if(!seeds || seeds.length <= rIdx || seeds[rIdx] === undefined) {
+    // Retry dans 500ms
+    setTimeout(function(){
+      get(ref(rtdb,'rooms/'+mp.roomCode)).then(function(s){
+        if(s.exists()) mpHandlePlaying(s.val());
+      }).catch(function(){});
+    }, 500);
+    return;
+  }
+  var place = (typeof ROUNDS!=='undefined') ? ROUNDS[seeds[rIdx]] : null;
   if(!place) return;
 
   var opts = room.options||{};
@@ -440,7 +451,8 @@ function mpHandleRoundEnd(room) {
 
   var rIdx    = room.currentRoundResults!==undefined ? room.currentRoundResults : (room.round||0);
   var seeds   = room.roundSeeds||[];
-  var place   = typeof ROUNDS!=='undefined' ? ROUNDS[seeds[rIdx]||0] : {name:'?',lat:0,lng:0};
+  var seedIdx = (seeds && seeds.length > rIdx && seeds[rIdx] !== undefined) ? seeds[rIdx] : 0;
+  var place   = typeof ROUNDS!=='undefined' ? ROUNDS[seedIdx] : {name:'?',lat:0,lng:0};
   var answers = (room.answers||{})[rIdx]||{};
   var players = room.players||{};
 
@@ -688,7 +700,8 @@ function mpShowFinalResults(room) {
   results.forEach(function(r){h.push('<span style="min-width:60px;text-align:right;color:'+r.color+'">'+r.name.split(' ')[0]+'</span>');});
   h.push('</div>');
   for(var rIdx=0;rIdx<nbR;rIdx++) {
-    var place=(typeof ROUNDS!=='undefined')?ROUNDS[seeds[rIdx]||0]:{name:'?'};
+    var seedIdx2=(seeds&&seeds.length>rIdx&&seeds[rIdx]!==undefined)?seeds[rIdx]:0;
+    var place=(typeof ROUNDS!=='undefined')?ROUNDS[seedIdx2]:{name:'?'};
     var pn=place.name?place.name.split('—')[0].trim().slice(0,22):'?';
     h.push('<div style="display:flex;align-items:center;padding:5px 0;border-bottom:1px solid #1e2d4533">');
     h.push('<span style="flex:1;font-size:11px;color:#94a3b8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+pn+'</span>');
