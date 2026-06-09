@@ -568,7 +568,7 @@ function mpHandleRoundEnd(room) {
 
   // Boutons : Explorer la carte + Manche suivante / attente
   h.push('<div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:4px">');
-  h.push('<button onclick="(function(){var ov=document.getElementById(\'overlay\');ov.classList.add(\'h\');document.getElementById(\'back-btn\').style.display=\'block\';document.getElementById(\'explore-tip\').style.display=\'block\';})()" style="padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;font-size:13px;font-weight:600;font-family:\'DM Sans\',sans-serif">Explorer la carte</button>');
+  h.push('<button onclick="window.mpEnterExplore&&window.mpEnterExplore()" style="padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;font-size:13px;font-weight:600">Explorer la carte</button>');
   if(next < nb) {
     if(mp.isHost) {
       h.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="padding:12px 32px;border-radius:10px;border:none;background:#f97316;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Manche suivante ▶</button>');
@@ -628,27 +628,125 @@ function mpShowFinalResults(room) {
   mpClearOtherMarkers();
 
   var players = room.players||{};
-  var results = Object.entries(players).map(function([pid,p]){
-    return {pid,name:p.name,photo:p.photo,color:p.color||mpColorFor(pid),score:p.score||0};
-  }).sort(function(a,b){ return b.score-a.score; });
+  var answers = room.answers||{};
+  var opts    = room.options||{};
+  var nbR     = opts.nbRounds||5;
+  var seeds   = room.roundSeeds||[];
+  var medals  = ['??','??','??'];
+
+  // ── Stats complètes par joueur ────────────────────────────────────────
+  var results = Object.entries(players).map(function([pid,p]) {
+    var totalPts=0, totalDist=0, distCount=0, bestDist=Infinity, worstDist=0, totalTime=0, timeCount=0;
+    for(var r=0;r<nbR;r++) {
+      var ans=(answers[r]||{})[pid]||{};
+      if(ans.pts)  totalPts+=ans.pts;
+      if(ans.dist!=null){totalDist+=ans.dist;distCount++;if(ans.dist<bestDist)bestDist=ans.dist;if(ans.dist>worstDist)worstDist=ans.dist;}
+      if(ans.time!=null){totalTime+=ans.time;timeCount++;}
+    }
+    return {
+      pid,name:p.name,photo:p.photo,color:p.color||mpColorFor(pid),
+      score:p.score||totalPts,
+      avgDist:distCount>0?totalDist/distCount:null,
+      bestDist:bestDist===Infinity?null:bestDist,
+      worstDist:worstDist||null,
+      avgTime:timeCount>0?totalTime/timeCount:null
+    };
+  }).sort(function(a,b){return b.score-a.score;});
+
+  function avatar(r,sz) {
+    sz=sz||32;
+    if(r.photo) return '<img src="'+r.photo+'" style="width:'+sz+'px;height:'+sz+'px;border-radius:50%;border:2px solid '+r.color+';object-fit:cover;flex-shrink:0">';
+    return '<div style="width:'+sz+'px;height:'+sz+'px;border-radius:50%;background:'+r.color+'33;border:2px solid '+r.color+';display:flex;align-items:center;justify-content:center;font-size:'+(sz*0.4)+'px;color:'+r.color+';font-weight:700;flex-shrink:0">'+r.name[0].toUpperCase()+'</div>';
+  }
 
   var h=[];
-  h.push('<div class="otitle" style="font-size:28px;margin-bottom:12px">?? Fin de partie !</div>');
+
+  // ── Titre ─────────────────────────────────────────────────────────────
+  h.push('<div class="otitle" style="font-size:36px">?? Fin de partie !</div>');
+
+  // ── Classement final ──────────────────────────────────────────────────
+  h.push('<div style="width:100%;max-width:440px">');
+  h.push('<div style="font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:1px;padding:0 12px 6px">Classement final</div>');
   results.forEach(function(r,i) {
-    var isMe=r.pid===mp.playerId, medal=i===0?'??':i===1?'??':i===2?'??':(i+1)+'.';
-    h.push('<div style="display:flex;align-items:center;gap:12px;padding:10px 16px;background:'+(isMe?'#1a2238':'transparent')+';border-radius:9px;margin-bottom:4px;border:'+(isMe?'1px solid '+r.color:'1px solid transparent')+'">');
-    h.push('<span style="font-size:20px">'+medal+'</span>');
-    if(r.photo) h.push('<img src="'+r.photo+'" style="width:32px;height:32px;border-radius:50%;border:2px solid '+r.color+';object-fit:cover">');
-    else h.push('<div style="width:32px;height:32px;border-radius:50%;background:'+r.color+'33;border:2px solid '+r.color+';display:flex;align-items:center;justify-content:center;font-size:13px;color:'+r.color+';font-weight:700">'+r.name[0].toUpperCase()+'</div>');
-    h.push('<span style="flex:1;font-size:14px;font-weight:'+(isMe?'700':'400')+';color:'+(isMe?r.color:'#e2e8f0')+'">'+r.name+(isMe?' (moi)':'')+'</span>');
-    h.push('<span style="font-family:monospace;font-size:18px;font-weight:700;color:#f97316">'+fmtPts(r.score)+' pts</span>');
+    var isMe=r.pid===mp.playerId;
+    var medal=i<3?medals[i]:(i+1)+'.';
+    h.push('<div style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:'+(isMe?'#1a2238':'#0d1120')+';border-radius:9px;margin-bottom:4px;border:1px solid '+(isMe?r.color:'#1e2d45')+'">');
+    h.push('<span style="font-size:18px;min-width:28px;text-align:center">'+medal+'</span>');
+    h.push(avatar(r,28));
+    h.push('<span style="flex:1;font-size:13px;font-weight:'+(isMe?'700':'500')+';color:'+(isMe?r.color:'#e2e8f0')+';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+r.name+(isMe?' (moi)':'')+'</span>');
+    if(r.avgDist!=null) h.push('<span style="font-size:11px;color:#6b7280;flex-shrink:0;margin-right:6px">~'+fmtDst(r.avgDist)+'</span>');
+    h.push('<span style="font-size:17px;font-weight:700;color:#f97316;flex-shrink:0">'+fmtPts(r.score)+' pts</span>');
     h.push('</div>');
   });
-  h.push('<div style="display:flex;gap:8px;margin-top:12px;justify-content:center">');
-  h.push('<button onclick="mpLeaveRoom()" style="padding:10px 24px;font-size:14px;border-radius:9px;border:none;background:#f97316;color:#fff;cursor:pointer;font-weight:700">Retour au menu</button>');
   h.push('</div>');
-  document.getElementById('overlay').innerHTML = h.join('');
-  document.getElementById('overlay').classList.remove('h');
+
+  // ── Tableau par manche ────────────────────────────────────────────────
+  h.push('<div style="width:100%;max-width:440px;background:#0d1120;border-radius:12px;padding:12px 16px;border:1px solid #1e2d45">');
+  h.push('<div style="font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Détail par manche</div>');
+  h.push('<div style="display:flex;font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:.5px;padding-bottom:6px;border-bottom:1px solid #1e2d45;margin-bottom:4px">');
+  h.push('<span style="flex:1">Lieu</span>');
+  results.forEach(function(r){h.push('<span style="min-width:60px;text-align:right;color:'+r.color+'">'+r.name.split(' ')[0]+'</span>');});
+  h.push('</div>');
+  for(var rIdx=0;rIdx<nbR;rIdx++) {
+    var place=(typeof ROUNDS!=='undefined')?ROUNDS[seeds[rIdx]||0]:{name:'?'};
+    var pn=place.name?place.name.split('—')[0].trim().slice(0,22):'?';
+    h.push('<div style="display:flex;align-items:center;padding:5px 0;border-bottom:1px solid #1e2d4533">');
+    h.push('<span style="flex:1;font-size:11px;color:#94a3b8;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+pn+'</span>');
+    results.forEach(function(r){
+      var pts=((answers[rIdx]||{})[r.pid]||{}).pts||0;
+      var col=pts>0?(pts>=1500?'#22c55e':pts>=700?'#fbbf24':'#f97316'):'#4b5563';
+      h.push('<span style="min-width:60px;text-align:right;font-size:11px;font-weight:600;color:'+col+'">'+fmtPts(pts)+'</span>');
+    });
+    h.push('</div>');
+  }
+  h.push('<div style="display:flex;align-items:center;padding:8px 0 2px;margin-top:2px;border-top:1px solid #1e2d45">');
+  h.push('<span style="flex:1;font-size:11px;font-weight:700;color:#e2e8f0;text-transform:uppercase;letter-spacing:.5px">Total</span>');
+  results.forEach(function(r){h.push('<span style="min-width:60px;text-align:right;font-size:13px;font-weight:700;color:#f97316">'+fmtPts(r.score)+'</span>');});
+  h.push('</div>');
+  h.push('</div>');
+
+  // ── Succès ────────────────────────────────────────────────────────────
+  var awards=[];
+  var mostAcc=results.filter(function(r){return r.avgDist!=null;}).sort(function(a,b){return (a.avgDist||999)-(b.avgDist||999);})[0];
+  if(mostAcc) awards.push({emoji:'??',title:'Le plus précis',desc:'~'+fmtDst(mostAcc.avgDist)+' en moyenne',player:mostAcc});
+  var fastest=results.filter(function(r){return r.avgTime!=null;}).sort(function(a,b){return (a.avgTime||999)-(b.avgTime||999);})[0];
+  if(fastest) awards.push({emoji:'⚡',title:'Le plus réactif',desc:'Temps de réponse le plus court',player:fastest});
+  var longShot=results.filter(function(r){return r.worstDist!=null;}).sort(function(a,b){return b.worstDist-a.worstDist;})[0];
+  if(longShot) awards.push({emoji:'??',title:'Tir le plus loin',desc:fmtDst(longShot.worstDist)+' de la cible',player:longShot});
+  var bestRound=null,bestRPts=0;
+  results.forEach(function(r){for(var i=0;i<nbR;i++){var pts=((answers[i]||{})[r.pid]||{}).pts||0;if(pts>bestRPts){bestRPts=pts;bestRound={player:r,pts:pts};}}});
+  if(bestRound) awards.push({emoji:'⭐',title:'Meilleure manche',desc:'+'+fmtPts(bestRound.pts)+' pts',player:bestRound.player});
+  if(results.length>0) awards.push({emoji:'??',title:'Champion',desc:fmtPts(results[0].score)+' pts au total',player:results[0]});
+
+  if(awards.length>0) {
+    h.push('<div style="width:100%;max-width:440px">');
+    h.push('<div style="font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:1px;padding:0 0 6px">Succès</div>');
+    h.push('<div style="display:flex;flex-wrap:wrap;gap:8px">');
+    awards.forEach(function(a){
+      var isMe=a.player.pid===mp.playerId;
+      h.push('<div style="flex:1;min-width:180px;background:#0d1120;border:1px solid '+(isMe?a.player.color:'#1e2d45')+';border-radius:10px;padding:10px 12px;display:flex;align-items:center;gap:10px">');
+      h.push('<span style="font-size:22px">'+a.emoji+'</span>');
+      h.push('<div style="flex:1;min-width:0">');
+      h.push('<div style="font-size:10px;color:#f97316;font-weight:700;text-transform:uppercase;letter-spacing:.5px">'+a.title+'</div>');
+      h.push('<div style="font-size:12px;color:#e2e8f0;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+a.player.name+'</div>');
+      h.push('<div style="font-size:10px;color:#6b7280">'+a.desc+'</div>');
+      h.push('</div>');
+      h.push(avatar(a.player,22));
+      h.push('</div>');
+    });
+    h.push('</div>');
+    h.push('</div>');
+  }
+
+  // ── Boutons ────────────────────────────────────────────────────────────
+  h.push('<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px">');
+  h.push('<button onclick="mpLeaveRoom()" style="padding:12px 28px;font-size:14px;border-radius:10px;border:1px solid #2d3f5e;background:transparent;color:#e2e8f0;cursor:pointer;font-weight:600">⌂ Menu</button>');
+  h.push('<button onclick="window.mpEnterExplore&&window.mpEnterExplore()" style="padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;font-size:13px;font-weight:600">Explorer la carte</button>');
+  h.push('</div>');
+
+  var ov=document.getElementById('overlay');
+  ov.innerHTML=h.join('');
+  ov.classList.remove('h');
 }
 
 // ??? Panel live (style Skribbl) ???????????????????????????????????????????????
@@ -811,6 +909,15 @@ function mpOnDisbanded(room) {
   mpCurrentRound=-1; mpAnswered=false; mpRoundActive=false; window._mpMode=false;
   setTimeout(function(){ if(typeof showMenu==='function') showMenu(); }, 2000);
 }
+
+
+function mpEnterExplore() {
+  var ov = document.getElementById('overlay');
+  if(ov) ov.classList.add('h');
+  var bb = document.getElementById('back-btn');
+  if(bb) bb.style.display = 'block';
+}
+window.mpEnterExplore = mpEnterExplore;
 
 // ── Exports ──────────────────────────────────────────────────────────────────
 window.mpCreateRoom       = mpCreateRoom;
