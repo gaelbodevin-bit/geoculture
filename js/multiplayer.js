@@ -524,7 +524,7 @@ function mpHandleRoundEnd(room) {
   var h=[];
 
   // Photo Wikipedia (placeholder)
-  h.push('<div id="'+imgId+'" style="width:100%;max-width:380px;height:140px;background:#111827;border-radius:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="color:#374151;font-size:11px">??</span></div>');
+  h.push('<div id="'+imgId+'" style="width:100%;max-width:500px;height:280px;background:#111827;border-radius:12px;overflow:hidden;position:relative;flex-shrink:0"></div>');
 
   // Label manche
   h.push('<div style="font-size:11px;color:#f97316;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-top:2px">Manche '+(rIdx+1)+'/'+nb+'</div>');
@@ -534,7 +534,7 @@ function mpHandleRoundEnd(room) {
 
   // Description
   if(placeDesc){
-    h.push('<div style="font-size:11px;color:#94a3b8;text-align:center;max-width:360px;line-height:1.5;margin-top:-4px">'+placeDesc+'</div>');
+    h.push('<div style="font-size:13px;color:#e2e8f0;text-align:center;max-width:440px;line-height:1.65;margin-top:-2px;background:rgba(17,24,39,0.6);border-radius:8px;padding:8px 14px">'+placeDesc+'</div>');
   }
 
   // Score perso + barre
@@ -566,16 +566,19 @@ function mpHandleRoundEnd(room) {
   });
   h.push('</div>');
 
-  // Bouton "Manche suivante" (hôte) ou attente (invité)
+  // Boutons : Explorer la carte + Manche suivante / attente
+  h.push('<div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:4px">');
+  h.push('<button onclick="(function(){var ov=document.getElementById(\'overlay\');ov.classList.add(\'h\');document.getElementById(\'back-btn\').style.display=\'block\';document.getElementById(\'explore-tip\').style.display=\'block\';})()" style="padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;font-size:13px;font-weight:600;font-family:\'DM Sans\',sans-serif">Explorer la carte</button>');
   if(next < nb) {
     if(mp.isHost) {
-      h.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="margin-top:4px;padding:12px 32px;border-radius:10px;border:none;background:#f97316;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Manche suivante ▶</button>');
+      h.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="padding:12px 32px;border-radius:10px;border:none;background:#f97316;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Manche suivante ▶</button>');
     } else {
       h.push('<div style="font-size:13px;color:#94a3b8;padding:8px 16px;background:#0d1120;border-radius:8px;border:1px solid #1e2d45">En attente que l\'hôte lance la manche suivante...</div>');
     }
   } else {
-    h.push('<div style="font-size:12px;color:#6b7280">Fin de partie !</div>');
+    h.push('<div style="font-size:12px;color:#6b7280">Fin de partie…</div>');
   }
+  h.push('</div>');
 
   // Montrer la carte 3s avant d'ouvrir le bilan
   // L'overlay reste caché pendant 3s pour que les joueurs voient les marqueurs
@@ -585,22 +588,36 @@ function mpHandleRoundEnd(room) {
     ov.classList.remove('h');
 
     // Fetch photo Wikipedia (identique à showInter)
-  (function(id, q){
+  // Photo locale prioritaire, sinon Wikipedia
+  (function(id, round, q){
+    var el = document.getElementById(id);
+    if(!el) return;
     function tryWiki(lang){
       fetch('https://'+lang+'.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(q))
         .then(function(r){return r.json();})
         .then(function(d){
-          var el=document.getElementById(id);
-          if(!el) return;
+          var el2=document.getElementById(id);if(!el2)return;
           if(d.thumbnail&&d.thumbnail.source){
-            el.innerHTML='<img src="'+d.thumbnail.source+'" style="width:100%;height:100%;object-fit:cover;border-radius:10px" alt="">';
+            el2.innerHTML='<img src="'+d.thumbnail.source+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:12px" alt="">';
           } else if(lang==='fr'){tryWiki('en');}
-          else{el.style.display='none';}
-        }).catch(function(){ var el=document.getElementById(id); if(el) el.style.display='none'; });
+          else{el2.style.display='none';}
+        }).catch(function(){var el2=document.getElementById(id);if(el2)el2.style.display='none';});
     }
-    tryWiki('fr');
-  })(imgId, placeName);
-  }, 5000); // 5s de carte visible avant le bilan
+    if(round && round.photo){
+      var img=new Image();
+      img.onload=function(){
+        var el2=document.getElementById(id);if(!el2)return;
+        el2.innerHTML='<img src="'+round.photo+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:12px" alt="">';
+      };
+      img.onerror=function(){
+        var el2=document.getElementById(id);if(el2)el2.style.display='none';
+      };
+      img.src=round.photo;
+    } else {
+      var el2=document.getElementById(id);if(el2)el2.style.display='none';
+    }
+  })(imgId, place, placeName);
+  }, 8000); // 8s de carte visible avant le bilan
 }
 
 

@@ -270,9 +270,9 @@ function showInter(pts,dist,name,eliminated){
   else if(curR+1<roundList.length){_nextBtn='<button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante</button>';}
   else{_nextBtn='<button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';}
   ov.innerHTML=`
-    <div id="${imgId}" style="width:100%;max-width:500px;height:260px;background:#111827;border-radius:10px;margin-bottom:-4px;overflow:hidden;display:flex;align-items:center;justify-content:center"><span style="color:#374151;font-size:11px">\u1f4f8</span></div>
+    <div id="${imgId}" style="width:100%;max-width:500px;height:280px;background:#111827;border-radius:12px;overflow:hidden;position:relative"></div>
     <div class="otitle" style="font-size:38px">+${pts.toLocaleString('fr-FR')}</div>
-    <div class="osub" style="color:#94a3b8;font-size:12px;line-height:1.55;margin-top:-4px;max-width:360px;text-align:center;font-style:normal">${placeDesc}</div>
+    <div class="osub" style="color:#e2e8f0;font-size:13px;line-height:1.65;margin-top:-2px;max-width:420px;text-align:center;font-style:normal;background:rgba(17,24,39,0.6);border-radius:8px;padding:8px 14px">${placeDesc}</div>
     <div style="display:flex;align-items:center;gap:10px;width:100%;max-width:320px">
       <div style="flex:1;height:8px;background:#1e2d45;border-radius:4px;overflow:hidden">
         <div style="width:${pctRound}%;height:100%;background:${barColor};border-radius:4px;transition:width .6s ease"></div>
@@ -306,10 +306,9 @@ function showInter(pts,dist,name,eliminated){
     if(round.photo){
       var img = new Image();
       img.onload = function(){
-        el.innerHTML = '<img src="'+round.photo+'" style="width:100%;height:100%;object-fit:cover;border-radius:10px" alt="">';
+        el.innerHTML = '<img src="'+round.photo+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:12px" alt="">';
       };
       img.onerror = function(){
-        // Fichier local introuvable → fallback Wikipedia
         tryWiki('fr');
       };
       img.src = round.photo;
@@ -324,7 +323,7 @@ function showInter(pts,dist,name,eliminated){
           var el2=document.getElementById(id);
           if(!el2) return;
           if(d.thumbnail&&d.thumbnail.source){
-            el2.innerHTML='<img src="'+d.thumbnail.source+'" style="width:100%;height:100%;object-fit:cover;border-radius:10px" alt="">';
+            el2.innerHTML='<img src="'+d.thumbnail.source+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:12px" alt="">';
           } else if(lang==='fr'){tryWiki('en');}
           else{el2.style.display='none';}
         }).catch(function(){var el2=document.getElementById(id);if(el2)el2.style.display='none';});
