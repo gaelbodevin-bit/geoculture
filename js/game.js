@@ -242,7 +242,12 @@ function resolveRound(){
     .bindPopup(`<div style="${popupStyle}"><b style="color:#15803d">\u2713 ${r.name}</b>${dist?`<br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span>`:'<br><span style="color:#666">Pas de tentative</span>'}</div>`,{maxWidth:220}).addTo(map);
   if(playerPos){
     if(playerMarker) playerMarker.bindPopup(`<div style="${popupStyle}"><b style="color:#ea580c">\u1f4cd Votre r\u00e9ponse</b><br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span><br><span style="color:#f97316;font-weight:700">+${pts} pts</span></div>`,{maxWidth:200});
-    lineLayer=L.polyline([[playerPos.lat,playerPos.lng],[r.lat,r.lng]],{color:'#f97316',weight:2.5,dashArray:'8 5',opacity:.8}).addTo(map);
+    lineLayer=(function(){
+    var p1=[playerPos.lat,playerPos.lng], p2=[r.lat,r.lng];
+    var dLng=p2[1]-p1[1];
+    if(dLng>180) p1[1]+=360; else if(dLng<-180) p1[1]-=360;
+    return L.polyline([p1,p2],{color:'#f97316',weight:2.5,dashArray:'8 5',opacity:.8,noClip:true});
+  })().addTo(map);
     map.fitBounds(L.latLngBounds([[playerPos.lat,playerPos.lng],[r.lat,r.lng]]),{padding:[60,60]});
   } else {
     map.setView([r.lat,r.lng],12);targetMarker.openPopup();

@@ -253,7 +253,15 @@ function mpHandlePlaying(room) {
   mpClearOtherMarkers();
 
   var seeds = room.roundSeeds||[];
-  var place = (typeof ROUNDS!=='undefined') ? ROUNDS[seeds[rIdx]||0] : null;
+  if(!seeds || seeds.length <= rIdx || seeds[rIdx] === undefined) {
+    setTimeout(function(){
+      get(ref(rtdb,'rooms/'+mp.roomCode)).then(function(s){
+        if(s.exists()) mpHandlePlaying(s.val());
+      }).catch(function(){});
+    }, 500);
+    return;
+  }
+  var place = (typeof ROUNDS!=='undefined') ? ROUNDS[seeds[rIdx]] : null;
   if(!place) return;
 
   var opts = room.options||{};
@@ -486,8 +494,11 @@ function mpHandleRoundEnd(room) {
         +fmtDst(ans.dist)+'<br>'
         +'<b style="color:#f97316">+'+fmtPts(ans.pts)+' pts</b></div>';
       var m = L.marker([ans.pos.lat,ans.pos.lng],{icon}).bindPopup(popup).addTo(map);
-      var pl=L.polyline([[ans.pos.lat,ans.pos.lng],[place.lat,place.lng]],
-        {color:col,weight:2.5,dashArray:'6 4',opacity:0.8}).addTo(map);
+      var _p1=[ans.pos.lat,ans.pos.lng], _p2=[place.lat,place.lng];
+      var _dLng=_p2[1]-_p1[1];
+      if(_dLng>180) _p1[1]+=360; else if(_dLng<-180) _p1[1]-=360;
+      var pl=L.polyline([_p1,_p2],
+        {color:col,weight:2.5,dashArray:'6 4',opacity:0.8,noClip:true}).addTo(map);
       mpPolylines.push(pl);
       mpOtherMarkers[pid] = m;
       bounds.push([ans.pos.lat,ans.pos.lng]);
@@ -576,7 +587,6 @@ function mpHandleRoundEnd(room) {
       h.push('<div style="font-size:13px;color:#94a3b8;padding:8px 16px;background:#0d1120;border-radius:8px;border:1px solid #1e2d45">En attente que l\'hôte lance la manche suivante...</div>');
     }
   } else {
-    // Dernière manche — l'hôte va déclencher le bilan, les invités attendent
     if(mp.isHost) {
       h.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="padding:12px 32px;border-radius:10px;border:none;background:#22c55e;color:#fff;font-size:15px;font-weight:700;cursor:pointer">?? Voir le bilan final</button>');
     } else {
