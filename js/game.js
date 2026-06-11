@@ -15,7 +15,7 @@ var noZoomMode=false;
 var chillMode=false;
 var fixedLevel=-1;
 var BASE_PTS=[0,500,1000,1500,2000,3000];
-var DIST_K=Math.log(2)/200;
+var DIST_K=Math.log(2)/400; // demi-vie 400km — précision primaire
 var CIRC=2*Math.PI*38;
 var TIMER=30;
 
@@ -229,9 +229,10 @@ function resolveRound(){
   if(playerPos){
     dist=haversine(playerPos.lat,playerPos.lng,r.lat,r.lng);
     const effLevel=chillMode?5:level;
-    const distCoef=chillMode?1.0:0.8;
+    const distCoef=chillMode?1.0:0.90;
     const distScore=BASE_PTS[effLevel]*distCoef*Math.exp(-DIST_K*dist);
-    const timeScore=chillMode?0:BASE_PTS[effLevel]*0.2*(timeLeft/TIMER);
+    // Bonus temps : 10% max, annulé si distance > 2000km (évite de récompenser la rapidité sans précision)
+    const timeScore=chillMode?0:BASE_PTS[effLevel]*0.10*(timeLeft/TIMER)*(dist<2000?1:0);
     pts=Math.round(distScore+timeScore);
   }
   total+=pts;
