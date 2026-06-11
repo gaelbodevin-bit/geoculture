@@ -389,11 +389,11 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Opéra emblématique de Paris, cadre du Fantôme de l'Opéra"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Opéra Garnier à Paris, France"}
   ]},
-  {name:"Temple Sens?-ji — Tokyo, Japon",lat:35.7148,lng:139.7967,desc:"Le temple Senso-ji d'Asakusa est le plus ancien et le plus visité de Tokyo avec 30 millions de visiteurs par an. La Nakamise-dori, la rue commerçante menant au temple, vend des souvenirs depuis l'époque Edo. Les marchands actuels sont souvent les descendants directs des premiers commerçants du XVIIe siècle.",photo:"photos/temple_sens_ji.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Senso-ji, plus ancien temple de la mégalopole, fondé en 628, dédié à Kannon, quartier d'Asakusa, Tait?"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nakamise-d?ri, quartier d'Asakusa, arrondissement de Tait?"},
+  {name:"Temple Sensō-ji — Tokyo, Japon",lat:35.7148,lng:139.7967,desc:"Le temple Sensō-ji d'Asakusa est le plus ancien et le plus visité de Tokyo avec 30 millions de visiteurs par an. La Nakamise-dori, la rue commerçante menant au temple, vend des souvenirs depuis l'époque Edo. Les marchands actuels sont souvent les descendants directs des premiers commerçants du XVIIe siècle.",photo:"photos/temple_sens_ji.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sensō-ji, plus ancien temple de la mégalopole, fondé en 628, dédié à Kannon, quartier d'Asakusa, Taito"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nakamise-dori, quartier d'Asakusa, arrondissement de Taito"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancien et plus visité temple bouddhiste de Tokyo"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple Sens?-ji à Tokyo, Japon"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple Senso-ji à Tokyo, Japon"}
   ]},
   {name:"Temple d'Or — Kyoto, Japon",lat:35.0394,lng:135.7292,desc:"Le Temple d'Or recouvre 750 kg de feuilles d'or pur. Les Sikhs cuisinent et servent gratuitement 100 000 repas par jour à tous les visiteurs sans distinction de religion, de caste ou de nationalité.",photo:"photos/temple_d_or.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kinkaku-ji (Rokuon-ji), pavillon recouvert de feuilles d'or, construit en 1397 pour le shogun Ashikaga Yoshimitsu"},

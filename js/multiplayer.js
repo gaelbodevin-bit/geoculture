@@ -588,7 +588,7 @@ function mpHandleRoundEnd(room) {
     }
   } else {
     if(mp.isHost) {
-      h.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="padding:12px 32px;border-radius:10px;border:none;background:#22c55e;color:#fff;font-size:15px;font-weight:700;cursor:pointer">?? Voir le bilan final</button>');
+      h.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="padding:12px 32px;border-radius:10px;border:none;background:#22c55e;color:#fff;font-size:15px;font-weight:700;cursor:pointer">🏆 Voir le bilan final</button>');
     } else {
       h.push('<div style="font-size:13px;color:#94a3b8;padding:8px 16px;background:#0d1120;border-radius:8px;border:1px solid #1e2d45">En attente du bilan final…</div>');
     }
@@ -647,7 +647,7 @@ function mpShowFinalResults(room) {
   var opts    = room.options||{};
   var nbR     = opts.nbRounds||5;
   var seeds   = room.roundSeeds||[];
-  var medals  = ['??','??','??'];
+  var medals  = ['🥇','🥈','🥉'];
 
   // ── Stats complètes par joueur ────────────────────────────────────────
   var results = Object.entries(players).map(function([pid,p]) {
@@ -677,7 +677,7 @@ function mpShowFinalResults(room) {
   var h=[];
 
   // ── Titre ─────────────────────────────────────────────────────────────
-  h.push('<div class="otitle" style="font-size:36px">?? Fin de partie !</div>');
+  h.push('<div class="otitle" style="font-size:36px">🏆 Fin de partie !</div>');
 
   // ── Classement final ──────────────────────────────────────────────────
   h.push('<div style="width:100%;max-width:440px">');
@@ -723,15 +723,15 @@ function mpShowFinalResults(room) {
   // ── Succès ────────────────────────────────────────────────────────────
   var awards=[];
   var mostAcc=results.filter(function(r){return r.avgDist!=null;}).sort(function(a,b){return (a.avgDist||999)-(b.avgDist||999);})[0];
-  if(mostAcc) awards.push({emoji:'??',title:'Le plus précis',desc:'~'+fmtDst(mostAcc.avgDist)+' en moyenne',player:mostAcc});
+  if(mostAcc) awards.push({emoji:'🎯',title:'Le plus précis',desc:'~'+fmtDst(mostAcc.avgDist)+' en moyenne',player:mostAcc});
   var fastest=results.filter(function(r){return r.avgTime!=null;}).sort(function(a,b){return (a.avgTime||999)-(b.avgTime||999);})[0];
   if(fastest) awards.push({emoji:'⚡',title:'Le plus réactif',desc:'Temps de réponse le plus court',player:fastest});
   var longShot=results.filter(function(r){return r.worstDist!=null;}).sort(function(a,b){return b.worstDist-a.worstDist;})[0];
-  if(longShot) awards.push({emoji:'??',title:'Tir le plus loin',desc:fmtDst(longShot.worstDist)+' de la cible',player:longShot});
+  if(longShot) awards.push({emoji:'🚀',title:'Tir le plus loin',desc:fmtDst(longShot.worstDist)+' de la cible',player:longShot});
   var bestRound=null,bestRPts=0;
   results.forEach(function(r){for(var i=0;i<nbR;i++){var pts=((answers[i]||{})[r.pid]||{}).pts||0;if(pts>bestRPts){bestRPts=pts;bestRound={player:r,pts:pts};}}});
   if(bestRound) awards.push({emoji:'⭐',title:'Meilleure manche',desc:'+'+fmtPts(bestRound.pts)+' pts',player:bestRound.player});
-  if(results.length>0) awards.push({emoji:'??',title:'Champion',desc:fmtPts(results[0].score)+' pts au total',player:results[0]});
+  if(results.length>0) awards.push({emoji:'👑',title:'Champion',desc:fmtPts(results[0].score)+' pts au total',player:results[0]});
 
   if(awards.length>0) {
     h.push('<div style="width:100%;max-width:440px">');
