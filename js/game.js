@@ -372,26 +372,81 @@ function buildShareText(format) {
 
 function shareScore() {
   var text = buildShareText('emoji');
+  var url  = 'https://gaelbodevin-bit.github.io/geoculture/';
+  // Mobile : partage natif direct
   if(navigator.share) {
     navigator.share({ title:'GeoCulture', text:text }).catch(function(){});
-  } else if(navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(function(){
-      _shareToast('Score copie dans le presse-papier !');
-    }).catch(function(){ _shareFallbackCopy(text); });
-  } else {
-    _shareFallbackCopy(text);
+    return;
   }
+  // Desktop : panneau de partage réseaux (style YouTube)
+  _shareShowPanel(text, url);
 }
 
-function _shareFallbackCopy(text) {
-  var ta = document.createElement('textarea');
-  ta.value = text;
-  ta.style.position = 'fixed';
-  ta.style.opacity = '0';
-  document.body.appendChild(ta);
-  ta.select();
-  try { document.execCommand('copy'); _shareToast('Score copie !'); }
-  catch(e) { _shareToast('Impossible de copier'); }
+function _shareShowPanel(text, url) {
+  var existing = document.getElementById('share-modal');
+  if(existing) existing.remove();
+
+  var encText = encodeURIComponent(text);
+  var encURL  = encodeURIComponent(url);
+  // Texte sans l'URL pour les réseaux qui ajoutent le lien séparément
+  var textNoUrl = encodeURIComponent(text.replace(url, '').trim());
+
+  // Liens de partage par réseau
+  var nets = [
+    { name:'X',        color:'#000000', icon:'\uD835\uDD4F',
+      link:'https://twitter.com/intent/tweet?text='+textNoUrl+'&url='+encURL },
+    { name:'WhatsApp', color:'#25D366', icon:'\uD83D\uDCAC',
+      link:'https://wa.me/?text='+encText },
+    { name:'Telegram', color:'#0088cc', icon:'\u2708\uFE0F',
+      link:'https://t.me/share/url?url='+encURL+'&text='+textNoUrl },
+    { name:'Reddit',   color:'#FF4500', icon:'\uD83D\uDC7D',
+      link:'https://www.reddit.com/submit?url='+encURL+'&title='+textNoUrl },
+    { name:'Facebook', color:'#1877F2', icon:'f',
+      link:'https://www.facebook.com/sharer/sharer.php?u='+encURL }
+  ];
+
+  var btns = nets.map(function(n){
+    return '<a href="'+n.link+'" target="_blank" rel="noopener" '
+      + 'style="display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;flex:1;min-width:60px">'
+      + '<div style="width:48px;height:48px;border-radius:50%;background:'+n.color+';display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;font-weight:700;transition:transform .15s" '
+      + 'onmouseover="this.style.transform=\'scale(1.1)\'" onmouseout="this.style.transform=\'scale(1)\'">'+n.icon+'</div>'
+      + '<span style="font-size:11px;color:#94a3b8">'+n.name+'</span></a>';
+  }).join('');
+
+  var m = document.createElement('div');
+  m.id = 'share-modal';
+  m.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(7,9,15,.82);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px';
+  m.innerHTML = '<div style="background:#0d1120;border:1px solid #2d3f5e;border-radius:16px;padding:24px;max-width:420px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.5)">'
+    + '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px">'
+    + '<div style="font-size:17px;font-weight:700;color:#e2e8f0">Partager votre score</div>'
+    + '<button id="share-x" style="background:none;border:none;color:#6b7280;font-size:22px;cursor:pointer;line-height:1;padding:0">&times;</button>'
+    + '</div>'
+    + '<div style="display:flex;gap:10px;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap">'+btns+'</div>'
+    + '<div style="display:flex;gap:8px;align-items:center;background:#111827;border:1px solid #2d3f5e;border-radius:9px;padding:6px 6px 6px 12px">'
+    + '<input id="share-link" readonly value="'+url+'" style="flex:1;background:none;border:none;color:#94a3b8;font-size:13px;outline:none;font-family:system-ui,sans-serif">'
+    + '<button id="share-copy" style="padding:8px 18px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer;font-size:13px;white-space:nowrap">Copier</button>'
+    + '</div>'
+    + '<div style="font-size:11px;color:#4b5563;margin-top:12px;text-align:center">Le bouton Copier copie votre score complet avec les emojis</div>'
+    + '</div>';
+  document.body.appendChild(m);
+
+  // Bouton Copier → copie le TEXTE COMPLET (avec emojis), pas juste l'URL
+  document.getElementById('share-copy').onclick = function(){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){
+        _shareToast('Score copie !');
+      }).catch(function(){ _shareLegacyCopy(text); });
+    } else { _shareLegacyCopy(text); }
+  };
+  document.getElementById('share-x').onclick = function(){ m.remove(); };
+  m.onclick = function(e){ if(e.target===m) m.remove(); };
+}
+
+function _shareLegacyCopy(text){
+  var ta=document.createElement('textarea');
+  ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand('copy'); _shareToast('Score copie !'); }catch(e){}
   document.body.removeChild(ta);
 }
 
