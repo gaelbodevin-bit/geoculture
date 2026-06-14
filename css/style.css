@@ -77,7 +77,7 @@ z-index:1000;
 opacity:1;
 transition:all .35s ease;
 
-/* CinÃ©matique */
+/* Cinématique */
 overflow:hidden;
 transform:scale(1.02);
 }
@@ -189,4 +189,151 @@ body.menu-mode #app-wrapper{background:transparent}
 .menu-btn:active {
   transform: scale(0.97);
   box-shadow: none;
+}
+
+/* ════════════════════════════════════════════════════════════
+   MOBILE — ROTATION + ADAPTATION PAYSAGE
+   ════════════════════════════════════════════════════════════ */
+
+/* Overlay "Tournez votre téléphone" — visible uniquement en portrait mobile */
+#rotate-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: var(--bg0);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+  padding: 30px;
+}
+#rotate-overlay .phone-icon {
+  font-size: 64px;
+  animation: rotatePhone 1.6s ease-in-out infinite;
+}
+@keyframes rotatePhone {
+  0%, 25%   { transform: rotate(0deg); }
+  60%, 100% { transform: rotate(90deg); }
+}
+#rotate-overlay .rotate-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+  color: var(--accent);
+}
+#rotate-overlay .rotate-sub {
+  font-size: 14px;
+  color: var(--muted2);
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+/* Portrait mobile/tablette → afficher l'overlay rotation, cacher le jeu */
+@media screen and (max-width: 920px) and (orientation: portrait) {
+  #rotate-overlay { display: flex; }
+}
+
+/* ── PAYSAGE MOBILE (hauteur réduite) ─────────────────────── */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+
+  /* Header ultra-compact */
+  #hdr { height: 36px; padding: 0 8px; }
+  #logo { font-size: 15px; letter-spacing: 1px; }
+  #stats { gap: 10px; }
+  .st span { font-size: 7px; }
+  .st b { font-size: 12px; }
+  #auth-name { display: none; }
+  #hist-btn { display: none; }
+  #auth-btn { font-size: 9px; padding: 3px 7px; }
+  #menu-btn { font-size: 9px; padding: 3px 7px; }
+
+  /* Sidebar étroite */
+  #sidebar { width: 190px; }
+  #qpanel { padding: 8px 10px; }
+  #badge { font-size: 8px; padding: 2px 6px; margin-bottom: 4px; }
+  #qtxt { font-size: 10.5px; min-height: 0; line-height: 1.35; }
+
+  #timer-section { padding: 6px 8px; gap: 3px; flex-direction: row; align-items: center; justify-content: space-around; }
+  #timer-lbl { display: none; }
+  #tring, #tsvg { width: 44px; height: 44px; }
+  #tnum { font-size: 15px; }
+  #maxbox { padding: 3px 6px; width: auto; flex: 1; margin-left: 6px; }
+  #maxbox .ml { font-size: 7px; }
+  #maxbox .mv { font-size: 13px; }
+  #maxbox .ms { font-size: 8px; }
+  #dots { display: none; }
+
+  #actions { padding: 6px 8px; gap: 4px; }
+  #placed-info { font-size: 8.5px; padding-bottom: 1px; }
+  .btn { font-size: 10.5px; padding: 6px 8px; }
+
+  /* Overlay compact + scrollable */
+  #overlay { padding: 8px; gap: 6px; justify-content: flex-start; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+  .otitle { font-size: 24px; letter-spacing: 2px; }
+  .osub { font-size: 11px; max-width: 90%; }
+  .ocard { padding: 8px 12px; max-width: 340px; }
+  .orow { font-size: 11px; padding: 3px 0; }
+  .rgrid { grid-template-columns: 1fr 1fr; max-width: 480px; gap: 6px; }
+  .ri { padding: 7px 9px; font-size: 10px; }
+  .ri b { font-size: 11px; }
+
+  #back-btn { font-size: 12px; padding: 8px 18px; bottom: 8px; }
+  #explore-tip { font-size: 10px; padding: 5px 10px; top: 6px; }
+
+  /* Panel live MP plus petit */
+  #mp-live-panel {
+    top: 40px !important;
+    right: 6px !important;
+    min-width: 110px !important;
+    max-width: 140px !important;
+    font-size: 9px !important;
+    padding: 6px 8px !important;
+  }
+}
+
+/* ── Très petits paysages (iPhone SE paysage : 320px de haut) ── */
+@media screen and (max-height: 380px) and (orientation: landscape) {
+  #hdr { height: 30px; }
+  #logo { display: none; }
+  #sidebar { width: 165px; }
+  #qtxt { font-size: 9.5px; }
+  .otitle { font-size: 20px; }
+}
+
+/* ── Adaptation générale viewport mobile ───────────────────── */
+@media screen and (max-width: 920px) {
+  /* dvh pour gérer les barres navigateur mobiles */
+  #g { height: 100dvh; }
+  body.menu-mode #mapw,
+  body.menu-mode #map { height: 100dvh !important; }
+
+  /* Zones tactiles plus grandes */
+  .btn { min-height: 40px; }
+  input, select { font-size: 16px !important; } /* anti-zoom iOS */
+
+  /* Leaflet : contrôles plus gros au doigt */
+  .leaflet-control-zoom-in,
+  .leaflet-control-zoom-out {
+    width: 34px !important;
+    height: 34px !important;
+    line-height: 34px !important;
+    font-size: 17px !important;
+  }
+
+  /* Désactiver hover collé sur tactile */
+  .btn:hover { transform: none; }
+  .menu-btn:hover { transform: none; box-shadow: none; }
+}
+
+/* Safe-area iPhone (encoche) en paysage */
+@supports (padding: max(0px)) {
+  @media (orientation: landscape) {
+    #hdr {
+      padding-left: max(8px, env(safe-area-inset-left));
+      padding-right: max(8px, env(safe-area-inset-right));
+    }
+    #sidebar { padding-left: env(safe-area-inset-left); }
+  }
 }

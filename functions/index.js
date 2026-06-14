@@ -1,140 +1,1028 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
-const stripe = require('stripe');
-
-admin.initializeApp();
-const db = admin.firestore();
-
-const ALLOWED_ORIGIN = 'https://gaelbodevin-bit.github.io';
-
-function setCORS(res, req) {
-  const origin = req.headers.origin || '';
-  if (origin.startsWith('https://gaelbodevin-bit.github.io')) {
-    res.set('Access-Control-Allow-Origin', origin);
-  } else {
-    res.set('Access-Control-Allow-Origin', ALLOWED_ORIGIN);
-  }
-  res.set('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.set('Access-Control-Max-Age', '3600');
-}
-
-// Webhook Stripe
-exports.stripeWebhook = functions.https.onRequest(async (req, res) => {
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-
-  const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
-  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
-  let event;
-  try {
-    event = stripeClient.webhooks.constructEvent(req.rawBody, req.headers['stripe-signature'], webhookSecret);
-  } catch (err) {
-    console.error('Webhook error:', err.message);
-    return res.status(400).send('Webhook Error: ' + err.message);
-  }
-
-  if (event.type === 'checkout.session.completed') {
-    const session = event.data.object;
-    const uid = session.metadata && session.metadata.uid;
-    const email = session.customer_email || (session.customer_details && session.customer_details.email) || '';
-    if (!uid) return res.status(400).send('No uid');
-    try {
-      await db.collection('users').doc(uid).set({
-        premium: true,
-        premiumSince: admin.firestore.FieldValue.serverTimestamp(),
-        lastPayment: admin.firestore.FieldValue.serverTimestamp(),
-        amountPaid: session.amount_total,
-        stripeSessionId: session.id,
-        email: email
-      }, { merge: true });
-      await db.collection('payments').add({
-        uid, sessionId: session.id, amount: session.amount_total,
-        currency: session.currency, email,
-        createdAt: admin.firestore.FieldValue.serverTimestamp()
-      });
-      console.log('Premium active uid=' + uid);
-    } catch (err) {
-      console.error('Firestore error:', err);
-      return res.status(500).send('DB error');
-    }
-  }
-  res.status(200).json({ received: true });
-});
-
-// Creer session Checkout via fetch + Bearer token
-exports.createCheckoutSession = functions.https.onRequest(async (req, res) => {
-  setCORS(res, req);
-  if (req.method === 'OPTIONS') return res.status(204).send('');
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-
-  // Verifier token Firebase Auth
-  const authHeader = req.headers.authorization || '';
-  if (!authHeader.startsWith('Bearer ')) return res.status(401).json({ error: 'Non authentifie' });
-
-  let uid, email;
-  try {
-    const decoded = await admin.auth().verifyIdToken(authHeader.split('Bearer ')[1]);
-    uid = decoded.uid;
-    email = decoded.email || '';
-  } catch (err) {
-    console.error('Auth error:', err.message);
-    return res.status(401).json({ error: 'Token invalide' });
-  }
-
-  let amount;
-  try {
-    const data = req.body.data || req.body;
-    amount = Math.max(100, Math.round(Number(data.amount) * 100));
-  } catch (err) {
-    return res.status(400).json({ error: 'Montant invalide' });
-  }
-
-  const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
-  try {
-    const session = await stripeClient.checkout.sessions.create({
-      payment_method_types: ['card'],
-      line_items: [{
-        price_data: {
-          currency: 'eur',
-          product_data: { name: 'GeoCulture Premium', description: 'Acces aux modes No-Zoom, Perfection et Multijoueur' },
-          unit_amount: amount
-        },
-        quantity: 1
-      }],
-      mode: 'payment',
-      customer_email: email,
-      metadata: { uid },
-      success_url: 'https://gaelbodevin-bit.github.io/geoculture/epremium=success',
-      cancel_url: 'https://gaelbodevin-bit.github.io/geoculture/epremium=cancel',
-      locale: 'fr'
-    });
-    return res.status(200).json({ result: { url: session.url, sessionId: session.id } });
-  } catch (err) {
-    console.error('Stripe error:', err);
-    return res.status(500).json({ error: 'Erreur Stripe: ' + err.message });
-  }
-});
-
-// Verifier statut premium
-exports.checkPremium = functions.https.onCall(async (data, context) => {
-  if (!context.auth) return { premium: false };
-  const doc = await db.collection('users').doc(context.auth.uid).get();
-  return { premium: doc.exists && doc.data().premium === true };
-});
-
-// Supprimer compte (RGPD)
-exports.deleteAccount = functions.https.onCall(async (data, context) => {
-  if (!context.auth) throw new functions.https.HttpsError('unauthenticated', 'Connexion requise');
-  const uid = context.auth.uid;
-  try {
-    await db.collection('users').doc(uid).delete();
-    const games = await db.collection('games').where('uid', '==', uid).get();
-    if (!games.empty) { const b = db.batch(); games.forEach(d => b.delete(d.ref)); await b.commit(); }
-    const daily = await db.collection('daily_scores').where('uid', '==', uid).get();
-    if (!daily.empty) { const b2 = db.batch(); daily.forEach(d => b2.delete(d.ref)); await b2.commit(); }
-    await admin.auth().deleteUser(uid);
-    return { success: true };
-  } catch (err) {
-    throw new functions.https.HttpsError('internal', err.message);
-  }
-});
+[{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1109",
+	"severity": 8,
+	"message": "Expression expected.",
+	"source": "ts",
+	"startLineNumber": 1,
+	"startColumn": 1,
+	"endLineNumber": 1,
+	"endColumn": 2,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "';' expected.",
+	"source": "ts",
+	"startLineNumber": 1,
+	"startColumn": 11,
+	"endLineNumber": 1,
+	"endColumn": 15,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'html' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 2,
+	"startColumn": 2,
+	"endLineNumber": 2,
+	"endColumn": 6,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'head' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 3,
+	"startColumn": 2,
+	"endLineNumber": 3,
+	"endColumn": 6,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'meta' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 4,
+	"startColumn": 4,
+	"endLineNumber": 4,
+	"endColumn": 8,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'meta' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 5,
+	"startColumn": 4,
+	"endLineNumber": 5,
+	"endColumn": 8,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'meta' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 6,
+	"startColumn": 4,
+	"endLineNumber": 6,
+	"endColumn": 8,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'meta' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 7,
+	"startColumn": 4,
+	"endLineNumber": 7,
+	"endColumn": 8,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'meta' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 8,
+	"startColumn": 4,
+	"endLineNumber": 8,
+	"endColumn": 8,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'meta' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 9,
+	"startColumn": 4,
+	"endLineNumber": 9,
+	"endColumn": 8,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'meta' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 10,
+	"startColumn": 4,
+	"endLineNumber": 10,
+	"endColumn": 8,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'meta' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 12,
+	"startColumn": 4,
+	"endLineNumber": 12,
+	"endColumn": 8,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'meta' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 13,
+	"startColumn": 4,
+	"endLineNumber": 13,
+	"endColumn": 8,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'meta' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 14,
+	"startColumn": 4,
+	"endLineNumber": 14,
+	"endColumn": 8,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 16,
+	"startColumn": 4,
+	"endLineNumber": 16,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 16,
+	"startColumn": 25,
+	"endLineNumber": 16,
+	"endColumn": 26,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 17,
+	"startColumn": 4,
+	"endLineNumber": 17,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 17,
+	"startColumn": 65,
+	"endLineNumber": 17,
+	"endColumn": 66,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 18,
+	"startColumn": 4,
+	"endLineNumber": 18,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 20,
+	"startColumn": 5,
+	"endLineNumber": 20,
+	"endColumn": 6,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 22,
+	"startColumn": 4,
+	"endLineNumber": 22,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 22,
+	"startColumn": 22,
+	"endLineNumber": 22,
+	"endColumn": 23,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 24,
+	"startColumn": 4,
+	"endLineNumber": 24,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 24,
+	"startColumn": 24,
+	"endLineNumber": 24,
+	"endColumn": 25,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 30,
+	"startColumn": 12,
+	"endLineNumber": 30,
+	"endColumn": 13,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 38,
+	"startColumn": 5,
+	"endLineNumber": 38,
+	"endColumn": 6,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 40,
+	"startColumn": 14,
+	"endLineNumber": 40,
+	"endColumn": 15,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 43,
+	"startColumn": 5,
+	"endLineNumber": 43,
+	"endColumn": 6,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 46,
+	"startColumn": 15,
+	"endLineNumber": 46,
+	"endColumn": 16,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 46,
+	"startColumn": 24,
+	"endLineNumber": 46,
+	"endColumn": 25,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 46,
+	"startColumn": 32,
+	"endLineNumber": 46,
+	"endColumn": 33,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 47,
+	"startColumn": 5,
+	"endLineNumber": 47,
+	"endColumn": 6,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 51,
+	"startColumn": 12,
+	"endLineNumber": 51,
+	"endColumn": 13,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 55,
+	"startColumn": 5,
+	"endLineNumber": 55,
+	"endColumn": 6,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 57,
+	"startColumn": 14,
+	"endLineNumber": 57,
+	"endColumn": 15,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 60,
+	"startColumn": 5,
+	"endLineNumber": 60,
+	"endColumn": 6,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 63,
+	"startColumn": 23,
+	"endLineNumber": 63,
+	"endColumn": 24,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 63,
+	"startColumn": 93,
+	"endLineNumber": 63,
+	"endColumn": 94,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 67,
+	"startColumn": 14,
+	"endLineNumber": 67,
+	"endColumn": 15,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 71,
+	"startColumn": 5,
+	"endLineNumber": 71,
+	"endColumn": 6,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 73,
+	"startColumn": 24,
+	"endLineNumber": 73,
+	"endColumn": 25,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 73,
+	"startColumn": 71,
+	"endLineNumber": 73,
+	"endColumn": 72,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 74,
+	"startColumn": 24,
+	"endLineNumber": 74,
+	"endColumn": 25,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 74,
+	"startColumn": 114,
+	"endLineNumber": 74,
+	"endColumn": 115,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 75,
+	"startColumn": 26,
+	"endLineNumber": 75,
+	"endColumn": 27,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 75,
+	"startColumn": 119,
+	"endLineNumber": 75,
+	"endColumn": 120,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 76,
+	"startColumn": 25,
+	"endLineNumber": 76,
+	"endColumn": 26,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 76,
+	"startColumn": 177,
+	"endLineNumber": 76,
+	"endColumn": 178,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'}' expected.",
+	"source": "ts",
+	"startLineNumber": 77,
+	"startColumn": 25,
+	"endLineNumber": 77,
+	"endColumn": 26,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1381",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'}'}` or `&rbrace;`?",
+	"source": "ts",
+	"startLineNumber": 77,
+	"startColumn": 161,
+	"endLineNumber": 77,
+	"endColumn": 162,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17002",
+	"severity": 8,
+	"message": "Expected corresponding JSX closing tag for 'link'.",
+	"source": "ts",
+	"startLineNumber": 79,
+	"startColumn": 3,
+	"endLineNumber": 79,
+	"endColumn": 7,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 82,
+	"startColumn": 4,
+	"endLineNumber": 82,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 82,
+	"startColumn": 81,
+	"endLineNumber": 82,
+	"endColumn": 82,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 91,
+	"startColumn": 6,
+	"endLineNumber": 91,
+	"endColumn": 7,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 91,
+	"startColumn": 45,
+	"endLineNumber": 91,
+	"endColumn": 46,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 93,
+	"startColumn": 8,
+	"endLineNumber": 93,
+	"endColumn": 9,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 101,
+	"startColumn": 9,
+	"endLineNumber": 101,
+	"endColumn": 10,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 104,
+	"startColumn": 6,
+	"endLineNumber": 104,
+	"endColumn": 7,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 104,
+	"startColumn": 22,
+	"endLineNumber": 104,
+	"endColumn": 23,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'img' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 116,
+	"startColumn": 12,
+	"endLineNumber": 116,
+	"endColumn": 15,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17008",
+	"severity": 8,
+	"message": "JSX element 'br' has no corresponding closing tag.",
+	"source": "ts",
+	"startLineNumber": 169,
+	"startColumn": 42,
+	"endLineNumber": 169,
+	"endColumn": 44,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 177,
+	"startColumn": 10,
+	"endLineNumber": 177,
+	"endColumn": 11,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 177,
+	"startColumn": 29,
+	"endLineNumber": 177,
+	"endColumn": 30,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 179,
+	"startColumn": 4,
+	"endLineNumber": 179,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 179,
+	"startColumn": 24,
+	"endLineNumber": 179,
+	"endColumn": 25,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 180,
+	"startColumn": 4,
+	"endLineNumber": 180,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 180,
+	"startColumn": 18,
+	"endLineNumber": 180,
+	"endColumn": 19,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 182,
+	"startColumn": 4,
+	"endLineNumber": 182,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 182,
+	"startColumn": 30,
+	"endLineNumber": 182,
+	"endColumn": 31,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 184,
+	"startColumn": 4,
+	"endLineNumber": 184,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 184,
+	"startColumn": 24,
+	"endLineNumber": 184,
+	"endColumn": 25,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 186,
+	"startColumn": 4,
+	"endLineNumber": 186,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 186,
+	"startColumn": 25,
+	"endLineNumber": 186,
+	"endColumn": 26,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 190,
+	"startColumn": 4,
+	"endLineNumber": 190,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 190,
+	"startColumn": 60,
+	"endLineNumber": 190,
+	"endColumn": 61,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1003",
+	"severity": 8,
+	"message": "Identifier expected.",
+	"source": "ts",
+	"startLineNumber": 191,
+	"startColumn": 4,
+	"endLineNumber": 191,
+	"endColumn": 5,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1382",
+	"severity": 8,
+	"message": "Unexpected token. Did you mean `{'>'}` or `&gt;`?",
+	"source": "ts",
+	"startLineNumber": 195,
+	"startColumn": 5,
+	"endLineNumber": 195,
+	"endColumn": 6,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "17002",
+	"severity": 8,
+	"message": "Expected corresponding JSX closing tag for 'link'.",
+	"source": "ts",
+	"startLineNumber": 197,
+	"startColumn": 3,
+	"endLineNumber": 197,
+	"endColumn": 7,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+},{
+	"resource": "/C:/Users/gaelb/Documents/GitHub/geoculture/functions/index.js",
+	"owner": "typescript",
+	"code": "1005",
+	"severity": 8,
+	"message": "'</' expected.",
+	"source": "ts",
+	"startLineNumber": 197,
+	"startColumn": 8,
+	"endLineNumber": 197,
+	"endColumn": 8,
+	"modelVersionId": 3,
+	"origin": "extHost1"
+}]
