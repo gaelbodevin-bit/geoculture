@@ -370,8 +370,8 @@ function buildShareText(format) {
   }
 }
 
-function shareScore(format) {
-  var text = buildShareText(format);
+function shareScore() {
+  var text = buildShareText('emoji');
   if(navigator.share) {
     navigator.share({ title:'GeoCulture', text:text }).catch(function(){});
   } else if(navigator.clipboard && navigator.clipboard.writeText) {
@@ -438,10 +438,8 @@ function showEnd(){
       <button class="btn ba" onclick="startGame()" style="width:auto;padding:12px 32px;font-size:14px">\u21ba Rejouer</button>
     </div>
     ${(!chillMode && !window._mpMode) ? `
-    <div style="display:flex;gap:8px;margin-top:2px;flex-wrap:wrap;justify-content:center;align-items:center">
-      <span style="font-size:11px;color:#6b7280">Partager :</span>
-      <button onclick="shareScore('emoji')" style="padding:8px 16px;border-radius:8px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;font-size:12px;font-weight:600;font-family:'DM Sans',sans-serif">\uD83D\uDFE9 R\u00e9sultat visuel</button>
-      <button onclick="shareScore('simple')" style="padding:8px 16px;border-radius:8px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;font-size:12px;font-weight:600;font-family:'DM Sans',sans-serif">\uD83D\uDCDD Texte simple</button>
+    <div style="display:flex;margin-top:4px;justify-content:center">
+      <button id="share-btn" onclick="window.shareScore&&window.shareScore()" title="Partager votre score" style="padding:11px 28px;border-radius:9px;border:none;cursor:pointer;background:#22c55e;color:#fff;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:8px">\uD83D\uDCE4 Partager mon score</button>
     </div>` : ''}
     <div id="ad-inter">
       <!-- PUB RECTANGLE 300x250 (d\u00e9commenter apr\u00e8s approbation AdSense)
@@ -454,6 +452,15 @@ function showEnd(){
       -->
     </div>`;
   ov.classList.remove('h');
+  // Info-bulle : aperçu du texte qui sera partagé
+  if(!chillMode && !window._mpMode){
+    setTimeout(function(){
+      var sb=document.getElementById('share-btn');
+      if(sb && typeof buildShareText==='function'){
+        try{ sb.title=buildShareText('emoji'); }catch(e){}
+      }
+    }, 100);
+  }
   if(typeof window.saveGame==='function'){var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);var _p=_t>0?Math.round(total/_t*100):0;var _n=['tout-niveaux','expert','difficile','moyen','facile'];var _m=(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(chillMode?'chill-':'')+(_n[fixedLevel+1]||'tout-niveaux');setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);}
   // Sauvegarder dans le classement du jour si mode daily
   if(window._dailyMode && typeof window.saveDailyScore==='function'){
