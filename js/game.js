@@ -339,7 +339,73 @@ function showInter(pts,dist,name,eliminated){
 
 }
 
+// ════════════════════════════════════════════════════════════════
+// PARTAGE DE SCORE (modes solo + défi du jour — pas multi ni chill)
+// ════════════════════════════════════════════════════════════════
+function buildShareText(format) {
+  var url = 'https://gaelbodevin-bit.github.io/geoculture/';
+  var isDaily = !!window._dailyMode || !!window._wasDailyMode;
+  var header;
+  if(isDaily) {
+    var launch = new Date('2026-06-01T00:00:00Z');
+    var today  = new Date(getDailyDateFR()+'T00:00:00Z');
+    var dayNum = Math.floor((today-launch)/86400000)+1;
+    header = 'GeoCulture \u2014 Defi du jour #'+dayNum;
+  } else {
+    header = 'GeoCulture';
+  }
+
+  if(format === 'emoji') {
+    var squares = roundScores.map(function(s){
+      var ratio = s.maxPts>0 ? s.pts/s.maxPts : 0;
+      if(ratio >= 0.80) return '\uD83D\uDFE9';
+      if(ratio >= 0.40) return '\uD83D\uDFE8';
+      return '\uD83D\uDFE5';
+    }).join('');
+    var totalMax = roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
+    var pct = totalMax>0 ? Math.round(total/totalMax*100) : 0;
+    return header+'\n'+squares+'\n\uD83C\uDFAF '+total.toLocaleString('fr-FR')+' pts ('+pct+'%)\n'+url;
+  } else {
+    return header+'\nJ\'ai marque '+total.toLocaleString('fr-FR')+' pts !\nSauras-tu faire mieux ? '+url;
+  }
+}
+
+function shareScore(format) {
+  var text = buildShareText(format);
+  if(navigator.share) {
+    navigator.share({ title:'GeoCulture', text:text }).catch(function(){});
+  } else if(navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function(){
+      _shareToast('Score copie dans le presse-papier !');
+    }).catch(function(){ _shareFallbackCopy(text); });
+  } else {
+    _shareFallbackCopy(text);
+  }
+}
+
+function _shareFallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed';
+  ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); _shareToast('Score copie !'); }
+  catch(e) { _shareToast('Impossible de copier'); }
+  document.body.removeChild(ta);
+}
+
+function _shareToast(msg) {
+  var t = document.getElementById('toast');
+  if(!t) return;
+  t.textContent = msg;
+  t.classList.add('s');
+  setTimeout(function(){ t.classList.remove('s'); }, 2200);
+}
+window.shareScore = shareScore;
+
 function showEnd(){
+  if(!window._dailyMode) window._wasDailyMode=false;
   const totalMax=roundScores.reduce((a,s)=>a+(s.maxPts||0),0);
   const pct=totalMax>0?Math.round(total/totalMax*100):0;
   const rows=roundScores.map(s=>{
@@ -371,6 +437,12 @@ function showEnd(){
       <button id="explore-btn" onclick="enterExploreMode()" style="font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0">Explorer la carte</button>
       <button class="btn ba" onclick="startGame()" style="width:auto;padding:12px 32px;font-size:14px">\u21ba Rejouer</button>
     </div>
+    ${(!chillMode && !window._mpMode) ? `
+    <div style="display:flex;gap:8px;margin-top:2px;flex-wrap:wrap;justify-content:center;align-items:center">
+      <span style="font-size:11px;color:#6b7280">Partager :</span>
+      <button onclick="shareScore('emoji')" style="padding:8px 16px;border-radius:8px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;font-size:12px;font-weight:600;font-family:'DM Sans',sans-serif">\uD83D\uDFE9 R\u00e9sultat visuel</button>
+      <button onclick="shareScore('simple')" style="padding:8px 16px;border-radius:8px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;font-size:12px;font-weight:600;font-family:'DM Sans',sans-serif">\uD83D\uDCDD Texte simple</button>
+    </div>` : ''}
     <div id="ad-inter">
       <!-- PUB RECTANGLE 300x250 (d\u00e9commenter apr\u00e8s approbation AdSense)
       <ins class="adsbygoogle"
@@ -391,7 +463,7 @@ function showEnd(){
     // Marquer comme joué (localStorage) et envoyer au classement Firestore
     if(typeof markDailyPlayed==='function') markDailyPlayed(_dlvl, total);
     window.saveDailyScore(_dlvl, total, _dp);
-    window._dailyMode = false; // empêcher double soumission
+    window._wasDailyMode = true; window._dailyMode = false; // empêcher double soumission
   }
 }
 
