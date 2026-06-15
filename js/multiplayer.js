@@ -390,17 +390,51 @@ function mpSubmitAnswer(pos, dist, pts, rIdx) {
 
 // ??? Hôte surveille les réponses de tous ?????????????????????????????????????
 function mpWatchAllAnswered(rIdx) {
+  if(chillMode) return;
+  if(mp._watchInterval) { clearInterval(mp._watchInterval); }
   var aRef = ref(rtdb,'rooms/'+mp.roomCode+'/answers/'+rIdx);
   var pRef = ref(rtdb,'rooms/'+mp.roomCode+'/players');
-  var _to = chillMode ? null : setTimeout(function(){ clearInterval(_iv); mpAdvance(rIdx); }, 35000);
-  var _iv = setInterval(function() {
-    Promise.all([get(aRef),get(pRef)]).then(function([as,ps]) {
-      var answers=as.val()||{}, players=ps.val()||{};
-      if(Object.keys(players).every(function(pid){ return answers[pid]!==undefined; })) {
-        clearInterval(_iv); clearTimeout(_to); mpAdvance(rIdx);
+  var rRef = ref(rtdb,'rooms/'+mp.roomCode);
+  var advanced = false;
+
+  function doAdvance() {
+    if(advanced) return;
+    advanced = true;
+    clearInterval(mp._watchInterval);
+    mp._watchInterval = null;
+    mpAdvance(rIdx);
+  }
+
+  mp._watchInterval = setInterval(function() {
+    Promise.all([get(aRef), get(pRef), get(rRef)]).then(function([as, ps, rs]) {
+      var answers = as.val()||{}, players = ps.val()||{}, room = rs.val()||{};
+      // Cas 1 : tous les joueurs ont répondu → avancer immédiatement
+      var allAnswered = Object.keys(players).length > 0 &&
+        Object.keys(players).every(function(pid){ return answers[pid] !== undefined; });
+      if(allAnswered) { doAdvance(); return; }
+      // Cas 2 : le temps de la manche est écoulé (+1.5s de marge réseau)
+      // → forcer l'avancement même si des joueurs n'ont pas répondu
+      var roundStart = room.roundStart || 0;
+      var duration   = (room.options||{}).timerDuration || 30;
+      if(roundStart > 0) {
+        var elapsed = (Date.now() - roundStart) / 1000;
+        if(elapsed >= duration + 1.5) {
+          // Marquer les joueurs absents avec un score 0 avant d'avancer
+          var updates = {};
+          Object.keys(players).forEach(function(pid){
+            if(answers[pid] === undefined) {
+              updates['answers/'+rIdx+'/'+pid] = { pts:0, dist:null, pos:null, submittedAt:Date.now(), timeout:true };
+            }
+          });
+          if(Object.keys(updates).length > 0) {
+            update(rRef, updates).then(doAdvance);
+          } else {
+            doAdvance();
+          }
+        }
       }
-    });
-  }, 800);
+    }).catch(function(){});
+  }, 400); // polling 2x plus rapide (400ms au lieu de 800ms)
 }
 
 function mpAdvance(rIdx) {
