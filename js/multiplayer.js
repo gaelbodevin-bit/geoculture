@@ -537,7 +537,14 @@ function mpHandleRoundEnd(room) {
       mpOtherMarkers[pid] = m;
       bounds.push([ans.pos.lat,ans.pos.lng]);
     });
-    if(bounds.length>1) try{ map.fitBounds(L.latLngBounds(bounds),{padding:[60,60]}); }catch(e){}
+    // Sauvegarder les bounds pour le bouton "Explorer la carte"
+    mp._lastBounds = bounds;
+    // Ajuster la vue immédiatement (avant l'overlay) pour voir tous les points
+    if(bounds.length>1) {
+      try{ map.fitBounds(L.latLngBounds(bounds),{padding:[70,70],maxZoom:6}); }catch(e){}
+    } else if(bounds.length===1) {
+      try{ map.setView(bounds[0], 4); }catch(e){}
+    }
   }
 
   // ?? Construire l'overlay style showInter ??????????????????????????????????
@@ -965,6 +972,15 @@ function mpEnterExplore() {
   if(ov) ov.classList.add('h');
   var bb = document.getElementById('back-btn');
   if(bb) bb.style.display = 'block';
+  // Recadrer la carte sur tous les points (lieu + réponses des joueurs)
+  setTimeout(function(){
+    try{ map.invalidateSize(); }catch(e){}
+    if(mp._lastBounds && mp._lastBounds.length>1) {
+      try{ map.fitBounds(L.latLngBounds(mp._lastBounds),{padding:[80,80],maxZoom:6}); }catch(e){}
+    } else if(mp._lastBounds && mp._lastBounds.length===1) {
+      try{ map.setView(mp._lastBounds[0], 5); }catch(e){}
+    }
+  }, 150);
 }
 window.mpEnterExplore = mpEnterExplore;
 
