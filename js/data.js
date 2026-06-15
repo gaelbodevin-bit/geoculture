@@ -259,7 +259,7 @@ const ROUNDS=[
   ]},
   {name:"Uluru — Territoire du Nord, Australie",lat:-25.3444,lng:131.0369,desc:"Uluru est beaucoup plus grand qu'il n'y paraît : les deux tiers de ce monolithe sont enfouis sous terre. Les Anangu ont finalement interdit l'escalade du rocher sacré en 2019, après des décennies de négociations.",photo:"photos/uluru.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monolithe de grès rouge de 348 m de hauteur, lieu sacré des Anangu, parc national Uluru-Kata Tjuta"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cœœur du continent, région aride, à 450 km d'une ville isolée du désert"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cœur du continent, région aride,monolithe à 450 km d'une ville isolée du désert"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand rocher rouge sacré au cœur du désert australien, classé UNESCO"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Uluru à Territoire du Nord, Australie"}
   ]},
