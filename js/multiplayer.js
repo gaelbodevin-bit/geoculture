@@ -539,12 +539,20 @@ function mpHandleRoundEnd(room) {
     });
     // Sauvegarder les bounds pour le bouton "Explorer la carte"
     mp._lastBounds = bounds;
-    // Ajuster la vue immédiatement (avant l'overlay) pour voir tous les points
-    if(bounds.length>1) {
-      try{ map.fitBounds(L.latLngBounds(bounds),{padding:[70,70],maxZoom:6}); }catch(e){}
-    } else if(bounds.length===1) {
-      try{ map.setView(bounds[0], 4); }catch(e){}
-    }
+    // Dézoomer pour montrer TOUS les points (lieu révélé + réponses des joueurs)
+    // pendant le délai avant l'affichage du bilan
+    (function(){
+      try{ map.invalidateSize(); }catch(e){}
+      setTimeout(function(){
+        try{
+          if(bounds.length>1) {
+            map.fitBounds(L.latLngBounds(bounds),{padding:[80,80],maxZoom:7,animate:true,duration:0.8});
+          } else if(bounds.length===1) {
+            map.setView(bounds[0], 5, {animate:true});
+          }
+        }catch(e){}
+      }, 200);
+    })();
   }
 
   // ?? Construire l'overlay style showInter ??????????????????????????????????
@@ -673,7 +681,7 @@ function mpHandleRoundEnd(room) {
       var el2=document.getElementById(id);if(el2)el2.style.display='none';
     }
   })(imgId, place, placeName);
-  }, 8000); // 8s de carte visible avant le bilan
+  }, 10000); // 10s de carte visible avant le bilan
 }
 
 
