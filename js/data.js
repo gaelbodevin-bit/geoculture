@@ -941,11 +941,11 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyon aux vagues de grès orange, canyon-fente le plus photographié du monde, Arizona"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Antelope Canyon à Arizona, USA"}
   ]},
-    {name:"Ligne Nazc? — Pérou",lat:-14.739,lng:-75.13,desc:"Les lignes de Nazca furent créées en ôtant les pierres sombres du désert pour révéler le sable clair en dessous. Elles couvrent 450 km² et représentent 70 animaux et plantes, 300 figures géométriques. Maria Reiche consacra 50 ans de sa vie à les étudier, vivant seule dans le désert pour les protéger.",photo:"photos/ligne_nazc.jpg",hints:[
+    {name:"Ligne Nazca — Pérou",lat:-14.739,lng:-75.13,desc:"Les lignes de Nazca furent créées en ôtant les pierres sombres du désert pour révéler le sable clair en dessous. Elles couvrent 450 km² et représentent 70 animaux et plantes, 300 figures géométriques. Maria Reiche consacra 50 ans de sa vie à les étudier, vivant seule dans le désert pour les protéger.",photo:"photos/ligne_nazc.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Géoglyphes tracés par la culture Nazca entre 500 av. J.-C. et 500 ap. J.-C., colibri (96m), singe (55m), visible uniquement d'avio"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pampas de Jumana, plaine aride d'un désert côtier andin, géoglyphes de 200-800 m"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Géoglyphes mystérieux tracés dans le désert, UNESCO, Pérou"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ligne Nazc? au Pérou"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ligne Nazca au Pérou"}
   ]},
   {name:"Galeries d'art de Buenos Aires — Argentine",lat:-34.6037,lng:-58.3816,desc:"Buenos Aires est la capitale culturelle d'Amérique du Sud, avec plus de librairies par habitant que toute autre ville du monde. Son quartier de San Telmo, avec ses marchés aux puces et ses galeries d'art, est le centre de la scène artistique d'Argentine. La ville abrite aussi le plus grand opéra d'Amérique latine.",photo:"photos/galeries_d_art_de_buenos_aires.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"La Boca, Caminito, ruelles colorées peintes en tôle ondulée, berceau du tango et quartier des immigrés italiens"},
