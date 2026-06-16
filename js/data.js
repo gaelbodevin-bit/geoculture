@@ -113,8 +113,8 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale aux bulbes colorés, emblème de la Russie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cathédrale Saint-Basile sur la Place Rouge à Moscou, Russie"}
   ]},
-  {name:"Palais du Parlement — Bucarest, Roumanie",lat:44.4275,lng:26.0875,desc:"Le Parlement de Bucarest est le deuxième plus grand bâtiment administratif au monde après le Pentagone. Ceau?escu fit raser un cinquième de la vieille ville de Bucarest pour le construire — dont 19 églises orthodoxes et 7 synagogues.",photo:"photos/palais_du_parlement.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palatul Parlamentului, commandé par Nicolae Ceau?escu en 1984, 2ème plus grand bâtiment administratif du monde"},
+  {name:"Palais du Parlement — Bucarest, Roumanie",lat:44.4275,lng:26.0875,desc:"Le Parlement de Bucarest est le deuxième plus grand bâtiment administratif au monde après le Pentagone. Ceaușescu fit raser un cinquième de la vieille ville de Bucarest pour le construire — dont 19 églises orthodoxes et 7 synagogues.",photo:"photos/palais_du_parlement.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palatul Parlamentului, commandé par Nicolae Ceaușescu en 1984, 2ème plus grand bâtiment administratif du monde"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline Spirii, centre de la capitale, pays d'Europe de l'Est"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand bâtiment du monde par volume intérieur, capitale de la Roumanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais du Parlement à Bucarest, Roumanie"}
@@ -145,7 +145,7 @@ const ROUNDS=[
   ]},
   {name:"Mont Fuji — Japon",lat:35.3606,lng:138.7274,desc:"Le Fuji est considéré comme sacré depuis des siècles — les femmes n'avaient pas le droit de l'escalader jusqu'en 1868. Chaque été, près de 200 000 personnes font l'ascension dont beaucoup de nuit pour voir le lever du soleil.",photo:"photos/mont_fuji.JPG",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stratovolcan de 3 776 m, préfectures de Shizuoka et Yamanashi, dernier réveil en 1707"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Région de Ch?bu, à 100 km au sud-ouest de la mégalopole, visible par temps clair depuis la capitale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Région de Chūbu, à 100 km au sud-ouest de la mégalopole, visible par temps clair depuis la capitale"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute montagne du Japon, symbole national classé UNESCO"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mont Fuji, Japon"}
   ]},
@@ -276,8 +276,8 @@ const ROUNDS=[
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais du Parlement à Budapest, Hongrie"}
   ]},
   {name:"Château de Prague — République Tchèque",lat:50.0902,lng:14.4,desc:"Le complexe du château de Prague est l'un des plus grands du monde avec ses 70 000 m². Il abrite une cathédrale, un palais royal, un couvent, des jardins et une ruelle d'or où vivaient jadis les alchimistes de Rodolphe II qui cherchaient à transmuer le plomb en or.",photo:"photos/chateau_de_prague.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hrad?any, plus grand château du monde en superficie (70 000 m²), érigé au IXe siècle sur le Hradschin"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline de Hrad?any dominant la Vltava, quartier Malá Strana, Prague"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hradčany, plus grand château du monde en superficie (70 000 m²), érigé au IXe siècle sur le Hradschin"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline de Hradčany dominant la Vltava, quartier Malá Strana, Prague"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand château du monde, résidence présidentielle tchèque"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Prague, République Tchèque"}
   ]},
@@ -397,7 +397,7 @@ const ROUNDS=[
   ]},
   {name:"Temple d'Or — Kyoto, Japon",lat:35.0394,lng:135.7292,desc:"Le Temple d'Or recouvre 750 kg de feuilles d'or pur. Les Sikhs cuisinent et servent gratuitement 100 000 repas par jour à tous les visiteurs sans distinction de religion, de caste ou de nationalité.",photo:"photos/temple_d_or.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kinkaku-ji (Rokuon-ji), pavillon recouvert de feuilles d'or, construit en 1397 pour le shogun Ashikaga Yoshimitsu"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Kita-ku, nord de Kyoto, surplombant l'étang Ky?ko-chi"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Kita-ku, nord de Kyoto, surplombant l'étang Kyōko-chi"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pavillon doré du temple Kinkaku-ji, emblème de Kyoto, Japon"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple d'Or à Kyoto, Japon"}
   ]},
@@ -438,7 +438,7 @@ const ROUNDS=[
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Shakhrisabz en Ouzbékistan"}
   ]},
   {name:"Mosquée Sultan Ahmed — Istanbul, Turquie",lat:41.0054,lng:28.9768,desc:"La Mosquée Bleue, construite de 1609 à 1616, est la seule mosquée d'Istanbul à posséder six minarets — une audace qui scandalisa la Mecque, qui n'en avait alors que quatre. L'intérieur est revêtu de 20 000 carreaux d'Iznik bleus, dont chacun fut peint à la main.",photo:"photos/mosquee_sultan_ahmed.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosquée Bleue, construite de 1609 à 1616 par Sedefkâr Mehmed A?a sous Ahmed Ier, seule mosquée à 6 minarets — scandale de l'époque"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosquée Bleue, construite de 1609 à 1616 par Sedefkâr Mehmed Ağa sous Ahmed Ier, seule mosquée à 6 minarets — scandale de l'époque"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sultanahmet, face à Sainte-Sophie, péninsule historique d'Istanbul"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mosquée Bleue aux 6 minarets, face à Sainte-Sophie, Istanbul"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mosquée Sultan Ahmed à Istanbul, Turquie"}
@@ -655,7 +655,7 @@ const ROUNDS=[
   ]},
   {name:"Cappadoce — Turquie",lat:38.6431,lng:34.8289,desc:"Les cheminées de fées de Cappadoce furent habitées pendant des millénaires. Les premières communautés chrétiennes y creusèrent des villes souterraines entières pour échapper aux persécutions romaines — certaines pouvaient abriter 20 000 personnes sur 8 niveaux.",photo:"photos/cappadoce.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Göreme, cheminées de fées en tuf volcanique créées par l'érosion de la caldeira du Erciyes, habitations rupestres du IVe siècle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Nev?ehir, Anatolie centrale, à 280 km d'Ankara"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Nevşehir, Anatolie centrale, à 280 km d'Ankara"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage lunaire aux cheminées de fées en tuf volcanique, Anatolie centrale, Turquie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cappadoce en Turquie"}
   ]},
@@ -720,8 +720,8 @@ const ROUNDS=[
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Monastère de Meteora en Grèce"}
   ]},
   {name:"Place Wenceslas — Prague, Rép. Tchèque",lat:50.0813,lng:14.4281,desc:"La place Venceslas de Prague n'est pas une place mais un boulevard de 750 mètres. C'est le centre politique de la Bohême depuis le Moyen Âge. Jan Palach s'y immola par le feu en 1969 pour protester contre l'invasion soviétique. En 1989, des centaines de milliers de personnes y manifestèrent lors de la Révolution de velours.",photo:"photos/place_wenceslas.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Václavské nám?stí, boulevard de 750m, cœur politique des révolutions de 1848, 1968 et 1989 (Révolution de velours)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nové M?sto (Nouvelle Ville), centre de Prague, entre la gare centrale et le musée national"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Václavské náměstí, boulevard de 750m, cœur politique des révolutions de 1848, 1968 et 1989 (Révolution de velours)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nové Město (Nouvelle Ville), centre de Prague, entre la gare centrale et le musée national"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande place-boulevard au cœur de Prague, témoin de la Révolution de Velours"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Place Wenceslas à Prague, Rép. Tchèque"}
   ]},
@@ -816,7 +816,7 @@ const ROUNDS=[
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bagan au Myanmar"}
   ]},
   {name:"Ha Long Bay — Vietnam",lat:20.9101,lng:107.1839,desc:"La baie d'Ha Long compte 1 969 îlots calcaires formés il y a 500 millions d'années. Selon la légende vietnamienne, un dragon descendit du ciel en battant de la queue, ses coups créant les vallées et les baies. La baie abriterait aussi des grottes marines habitées par des villages flottants de pêcheurs.",photo:"photos/ha_long_bay.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"2 000 îlots et pitons calcaires karstiques sur 1 553 km², grotte de Hang ??u G?, province de Qu?ng Ninh"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"2 000 îlots et pitons calcaires karstiques sur 1 553 km², grotte de Hang Đầu Gỗ, province de Quảng Ninh"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Golfe d'une mer intérieure d'Asie du Sud-Est, baie aux 1 600 îlots calcaires"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Baie aux dragons, pitons calcaires dans la mer de Chine, Vietnam"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Ha Long Bay au Vietnam"}
@@ -1181,11 +1181,11 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande forteresse de brique du monde, Malbork, nord de la Pologne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Malbork en Pologne"}
   ]},
-  {name:"Chantier naval de Gda?sk — Pologne",lat:54.3609,lng:18.6509,desc:"Le chantier naval Lénine de Gda?sk fut le berceau de Solidarno?? (Solidarité), le syndicat fondé par Lech Wa??sa en 1980. Cette révolution ouvrière non-violente contribua à la chute du communisme en Europe de l'Est. Les 21 revendications des ouvriers, affichées sur une porte du chantier, sont classées au registre de la Mémoire du Monde de l'UNESCO.",photo:"photos/chantier_naval_de_gda_sk.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stocznia Gda?ska, berceau de Solidarno?? (Solidarité), grèves de 1980, Lech Wa??sa, centre européen de la solidarité"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Wrzeszcz, bord de la Mot?awa, Gda?sk, Poméranie, mer Baltique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chantier naval berceau de Solidarno??, Gda?sk, Pologne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chantier naval de Gda?sk en Pologne"}
+  {name:"Chantier naval de Gdańsk — Pologne",lat:54.3609,lng:18.6509,desc:"Le chantier naval Lénine de Gdańsk fut le berceau de Solidarność (Solidarité), le syndicat fondé par Lech Wa??sa en 1980. Cette révolution ouvrière non-violente contribua à la chute du communisme en Europe de l'Est. Les 21 revendications des ouvriers, affichées sur une porte du chantier, sont classées au registre de la Mémoire du Monde de l'UNESCO.",photo:"photos/chantier_naval_de_gda_sk.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stocznia Gdańska, berceau de Solidarność (Solidarité), grèves de 1980, Lech Wa??sa, centre européen de la solidarité"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Wrzeszcz, bord de la Motława, Gdańsk, Poméranie, mer Baltique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chantier naval berceau de Solidarność, Gdańsk, Pologne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chantier naval de Gdańsk en Pologne"}
   ]},
   {name:"Forteresse de Narva — Estonie",lat:59.3773,lng:28.1728,desc:"La forteresse de Narva fait face au château d'Ivangorod russe à seulement 150 mètres — deux forteresses médiévales de pays différents se regardant à travers la rivière Narva, frontière entre l'Union européenne et la Russie. La ville de Narva fut détruite à 98% pendant la Seconde Guerre mondiale et entièrement reconstruite.",photo:"photos/forteresse_de_narva.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hermanni linnus, forteresse médiévale face à une forteresse rivale, séparées par une rivière frontière"},
@@ -1229,13 +1229,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Seize lacs en cascade reliés par 92 chutes d'eau turquoise, parc national de Croatie centrale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Plitvice en Croatie"}
   ]},
-  {name:"Cathédrale de Sagrada Família nuit — Barcelone",lat:41.4037,lng:2.1741,desc:"Gaudí consacra les 43 dernières années de sa vie à cette cathédrale. Renversé par un tramway en 1926, il fut enterré dans sa propre église. La construction, financée uniquement par les entrées des visiteurs, devrait s'achever en 2026.",photo:"photos/cathedrale_de_sagrada_familia_nuit.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Illumination nocturne des façades de la Nativité et de la Passion, 18 clochers prévus, vitraux colorant la nef le matin"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Carrer de Provença, Eixample esquerre"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sagrada Família de nuit, Barcelone, Espagne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Sagrada Família de nuit, à Barcelone, Espagne"}
-  ]},
-  {name:"Tour de Belfort — France",lat:47.6405,lng:6.8626,desc:"La tour de Belfort servit de prison d'État sous l'Ancien Régime. C'est à son pied que se dresse le Lion de Belfort sculpté par Bartholdi — le même artiste qui créa la Statue de la Liberté. Ce lion de grès rose de 11 mètres symbolise la résistance de la ville lors du siège de 1870.",photo:"photos/tour_de_belfort.jpg",hints:[
+    {name:"Tour de Belfort — France",lat:47.6405,lng:6.8626,desc:"La tour de Belfort servit de prison d'État sous l'Ancien Régime. C'est à son pied que se dresse le Lion de Belfort sculpté par Bartholdi — le même artiste qui créa la Statue de la Liberté. Ce lion de grès rose de 11 mètres symbolise la résistance de la ville lors du siège de 1870.",photo:"photos/tour_de_belfort.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Citadelle de Vauban dominant la Trouée de Belfort, lion de Bartholdi (1880, 11m), résistance de Denfert-Rochereau en 1870-71"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline du château, centre de Belfort, Territoire de Belfort, entre Alsace et Franche-Comté"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Citadelle de Vauban et lion de Bartholdi, Belfort, est de la France"},
@@ -1895,11 +1889,11 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mines de sel exploitées depuis le XIIIe siècle, chapelle taillée dans le sel à 101 m de profondeur, Pologne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Wieliczka en Pologne (mines de sel)"}
   ]},
-  {name:"Bia?owie?a — Pologne/Biélorussie",lat:52.7083,lng:23.861,desc:"La forêt de Bia?owie?a est la dernière forêt primaire de plaine d'Europe — jamais exploitée industriellement. On y trouve des arbres vieux de 500 ans, des champignons géants et des insectes disparus partout ailleurs. Le bison européen (Bison bonasus), réintroduit en 1952 après avoir été exterminé en 1927, y prospère avec 600 individus.",photo:"photos/bia_owie_a.jpg",hints:[
+  {name:"Białowieża — Pologne/Biélorussie",lat:52.7083,lng:23.861,desc:"La forêt de Białowieża est la dernière forêt primaire de plaine d'Europe — jamais exploitée industriellement. On y trouve des arbres vieux de 500 ans, des champignons géants et des insectes disparus partout ailleurs. Le bison européen (Bison bonasus), réintroduit en 1952 après avoir été exterminé en 1927, y prospère avec 600 individus.",photo:"photos/bia_owie_a.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dernière forêt primaire de plaine d'Europe, habitat du bison européen (Bison bonasus), frontière entre deux pays"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Podlachie oriental, frontière entre deux pays d'Europe centrale, dernière forêt vierge de plaine"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dernière forêt primaire d'Europe, bisons sauvages, Pologne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bia?owie?a en Pologne/Biélorussie"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Białowieża en Pologne/Biélorussie"}
   ]},
   {name:"Red Fort — Delhi, Inde",lat:28.6562,lng:77.241,desc:"Le Fort Rouge de Delhi fut construit en marbre blanc et calcaire rouge pendant 10 ans. La déclaration d'indépendance de l'Inde fut proclamée depuis ses remparts le 15 août 1947 par Jawaharlal Nehru — une tradition que chaque Premier ministre perpétue chaque année.",photo:"photos/red_fort.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lal Qila, forteresse moghole en grès rouge construite par Shah Jahan de 1638 à 1648, symbole de l'indépendance indienne"},
@@ -1949,8 +1943,8 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Carrefour piéton le plus fréquenté du monde, Shibuya, Tokyo"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Shibuya Crossing à Tokyo, Japon"}
   ]},
-    {name:"Nara — Japon (Grand Bouddha)",lat:34.6884,lng:135.8395,desc:"Le T?dai-ji de Nara abrite le plus grand Bouddha en bronze du monde — 15 mètres et 500 tonnes. Une narine de l'une de ses colonnes de bois a exactement la taille du nez du Bouddha : quiconque passe à travers est assuré d'atteindre l'illumination. Des centaines de touristes tentent chaque jour de se glisser dans ce trou.",photo:"photos/nara.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"T?dai-ji, temple bouddhiste de 745, plus grand bâtiment en bois du monde, Daibutsu-den abritant le Bouddha de bronze de 15m"},
+    {name:"Nara — Japon (Grand Bouddha)",lat:34.6884,lng:135.8395,desc:"Le Tōdai-ji de Nara abrite le plus grand Bouddha en bronze du monde — 15 mètres et 500 tonnes. Une narine de l'une de ses colonnes de bois a exactement la taille du nez du Bouddha : quiconque passe à travers est assuré d'atteindre l'illumination. Des centaines de touristes tentent chaque jour de se glisser dans ce trou.",photo:"photos/nara.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tōdai-ji, temple bouddhiste de 745, plus grand bâtiment en bois du monde, Daibutsu-den abritant le Bouddha de bronze de 15m"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nara Park, préfecture de Nara, île de Honsh?, à 45 km d'Osaka, daims en liberté"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Immense Bouddha en bronze de 15 m dans le plus grand bâtiment en bois du monde, première capitale du Japon"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Nara au Japon (Grand Bouddha)"}
@@ -1992,9 +1986,9 @@ const ROUNDS=[
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Halong Bay au Vietnam (Cat Ba)"}
   ]},
   {name:"Hoi An — Vietnam",lat:15.8794,lng:108.335,desc:"La ville d'Hoi An était le port le plus important d'Asie du Sud-Est aux XVIe et XVIIe siècles, avant que son fleuve ne s'ensable. Son centre historique est si bien conservé qu'il semble suspendu dans le temps, à l'exception des lampions colorés qui s'allument chaque soir.",photo:"photos/hoi_an.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancien port marchand du XVIe siècle, pont japonais couvert de 1593, maisons chinoises et entrepôts néerlandais, Qu?ng Nam"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancien port marchand du XVIe siècle, pont japonais couvert de 1593, maisons chinoises et entrepôts néerlandais, Quảng Nam"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province centrale d'un long pays d'Asie du Sud-Est, port marchand du XVe au XVIIe siècle"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancien port marchand du XVIe siècle aux lanternes colorées, classé UNESCO, province de Qu?ng Nam"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancien port marchand du XVIe siècle aux lanternes colorées, classé UNESCO, province de Quảng Nam"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hoi An au Vietnam"}
   ]},
   {name:"Wat Phra Kaew — Bangkok, Thaïlande",lat:13.7516,lng:100.4919,desc:"Le Bouddha d'Émeraude du temple Phra Kaew ne mesure que 66 cm — une taille modeste pour la statue la plus sacrée de Thaïlande. Taillé dans une seule pièce de jade (et non d'émeraude), il est revêtu de trois costumes différents que le roi change personnellement à chaque saison.",photo:"photos/wat_phra_kaew.jpg",hints:[
@@ -2287,19 +2281,19 @@ const ROUNDS=[
   ]},
   {name:"Cappadoce Göreme — Turquie",lat:38.6431,lng:34.8289,desc:"Les cheminées de fées de Cappadoce furent habitées pendant des millénaires. Les premières communautés chrétiennes y creusèrent des villes souterraines entières pour échapper aux persécutions romaines — certaines pouvaient abriter 20 000 personnes sur 8 niveaux.",photo:"photos/cappadoce_goreme.JPG",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vallée de Göreme, cheminées de fées (péribacalar?), 365 pigeonniers taillés dans le tuf, vols en montgolfière à l'aube"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Nev?ehir, Anatolie centrale, à 280 km d'Ankara"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Nevşehir, Anatolie centrale, à 280 km d'Ankara"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cheminées de fées et montgolfières, Cappadoce, Turquie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cappadoce Göreme en Turquie"}
   ]},
   {name:"Pont Charles — Prague, République Tchèque",lat:50.0865,lng:14.4114,desc:"Le pont Charles de Prague fut construit selon la numérologie médiévale : la première pierre fut posée le 9 juillet 1357 à 5h31 du matin, formant la séquence palindromique 1357 9 7 5 31. Cette date «magique» devait assurer la solidité éternelle du pont.",photo:"photos/pont_charles.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Karl?v most, pont de pierre de 516m construit de 1357 à 1402 par Charles IV, 30 statues baroques, tour de la vieille ville"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Karlův most, pont de pierre de 516m construit de 1357 à 1402 par Charles IV, 30 statues baroques, tour de la vieille ville"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Enjambe la Vltava entre la Vieille Ville et Malá Strana, Prague, République Tchèque"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pont médiéval de 516 m aux 30 statues baroques enjambant la Vltava, Prague"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont Charles à Prague, République Tchèque"}
   ]},
   {name:"Horloge astronomique — Prague, République Tchèque",lat:50.0872,lng:14.4205,desc:"L'Orloj de Prague est l'une des horloges astronomiques les plus anciennes encore en fonctionnement (1410). Selon la légende, le conseil municipal fit aveugler son créateur Maître Hanuš pour qu'il ne puisse jamais construire une horloge aussi parfaite ailleurs.",photo:"photos/horloge_astronomique.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Orloj, horloge astronomique médiévale de 1410 sur la tour de l'hôtel de ville, défilé des 12 apôtres toutes les heures"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place de la Vieille Ville (Starom?stské nám?stí), Prague, République Tchèque"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place de la Vieille Ville (Staroměstské náměstí), Prague, République Tchèque"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mécanisme médiéval de 1410 sur la tour de l'hôtel de ville, défilé des 12 apôtres toutes les heures, Prague"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Horloge astronomique à Prague, République Tchèque"}
   ]},
