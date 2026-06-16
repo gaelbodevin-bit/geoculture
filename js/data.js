@@ -269,7 +269,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande structure de ce type au monde, emblème du Belize, Caraïbes"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grand Trou Bleu au large du Belize"}
   ]},
-  {name:"Palais du Parlement — Budapest, Hongrie",lat:47.5072,lng:19.0461,desc:"Le Parlement de Budapest est illuminé chaque nuit et se reflète dans le Danube — l'une des plus belles vues nocturnes d'Europe. Sa construction dura 17 ans (1885-1902) et employa 100 000 ouvriers et 40 millions de briques.",photo:"photos/palais_du_parlement.jpg",hints:[
+  {name:"Palais du Parlement — Budapest, Hongrie",lat:47.5072,lng:19.0461,desc:"Le Parlement de Budapest est illuminé chaque nuit et se reflète dans le Danube — l'une des plus belles vues nocturnes d'Europe. Sa construction dura 17 ans (1885-1902) et employa 100 000 ouvriers et 40 millions de briques.",photo:"photos/palais_du_parlement_budapest.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Országház, construit de 1885 à 1904 par Imre Steindl, 96m de hauteur, rive gauche du Danube"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Lipótváros, rive du Danube, Budapest"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parlement néogothique le plus grand d'Europe, Hongrie"},
@@ -2843,7 +2843,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sanctuaire de gorilles des montagnes en Ouganda, l'un des deux seuls habitats naturels de l'espèce au monde"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Gorilles de Bwindi en Ouganda"}
   ]},
-  {name:"Zanzibar — Tanzanie (plage Nungwi)",lat:-5.7294,lng:39.2976,desc:"Zanzibar est le lieu de naissance de Freddie Mercury, le chanteur de Queen. Sa maison natale dans Stone Town est devenue un lieu de pèlerinage pour les fans du monde entier. Il quitta l'île à 7 ans pour ne plus jamais y revenir.",photo:"photos/zanzibar.jpg",hints:[
+  {name:"Zanzibar — Tanzanie (plage Nungwi)",lat:-5.7294,lng:39.2976,desc:"Zanzibar est le lieu de naissance de Freddie Mercury, le chanteur de Queen. Sa maison natale dans Stone Town est devenue un lieu de pèlerinage pour les fans du monde entier. Il quitta l'île à 7 ans pour ne plus jamais y revenir.",photo:"photos/zanzibar_nungwi.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pointe nord d'Unguja, sable corallien blanc, dhows de pêche, centre de réhabilitation de tortues vertes, récifs de grès fossilisé"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Extrémité nord d'une île de l'océan Indien, lagon peu profond côté ouest, bateaux à voile traditionnels, plage de sable blanc imma"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande île swahilie de l'océan Indien occidental, plage au nord, connue pour ses tortues marines et ses boutres traditionnels"},
