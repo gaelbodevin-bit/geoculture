@@ -1163,12 +1163,6 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais impérial habsbourgeois au cœur de Vienne, Autriche"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hofburg à Vienne, Autriche"}
   ]},
-  {name:"Lac de Hallstatt — Autriche",lat:47.5622,lng:13.6493,desc:"Le cimetière de Hallstatt est si petit que les os exhumés après 10-12 ans sont décorés de motifs et placés dans une chapelle à crânes — la Beinhaus. Cette tradition unique perpétue la mémoire des défunts dans une ville où les morts dépassent les vivants.",photo:"photos/lac_de_hallstatt.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Village de 780 habitants sur une falaise au bord du Hallstättersee, mine de sel la plus ancienne du monde (-5000 av. J.-C.)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lac de Salzkammergut, entre deux grandes villes alpines, village aux maisons sur l'eau"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Village alpin sur le lac, mine de sel millénaire, Salzkammergut, Autriche"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac de Hallstatt en Autriche"}
-  ]},
     {name:"Mines de sel de Wieliczka — Pologne",lat:49.9833,lng:20.0553,desc:"Les ouvriers des mines de sel de Wieliczka utilisaient les 300 km de galeries pour se repérer en sculptant des chapelles, des statues et même une reconstitution de la Cène dans le sel. La chapelle Sainte-Kinga, entièrement taillée dans le sel, mesure 54 m de long pour 12 m de hauteur.",photo:"photos/mines_de_sel_de_wieliczka.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wieliczka Salt Mine, exploitée depuis le XIIIe siècle, 287km de galeries, chapelle Sainte-Kinga taillée dans le sel à 101m de prof"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville à 14 km d'une cité royale, mines de sel millénaires, cathédrale souterraine"},
@@ -1535,12 +1529,6 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île-prison fédérale dans une baie californienne, fermée en 1963, accueillait Al Capone"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Alcatraz à San Francisco, USA"}
   ]},
-  {name:"Monument aux pères fondateurs — Dakota du Sud, USA",lat:43.8791,lng:-103.4591,desc:"Mount Rushmore fut sculpté par Gutzon Borglum et 400 ouvriers de 1927 à 1941 à la dynamite et au burin. Derrière la tête de Lincoln, une salle secrète fut creusée pour abriter les archives les plus importantes de l'histoire américaine — elle attend encore sa porte étanche finale. Le projet original prévoyait les présidents jusqu'à la taille.",photo:"photos/monument_aux_peres_fondateurs.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mount Rushmore, 4 visages de 18m taillés dans le granite (Washington, Jefferson, T. Roosevelt, Lincoln) par Gutzon Borglum 1927-19"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Keystone, comté de Pennington, Dakota du Sud, Black Hills"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mont Rushmore, 4 présidents américains sculptés dans la roche, Dakota du Sud"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Monument aux pères fondateurs à Dakota du Sud, USA"}
-  ]},
   {name:"Parc national de Zion — Utah, USA",lat:37.2982,lng:-113.0263,desc:"Le parc de Zion est le résultat de 240 millions d'années d'érosion de grès Navajo par la rivière Virgin. Sa «Narrows», gorge de 800 mètres de large et 60 mètres de profondeur, se parcourt en marchant dans l'eau. La randonnée Angels Landing, avec ses chaînes d'acier dans la falaise, nécessite un permis tiré au sort depuis 2022.",photo:"photos/parc_national_de_zion.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Angels Landing (1 763m), Narrows du Virgin River, grès Navajo rouge de 610m, 4,3 millions de visiteurs/an"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comté de Washington, Utah, Plateau du Colorado, à 160 km au nord-est de Las Vegas"},
@@ -1883,12 +1871,6 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand monastère de Bulgarie dans les montagnes Rila, UNESCO"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Monastère de Rila en Bulgarie"}
   ]},
-  {name:"Wieliczka — Pologne (mines de sel)",lat:49.9841,lng:20.0553,desc:"Les ouvriers des mines de sel de Wieliczka utilisaient les 300 km de galeries pour se repérer en sculptant des chapelles, des statues et même une reconstitution de la Cène dans le sel. La chapelle Sainte-Kinga, entièrement taillée dans le sel, mesure 54 m de long pour 12 m de hauteur.",photo:"photos/wieliczka.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mine de sel en exploitation depuis le XIIIe siècle, chapelle Sainte-Kinga (54m de long) entièrement taillée dans le sel, UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune à 14 km d'une cité royale historique, mines de sel millénaires, cathédrale souterraine"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mines de sel exploitées depuis le XIIIe siècle, chapelle taillée dans le sel à 101 m de profondeur, Pologne"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Wieliczka en Pologne (mines de sel)"}
-  ]},
   {name:"Białowieża — Pologne/Biélorussie",lat:52.7083,lng:23.861,desc:"La forêt de Białowieża est la dernière forêt primaire de plaine d'Europe — jamais exploitée industriellement. On y trouve des arbres vieux de 500 ans, des champignons géants et des insectes disparus partout ailleurs. Le bison européen (Bison bonasus), réintroduit en 1952 après avoir été exterminé en 1927, y prospère avec 600 individus.",photo:"photos/bia_owie_a.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dernière forêt primaire de plaine d'Europe, habitat du bison européen (Bison bonasus), frontière entre deux pays"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Podlachie oriental, frontière entre deux pays d'Europe centrale, dernière forêt vierge de plaine"},
@@ -1996,12 +1978,6 @@ const ROUNDS=[
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ko Rattanakosin, île du Grand Palais, bord du Chao Phraya, Bangkok"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple du Bouddha d'Émeraude dans le Grand Palais, Bangkok"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Wat Phra Kaew à Bangkok, Thaïlande"}
-  ]},
-  {name:"Kuala Lumpur — Tours Petronas, Malaisie",lat:3.1578,lng:101.7119,desc:"Les Tours Petronas de Kuala Lumpur furent conçues par César Pelli en s'inspirant de l'architecture islamique — leurs plans au sol forment deux étoiles à 8 branches entrelacées. La tour 1 (côté gauche en regardant depuis la rue) fut construite par une entreprise japonaise, la tour 2 par une entreprise coréenne.",photo:"photos/kuala_lumpur.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Menara Berkembar Petronas, 451,9 m, conçues par César Pelli, sky bridge au 41e étage reliant les deux tours, 1998-2004"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Golden Triangle d'une grande capitale tropicale, jumelles géantes parmi les plus hautes du monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tours jumelles de 452 m reliées par un skybridge au 41e étage, capitale de la Malaisie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kuala Lumpur à Tours Petronas, Malaisie"}
   ]},
   {name:"Prambanan — Java, Indonésie",lat:-7.752,lng:110.4915,desc:"La légende du temple de Prambanan conte l'histoire d'un prétendant qui dut construire 1 000 temples en une nuit pour gagner la main d'une princesse. À l'aube, n'en ayant érigé que 999, la princesse alluma des feux pour simuler le lever du soleil et le stoppa.",photo:"photos/prambanan.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Complexe de temples hindous trimurti (IXe siècle), 47m de hauteur, dédiés à Brahma, Vishnu et Shiva, dynastie Sanjaya"},
@@ -2243,12 +2219,6 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité étrusque mourante sur piton de tuf, reliée au monde par un seul pont piéton, Latium"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Civita di Bagnoregio à Latium, Italie"}
   ]},
-  {name:"Cinque Terre — Ligurie, Italie",lat:44.1461,lng:9.6439,desc:"Les terrasses viticoles des Cinque Terre furent construites à la main sans machines sur des falaises verticales. Des siècles de travail ont créé plus de 100 km de murs de pierres sèches — plus que la Grande Muraille de Chine à l'échelle du territoire.",photo:"photos/cinque_terre.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"5 villages (Monterosso, Vernazza, Corniglia, Manarola, Riomaggiore) accrochés aux falaises, vignobles en terrasses, UNESCO"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Côte ligure, province de La Spezia, Ligurie, entre Gênes et La Spezia"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cinq villages colorés accrochés à des falaises, vignobles en terrasses, Ligurie, UNESCO"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cinque Terre à Ligurie, Italie"}
-  ]},
   {name:"Portofino — Ligurie, Italie",lat:44.3031,lng:9.2097,desc:"Portofino, village de 500 habitants, est l'une des destinations les plus chères d'Europe. Ses maisons en trompe-l'œil — la façade peinte de fenêtres, balcons et décors imaginaires — sont une tradition ligure vieille de plusieurs siècles. Un week-end de location dans l'une de ces maisons peut coûter autant qu'une voiture.",photo:"photos/portofino.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Village de pêcheurs aux maisons peintes en trompe-l'œil, Castello Brown (1870), Piazzetta centro mondain, golfe du Tigullio"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Promontoire de Portofino, province de Gênes, Ligurie, mer Ligure"},
@@ -2278,12 +2248,6 @@ const ROUNDS=[
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vallée du Jourdain, point le plus bas de la surface terrestre, frontière entre deux pays"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac hypersalin à 430 m sous le niveau de la mer, point le plus bas des terres émergées, frontière Israël-Jordanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mer Morte en Israël/Jordanie"}
-  ]},
-  {name:"Cappadoce Göreme — Turquie",lat:38.6431,lng:34.8289,desc:"Les cheminées de fées de Cappadoce furent habitées pendant des millénaires. Les premières communautés chrétiennes y creusèrent des villes souterraines entières pour échapper aux persécutions romaines — certaines pouvaient abriter 20 000 personnes sur 8 niveaux.",photo:"photos/cappadoce_goreme.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vallée de Göreme, cheminées de fées (péribacalar?), 365 pigeonniers taillés dans le tuf, vols en montgolfière à l'aube"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Nevşehir, Anatolie centrale, à 280 km d'Ankara"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cheminées de fées et montgolfières, Cappadoce, Turquie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cappadoce Göreme en Turquie"}
   ]},
   {name:"Pont Charles — Prague, République Tchèque",lat:50.0865,lng:14.4114,desc:"Le pont Charles de Prague fut construit selon la numérologie médiévale : la première pierre fut posée le 9 juillet 1357 à 5h31 du matin, formant la séquence palindromique 1357 9 7 5 31. Cette date «magique» devait assurer la solidité éternelle du pont.",photo:"photos/pont_charles.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Karlův most, pont de pierre de 516m construit de 1357 à 1402 par Charles IV, 30 statues baroques, tour de la vieille ville"},
@@ -2465,12 +2429,6 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sept temples doriques du Ve siècle av. J.-C., mieux conservés que beaucoup de temples grecs en Grèce, Agrigente"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Vallée des Temples à Agrigente, Italie"}
   ]},
-  {name:"Marrakech — Maroc (Djemaa el-Fna)",lat:31.6258,lng:-7.9892,desc:"La place Djemaa el-Fna de Marrakech est classée par l'UNESCO comme patrimoine immatériel de l'humanité — une première pour un espace public. Elle se transforme chaque soir en gigantesque restaurant en plein air avec des dizaines de stands de cuisine.",photo:"photos/marrakech.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Place Djemaa el-Fna, conteurs (hlaykia), charmeurs de serpents, acrobates et vendeurs de jus d'orange, UNESCO patrimoine oral 2001"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Médina de Marrakech, province de Marrakech, au pied de l'Atlas"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande place animée de la médina, patrimoine immatériel UNESCO, conteurs et charmeurs de serpents, Maroc"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Marrakech au Maroc (Djemaa el-Fna)"}
-  ]},
   {name:"Palmeraie de Skoura — Maroc",lat:31.06,lng:-6.56,desc:"La palmeraie de Skoura abrite des ksour — châteaux de pisé — dont certains sont habités depuis le XVIIe siècle. Ces forteresses en terre crue, construites sans architecte, résistent mieux aux séismes que nombre de constructions modernes.",photo:"photos/palmeraie_de_skoura.JPG",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Oasis de 45 000 palmiers-dattiers, ksour fortifiés dont Amridil (XVIIe), route des Kasbahs, vallée du Draa"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province d'Ouarzazate, route nationale n°10, vallée du Dadès, pré-Sahara"},
@@ -2536,12 +2494,6 @@ const ROUNDS=[
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sierra Nevada, Mariposa County, Tuolumne County, centre de la Californie"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc aux parois granitiques verticales de 900 m, grimpé en solo en 2017, cascades et séquoias géants"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Yosemite à Californie, USA"}
-  ]},
-  {name:"Zion Canyon — Utah, USA",lat:37.2982,lng:-113.0263,desc:"Angels Landing dans Zion Canyon est l'une des randonnées les plus dangereuses d'Amérique. 6 personnes sont mortes en chutant depuis 2004, mais l'affluence record de 4 millions de visiteurs par an a conduit à l'instauration d'un permis de tirage au sort en 2022.",photo:"photos/zion_canyon.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Angels Landing (487m, 1 500 chaînes en acier), Narrows (gorge de 800m large), grès rouge Navajo, Virgin River"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comté de Washington, Utah, à 280 km au nord-est de Las Vegas"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc national de Zion, canyon de grès rouge, Utah"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Zion Canyon à Utah, USA"}
   ]},
   {name:"Bryce Canyon — Utah, USA",lat:37.593,lng:-112.1871,desc:"Les «hoodoos» de Bryce Canyon se forment en 3 millions d'années grâce à l'alternance gel-dégel qui brise la roche. Le parc perd environ 30 cm de ses formations par tranche de 50 à 65 ans — un déclin imperceptible à l'échelle humaine mais constant.",photo:"photos/bryce_canyon.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hoodoos de grès rose et orange, amphithéâtre de Thor's Hammer, Silent City, altitude de 2 700m, plateau de Paunsaugunt"},
