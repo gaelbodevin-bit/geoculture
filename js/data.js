@@ -2800,5 +2800,305 @@ const ROUNDS=[
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Extrémité nord d'une île de l'océan Indien, lagon peu profond côté ouest, bateaux à voile traditionnels, plage de sable blanc imma"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande île swahilie de l'océan Indien occidental, plage au nord, connue pour ses tortues marines et ses boutres traditionnels"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La plage de Nungwi, Zanzibar, Tanzanie"}
+  ]},
+  {name:"Cratère du Ngorongoro — Tanzanie",lat:-3.1667,lng:35.5833,desc:"Le cratère du Ngorongoro est la plus grande caldeira intacte au monde, formée il y a 2 à 3 millions d'années par l'effondrement d'un volcan. Ses 260 km² abritent 25 000 grands mammifères, dont les rares rhinocéros noirs, dans un écosystème fermé surnommé l'« Arche de Noé africaine ».",photo:"photos/crater_ngorongoro.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Caldeira de 600m de profondeur, zone de conservation jouxtant le Serengeti, peuple Maasai"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plus grande caldeira intacte au monde, rhinocéros noirs, plateau du Rift est-africain"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cratère volcanique abritant une faune dense en Afrique de l'Est"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le cratère du Ngorongoro en Tanzanie"}
+  ]},
+  {name:"Île de Socotra — Yémen",lat:12.4634,lng:53.8237,desc:"Socotra est un archipel isolé dans l'océan Indien où un tiers des plantes n'existe nulle part ailleurs, comme l'arbre du sang de dragon en forme de parasol. Son isolement de 6 millions d'années lui vaut le surnom de « Galápagos de l'océan Indien ».",photo:"photos/socotra.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Arbres dragonniers Dracaena cinnabari, archipel yéménite à 380km des côtes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Endémisme végétal extrême, océan Indien, sang de dragon"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île aux arbres en forme de parasol, océan Indien"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'île de Socotra au Yémen"}
+  ]},
+  {name:"Laguna Colorada — Bolivie",lat:-22.2,lng:-67.7833,desc:"La Laguna Colorada est un lac salé peu profond de l'Altiplano bolivien, teinté de rouge sang par des algues et du plancton. À 4 300 mètres d'altitude, ses eaux écarlates parsemées d'îlots de borax blanc accueillent des milliers de flamants des Andes.",photo:"photos/laguna_colorada.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sud Lípez, 4300m d'altitude, pigments d'algues rouges et sédiments, flamants James"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lac rouge de l'Altiplano, flamants roses, dépôts de borax blanc"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac de couleur rouge en altitude dans les Andes"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Laguna Colorada en Bolivie"}
+  ]},
+  {name:"Zhangjiajie — Chine",lat:29.3158,lng:110.4344,desc:"Le parc de Zhangjiajie est célèbre pour ses milliers de piliers de grès quartzeux dressés à la verticale, certains hauts de 1 000 mètres. Ces formations brumeuses inspirèrent les montagnes flottantes du film Avatar et abritent le pont de verre le plus haut du monde.",photo:"photos/zhangjiajie.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Piliers de grès-quartzite du Wulingyuan, Hunan, inspiration des monts Hallelujah d'Avatar"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Forêt de piliers rocheux verticaux dans la brume, pont de verre"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Montagnes en piliers ayant inspiré Avatar, Chine"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le parc de Zhangjiajie en Chine"}
+  ]},
+  {name:"Perito Moreno — Argentine",lat:-50.4967,lng:-73.1377,desc:"Le glacier Perito Moreno est l'un des rares glaciers au monde encore en équilibre, avançant de 2 mètres par jour. Son front de 5 kilomètres et 60 mètres de haut produit des effondrements spectaculaires de blocs de glace dans le lac Argentino.",photo:"photos/perito_moreno.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Champ de glace patagonien sud, lac Argentino, front de 5km, ruptures cycliques"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Glacier actif avec front de glace de 60m, effondrements, Argentine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Immense glacier de Patagonie qui s'effondre dans un lac"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le glacier Perito Moreno en Argentine"}
+  ]},
+  {name:"Shirakawa-go — Japon",lat:36.2578,lng:136.9061,desc:"Shirakawa-gō est un village de montagne célèbre pour ses fermes gasshō-zukuri aux toits de chaume très pentus, conçus pour résister à de fortes chutes de neige. Certaines de ces maisons centenaires abritaient jusqu'à 30 personnes et un élevage de vers à soie.",photo:"photos/shirakawa_go.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Maisons gasshō-zukuri « mains en prière », préfecture de Gifu, vallée de la Shōgawa"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Village aux toits de chaume pentus, région enneigée du Japon"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Village japonais traditionnel aux grandes maisons en chaume"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le village de Shirakawa-go au Japon"}
+  ]},
+  {name:"Hégra — Arabie saoudite",lat:26.7917,lng:37.9542,desc:"Hégra (Madā'in Sālih) est la plus grande cité nabatéenne après Pétra, avec plus de 100 tombeaux monumentaux taillés dans des pitons de grès. Premier site saoudien classé à l'UNESCO, elle fut un carrefour caravanier sur la route de l'encens.",photo:"photos/hegra.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Madâ'in Sâlih, tombeaux nabatéens, route de l'encens, premier site UNESCO saoudien"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tombeaux taillés dans le grès, civilisation nabatéenne, Arabie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité antique aux tombeaux sculptés, semblable à Pétra"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le site de Hégra en Arabie saoudite"}
+  ]},
+  {name:"Köl-Suu — Kirghizistan",lat:40.2667,lng:77.05,desc:"Le lac Köl-Suu, niché à 3 500 mètres dans les montagnes reculées du Tian Shan près de la frontière chinoise, s'étire entre des falaises abruptes. Formé par un glissement de terrain, ses eaux émeraude immobiles créent des reflets miroir saisissants.",photo:"photos/kol_suu.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tian Shan, 3500m, oblast de Naryn, lac de barrage naturel, proche frontière chinoise"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lac de montagne encaissé entre des falaises, Asie centrale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac émeraude isolé dans les montagnes du Kirghizistan"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le lac Köl-Suu au Kirghizistan"}
+  ]},
+  {name:"Bandiagara — Mali",lat:14.35,lng:-3.6,desc:"La falaise de Bandiagara est un escarpement de grès de 150 kilomètres où le peuple Dogon a construit des villages accrochés à la roche. Leurs greniers de terre et anciennes habitations Tellem, nichés dans les anfractuosités, surplombent la plaine.",photo:"photos/bandiagara.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pays Dogon, escarpement de grès, habitations Tellem, masques Dama"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Falaise avec villages dogons accrochés, greniers de terre, Mali"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Falaise habitée par le peuple Dogon en Afrique de l'Ouest"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La falaise de Bandiagara au Mali"}
+  ]},
+  {name:"Kelimutu — Indonésie",lat:-8.7667,lng:121.8167,desc:"Le volcan Kelimutu, sur l'île de Florès, possède trois lacs de cratère qui changent de couleur indépendamment — du turquoise au rouge ou au noir — selon les réactions chimiques des minéraux. Les Lio locaux y voient le séjour des âmes des défunts.",photo:"photos/kelimutu.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Île de Florès, trois lacs tricolores, minéraux volcaniques, croyances Lio"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Volcan à trois lacs de couleurs différentes, Indonésie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Volcan aux lacs colorés qui changent de teinte"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le volcan Kelimutu en Indonésie"}
+  ]},
+  {name:"Raja Ampat — Indonésie",lat:-0.5,lng:130.5,desc:"L'archipel de Raja Ampat, en Papouasie occidentale, abrite la plus grande biodiversité marine de la planète avec plus de 1 500 espèces de poissons et 75 % des coraux connus. Ses îlots karstiques couverts de jungle émergent d'un lagon turquoise.",photo:"photos/raja_ampat.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Papouasie occidentale, Triangle de corail, karst calcaire, 1500 espèces de poissons"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel à la biodiversité marine maximale, îlots karstiques"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paradis de plongée aux îles couvertes de jungle, Indonésie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'archipel de Raja Ampat en Indonésie"}
+  ]},
+  {name:"Caño Cristales — Colombie",lat:2.2667,lng:-73.7944,desc:"Le Caño Cristales, surnommé « la rivière aux cinq couleurs », doit ses teintes éclatantes à une plante aquatique, la Macarenia clavigera, qui vire au rouge vif d'août à novembre. Ses fonds rocheux mêlent rouge, jaune, vert, bleu et noir.",photo:"photos/cano_cristales.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Serranía de la Macarena, plante Macarenia clavigera, rivière arc-en-ciel"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rivière aux eaux multicolores due à une plante, Colombie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rivière aux cinq couleurs en Amérique du Sud"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Caño Cristales en Colombie"}
+  ]},
+  {name:"Fernando de Noronha — Brésil",lat:-3.8547,lng:-32.4248,desc:"L'archipel volcanique de Fernando de Noronha, à 350 kilomètres des côtes brésiliennes, est un sanctuaire marin aux eaux cristallines. Ses plages comme Baía do Sancho, régulièrement élues parmi les plus belles du monde, abritent dauphins et tortues.",photo:"photos/fernando_de_noronha.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Archipel volcanique atlantique, Baía do Sancho, sanctuaire de dauphins à long bec"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel brésilien aux plages préservées et eaux claires"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île paradisiaque au large du Brésil"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'archipel de Fernando de Noronha au Brésil"}
+  ]},
+  {name:"Avenue des Baobabs — Madagascar",lat:-20.2506,lng:44.4183,desc:"L'Allée des Baobabs, près de Morondava, aligne des baobabs Adansonia grandidieri vieux de 800 ans et hauts de 30 mètres. Vestiges d'une forêt tropicale disparue, ces arbres au tronc massif et à la cime étroite offrent un spectacle saisissant au coucher du soleil.",photo:"photos/avenue_des_baobabs.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Adansonia grandidieri, région de Menabe, Morondava, arbres de 800 ans"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Allée de baobabs géants, Madagascar, coucher de soleil"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Route bordée de baobabs géants à Madagascar"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'avenue des Baobabs à Madagascar"}
+  ]},
+  {name:"Chutes de la Kalandula — Angola",lat:-9.0833,lng:16.0,desc:"Les chutes de Kalandula, parmi les plus grandes d'Afrique, déversent la rivière Lucala sur 105 mètres de hauteur et 400 mètres de largeur en fer à cheval. Longtemps inaccessibles pendant la guerre civile angolaise, elles restent peu fréquentées.",photo:"photos/chutes_kalandula.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rivière Lucala, Malanje, fer à cheval de 400m, deuxièmes plus grandes d'Afrique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vastes chutes d'eau en fer à cheval en Angola"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grandes chutes d'eau peu connues en Afrique australe"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les chutes de la Kalandula en Angola"}
+  ]},
+  {name:"Mont Nyiragongo — RD Congo",lat:-1.5217,lng:29.2497,desc:"Le Nyiragongo abrite le plus grand lac de lave permanent au monde, bouillonnant au fond de son cratère. Ses éruptions, parmi les plus rapides connues — la lave atteint 100 km/h —, menacent régulièrement la ville voisine de Goma.",photo:"photos/nyiragongo.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Virunga, lac de lave permanent, éruptions de 2002 et 2021, proche de Goma"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Volcan au lac de lave bouillonnant, Afrique centrale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Volcan avec un lac de lave au Congo"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le mont Nyiragongo en RD Congo"}
+  ]},
+  {name:"Lac Natron — Tanzanie",lat:-2.4167,lng:36.0,desc:"Le lac Natron, d'un rouge intense dû à des micro-organismes, est l'un des milieux les plus hostiles de la planète : son eau très alcaline peut atteindre 60 °C. Il est pourtant le principal site de reproduction des flamants nains d'Afrique de l'Est.",photo:"photos/lac_natron.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vallée du Rift, eaux alcalines au natron, flamants nains, volcan Ol Doinyo Lengai"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lac rouge très alcalin, reproduction des flamants, Tanzanie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac rouge mortel où nichent les flamants, Afrique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le lac Natron en Tanzanie"}
+  ]},
+  {name:"Fish River Canyon — Namibie",lat:-27.5833,lng:17.6667,desc:"Le Fish River Canyon est le deuxième plus grand canyon au monde, long de 160 kilomètres et profond de 550 mètres. Creusé sur 500 millions d'années par la rivière Fish et des effondrements tectoniques, il serpente dans un paysage désertique du sud namibien.",photo:"photos/fish_river_canyon.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rivière Fish, 160km de long, sud de la Namibie, sentier de randonnée de 5 jours"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense canyon désertique, deuxième plus grand au monde"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand canyon dans le désert de Namibie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Fish River Canyon en Namibie"}
+  ]},
+  {name:"Forêt de Bwindi — Ouganda",lat:-1.0667,lng:29.6167,desc:"La forêt impénétrable de Bwindi abrite près de la moitié des gorilles de montagne survivants au monde. Cette jungle dense et ancienne de l'ouest ougandais, vieille de 25 000 ans, est l'un des rares lieux où l'on peut approcher ces primates en voie de disparition.",photo:"photos/bwindi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gorilles de montagne, Rift Albertin, forêt de 25 000 ans, sud-ouest ougandais"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Jungle dense abritant les gorilles de montagne, Ouganda"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forêt aux gorilles de montagne en Afrique de l'Est"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La forêt de Bwindi en Ouganda"}
+  ]},
+  {name:"Simien — Éthiopie",lat:13.1833,lng:38.0667,desc:"Le massif du Simien, surnommé l'« échiquier des dieux », offre des paysages de pics déchiquetés et de falaises de 1 500 mètres. Il abrite des espèces endémiques uniques comme le babouin gélada à poitrine rouge et le loup d'Abyssinie.",photo:"photos/simien.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hauts plateaux abyssins, Ras Dashen, géladas, loup d'Éthiopie, walia ibex"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Montagnes déchiquetées avec babouins géladas, Éthiopie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Massif montagneux à la faune unique, Éthiopie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le massif du Simien en Éthiopie"}
+  ]},
+  {name:"Mont Kazbek — Géorgie",lat:42.6966,lng:44.5169,desc:"Le mont Kazbek, volcan endormi de 5 047 mètres, domine le Caucase géorgien. À ses pieds, l'église de la Trinité de Guergueti, perchée à 2 170 mètres, offre l'une des vues les plus emblématiques du pays. La légende y enchaîna le Prométhée géorgien Amirani.",photo:"photos/kazbek.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Caucase, 5047m, église Tsminda Sameba de Guergueti, légende d'Amirani"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Volcan enneigé surplombant une église isolée, Caucase"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Haute montagne du Caucase en Géorgie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le mont Kazbek en Géorgie"}
+  ]},
+  {name:"Lac Sevan — Arménie",lat:40.3667,lng:45.35,desc:"Le lac Sevan, à 1 900 mètres d'altitude, est l'un des plus grands lacs d'eau douce de haute montagne au monde. Joyau de l'Arménie, sa presqu'île abrite le monastère de Sevanavank, fondé au IXe siècle par des moines venus chercher l'isolement.",photo:"photos/lac_sevan.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"1900m d'altitude, monastère Sevanavank IXe s., péninsule, plus grand lac du Caucase"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grand lac de montagne avec monastère ancien, Arménie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac d'altitude avec monastère en Arménie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le lac Sevan en Arménie"}
+  ]},
+  {name:"Darvaza — Turkménistan",lat:40.2525,lng:58.4392,desc:"Le cratère de Darvaza, surnommé la « Porte de l'Enfer », est un gouffre de gaz en feu de 70 mètres de diamètre. Allumé en 1971 par des géologues soviétiques pour brûler le méthane, il flambe sans interruption depuis plus de cinquante ans dans le désert du Karakoum.",photo:"photos/darvaza.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Désert du Karakoum, cratère de gaz allumé en 1971, 70m de diamètre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cratère de gaz en feu permanent dans le désert, Asie centrale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gouffre enflammé surnommé Porte de l'Enfer"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le cratère de Darvaza au Turkménistan"}
+  ]},
+  {name:"Khiva — Ouzbékistan",lat:41.378,lng:60.3639,desc:"Khiva est une cité-musée de la route de la soie dont la vieille ville fortifiée, Itchan Kala, est entièrement préservée. Ses medersas, son minaret tronqué Kalta Minor recouvert de faïence turquoise et ses remparts de terre évoquent les anciens khanats d'Asie centrale.",photo:"photos/khiva.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Itchan Kala, Kalta Minor, khanat de Khiva, oasis du Khorezm, route de la soie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville fortifiée de la route de la soie, minaret turquoise"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancienne cité fortifiée d'Asie centrale, Ouzbékistan"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La cité de Khiva en Ouzbékistan"}
+  ]},
+  {name:"Boukhara — Ouzbékistan",lat:39.7747,lng:64.4286,desc:"Boukhara, ville sainte de l'islam d'Asie centrale, conserve plus de 140 monuments médiévaux. Son minaret Kalon de 47 mètres, épargné par Gengis Khan, son mausolée des Samanides en briques cuites et ses bazars couverts témoignent de 2 000 ans d'histoire.",photo:"photos/boukhara.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Minaret Kalon, mausolée samanide, Lab-i Hauz, ville sainte du Mâ warâ' an-nahr"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cité médiévale au minaret épargné par Gengis Khan, Ouzbékistan"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ville historique de la route de la soie en Ouzbékistan"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La ville de Boukhara en Ouzbékistan"}
+  ]},
+  {name:"Tombouctou — Mali",lat:16.7666,lng:-3.0026,desc:"Tombouctou, « la mystérieuse », fut un centre intellectuel et commercial majeur du Sahel aux XVe et XVIe siècles. Ses mosquées de banco comme Djingareyber et ses centaines de milliers de manuscrits anciens témoignent de son rayonnement sur la route transsaharienne.",photo:"photos/tombouctou.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosquée Djingareyber en banco, manuscrits, empire songhaï, route transsaharienne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville saharienne aux mosquées de terre et manuscrits, Mali"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité historique du désert au Mali"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La ville de Tombouctou au Mali"}
+  ]},
+  {name:"Ghadamès — Libye",lat:30.1333,lng:9.5,desc:"Ghadamès, « la perle du désert », est une oasis saharienne dont la vieille ville aux maisons de terre blanchies forme un labyrinthe couvert. Conçue pour la chaleur, l'architecture sépare passages couverts des hommes au rez-de-chaussée et terrasses des femmes en hauteur.",photo:"photos/ghadames.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Oasis berbère, maisons de terre à étages, passages couverts, frontière tripoint"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vieille ville saharienne en terre couverte, Libye"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Oasis aux maisons de terre dans le désert, Libye"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'oasis de Ghadamès en Libye"}
+  ]},
+  {name:"Siwa — Égypte",lat:29.2032,lng:25.5195,desc:"L'oasis de Siwa, isolée dans le désert occidental égyptien, abrite l'oracle d'Amon qu'Alexandre le Grand vint consulter en 331 av. J.-C. Ses sources, ses palmeraies et la forteresse de terre de Shali en font un monde berbère à part, longtemps coupé du reste de l'Égypte.",photo:"photos/siwa.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Oracle d'Amon, Alexandre le Grand, forteresse Shali, dépression de Qattara"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Oasis isolée avec oracle antique, désert égyptien"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Oasis du désert visitée par Alexandre le Grand"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'oasis de Siwa en Égypte"}
+  ]},
+  {name:"Sabratha — Libye",lat:32.8056,lng:12.485,desc:"Sabratha fut un comptoir phénicien devenu une cité romaine florissante de Tripolitaine. Son théâtre antique à trois étages de colonnes, parmi les mieux conservés d'Afrique du Nord, dominait un port d'exportation d'ivoire et de bêtes sauvages venus du Sahara.",photo:"photos/sabratha.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tripolitaine, théâtre romain à trois niveaux, comptoir phénicien, ivoire saharien"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cité romaine au grand théâtre antique, côte libyenne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines romaines en bord de mer en Libye"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le site de Sabratha en Libye"}
+  ]},
+  {name:"Plaine des Jarres — Laos",lat:19.4316,lng:103.1517,desc:"La Plaine des Jarres est parsemée de milliers de jarres mégalithiques de pierre vieilles de 2 500 ans, dont l'usage funéraire reste mystérieux. Certaines pèsent plusieurs tonnes. La zone fut l'une des plus bombardées au monde pendant la guerre du Vietnam.",photo:"photos/plaine_des_jarres.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Province de Xieng Khouang, jarres mégalithiques de l'âge du fer, bombes US non explosées"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Champ de jarres de pierre géantes énigmatiques, Laos"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plaine couverte de jarres anciennes en pierre"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Plaine des Jarres au Laos"}
+  ]},
+  {name:"Ninh Binh — Vietnam",lat:20.2506,lng:105.9744,desc:"Ninh Binh, surnommée la « baie d'Halong terrestre », déploie ses pitons karstiques émergeant de rizières inondées et de rivières sinueuses. On y navigue en barque entre les grottes et les pics calcaires, dans un paysage qui inspira de nombreux films.",photo:"photos/ninh_binh.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tam Cốc, Tràng An, karst calcaire, delta du fleuve Rouge, baie d'Halong terrestre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pitons karstiques au milieu des rizières, Vietnam"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage de montagnes calcaires et rizières, Vietnam"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La région de Ninh Binh au Vietnam"}
+  ]},
+  {name:"Sapa — Vietnam",lat:22.3357,lng:103.844,desc:"Sapa, perchée dans les montagnes du nord-ouest vietnamien, est célèbre pour ses rizières en terrasses sculptées à flanc de montagne par les minorités Hmong et Dao. Le mont Fansipan, « toit de l'Indochine », domine ces vallées souvent noyées de brume.",photo:"photos/sapa.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fansipan toit de l'Indochine, terrasses, minorités Hmong et Dao, Lào Cai"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rizières en terrasses de montagne, minorités ethniques, Vietnam"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rizières en escalier dans les montagnes du Vietnam"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La région de Sapa au Vietnam"}
+  ]},
+  {name:"Inle — Birmanie",lat:20.5861,lng:96.91,desc:"Le lac Inle est célèbre pour ses pêcheurs Intha qui rament debout avec une jambe enroulée autour de l'aviron. Ses villages sur pilotis, ses jardins flottants et ses pagodes émergent d'un lac de haute altitude entouré de montagnes, au cœur de l'État Shan.",photo:"photos/inle.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pêcheurs Intha à la rame à une jambe, jardins flottants, État Shan"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lac aux pêcheurs ramant debout et villages sur pilotis, Birmanie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac aux maisons sur pilotis et pêcheurs acrobates"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le lac Inle en Birmanie"}
+  ]},
+  {name:"Komodo — Indonésie",lat:-8.5519,lng:119.4894,desc:"L'île de Komodo abrite le dragon de Komodo, le plus grand lézard du monde, pouvant atteindre 3 mètres et 70 kilos. Ce parc national aux collines arides et aux récifs coralliens, dont une plage au sable rose, protège quelque 3 000 de ces prédateurs.",photo:"photos/komodo.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Varan géant Varanus komodoensis, Petites îles de la Sonde, plage rose, récifs"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île aux dragons géants et plage rose, Indonésie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île aux plus grands lézards du monde, Indonésie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'île de Komodo en Indonésie"}
+  ]},
+  {name:"Tana Toraja — Indonésie",lat:-3.0,lng:119.8167,desc:"Le pays Toraja, dans les montagnes de Sulawesi, est célèbre pour ses maisons tongkonan aux toits en forme de proue de navire et ses rites funéraires élaborés. Les défunts y sont enterrés dans des falaises gardées par des effigies de bois, les tau-tau.",photo:"photos/tana_toraja.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Maisons tongkonan, falaises funéraires, effigies tau-tau, Sulawesi du Sud"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Région aux maisons-bateaux et tombes dans les falaises, Indonésie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Culture aux rites funéraires uniques à Sulawesi"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le pays Tana Toraja en Indonésie"}
+  ]},
+  {name:"Chocolate Hills — Philippines",lat:9.8167,lng:124.1667,desc:"Les Chocolate Hills de Bohol comptent plus de 1 200 collines coniques presque identiques, réparties sur 50 km². Couvertes d'herbe qui brunit à la saison sèche — d'où leur nom —, ces buttes calcaires intriguent géologues et alimentent des légendes locales.",photo:"photos/chocolate_hills.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Île de Bohol, 1268 collines coniques calcaires, herbe brunissant en saison sèche"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Collines coniques brunes identiques aux Philippines"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Champ de collines arrondies brunes, Philippines"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chocolate Hills aux Philippines"}
+  ]},
+  {name:"El Nido — Philippines",lat:11.1956,lng:119.4156,desc:"El Nido, à la pointe nord de Palawan, est un sanctuaire marin aux falaises karstiques surgissant de lagons turquoise. Ses îlots, ses plages cachées et ses récifs coralliens accessibles en bangka en font l'une des destinations balnéaires les plus prisées d'Asie.",photo:"photos/el_nido.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Archipel de Bacuit, Palawan, karst calcaire, lagons, bangka traditionnels"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lagons turquoise entre falaises calcaires, Philippines"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Îles paradisiaques aux falaises et lagons, Philippines"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"El Nido aux Philippines"}
+  ]},
+  {name:"Kata Tjuta — Australie",lat:-25.3,lng:130.7333,desc:"Kata Tjuta, ou les Monts Olga, est un ensemble de 36 dômes de grès rouge culminant à 546 mètres au-dessus de la plaine, plus haut qu'Uluru tout proche. Site sacré du peuple Anangu, ses gorges abritent une faune désertique dans le Centre rouge australien.",photo:"photos/kata_tjuta.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monts Olga, 36 dômes de conglomérat, peuple Anangu, Centre rouge, Territoire du Nord"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Dômes de roche rouge dans le désert australien, près d'Uluru"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Formations rocheuses rouges en dômes, Australie centrale"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Kata Tjuta en Australie"}
+  ]},
+  {name:"Karijini — Australie",lat:-22.4833,lng:118.2667,desc:"Le parc de Karijini, dans le Pilbara, est creusé de gorges étroites aux parois de fer rouge vieilles de 2,5 milliards d'années. Cascades, bassins turquoise et roches stratifiées composent l'un des paysages géologiques les plus anciens et spectaculaires d'Australie.",photo:"photos/karijini.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pilbara, gorges de fer banded iron, roches de 2,5 milliards d'années, Australie-Occidentale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gorges rouges étroites avec bassins, ouest australien"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyons de roche rouge ancienne en Australie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le parc de Karijini en Australie"}
+  ]},
+  {name:"Cradle Mountain — Australie",lat:-41.6833,lng:145.95,desc:"Le Cradle Mountain, en Tasmanie, dresse ses crêtes dentelées de dolérite au-dessus du lac Dove, vestige glaciaire. Ce paysage de landes, de forêts pluviales tempérées et de wombats marque le départ de l'Overland Track, l'une des grandes randonnées australiennes.",photo:"photos/cradle_mountain.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tasmanie, lac Dove, dolérite, Overland Track, forêt pluviale tempérée, wombats"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Montagne dentelée au-dessus d'un lac glaciaire, Tasmanie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Montagne sauvage de Tasmanie aux paysages glaciaires"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cradle Mountain en Tasmanie"}
+  ]},
+  {name:"Khajuraho — Inde",lat:24.8318,lng:79.9199,desc:"Les temples de Khajuraho, élevés par la dynastie Chandela entre 950 et 1050, sont célèbres pour leurs sculptures d'une grande finesse, dont une partie représente des scènes érotiques. Sur 85 temples d'origine, une vingtaine subsistent, ornés de milliers de figures.",photo:"photos/khajuraho.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dynastie Chandela, sculptures mithuna, grès, Madhya Pradesh, temples nâgara"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Temples couverts de sculptures érotiques, Inde centrale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temples indiens ornés de nombreuses sculptures"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les temples de Khajuraho en Inde"}
+  ]},
+  {name:"Désert du Danakil — Éthiopie",lat:14.2417,lng:40.3,desc:"La dépression du Danakil est l'un des endroits les plus chauds et bas de la planète, à 125 mètres sous le niveau de la mer. Ses lacs acides multicolores, ses cheminées de soufre du Dallol et ses lacs de lave en font un paysage extraterrestre du triangle Afar.",photo:"photos/danakil.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Triangle Afar, Dallol, lacs acides, -125m, soufre, lac de lave de l'Erta Ale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Dépression volcanique aux lacs acides colorés, Éthiopie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Désert volcanique parmi les plus chauds du monde, Éthiopie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le désert du Danakil en Éthiopie"}
+  ]},
+  {name:"Wineglass Bay — Tasmanie, Australie",lat:-42.1567,lng:148.2978,desc:"Wineglass Bay, dans le parc de Freycinet en Tasmanie, dessine un arc de sable blanc parfait bordant une eau turquoise, encadré par les pics de granite rose des Hazards. Sa forme en verre à pied et son isolement en font l'une des plus belles plages d'Australie.",photo:"photos/wineglass_bay.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parc de Freycinet, pics de granite The Hazards, péninsule, Tasmanie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plage en arc de sable blanc et granite rose, Tasmanie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plage parfaite en forme de croissant, Australie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Wineglass Bay en Tasmanie"}
+  ]},
+  {name:"Tongariro — Nouvelle-Zélande",lat:-39.1333,lng:175.6419,desc:"Le parc national de Tongariro, premier du pays et site sacré maori, réunit trois volcans actifs dont le mont Ngauruhoe, qui incarna le Mordor dans Le Seigneur des Anneaux. Sa traversée passe par des lacs émeraude et des champs de lave fumants.",photo:"photos/tongariro.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Triple volcan, Ngauruhoe en Mordor, lacs Émeraude, site sacré maori, île du Nord"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Volcans actifs et lacs émeraude, Mordor du cinéma, Nouvelle-Zélande"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Volcans aux lacs colorés en Nouvelle-Zélande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le parc de Tongariro en Nouvelle-Zélande"}
+  ]},
+  {name:"Kjeragbolten — Norvège",lat:59.0342,lng:6.5681,desc:"Le Kjeragbolten est un bloc de roche de 5 m³ coincé dans une crevasse au-dessus d'un précipice de 984 mètres, au bord du Lysefjord. Les randonneurs s'y aventurent pour une photo vertigineuse sur ce rocher suspendu sans aucune protection au-dessus du vide.",photo:"photos/kjeragbolten.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bloc coincé dans une crevasse, Lysefjord, 984m de vide, plateau du Kjerag"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rocher coincé au-dessus d'un précipice, Norvège"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Bloc de pierre suspendu au-dessus du vide, Norvège"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kjeragbolten en Norvège"}
+  ]},
+  {name:"Désert de Bardenas — Espagne",lat:42.18,lng:-1.4833,desc:"Les Bardenas Reales forment un désert semi-aride de Navarre où l'érosion a sculpté des collines de glaise, des plateaux et des cheminées de fées comme le Castildetierra. Ce paysage lunaire a servi de décor à de nombreux films et séries.",photo:"photos/bardenas.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Navarre, badlands de glaise, Castildetierra, réserve de biosphère, décors de cinéma"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Désert de collines érodées en Espagne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage désertique aux formations érodées, Espagne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Bardenas Reales en Espagne"}
+  ]},
+  {name:"Saut du Lion — Slovénie",lat:46.275,lng:13.9,desc:"La cascade de Savica, dans les Alpes juliennes slovènes, jaillit d'une falaise en forme de lettre A après un parcours souterrain. Alimentant le lac de Bohinj, elle a inspiré le poète national France Prešeren et reste un symbole romantique du pays.",photo:"photos/savica.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Alpes juliennes, lac de Bohinj, source karstique, poète Prešeren, Triglav"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cascade en forme de A dans les Alpes slovènes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cascade alpine alimentant un lac, Slovénie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La cascade de Savica en Slovénie"}
+  ]},
+  {name:"Cratère de Wolfe Creek — Australie",lat:-19.1722,lng:127.7956,desc:"Le cratère de Wolfe Creek, deuxième plus grand cratère d'impact météoritique visible au monde, mesure 880 mètres de diamètre. Formé il y a 300 000 ans dans l'outback désertique d'Australie-Occidentale, il est connu des Aborigènes Djaru sous le nom de Kandimalal.",photo:"photos/wolfe_creek.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cratère météoritique de 880m, Kandimalal, Kimberley, Australie-Occidentale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cratère d'impact circulaire dans le désert australien"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand cratère de météorite en Australie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le cratère de Wolfe Creek en Australie"}
+  ]},
+  {name:"Désert de Tabernas — Espagne",lat:37.0,lng:-2.4333,desc:"Le désert de Tabernas, en Andalousie, est le seul désert d'Europe continentale. Ses paysages arides de ravins et de plateaux ont accueilli le tournage de dizaines de westerns spaghetti, dont la trilogie du Dollar de Sergio Leone, dans des décors encore visibles.",photo:"photos/tabernas.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Seul désert d'Europe, Almería, westerns spaghetti, Sergio Leone, Andalousie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Désert européen décor de westerns, Espagne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Seul désert d'Europe continentale, Espagne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le désert de Tabernas en Espagne"}
+  ]},
+  {name:"Désert de Gobi — Mongolie",lat:43.5,lng:104.0,desc:"Le désert de Gobi, vaste de 1,3 million de km² entre la Mongolie et la Chine, est célèbre pour ses dunes chantantes, ses falaises de flammes rouges et ses gisements d'œufs de dinosaures découverts dans les années 1920. C'est l'un des déserts les plus froids du monde.",photo:"photos/gobi.jpg",hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dunes de Khongoryn Els, falaises de Bayanzag, œufs de dinosaures, Mongolie-Chine"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Désert froid aux fossiles de dinosaures, Asie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand désert d'Asie centrale, Mongolie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le désert de Gobi en Mongolie"}
   ]}
 ];
