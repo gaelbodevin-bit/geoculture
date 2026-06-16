@@ -861,7 +861,7 @@ const ROUNDS=[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cité mythique du Sahel, carrefour caravanier de l'or et du sel aux XIVe-XVIe siècles, mosquées de Djingareyber et Sankoré"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive nord d'un grand fleuve africain, bordure sud du Sahara, cité caravanère légendaire"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité mythique du désert, capitale des manuscrits islamiques, Mali"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tombouctu au Mali"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tombouctou au Mali"}
   ]},
   {name:"Désert du Sahara — Algérie (Tassili)",lat:25.4167,lng:8.4167,desc:"Le Tassili n'Ajjer en Algérie est un vaste plateau rocheux abritant 15 000 peintures et gravures rupestres réalisées entre -10 000 et -2 000 av. J.-C. Ces œuvres représentent des éléphants, hippopotames et crocodiles — preuve que le Sahara était autrefois une savane verdoyante. L'UNESCO le classe double patrimoine naturel et culturel.",photo:"photos/desert_du_sahara.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tassili n'Ajjer, plateau gréseux à 1 800 m, 15 000 pétroglyphes et peintures rupestres, UNESCO, Sahara central"},
