@@ -798,7 +798,7 @@ const ROUNDS=[
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Registan à Samarcande, Ouzbékistan"}
   ]},
   {name:"Palais de Topkapi — Istanbul, Turquie",lat:41.0115,lng:28.9833,desc:"Le palais de Topkapi fut le centre de l'Empire ottoman pendant 400 ans. Son Harem abritait jusqu'à 600 femmes et eunuques. Le palais conserve les reliques les plus sacrées de l'Islam : le manteau et l'épée du prophète Mahomet, ainsi qu'une dent et un cheveu lui appartenant selon la tradition.",photo:"photos/palais_de_topkapi.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Topkap? Saray?, résidence des sultans ottomans de 1465 à 1856, abritant le manteau du prophète et 86 carats du Diamant du Spoonmak"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Topkapi Sarayi, résidence des sultans ottomans de 1465 à 1856, abritant le manteau du prophète et 86 carats du Diamant du Spoonmak"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pointe du Sérail, péninsule historique, entre la Corne d'Or et le Bosphore"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais des sultans ottomans, trésor impérial, Istanbul"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Topkapi à Istanbul, Turquie"}

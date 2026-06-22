@@ -133,7 +133,7 @@ function showHint(){
 }
 
 function updateDots(){
-  for(var i=0;i<5;i++){
+  for(var i=0;i<4;i++){
     var d=document.getElementById('d'+i);
     if(fixedLevel>=0) d.className='dot'+(i===fixedLevel?' on':'');
     else d.className='dot'+(i===curL?' on':i<curL?' done':'');
