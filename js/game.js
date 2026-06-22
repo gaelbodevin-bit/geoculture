@@ -313,7 +313,7 @@ function showInter(pts,dist,name,eliminated){
     if(round.photo){
       var img = new Image();
       img.onload = function(){
-        el.innerHTML = '<img src="'+round.photo+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:12px" alt="">';
+        el.innerHTML = '<img src="'+round.photo+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:12px" alt="">';
       };
       img.onerror = function(){
         tryWiki('fr');
@@ -330,7 +330,7 @@ function showInter(pts,dist,name,eliminated){
           var el2=document.getElementById(id);
           if(!el2) return;
           if(d.thumbnail&&d.thumbnail.source){
-            el2.innerHTML='<img src="'+d.thumbnail.source+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:12px" alt="">';
+            el2.innerHTML='<img src="'+d.thumbnail.source+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;border-radius:12px" alt="">';
           } else if(lang==='fr'){tryWiki('en');}
           else{el2.style.display='none';}
         }).catch(function(){var el2=document.getElementById(id);if(el2)el2.style.display='none';});
