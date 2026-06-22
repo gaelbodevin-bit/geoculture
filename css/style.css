@@ -193,9 +193,20 @@ body.menu-mode #app-wrapper{background:transparent}
 /* ════════════════════════════════════════
    SIDEBAR : equilibrage vertical, timer recentre
    ════════════════════════════════════════ */
-#qpanel{ flex:0 0 auto !important; }          /* le panneau s'adapte au texte */
-#qtxt{ max-height:42vh; overflow-y:auto; }    /* large place pour les longues questions, scroll seulement en cas extreme */
+/* Question : s'adapte au texte, bien aeree */
+#qpanel{ flex:0 0 auto !important; padding:18px 18px 20px; }
+#qtxt{ max-height:42vh; overflow-y:auto; font-size:15px; line-height:1.65; }
 
-/* Deux margin-auto (timer + actions) se partagent l espace libre -> timer ~ au milieu */
-#timer-section{ margin-top:auto !important; }
-/* #actions a deja margin-top:auto, rien a toucher */
+/* Bloc timer = element central, agrandi pour remplir le vide */
+#timer-section{ margin-top:auto !important; gap:14px; padding:24px 18px; }
+#timer-lbl{ align-self:center; letter-spacing:1.4px; }
+#tring{ transform:scale(1.4); transform-origin:center; margin:26px 0; }
+
+/* Carte "score max" plus presente */
+#maxbox{ padding:14px 16px; }
+#maxbox .mv{ font-size:26px; }
+
+/* Pastilles de progression un peu plus grandes */
+.dot{ width:10px; height:10px; }
+
+/* #actions garde margin-top:auto -> bouton Valider epingle en bas */
