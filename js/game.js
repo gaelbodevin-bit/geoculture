@@ -345,13 +345,21 @@ function showInter(pts,dist,name,eliminated){
 // ════════════════════════════════════════════════════════════════
 function buildShareText(format) {
   var url = 'https://gaelbodevin-bit.github.io/geoculture/';
+  // Emojis generes depuis leurs code points -> jamais corrompus par un mauvais encodage de fichier
+  var E = {
+    green:  String.fromCodePoint(0x1F7E9), // carre vert
+    yellow: String.fromCodePoint(0x1F7E8), // carre jaune
+    red:    String.fromCodePoint(0x1F7E5), // carre rouge
+    target: String.fromCodePoint(0x1F3AF), // cible
+    dash:   '\u2014'                       // tiret long
+  };
   var isDaily = !!window._dailyMode || !!window._wasDailyMode;
   var header;
   if(isDaily) {
     var launch = new Date('2026-06-01T00:00:00Z');
     var today  = new Date(getDailyDateFR()+'T00:00:00Z');
     var dayNum = Math.floor((today-launch)/86400000)+1;
-    header = 'GeoCulture \u2014 Defi du jour #'+dayNum;
+    header = 'GeoCulture '+E.dash+' Defi du jour #'+dayNum;
   } else {
     header = 'GeoCulture';
   }
@@ -359,13 +367,13 @@ function buildShareText(format) {
   if(format === 'emoji') {
     var squares = roundScores.map(function(s){
       var ratio = s.maxPts>0 ? s.pts/s.maxPts : 0;
-      if(ratio >= 0.80) return '\uD83D\uDFE9';
-      if(ratio >= 0.40) return '\uD83D\uDFE8';
-      return '\uD83D\uDFE5';
+      if(ratio >= 0.80) return E.green;
+      if(ratio >= 0.40) return E.yellow;
+      return E.red;
     }).join('');
     var totalMax = roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
     var pct = totalMax>0 ? Math.round(total/totalMax*100) : 0;
-    return header+'\n'+squares+'\n\uD83C\uDFAF '+total.toLocaleString('fr-FR')+' pts ('+pct+'%)\n'+url;
+    return header+'\n'+squares+'\n'+E.target+' '+total.toLocaleString('fr-FR')+' pts ('+pct+'%)\n'+url;
   } else {
     return header+'\nJ\'ai marque '+total.toLocaleString('fr-FR')+' pts !\nSauras-tu faire mieux ? '+url;
   }

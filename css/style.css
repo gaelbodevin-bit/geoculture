@@ -190,3 +190,12 @@ body.menu-mode #app-wrapper{background:transparent}
   transform: scale(0.97);
   box-shadow: none;
 }
+/* ════════════════════════════════════════
+   SIDEBAR : equilibrage vertical, timer recentre
+   ════════════════════════════════════════ */
+#qpanel{ flex:0 0 auto !important; }          /* la question ne grossit plus */
+#qtxt{ max-height:150px; overflow-y:auto; }   /* questions longues = scroll */
+
+/* Deux margin-auto (timer + actions) se partagent l espace libre -> timer ~ au milieu */
+#timer-section{ margin-top:auto !important; }
+/* #actions a deja margin-top:auto, rien a toucher */
