@@ -795,7 +795,7 @@ function showDifficultyMenu(mode) {
 
   // Tout niveaux
   h.push('<button onclick="launchGame(-1)" style="padding:12px 18px;border-radius:10px;border:1.5px solid #f97316;background:rgba(249,115,22,0.08);color:#f97316;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between">');
-  h.push('<span>Tout niveaux</span><span style="font-size:12px;color:#94a3b8;font-weight:500">5 indices par lieu</span>');
+  h.push('<span>Tout niveaux</span><span style="font-size:12px;color:#94a3b8;font-weight:500">4 indices par lieu</span>');
   h.push('</button>');
 
   var lvls=[
