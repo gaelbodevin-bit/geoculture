@@ -135,6 +135,7 @@ function showHint(){
 function updateDots(){
   for(var i=0;i<4;i++){
     var d=document.getElementById('d'+i);
+    if(!d) continue; // ignore les dots absents du HTML
     if(fixedLevel>=0) d.className='dot'+(i===fixedLevel?' on':'');
     else d.className='dot'+(i===curL?' on':i<curL?' done':'');
   }
