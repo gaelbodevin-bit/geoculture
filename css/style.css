@@ -193,8 +193,8 @@ body.menu-mode #app-wrapper{background:transparent}
 /* ════════════════════════════════════════
    SIDEBAR : equilibrage vertical, timer recentre
    ════════════════════════════════════════ */
-#qpanel{ flex:0 0 auto !important; }          /* la question ne grossit plus */
-#qtxt{ max-height:150px; overflow-y:auto; }   /* questions longues = scroll */
+#qpanel{ flex:0 0 auto !important; }          /* le panneau s'adapte au texte */
+#qtxt{ max-height:42vh; overflow-y:auto; }    /* large place pour les longues questions, scroll seulement en cas extreme */
 
 /* Deux margin-auto (timer + actions) se partagent l espace libre -> timer ~ au milieu */
 #timer-section{ margin-top:auto !important; }
