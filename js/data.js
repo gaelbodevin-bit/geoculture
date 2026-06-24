@@ -325,9 +325,9 @@ const ROUNDS=[
   ]},
   {name:"Pont du Gard — France",lat:43.9473,lng:4.5355,desc:"Le Pont du Gard transportait 20 000 m³ d'eau par jour vers la ville de Nîmes sur une distance de 50 km. Sa pente, calculée avec une précision de 2,5 cm par kilomètre, était si fine que l'eau coulait presque sans mouvement apparent — un prodige d'ingénierie romaine.",photo:"photos/pont_du_gard.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Aqueduc romain du Ier siècle ap. J.-C., 49 m de hauteur, enjambant le Gardon, construit sans mortier"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gorges du Gardon, commune de Vers-Pont-du-Gard, Gard, Occitanie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Aqueduc célèbre des Gorges du Gardon, commune de Vers-Pont-du-Gard, Gard, Occitanie"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haut pont-aqueduc romain du monde, UNESCO, sud de la France"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont du Gard en France"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont du Gard en Occitanie, France"}
   ]},
   {name:"Mont Saint-Michel — Normandie, France",lat:48.6361,lng:-1.5115,desc:"La baie du Mont-Saint-Michel possède le coefficient de marée le plus fort d'Europe continentale. En 1879, la construction d'une digue pour relier le Mont au continent accéléra l'envasement de la baie. La digue fut démantelée et remplacée par un pont en 2014 pour laisser circuler les eaux.",photo:"photos/mont_saint_michel.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Îlot granitique couronné par l'abbaye bénédictine dédiée à l'archange Michel, fondée en 966"},
@@ -1069,7 +1069,7 @@ const ROUNDS=[
   ]},
   {name:"Tower Bridge — Londres, Royaume-Uni",lat:51.5055,lng:-0.0754,desc:"Le Tower Bridge peut s'ouvrir en 5 minutes pour laisser passer les grands navires — ce qui se produit encore environ 800 fois par an. Ses deux tours de style médiéval cachent une structure en acier de 11 000 tonnes. Inauguré en 1894, il fut initialement peint en chocolat et crème — sa couleur bleu-gris actuelle date de 1977.",photo:"photos/tower_bridge.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pont basculant de 244m de long inauguré en 1894, deux tours néo-gothiques de 65m, câbles de 38,7m de portée"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tamise, entre la Tour médiévale (rive nord) et Bermondsey (rive sud)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tamise, pont entre la Tour médiévale (rive nord) et Bermondsey (rive sud)"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pont symbole de Londres, double tour basculant sur la Tamise"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tower Bridge à Londres, Royaume-Uni"}
   ]},
@@ -2406,10 +2406,10 @@ const ROUNDS=[
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc des Abruzzes en Italie"}
   ]},
   {name:"Syracuse — Sicile, Italie",lat:37.0655,lng:15.2866,desc:"Syracuse fut l'une des plus grandes villes du monde antique au Ve siècle av. J.-C., rivalisant avec Athènes et Carthage. Son théâtre grec taillé dans le roc accueille toujours des représentations de tragédies grecques chaque printemps. Archimède y naquit vers -287 et défendit la ville contre les Romains avec ses machines de guerre.",photo:"photos/syracuse.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siracusa, colonie grecque fondée en -734, île d'Ortygie, théâtre grec de 15 000 places, oreille de Denys (latomie)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Côte ionienne, province de Syracuse, Sicile orientale"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Syracuse, colonie grecque fondée en -734, île d'Ortygie, théâtre grec de 15 000 places, oreille de Denys (latomie)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Théâtre sur la Côte ionienne, province de Syracuse, Sicile orientale"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité grecque antique fondée en -734, théâtre de 15 000 places encore en usage, île d'Ortygie, Sicile"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Syracuse à Sicile, Italie"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le  théâtre de Syracuse, Sicile, Italie"}
   ]},
   {name:"Palerme — Sicile (Cappella Palatina)",lat:38.1111,lng:13.3554,desc:"La Cappella Palatina de Palerme (1143) est un chef-d'œuvre de l'art normanno-arabe-byzantin : ses mosaïques dorées byzantines recouvrent des plafonds en bois de style islamique avec des inscriptions en arabe — un syncrétisme culturel unique du règne de Roger II de Sicile.",photo:"photos/palerme.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cappella Palatina, chapelle palatine normande-arabe-byzantine (1143), mosaïques d'or de 6 340 m², Palazzo dei Normanni"},
