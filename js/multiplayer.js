@@ -2,6 +2,8 @@
 import { initializeApp, getApps } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
 import { getDatabase, ref, set, get, onValue, off, update, remove }
   from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js';
+import { getAuth, signInAnonymously, onAuthStateChanged }
+  from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDm7KMECwQVWvnOnMmSVm8aK7FdP03QWyA",
@@ -15,6 +17,25 @@ var firebaseConfig = {
 
 var mpApp = getApps().length > 0 ? getApps()[0] : initializeApp(firebaseConfig);
 var rtdb = getDatabase(mpApp, 'https://geo-culture-73453-default-rtdb.europe-west1.firebasedatabase.app');
+var mpAuth = getAuth(mpApp);
+
+// Garantit un utilisateur connecté (Google si session restaurée, sinon anonyme).
+// Le playerId = uid, ce qui permet aux règles RTDB de verrouiller chaque node.
+function mpEnsureAuth(){
+  return new Promise(function(resolve, reject){
+    if(mpAuth.currentUser){ resolve(mpAuth.currentUser); return; }
+    var done = false;
+    var unsub = onAuthStateChanged(mpAuth, function(u){
+      if(done) return;
+      if(u){ done = true; try{unsub();}catch(e){} resolve(u); }
+    });
+    setTimeout(function(){
+      if(done) return; done = true; try{unsub();}catch(e){}
+      if(mpAuth.currentUser){ resolve(mpAuth.currentUser); return; }
+      signInAnonymously(mpAuth).then(function(c){ resolve(c.user); }).catch(reject);
+    }, 1200);
+  });
+}
 
 // ??? État local ???????????????????????????????????????????????????????????????
 var mp = {
@@ -40,15 +61,28 @@ function mpColorFor(pid) {
 // ??? Utilitaires ??????????????????????????????????????????????????????????????
 function genCode(){ var c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',s=''; for(var i=0;i<6;i++)s+=c[Math.floor(Math.random()*c.length)]; return s; }
 function genPid(){ return 'p_'+Math.random().toString(36).substr(2,9)+'_'+Date.now(); }
-function getPlayerName(){ var u=typeof getCurrentUser==='function'?getCurrentUser():null; return u?(u.displayName||u.email.split('@')[0]):(mp.playerName||'Joueur'); }
+function getPlayerName(){ var u=(typeof getCurrentUser==='function'?getCurrentUser():null)||mpAuth.currentUser; if(u && !u.isAnonymous) return u.displayName || (u.email?u.email.split('@')[0]:'') || mp.playerName || 'Joueur'; return mp.playerName || 'Joueur'; }
 function getPlayerPhoto(){ var u=typeof getCurrentUser==='function'?getCurrentUser():null; return u?(u.photoURL||''):''; }
 function fmtPts(n){ return (n||0).toLocaleString('fr-FR'); }
 function fmtDst(km){ if(km==null)return '—'; return km<1?Math.round(km*1000)+'m':Math.round(km)+'km'; }
 
+// ?? Sécurité : échappement anti-XSS des données joueur (pseudo, photo) ??
+function esc(s){
+  return String(s==null?'':s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+function safeChar(s){ return esc(String(s==null?'?':s).charAt(0).toUpperCase()); }
+function safePhotoUrl(u){
+  u = String(u==null?'':u);
+  return /^https:\/\/[\w.~:\/?#@!$&*+,;=%()\[\]-]+$/.test(u) ? u : '';
+}
+
 // ??? Créer un salon ???????????????????????????????????????????????????????????
 function mpCreateRoom(options) {
+  return mpEnsureAuth().then(function(_u){
   var code = genCode();
-  mp.roomCode = code; mp.playerId = genPid(); mp.isHost = true;
+  mp.roomCode = code; mp.playerId = _u.uid; mp.isHost = true;
   mp.roomRef = ref(rtdb, 'rooms/'+code);
   _colorMap = {};
   var myColor = mpColorFor(mp.playerId);
@@ -70,12 +104,15 @@ function mpCreateRoom(options) {
     setTimeout(function(){ if(mp.roomRef) remove(mp.roomRef); }, 7200000);
     mpListenRoom(); mpShowLobby(); return code;
   });
+  }); // fin mpEnsureAuth
 }
 
 // ??? Rejoindre un salon ???????????????????????????????????????????????????????
 function mpJoinRoom(code, playerName) {
   code = code.toUpperCase().trim();
-  mp.roomCode = code; mp.playerId = genPid(); mp.playerName = playerName; mp.isHost = false;
+  mp.playerName = playerName;
+  return mpEnsureAuth().then(function(_u){
+  mp.roomCode = code; mp.playerId = _u.uid; mp.isHost = false;
   mp.roomRef = ref(rtdb, 'rooms/'+code);
 
   return get(mp.roomRef).then(function(snap) {
@@ -91,6 +128,7 @@ function mpJoinRoom(code, playerName) {
       color: myColor, isHost:false, score:0, online:true, joinedAt:Date.now()
     });
   }).then(function(){ mpListenRoom(); mpShowLobby(); });
+  }); // fin mpEnsureAuth
 }
 
 // ??? Écouter le salon (un seul listener sur la room entière) ?????????????????
@@ -162,9 +200,9 @@ function mpUpdateLobby(room) {
     var isMe = pid===mp.playerId, col = p.color||mpColorFor(pid);
     h.push('<div style="display:flex;align-items:center;gap:10px;padding:8px 12px;background:'+(isMe?'#1a2238':'#0d1120')+';border:1px solid '+(isMe?col:'#1e2d45')+';border-radius:8px;margin-bottom:4px">');
     h.push('<div style="width:10px;height:10px;border-radius:50%;background:'+col+';flex-shrink:0"></div>');
-    if(p.photo) h.push('<img src="'+p.photo+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover">');
-    else h.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;display:flex;align-items:center;justify-content:center;font-size:12px;color:#94a3b8">'+p.name[0].toUpperCase()+'</div>');
-    h.push('<span style="flex:1;font-size:13px;color:'+(isMe?col:'#e2e8f0')+';font-weight:'+(isMe?'700':'400')+'">'+p.name+(isMe?' (moi)':'')+'</span>');
+    if(p.photo) h.push('<img src="'+safePhotoUrl(p.photo)+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover">');
+    else h.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;display:flex;align-items:center;justify-content:center;font-size:12px;color:#94a3b8">'+safeChar(p.name)+'</div>');
+    h.push('<span style="flex:1;font-size:13px;color:'+(isMe?col:'#e2e8f0')+';font-weight:'+(isMe?'700':'400')+'">'+esc(p.name)+(isMe?' (moi)':'')+'</span>');
     if(p.isHost) h.push('<span style="font-size:10px;color:#f97316;background:#3d1a05;padding:2px 6px;border-radius:4px">Hôte</span>');
     h.push('</div>');
   });
@@ -380,10 +418,8 @@ function mpSubmitAnswer(pos, dist, pts, rIdx) {
   set(ansRef, {
     pts: pts||0, dist, pos: pos ? {lat:pos.lat, lng:pos.lng} : null, submittedAt:Date.now()
   }).then(function() {
-    // Mettre à jour le score total du joueur
-    var scRef = ref(rtdb, 'rooms/'+mp.roomCode+'/players/'+mp.playerId+'/score');
-    get(scRef).then(function(s){ set(scRef, (s.val()||0)+(pts||0)); });
-    // L'hôte surveille si tout le monde a répondu
+    // Anti-triche : le client n'écrit JAMAIS son propre score.
+    // L'hôte recalcule les totaux à partir des answers en fin de manche (mpAdvance).
     if(mp.isHost) mpWatchAllAnswered(rIdx);
   });
 }
@@ -520,11 +556,11 @@ function mpHandleRoundEnd(room) {
       var icon = isMe ? makePin(col) : L.divIcon({
         className:'',
         html:'<div style="width:22px;height:22px;background:'+col+';border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 8px rgba(0,0,0,.4);position:relative">'
-            +'<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(45deg);font-size:9px;color:#fff;font-weight:700">'+((p&&p.name)?p.name[0].toUpperCase():'?')+'</div></div>',
+            +'<div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(45deg);font-size:9px;color:#fff;font-weight:700">'+((p&&p.name)?safeChar(p.name):'?')+'</div></div>',
         iconSize:[22,22],iconAnchor:[11,22]
       });
       var popup = '<div style="font-family:system-ui;font-size:12px">'
-        +'<b style="color:'+col+'">'+(p?p.name:'?')+(isMe?' (moi)':'')+'</b><br>'
+        +'<b style="color:'+col+'">'+esc(p?p.name:'?')+(isMe?' (moi)':'')+'</b><br>'
         +fmtDst(ans.dist)+'<br>'
         +'<b style="color:#f97316">+'+fmtPts(ans.pts)+' pts</b></div>';
       var m = L.marker([ans.pos.lat,ans.pos.lng],{icon}).bindPopup(popup).addTo(map);
@@ -616,9 +652,9 @@ function mpHandleRoundEnd(room) {
     var medal=i<3?medals[i]:(i+1)+'.';
     h.push('<div style="display:flex;align-items:center;gap:8px;padding:7px 12px;background:'+(isMe?'#1a2238':'#0d1120')+';border-radius:8px;border:1px solid '+(isMe?r.color:'#1e2d45')+'">');
     h.push('<span style="font-size:14px;min-width:24px;text-align:center">'+medal+'</span>');
-    if(r.photo) h.push('<img src="'+r.photo+'" style="width:22px;height:22px;border-radius:50%;border:2px solid '+r.color+';object-fit:cover;flex-shrink:0">');
-    else h.push('<div style="width:22px;height:22px;border-radius:50%;background:'+r.color+'33;border:2px solid '+r.color+';display:flex;align-items:center;justify-content:center;font-size:9px;color:'+r.color+';font-weight:700;flex-shrink:0">'+r.name[0].toUpperCase()+'</div>');
-    h.push('<span style="flex:1;font-size:12px;font-weight:'+(isMe?'700':'400')+';color:'+(isMe?r.color:'#e2e8f0')+';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+r.name+'</span>');
+    if(r.photo) h.push('<img src="'+safePhotoUrl(r.photo)+'" style="width:22px;height:22px;border-radius:50%;border:2px solid '+r.color+';object-fit:cover;flex-shrink:0">');
+    else h.push('<div style="width:22px;height:22px;border-radius:50%;background:'+r.color+'33;border:2px solid '+r.color+';display:flex;align-items:center;justify-content:center;font-size:9px;color:'+r.color+';font-weight:700;flex-shrink:0">'+safeChar(r.name)+'</div>');
+    h.push('<span style="flex:1;font-size:12px;font-weight:'+(isMe?'700':'400')+';color:'+(isMe?r.color:'#e2e8f0')+';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(r.name)+'</span>');
     h.push('<span style="font-size:11px;color:#6b7280;margin-right:6px;flex-shrink:0">'+fmtDst(r.dist)+'</span>');
     h.push('<span style="font-size:13px;font-weight:700;color:#f97316;flex-shrink:0">+'+fmtPts(r.pts)+'</span>');
     h.push('<span style="font-size:10px;color:#4b5563;margin-left:4px;flex-shrink:0">'+fmtPts(r.score)+'</span>');
@@ -719,8 +755,8 @@ function mpShowFinalResults(room) {
 
   function avatar(r,sz) {
     sz=sz||32;
-    if(r.photo) return '<img src="'+r.photo+'" style="width:'+sz+'px;height:'+sz+'px;border-radius:50%;border:2px solid '+r.color+';object-fit:cover;flex-shrink:0">';
-    return '<div style="width:'+sz+'px;height:'+sz+'px;border-radius:50%;background:'+r.color+'33;border:2px solid '+r.color+';display:flex;align-items:center;justify-content:center;font-size:'+(sz*0.4)+'px;color:'+r.color+';font-weight:700;flex-shrink:0">'+r.name[0].toUpperCase()+'</div>';
+    if(r.photo) return '<img src="'+safePhotoUrl(r.photo)+'" style="width:'+sz+'px;height:'+sz+'px;border-radius:50%;border:2px solid '+r.color+';object-fit:cover;flex-shrink:0">';
+    return '<div style="width:'+sz+'px;height:'+sz+'px;border-radius:50%;background:'+r.color+'33;border:2px solid '+r.color+';display:flex;align-items:center;justify-content:center;font-size:'+(sz*0.4)+'px;color:'+r.color+';font-weight:700;flex-shrink:0">'+safeChar(r.name)+'</div>';
   }
 
   var h=[];
@@ -737,7 +773,7 @@ function mpShowFinalResults(room) {
     h.push('<div style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:'+(isMe?'#1a2238':'#0d1120')+';border-radius:9px;margin-bottom:4px;border:1px solid '+(isMe?r.color:'#1e2d45')+'">');
     h.push('<span style="font-size:18px;min-width:28px;text-align:center">'+medal+'</span>');
     h.push(avatar(r,28));
-    h.push('<span style="flex:1;font-size:13px;font-weight:'+(isMe?'700':'500')+';color:'+(isMe?r.color:'#e2e8f0')+';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+r.name+(isMe?' (moi)':'')+'</span>');
+    h.push('<span style="flex:1;font-size:13px;font-weight:'+(isMe?'700':'500')+';color:'+(isMe?r.color:'#e2e8f0')+';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(r.name)+(isMe?' (moi)':'')+'</span>');
     if(r.avgDist!=null) h.push('<span style="font-size:11px;color:#6b7280;flex-shrink:0;margin-right:6px">~'+fmtDst(r.avgDist)+'</span>');
     h.push('<span style="font-size:17px;font-weight:700;color:#f97316;flex-shrink:0">'+fmtPts(r.score)+' pts</span>');
     h.push('</div>');
@@ -749,7 +785,7 @@ function mpShowFinalResults(room) {
   h.push('<div style="font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Détail par manche</div>');
   h.push('<div style="display:flex;font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:.5px;padding-bottom:6px;border-bottom:1px solid #1e2d45;margin-bottom:4px">');
   h.push('<span style="flex:1">Lieu</span>');
-  results.forEach(function(r){h.push('<span style="min-width:60px;text-align:right;color:'+r.color+'">'+r.name.split(' ')[0]+'</span>');});
+  results.forEach(function(r){h.push('<span style="min-width:60px;text-align:right;color:'+r.color+'">'+esc(r.name.split(' ')[0])+'</span>');});
   h.push('</div>');
   for(var rIdx=0;rIdx<nbR;rIdx++) {
     var place=(typeof ROUNDS!=='undefined')?ROUNDS[seeds[rIdx]||0]:{name:'?'};
@@ -792,7 +828,7 @@ function mpShowFinalResults(room) {
       h.push('<span style="font-size:22px">'+a.emoji+'</span>');
       h.push('<div style="flex:1;min-width:0">');
       h.push('<div style="font-size:10px;color:#f97316;font-weight:700;text-transform:uppercase;letter-spacing:.5px">'+a.title+'</div>');
-      h.push('<div style="font-size:12px;color:#e2e8f0;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+a.player.name+'</div>');
+      h.push('<div style="font-size:12px;color:#e2e8f0;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(a.player.name)+'</div>');
       h.push('<div style="font-size:10px;color:#6b7280">'+a.desc+'</div>');
       h.push('</div>');
       h.push(avatar(a.player,22));
@@ -850,9 +886,9 @@ function mpRenderLivePanel(room) {
     var isMe=pid===mp.playerId, col=p.color||mpColorFor(pid);
     var ans=answers[pid], done=ans!==undefined;
     html.push('<div style="display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:1px solid #1e2d4555">');
-    if(p.photo) html.push('<img src="'+p.photo+'" style="width:22px;height:22px;border-radius:50%;border:2px solid '+col+';flex-shrink:0;object-fit:cover">');
-    else html.push('<div style="width:22px;height:22px;border-radius:50%;background:'+col+'33;border:2px solid '+col+';display:flex;align-items:center;justify-content:center;font-size:10px;color:'+col+';font-weight:700;flex-shrink:0">'+p.name[0].toUpperCase()+'</div>');
-    html.push('<span style="flex:1;font-size:12px;color:'+(isMe?col:'#e2e8f0')+';font-weight:'+(isMe?'700':'400')+';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+p.name+'</span>');
+    if(p.photo) html.push('<img src="'+safePhotoUrl(p.photo)+'" style="width:22px;height:22px;border-radius:50%;border:2px solid '+col+';flex-shrink:0;object-fit:cover">');
+    else html.push('<div style="width:22px;height:22px;border-radius:50%;background:'+col+'33;border:2px solid '+col+';display:flex;align-items:center;justify-content:center;font-size:10px;color:'+col+';font-weight:700;flex-shrink:0">'+safeChar(p.name)+'</div>');
+    html.push('<span style="flex:1;font-size:12px;color:'+(isMe?col:'#e2e8f0')+';font-weight:'+(isMe?'700':'400')+';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+esc(p.name)+'</span>');
     html.push(done
       ? '<span style="font-size:11px;color:#22c55e;font-weight:700;flex-shrink:0">+'+fmtPts(ans.pts||0)+'</span>'
       : '<span style="font-size:13px;color:#6b7280;flex-shrink:0;animation:pulse 1.2s infinite">?</span>');
@@ -882,9 +918,9 @@ function mpUpdateOtherMarkers(room) {
     var p=players[pid]; if(!p) return;
     var col=(p&&p.color)||mpColorFor(pid);
     var icon = L.divIcon({className:'',
-      html:'<div style="width:20px;height:20px;background:'+col+';border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 8px rgba(0,0,0,.4);position:relative"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(45deg);font-size:8px;color:#fff;font-weight:700">'+p.name[0].toUpperCase()+'</div></div>',
+      html:'<div style="width:20px;height:20px;background:'+col+';border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 8px rgba(0,0,0,.4);position:relative"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(45deg);font-size:8px;color:#fff;font-weight:700">'+safeChar(p.name)+'</div></div>',
       iconSize:[20,20],iconAnchor:[10,20]});
-    var popup='<div style="font-family:system-ui;font-size:12px"><b style="color:'+col+'">'+p.name+'</b><br>'+fmtDst(ans.dist)+'<br><b style="color:#f97316">+'+fmtPts(ans.pts)+'</b></div>';
+    var popup='<div style="font-family:system-ui;font-size:12px"><b style="color:'+col+'">'+esc(p.name)+'</b><br>'+fmtDst(ans.dist)+'<br><b style="color:#f97316">+'+fmtPts(ans.pts)+'</b></div>';
     if(mpOtherMarkers[pid]){ mpOtherMarkers[pid].setLatLng([ans.pos.lat,ans.pos.lng]).setPopupContent(popup); }
     else { mpOtherMarkers[pid]=L.marker([ans.pos.lat,ans.pos.lng],{icon}).bindPopup(popup).addTo(map); }
   });
