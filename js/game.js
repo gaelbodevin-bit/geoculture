@@ -808,10 +808,10 @@ function showDifficultyMenu(mode) {
   h.push('</button>');
 
   var lvls=[
-    {l:'Expert',    c:'#ef4444', i:0, d:'1 indice'},
-    {l:'Difficile', c:'#3b82f6', i:1, d:'2 indices'},
-    {l:'Moyen',     c:'#eab308', i:2, d:'3 indices'},
-    {l:'Facile',    c:'#22c55e', i:3, d:'4 indices'}
+    {l:'Expert',    c:'#ef4444', i:0, },
+    {l:'Difficile', c:'#3b82f6', i:1, },
+    {l:'Moyen',     c:'#eab308', i:2, },
+    {l:'Facile',    c:'#22c55e', i:3, }
   ];
   lvls.forEach(function(lv){
     h.push('<button data-lvl="'+lv.i+'" onclick="launchGame(parseInt(this.dataset.lvl))" style="padding:12px 18px;border-radius:10px;border:1.5px solid '+lv.c+';background:'+lv.c+'18;color:'+lv.c+';font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between">');
