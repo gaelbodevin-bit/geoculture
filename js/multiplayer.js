@@ -620,7 +620,7 @@ function mpHandleRoundEnd(room) {
   var h=[];
 
   // Photo Wikipedia (placeholder)
-  h.push('<div id="'+imgId+'" style="width:100%;max-width:500px;height:280px;background:#111827;border-radius:12px;overflow:hidden;position:relative;flex-shrink:0"></div>');
+  h.push('<div id="'+imgId+'" style="width:100%;max-width:500px;min-height:120px;background:#111827;border-radius:12px;overflow:hidden;position:relative;flex-shrink:0"></div>');
 
   // Label manche
   h.push('<div style="font-size:11px;color:#f97316;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-top:2px">Manche '+(rIdx+1)+'/'+nb+'</div>');
@@ -697,8 +697,9 @@ function mpHandleRoundEnd(room) {
         .then(function(r){return r.json();})
         .then(function(d){
           var el2=document.getElementById(id);if(!el2)return;
-          if(d.thumbnail&&d.thumbnail.source){
-            el2.innerHTML='<img src="'+d.thumbnail.source+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:12px" alt="">';
+          var wsrc=(d.originalimage&&d.originalimage.source)||(d.thumbnail&&d.thumbnail.source);
+          if(wsrc){
+            el2.style.height='auto'; el2.innerHTML='<img src="'+wsrc+'" style="width:100%;height:auto;max-height:55vh;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
           } else if(lang==='fr'){tryWiki('en');}
           else{el2.style.display='none';}
         }).catch(function(){var el2=document.getElementById(id);if(el2)el2.style.display='none';});
@@ -707,7 +708,7 @@ function mpHandleRoundEnd(room) {
       var img=new Image();
       img.onload=function(){
         var el2=document.getElementById(id);if(!el2)return;
-        el2.innerHTML='<img src="'+round.photo+'" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:12px" alt="">';
+        el2.style.height='auto'; el2.innerHTML='<img src="'+round.photo+'" style="width:100%;height:auto;max-height:55vh;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
       };
       img.onerror=function(){
         var el2=document.getElementById(id);if(el2)el2.style.display='none';
