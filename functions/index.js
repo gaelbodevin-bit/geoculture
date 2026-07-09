@@ -1,26 +1,27 @@
-const functions = require('firebase-functions');
+const { onRequest, onCall, HttpsError } = require('firebase-functions/v2/https');
+const { setGlobalOptions } = require('firebase-functions/v2');
 const admin = require('firebase-admin');
 const stripe = require('stripe');
 
 admin.initializeApp();
 const db = admin.firestore();
 
-const ALLOWED_ORIGIN = 'https://gaelbodevin-bit.github.io';
+// Limite le nombre d'instances simultanées : borne le coût maximal en cas de spam/DoS
+setGlobalOptions({ region: 'us-central1', maxInstances: 10 });
 
-function setCORS(res, req) {
-  const origin = req.headers.origin || '';
-  if (origin.startsWith('https://gaelbodevin-bit.github.io')) {
-    res.set('Access-Control-Allow-Origin', origin);
-  } else {
-    res.set('Access-Control-Allow-Origin', ALLOWED_ORIGIN);
-  }
+// CORS : égalité STRICTE (startsWith accepterait gaelbodevin-bit.github.io.evil.com)
+const ALLOWED_ORIGIN = 'https://gaelbodevin-bit.github.io';
+const MAX_AMOUNT_EUR = 500; // plafond anti-fraude (carding, erreurs de saisie, litiges)
+
+function setCORS(res) {
+  res.set('Access-Control-Allow-Origin', ALLOWED_ORIGIN);
   res.set('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   res.set('Access-Control-Max-Age', '3600');
 }
 
-// Webhook Stripe
-exports.stripeWebhook = functions.https.onRequest(async (req, res) => {
+// ── Webhook Stripe ──────────────────────────────────────────────────────────
+exports.stripeWebhook = onRequest(async (req, res) => {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
   const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
@@ -61,9 +62,9 @@ exports.stripeWebhook = functions.https.onRequest(async (req, res) => {
   res.status(200).json({ received: true });
 });
 
-// Créer session Checkout via fetch + Bearer token
-exports.createCheckoutSession = functions.https.onRequest(async (req, res) => {
-  setCORS(res, req);
+// ── Créer session Checkout via fetch + Bearer token ─────────────────────────
+exports.createCheckoutSession = onRequest(async (req, res) => {
+  setCORS(res);
   if (req.method === 'OPTIONS') return res.status(204).send('');
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
@@ -81,13 +82,16 @@ exports.createCheckoutSession = functions.https.onRequest(async (req, res) => {
     return res.status(401).json({ error: 'Token invalide' });
   }
 
-  let amount;
-  try {
-    const data = req.body.data || req.body;
-    amount = Math.max(100, Math.round(Number(data.amount) * 100));
-  } catch (err) {
-    return res.status(400).json({ error: 'Montant invalide' });
+  // Validation stricte du montant : nombre fini, min 1€, max 500€
+  const data = req.body.data || req.body || {};
+  const eur = Number(data.amount);
+  if (!isFinite(eur) || eur < 1) {
+    return res.status(400).json({ error: 'Montant invalide (minimum 1€)' });
   }
+  if (eur > MAX_AMOUNT_EUR) {
+    return res.status(400).json({ error: 'Montant maximum : ' + MAX_AMOUNT_EUR + '€' });
+  }
+  const amount = Math.round(eur * 100);
 
   const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
   try {
@@ -115,24 +119,24 @@ exports.createCheckoutSession = functions.https.onRequest(async (req, res) => {
   }
 });
 
-// Vérifier statut premium
-exports.checkPremium = functions.https.onCall(async (data, context) => {
-  if (!context.auth) return { premium: false };
-  const doc = await db.collection('users').doc(context.auth.uid).get();
-  return { premium: doc.exists && doc.data().premium === true };
+// ── Vérifier statut premium ─────────────────────────────────────────────────
+exports.checkPremium = onCall(async (request) => {
+  if (!request.auth) return { premium: false };
+  const snap = await db.collection('users').doc(request.auth.uid).get();
+  return { premium: snap.exists && snap.data().premium === true };
 });
 
-// Activer un code de test (Premium) — 100% côté serveur
-// Sécurité : identité prise depuis context.auth, format validé,
+// ── Activer un code de test (Premium) — 100% côté serveur ───────────────────
+// Sécurité : identité prise depuis request.auth, format validé,
 // transaction atomique = un code ne peut jamais servir deux fois.
-exports.redeemCode = functions.https.onCall(async (data, context) => {
-  if (!context.auth) {
-    throw new functions.https.HttpsError('unauthenticated', 'Connexion requise.');
+exports.redeemCode = onCall(async (request) => {
+  if (!request.auth) {
+    throw new HttpsError('unauthenticated', 'Connexion requise.');
   }
-  const uid = context.auth.uid;
-  const code = String((data && data.code) || '').trim().toUpperCase();
+  const uid = request.auth.uid;
+  const code = String((request.data && request.data.code) || '').trim().toUpperCase();
   if (!/^[A-Z0-9-]{4,24}$/.test(code)) {
-    throw new functions.https.HttpsError('invalid-argument', 'Code invalide.');
+    throw new HttpsError('invalid-argument', 'Code invalide.');
   }
 
   const codeRef = db.collection('testCodes').doc(code);
@@ -141,10 +145,10 @@ exports.redeemCode = functions.https.onCall(async (data, context) => {
   await db.runTransaction(async (tx) => {
     const snap = await tx.get(codeRef);
     if (!snap.exists) {
-      throw new functions.https.HttpsError('not-found', 'Code introuvable.');
+      throw new HttpsError('not-found', 'Code introuvable.');
     }
     if (snap.data().used === true) {
-      throw new functions.https.HttpsError('failed-precondition', 'Code déjà utilisé.');
+      throw new HttpsError('failed-precondition', 'Code déjà utilisé.');
     }
     tx.update(codeRef, {
       used: true,
@@ -162,10 +166,10 @@ exports.redeemCode = functions.https.onCall(async (data, context) => {
   return { ok: true };
 });
 
-// Supprimer compte (RGPD)
-exports.deleteAccount = functions.https.onCall(async (data, context) => {
-  if (!context.auth) throw new functions.https.HttpsError('unauthenticated', 'Connexion requise');
-  const uid = context.auth.uid;
+// ── Supprimer compte (RGPD) ─────────────────────────────────────────────────
+exports.deleteAccount = onCall(async (request) => {
+  if (!request.auth) throw new HttpsError('unauthenticated', 'Connexion requise');
+  const uid = request.auth.uid;
   try {
     await db.collection('users').doc(uid).delete();
     const games = await db.collection('games').where('uid', '==', uid).get();
@@ -175,6 +179,6 @@ exports.deleteAccount = functions.https.onCall(async (data, context) => {
     await admin.auth().deleteUser(uid);
     return { success: true };
   } catch (err) {
-    throw new functions.https.HttpsError('internal', err.message);
+    throw new HttpsError('internal', err.message);
   }
 });
