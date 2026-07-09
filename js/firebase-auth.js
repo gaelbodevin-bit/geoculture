@@ -25,6 +25,9 @@ var fbProvider = new GoogleAuthProvider();
 // Utilisateur courant
 var currentUser = null;
 
+// ?? Sécurité : échappement anti-XSS pour toute donnée affichée via innerHTML ??
+function escH(v){ return String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
 // \u2500\u2500 Auth state \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 onAuthStateChanged(fbAuth, function(user) {
   currentUser = user;
@@ -174,7 +177,7 @@ function showHistory() {
     h.push('<div class="otitle" style="font-size:28px">Mes parties</div>');
     h.push('<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">');
     h.push('<img src="'+(currentUser.photoURL||'')+'" style="width:32px;height:32px;border-radius:50%;object-fit:cover">');
-    h.push('<span style="color:#e2e8f0;font-size:14px;font-weight:600">'+(currentUser.displayName||'')+'</span>');
+    h.push('<span style="color:#e2e8f0;font-size:14px;font-weight:600">'+escH(currentUser.displayName||'')+'</span>');
     h.push('</div>');
 
     // S\u00e9parer Normal et No-Zoom
@@ -380,7 +383,7 @@ function showLeaderboard() {
         h.push('<span style="font-size:16px;min-width:28px;text-align:center">' + medal + '</span>');
         if (g.photoURL) h.push('<img src="' + g.photoURL + '" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0">');
         else h.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;flex-shrink:0"></div>');
-        h.push('<span style="flex:1;font-size:13px;color:' + (isMe ? '#f97316' : '#e2e8f0') + ';font-weight:' + (isMe ? '700' : '400') + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + (g.displayName || 'Joueur') + '</span>');
+        h.push('<span style="flex:1;font-size:13px;color:' + (isMe ? '#f97316' : '#e2e8f0') + ';font-weight:' + (isMe ? '700' : '400') + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + escH(g.displayName || 'Joueur') + '</span>');
         h.push('<div style="text-align:right"><div style="font-size:15px;font-weight:700;color:' + barColor + '">' + (g.total || 0).toLocaleString('fr-FR') + ' pts</div>');
         h.push('<div style="font-size:11px;color:#6b7280">' + (g.pct || 0) + '%</div></div></div>');
       });
@@ -462,7 +465,7 @@ function showDailyLB() {
         h.push('<span style="font-size:16px;min-width:28px;text-align:center">' + medal + '</span>');
         if (g.photoURL) h.push('<img src="' + g.photoURL + '" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0">');
         else h.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;flex-shrink:0"></div>');
-        h.push('<span style="flex:1;font-size:13px;color:' + (me ? '#f97316' : '#e2e8f0') + ';font-weight:' + (me ? '700' : '400') + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + (g.displayName || 'Joueur') + '</span>');
+        h.push('<span style="flex:1;font-size:13px;color:' + (me ? '#f97316' : '#e2e8f0') + ';font-weight:' + (me ? '700' : '400') + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + escH(g.displayName || 'Joueur') + '</span>');
         h.push('<div style="text-align:right"><div style="font-size:15px;font-weight:700;color:' + bc + '">' + (g.total || 0).toLocaleString('fr-FR') + ' pts</div><div style="font-size:11px;color:#6b7280">' + (g.pct || 0) + '%</div></div></div>');
       });
       h.push('</div>');
