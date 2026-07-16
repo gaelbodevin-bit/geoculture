@@ -3100,5 +3100,401 @@ const ROUNDS=[
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Désert froid aux fossiles de dinosaures, Asie"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand désert d'Asie centrale, Mongolie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le désert de Gobi en Mongolie"}
+  ]},
+  {name:"Général Sherman — Séquoia, Californie, USA", lat:36.5816, lng:-118.7514,
+   desc:"Le Général Sherman est l'arbre le plus volumineux du monde : 1 487 m³ de bois, 83 m de haut, 11 m de diamètre à la base. Âgé d'environ 2 200 ans, ce séquoia géant gagne encore chaque année l'équivalent du volume d'un arbre de 18 m.",
+   photo:"photos/general_sherman.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Séquoia géant de 1 487 m³ nommé d'après un général de la guerre de Sécession, Giant Forest (2 100 m d'altitude)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Arbre le plus volumineux du monde, parc national de la Sierra Nevada, Californie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Séquoia géant le plus gros du monde, parc national américain"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'arbre Général Sherman, Sequoia National Park, USA"}
+  ]},
+  {name:"Haiku Stairs — Oahu, Hawaï, USA", lat:21.4106, lng:-157.8214,
+   desc:"Les Haiku Stairs, surnommées « l'escalier du paradis », comptent 3 922 marches gravissant une crête vertigineuse des monts Ko'olau. Construites en 1942 pour accéder à une antenne radio de l'US Navy, elles sont officiellement fermées depuis 1987 — ce qui n'a jamais arrêté les randonneurs.",
+   photo:"photos/haiku_stairs.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"3 922 marches de 1942 sur la crête des Ko'olau, accès à une station radio navale, fermées depuis 1987"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"« Stairway to Heaven » interdit d'accès, île d'Oahu"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Escalier vertigineux de près de 4 000 marches, archipel américain du Pacifique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Haiku Stairs (escalier du paradis), Hawaï"}
+  ]},
+  {name:"Glass Beach — Fort Bragg, Californie, USA", lat:39.4527, lng:-123.8135,
+   desc:"Glass Beach est née d'une décharge côtière utilisée jusqu'en 1967 : des décennies de vagues ont poli les déchets de verre en millions de galets translucides multicolores. L'endroit est devenu si célèbre que les visiteurs repartent avec le verre... et la plage s'appauvrit.",
+   photo:"photos/glass_beach.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancienne décharge municipale (fermée en 1967) dont le verre poli tapisse trois criques du comté de Mendocino"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plage de galets de verre issus d'une décharge, côte nord de la Californie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plage couverte de verre poli par l'océan, côte ouest américaine"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Glass Beach, Fort Bragg, Californie"}
+  ]},
+  {name:"Chaussée des Géants — Irlande du Nord", lat:55.2408, lng:-6.5116,
+   desc:"La Chaussée des Géants aligne environ 40 000 colonnes de basalte hexagonales nées d'une éruption il y a 60 millions d'années. La légende raconte que le géant Finn McCool la construisit pour traverser la mer et affronter son rival écossais.",
+   photo:"photos/chaussee_geants.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"40 000 orgues basaltiques du comté d'Antrim, éruption paléogène, légende de Finn McCool"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colonnes hexagonales classées UNESCO, côte nord de l'Ulster"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Formation volcanique de colonnes hexagonales, île britannique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Chaussée des Géants, Irlande du Nord"}
+  ]},
+  {name:"Trolltunga — Norvège", lat:60.1242, lng:6.74,
+   desc:"Trolltunga, « la langue du troll », est un éperon rocheux suspendu à 700 m au-dessus du lac Ringedalsvatnet. L'atteindre exige 28 km de randonnée aller-retour — et souvent plus d'une heure de queue pour LA photo au bout du rocher.",
+   photo:"photos/trolltunga.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Éperon de gneiss à 1 180 m surplombant le Ringedalsvatnet de 700 m, près d'Odda, Hordaland"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"« Langue de troll » au-dessus d'un lac de barrage, fjords norvégiens"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rocher en saillie célèbre pour ses photos vertigineuses, Scandinavie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Trolltunga, Norvège"}
+  ]},
+  {name:"Horseshoe Bend — Arizona, USA", lat:36.8791, lng:-111.5104,
+   desc:"À Horseshoe Bend, le fleuve Colorado dessine un fer à cheval presque parfait au fond d'une gorge de 300 m creusée dans le grès Navajo. Le point de vue, à quelques kilomètres du lac Powell, attire 2 millions de visiteurs par an.",
+   photo:"photos/horseshoe_bend.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Méandre encaissé du Colorado dans le grès Navajo, 8 km en aval du barrage de Glen Canyon, près de Page"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fer à cheval du fleuve Colorado vu d'une falaise de 300 m, près du lac Powell"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Méandre en fer à cheval le plus photographié des USA, Sud-Ouest américain"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Horseshoe Bend, Arizona"}
+  ]},
+  {name:"Grottes de glace de Mendenhall — Alaska, USA", lat:58.4377, lng:-134.5485,
+   desc:"Sous le glacier Mendenhall, la fonte sculpte des grottes d'un bleu irréel où l'eau ruisselle sous des voûtes translucides. Éphémères par nature, elles s'effondrent et se reforment au gré du recul du glacier — 800 m perdus depuis 2000.",
+   photo:"photos/mendenhall.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cavités sous-glaciaires d'un glacier de 22 km issu du champ de glace Juneau, en recul rapide"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grottes bleues sous un glacier proche de la capitale de l'État, Alaska"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grottes de glace bleue sous un glacier américain"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les grottes du glacier Mendenhall, Juneau, Alaska"}
+  ]},
+  {name:"Zhangye Danxia — Gansu, Chine", lat:38.94, lng:100.12,
+   desc:"Les « montagnes arc-en-ciel » de Zhangye déploient des strates ocre, rouges et jaunes plissées par la tectonique : 24 millions d'années de dépôts sédimentaires redressés comme un mille-feuille renversé, à la lisière du désert de Gobi.",
+   photo:"photos/zhangye_danxia.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Relief danxia de grès crétacés plissés, corridor du Hexi, ancienne route de la Soie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"« Montagnes arc-en-ciel » striées, province du Gansu"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Montagnes multicolores célèbres de Chine"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Zhangye Danxia, les montagnes arc-en-ciel, Chine"}
+  ]},
+  {name:"Tunnel de l'Amour — Klevan, Ukraine", lat:50.7497, lng:26.0511,
+   desc:"Le Tunnel de l'Amour est une voie ferrée industrielle avalée par la végétation : sur 4 km, les arbres taillés par le passage des trains forment une voûte verte parfaite. La légende locale promet aux couples qui le traversent que leur vœu se réalisera.",
+   photo:"photos/tunnel_amour.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Voie ferrée desservant une usine de Orjiv, voûte végétale taillée par les convois, oblast de Rivne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tunnel végétal sur une voie ferrée, ouest de l'Ukraine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Voie ferrée sous une arche d'arbres, Europe de l'Est"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tunnel de l'Amour, Klevan, Ukraine"}
+  ]},
+  {name:"Jacob's Well — Texas, USA", lat:30.0343, lng:-98.1261,
+   desc:"Jacob's Well est la bouche d'une source artésienne qui plonge à 40 m dans un réseau noyé de 1 800 m de galeries calcaires. Trou de baignade adoré des Texans en surface, c'est aussi l'un des sites de plongée souterraine les plus dangereux des États-Unis.",
+   photo:"photos/jacobs_well.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Source karstique de l'aquifère Trinity près de Wimberley, réseau noyé cartographié sur 1 800 m"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Puits naturel de plongée réputé mortel, Hill Country texan"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Source-gouffre limpide et profonde, sud des USA"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Jacob's Well, Texas"}
+  ]},
+  {name:"Château de Dunnottar — Écosse", lat:56.9459, lng:-2.1972,
+   desc:"Perché sur un promontoire cerné de falaises, Dunnottar garda un temps les joyaux de la couronne d'Écosse, cachés là pour échapper à Cromwell en 1652. William Wallace y brûla une garnison anglaise en 1297.",
+   photo:"photos/dunnottar.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Forteresse sur promontoire près de Stonehaven, cachette des Honours of Scotland assiégée par Cromwell"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Château en ruine sur falaise, côte est de l'Écosse"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse écossaise spectaculaire sur un rocher marin"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le château de Dunnottar, Écosse"}
+  ]},
+  {name:"Cénote Ik Kil — Yucatán, Mexique", lat:20.6633, lng:-88.5939,
+   desc:"Le cénote Ik Kil est un puits sacré maya de 60 m de diamètre dont la surface s'ouvre 26 m sous le sol, drapé de lianes qui plongent vers l'eau. Les Mayas y pratiquaient des offrandes au dieu de la pluie Chaac.",
+   photo:"photos/ik_kil.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cénote à ciel ouvert de 26 m de profondeur d'accès, à 3 km d'une grande cité maya, lianes suspendues"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Puits naturel sacré maya, péninsule du Yucatán"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cénote circulaire célèbre du Mexique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le cénote Ik Kil, Yucatán, Mexique"}
+  ]},
+  {name:"Anse Source d'Argent — La Digue, Seychelles", lat:-4.3713, lng:55.828,
+   desc:"L'Anse Source d'Argent, ourlée de blocs de granit rose sculptés par l'érosion, est réputée être la plage la plus photographiée du monde. On y accède en traversant l'ancienne plantation de L'Union à vélo ou en char à bœufs.",
+   photo:"photos/source_argent.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plage aux blocs granitiques roses de l'île de La Digue, accès par le domaine de L'Union"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plage de granit rose la plus photographiée du monde, océan Indien"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plage paradisiaque aux rochers de granit, archipel africain"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Anse Source d'Argent, Seychelles"}
+  ]},
+  {name:"Fort de Chittorgarh — Rajasthan, Inde", lat:24.8879, lng:74.645,
+   desc:"Chittorgarh, plus grand fort de l'Inde avec ses 13 km de remparts, fut le théâtre de trois jauhar : plutôt que de se rendre, des milliers de femmes rajpoutes s'immolèrent quand la chute devenait inévitable, en 1303, 1535 et 1568.",
+   photo:"photos/chittorgarh.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande forteresse rajpoute (280 ha), trois sièges et jauhar, tour de la Victoire de Rana Kumbha"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fort gigantesque du pays Mewar, Rajasthan"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand fort de l'Inde, classé UNESCO"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le fort de Chittorgarh, Inde"}
+  ]},
+  {name:"Parc Hitachi Seaside — Japon", lat:36.4014, lng:140.5911,
+   desc:"Au printemps, 4,5 millions de némophiles bleues recouvrent la colline Miharashi du parc Hitachi, fondant le paysage dans le ciel. À l'automne, les mêmes pentes virent au rouge écarlate avec les kochias.",
+   photo:"photos/hitachi.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Colline Miharashi aux 4,5 millions de némophiles, kochias rouges en octobre, préfecture d'Ibaraki"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc aux collines bleues de fleurs, côte Pacifique au nord-est de Tokyo"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc floral japonais aux collines bleues"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le parc Hitachi Seaside, Japon"}
+  ]},
+  {name:"Route de l'Atlantique — Norvège", lat:63.0157, lng:7.355,
+   desc:"L'Atlanterhavsveien saute d'îlot en îlot sur 8,3 km, culminant au pont de Storseisundet dont la courbe semble plonger dans la mer. Par tempête, les vagues balaient littéralement la chaussée — ce qui en fait paradoxalement sa haute saison photo.",
+   photo:"photos/atlanterhavsveien.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"8,3 km entre Eide et Averøy, pont courbe de Storseisundet (260 m), construction sous 12 ouragans"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Route côtière spectaculaire sautant d'île en île, Norvège"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Route-pont célèbre au-dessus de la mer, Scandinavie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Route de l'Atlantique, Norvège"}
+  ]},
+  {name:"Chutes Athabasca — Alberta, Canada", lat:52.6644, lng:-117.8843,
+   desc:"Les chutes Athabasca ne tombent que de 23 m, mais leur débit issu des glaciers du parc Jasper a scié une gorge de quartzite aux marmites parfaitement polies. L'eau turquoise doit sa couleur à la « farine glaciaire » en suspension.",
+   photo:"photos/athabasca.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cataracte de la rivière Athabasca dans le quartzite Gog, parc de Jasper, eau chargée de farine glaciaire"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Chutes puissantes des Rocheuses canadiennes, Alberta"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chutes d'un grand parc national canadien"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les chutes Athabasca, Canada"}
+  ]},
+  {name:"Grotte de Fingal — Staffa, Écosse", lat:56.4319, lng:-6.341,
+   desc:"La grotte de Fingal s'enfonce de 70 m dans l'île inhabitée de Staffa, entre des colonnes de basalte jumelles de la Chaussée des Géants. La résonance des vagues y est si musicale qu'elle inspira une ouverture à Mendelssohn en 1829.",
+   photo:"photos/fingal.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cavité basaltique de 70 m sur l'île de Staffa (Hébrides), ouverture « Les Hébrides » de Mendelssohn"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grotte marine aux colonnes de basalte, îles écossaises"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grotte marine musicale célèbre, Écosse"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La grotte de Fingal, Écosse"}
+  ]},
+  {name:"Les Douze Apôtres — Great Ocean Road, Australie", lat:-38.6633, lng:143.1051,
+   desc:"Les Douze Apôtres sont des aiguilles de calcaire de 45 m détachées des falaises par l'océan Austral. Ils n'ont jamais été douze — huit subsistent, et l'érosion en fait tomber un par décennie tout en en sculptant de nouveaux.",
+   photo:"photos/douze_apotres.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stacks calcaires du parc national de Port Campbell, Victoria, érosion de 2 cm par an"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Aiguilles rocheuses le long d'une route côtière mythique, sud de l'Australie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Formations rocheuses marines emblématiques d'Australie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Douze Apôtres, Great Ocean Road, Australie"}
+  ]},
+  {name:"Cascade de Shifen — Taïwan", lat:25.0475, lng:121.7845,
+   desc:"Surnommée « le petit Niagara de Taïwan », la cascade de Shifen déploie un rideau de 40 m de large dans la vallée de Pingxi. Le village voisin est célèbre pour ses lanternes de papier lâchées depuis la voie ferrée qui traverse la rue principale.",
+   photo:"photos/shifen.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cascade en fer à cheval de la rivière Keelung, district de Pingxi, lanternes célestes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"« Petit Niagara » près de Taipei, île d'Asie de l'Est"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus large cascade de Taïwan"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La cascade de Shifen, Taïwan"}
+  ]},
+  {name:"Cathedral Cove — Nouvelle-Zélande", lat:-36.8277, lng:175.7904,
+   desc:"Cathedral Cove doit son nom à l'arche calcaire monumentale qui relie ses deux plages comme une nef. Accessible uniquement à pied ou en kayak, la crique a servi de décor au Monde de Narnia : Prince Caspian.",
+   photo:"photos/cathedral_cove.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Arche calcaire de Te Whanganui-A-Hei, péninsule de Coromandel, décor de Narnia"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Crique à l'arche monumentale, Île du Nord néo-zélandaise"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plage à l'arche naturelle célèbre, Nouvelle-Zélande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Cathedral Cove, Nouvelle-Zélande"}
+  ]},
+  {name:"Cathédrale de Marbre — Lac General Carrera, Chili", lat:-46.642, lng:-72.628,
+   desc:"Les Capillas de Mármol sont des grottes de marbre pur léchées par les eaux turquoise du deuxième plus grand lac d'Amérique du Sud. 6 000 ans de vagues ont poli des voûtes veinées de bleu accessibles seulement en bateau ou en kayak.",
+   photo:"photos/capillas_marmol.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grottes de marbre du lac General Carrera/Buenos Aires, Patagonie d'Aysén, accès en barque"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"« Chapelles de marbre » turquoise, Patagonie chilienne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grottes de marbre sur un lac andin"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cathédrale de Marbre, Chili"}
+  ]},
+  {name:"Baie de la Gaiola — Naples, Italie", lat:40.7906, lng:14.1855,
+   desc:"Les deux îlots de la Gaiola, reliés par un pont étroit, passent pour maudits : la liste de leurs propriétaires ruinés, assassinés ou noyés a nourri la légende. La baie protège pourtant un parc sous-marin où gisent des vestiges romains engloutis.",
+   photo:"photos/gaiola.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Îlots « maudits » du Pausilippe, parc sous-marin aux vestiges romains immergés, golfe de Naples"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île maudite reliée par un petit pont, côte napolitaine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Îlots légendaires au large d'une grande ville italienne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'île de la Gaiola, Naples, Italie"}
+  ]},
+  {name:"Bambouseraie d'Arashiyama — Kyoto, Japon", lat:35.017, lng:135.671,
+   desc:"Dans la bambouseraie d'Arashiyama, des tiges de 20 m filtrent une lumière verte et produisent, sous le vent, un craquement feutré classé parmi les « 100 paysages sonores du Japon » à préserver.",
+   photo:"photos/arashiyama.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chemin de Sagano entre les bambous géants mōsō, paysage sonore officiel, ouest de l'ancienne capitale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Forêt de bambous géants près d'un temple UNESCO, Kyoto"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Célèbre allée de bambous du Japon"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bambouseraie d'Arashiyama, Kyoto"}
+  ]},
+  {name:"Hang Son Doong — Vietnam", lat:17.4547, lng:106.287,
+   desc:"Son Doong est la plus grande galerie souterraine du monde : jusqu'à 200 m de haut pour 150 m de large, avec sa propre jungle, sa rivière et ses nuages. Découverte en 1990 par un paysan, elle n'a été explorée qu'en 2009.",
+   photo:"photos/son_doong.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand passage de grotte connu, parc de Phong Nha-Kẻ Bàng, dolines effondrées à jungle interne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grotte géante à la jungle souterraine, centre du Vietnam"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande grotte du monde"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Hang Son Doong, Vietnam"}
+  ]},
+  {name:"Aogashima — Japon", lat:32.4573, lng:139.7679,
+   desc:"Aogashima est un volcan habité en pleine mer des Philippines : un cratère dans le cratère, où vivent 160 habitants. L'île n'est accessible que par un hélicoptère quotidien ou un bateau qui ne peut accoster qu'une fois sur deux.",
+   photo:"photos/aogashima.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Caldeira double de l'arc d'Izu à 358 km de Tokyo, 160 habitants, dernière éruption en 1785"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île-volcan habitée au cratère emboîté, archipel japonais isolé"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île volcanique spectaculaire du Japon"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'île d'Aogashima, Japon"}
+  ]},
+  {name:"Whitehaven Beach — Whitsundays, Australie", lat:-20.2827, lng:149.039,
+   desc:"Whitehaven étire 7 km d'un sable à 98 % de silice, si pur qu'il ne chauffe jamais et crisse sous les pas. À l'extrémité nord, la marée mêle sable et turquoise en volutes mouvantes à Hill Inlet.",
+   photo:"photos/whitehaven.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"7 km de sable siliceux à 98 % dans les Whitsundays, volutes de Hill Inlet, Queensland"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plage au sable le plus pur du monde, îles au cœur de la Grande Barrière"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plage blanche emblématique d'Australie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Whitehaven Beach, Australie"}
+  ]},
+  {name:"Positano — Côte amalfitaine, Italie", lat:40.6281, lng:14.485,
+   desc:"Positano cascade en maisons pastel accrochées à la falaise de la côte amalfitaine. Village de pêcheurs ruiné au XIXe siècle — la moitié de la population émigra en Amérique — il fut ressuscité par les artistes et Steinbeck dans les années 1950.",
+   photo:"photos/positano.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Village vertical de la côte sorrentine, essai de Steinbeck (1953), plage de Marina Grande"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Village pastel à flanc de falaise, côte amalfitaine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Village côtier italien en escalier, très photographié"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Positano, Italie"}
+  ]},
+  {name:"To Sua Ocean Trench — Samoa", lat:-14.0446, lng:-171.7053,
+   desc:"To Sua, « le trou géant », est une piscine naturelle de 30 m de profondeur reliée à l'océan par un tunnel de lave. On y descend par une longue échelle de bois plantée au milieu des jardins du village de Lotofaga.",
+   photo:"photos/to_sua.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Doline volcanique reliée au Pacifique par un tunnel de lave, village de Lotofaga, île d'Upolu"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Piscine naturelle émeraude accessible par échelle, Polynésie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Trou de baignade océanique célèbre des îles du Pacifique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"To Sua Ocean Trench, Samoa"}
+  ]},
+  {name:"Hvítserkur — Islande", lat:65.606, lng:-20.638,
+   desc:"Hvítserkur est un dyke basaltique de 15 m planté dans la mer, évoquant un dragon — ou un troll pétrifié par le soleil selon la légende — qui s'abreuve. Ses « pattes » ont été bétonnées pour retarder l'inévitable victoire des vagues.",
+   photo:"photos/hvitserkur.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dyke basaltique zoomorphe de la péninsule de Vatnsnes, colonie de fulmars, base renforcée au béton"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rocher-dragon buvant la mer, nord-ouest de l'Islande"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rocher marin islandais en forme d'animal"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Hvítserkur, Islande"}
+  ]},
+  {name:"Mont Huashan — Shaanxi, Chine", lat:34.4784, lng:110.0847,
+   desc:"Le Huashan, l'une des cinq montagnes sacrées taoïstes, est célèbre pour sa « planche dans le ciel » : quelques madriers boulonnés à une paroi verticale à 2 100 m, qu'on longe harnaché face au vide.",
+   photo:"photos/huashan.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Montagne sacrée taoïste aux cinq pics, passerelle Chang Kong Zhan Dao boulonnée à la falaise sud"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sentier de planches le plus dangereux du monde, montagne sacrée chinoise"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Montagne au sentier vertigineux, Chine"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le mont Huashan, Chine"}
+  ]},
+  {name:"Blue Lagoon — Islande", lat:63.8804, lng:-22.4495,
+   desc:"Le Lagon bleu est né par accident en 1976 : l'eau géothermale rejetée par la centrale voisine de Svartsengi forma un lac laiteux dans la lave. Riche en silice, à 38 °C toute l'année, il est devenu le site le plus visité d'Islande.",
+   photo:"photos/blue_lagoon.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lagon artificiel issu de la centrale de Svartsengi (1976), eau siliceuse à 38 °C, péninsule de Reykjanes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bain géothermal laiteux dans un champ de lave, Islande"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Célèbre lagon bleu laiteux, île nordique"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Blue Lagoon, Islande"}
+  ]},
+  {name:"Rochers de Moeraki — Nouvelle-Zélande", lat:-45.345, lng:170.826,
+   desc:"Les rochers de Moeraki sont des sphères de calcite quasi parfaites, jusqu'à 2 m de diamètre, éparpillées sur la plage de Koekohe. Ces concrétions de 60 millions d'années sortent une à une de la falaise argileuse qui les libère en s'érodant.",
+   photo:"photos/moeraki.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Concrétions septariennes paléocènes de la plage de Koekohe, Otago, pirogue légendaire d'Āraiteuru"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Boules de pierre géantes sur une plage, Île du Sud"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sphères rocheuses mystérieuses, Nouvelle-Zélande"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les rochers de Moeraki, Nouvelle-Zélande"}
+  ]},
+  {name:"The Wave — Arizona, USA", lat:36.9959, lng:-112.0061,
+   desc:"The Wave est une vague de grès figée depuis le Jurassique : des dunes de 190 millions d'années pétrifiées en ondulations orange. L'accès est limité à 64 personnes par jour, tirées au sort — moins de 5 % des demandes.",
+   photo:"photos/the_wave.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grès Navajo laminé de Coyote Buttes North, Paria Canyon, permis par loterie (64/jour)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vague de grès orange à l'accès ultra-restreint, frontière Arizona-Utah"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Formation de grès ondulé célèbre, désert américain"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"The Wave, Arizona"}
+  ]},
+  {name:"Wave Rock — Australie-Occidentale", lat:-32.444, lng:118.897,
+   desc:"Wave Rock est une vague de granit de 15 m de haut et 110 m de long, prête à déferler sur le bush depuis 2,7 milliards d'années. Ses rayures verticales sont dues aux algues qui colorent le ruissellement selon les saisons.",
+   photo:"photos/wave_rock.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Flanc évidé d'un inselberg granitique archéen (Hyden Rock), wheatbelt à 300 km de Perth"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vague de granit rayée dans le bush, ouest australien"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rocher en forme de vague géante, Australie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Wave Rock, Australie"}
+  ]},
+  {name:"Maya Bay — Îles Phi Phi, Thaïlande", lat:7.6767, lng:98.7658,
+   desc:"Maya Bay, cirque de falaises calcaires refermé sur une plage parfaite, fut rendue mondialement célèbre par le film La Plage (2000). Victime de son succès — 5 000 visiteurs par jour —, elle a fermé 3 ans pour laisser coraux et requins revenir.",
+   photo:"photos/maya_bay.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Baie de Ko Phi Phi Leh, tournage de « The Beach », fermée 2018-2022 pour régénération corallienne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plage du film culte de DiCaprio, mer d'Andaman"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Baie paradisiaque de Thaïlande rendue célèbre au cinéma"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Maya Bay, îles Phi Phi, Thaïlande"}
+  ]},
+  {name:"Monastères des Météores — Grèce", lat:39.7217, lng:21.6306,
+   desc:"Aux Météores, des monastères du XIVe siècle coiffent des pitons de grès de 300 m. Les moines et le ravitaillement montaient jadis dans des filets hissés à la corde — remplacée, disait-on, « seulement quand elle cassait ».",
+   photo:"photos/meteores.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Six monastères actifs sur pitons de conglomérat, Thessalie, hissage historique au filet"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Monastères perchés sur des colonnes rocheuses, Grèce continentale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monastères au sommet de pitons vertigineux, Grèce"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Météores, Grèce"}
+  ]},
+  {name:"Grotte de Benagil — Algarve, Portugal", lat:37.0868, lng:-8.4258,
+   desc:"La grotte de Benagil est une cathédrale marine dont la voûte s'ouvre sur le ciel par un oculus parfait, éclairant une plage intérieure inaccessible à pied. On y pénètre à la nage, en kayak ou en bateau depuis la plage voisine.",
+   photo:"photos/benagil.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Algar de Benagil, dôme marin à oculus zénithal creusé dans le calcaire de l'Algarve"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grotte marine au puits de lumière, côte sud du Portugal"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grotte-dôme célèbre avec plage intérieure, Portugal"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La grotte de Benagil, Portugal"}
+  ]},
+  {name:"Plage de Navagio — Zante, Grèce", lat:37.8593, lng:20.6248,
+   desc:"La plage de Navagio doit son nom au Panagiotis, caboteur de contrebandiers échoué en 1980 et rouillant depuis au pied de falaises de 200 m. La « baie du naufrage » n'est accessible que par la mer.",
+   photo:"photos/navagio.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Épave du Panagiotis (1980) sur l'île de Zakynthos, falaises calcaires, ancienne « plage des contrebandiers »"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plage à l'épave rouillée cernée de falaises blanches, île ionienne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Célèbre plage au bateau échoué, Grèce"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La plage de Navagio, Zante, Grèce"}
+  ]},
+  {name:"Múlafossur — Îles Féroé, Danemark", lat:62.1069, lng:-7.4406,
+   desc:"À Gásadalur, la cascade de Múlafossur saute directement de la falaise dans l'Atlantique, dos au village de 18 habitants. Jusqu'au tunnel de 2004, le facteur franchissait trois fois par semaine un col de 400 m à pied pour livrer le courrier.",
+   photo:"photos/mulafossur.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chute côtière de Gásadalur, île de Vágar, village désenclavé par tunnel en 2004"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cascade tombant dans l'océan devant un hameau, archipel nord-atlantique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cascade côtière iconique des îles Féroé"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Múlafossur, îles Féroé"}
+  ]},
+  {name:"Château de Peleș — Roumanie", lat:45.3599, lng:25.5425,
+   desc:"Peleș, résidence d'été des rois de Roumanie achevée en 1914, fut le premier château d'Europe entièrement électrifié — avec sa propre centrale. Ses 160 pièces mêlent boiseries néo-Renaissance, vitraux et plafond coulissant ouvrant sur les étoiles.",
+   photo:"photos/peles.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Résidence de Carol Ier à Sinaia, Carpates, premier château électrifié d'Europe, plafond mobile"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Château royal néo-Renaissance dans les Carpates"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Somptueux château de conte de fées, Roumanie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le château de Peleș, Roumanie"}
+  ]},
+  {name:"La Valette — Malte", lat:35.8989, lng:14.5146,
+   desc:"La Valette fut bâtie ex nihilo par les chevaliers de Saint-Jean après le Grand Siège ottoman de 1565, sur les plans d'un assistant de Michel-Ange. Capitale la plus petite de l'UE, elle compte 320 monuments sur moins de 1 km².",
+   photo:"photos/la_valette.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ville des chevaliers de Saint-Jean fondée en 1566 par Jean de Valette, co-cathédrale au Caravage"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Capitale fortifiée insulaire, plus petite de l'Union européenne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Capitale historique d'une île méditerranéenne"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Valette, Malte"}
+  ]},
+  {name:"Mont Ararat — Turquie", lat:39.702, lng:44.298,
+   desc:"L'Ararat, volcan de 5 137 m dominant la frontière turco-arménienne, est le mont biblique où se serait échouée l'arche de Noé. Symbole national arménien, il est pourtant en territoire turc — et resta interdit d'ascension jusqu'en 2001.",
+   photo:"photos/ararat.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stratovolcan de 5 137 m près d'Iğdır et Doğubayazıt, arche de Noé selon la Genèse, symbole arménien"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plus haut sommet de Turquie, montagne biblique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Volcan légendaire de l'arche de Noé"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le mont Ararat, Turquie"}
+  ]},
+  {name:"Havasu Falls — Arizona, USA", lat:36.2552, lng:-112.6979,
+   desc:"Havasu Falls plonge de 30 m dans des vasques turquoise au fond du Grand Canyon, sur la réserve des Havasupai — « le peuple des eaux bleu-vert ». On n'y accède qu'après 16 km de marche, réservés parfois un an à l'avance.",
+   photo:"photos/havasu.jpg",
+   hints:[
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chute de Havasu Creek saturée en carbonates, réserve Havasupai, village de Supai sans route"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cascades turquoise d'une réserve amérindienne du Grand Canyon"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cascades bleu-vert célèbres, Arizona"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Havasu Falls, Arizona"}
   ]}
 ];
