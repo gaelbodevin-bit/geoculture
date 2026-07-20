@@ -2159,7 +2159,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Réserve de forêt nuageuse aux 90 espèces d'orchidées et quetzals, fondée par des Quakers, Costa Rica"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Réserve de Monteverde au Costa Rica"}
   ]},
-  {name:"Canal de Corinthe — Grèce",lat:37.9378,lng:22.987,desc:"Le canal de Corinthe, long de 6,3 km et large de seulement 21 mètres, fut creusé de 1882 à 1893 dans le calcaire de l'isthme. L'idée remontait à l'Antiquité — Néron en creusa lui-même les premiers coups de pioche en 67 ap. J.-C. avant d'abandonner. Ses parois de 90 mètres donnent aux bateaux l'impression de naviguer dans un gouffre.",photo:"photos/canal_corinthe.jpg",hints:[
+  {name:"Canal de Corinthe — Grèce",lat:37.9378,lng:22.987,desc:"Le canal de Corinthe, long de 6,3 km et large de seulement 21 mètres, fut creusé de 1882 à 1893 dans le calcaire de l'isthme. L'idée remontait à l'Antiquité — Néron en creusa lui-même les premiers coups de pioche en 67 ap. J.-C. avant d'abandonner. Ses parois de 90 mètres donnent aux bateaux l'impression de naviguer dans un gouffre.",photo:"photos/canal_de_corinthe.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canal de 6,3 km creusé de 1882 à 1893, 8m de large et 8m de profondeur, parois rocheuses de 90m, rêve de Néron"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Isthme séparant la péninsule du Péloponnèse du continent, canal de 6 km creusé en 1893"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canal traversant l'isthme de Corinthe, Grèce"},
@@ -2807,7 +2807,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cratère volcanique abritant une faune dense en Afrique de l'Est"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le cratère du Ngorongoro en Tanzanie"}
   ]},
-  {name:"Île de Socotra — Yémen",lat:12.4634,lng:53.8237,desc:"Socotra est un archipel isolé dans l'océan Indien où un tiers des plantes n'existe nulle part ailleurs, comme l'arbre du sang de dragon en forme de parasol. Son isolement de 6 millions d'années lui vaut le surnom de « Galápagos de l'océan Indien ».",photo:"photos/socotra.jpg",hints:[
+  {name:"Île de Socotra — Yémen",lat:12.4634,lng:53.8237,desc:"Socotra est un archipel isolé dans l'océan Indien où un tiers des plantes n'existe nulle part ailleurs, comme l'arbre du sang de dragon en forme de parasol. Son isolement de 6 millions d'années lui vaut le surnom de « Galápagos de l'océan Indien ».",photo:"photos/socotra.JPG",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Arbres dragonniers Dracaena cinnabari, archipel yéménite à 380km des côtes"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Endémisme végétal extrême, océan Indien, sang de dragon"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île aux arbres en forme de parasol, océan Indien"},
@@ -3175,7 +3175,7 @@ const ROUNDS=[
   ]},
   {name:"Tunnel de l'Amour — Klevan, Ukraine", lat:50.7497, lng:26.0511,
    desc:"Le Tunnel de l'Amour est une voie ferrée industrielle avalée par la végétation : sur 4 km, les arbres taillés par le passage des trains forment une voûte verte parfaite. La légende locale promet aux couples qui le traversent que leur vœu se réalisera.",
-   photo:"photos/tunnel_amour.jpg",
+   photo:"photos/tunnel_amour.JPG",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Voie ferrée desservant une usine de Orjiv, voûte végétale taillée par les convois, oblast de Rivne"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tunnel végétal sur une voie ferrée, ouest de l'Ukraine"},
@@ -3220,7 +3220,7 @@ const ROUNDS=[
   ]},
   {name:"Fort de Chittorgarh — Rajasthan, Inde", lat:24.8879, lng:74.645,
    desc:"Chittorgarh, plus grand fort de l'Inde avec ses 13 km de remparts, fut le théâtre de trois jauhar : plutôt que de se rendre, des milliers de femmes rajpoutes s'immolèrent quand la chute devenait inévitable, en 1303, 1535 et 1568.",
-   photo:"photos/chittorgarh.jpg",
+   photo:"photos/chittorgarh.JPG",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande forteresse rajpoute (280 ha), trois sièges et jauhar, tour de la Victoire de Rana Kumbha"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fort gigantesque du pays Mewar, Rajasthan"},
@@ -3256,7 +3256,7 @@ const ROUNDS=[
   ]},
   {name:"Grotte de Fingal — Staffa, Écosse", lat:56.4319, lng:-6.341,
    desc:"La grotte de Fingal s'enfonce de 70 m dans l'île inhabitée de Staffa, entre des colonnes de basalte jumelles de la Chaussée des Géants. La résonance des vagues y est si musicale qu'elle inspira une ouverture à Mendelssohn en 1829.",
-   photo:"photos/fingal.jpg",
+   photo:"photos/fingal.JPG",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cavité basaltique de 70 m sur l'île de Staffa (Hébrides), ouverture « Les Hébrides » de Mendelssohn"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grotte marine aux colonnes de basalte, îles écossaises"},
@@ -3265,7 +3265,7 @@ const ROUNDS=[
   ]},
   {name:"Les Douze Apôtres — Great Ocean Road, Australie", lat:-38.6633, lng:143.1051,
    desc:"Les Douze Apôtres sont des aiguilles de calcaire de 45 m détachées des falaises par l'océan Austral. Ils n'ont jamais été douze — huit subsistent, et l'érosion en fait tomber un par décennie tout en en sculptant de nouveaux.",
-   photo:"photos/douze_apotres.jpg",
+   photo:"photos/douze_apotres.JPG",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stacks calcaires du parc national de Port Campbell, Victoria, érosion de 2 cm par an"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Aiguilles rocheuses le long d'une route côtière mythique, sud de l'Australie"},
@@ -3283,7 +3283,7 @@ const ROUNDS=[
   ]},
   {name:"Cathedral Cove — Nouvelle-Zélande", lat:-36.8277, lng:175.7904,
    desc:"Cathedral Cove doit son nom à l'arche calcaire monumentale qui relie ses deux plages comme une nef. Accessible uniquement à pied ou en kayak, la crique a servi de décor au Monde de Narnia : Prince Caspian.",
-   photo:"photos/cathedral_cove.jpg",
+   photo:"photos/cathedral_cove.JPG",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Arche calcaire de Te Whanganui-A-Hei, péninsule de Coromandel, décor de Narnia"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Crique à l'arche monumentale, Île du Nord néo-zélandaise"},
@@ -3301,7 +3301,7 @@ const ROUNDS=[
   ]},
   {name:"Baie de la Gaiola — Naples, Italie", lat:40.7906, lng:14.1855,
    desc:"Les deux îlots de la Gaiola, reliés par un pont étroit, passent pour maudits : la liste de leurs propriétaires ruinés, assassinés ou noyés a nourri la légende. La baie protège pourtant un parc sous-marin où gisent des vestiges romains engloutis.",
-   photo:"photos/gaiola.jpg",
+   photo:"photos/gaiola.JPG",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Îlots « maudits » du Pausilippe, parc sous-marin aux vestiges romains immergés, golfe de Naples"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île maudite reliée par un petit pont, côte napolitaine"},
@@ -3346,7 +3346,7 @@ const ROUNDS=[
   ]},
   {name:"Positano — Côte amalfitaine, Italie", lat:40.6281, lng:14.485,
    desc:"Positano cascade en maisons pastel accrochées à la falaise de la côte amalfitaine. Village de pêcheurs ruiné au XIXe siècle — la moitié de la population émigra en Amérique — il fut ressuscité par les artistes et Steinbeck dans les années 1950.",
-   photo:"photos/positano.jpg",
+   photo:"photos/positano.JPG",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Village vertical de la côte sorrentine, essai de Steinbeck (1953), plage de Marina Grande"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Village pastel à flanc de falaise, côte amalfitaine"},
@@ -3364,7 +3364,7 @@ const ROUNDS=[
   ]},
   {name:"Hvítserkur — Islande", lat:65.606, lng:-20.638,
    desc:"Hvítserkur est un dyke basaltique de 15 m planté dans la mer, évoquant un dragon — ou un troll pétrifié par le soleil selon la légende — qui s'abreuve. Ses « pattes » ont été bétonnées pour retarder l'inévitable victoire des vagues.",
-   photo:"photos/hvitserkur.jpg",
+   photo:"photos/hvitserkur.JPG",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dyke basaltique zoomorphe de la péninsule de Vatnsnes, colonie de fulmars, base renforcée au béton"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rocher-dragon buvant la mer, nord-ouest de l'Islande"},
@@ -3382,7 +3382,7 @@ const ROUNDS=[
   ]},
   {name:"Blue Lagoon — Islande", lat:63.8804, lng:-22.4495,
    desc:"Le Lagon bleu est né par accident en 1976 : l'eau géothermale rejetée par la centrale voisine de Svartsengi forma un lac laiteux dans la lave. Riche en silice, à 38 °C toute l'année, il est devenu le site le plus visité d'Islande.",
-   photo:"photos/blue_lagoon.jpg",
+   photo:"photos/blue_lagoon.JPG",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lagon artificiel issu de la centrale de Svartsengi (1976), eau siliceuse à 38 °C, péninsule de Reykjanes"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bain géothermal laiteux dans un champ de lave, Islande"},
@@ -3427,7 +3427,7 @@ const ROUNDS=[
   ]},
   {name:"Monastères des Météores — Grèce", lat:39.7217, lng:21.6306,
    desc:"Aux Météores, des monastères du XIVe siècle coiffent des pitons de grès de 300 m. Les moines et le ravitaillement montaient jadis dans des filets hissés à la corde — remplacée, disait-on, « seulement quand elle cassait ».",
-   photo:"photos/meteores.jpg",
+   photo:"photos/meteores.JPG",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Six monastères actifs sur pitons de conglomérat, Thessalie, hissage historique au filet"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Monastères perchés sur des colonnes rocheuses, Grèce continentale"},
