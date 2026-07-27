@@ -3,7 +3,8 @@
   html,body{width:100%;height:100%;background:var(--bg0);color:var(--text);font-family:'DM Sans',sans-serif;overflow:hidden}
   #g{display:flex;flex-direction:column;width:100vw;height:100vh}
   #hdr{display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:52px;background:var(--bg1);border-bottom:1px solid var(--border);flex-shrink:0;z-index:50}
-  #logo{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:3px;color:var(--accent)}
+  #logo{font-family:'Baloo 2','DM Sans',sans-serif;font-weight:800;font-size:26px;letter-spacing:0;color:var(--text);text-transform:none}
+  #logo span{color:var(--accent)}
   #stats{display:flex;gap:28px}
   .st{text-align:center}
   .st span{display:block;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px}
@@ -38,7 +39,7 @@
   #level-flash.fire{animation:flashAnim .7s ease forwards}
   @keyframes flashAnim{0%{opacity:0}15%{opacity:1}60%{opacity:.8}100%{opacity:0}}
   #flash-inner{display:flex;flex-direction:column;align-items:center;gap:6px}
-  #flash-badge{font-family:'Bebas Neue',sans-serif;font-size:52px;letter-spacing:4px;color:#fff;text-shadow:0 0 30px currentColor}
+  #flash-badge{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:48px;letter-spacing:1px;color:#fff;text-shadow:0 0 30px currentColor}
   #flash-sub{font-size:13px;font-weight:600;color:rgba(255,255,255,.8);letter-spacing:2px;text-transform:uppercase}
   #sidebar{transition:border-left .3s}
   #sidebar.flash-border{animation:sideFlash .6s ease}
@@ -93,7 +94,7 @@ transparent 70%);
 pointer-events:none;
 }
   #overlay.h{display:none}
-  .otitle{font-family:'Bebas Neue',sans-serif;font-size:52px;letter-spacing:4px;color:var(--accent);text-align:center;line-height:1}
+  .otitle{font-family:'Baloo 2',sans-serif;font-weight:800;font-size:46px;letter-spacing:0;color:var(--accent);text-align:center;line-height:1.05;text-transform:none}
   .osub{font-size:14px;color:var(--muted2);text-align:center;max-width:420px;line-height:1.65}
   .ocard{background:var(--bg2);border:1px solid var(--border2);border-radius:13px;padding:16px 20px;width:100%;max-width:380px}
   .orow{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted2);padding:5px 0;border-bottom:1px solid var(--border)}
@@ -193,20 +194,11 @@ body.menu-mode #app-wrapper{background:transparent}
 /* ════════════════════════════════════════
    SIDEBAR : equilibrage vertical, timer recentre
    ════════════════════════════════════════ */
-/* Question : s'adapte au texte, bien aeree */
 #qpanel{ flex:0 0 auto !important; padding:18px 18px 20px; }
 #qtxt{ max-height:42vh; overflow-y:auto; font-size:15px; line-height:1.65; }
-
-/* Bloc timer = element central, agrandi pour remplir le vide */
 #timer-section{ margin-top:auto !important; gap:14px; padding:24px 18px; }
 #timer-lbl{ align-self:center; letter-spacing:1.4px; }
 #tring{ transform:scale(1.4); transform-origin:center; margin:26px 0; }
-
-/* Carte "score max" plus presente */
 #maxbox{ padding:14px 16px; }
 #maxbox .mv{ font-size:26px; }
-
-/* Pastilles de progression un peu plus grandes */
 .dot{ width:10px; height:10px; }
-
-/* #actions garde margin-top:auto -> bouton Valider epingle en bas */
