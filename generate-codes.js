@@ -1,62 +1,64 @@
-/**
- * generate-codes.js
- * Génère des codes testeurs et les insère dans Firestore.
- *
- * Usage :
- *   npm install firebase-admin
- *   node generate-codes.js --count 10 --prefix TEST
- *
- * Prérequis : télécharger la clé de service Firebase Admin depuis
- *   Console Firebase → Paramètres du projet → Comptes de service → Générer une clé privée
- *   et la placer dans le même dossier sous le nom "serviceAccountKey.json"
- */
-
+// ????????????????????????????????????????????????????????????????
+// G�n�re des codes testeurs Premium dans Firestore (testCodes)
+// Usage :  node generate-codes.js [nombre]   (d�faut : 100)
+// Pr�requis : serviceAccountKey.json � c�t� de ce fichier
+//             npm install firebase-admin
+// ?? Ce script utilise l'Admin SDK : � lancer UNIQUEMENT en local,
+//    jamais � committer avec la cl�, jamais c�t� client.
+// ????????????????????????????????????????????????????????????????
 const admin = require('firebase-admin');
+const crypto = require('crypto');
+const fs = require('fs');
+
 const serviceAccount = require('./serviceAccountKey.json');
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
-
+admin.initializeApp({ credential: admin.credential.cert(serviceAccount) });
 const db = admin.firestore();
 
-// ── Config ──────────────────────────────────────────────────────────────────
-const args = process.argv.slice(2);
-const COUNT  = parseInt(args[args.indexOf('--count')  + 1] || '10');
-const PREFIX = (args[args.indexOf('--prefix') + 1] || 'TEST').toUpperCase();
-// ────────────────────────────────────────────────────────────────────────────
+const COUNT = Math.min(parseInt(process.argv[2] || '100', 10), 500);
 
-function randomSuffix(len = 6) {
-  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // sans 0/O/1/I pour éviter confusion
+// Alphabet sans caract�res ambigus (pas de 0/O, 1/I/L)
+// Format : GEO-XXXX-XXXX ? compatible avec la regex de redeemCode (^[A-Z0-9-]{4,24}$)
+const ALPHABET = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+function randomBlock(n) {
   let s = '';
-  for (let i = 0; i < len; i++) s += chars[Math.floor(Math.random() * chars.length)];
+  const bytes = crypto.randomBytes(n);
+  for (let i = 0; i < n; i++) s += ALPHABET[bytes[i] % ALPHABET.length];
   return s;
 }
+function makeCode() { return 'GEO-' + randomBlock(4) + '-' + randomBlock(4); }
 
-async function generateCodes() {
+async function main() {
+  // Unicit� locale
+  const codes = new Set();
+  while (codes.size < COUNT) codes.add(makeCode());
+  const list = [...codes];
+
+  // create() (et non set) : �choue si le doc existe d�j� ? aucun risque
+  // d'�craser un code existant, m�me d�j� utilis�.
   const batch = db.batch();
-  const codes = [];
-
-  for (let i = 0; i < COUNT; i++) {
-    const code = `${PREFIX}-${randomSuffix()}`;
-    const ref = db.collection('testCodes').doc(code);
-    batch.set(ref, {
+  list.forEach(code => {
+    batch.create(db.collection('testCodes').doc(code), {
       used: false,
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
-      note: `Généré le ${new Date().toLocaleDateString('fr-FR')}`
+      batch: new Date().toISOString().slice(0, 10)
     });
-    codes.push(code);
-  }
-
+  });
   await batch.commit();
 
-  console.log(`\n✅ ${COUNT} codes générés dans Firestore (collection "testCodes") :\n`);
-  codes.forEach(c => console.log('  ' + c));
-  console.log('\nPartagez ces codes avec vos testeurs. Chaque code est à usage unique.\n');
+  const out = 'codes-' + Date.now() + '.txt';
+  fs.writeFileSync(out, list.join('\n') + '\n');
+  console.log('? ' + list.length + ' codes cr��s dans testCodes');
+  console.log('?? Liste sauvegard�e dans ' + out + ' (� ne pas committer !)');
+  console.log('\nAper�u :');
+  list.slice(0, 5).forEach(c => console.log('  ' + c));
   process.exit(0);
 }
 
-generateCodes().catch(err => {
-  console.error('Erreur :', err);
+main().catch(e => {
+  if (e.code === 6 || /already exists/i.test(e.message || '')) {
+    console.error('? Collision improbable avec un code existant � relance simplement le script.');
+  } else {
+    console.error('? Erreur :', e.message);
+  }
   process.exit(1);
 });
