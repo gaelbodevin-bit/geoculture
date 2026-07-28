@@ -18,7 +18,7 @@ var firebaseConfig = {
 var fbApp = initializeApp(firebaseConfig);
 var fbAuth = getAuth(fbApp);
 var fbDb = getFirestore(fbApp);
-var fbFunctions = getFunctions(fbApp);
+var fbFunctions = getFunctions(fbApp, 'us-central1');
 var currentUserPremium = false;
 var fbProvider = new GoogleAuthProvider();
 
@@ -555,23 +555,24 @@ function redeemCode() {
   var code = input.value.trim().toUpperCase();
   if (code.length < 4) { msg.style.color='#ef4444'; msg.textContent='Code invalide.'; return; }
   msg.style.color='#94a3b8'; msg.textContent='V\u00e9rification\u2026';
-  var codeRef = doc(fbDb, 'testCodes', code);
-  getDoc(codeRef).then(function(snap) {
-    if (!snap.exists()) { msg.style.color='#ef4444'; msg.textContent='Code introuvable.'; return; }
-    var data = snap.data();
-    if (data.used) { msg.style.color='#ef4444'; msg.textContent='Code d\u00e9j\u00e0 utilis\u00e9.'; return; }
-    return setDoc(codeRef, { used: true, usedBy: currentUser.uid, usedAt: serverTimestamp() }, { merge: true })
-      .then(function() {
-        return setDoc(doc(fbDb, 'users', currentUser.uid), { premium: true, premiumSource: 'testCode', premiumCode: code }, { merge: true });
-      })
-      .then(function() {
-        currentUserPremium = true;
-        window.isPremium = true;
-        msg.style.color='#22c55e'; msg.textContent='\u2713 Premium activ\u00e9 ! Profitez bien.';
-        setTimeout(function() { if(typeof showMenu==='function') showMenu(); }, 1200);
-      });
+  // Validation + attribution du premium 100% cote serveur (Cloud Function redeemCode).
+  var redeemFn = httpsCallable(fbFunctions, 'redeemCode');
+  redeemFn({ code: code }).then(function(res) {
+    var d = (res && res.data) ? res.data : {};
+    if (d.ok) {
+      currentUserPremium = true;
+      window.isPremium = true;
+      msg.style.color='#22c55e'; msg.textContent='\u2713 Premium activ\u00e9 ! Profitez bien.';
+      setTimeout(function() { if(typeof showMenu==='function') showMenu(); }, 1200);
+    } else {
+      msg.style.color='#ef4444'; msg.textContent = d.error || 'Code invalide.';
+    }
   }).catch(function(e) {
-    msg.style.color='#ef4444'; msg.textContent='Erreur : '+e.message;
+    var em = (e && e.message) ? e.message : 'Erreur inconnue';
+    if (/not-found|introuvable/i.test(em)) em = 'Code introuvable.';
+    else if (/failed-precondition|already|utilis/i.test(em)) em = 'Code d\u00e9j\u00e0 utilis\u00e9.';
+    else if (/unauthenticated/i.test(em)) em = 'Connecte-toi d\'abord.';
+    msg.style.color='#ef4444'; msg.textContent = em;
   });
 }
 
