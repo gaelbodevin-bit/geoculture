@@ -239,7 +239,7 @@ function resolveRound(){
   total+=pts;
   roundScores.push({name:r.name,pts,distM:dist!=null?Math.round(dist*1000):null,maxPts:BASE_PTS[level],level});
   document.getElementById('hsc').textContent=total.toLocaleString('fr-FR');
-  const popupStyle='font-family:system-ui,sans-serif;font-size:13px;line-height:1.5;min-width:140px';
+  const popupStyle='font-family:\'Baloo 2\',sans-serif;font-size:13px;line-height:1.5;min-width:140px';
   targetMarker=L.marker([r.lat,r.lng],{icon:makePin('#22c55e')})
     .bindPopup(`<div style="${popupStyle}"><b style="color:#15803d">\u2713 ${r.name}</b>${dist?`<br><span style="color:#666">Distance : ${fmtDist(Math.round(dist*1000))}</span>`:'<br><span style="color:#666">Pas de tentative</span>'}</div>`,{maxWidth:220}).addTo(map);
   if(playerPos){
@@ -433,7 +433,7 @@ function _shareShowPanel(text, url) {
     + '</div>'
     + '<div style="display:flex;gap:10px;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap">'+btns+'</div>'
     + '<div style="display:flex;gap:8px;align-items:center;background:#111827;border:1px solid #2d3f5e;border-radius:9px;padding:6px 6px 6px 12px">'
-    + '<input id="share-link" readonly value="'+url+'" style="flex:1;background:none;border:none;color:#94a3b8;font-size:13px;outline:none;font-family:system-ui,sans-serif">'
+    + '<input id="share-link" readonly value="'+url+'" style="flex:1;background:none;border:none;color:#94a3b8;font-size:13px;outline:none;font-family:\'Baloo 2\',sans-serif">'
     + '<button id="share-copy" style="padding:8px 18px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-weight:700;cursor:pointer;font-size:13px;white-space:nowrap">Copier</button>'
     + '</div>'
     + '<div style="font-size:11px;color:#4b5563;margin-top:12px;text-align:center">Le bouton Copier copie votre score complet avec les emojis</div>'
@@ -595,7 +595,7 @@ function showMenu(){
   var lock = isPrem ? '' : ' 🔒';
 
   // Styles de base — plus grands, plus visuels
-  var _bs = 'font-family:\'DM Sans\',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-align:center;border-radius:10px;padding:14px 6px;transition:all .2s;border:1.5px solid;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1.2;';
+  var _bs = 'font-family:\'Baloo 2\',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-align:center;border-radius:10px;padding:14px 6px;transition:all .2s;border:1.5px solid;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1.2;';
 
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1">');
 

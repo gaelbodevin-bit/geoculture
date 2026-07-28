@@ -1,6 +1,6 @@
 ﻿:root{--bg0:#07090f;--bg1:#0d1120;--bg2:#111827;--bg3:#1a2238;--bg4:#1e2d45;--accent:#f97316;--green:#22c55e;--red:#ef4444;--yellow:#fbbf24;--text:#e8eaf2;--muted:#6b7280;--muted2:#94a3b8;--border:#1e2d45;--border2:#2d3f5e;}
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{width:100%;height:100%;background:var(--bg0);color:var(--text);font-family:'DM Sans',sans-serif;overflow:hidden}
+  html,body{width:100%;height:100%;background:var(--bg0);color:var(--text);font-family:'Baloo 2','DM Sans',sans-serif;overflow:hidden}
   #g{display:flex;flex-direction:column;width:100vw;height:100vh}
   #hdr{display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:52px;background:var(--bg1);border-bottom:1px solid var(--border);flex-shrink:0;z-index:50}
   #logo{font-family:'Baloo 2','DM Sans',sans-serif;font-weight:800;font-size:26px;letter-spacing:0;color:var(--text);text-transform:none}
@@ -30,7 +30,7 @@
   .dot.done{background:var(--bg3)}
   #actions{padding:14px;display:flex;flex-direction:column;gap:8px;margin-top:auto;border-top:1px solid var(--border)}
   #placed-info{font-size:11px;color:var(--muted);text-align:center;padding-bottom:4px}
-  .btn{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 18px;border-radius:9px;border:none;cursor:pointer;transition:all .15s;width:100%;text-align:center}
+  .btn{font-family:'Baloo 2','DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 18px;border-radius:9px;border:none;cursor:pointer;transition:all .15s;width:100%;text-align:center}
   .btn:hover{transform:translateY(-1px)}.btn:active{transform:scale(.97)}
   .ba{background:var(--accent);color:#fff}.ba:hover{background:#ea6c0b}.ba:disabled{background:var(--bg3);color:var(--muted);cursor:not-allowed;transform:none}
   .bg{background:transparent;color:var(--muted2);border:1px solid var(--border2)}.bg:hover{background:var(--bg3);color:var(--text)}
@@ -45,10 +45,10 @@
   #sidebar.flash-border{animation:sideFlash .6s ease}
   @keyframes sideFlash{0%{border-left:4px solid transparent}20%{border-left:4px solid var(--flash-col,#ef4444)}80%{border-left:4px solid var(--flash-col,#ef4444)}100%{border-left:4px solid transparent}}
   #map{width:100%;height:100%}
-  #explore-btn{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;transition:all .15s}
+  #explore-btn{font-family:'Baloo 2','DM Sans',sans-serif;font-size:13px;font-weight:600;padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;transition:all .15s}
   #explore-btn:hover{background:#253550;transform:translateY(-1px)}
   #explore-tip{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:400;background:rgba(13,17,32,.88);border:1px solid #2d3f5e;border-radius:8px;padding:7px 14px;font-size:12px;color:#94a3b8;pointer-events:none;display:none;white-space:nowrap;backdrop-filter:blur(4px)}
-  #back-btn{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:1000;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;padding:13px 32px;border-radius:12px;border:none;cursor:pointer;background:#f97316;color:#fff;display:none;transition:all .15s;white-space:nowrap;box-shadow:0 4px 20px rgba(249,115,22,0.5)}
+  #back-btn{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:1000;font-family:'Baloo 2','DM Sans',sans-serif;font-size:15px;font-weight:700;padding:13px 32px;border-radius:12px;border:none;cursor:pointer;background:#f97316;color:#fff;display:none;transition:all .15s;white-space:nowrap;box-shadow:0 4px 20px rgba(249,115,22,0.5)}
   #back-btn:hover{background:#ea6c0b;transform:translateX(-50%) translateY(-2px);box-shadow:0 6px 24px rgba(249,115,22,0.6)}
   #toast{position:absolute;bottom:14px;left:50%;transform:translateX(-50%) translateY(10px);background:var(--bg2);border:1px solid var(--border2);border-radius:9px;padding:9px 18px;font-size:13px;color:var(--text);z-index:500;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;white-space:nowrap;max-width:90%;overflow:hidden;text-overflow:ellipsis}
   #toast.s{opacity:1;transform:translateX(-50%) translateY(0)}
@@ -202,3 +202,6 @@ body.menu-mode #app-wrapper{background:transparent}
 #maxbox{ padding:14px 16px; }
 #maxbox .mv{ font-size:26px; }
 .dot{ width:10px; height:10px; }
+
+/* Police globale Baloo 2 (les chiffres restent en Bebas pour le contraste) */
+#tnum, #maxbox .mv, .otot .p { font-family:'Bebas Neue',sans-serif; }
