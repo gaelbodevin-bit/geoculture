@@ -552,18 +552,18 @@ function showMenu(){
   var h=[];
 
   // Titre
-  h.push('<div class="otitle" style="font-size:44px;line-height:1.05">G\u00e9o<span>Culture</span></div>');
+  h.push('<div class="otitle" style="font-size:58px;line-height:1.05;margin-bottom:28px">G\u00e9o<span>Culture</span></div>');
 
   // Zone auth
   if(user){
-    h.push('<div style="display:flex;align-items:center;gap:10px;background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:8px 16px;margin-bottom:4px">');
+    h.push('<div style="display:flex;align-items:center;gap:10px;background:#0d1120;border:0.5px solid #1e2d45;border-radius:10px;padding:8px 16px;margin-bottom:24px">');
     h.push('<img src="'+String(user.photoURL||'').replace(/["'<>]/g,'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">');
     h.push('<span style="font-size:13px;color:#e2e8f0">'+String(user.displayName||user.email||'').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</span>');
     h.push('<button onclick="window.fbSignOut&&window.fbSignOut()" style="font-size:11px;color:#6b7280;background:transparent;border:none;cursor:pointer;text-decoration:underline;margin-left:8px">D\u00e9connexion</button>');
     h.push('<button onclick="window.showHistory&&window.showHistory()" style="font-size:11px;color:#6b7280;background:transparent;border:none;cursor:pointer;text-decoration:underline">Historique</button>');
     h.push('</div>');
   } else {
-    h.push('<button onclick="window.fbSignIn&&window.fbSignIn()" style="font-size:13px;font-weight:500;padding:8px 20px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer;margin-bottom:8px">Se connecter avec Google</button>');
+    h.push('<button onclick="window.fbSignIn&&window.fbSignIn()" style="font-size:14px;font-weight:600;padding:10px 26px;border-radius:9px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer;margin-bottom:26px">Se connecter avec Google</button>');
   }
 
   // Grille 2 colonnes égales
