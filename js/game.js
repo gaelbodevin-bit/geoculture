@@ -563,7 +563,7 @@ function showMenu(){
     h.push('<button onclick="window.showHistory&&window.showHistory()" style="font-size:11px;color:#6b7280;background:transparent;border:none;cursor:pointer;text-decoration:underline">Historique</button>');
     h.push('</div>');
   } else {
-    h.push('<button onclick="window.fbSignIn&&window.fbSignIn()" style="font-size:14px;font-weight:600;padding:10px 26px;border-radius:9px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer;margin-bottom:26px">Se connecter avec Google</button>');
+    h.push('<button onclick="window.fbSignIn&&window.fbSignIn()" style="font-size:12px;font-weight:500;padding:7px 18px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer;margin-bottom:26px">Se connecter avec Google</button>');
   }
 
   // Grille 2 colonnes égales
@@ -648,7 +648,7 @@ function showMenu(){
 
   // Lien classement
   h.push('<div style="display:flex;align-items:center;gap:16px;margin-top:8px;justify-content:center">');
-  h.push('<a onclick="window.showLeaderboard&&window.showLeaderboard()" style="font-size:13px;color:#f97316;cursor:pointer;font-weight:600;text-decoration:underline;text-underline-offset:4px">'+T('leaderboard')+'</a>');
+  h.push('<a onclick="window.showLeaderboard&&window.showLeaderboard()" style="font-size:16px;color:#f97316;cursor:pointer;font-weight:700;text-decoration:underline;text-underline-offset:5px;margin-top:6px;display:inline-block">'+T('leaderboard')+'</a>');
   h.push('</div>');
 
   ov.innerHTML=h.join('');
