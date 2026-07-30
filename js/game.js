@@ -567,12 +567,12 @@ function showMenu(){
   }
 
   // Grille 2 colonnes égales
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;width:100%;max-width:680px">');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:920px">');
 
   // Colonne gauche: comment jouer
-  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:12px">');
-  h.push('<div style="font-size:10px;font-weight:600;color:#f97316;letter-spacing:1.5px;text-transform:uppercase">Comment jouer</div>');
-  h.push('<div style="font-size:12px;color:#94a3b8;line-height:1.5;padding:2px 0 4px 0;border-bottom:1px solid #1e2d4566;margin-bottom:2px">Localise les lieux grâce aux indices en un minimum de temps.</div>');
+  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:16px">');
+  h.push('<div style="font-size:13px;font-weight:700;color:#f97316;letter-spacing:1.8px;text-transform:uppercase">Comment jouer</div>');
+  h.push('<div style="font-size:13.5px;color:#94a3b8;line-height:1.6;padding:2px 0 8px 0;border-bottom:1px solid #1e2d4566;margin-bottom:4px">Localise les lieux grâce aux indices en un minimum de temps.</div>');
   var rules=[
     {t:'Normal', d:T('ruleNormal')},
     {t:'No-Zoom', d:T('ruleNozoom')},
@@ -581,23 +581,23 @@ function showMenu(){
     {t:T('dailyChallenge'), d:T('ruleDaily')}
   ];
   rules.forEach(function(r,i){
-    h.push('<div style="display:flex;gap:12px;align-items:flex-start">');
-    h.push('<div style="width:24px;height:24px;border-radius:50%;background:#1a2238;display:flex;align-items:center;justify-content:center;font-size:11px;color:#f97316;font-weight:700;flex-shrink:0">'+(i+1)+'</div>');
-    h.push('<div><span style="font-size:13px;color:#e2e8f0;font-weight:700">'+r.t+'</span><br><span style="font-size:12px;color:#94a3b8;line-height:1.5">'+r.d+'</span></div>');
+    h.push('<div style="display:flex;gap:14px;align-items:flex-start">');
+    h.push('<div style="width:30px;height:30px;border-radius:50%;background:#1a2238;display:flex;align-items:center;justify-content:center;font-size:13px;color:#f97316;font-weight:700;flex-shrink:0">'+(i+1)+'</div>');
+    h.push('<div><span style="font-size:15px;color:#e2e8f0;font-weight:700">'+r.t+'</span><br><span style="font-size:13px;color:#94a3b8;line-height:1.6">'+r.d+'</span></div>');
     h.push('</div>');
   });
   h.push('</div>');
 
   // Colonne droite: modes de jeu
-  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:12px;padding:18px 20px;display:flex;flex-direction:column;gap:12px">');
-  h.push('<div style="font-size:10px;font-weight:600;color:#94a3b8;letter-spacing:1.5px;text-transform:uppercase">Mode de jeu</div>');
+  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:16px">');
+  h.push('<div style="font-size:13px;font-weight:700;color:#94a3b8;letter-spacing:1.8px;text-transform:uppercase">Mode de jeu</div>');
   var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
   var lock = isPrem ? '' : ' 🔒';
 
   // Styles de base — plus grands, plus visuels
   var _bs = 'font-family:\'Baloo 2\',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-align:center;border-radius:10px;padding:14px 6px;transition:all .2s;border:1.5px solid;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1.2;';
 
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;flex:1">');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1">');
 
   // Normal — orange
   h.push('<button onclick="selectGameMode(\'normal\')" style="'+_bs+'background:transparent;color:#f97316;border-color:#f97316" '
