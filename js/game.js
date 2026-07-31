@@ -13,6 +13,7 @@ window._lang=_lang;window.T=T;
 var perfectionMode=false;
 var noZoomMode=false;
 var chillMode=false;
+var eventsMode=false;
 var fixedLevel=-1;
 var BASE_PTS=[0,500,1000,1500,2000,3000];
 var DIST_K=Math.log(2)/400; // demi-vie 400km — précision primaire
@@ -84,11 +85,12 @@ function onMapClick(e){
 
 function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]]}return b}
 
+function activeSource(){ return (eventsMode && window.EVENTS && window.EVENTS.length) ? window.EVENTS : ROUNDS; }
 function startGame(){
   document.body.classList.remove('menu-mode');
   var nbRounds=perfectionMode?10:5;
   total=0;roundScores=[];
-  roundList=shuffle(ROUNDS).slice(0,nbRounds);
+  roundList=shuffle(activeSource()).slice(0,nbRounds);
   curR=0;
   document.getElementById('hsc').textContent='0';
   document.getElementById('overlay').classList.add('h');
@@ -231,7 +233,9 @@ function resolveRound(){
     dist=haversine(playerPos.lat,playerPos.lng,r.lat,r.lng);
     const effLevel=chillMode?5:level;
     const distCoef=chillMode?1.0:0.90;
-    const distScore=BASE_PTS[effLevel]*distCoef*Math.exp(-DIST_K*dist);
+    // Mode Événements : tolérance = rayon de l'événement (m). Dans le rayon => distance effective 0 => score plein.
+    var effDist=(eventsMode && r.radius) ? Math.max(0, dist - r.radius/1000) : dist;
+    const distScore=BASE_PTS[effLevel]*distCoef*Math.exp(-DIST_K*effDist);
     // Bonus temps : 10% max, annulé si distance > 2000km (évite de récompenser la rapidité sans précision)
     const timeScore=chillMode?0:BASE_PTS[effLevel]*0.10*(timeLeft/TIMER)*(dist<2000?1:0);
     pts=Math.round(distScore+timeScore);
@@ -257,7 +261,7 @@ function resolveRound(){
   document.getElementById('placed-info').textContent=dist!=null?`\u1f3af ${fmtDist(Math.round(dist*1000))} \u2014 +${pts.toLocaleString('fr-FR')} pts`:`\u274c Rat\u00e9 \u2014 ${r.name}`;
   showToast(dist!=null?`${r.name} \u00b7 ${fmtDist(Math.round(dist*1000))} \u00b7 +${pts} pts`:`Rat\u00e9 ! C'\u00e9tait : ${r.name}`);
   setTimeout(function(){
-    var elim=perfectionMode&&(dist===null||dist>50);
+    var elim=perfectionMode&&!eventsMode&&(dist===null||dist>50);
     showInter(pts,dist,r.name,elim);
   },3000);
 }
@@ -526,7 +530,7 @@ function showEnd(){
       }
     }, 100);
   }
-  if(typeof window.saveGame==='function'){var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);var _p=_t>0?Math.round(total/_t*100):0;var _n=['tout-niveaux','expert','difficile','moyen','facile'];var _m=(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(chillMode?'chill-':'')+(_n[fixedLevel+1]||'tout-niveaux');setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);}
+  if(typeof window.saveGame==='function'){var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);var _p=_t>0?Math.round(total/_t*100):0;var _n=['tout-niveaux','expert','difficile','moyen','facile'];var _m=(eventsMode?'events-':'')+(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(chillMode?'chill-':'')+(_n[fixedLevel+1]||'tout-niveaux');setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);}
   // Sauvegarder dans le classement du jour si mode daily
   if(window._dailyMode && typeof window.saveDailyScore==='function'){
     var _dt=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
@@ -578,6 +582,7 @@ function showMenu(){
     {t:'No-Zoom', d:T('ruleNozoom')},
     {t:'Perfection', d:T('rulePerfection')},
     {t:'Chill', d:T('ruleChill')},
+    {t:'\u00c9v\u00e9nements', d:'Retrouve des \u00e9v\u00e9nements historiques \u00b7 tol\u00e9rance selon l\'\u00e9chelle \u00b7 Premium'},
     {t:T('dailyChallenge'), d:T('ruleDaily')}
   ];
   rules.forEach(function(r,i){
@@ -627,6 +632,13 @@ function showMenu(){
     +'<span style="font-size:18px">\u2615</span><span>Chill'+lock+'</span>'
     +'</button>');
 
+  // Événements — ambre historique (Premium, pleine largeur)
+  h.push('<button onclick="selectGameMode(\'events\')" style="'+_bs+'grid-column:span 2;background:transparent;color:#f59e0b;border-color:#b45309" '
+    +'onmouseover="this.style.background=\'#b45309\';this.style.color=\'#fff\';this.style.transform=\'translateY(-2px)\'" '
+    +'onmouseout="this.style.background=\'transparent\';this.style.color=\'#f59e0b\';this.style.transform=\'\'">'
+    +'<span style="font-size:18px">\u2694\ufe0f</span><span>\u00c9v\u00e9nements'+lock+'</span>'
+    +'</button>');
+
   // Défi du jour — jaune (pleine largeur)
   h.push('<button onclick="showDailyMenu()" style="'+_bs+'grid-column:span 2;background:transparent;color:#fbbf24;border-color:#fbbf24" '
     +'onmouseover="this.style.background=\'#fbbf24\';this.style.color=\'#000\';this.style.transform=\'translateY(-2px)\'" '
@@ -655,6 +667,7 @@ function showMenu(){
   ov.classList.remove('h');
   window._menuNZ=false;
   window._menuPerf=false;
+  window._menuEvents=false;
 }
 function nextRound(){document.getElementById('overlay').classList.add('h');startRound(curR+1);}
 
@@ -776,12 +789,14 @@ function mpDoCreate(){var lvl=parseInt(document.getElementById('mp-level').value
 function mpDoJoin(){var code=(document.getElementById('mp-code').value||'').toUpperCase().trim();if(code.length<4){if(typeof showToast==='function')showToast('Code invalide');return;}window._mpMode=true;var fn=window.mpJoinRoom||(typeof mpJoinRoom==='function'?mpJoinRoom:null);if(fn){fn(code,'Joueur').catch(function(e){if(typeof showToast==='function')showToast('Erreur\u00a0: '+e.message);window._mpMode=false;});}else{if(typeof showToast==='function')showToast('Module non charg\u00e9');}}
 function selectGameMode(mode) {
   var isPrem = typeof window.isPremiumUser==='function'?window.isPremiumUser():(window.isPremium===true);
-  if((mode==='nozoom'||mode==='perfection'||mode==='chill') && !isPrem) {
+  var _premMode=(mode==='nozoom'||mode==='perfection'||mode==='chill'||mode==='events');
+  function _plabel(m){return m==='nozoom'?'No-Zoom':m==='chill'?'Chill':m==='events'?'\u00c9v\u00e9nements':'Perfection';}
+  if(_premMode && !isPrem) {
     if(typeof window.showPremiumOverlay==='function') {
-      window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':mode==='chill'?'Chill':'Perfection');
+      window.showPremiumOverlay(_plabel(mode));
     } else {
       setTimeout(function(){
-        if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay(mode==='nozoom'?'No-Zoom':mode==='chill'?'Chill':'Perfection');
+        if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay(_plabel(mode));
       }, 500);
     }
     return;
@@ -789,14 +804,15 @@ function selectGameMode(mode) {
   window._menuNZ = mode==='nozoom';
   window._menuPerf = mode==='perfection';
   window._menuChill = mode==='chill';
+  window._menuEvents = mode==='events';
   // Afficher le sous-menu de difficult&#233;
   showDifficultyMenu(mode);
 }
 
 function showDifficultyMenu(mode) {
   var ov = document.getElementById('overlay');
-  var modeLabel = mode==='nozoom'?'No-Zoom':mode==='perfection'?'Perfection':mode==='chill'?'Chill':'Normal';
-  var modeColor = mode==='perfection'?'#a78bfa':mode==='chill'?'#3b82f6':'#f97316';
+  var modeLabel = mode==='nozoom'?'No-Zoom':mode==='perfection'?'Perfection':mode==='chill'?'Chill':mode==='events'?'\u00c9v\u00e9nements':'Normal';
+  var modeColor = mode==='perfection'?'#a78bfa':mode==='chill'?'#3b82f6':mode==='events'?'#f59e0b':'#f97316';
   var h = [];
   h.push('<div class="otitle" style="font-size:32px;color:'+modeColor+'">' + modeLabel.toUpperCase() + '</div>');
   h.push('<div style="font-size:13px;color:#cbd5e1;margin-bottom:18px;font-weight:500">Choisissez votre niveau de difficult&#233;</div>');
@@ -830,6 +846,7 @@ function launchGame(level) {
   noZoomMode = window._menuNZ || false;
   perfectionMode = window._menuPerf || false;
   chillMode = window._menuChill || false;
+  eventsMode = window._menuEvents || false;
   if(map){ map.remove(); map=null; }
   document.getElementById('overlay').classList.add('h');
   document.getElementById('hsc').textContent='0';
