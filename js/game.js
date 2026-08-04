@@ -349,7 +349,7 @@ function showInter(pts,dist,name,eliminated){
 // PARTAGE DE SCORE (modes solo + défi du jour — pas multi ni chill)
 // ════════════════════════════════════════════════════════════════
 function buildShareText(format) {
-  var url = 'https://gaelbodevin-bit.github.io/geoculture/';
+  var url = 'https://www.geo-culture.io/';
   // Emojis generes depuis leurs code points -> jamais corrompus par un mauvais encodage de fichier
   var E = {
     green:  String.fromCodePoint(0x1F7E9), // carre vert
@@ -386,7 +386,7 @@ function buildShareText(format) {
 
 function shareScore() {
   var text = buildShareText('emoji');
-  var url  = 'https://gaelbodevin-bit.github.io/geoculture/';
+  var url  = 'https://www.geo-culture.io/';
   // Mobile : partage natif direct
   if(navigator.share) {
     navigator.share({ title:'GeoCulture', text:text }).catch(function(){});

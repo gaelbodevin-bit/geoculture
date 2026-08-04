@@ -9,12 +9,14 @@ const db = admin.firestore();
 // Limite le nombre d'instances simultanées : borne le coût maximal en cas de spam/DoS
 setGlobalOptions({ region: 'us-central1', maxInstances: 10 });
 
-// CORS : égalité STRICTE (startsWith accepterait gaelbodevin-bit.github.io.evil.com)
-const ALLOWED_ORIGIN = 'https://gaelbodevin-bit.github.io';
+// CORS : liste blanche stricte (égalité exacte, pas de startsWith)
+const ALLOWED_ORIGINS = ['https://www.geo-culture.io', 'https://geo-culture.io'];
 const MAX_AMOUNT_EUR = 500; // plafond anti-fraude (carding, erreurs de saisie, litiges)
 
-function setCORS(res) {
-  res.set('Access-Control-Allow-Origin', ALLOWED_ORIGIN);
+function setCORS(res, req) {
+  const origin = (req && req.headers && req.headers.origin) || '';
+  res.set('Access-Control-Allow-Origin', ALLOWED_ORIGINS.indexOf(origin) !== -1 ? origin : ALLOWED_ORIGINS[0]);
+  res.set('Vary', 'Origin');
   res.set('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   res.set('Access-Control-Max-Age', '3600');
@@ -64,7 +66,7 @@ exports.stripeWebhook = onRequest(async (req, res) => {
 
 // ── Créer session Checkout via fetch + Bearer token ─────────────────────────
 exports.createCheckoutSession = onRequest(async (req, res) => {
-  setCORS(res);
+  setCORS(res, req);
   if (req.method === 'OPTIONS') return res.status(204).send('');
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
@@ -108,8 +110,8 @@ exports.createCheckoutSession = onRequest(async (req, res) => {
       mode: 'payment',
       customer_email: email,
       metadata: { uid },
-      success_url: 'https://gaelbodevin-bit.github.io/geoculture/?premium=success',
-      cancel_url: 'https://gaelbodevin-bit.github.io/geoculture/?premium=cancel',
+      success_url: 'https://www.geo-culture.io/?premium=success',
+      cancel_url: 'https://www.geo-culture.io/?premium=cancel',
       locale: 'fr'
     });
     return res.status(200).json({ result: { url: session.url, sessionId: session.id } });
