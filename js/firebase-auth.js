@@ -21,6 +21,8 @@ var fbDb = getFirestore(fbApp);
 var fbFunctions = getFunctions(fbApp, 'us-central1');
 var currentUserPremium = false;
 var fbProvider = new GoogleAuthProvider();
+// Force l'écran de choix du compte Google à chaque connexion
+fbProvider.setCustomParameters({ prompt: 'select_account' });
 
 // Utilisateur courant
 var currentUser = null;
