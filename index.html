@@ -10,12 +10,6 @@
   <meta property="og:type" content="website">
   <title>GéoCulture — Jeu de géolocalisation culturelle</title>
 
-  <!-- Google AdSense -->
-  <!-- REMPLACER ca-pub-XXXXXXXXXXXXXXXX par votre ID AdSense -->
-  <!--
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-  -->
-
   <!-- Polices -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,39 +21,6 @@
   <link rel="stylesheet" href="css/style.css?v=3">
 
   <style>
-    /* ── Pub bannière top ── */
-    #ad-top {
-      width: 100%;
-      background: #0d1120;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 0;
-      overflow: hidden;
-      flex-shrink: 0;
-    }
-    #ad-top ins {
-      display: block;
-      width: 728px;
-      height: 90px;
-    }
-    /* Sur mobile, cacher la bannière top (trop large) */
-    @media (max-width: 800px) {
-      #ad-top { display: none; }
-    }
-
-    /* ── Pub rectangle inter-manche ── */
-    #ad-inter {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin: 12px 0;
-    }
-    #ad-inter ins {
-      display: block;
-      width: 300px;
-      height: 250px;
-    }
 
     /* Logo overlay bicolore (Baloo 2) */
     .otitle { color: var(--text) !important; }
@@ -85,19 +46,6 @@
 </head>
 <body>
   <div id="app-wrapper">
-
-    <!-- ══ PUB BANNIÈRE HAUT (728×90) ══ -->
-    <div id="ad-top">
-      <!--
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="XXXXXXXXXX"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      -->
-    </div>
 
     <!-- ══ JEU ══ -->
     <div id="g">
@@ -179,18 +127,11 @@
   <!-- Données (561 lieux) -->
   <script src="js/data.js?v=2"></script>
   <!-- Événements historiques (mode Premium) -->
-  <script src="js/events.js?v=1"></script>
+  <script src="js/events.js?v=2"></script>
   <!-- Firebase Auth -->
-  <script type="module" src="js/firebase-auth.js?v=3"></script>
+  <script type="module" src="js/firebase-auth.js?v=4"></script>
   <!-- Logique du jeu -->
   <script type="module" src="js/multiplayer.js?v=1"></script>
-  <script defer src="js/game.js?v=14"></script>
-
-  <!-- AdSense init (décommenter apr&#232;s approbation) -->
-  <!--
-  <script>
-    // Les blocs ins.adsbygoogle dans #ad-top et #ad-inter sont initialisés automatiquement
-  </script>
-  -->
+  <script defer src="js/game.js?v=15"></script>
 </body>
 </html>
