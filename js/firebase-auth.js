@@ -557,24 +557,27 @@ function redeemCode() {
   var code = input.value.trim().toUpperCase();
   if (code.length < 4) { msg.style.color='#ef4444'; msg.textContent='Code invalide.'; return; }
   msg.style.color='#94a3b8'; msg.textContent='V\u00e9rification\u2026';
-  // Validation + attribution du premium 100% cote serveur (Cloud Function redeemCode).
-  var redeemFn = httpsCallable(fbFunctions, 'redeemCode');
-  redeemFn({ code: code }).then(function(res) {
-    var d = (res && res.data) ? res.data : {};
-    if (d.ok) {
+  // Appel HTTP direct (Bearer token) — même modèle que createCheckoutSession qui fonctionne.
+  currentUser.getIdToken(true).then(function(token){
+    return fetch('https://us-central1-geo-culture-73453.cloudfunctions.net/redeemCode',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},
+      body:JSON.stringify({ data:{ code: code } })
+    });
+  }).then(function(res){
+    return res.json().then(function(d){ return { status: res.status, d: d }; });
+  }).then(function(r){
+    if (r.status === 200 && r.d && r.d.ok) {
       currentUserPremium = true;
       window.isPremium = true;
       msg.style.color='#22c55e'; msg.textContent='\u2713 Premium activ\u00e9 ! Profitez bien.';
       setTimeout(function() { if(typeof showMenu==='function') showMenu(); }, 1200);
     } else {
-      msg.style.color='#ef4444'; msg.textContent = d.error || 'Code invalide.';
+      msg.style.color='#ef4444'; msg.textContent = (r.d && r.d.error) ? r.d.error : 'Code invalide.';
     }
   }).catch(function(e) {
-    var em = (e && e.message) ? e.message : 'Erreur inconnue';
-    if (/not-found|introuvable/i.test(em)) em = 'Code introuvable.';
-    else if (/failed-precondition|already|utilis/i.test(em)) em = 'Code d\u00e9j\u00e0 utilis\u00e9.';
-    else if (/unauthenticated/i.test(em)) em = 'Connecte-toi d\'abord.';
-    msg.style.color='#ef4444'; msg.textContent = em;
+    console.error('redeemCode error:', e);
+    msg.style.color='#ef4444'; msg.textContent = 'Erreur r\u00e9seau, r\u00e9essaie.';
   });
 }
 

@@ -129,43 +129,51 @@ exports.checkPremium = onCall(async (request) => {
 });
 
 // ── Activer un code de test (Premium) — 100% côté serveur ───────────────────
-// Sécurité : identité prise depuis request.auth, format validé,
-// transaction atomique = un code ne peut jamais servir deux fois.
-exports.redeemCode = onCall(async (request) => {
-  if (!request.auth) {
-    throw new HttpsError('unauthenticated', 'Connexion requise.');
+// redeemCode : requête HTTP (même modèle que createCheckoutSession, évite les frictions onCall/SDK)
+// Sécurité : vérifie le token Firebase en Bearer, valide le format, transaction atomique.
+exports.redeemCode = onRequest(async (req, res) => {
+  setCORS(res, req);
+  if (req.method === 'OPTIONS') return res.status(204).send('');
+  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+
+  const authHeader = req.headers.authorization || '';
+  if (!authHeader.startsWith('Bearer ')) return res.status(401).json({ error: 'Connexion requise.' });
+
+  let uid;
+  try {
+    const decoded = await admin.auth().verifyIdToken(authHeader.split('Bearer ')[1]);
+    uid = decoded.uid;
+  } catch (err) {
+    console.error('Auth error:', err.message);
+    return res.status(401).json({ error: 'Session invalide, reconnecte-toi.' });
   }
-  const uid = request.auth.uid;
-  const code = String((request.data && request.data.code) || '').trim().toUpperCase();
+
+  const body = req.body && req.body.data ? req.body.data : (req.body || {});
+  const code = String(body.code || '').trim().toUpperCase();
   if (!/^[A-Z0-9-]{4,24}$/.test(code)) {
-    throw new HttpsError('invalid-argument', 'Code invalide.');
+    return res.status(400).json({ error: 'Code invalide.' });
   }
 
   const codeRef = db.collection('testCodes').doc(code);
   const userRef = db.collection('users').doc(uid);
 
-  await db.runTransaction(async (tx) => {
-    const snap = await tx.get(codeRef);
-    if (!snap.exists) {
-      throw new HttpsError('not-found', 'Code introuvable.');
-    }
-    if (snap.data().used === true) {
-      throw new HttpsError('failed-precondition', 'Code déjà utilisé.');
-    }
-    tx.update(codeRef, {
-      used: true,
-      usedBy: uid,
-      usedAt: admin.firestore.FieldValue.serverTimestamp()
+  try {
+    await db.runTransaction(async (tx) => {
+      const snap = await tx.get(codeRef);
+      if (!snap.exists) { const e = new Error('nf'); e.http = 404; e.msg = 'Code introuvable.'; throw e; }
+      if (snap.data().used === true) { const e = new Error('used'); e.http = 409; e.msg = 'Code déjà utilisé.'; throw e; }
+      tx.update(codeRef, { used: true, usedBy: uid, usedAt: admin.firestore.FieldValue.serverTimestamp() });
+      tx.set(userRef, {
+        premium: true, premiumSource: 'testCode', premiumCode: code,
+        premiumAt: admin.firestore.FieldValue.serverTimestamp()
+      }, { merge: true });
     });
-    tx.set(userRef, {
-      premium: true,
-      premiumSource: 'testCode',
-      premiumCode: code,
-      premiumAt: admin.firestore.FieldValue.serverTimestamp()
-    }, { merge: true });
-  });
-
-  return { ok: true };
+    return res.status(200).json({ ok: true });
+  } catch (err) {
+    if (err.http) return res.status(err.http).json({ error: err.msg });
+    console.error('redeemCode error:', err);
+    return res.status(500).json({ error: 'Erreur serveur.' });
+  }
 });
 
 // ── Supprimer compte (RGPD) ─────────────────────────────────────────────────
