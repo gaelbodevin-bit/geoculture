@@ -1,37 +1,37 @@
 const ROUNDS=[
   {name:"Tour Eiffel — Paris, France",lat:48.8584,lng:2.2945,desc:"Symbole universel de la France, la Tour Eiffel fut d'abord critiquée comme une «verrue de fer» avant de devenir le monument payant le plus visité au monde avec 7 millions de visiteurs par an.",photo:"photos/tour_eiffel.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Champ-de-Mars, Exposition Universelle de 1889, construite par Gustave Eiffel"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"7ème arrondissement de rive gauche de la Seine, face au Trocadéro"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"7ème arrondissement de rive gauche de la Seine, face au Trocadéro"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Champ-de-Mars, Exposition Universelle de 1889, construite par Gustave Eiffel"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument en fer forgé le plus visité au monde, symbole de Paris"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour Eiffel à Paris, France"}
   ]},
   {name:"Notre-Dame de Paris — France",lat:48.853,lng:2.3499,desc:"Joyau du gothique français, Notre-Dame a failli disparaître lors de l'incendie d'avril 2019. Sa reconstruction mobilisa des artisans du monde entier et elle a rouvert ses portes en décembre 2024.",photo:"photos/notre_dame_de_paris.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Île de la Cité, cathédrale gothique dont la construction débuta en 1163 sous l'évêque Maurice de Sully"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre géographique de point zéro des routes nationales"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale incendiée en 2019 et rouverte en décembre 2024"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre géographique du point zéro des routes nationales de France"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale incendiée en 2019 et rouverte en décembre 2024 en France"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La cathédrale Notre-Dame à Paris, France"}
   ]},
   {name:"Moulin Rouge — Montmartre, Paris",lat:48.8842,lng:2.3322,desc:"Fondé en 1889, le Moulin Rouge inventa le french cancan et accueillit Toulouse-Lautrec, Mistinguett et Edith Piaf. Ses 1 200 plumes d'autruche par spectacle en font un symbole du Paris de la fête.",photo:"photos/moulin_rouge.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Boulevard de Clichy, Pigalle — cabaret fondé en 1889 par Charles Zidler et Joseph Oller"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de cabarets au pied d'une butte célèbre, rive droite de la capitale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cabaret au pied d'une butte célèbre, rive droite de la capitale française"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cabaret parisien mondialement célèbre pour le french cancan, Paris"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le cabaret du Moulin Rouge à Paris, France"}
   ]},
   {name:"Colisée — Rome, Italie",lat:41.8902,lng:12.4922,desc:"L'amphithéâtre le plus grand de l'Antiquité pouvait se remplir d'eau pour simuler des batailles navales. Ses 80 sorties permettaient d'évacuer 80 000 spectateurs en moins de 10 minutes.",photo:"photos/colisee.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Amphithéâtre flavien bâti sous Vespasien en 70 ap. J.-C., Via Sacra, entre le Forum et le Palatin"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre historique, entre le Forum Romain et le mont Palatin"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monument du centre historique, entre le Forum Romain et le mont Palatin"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Amphithéâtre flavien bâti sous Vespasien en 70 ap. J.-C., Via Sacra, entre le Forum et le Palatin"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand amphithéâtre antique du monde, pouvant accueillir 80 000 spectateurs, Rome"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Colisée à Rome, Italie"}
   ]},
   {name:"Chapelle Sixtine — Vatican",lat:41.9029,lng:12.4545,desc:"Michel-Ange peignit les 512 m² de la voûte en seulement 4 ans, allongé sur un échafaudage. La scène de la création d'Adam, où les doigts de Dieu et de l'homme se frôlent, reste l'une des images les plus reproduites de l'Histoire.",photo:"photos/chapelle_sixtine.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chapelle palatiale d'une cité-État souveraine, plafond peint par Michel-Ange entre 1508 et 1512 sur commande du pape Jules II"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Musées, cité-État enclavée dans bord du Tibre"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus petit État souverain du monde, siège de la papauté catholique"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Musées, cité-État enclavée dans bord du Tibre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Chapelle palatiale, plafond peint par Michel-Ange entre 1508 et 1512 sur commande du pape Jules II"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chapelle du plus petit État souverain du monde, siège de la papauté catholique"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Chapelle Sixtine au Vatican (enclave de Rome)"}
   ]},
   {name:"Sagrada Família — Barcelone, Espagne",lat:41.4036,lng:2.1744,desc:"Gaudí consacra les 43 dernières années de sa vie à cette cathédrale. Renversé par un tramway en 1926, il fut enterré dans sa propre église. La construction, financée uniquement par les entrées des visiteurs, devrait s'achever en 2026.",photo:"photos/cathedrale_de_sagrada_familia_nuit.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Basilique d'Antoni Gaudí, chantier ouvert depuis 1882 dans un quartier moderniste — toujours en construction"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier moderniste de la deuxième ville, à deux kilomètres de la mer"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus célèbre basilique toujours en constuction"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Basilique d'Antoni Gaudí, chantier ouvert depuis 1882 dans un quartier moderniste — toujours en construction"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale inachevée la plus visitée d'Europe, en Catalogne, Barcelone"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Sagrada Família à Barcelone, Espagne"}
   ]},
@@ -39,30 +39,30 @@ const ROUNDS=[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais et forteresse nasride du XIVe siècle sur une colline aux pieds d'une sierra enneigée"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline surplombant le quartier Albaicín, face à la Sierra Nevada, Andalousie"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chef-d'œuvre de l'architecture mauresque, le plus visité d'Espagne, Grenade"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Alhambra de Grenade, en Andalousie (Espagne)"}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Alhambra de Grenade, en Andalousie,Espagne"}
   ]},
   {name:"Big Ben — Londres, Royaume-Uni",lat:51.5007,lng:-0.1246,desc:"Big Ben ne désigne pas la tour mais la cloche de 13,7 tonnes qu'elle abrite. Silenciée pour restauration de 2017 à 2022, elle a retenti à nouveau pour le couronnement de Charles III en mai 2023.",photo:"photos/big_ben.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tour Elizabeth au Palais de Westminster, inaugurée en 1859, bord de la Tamise"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Westminster, à 500m du 10 Downing Street, cœur politique de la capitale"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Quartier de Westminster, à 500m du 10 Downing Street, cœur politique de la capitale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tour Elizabeth au Palais de Westminster, inaugurée en 1859, bord de la Tamise"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Horloge emblématique du Parlement britannique, symbole de Londres"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Big Ben à Londres, Royaume-Uni"}
   ]},
   {name:"Stonehenge — Wiltshire, Royaume-Uni",lat:51.1789,lng:-1.8262,desc:"Stonehenge fut édifié en trois phases entre -3000 et -1500 av. J.-C. Les plus grandes pierres pesant 25 tonnes furent transportées depuis le Pays de Galles sur 250 km, probablement à l'aide de traîneaux, de rondins et de rivières.",photo:"photos/stonehenge.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cercle de mégalithes érigé entre -3000 et -1500 av. J.-C. sur la plaine de Salisbury"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comté du Wiltshire, plaine du sud du pays, à 13 km de la cathédrale de Salisbury"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cercle de mégalithes érigé entre -3000 et -1500 av. J.-C."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Monument préhistorique, comté du Wiltshire, plaine du sud du pays, à 13 km de la cathédrale de Salisbury"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument préhistorique le plus célèbre d'Europe, classé UNESCO"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Stonehenge dans le comté du Wiltshire, Angleterre (Royaume-Uni)"}
   ]},
   {name:"Acropole — Athènes, Grèce",lat:37.9715,lng:23.7267,desc:"Le Parthénon n'a jamais été achevé dans sa forme originale : ses colonnes légèrement inclinées vers l'intérieur et bombées créaient une illusion d'optique le faisant paraître parfaitement droit.",photo:"photos/acropole.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rocher calcaire de 156m surplombant la ville, site du Parthénon dédié à Athéna Parthénos"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Plaka, rive du golfe Saronique, région de l'Attique"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rocher calcaire de 156m surplombant la ville, site du Parthénon dédié à Athéna"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:" Célèbre temple grec du quartier Plaka, rive du golfe Saronique, région de l'Attique"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple grec antique le plus célèbre du monde, berceau de la civilisation occidentale, Athènes"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Acropole à Athènes, Grèce"}
   ]},
   {name:"Palais de l'Élysée — Paris, France",lat:48.8699,lng:2.3167,desc:"Construit en 1722, le palais de l'Élysée fut la résidence de Madame de Pompadour, favorite de Louis XV. Devenu résidence présidentielle en 1848, il possède un standard téléphonique actif 24h/24 relié directement à la force de frappe nucléaire française.",photo:"photos/palais_de_l_elysee.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rue du Faubourg Saint-Honoré, 8ème arrondissement, résidence officielle du président de la République française depuis 1848"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier des Champs-Élysées, entre le Grand Palais et la Madeleine"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Résidence et bureau du président de la République française, Paris"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:" Résidence officielle du président de la République française depuis 1848"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Résidence et bureau du président de la République française, Paris"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:" Résidence du président de la République française,Quartier des Champs-Élysées, entre le Grand Palais et la Madeleine"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de l'Élysée à Paris, France"}
   ]},
   {name:"Château de Versailles — France",lat:48.8049,lng:2.1204,desc:"Versailles consomma 6% du budget total du royaume sous Louis XIV. Ses jardins de 800 hectares nécessitaient 1 200 personnes pour leur entretien. Le roi se levait à 8h30 dans une cérémonie appelée le «Lever» : 200 courtisans s'y bousculaient pour tenir sa chemise ou lui présenter sa perruque.",photo:"photos/chateau_de_versailles.jpg",hints:[
