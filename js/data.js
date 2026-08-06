@@ -66,897 +66,897 @@ const ROUNDS=[
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de l'Élysée à Paris, France"}
   ]},
   {name:"Château de Versailles — France",lat:48.8049,lng:2.1204,desc:"Versailles consomma 6% du budget total du royaume sous Louis XIV. Ses jardins de 800 hectares nécessitaient 1 200 personnes pour leur entretien. Le roi se levait à 8h30 dans une cérémonie appelée le «Lever» : 200 courtisans s'y bousculaient pour tenir sa chemise ou lui présenter sa perruque.",photo:"photos/chateau_de_versailles.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Château royal de Louis XIV, transformé à partir de 1661 par Jules Hardouin-Mansart, galerie des Glaces"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune des Yvelines, à 17 km au sud-ouest de la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand château du monde par surface, ancienne résidence royale française"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancien pavillon de chasse mué en palais à partir de 1661 pour fixer la noblesse sous l'œil du souverain, galerie des Glaces"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense château et résidence royale, commune des Yvelines, à 17 km au sud-ouest d'une grande capitale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus vaste château du monde par la surface, symbole de la monarchie absolue, près de Paris"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Versailles, près de Paris (France)"}
   ]},
   {name:"Rijksmuseum — Amsterdam, Pays-Bas",lat:52.36,lng:4.8852,desc:"La «Ronde de nuit» de Rembrandt mesure 3,6 m × 4,3 m. Pour la déplacer lors d'une restauration en 1975, les autorités néerlandaises percèrent une porte spéciale dans le mur du musée.",photo:"photos/rijksmuseum.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Musée national d'un pays du nord de l'Europe inauguré en 1885 sur une grande place, abritant La Ronde de Nuit de Rembrandt"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier des musées au sud du centre historique, entre le Vondelpark et les canaux"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal musée d'art et d'histoire des Pays-Bas, à Amsterdam"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Musée national de brique inauguré en 1885, abritant La Ronde de Nuit de Rembrandt"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grand musée d'art au bord d'un parc, quartier des musées d'une ville sillonnée de canaux"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal musée d'art et d'histoire du pays, à Amsterdam"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Rijksmuseum à Amsterdam, Pays-Bas"}
   ]},
   {name:"Maison d'Anne Frank — Amsterdam",lat:52.3752,lng:4.8839,desc:"Anne Frank rédigea son journal entre 1942 et 1944, dans une annexe secrète cachée derrière une bibliothèque pivotante. Traduit en 70 langues, son témoignage est l'un des livres les plus lus au monde.",photo:"photos/maison_d_anne_frank.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Prinsengracht 263, maison où Anne Frank se cacha avec sa famille de 1942 à 1944"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier du Jordaan, rive ouest du canal Prinsengracht, Amsterdam"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Musée dédié à Anne Frank, auteure du célèbre journal de guerre, Amsterdam"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Maison-annexe où une adolescente juive et sa famille se cachèrent de 1942 à 1944, journal devenu célèbre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Maison-musée le long d'un canal du quartier du Jordaan, rive ouest d'une ville de brique et d'eau"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Musée dédié à l'auteure d'un journal de guerre bouleversant, Amsterdam"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Maison d'Anne Frank à Amsterdam, Pays-Bas"}
   ]},
   {name:"Mur de Berlin — Allemagne",lat:52.5351,lng:13.3905,desc:"Le mur fut construit en une seule nuit du 12 au 13 août 1961, séparant 40 000 Berlinois de leurs familles. Il tomba non par décision officielle mais suite à une annonce télévisée mal préparée le 9 novembre 1989.",photo:"photos/mur_de_berlin.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"East Side Gallery, Mühlenstraße, vestiges du mur érigé en 1961 sur ordre d'Erich Honecker"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord de la Spree, quartier de Friedrichshain, secteur oriental de la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand fragment subsistant du mur qui divisait Berlin de 1961 à 1989"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Longue fresque à ciel ouvert sur les restes d'une barrière de béton dressée en 1961, secteur oriental"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vestige d'un mur peint au bord de la Spree, ancien secteur oriental d'une capitale jadis coupée en deux"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand fragment subsistant du mur qui divisa la ville de 1961 à 1989, Berlin"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les vestiges du Mur de Berlin, Allemagne"}
   ]},
   {name:"Neuschwanstein — Bavière, Allemagne",lat:47.5576,lng:10.7498,desc:"Louis II de Bavière ne dormit que 11 nuits dans son château de conte de fées avant d'être déclaré fou et mort mystérieusement. Walt Disney s'en inspira directement pour le château de La Belle au Bois Dormant.",photo:"photos/neuschwanstein.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Château néo-roman commandé en 1869 par un roi bâtisseur passionné de Wagner, resté inachevé à sa mort en 1886"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Alpes bavaroises, près de Füssen, à la frontière autrichienne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château de conte de fées ayant inspiré Walt Disney, Bavière"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Château néo-roman perché, contreforts alpins près de Füssen, proche d'une frontière méridionale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château de conte de fées qui inspira le logo de Walt Disney, Bavière"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le château de Neuschwanstein en Bavière, Allemagne"}
   ]},
   {name:"Tour de Pise — Italie",lat:43.723,lng:10.3966,desc:"La Tour de Pise penche depuis sa deuxième phase de construction au XIIe siècle, à cause d'un sol trop mou d'un côté. Des travaux de 1990 à 2001 ont réduit l'inclinaison de 44 cm pour la stabiliser pour les 200 prochaines années.",photo:"photos/tour_de_pise.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Campanile du Duomo di Pisa, construction entamée en 1173, inclinaison de 3,97 degrés due à un sol meuble"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Piazza dei Miracoli (Place des Miracles), Pise, Toscane"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour penchée mondialement connue, emblème de la Toscane italienne"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Campanile d'une cathédrale, chantier entamé en 1173, penché de près de 4° à cause d'un sol meuble"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tour-clocher de marbre blanc sur la Place des Miracles, plaine de Toscane"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour penchée mondialement connue, emblème toscan, Pise"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour de Pise en Toscane, Italie"}
   ]},
   {name:"Palais des Doges — Venise, Italie",lat:45.4337,lng:12.3401,desc:"Le Palais des Doges abritait le Pont des Soupirs, par lequel les condamnés traversaient de la salle des interrogatoires vers la prison, poussant leur dernier soupir en apercevant Venise.",photo:"photos/palais_des_doges.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palazzo Ducale sur la Piazzetta de l'ancienne République maritime, siège du gouvernement de la Sérénissime du IXe au XVIIIe siècle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sestiere de San Marco, bord de la lagune, face à l'île de San Giorgio Maggiore"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Symbole du pouvoir vénitien, ville construite sur 118 îlots, Venise, Italie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais gothique d'une ancienne république maritime, siège d'un pouvoir marchand du IXe au XVIIIe siècle"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Palais de dentelle de marbre au bord d'une lagune, ville bâtie sur 118 îlots reliés par des ponts"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais symbole du pouvoir des Doges, cité des canaux, Venise"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais des Doges à Venise, Italie"}
   ]},
   {name:"Cathédrale Saint-Basile — Moscou, Russie",lat:55.7525,lng:37.6231,desc:"Selon la légende, Ivan le Terrible fit aveugler ses architectes après l'achèvement de la cathédrale pour qu'ils ne puissent jamais construire quelque chose d'aussi beau ailleurs. Cette histoire est probablement apocryphe.",photo:"photos/cathedrale_saint_basile.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cathédrale de l'Intercession de la Mère de Dieu sur les Douves, Place Rouge, construite de 1555 à 1561 sous Ivan le Terrible"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande place centrale, entre la forteresse du Kremlin et le grand magasin d'État"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale aux bulbes colorés, emblème de la Russie, Moscou"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Église aux coupoles en flammes bâtie de 1555 à 1561 sous un tsar redouté, sur une grande place pavée"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cathédrale aux bulbes torsadés sur une place centrale, entre une forteresse-citadelle et un grand magasin d'État"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale aux bulbes multicolores, emblème d'un pays immense, Moscou"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cathédrale Saint-Basile sur la Place Rouge à Moscou, Russie"}
   ]},
   {name:"Palais du Parlement — Bucarest, Roumanie",lat:44.4275,lng:26.0875,desc:"Le Parlement de Bucarest est le deuxième plus grand bâtiment administratif au monde après le Pentagone. Ceaușescu fit raser un cinquième de la vieille ville de Bucarest pour le construire — dont 19 églises orthodoxes et 7 synagogues.",photo:"photos/palais_du_parlement.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palatul Parlamentului, commandé par Nicolae Ceaușescu en 1984, 2ème plus grand bâtiment administratif du monde"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline Spirii, centre de la capitale, pays d'Europe de l'Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand bâtiment du monde par volume intérieur, capitale de la Roumanie, Bucarest"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Colosse administratif commandé par un dictateur en 1984, resté en partie vide, 2e plus grand bâtiment du genre au monde"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Palais parlementaire titanesque sur la colline Spirii, au centre d'une capitale d'Europe de l'Est"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Bâtiment le plus lourd du monde par le volume, siège du parlement, Bucarest"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais du Parlement à Bucarest, Roumanie"}
   ]},
   {name:"Grande Muraille de Chine — Mutianyu",lat:40.4319,lng:116.5704,desc:"Contrairement à la légende, la Grande Muraille n'est pas visible à l'œil nu depuis l'espace. Mais elle reste l'une des constructions humaines les plus longues avec ses 21 196 km, soit la moitié du périmètre de la Terre.",photo:"photos/grande_muraille_de_chine.JPG",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Section restaurée aux 23 tours de guet, construite sous la dynastie Ming (1368-1644) sur des fondations plus anciennes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Montagnes au nord-est de la capitale, à 73 km du centre-ville"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus longue structure construite par l'Homme, 21 196 km de long au total, Mutianyu"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Longue muraille serpentant sur des crêtes montagneuses, au nord-est d'une immense capitale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus longue construction humaine, 21 196 km au total, section de Mutianyu près de Pékin"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Grande Muraille de Chine (Section de Mutianyu, près de Pékin)"}
   ]},
   {name:"Cité Interdite — Pékin, Chine",lat:39.9163,lng:116.3972,desc:"Avec ses 9 999 pièces (une de moins que le palais céleste des dieux selon la tradition), la Cité Interdite hébergea 24 empereurs chinois. Aucun simple citoyen n'y pénétra pendant 500 ans.",photo:"photos/cite_interdit.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gugong, palais impérial construit entre 1406 et 1420 sous l'empereur Yongle, 980 bâtiments"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de la capitale, au nord de la grande place célèbre, entouré de douves"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand palais du monde, résidence des empereurs Ming et Qing pendant 500 ans, Pékin"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais impérial de 980 bâtiments élevé entre 1406 et 1420, ceint de douves et de murs pourpres"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense palais aux toits d'or au cœur d'une capitale, juste au nord d'une place mondialement connue, entouré de douves"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand palais du monde, demeure des empereurs pendant cinq siècles, Pékin"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cité Interdite à Pékin, Chine"}
   ]},
   {name:"Temple d'or (Harmandir Sahib) — Amritsar, Inde",lat:31.62,lng:74.8765,desc:"Le Temple d'Or recouvre 750 kg de feuilles d'or pur. Les Sikhs cuisinent et servent gratuitement 100 000 repas par jour à tous les visiteurs sans distinction de religion, de caste ou de nationalité.",photo:"photos/temple_d_or_harmandir_sahib.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Harmandir Sahib, lieu saint sikh construit en 1604 par Guru Arjan Dev Ji, entouré du lac Amrit Sarovar"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cœur d'une ville sainte du Pendjab indien, à 30 km de la frontière pakistanaise"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple le plus sacré du sikhisme, recouvert de feuilles d'or, Amritsar"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sanctuaire recouvert d'or au milieu d'un bassin sacré, fondé en 1604 par un maître spirituel"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Temple à coupole dorée au centre d'un bassin, ville sainte du Pendjab, à 30 km d'une frontière tendue"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lieu le plus sacré du sikhisme, coupole dorée reflétée dans l'eau, Amritsar"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple d'Or d'Amritsar, Inde"}
   ]},
   {name:"Taj Mahal — Agra, Inde",lat:27.1751,lng:78.0421,desc:"Le Taj Mahal change de couleur selon la lumière : rosé à l'aube, blanc éblouissant à midi, doré au coucher du soleil, argenté au clair de lune. Shah Jahan, vieilli et emprisonné par son fils, pouvait apercevoir le mausolée de sa fenêtre jusqu'à sa mort.",photo:"photos/taj_mahal.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mausolée en marbre blanc commandé par Shah Jahan pour son épouse Mumtaz Mahal, construit de 1632 à 1653"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive droite de la Yamuna, État de l'Uttar Pradesh"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Merveille du monde, mausolée moghol classé UNESCO, Agra, Inde"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mausolée de marbre blanc élevé de 1632 à 1653 par un empereur pour son épouse défunte"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mausolée à coupole et quatre minarets se mirant dans un bassin, rive droite de la Yamuna, Uttar Pradesh"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mausolée moghol classé merveille du monde, Agra"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Taj Mahal à Agra, Inde"}
   ]},
   {name:"Mont Fuji — Japon",lat:35.3606,lng:138.7274,desc:"Le Fuji est considéré comme sacré depuis des siècles — les femmes n'avaient pas le droit de l'escalader jusqu'en 1868. Chaque été, près de 200 000 personnes font l'ascension dont beaucoup de nuit pour voir le lever du soleil.",photo:"photos/mont_fuji.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stratovolcan de 3 776 m, préfectures de Shizuoka et Yamanashi, dernier réveil en 1707"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Région de Chūbu, à 100 km au sud-ouest de la mégalopole, visible par temps clair depuis la capitale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute montagne du Japon, symbole national classé UNESCO"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cône volcanique parfait de 3 776 m, sommet enneigé endormi depuis 1707"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Volcan sacré de la région du Chūbu, visible par temps clair depuis une mégalopole à 100 km"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute montagne du pays, volcan symbole national, à l'ouest de Tokyo"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mont Fuji, Japon"}
   ]},
   {name:"Angkor Wat — Siem Reap, Cambodge",lat:13.4125,lng:103.867,desc:"Angkor Wat est le plus grand bâtiment religieux du monde. La cité d'Angkor, qui l'entourait, était au XIIe siècle la plus grande ville pré-industrielle du monde, avec peut-être un million d'habitants.",photo:"photos/angkor_wat.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple-montagne khmer construit par Suryavarman II au XIIe siècle, dédié à Vishnu, plus grand édifice religieux du monde"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Temple du nord-ouest du pays, près d'un grand lac intérieur"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple du monde, joyau de l'architecture khmère, Siem Reap, Cambodge"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple-montagne du XIIe siècle dédié à un dieu hindou, cinq tours en fleur de lotus, douves immenses"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vaste temple khmer aux tours en lotus, nord-ouest du pays, près d'un grand lac intérieur"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand édifice religieux du monde, joyau khmer, Siem Reap"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le complexe d'Angkor Wat à Siem Reap, Cambodge"}
   ]},
   {name:"Marina Bay Sands — Singapour",lat:1.2834,lng:103.8607,desc:"La piscine à débordement du Marina Bay Sands, à 200 m de hauteur, est la plus grande piscine en hauteur du monde avec ses 150 m de long. Elle ne relie les tours que visuellement — elle est portée par une structure distincte de 10 000 tonnes.",photo:"photos/marina_bay_sands.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Complexe hôtelier de Moshe Safdie ouvert en 2010, trois tours reliées par une plateforme panoramique de 340m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Baie centrale de la cité-État, bord d'un détroit maritime, cœœur financier"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Hôtel iconique à la piscine suspendue, skyline de Singapour"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hôtel ouvert en 2010, trois tours coiffées d'une plateforme-navire de 340 m avec piscine à débordement"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Hôtel-paquebot posé sur trois tours, baie centrale d'une cité-État insulaire bordant un détroit"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Hôtel iconique à la piscine suspendue dominant la baie, Singapour"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Marina Bay Sands à Singapour"}
   ]},
   {name:"Burj Khalifa — Dubaï, Émirats Arabes Unis",lat:25.1972,lng:55.2744,desc:"Le Burj Khalifa est si haut que les résidents des derniers étages peuvent voir deux couchers de soleil le même jour : l'un depuis le sol, puis un second après être montés en ascenseur en quelques minutes.",photo:"photos/burj_khalifa.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gratte-ciel de 829,8 m conçu par Adrian Smith (Skidmore, Owings & Merrill), inauguré le 4 janvier 2010"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier Downtown de la métropole, à côté d'un immense centre commercial et de fontaines célèbres"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand bâtiment du monde, 163 étages, Dubaï, Émirats Arabes Unis"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Flèche de verre de 829,8 m inaugurée en 2010, plus haute structure jamais bâtie par l'Homme"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gratte-ciel effilé au cœur d'une métropole du désert, près d'un centre commercial géant et de fontaines dansantes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haut gratte-ciel du monde, 163 étages, Dubaï"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Burj Khalifa à Dubaï, Émirats Arabes Unis"}
   ]},
   {name:"Petra — Jordanie",lat:30.3285,lng:35.4444,desc:"Le canyon du Siq, gorge menant à Petra, mesure par endroits moins d'un mètre de large pour 80 mètres de haut. Les touristes qui marchent dans cette fissure rouge au lever du soleil émergent sur le Trésor — un moment considéré comme l'un des plus beaux au monde.",photo:"photos/petra.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Al-Khazneh (Le Trésor), tombe nabatéenne du Ier siècle av. J.-C. taillée dans le grès rose, Wadi Musa"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gouvernorat du sud du pays, dans les monts Shara"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité rose taillée dans le roc, merveille du monde, Jordanie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Façade de temple taillée au Ier siècle av. J.-C. dans une paroi de grès rose, au bout d'une gorge étroite"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cité troglodyte nabatéenne taillée dans le roc, montagnes désertiques du sud du pays"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité rose sculptée dans le roc, merveille du monde, sud de la Jordanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La cité antique de Pétra, Jordanie"}
   ]},
   {name:"Mur des Lamentations — Jérusalem",lat:31.7767,lng:35.2345,desc:"Le Mur des Lamentations est le seul vestige du mur de soutènement du Second Temple, détruit en 70 ap. J.-C. par les Romains. Les pèlerins y glissent des petits papiers portant des prières — environ un million par an.",photo:"photos/mur_des_lamentations.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kotel, vestige du mur ouest de l'esplanade du Second Temple d'Hérode le Grand, vieille ville sainte des trois religions"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier juif de la Vieille Ville de Jérusalem, face au mont du Temple"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lieu saint du judaïsme, vestige du Temple de Salomon, Jérusalem"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vestige du mur ouest de l'esplanade d'un Second Temple, prière au pied d'énormes pierres hérodiennes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mur de prière du quartier juif d'une vieille ville sainte des trois monothéismes, au pied du mont du Temple"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Haut lieu de prière du judaïsme, dernier vestige du Temple, Jérusalem"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mur des Lamentations à Jérusalem"}
   ]},
   {name:"Pyramides de Gizeh — Égypte",lat:29.9792,lng:31.1342,desc:"La Grande Pyramide de Khéops était le plus grand bâtiment du monde pendant 3 800 ans. Ses 2,3 millions de blocs de calcaire sont posés avec une précision millimétrique, sans ciment ni mortier.",photo:"photos/pyramides_de_gizeh.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Nécropole royale de la IVe dynastie — Khéops (2551 av. J.-C.), Khéphren et Mykérinos, plateau de Gizeh"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau de Gizeh, bord du désert libyen, en face du Caire sur la rive ouest du Nil"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Unique merveille du monde antique encore debout, Égypte"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Trois tombeaux royaux monumentaux de la IVe dynastie vers 2500 av. J.-C., alignés sur un plateau désertique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Trois pyramides sur un plateau désertique en bordure d'un fleuve, face à une immense métropole"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Seule des sept merveilles antiques encore debout, banlieue du Caire"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Pyramides de Gizeh, Égypte"}
   ]},
   {name:"Sphinx de Gizeh — Égypte",lat:29.9753,lng:31.1376,desc:"Le nez du Sphinx fut probablement brisé intentionnellement au XVe siècle. Des photographies du XIXe siècle montrent que le Sphinx était recouvert jusqu'aux épaules par les sables du désert pendant des siècles.",photo:"photos/sphinx_de_gizeh.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monolithe calcaire de 73m de long sculpté sous Khéphren vers 2500 av. J.-C., plateau de Gizeh"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"À l'est des pyramides de Gizeh, gardant la nécropole royale, plateau de Gizeh"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand sphinx du monde, gardien des pyramides d'Égypte"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Statue de calcaire à corps de lion et tête humaine, 73 m de long, taillée vers 2500 av. J.-C."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Statue-gardien couchée à l'est de trois grandes pyramides, sur un plateau désertique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand sphinx du monde, gardien des pyramides, banlieue du Caire"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Sphinx de Gizeh en Égypte"}
   ]},
   {name:"Kilimandjaro — Tanzanie",lat:-3.0674,lng:37.3556,desc:"Le Kilimandjaro perd 80% de sa calotte glaciaire depuis 1912 en raison du réchauffement climatique. Ses glaciers sommitaux pourraient disparaître complètement d'ici 2060, menaçant l'approvisionnement en eau de millions d'Africains.",photo:"photos/kilimandjaro.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Uhuru Peak, point culminant du stratovolcan Kibo à 5 895 m, plus haute montagne du continent africain"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Région du nord-est du pays, proche d'une grande capitale voisine"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute montagne d'Afrique, volcan enneigé en zone équatoriale"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Toit d'un continent à 5 895 m, cratère glacé du Kibo dominant la savane, neiges près de l'équateur"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Haut volcan enneigé du nord-est du pays, proche d'une frontière et d'une grande ville voisine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute montagne d'Afrique, volcan enneigé sous l'équateur, près d'Arusha"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kilimandjaro en Tanzanie"}
   ]},
   {name:"Victoria Falls — Zimbabwe/Zambie",lat:-17.9243,lng:25.8572,desc:"L'arc-en-ciel permanent créé par les embruns des chutes Victoria donne naissance à un «arc-en-ciel lunaire» lors des nuits de pleine lune — l'un des phénomènes naturels les plus rares et les plus difficiles à photographier au monde.",photo:"photos/victoria_falls.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosi-oa-Tunya, chutes de 108m de haut et 1,7 km de large sur le fleuve Zambèze, décrites par Livingstone en 1855"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Frontière entre deux pays d'Afrique australe, fleuve majestueux"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande cascade du monde en volume d'eau, Afrique australe"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rideau d'eau de 108 m de haut et 1,7 km de large sur un grand fleuve, « la fumée qui gronde » des autochtones"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immenses chutes d'eau à cheval sur la frontière de deux pays d'Afrique australe, sur un fleuve majestueux"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande cascade du monde par le rideau d'eau, Afrique australe"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Victoria Falls au Zimbabwe/Zambie"}
   ]},
   {name:"Kigali Genocide Memorial — Rwanda",lat:-1.9441,lng:30.0619,desc:"Le mémorial de Kigali honore les 250 000 victimes du génocide rwandais de 1994. En 100 jours, environ 800 000 Tutsis et Hutus modérés furent tués. Le Rwanda, qui a depuis accompli une transformation économique remarquable, commémore chaque 7 avril la Journée internationale de la réflexion.",photo:"photos/kigali_genocide_memorial.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gisozi, mémorial inauguré en 2004 commémorant le génocide de 1994, colline de Kigali"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier d'une capitale d'Afrique centrale, sur une colline des mille collines"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal mémorial du génocide rwandais, capitale du Rwanda"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mémorial inauguré en 2004 sur une colline, honorant les victimes d'un génocide de 1994"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mémorial du génocide sur une colline d'une capitale d'Afrique centrale, pays aux mille collines"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal mémorial du génocide rwandais, capitale, Kigali"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Kigali Genocide Memorial au Rwanda"}
   ]},
   {name:"Statue de l'Unité — Inde (Sardar Patel)",lat:21.8381,lng:73.7198,desc:"La Statue de l'Unité représente Sardar Vallabhbhai Patel, l'homme qui réunit les 562 principautés indiennes en un seul État après l'indépendance. À 182 mètres, elle est deux fois plus haute que la Statue de la Liberté. Des visiteurs viennent du monde entier pour monter jusqu'à son torse-observatoire.",photo:"photos/statue_de_l_unite.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ekta ki Pratima, statue de 182 m inaugurée en 2018 au bord d'un grand barrage, plus haute statue du monde"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île Sadhu Bet sur la rivière Narmada, district de Narmada, Gujarat"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande statue du monde (182 m), Gujarat, Inde"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Statue de bronze de 182 m dressée en 2018 au bord d'un grand barrage, la plus haute du monde"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colossale statue sur une île fluviale de la Narmada, État du Gujarat"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande statue du monde (182 m), près de Vadodara"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Statue de l'Unité en Inde (Sardar Patel)"}
   ]},
   {name:"Christ Rédempteur — Rio, Brésil",lat:-22.9519,lng:-43.2105,desc:"Le Christ Rédempteur est frappé par la foudre environ trois fois par an. Sa restauration en 2010 inclut un paratonnerre intégré dans la couronne d'épines. Il mesure 38 mètres en comptant son piédestal.",photo:"photos/christ_redempteur.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Statue du Christ de 38 m inaugurée en 1931, sommet du Corcovado (710 m), forêt tropicale urbaine"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Montagne du Corcovado, parc national de Tijuca, quartier de Santa Teresa, Rio"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Statue du Christ de 38 m bras ouverts, dressée en 1931 au sommet d'un pic de 710 m au-dessus d'une forêt urbaine"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Statue monumentale au sommet du Corcovado, parc national de Tijuca, dominant une baie"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Statue emblématique surplombant Rio de Janeiro, merveille du monde"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Christ Rédempteur à Rio, Brésil"}
   ]},
   {name:"Machu Picchu — Pérou",lat:-13.1631,lng:-72.545,desc:"Machu Picchu fut construit sans roue, sans fer et sans écriture. Ses murs en pierre sèche résistent aux séismes car chaque bloc est légèrement arrondi, permettant aux pierres de «danser» lors des tremblements de terre.",photo:"photos/machu_picchu.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cité inca construite vers 1450 par Pachacuti sur un col à 2 430 m, redécouverte par Hiram Bingham en 1911"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vallée de l'Urubamba (Rivière Sacrée), haute Andes, ancienne capitale inca à proximité"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité inca perdue dans les nuages, merveille du monde, Pérou"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cité de pierre édifiée vers 1450 sur un col à 2 430 m, redécouverte en 1911, perdue dans la brume des sommets"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cité inca en terrasses, vallée de l'Urubamba, haute cordillère, près d'une ancienne capitale impériale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité inca perdue dans les nuages, merveille du monde, région de Cuzco"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Machu Picchu au Pérou"}
   ]},
   {name:"Statue de la Liberté — New York, USA",lat:40.6892,lng:-74.0445,desc:"La Soča (Isonzo en italien) est une rivière aux eaux d\'un bleu-vert émeraude unique, prenant sa source dans les Alpes juliennes slovènes. Sa vallée fut le théâtre des batailles de l\'Isonzo (1915-1917) et est aujourd\'hui un paradis naturel réputé pour ses gorges et sports d\'eau vive.",photo:"photos/statue_de_la_liberte.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Liberty Island, inauguré en 1886, conçu par Bartholdi et Eiffel, 93 m avec le socle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Liberty Island, grande baie de la côte est, entre deux États américains"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Statue de cuivre de 93 m avec socle, don d'un pays ami en 1886, œuvre de Bartholdi et Eiffel, sur une île"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Statue sur une petite île à l'entrée d'une grande baie de la côte est, entre deux États"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Symbole de la liberté offert par la France, port de New York"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Statue de la Liberté à New York, USA"}
   ]},
   {name:"Grand Canyon — Arizona, USA",lat:36.0544,lng:-112.2401,desc:"Le Grand Canyon contient des fossiles de créatures marines à 2 000 mètres d'altitude — preuve que cette région était autrefois au fond d'une mer chaude. En descendant vers le fond, on voyage littéralement dans le temps géologique.",photo:"photos/grand_canyon.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mather Point, South Rim, canyon creusé par le Colorado sur 446 km de long, 1 857 m de profondeur maximale"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau du Colorado, nord de l'Arizona, parc national créé par Theodore Roosevelt en 1908"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyon creusé par le Colorado sur 446 km, 1 857 m de profondeur maximale, merveille naturelle de l'Arizona"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gorge vertigineuse creusée par un fleuve sur 446 km, jusqu'à 1 857 m de profondeur, strates rouges"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense canyon du plateau du Colorado, nord de l'Arizona, premier grand parc national"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyon creusé par le Colorado, 1 857 m de profondeur, nord de l'Arizona"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grand Canyon à Arizona, USA"}
   ]},
   {name:"Chichen Itza — Yucatan, Mexique",lat:20.6843,lng:-88.5678,desc:"La grande cénote sacrée de Chichen Itza livra lors de fouilles au XXe siècle des dizaines de squelettes, bijoux de jade et objets en or — confirmant les sacrifices mayas. On estime que des milliers d'offrandes reposent encore au fond inaccessible du puits.",photo:"photos/chichen_itza.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"El Castillo, pyramide à degrés de Kukulcán de 30 m, cité maya fondée au VIe siècle, phénomène du serpent de lumière aux équinoxes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Municipalité de Tinum, État du Yucatán, péninsule mexicaine, à 120 km de Mérida"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pyramide maya, merveille du monde, péninsule du Yucatán, Mexique"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pyramide à degrés de 30 m dédiée à un dieu-serpent, cité maya où la lumière dessine un serpent aux équinoxes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pyramide maya au cœur d'un site du Yucatán, plaine calcaire, à 120 km d'une grande ville coloniale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pyramide maya, merveille du monde, péninsule du Yucatán, près de Mérida"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Chichen Itza à Yucatan, Mexique"}
   ]},
   {name:"Chutes du Niagara — Canada/USA",lat:43.0896,lng:-79.0849,desc:"Les Chutes du Niagara ont été stoppées une seule fois dans l'histoire, du 29 mars au 10 juin 1848, quand un embâcle de glace sur le lac Érié interrompit le débit. Les habitants traversèrent alors à pied le lit de la rivière à sec.",photo:"photos/chutes_du_niagara.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Horseshoe Falls, chutes de 57 m de hauteur sur la rivière Niagara, frontière entre deux pays"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Frontière entre deux villes homonymes de part et d'autre d'une frontière internationale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Célèbres chutes d'eau à la frontière canado-américaine"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chutes en fer à cheval de 57 m sur une rivière frontière, brume permanente et bateaux d'approche"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Célèbres chutes d'eau entre deux villes homonymes de part et d'autre d'une frontière internationale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Célèbres chutes d'eau à la frontière entre le Canada et les États-Unis"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes du Niagara (frontière Canada / États-Unis)"}
   ]},
   {name:"Opéra de Sydney — Australie",lat:-33.8568,lng:151.2153,desc:"La construction de l'Opéra de Sydney prit 16 ans et coûta 14 fois son budget initial. Pour financer le dépassement, le gouvernement australien créa une loterie nationale spéciale. Les billets de loterie «Sydney Opera House» sont aujourd'hui des pièces de collection.",photo:"photos/opera_de_sydney.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bennelong Point, conçu par Jørn Utzon, construction de 1959 à 1973, inauguré par la reine Elizabeth II"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Péninsule d'une grande baie naturelle, port principal d'un continent insulaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Salle de spectacle aux toits en coquilles, emblème de l'Australie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Salle de spectacle aux voiles de béton blanc, bâtie de 1959 à 1973 sur une pointe s'avançant dans une rade"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Opéra aux toits en coquilles sur une péninsule, grande rade naturelle d'un continent insulaire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Salle de spectacle aux toits en coquilles, emblème de Sydney"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Opéra de Sydney en Australie"}
   ]},
   {name:"Uluru — Territoire du Nord, Australie",lat:-25.3444,lng:131.0369,desc:"Uluru est beaucoup plus grand qu'il n'y paraît : les deux tiers de ce monolithe sont enfouis sous terre. Les Anangu ont finalement interdit l'escalade du rocher sacré en 2019, après des décennies de négociations.",photo:"photos/uluru.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monolithe de grès rouge de 348 m de hauteur, lieu sacré des Anangu, parc national Uluru-Kata Tjuta"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cœur du continent, région aride,monolithe à 450 km d'une ville isolée du désert"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand rocher rouge sacré au cœur du désert australien, classé UNESCO"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monolithe de grès rouge de 348 m surgissant d'une plaine aride, lieu sacré pour les peuples premiers"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Énorme rocher sacré au centre d'un continent, désert rouge, à 450 km d'une ville isolée"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand rocher rouge sacré au cœur du désert australien, près d'Alice Springs"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Uluru à Territoire du Nord, Australie"}
   ]},
   {name:"Trou Bleu de Belize — Belize",lat:17.3158,lng:-87.5348,desc:"Le Grand Trou Bleu de Belize fut rendu célèbre par Jacques-Yves Cousteau qui le classa parmi les 10 plus beaux sites de plongée au monde en 1971. Ses parois verticales descendent à 125 mètres et abritent des requins nourrices et des requins des récifs dormant au fond.",photo:"photos/trou_bleu_de_belize.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Great Blue Hole, gouffre sous-marin de 300 m de diamètre et 125 m de profondeur, récif méso-américain"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de l'atoll de Lighthouse Reef, mer des Caraïbes, Belize"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande structure de ce type au monde, emblème du Belize, Caraïbes"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gouffre sous-marin circulaire de 300 m de diamètre et 125 m de fond, cerclé d'un récif corallien"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Trou bleu marin au centre d'un atoll corallien, mer des Caraïbes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Célèbre gouffre marin d'un récif corallien, au large du Belize"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grand Trou Bleu au large du Belize"}
   ]},
   {name:"Palais du Parlement — Budapest, Hongrie",lat:47.5072,lng:19.0461,desc:"Le Parlement de Budapest est illuminé chaque nuit et se reflète dans le Danube — l'une des plus belles vues nocturnes d'Europe. Sa construction dura 17 ans (1885-1902) et employa 100 000 ouvriers et 40 millions de briques.",photo:"photos/palais_du_parlement_budapest.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Országház, construit de 1885 à 1904 par Imre Steindl, 96m de hauteur, rive gauche du Danube"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Lipótváros, rive du Danube, plaine pannonienne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parlement néogothique le plus grand d'Europe, Budapest, Hongrie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Parlement néogothique de 96 m bâti de 1885 à 1904, rive d'un grand fleuve, 691 salles"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vaste parlement néogothique au bord d'un fleuve, quartier de Lipótváros, plaine pannonienne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand parlement néogothique d'Europe, sur le Danube, Budapest"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais du Parlement à Budapest, Hongrie"}
   ]},
   {name:"Château de Prague — République Tchèque",lat:50.0902,lng:14.4,desc:"Le complexe du château de Prague est l'un des plus grands du monde avec ses 70 000 m². Il abrite une cathédrale, un palais royal, un couvent, des jardins et une ruelle d'or où vivaient jadis les alchimistes de Rodolphe II qui cherchaient à transmuer le plomb en or.",photo:"photos/chateau_de_prague.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hradčany, plus grand château du monde en superficie (70 000 m²), érigé au IXe siècle sur le Hradschin"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline de Hradčany dominant la Vltava, quartier Malá Strana, Prague"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand château du monde, résidence présidentielle tchèque"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vaste ensemble castral fondé au IXe siècle sur une colline dominant une rivière, 70 000 m²"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plus grand château du monde en superficie, colline dominant la Vltava, quartier de Malá Strana"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand château du monde, siège présidentiel, Prague"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Prague, République Tchèque"}
   ]},
     {name:"Canal Grande — Venise, Italie",lat:45.4408,lng:12.3155,desc:"Le Grand Canal de Venise compte 150 palais construits entre le XIIIe et le XVIIIe siècle sur ses 3,8 km. Ces bâtiments s'enfoncent progressivement — Venise s'est affaissée de 23 cm au XXe siècle — ce qui poussa à lancer le projet MOSE, un système de digues mobiles anti-inondations.",photo:"photos/canal_grande.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canale Grande, artère principale de la cité lacustre en forme de S inversé, 3,8 km, 150 palais sur ses rives"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre d'une cité lacustre, entre la gare principale et le grand bassin maritime"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal canal de Venise, la ville des gondoles, Italie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande artère d'eau en S inversé longue de 3,8 km, bordée de 150 palais, parcourue de gondoles"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Principal canal d'une cité lacustre, de la gare principale au grand bassin maritime"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Principal canal de la ville des gondoles, Venise"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Canal Grande à Venise, Italie"}
   ]},
   {name:"Thermes de Caracalla — Rome, Italie",lat:41.8788,lng:12.4922,desc:"Les thermes de Caracalla furent fermés définitivement en 537 quand les Ostrogoths coupèrent les aqueducs de Rome. Depuis les années 1930, l'Opéra de Rome y organise des spectacles en plein air — des représentations de Verdi ou Puccini dans ce décor antique imposant.",photo:"photos/thermes_de_caracalla.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Thermae Antoninianae, inaugurées en 216 ap. J.-C. sous Caracalla, accueillaient 1600 baigneurs simultanément"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Via delle Terme di Caracalla, quartier Aventino, au sud du Colisée"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Immenses thermes inaugurés en 216, jusqu'à 1 600 baigneurs à la fois, ruines de brique colossales"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ruines des plus grands thermes antiques, quartier de l'Aventin, au sud d'un célèbre amphithéâtre"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grands thermes romains conservés, au sud du Colisée, Rome"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Thermes de Caracalla à Rome, Italie"}
   ]},
   {name:"Musée du Prado — Madrid, Espagne",lat:40.4138,lng:-3.6922,desc:"Le Prado possède la plus grande collection au monde de tableaux de Velázquez, Goya et Titien. «Les Menines» de Velázquez, qui représentent la famille royale avec l'artiste se peignant lui-même, est considéré comme le premier tableau «postmoderne» de l'histoire.",photo:"photos/musee_du_prado.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Museo Nacional del Prado, Paseo del Prado, ouvert en 1819, abritant Las Meninas de Velázquez"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Paseo del Prado, quartier de los Jerónimos, près du parc du Retiro"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand musée d'art classique espagnol, Madrid"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Musée d'art ouvert en 1819 sur une grande avenue, abritant Les Ménines de Velázquez"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grand musée d'art classique près d'un parc, quartier des Jerónimos d'une capitale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand musée d'art classique du pays, Madrid"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Musée du Prado à Madrid, Espagne"}
   ]},
   {name:"Tour de Belém — Lisbonne, Portugal",lat:38.6916,lng:-9.216,desc:"La tour de Belém fut construite en 1516 au bord du Tage pour saluer les explorateurs partant vers les Indes. Ce joyau manuélin est orné de motifs marins, de nœuds de corde en pierre et de la sphère armillaire, emblème du Portugal des grandes découvertes.",photo:"photos/tour_de_belem.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Torre de São Vicente de Belém, style manuélin, construite de 1516 à 1521 par Francisco de Arruda"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive du Tage, à l'embouchure de l'estuaire, façade atlantique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour fortifiée manuéline, symbole des Grandes Découvertes, Lisbonne"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tour fortifiée de style manuélin bâtie de 1516 à 1521, avancée dans l'eau à l'embouchure d'un fleuve"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tour-forteresse manuéline au bord d'un estuaire, façade atlantique, quartier des Découvertes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour manuéline symbole des Grandes Découvertes, Lisbonne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour de Belém à Lisbonne, Portugal"}
   ]},
   {name:"Atomium — Bruxelles, Belgique",lat:50.8947,lng:4.3411,desc:"L'Atomium de Bruxelles représente une maille de cristal de fer agrandie 165 milliards de fois. Conçu comme une attraction temporaire pour l'Expo 58, il fut maintenu après l'exposition suite à son succès populaire. Ses sphères intérieures accueillent des expositions et même un appartement loué.",photo:"photos/atomium.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Construit pour l'Expo 58 par André Waterkeyn, représente une maille de cristal de fer agrandie 165 milliards de fois"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau du Heysel, site d'une Exposition universelle de 1958"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Structure de 1958 figurant une maille de cristal de fer agrandie 165 milliards de fois, neuf sphères d'acier"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Monument métallique en forme d'atome géant, plateau du Heysel, site d'une Expo universelle"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monument en forme d'atome géant, emblème de Bruxelles"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Atomium à Bruxelles, Belgique"}
   ]},
   {name:"Manneken Pis — Bruxelles, Belgique",lat:50.8451,lng:4.35,desc:"La statue du Manneken Pis ne mesure que 61 cm mais possède une garde-robe de plus de 1 000 costumes offerts par des nations du monde entier. Il est régulièrement habillé en tenue officielle lors des fêtes nationales — une tradition depuis le XVIIIe siècle.",photo:"photos/manneken_pis.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kleine Juliaan, statue de bronze de 61 cm par Jérôme Duquesnoy l'Ancien (1619), rue de l'Étuve"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Angle de deux ruelles de l'Îlot Sacré, cœur historique brabançon"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Célèbre petite fontaine d'un enfant, symbole populaire de Bruxelles"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Petite fontaine de bronze de 61 cm fondue en 1619, à l'angle de deux ruelles pavées"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Minuscule statue-fontaine d'un enfant, angle de ruelles de l'Îlot Sacré, cœur historique brabançon"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Célèbre petite fontaine d'un garçon espiègle, symbole de Bruxelles"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Manneken Pis à Bruxelles, Belgique"}
   ]},
   {name:"Château de Édimbourg — Écosse, Royaume-Uni",lat:55.9486,lng:-3.2008,desc:"Le château d'Édimbourg est bâti sur un rocher volcanique vieux de 340 millions d'années. Il abrite les Honneurs d'Écosse — la plus ancienne couronne royale d'Europe en service, datant de 1540. Son canon «One O'Clock Gun» tire chaque jour à 13h précises depuis 1861, une tradition débutée pour les marins du port de Leith.",photo:"photos/chateau_de_edimbourg.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Forteresse sur le Castle Rock, volcan éteint, abritant la pierre du Destin et des joyaux royaux"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Haut de la Royal Mile, Old Town, Édimbourg, surplombant Princes Street Gardens"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse médiévale dominant la capitale écossaise"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Forteresse sur un piton de volcan éteint, gardant une pierre du couronnement et des joyaux royaux"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Château fort au sommet de la Royal Mile, vieille ville dominant des jardins en contrebas"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Forteresse médiévale dominant la capitale écossaise, Édimbourg"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Édimbourg à Écosse, Royaume-Uni"}
   ]},
   {name:"Pont du Gard — France",lat:43.9473,lng:4.5355,desc:"Le Pont du Gard transportait 20 000 m³ d'eau par jour vers la ville de Nîmes sur une distance de 50 km. Sa pente, calculée avec une précision de 2,5 cm par kilomètre, était si fine que l'eau coulait presque sans mouvement apparent — un prodige d'ingénierie romaine.",photo:"photos/pont_du_gard.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Aqueduc romain du Ier siècle ap. J.-C., 49 m de hauteur, enjambant le Gardon, construit sans mortier"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Aqueduc célèbre des Gorges du Gardon, commune de Vers-Pont-du-Gard, Gard, Occitanie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haut pont-aqueduc romain du monde, UNESCO, sud de la France"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Aqueduc romain à trois étages d'arches, 49 m de haut, bâti sans mortier au Ier siècle sur une rivière"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pont-aqueduc romain enjambant les gorges du Gardon, garrigue du sud, Occitanie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haut pont-aqueduc romain du monde, près de Nîmes"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont du Gard en Occitanie, France"}
   ]},
   {name:"Mont Saint-Michel — Normandie, France",lat:48.6361,lng:-1.5115,desc:"La baie du Mont-Saint-Michel possède le coefficient de marée le plus fort d'Europe continentale. En 1879, la construction d'une digue pour relier le Mont au continent accéléra l'envasement de la baie. La digue fut démantelée et remplacée par un pont en 2014 pour laisser circuler les eaux.",photo:"photos/mont_saint_michel.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Îlot granitique couronné par l'abbaye bénédictine dédiée à l'archange Michel, fondée en 966"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Baie du Mont-Saint-Michel, Manche, Normandie, à 80 km de Caen"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Abbaye insulaire en Normandie, l'un des sites les plus visités de France"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Îlot granitique couronné d'une abbaye bénédictine fondée en 966, cerné par de fortes marées"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Abbaye insulaire au fond d'une baie aux grandes marées, littoral de la Manche, Normandie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Abbaye sur un îlot des marées, parmi les sites les plus visités, près d'Avranches"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mont Saint-Michel à Normandie, France"}
   ]},
   {name:"Château de Chambord — Loire, France",lat:47.6161,lng:1.5171,desc:"Chambord possède un escalier à double hélice attribué à Léonard de Vinci : deux visiteurs peuvent monter et descendre simultanément sans jamais se croiser. François Ier ne dormit à Chambord que 72 nuits en 32 ans — un château avant tout conçu pour les fastes de la cour.",photo:"photos/chateau_de_chambord.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Construit à partir de 1519 pour François Ier, attribué à Léonard de Vinci pour l'escalier à double hélice, 426 pièces"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune de Chambord, Loir-et-Cher, val de Loire, à 15 km de Blois"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand château de la Loire, Renaissance française"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Château Renaissance commencé en 1519, célèbre escalier à double révolution, 426 pièces, en pleine forêt"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense château Renaissance à toitures hérissées, val d'un grand fleuve, à 15 km de Blois"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand château de la Loire, chef-d'œuvre Renaissance, près de Blois"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Chambord à Loire, France"}
   ]},
   {name:"Basilique du Sacré-Cœur — Paris, France",lat:48.8867,lng:2.3431,desc:"La basilique du Sacré-Cœur fut construite grâce à des souscriptions privées après la défaite de 1871 contre la Prusse — un vœu national de repentir. Ses 83 mètres de hauteur sur la Butte Montmartre en font le point culminant de Paris, visible de presque partout dans la ville.",photo:"photos/basilique_du_sacre_c_ur.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Basilique romano-byzantine consacrée en 1919, construite en travertin auto-blanchissant de Château-Landon, sommet de la Butte Montmartre"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sommet de la Butte Montmartre, 18ème arrondissement de 130 m d'altitude"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Basilique blanche dominant Paris depuis la Butte Montmartre"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Basilique blanche romano-byzantine consacrée en 1919, pierre qui blanchit à la pluie, sommet d'une butte"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Basilique blanche au sommet d'une butte de 130 m, arrondissement perché de la rive droite"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Basilique blanche dominant Paris depuis la butte Montmartre"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Basilique du Sacré-Cœur à Paris, France"}
   ]},
   {name:"Palais de Justice — Bruxelles, Belgique",lat:50.8359,lng:4.3531,desc:"Palais de Justice est un lieu historique remarquable situé en Europe.",photo:"photos/palais_de_justice.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais conçu par Joseph Poelaert, 1883, plus grand bâtiment construit au XIXe siècle (26 000 m²), sommet du Sablon"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place Poelaert, quartier des Marolles, Brussels, surplombant la ville basse"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand bâtiment construit au XIXe siècle, imposante coupole dominant la ville belge, Bruxelles"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Colossal palais de justice de 1883 à coupole, plus grand édifice bâti au XIXe siècle, sommet d'un quartier populaire"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense palais de justice à coupole, quartier des Marolles, dominant une ville basse"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand bâtiment élevé au XIXe siècle, coupole dominant Bruxelles"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Justice à Bruxelles, Belgique"}
   ]},
   {name:"Fjord de Geiranger — Norvège",lat:62.1006,lng:7.2051,desc:"Les 7 cascades des «Sept Sœurs» dans le fjord de Geiranger sont alimentées uniquement par la fonte des neiges et la pluie — il n'y a aucune source ni aucun lac en amont. En face se trouve la cascade du Prétendant qui semble «arroser» les sept sœurs.",photo:"photos/fjord_de_geiranger.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Geirangerfjord, 15 km de long, classé UNESCO, célèbre pour les cascades des Sept Sœurs et du Voile de la Mariée"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Municipalité du nord-ouest du pays, fjord parmi les plus profonds d'Europe"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'un des fjords les plus spectaculaires de Norvège, UNESCO"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bras de mer de 15 km encaissé entre des parois abruptes, cascades des Sept Sœurs et du Voile de la Mariée"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fjord profond aux cascades célèbres, côte découpée du nord-ouest d'un pays scandinave"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'un des fjords les plus spectaculaires, région d'Ålesund"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Fjord de Geiranger en Norvège"}
   ]},
   {name:"Hallgrímskirkja — Reykjavik, Islande",lat:64.1418,lng:-21.9264,desc:"La statue devant la cathédrale d'Hallgrímskirkja représente Leifur Eiríksson, qui atteignit l'Amérique 500 ans avant Christophe Colomb. Elle fut offerte par les États-Unis à l'Islande pour le millénaire du parlement islandais en 1930.",photo:"photos/hallgrimskirkja.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Église luthérienne de 73 m conçue par Guðjón Samúelsson en 1937, inspirée des orgues basaltiques, construite pendant 41 ans"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sommet d'une colline au cœur de la capitale la plus septentrionale du monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Église emblématique en forme de colonnes basaltiques, Reykjavik"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Église luthérienne de 73 m en béton nervuré évoquant des orgues basaltiques, chantier de 41 ans"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Église-tour en forme de colonnes basaltiques, colline au cœur de la capitale la plus septentrionale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Église emblématique en colonnes de basalte, Reykjavik"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hallgrímskirkja à Reykjavik, Islande"}
   ]},
   {name:"Acropole de Lindos — Rhodes, Grèce",lat:36.0912,lng:28.0861,desc:"L'acropole de Lindos à Rhodes est un sanctuaire consacré à Athéna datant du IVe siècle av. J.-C. Perchée sur une falaise de 116 mètres au-dessus de la mer Égée, elle offre une des vues les plus spectaculaires de Grèce. Alexandre le Grand y sacrifia avant de partir à la conquête de la Perse.",photo:"photos/acropole_de_lindos.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple dorique d'Athéna Lindia du IVe siècle av. J.-C., sur un rocher côtier de 116 m dominant une baie en fer à cheval"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Village blanc du Dodécanèse, mer Égée"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple dorique sur un promontoire de 116 m, dominant une baie de la mer Égée, Rhodes"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple dorique du IVe siècle av. J.-C. dédié à une déesse, sur un rocher de 116 m au-dessus d'une baie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Acropole antique au-dessus d'un village blanc, promontoire du Dodécanèse, mer Égée"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple dorique sur un promontoire dominant une baie, île de Rhodes"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Acropole de Lindos à Rhodes, Grèce"}
   ]},
   {name:"Château de Hohenzollern — Allemagne",lat:48.3219,lng:8.943,desc:"Le château de Hohenzollern fut reconstruit trois fois au même endroit. La version actuelle, néogothique, date de 1867. Il abrite la couronne de Prusse et l'uniforme dans lequel Frédéric le Grand mourut — des reliques du royaume prussien qui unifia l'Allemagne.",photo:"photos/chateau_de_hohenzollern.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stammburg des Hohenzollern, troisième reconstruction achevée en 1867, Schwäbische Alb, Bade-Wurtemberg"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sommet du mont Hohenzollern (855 m), commune de Bisingen, Bade-Wurtemberg"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château ancestral de la dynastie prussienne des Hohenzollern, Allemagne"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Château ancestral d'une dynastie, troisième reconstruction achevée en 1867, perché sur un mont boisé"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Château néogothique au sommet d'un mont de 855 m, moyenne montagne du Jura souabe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château ancestral de la dynastie prussienne des Hohenzollern, près de Hechingen"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Hohenzollern en Allemagne"}
   ]},
   {name:"Bibliothèque du Congrès — Washington D.C., USA",lat:38.8887,lng:-77.0047,desc:"La Bibliothèque du Congrès de Washington possède l'un des deux exemplaires connus de la Bible de Gutenberg imprimée en 1455, ainsi qu'un des rares exemplaires de la Déclaration d'indépendance de 1776 écrits à la main. Elle reçoit 17 000 nouvelles publications chaque jour.",photo:"photos/bibliotheque_du_congres.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Thomas Jefferson Building, inauguré en 1897, plus grande bibliothèque du monde (170 millions de documents), Capitol Hill"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Capitol Hill, face au siège du Congrès fédéral"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande bibliothèque du monde ouverte en 1897, 170 millions de documents, face au siège du parlement"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bibliothèque monumentale de Capitol Hill, face au siège du Congrès fédéral"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande bibliothèque du monde, Washington D.C."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bibliothèque du Congrès à Washington D.C., USA"}
   ]},
   {name:"Opéra Garnier — Paris, France",lat:48.8719,lng:2.3316,desc:"L'Opéra Garnier abrite un véritable lac souterrain, créé involontairement lors de la construction pour drainer les eaux de la nappe phréatique. Ce lac, utilisé pour entraîner les pompiers à la nage, inspira directement Gaston Leroux pour son roman «Le Fantôme de l'Opéra» en 1910.",photo:"photos/opera_garnier.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais Garnier, conçu par Charles Garnier, inauguré en 1875 par Mac-Mahon, écrin du plafond de Chagall"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place de l'Opéra, 9ème arrondissement, au bout du boulevard des Capucines"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Opéra emblématique de Paris, cadre du Fantôme de l'Opéra"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Opéra fastueux inauguré en 1875, grand escalier de marbre et plafond peint par Chagall"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Opéra Second Empire au bout d'un grand boulevard, arrondissement des grands magasins"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Opéra fastueux, cadre du Fantôme de l'Opéra, Paris"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Opéra Garnier à Paris, France"}
   ]},
   {name:"Temple Sensō-ji — Tokyo, Japon",lat:35.7148,lng:139.7967,desc:"Le temple Sensō-ji d'Asakusa est le plus ancien et le plus visité de Tokyo avec 30 millions de visiteurs par an. La Nakamise-dori, la rue commerçante menant au temple, vend des souvenirs depuis l'époque Edo. Les marchands actuels sont souvent les descendants directs des premiers commerçants du XVIIe siècle.",photo:"photos/temple_sens_ji.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sensō-ji, plus ancien temple de la mégalopole, fondé en 628, dédié à Kannon, quartier d'Asakusa, Taito"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nakamise-dori, quartier d'Asakusa, arrondissement de Taito"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus ancien temple bouddhiste de la mégalopole, fondé en 628, longue allée de boutiques et lanterne géante"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Temple bouddhiste ancien au bout d'une allée marchande, quartier populaire d'Asakusa"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancien et plus visité temple bouddhiste de Tokyo"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple Senso-ji à Tokyo, Japon"}
   ]},
   {name:"Temple d'Or — Kyoto, Japon",lat:35.0394,lng:135.7292,desc:"Le Temple d'Or recouvre 750 kg de feuilles d'or pur. Les Sikhs cuisinent et servent gratuitement 100 000 repas par jour à tous les visiteurs sans distinction de religion, de caste ou de nationalité.",photo:"photos/temple_d_or.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kinkaku-ji (Rokuon-ji), pavillon recouvert de feuilles d'or, construit en 1397 pour le shogun Ashikaga Yoshimitsu"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nord de l'ancienne capitale impériale, surplombant l'étang Kyōko-chi"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pavillon doré du temple Kinkaku-ji, emblème de Kyoto, Japon"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pavillon couvert de feuilles d'or, bâti en 1397 pour un shogun, reflété dans un étang miroir"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pavillon doré au bord d'un étang, jardins du nord d'une ancienne capitale impériale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Pavillon doré reflété dans l'eau, emblème de Kyoto"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple d'Or à Kyoto, Japon"}
   ]},
   {name:"Palais de Potala — Lhassa, Tibet",lat:29.6578,lng:91.1175,desc:"Le Palais du Potala de Lhassa fut construit à 3 700 mètres d'altitude et compte 13 étages, 1 000 pièces et 10 000 autels. Il abritait les trônes et tombeaux des Dalaï-Lamas, dont les corps embaumés sont conservés dans des stupas plaqués d'or.",photo:"photos/palais_de_potala.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Résidence hivernale du Dalaï-Lama, 13 étages, 1000 pièces, érigé sur la Colline Rouge à 3 700 m d'altitude"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline de Marpo Ri, centre de la capitale spirituelle d'un plateau himalayen"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais du Dalaï-Lama dominant Lhassa, Tibet"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais-forteresse de 13 étages et 1 000 pièces dressé sur une colline rouge à 3 700 m d'altitude"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense palais tibétain sur une colline, centre d'une capitale spirituelle d'un haut plateau"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancien palais du Dalaï-Lama dominant la ville, Lhassa"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Potala à Lhassa, Tibet"}
   ]},
   {name:"Temple de Borobudur — Java, Indonésie",lat:-7.6079,lng:110.2038,desc:"Le temple de Borobudur fut enseveli sous les cendres volcaniques et la végétation pendant 800 ans. Il fut redécouvert par Sir Thomas Raffles en 1814 et restauré dans les années 1970 dans le cadre du plus grand projet de restauration jamais entrepris par l'UNESCO.",photo:"photos/temple_de_borobudur.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mandala bouddhiste mahayana du IXe siècle, 2 672 panneaux de bas-reliefs, 504 statues de Bouddha, dynasties Sailendra"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Région de Java central, à 40 km d'une ancienne capitale royale, plateau volcanique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple bouddhiste du monde, Java, Indonésie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mandala de pierre du IXe siècle, 2 672 bas-reliefs et 504 bouddhas en terrasses, sous un volcan"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense temple bouddhiste en terrasses, plaine volcanique de Java, près d'une ancienne capitale royale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple bouddhiste du monde, près de Yogyakarta"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple de Borobudur à Java, Indonésie"}
   ]},
   {name:"Hagia Sophia — Istanbul, Turquie",lat:41.0086,lng:28.9802,desc:"Sainte-Sophie fut la plus grande cathédrale du monde pendant près de 1 000 ans. Son dôme de 55 mètres de diamètre, construit sans calculs modernes, est soutenu par 40 fenêtres qui créent l'illusion qu'il flotte dans les airs.",photo:"photos/hagia_sophia.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Construite de 532 à 537 par Justinien, Anthémios de Tralles et Isidore de Milet, dôme de 55,6m, reconvertie en mosquée en 2020"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Péninsule historique entre Corne d'Or et mer de Marmara"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ancienne cathédrale byzantine devenue mosquée, symbole d'Istanbul"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Édifice à immense dôme de 55,6 m bâti de 532 à 537, tour à tour église puis mosquée, sur une péninsule"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ancienne basilique à dôme colossal devenue mosquée, péninsule historique entre deux rives"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chef-d'œuvre byzantin à l'immense dôme, Istanbul"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hagia Sophia à Istanbul, Turquie"}
   ]},
   {name:"Temple de Preah Vihear — Cambodge",lat:14.3924,lng:104.6804,desc:"Le temple de Preah Vihear fit l'objet d'un différend territorial entre le Cambodge et la Thaïlande pendant des décennies. En 2013, la Cour internationale de justice confirma la souveraineté cambodgienne — une victoire symbolique pour un pays qui souhaitait aussi faire classer le site à l'UNESCO.",photo:"photos/temple_de_preah_vihear.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple hindou khmer dédié à Shiva, construit entre le IXe et XIIe siècle, sommet du plateau de Dângrêk à 625m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province du nord du pays, sur un plateau calcaire, à la frontière avec un pays voisin"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple khmer spectaculaire au sommet d'une falaise, Cambodge"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple hindou khmer dédié à un dieu, échelonné du IXe au XIIe siècle au sommet d'un plateau à 625 m"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Temple khmer perché sur une falaise, plateau des Dângrêk, à une frontière contestée"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Temple khmer spectaculaire au bord d'une falaise, nord du Cambodge"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple de Preah Vihear au Cambodge"}
   ]},
   {name:"Palais de Mysore — Inde",lat:12.3052,lng:76.6552,desc:"Le palais de Mysore est illuminé par 97 000 ampoules chaque dimanche soir et lors des fêtes religieuses. Ce spectacle attire des millions de visiteurs et du palais brille depuis la ville comme une étoile. La famille royale des Wadiyar vit encore dans une partie du complexe.",photo:"photos/palais_de_mysore.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Amba Vilas, reconstruit en 1912 par Henry Irwin pour le maharaja Krishna Raja Wadiyar IV, style indo-sarrasin"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre de Mysore, Karnataka, à 150 km de Bangalore"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais royal indo-sarrasin illuminé par 100 000 ampoules, Mysore, Inde"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais indo-sarrasin reconstruit en 1912, illuminé de dizaines de milliers d'ampoules les soirs de fête"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grand palais royal indo-sarrasin au centre d'une ville, État du Karnataka, à 150 km d'une métropole"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais royal illuminé de 100 000 ampoules, Mysore"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Mysore en Inde"}
   ]},
   {name:"Palais de Shakhrisabz — Ouzbékistan",lat:39.0533,lng:66.8306,desc:"Le palais d'Ak-Saray de Shakhrisabz fut la résidence d'été de Tamerlan, construite au XIVe siècle. Ses deux pylônes d'entrée atteignaient 65 mètres — les plus hauts d'Asie centrale. Shakhrisabz, qui signifie «ville verte», est la ville natale de Tamerlan.",photo:"photos/palais_de_shakhrisabz.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ak-Saray, palais d'été de Tamerlan, commencé en 1380, portail d'entrée de 65m, Shakhrisabz"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre historique d'une ville de la Route de la Soie, province d'Asie centrale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines du palais de Tamerlan, ville natale du conquérant, Ouzbékistan"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ruines d'un palais d'été à portail géant de 65 m, entamé en 1380 pour un grand conquérant des steppes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vestiges d'un palais d'été dans une ville de la Route de la Soie, province d'Asie centrale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines du palais de Tamerlan, sa ville natale, Chakhrisabz"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Shakhrisabz en Ouzbékistan"}
   ]},
   {name:"Mosquée Sultan Ahmed — Istanbul, Turquie",lat:41.0054,lng:28.9768,desc:"La Mosquée Bleue, construite de 1609 à 1616, est la seule mosquée d'Istanbul à posséder six minarets — une audace qui scandalisa la Mecque, qui n'en avait alors que quatre. L'intérieur est revêtu de 20 000 carreaux d'Iznik bleus, dont chacun fut peint à la main.",photo:"photos/mosquee_sultan_ahmed.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosquée Bleue, construite de 1609 à 1616 par Sedefkâr Mehmed Ağa sous Ahmed Ier, seule mosquée à 6 minarets — scandale de l'époque"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Face à Sainte-Sophie, sur la péninsule historique du Bosphore"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mosquée Bleue aux 6 minarets, face à Sainte-Sophie, Istanbul"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosquée impériale de 1609-1616 aux 6 minarets — scandale de l'époque — faisant face à une ancienne basilique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande mosquée à six minarets, péninsule historique, face à un ancien édifice byzantin"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mosquée Bleue aux six minarets, face à Sainte-Sophie, Istanbul"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mosquée Sultan Ahmed à Istanbul, Turquie"}
   ]},
   {name:"Palais d'été — Pékin, Chine",lat:39.9999,lng:116.2755,desc:"Le Palais d'Été de Pékin fut pillé et incendié par les troupes franco-britanniques en 1860. L'impératrice Cixi le fit entièrement reconstruire en 1888 en détournant les fonds destinés à la modernisation de la marine militaire chinoise — une décision qui contribua à la défaite lors de la guerre sino-japonaise.",photo:"photos/palais_d_ete.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Yiheyuan, construit sous l'impératrice Cixi en 1886, lac Kunming creusé à la main, colline de la Longévité"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Banlieue nord-ouest de la capitale, à 15 km du centre-ville"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Résidence impériale d'été, vaste lac artificiel et jardins de la cour des Qing, banlieue de Pékin"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Résidence d'été impériale aménagée en 1886, immense lac creusé à la main au pied d'une colline"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Palais d'été impérial et vaste lac artificiel, banlieue nord-ouest d'une grande capitale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Résidence impériale d'été des Qing, jardins et grand lac, banlieue de Pékin"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais d'été à Pékin, Chine"}
   ]},
   {name:"Pont d'Umeda — Osaka, Japon",lat:34.7024,lng:135.4959,desc:"Le Sky Building d'Umeda à Osaka est formé de deux tours reliées à leur sommet par un jardin suspendu circulaire à 170 mètres de hauteur. Ses escaliers mécaniques traversent le vide entre les deux tours en diagonale — une traversée spectaculaire de 50 mètres dans le ciel.",photo:"photos/pont_d_umeda.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Umeda Sky Building, tours jumelles de 173 m reliées par le Floating Garden Observatory, conçu par Hiroshi Hara en 1993"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier d'Umeda, grande métropole marchande du Kansai"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tours jumelles reliées par un observatoire suspendu, Osaka, Japon"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tours jumelles de 173 m reliées tout en haut par un observatoire-jardin suspendu, achevées en 1993"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gratte-ciel jumeaux à observatoire suspendu, quartier d'Umeda d'une métropole marchande du Kansai"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tours jumelles reliées par un observatoire suspendu, Osaka"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont d'Umeda à Osaka, Japon"}
   ]},
   {name:"Temple de Confucius — Qufu, Chine",lat:35.5967,lng:116.9839,desc:"Le temple de Confucius à Qufu est le plus grand complexe confucéen du monde avec 466 bâtiments. Construit en -478, un an après la mort du philosophe, il fut agrandi par chaque dynasties chinoise pendant 2 500 ans. Les descendants directs de Confucius y vivent encore aujourd'hui.",photo:"photos/temple_de_confucius.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kong Miao, temple dédié à Confucius dans sa ville natale, 466 salles, érigé en 478 av. J.-C. un an après sa mort"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville natale du philosophe, province du Shandong"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand temple dédié à Confucius dans sa ville natale, Shandong, Qufu, Chine"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vaste temple de 466 salles dédié à un philosophe, érigé dès 478 av. J.-C. dans sa ville natale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grand temple confucéen dans la ville natale du sage, province du Shandong"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand temple dédié à Confucius, sa ville natale, Qufu"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Temple de Confucius à Qufu, Chine"}
   ]},
   {name:"Rocher de Sigiriya — Sri Lanka",lat:7.957,lng:80.7603,desc:"Le Rocher de Sigiriya abrite 500 fresques de femmes célestes (apsaras) dont seulement 22 ont survécu aux intempéries. Ce sont parmi les seules peintures laïques à grande échelle du 5e siècle encore visibles dans le monde.",photo:"photos/rocher_de_sigiriya.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lion Rock, forteresse-palais du roi Kashyapa I, érigée au Ve siècle ap. J.-C. sur un rocher de 200m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province centrale d'une île de l'océan Indien, rocher forteresse à 200m de la plaine"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rocher-forteresse géant et jardins royaux du Ve siècle, Sri Lanka"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais-forteresse du Ve siècle juché sur un piton de 200 m, fresques et jardins d'eau d'un roi parricide"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rocher-forteresse surgissant d'une plaine, province centrale d'une île de l'océan Indien"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rocher-forteresse et jardins royaux du Ve siècle, centre du Sri Lanka"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Rocher de Sigiriya au Sri Lanka"}
   ]},
   {name:"Tour CN — Toronto, Canada",lat:43.6426,lng:-79.3871,desc:"La tour CN de Toronto fut construite en 1976 par les chemins de fer canadiens pour démontrer la solidité de leur béton. À 553 mètres, elle fut la plus haute structure autoportante du monde pendant 30 ans. Son restaurant tourne sur 360° en 72 minutes, et par temps clair, on aperçoit les chutes du Niagara à 100 km.",photo:"photos/tour_cn.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Communication tower de 553 m inaugurée en 1976, détient le record mondial jusqu'en 2007, restaurant tournant à 351 m"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Front Street West, quartier Harbourfront, bord d'un grand lac intérieur"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour emblématique de Toronto, symbole du Canada"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tour de télécommunication de 553 m inaugurée en 1976, restaurant tournant à 351 m, longtemps la plus haute"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Très haute tour d'observation en bord d'un grand lac, quartier riverain d'une métropole"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Haute tour d'observation emblématique, symbole de Toronto"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Tour CN à Toronto, Canada"}
   ]},
   {name:"Mausolée de Khomeini — Téhéran, Iran",lat:35.5593,lng:51.416,desc:"Le mausolée de l'imam Khomeini à Téhéran est l'un des plus grands complexes religieux du monde islamique. Son dôme doré de 72 mètres est visible de toute la ville. Il attire des millions de pèlerins chiites par an et est en expansion permanente — sa construction n'est pas encore officiellement terminée.",photo:"photos/mausolee_de_khomeini.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Harameyn, mausolée doré en construction depuis 1989, 4 minarets de 91m, accueille 20 millions de pèlerins/an"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier de Rey, banlieue sud d'une capitale de 9 millions d'habitants"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand mausolée de l'ayatollah Khomeini, banlieue de Téhéran, Iran"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vaste mausolée doré à 4 minarets de 91 m, chantier ouvert en 1989, des millions de pèlerins par an"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grand mausolée religieux, quartier de Rey, banlieue sud d'une capitale de 9 millions d'habitants"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand mausolée de l'ayatollah Khomeini, banlieue de Téhéran"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mausolée de Khomeini à Téhéran, Iran"}
   ]},
   {name:"Mosquée de Djenné — Mali",lat:13.9056,lng:-4.5556,desc:"La Grande Mosquée de Djenné est entièrement reconstruite à la main chaque année lors d'une fête collective. Des milliers de villageois replâtrent les murs avec de la boue fraîche — une tradition vieille de plusieurs siècles.",photo:"photos/mosquee_de_djenne.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande Mosquée de Djenné, reconstruite en 1907 dans le style soudano-sahélien, plus grande construction en adobe du monde"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place du marché d'une ville du delta intérieur d'un grand fleuve africain"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande mosquée en terre crue du monde, Djenné, Mali"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande construction en terre crue du monde, reconstruite en 1907, hérissée de poutres saillantes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande mosquée de terre crue sur une place de marché, delta intérieur d'un grand fleuve africain"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande mosquée en banco du monde, Djenné"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mosquée de Djenné au Mali"}
   ]},
   {name:"Cités de Lalibela — Éthiopie",lat:12.0317,lng:39.0448,desc:"Les 11 églises de Lalibela furent taillées à même le roc en seulement 24 ans au XIIe siècle. Selon la légende, les anges travaillaient la nuit pendant que les hommes se reposaient, permettant un avancement miraculeux du chantier.",photo:"photos/cites_de_lalibela.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"11 églises monolithiques taillées dans le tuf volcanique rouge, commandées par le roi Gebre Mesqel Lalibela au XIIe siècle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Zone de North Wollo, région Amhara, highlands éthiopiens, à 2 500 m d'altitude"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Églises souterraines taillées dans la roche, Jérusalem d'Afrique, Éthiopie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Onze églises taillées d'un bloc dans le tuf rouge au XIIe siècle, reliées par des tranchées et tunnels"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Églises monolithiques creusées dans la roche, hauts plateaux à 2 500 m, région Amhara"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Églises taillées dans la roche, « Jérusalem d'Afrique », Lalibela"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cités de Lalibela en Éthiopie"}
   ]},
   {name:"Île de Gorée — Sénégal",lat:14.6678,lng:-17.3986,desc:"Gorée était si prospère grâce au commerce des esclaves que les marchands européens se disputaient sa possession pendant deux siècles. L'île changea de mains 7 fois entre Portugais, Hollandais, Anglais et Français.",photo:"photos/ile_de_goree.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Île de 0,36 km², centre majeur de la traite négrière aux XVIIe-XIXe siècles, Maison des Esclaves construite en 1776"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Baie d'une grande capitale ouest-africaine, à 3 km de la côte continentale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île symbole de la traite négrière, face à Dakar, Sénégal"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Petite île de 0,36 km², haut lieu de la traite négrière, Maison des Esclaves bâtie en 1776"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île-mémoire de la traite dans la baie d'une capitale ouest-africaine, à 3 km de la côte"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île symbole de la traite négrière, face à Dakar"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Île de Gorée au Sénégal"}
   ]},
   {name:"Chutes d'Iguazu — Argentine/Brésil",lat:-25.6953,lng:-54.4367,desc:"Les chutes d'Iguazu sont si larges que Eleanor Roosevelt s'écria «Poor Niagara!» en les voyant pour la première fois. Elles forment la frontière naturelle entre l'Argentine et le Brésil, et les deux pays se disputèrent leur souveraineté pendant des décennies.",photo:"photos/chutes_d_iguazu.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"275 chutes sur 2,7 km de large, débit moyen 1 746 m³/s, dont la Garganta del Diablo de 82m, frontière entre deux pays d'Amérique du Sud"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Frontière entre deux pays d'Amérique du Sud, delta fluvial subtropical"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"275 cascades étagées sur 2,7 km, dont une « Gorge du Diable » de 82 m, jungle subtropicale d'une frontière"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immenses chutes en escalier à la frontière de deux pays d'Amérique du Sud, forêt subtropicale"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus larges chutes du monde, frontière Argentine-Brésil"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes d'Iguazu en Argentine/Brésil"}
   ]},
   {name:"Désert du Namib — Namibie",lat:-24.7333,lng:15.5167,desc:"Le désert du Namib est le plus ancien désert du monde — aride depuis au moins 55 millions d'années. Son «Deadlei» (marais mort) abrite des squelettes d'arbres camelthorn de 900 ans, conservés par la sécheresse extrême. Ses dunes de Sossusvlei, parmi les plus hautes du monde (325 m), doivent leur couleur rouge à l'oxydation du fer.",photo:"photos/desert_du_namib.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sossusvlei, dunes de sable rouge atteignant 325 m dont la Dune 45, désert côtier le plus ancien du monde (80 millions d'ans)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national d'un désert côtier atlantique, dunes parmi les plus hautes du monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dunes de sable rouge atteignant 325 m, désert côtier le plus ancien du monde, Namibie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dunes de sable rouge jusqu'à 325 m, désert côtier le plus ancien du monde bordant un océan froid"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Hautes dunes rouges d'un désert côtier atlantique, parc national aride"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dunes rouges parmi les plus hautes du monde, désert côtier de Namibie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Désert du Namib en Namibie"}
   ]},
   {name:"Parc national Kruger — Afrique du Sud",lat:-23.9884,lng:31.5547,desc:"Le parc Kruger est le plus grand parc national d'Afrique du Sud avec 20 000 km². Il abrite les «Big Five» (lion, éléphant, buffle, léopard, rhinocéros) en densités parmi les plus élevées d'Afrique. Sa clôture électrifiée de 800 km fut construite dans les années 1970 — le plus long périmètre de clôture d'une réserve naturelle au monde.",photo:"photos/parc_national_kruger.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fondé en 1898 par Paul Kruger, 19 485 km², abritant les Big Five, Province du Limpopo et Mpumalanga"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nord-est d'un pays d'Afrique australe, frontières de deux pays voisins, Big Five"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande réserve d'Afrique du Sud, célèbre pour les Big Five"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Réserve fondée en 1898 grande comme un petit pays, refuge des Big Five entre bush et rivières"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vaste réserve animalière du nord-est d'un pays d'Afrique australe, aux frontières de deux voisins"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande réserve du pays, célèbre pour les Big Five, nord-est de l'Afrique du Sud"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc national Kruger en Afrique du Sud"}
   ]},
   {name:"Karnak — Louxor, Égypte",lat:25.7188,lng:32.6573,desc:"La salle hypostyle de Karnak, avec ses 134 colonnes de 23 mètres de haut, est si grande qu'on pourrait y faire tenir la cathédrale Notre-Dame de Paris tout entière. L'élever prit 200 ans — soit le travail de 30 générations d'artisans.",photo:"photos/karnak.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple d'Amon, complexe de 100 hectares construit sur 2000 ans, 134 colonnes de la salle hypostyle, Nouvelle-Thèbes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive est du Nil, Haute-Égypte, à 500 km au sud du Caire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple de l'Égypte antique, Louxor, Haute-Égypte"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Temple géant bâti sur 2 000 ans, forêt de 134 colonnes dans une salle hypostyle, rive d'un grand fleuve"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense temple antique sur la rive est d'un fleuve, Haute vallée, à 500 km d'une capitale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple de l'Égypte antique, Louxor"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Karnak à Louxor, Égypte"}
   ]},
   {name:"Cap de Bonne-Espérance — Afrique du Sud",lat:-34.3568,lng:18.4702,desc:"Le cap de Bonne-Espérance ne marque pas le point le plus méridional d'Afrique — c'est le cap Agulhas, à 150 km à l'est. Mais c'est là que les vents d'ouest et les courants marins se rejoignent, créant des conditions de navigation particulièrement dangereuses. Bartolomeu Dias le doubla en 1488, ouvrant la route des Indes.",photo:"photos/cap_de_bonne_esperance.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Promontoire rocheux découvert par Bartolomeu Dias en 1488, Parc national de Table Mountain, péninsule du Cap"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Extrémité sud-ouest de la péninsule du Cap, province du Cap-Occidental, Afrique du Sud"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cap rocheux légendaire à la pointe de l'Afrique australe"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Promontoire rocheux battu par les vents, contourné en 1488, à la rencontre de deux océans"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cap rocheux à l'extrémité d'une péninsule, parc national, sud-ouest d'un pays d'Afrique australe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cap légendaire à la pointe de la péninsule du Cap, près du Cap"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cap de Bonne-Espérance en Afrique du Sud"}
   ]},
   {name:"Table Mountain — Le Cap, Afrique du Sud",lat:-33.9628,lng:18.4098,desc:"La Table Mountain est l'une des plus anciennes montagnes du monde — estimée à 260 millions d'années. Son plateau sommital, qui accueille le célèbre «tablecloth» de nuages, abrite plus d'espèces végétales que toute la Grande-Bretagne.",photo:"photos/table_mountain.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Montagne à sommet plat de 1 086 m, formée il y a 600 millions d'années, visible à 200 km en mer, téléphérique depuis 1929"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Dominant la ville du Cap, province du Cap-Occidental, Afrique du Sud"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Montagne à plateau emblématique dominant Le Cap, Afrique du Sud"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Montagne à sommet plat de 1 086 m vieille de 600 millions d'années, téléphérique depuis 1929"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Montagne au plateau sommital dominant une grande ville portuaire, sud-ouest d'un pays austral"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Montagne à plateau emblématique dominant Le Cap"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Table Mountain à Le Cap, Afrique du Sud"}
   ]},
   {name:"Mosquée Hassan II — Casablanca, Maroc",lat:33.6086,lng:-7.6327,desc:"La mosquée Hassan II de Casablanca est construite en partie sur la mer, avec un plancher en verre permettant de voir l'océan Atlantique en dessous. Son minaret de 210 m projette un rayon laser vers La Mecque chaque nuit.",photo:"photos/mosquee_hassan_ii.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Inaugurée en 1993, minaret de 210 m (plus haut du monde), construite en partie sur la mer, Michel Pinseau architecte"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord de l'Atlantique, quartier de l'Aïn Diab, métropole économique du royaume"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosquée inaugurée en 1993 au minaret de 210 m — le plus haut du monde — bâtie en partie au-dessus des flots"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense mosquée au bord de l'Atlantique, quartier balnéaire d'une métropole économique"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande mosquée d'Afrique, minaret le plus haut du monde, Casablanca"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mosquée Hassan II à Casablanca, Maroc"}
   ]},
   {name:"Chute Angel — Venezuela",lat:5.97,lng:-62.535,desc:"La chute Angel est si haute que son eau se vaporise en grande partie avant d'atteindre le sol en saison sèche. Après une chute de 979 mètres, l'eau arrive sous forme de bruine ou de ruisseau, selon les conditions météo.",photo:"photos/chute_angel.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Salto Ýngel, 979 m de chute libre ininterrompue sur le plateau du Tepui Auyan, découverte par Jimmy Angel en 1933"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gran Sabana, tepuis et cascades, parc national d'Amérique du Sud"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute cascade du monde (979m), dans la jungle vénézuélienne"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chute d'eau en fil ininterrompu de 979 m dévalant une table de grès, repérée d'avion en 1933"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plus haute cascade du monde jaillissant d'un plateau tabulaire, savane et tepuys"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute cascade du monde (979 m), jungle du Venezuela"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Chute Angel au Venezuela"}
   ]},
   {name:"Canal de Panama",lat:9.0798,lng:-79.6816,desc:"Le canal de Panama raccourcit de 15 000 km le trajet entre les océans Atlantique et Pacifique. Sa construction coûta la vie à 25 000 ouvriers entre 1881 et 1914, principalement à cause de la malaria et de la fièvre jaune.",photo:"photos/canal_de_panama.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Voie navigable de 80 km inaugurée le 15 août 1914, écluses de Gatún, Pedro Miguel et Miraflores, 14 000 navires/an"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Isthme de Panama, reliant l'océan Atlantique au Pacifique, province de Colón à Panama City"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canal reliant l'Atlantique au Pacifique, grande œuvre du XXe siècle"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Voie d'eau de 80 km à écluses inaugurée en 1914, reliant deux océans à travers un isthme"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Canal maritime à écluses traversant un isthme étroit, de l'Atlantique au Pacifique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canal reliant l'Atlantique au Pacifique, près de Panama City"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Canal de Panama"}
   ]},
   {name:"Île de Pâques — Chili",lat:-27.1127,lng:-109.3497,desc:"Juste sous la surface de la mer entourant l'île de Pâques se trouvent des milliers de moaï submergés — les archéologues n'ont fouillé qu'une infime partie des fonds marins. Les têtes visibles sont en réalité des statues entières dont le corps est enfoui.",photo:"photos/ile_de_paques.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rano Raraku, carrière volcanique d'où sont extraits les 887 moai, île volcanique isolée à 3 700 km de la côte continentale"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île volcanique polynésienne isolée dans le Pacifique Sud, territoire d'outre-mer"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île des statues géantes moai, Pacifique Sud, territoire chilien"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Île volcanique isolée à 3 700 km de tout continent, carrière d'où furent extraits près de 900 géants de pierre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île volcanique polynésienne perdue dans le Pacifique Sud, aux statues monumentales"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île des statues moai, Pacifique Sud, Rapa Nui"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Île de Pâques au Chili"}
   ]},
   {name:"Cathédrale de Brasilia — Brésil",lat:-15.7988,lng:-47.8758,desc:"La cathédrale de Brasilia, conçue par Oscar Niemeyer et inaugurée en 1970, est une sculpture hyperboloïde de 16 colonnes d'acier incurvées pesant 90 tonnes chacune. Son entrée se fait par un tunnel souterrain sombre pour que les fidèles jaillissent dans la lumière blanche de la nef vitrée — une métaphore de la résurrection.",photo:"photos/cathedrale_de_brasilia.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Catedral Metropolitana Nossa Senhora Aparecida, conçue par Oscar Niemeyer, inaugurée en 1970, 16 colonnes hyperboloïdes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Esplanade des Ministères d'une capitale construite ex nihilo, district fédéral"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale futuriste de Niemeyer, capitale du Brésil"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cathédrale de 1970 aux 16 colonnes de béton hyperboloïdes formant une couronne, nef souterraine"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cathédrale futuriste sur l'esplanade d'une capitale bâtie ex nihilo, district fédéral"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale futuriste de Niemeyer, capitale, Brasília"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cathédrale de Brasilia au Brésil"}
   ]},
   {name:"Parc Yellowstone — Wyoming, USA",lat:44.428,lng:-110.5885,desc:"Yellowstone est posé sur une supervolcan dont la dernière éruption massive remonte à 640 000 ans. Si elle se reproduisait, elle couvrirait les États-Unis d'une couche de cendres de 1 à 3 mètres. Le Grand Prismatic Spring, source chaude de 90 mètres de diamètre, doit ses couleurs aux bactéries thermophiles.",photo:"photos/parc_yellowstone.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Premier parc national du monde (1872), supervolcan actif, Old Faithful geyser éruptant toutes les 90 min, 89 000 km²"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau volcanique du Wyoming, chevauchant Idaho et Montana, Rocheuses américaines"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc national emblématique, geysers et bisons, Wyoming, USA"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Premier parc national au monde (1872), supervolcan actif, geyser jaillissant toutes les 90 minutes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vaste parc volcanique des Rocheuses, plateau du Wyoming débordant sur deux États voisins"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Parc national de geysers et de bisons, nord-ouest du Wyoming"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc Yellowstone à Wyoming, USA"}
   ]},
   {name:"Galápagos — Équateur",lat:-0.9538,lng:-90.9656,desc:"L'archipel des Galápagos est le laboratoire de l'évolution de Charles Darwin, qui y séjourna en 1835. L'isolement de ses îles créa des espèces uniques au monde : iguanes marins, pinsons de Darwin aux becs adaptés à chaque île, tortues géantes de 200 kg. 97% de l'archipel est parc national intangible.",photo:"photos/galapagos.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Archipel de 19 îles volcaniques, Darwin y développe sa théorie de l'évolution en 1835, tortues géantes et iguanes marins"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel volcanique isolé en plein Pacifique, à 1 000 km du continent"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Îles de Darwin, faune endémique unique, Équateur, Pacifique"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Archipel volcanique isolé où un naturaliste forgea sa théorie de l'évolution en 1835, tortues géantes et iguanes marins"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel volcanique perdu dans le Pacifique, à 1 000 km d'un continent, faune endémique unique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Îles de Darwin à la faune endémique, océan Pacifique, au large de l'Équateur"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Galápagos en Équateur"}
   ]},
   {name:"Times Square — New York, USA",lat:40.758,lng:-73.9855,desc:"Times Square doit son nom au New York Times qui y installa son siège en 1904 et y fit tomber pour la première fois la «ball drop» du Nouvel An. Avec 50 millions de visiteurs par an, c'est le lieu le plus cher pour la publicité au monde — un panneau peut coûter 50 000 dollars par jour.",photo:"photos/times_square.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Intersection de Broadway et 7th Avenue, carrefour commercial dont le nom vient d'un grand quotidien, boule du Nouvel An"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier central de la plus grande métropole du continent, entre deux avenues numérotées"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Carrefour de néons entre deux grandes artères, nom hérité d'un quotidien, célèbre boule qui descend au Nouvel An"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place-carrefour illuminée au cœur de la plus grande métropole du continent, entre deux avenues"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Carrefour des néons, cœur de Manhattan, New York"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Times Square à New York, USA"}
   ]},
   {name:"Cap Canaveral — Floride, USA",lat:28.3922,lng:-80.6077,desc:"Cap Canaveral est le berceau de l'ère spatiale américaine depuis 1950. Son pas de tir 39A vit partir Apollo 11 vers la Lune en 1969. Racheté par SpaceX en 2014, ce même site historique accueille aujourd'hui les fusées Falcon 9 et Starship — une continuité symbolique entre deux époques de l'exploration spatiale.",photo:"photos/cap_canaveral.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kennedy Space Center, Pad 39A d'où sont partis Apollo 11 (1969) et la navette spatiale, côte est du continent américain"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Merritt Island, comté de Brevard, côte est de la Floride, face à l'Atlantique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Centre spatial Kennedy, lieu de lancement d'Apollo 11, Floride"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Base spatiale d'où partirent la première mission lunaire habitée en 1969 et les navettes, sur une côte océanique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre spatial sur une île côtière, comté de Brevard, littoral est de la Floride"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Centre spatial d'où partit Apollo 11, côte est de la Floride"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cap Canaveral à Floride, USA"}
   ]},
   {name:"Patagonie — Argentine",lat:-50.9423,lng:-73.4068,desc:"La Patagonie couvre 900 000 km² — soit une surface plus grande que la France et l'Espagne réunies. Avec seulement 2 habitants au km², c'est l'une des régions les moins peuplées de la planète, habitée surtout par des guanacos et des condors.",photo:"photos/patagonie.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cerro Torre (3 128 m), aiguille granitique dans le Parc national Los Glaciares, province de Santa Cruz"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de Patagonie, à la frontière entre deux pays sud-américains"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Aiguille granitique dans un parc national de l'extrême sud argentin"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Aiguille de granit de 3 128 m dressée dans un parc glaciaire, l'un des sommets les plus durs à gravir"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pic granitique d'un parc national de l'extrême sud, cordillère à cheval sur une frontière"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Aiguille granitique d'un parc de l'extrême sud, région d'El Chaltén"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Patagonie en Argentine"}
   ]},
   {name:"Teotihuacan — Mexique",lat:19.6925,lng:-98.8438,desc:"Teotihuacan était l'une des plus grandes villes du monde en l'an 500 ap. J.-C., avec 200 000 habitants. Personne ne sait quelle civilisation la construisit — les Aztèques, qui la découvrirent des siècles plus tard, la nommèrent «le lieu où les hommes deviennent des dieux».",photo:"photos/teotihuacan.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pyramide du Soleil (65m), Pyramide de la Lune, Avenue des Morts, cité précolombienne fondée vers -200, dépeuplée en 650"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Municipalité de San Juan Teotihuacan, État de Mexico, à 40 km de Mexico City"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité aztèque aux grandes pyramides, à 40 km de Mexico"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cité précolombienne fondée vers -200, immenses pyramides du Soleil et de la Lune bordant une Avenue des Morts"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cité pyramidale précolombienne des hauts plateaux, à 40 km d'une immense métropole"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité aux grandes pyramides, à 40 km de Mexico"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le site archéologique de Teotihuacan, Mexique"}
   ]},
   {name:"Great Barrier Reef — Queensland, Australie",lat:-18.2861,lng:147.6992,desc:"Le Grand Récif corallien est le plus grand organisme vivant de la planète — visible depuis l'espace. Sa surface est inférieure de moitié à celle de 1960 à cause du réchauffement climatique et de l'acidification des océans. Des chercheurs travaillent à congeler des fragments de corail pour permettre une future restauration.",photo:"photos/great_barrier_reef.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand système récifal du monde, 2 300 km, 2 900 récifs individuels, visible depuis l'espace"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mer de Corail, côte nord-est du Queensland, entre Bundaberg et Torres Strait"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand récif corallien du monde, Queensland, Australie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand système corallien du monde, 2 300 km et 2 900 récifs, visible depuis l'espace"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense récif corallien longeant une côte nord-est, mer de Corail, État du Queensland"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand récif corallien du monde, côte du Queensland"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Great Barrier Reef à Queensland, Australie"}
   ]},
   {name:"Sky Tower — Auckland, Nouvelle-Zélande",lat:-36.8681,lng:174.7622,desc:"La Sky Tower d'Auckland, inaugurée en 1997, est la structure la plus haute de l'hémisphère sud avec ses 328 mètres. Elle repose sur une seule colonne de béton ancrée dans le roc volcanique d'Auckland, conçue pour résister à un tremblement de terre de magnitude 8. Des parachutistes y sautent depuis le sommet lors d'événements spéciaux.",photo:"photos/sky_tower.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pylône de télécommunications de 328 m inauguré en 1997, Gordon Moller architecte, saut en chute libre depuis la plateforme"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre-ville portuaire de l'île du Nord, entre deux rades naturelles"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tour emblématique d'Auckland, plus haute tour de l'hémisphère sud"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tour de télécommunication de 328 m ouverte en 1997, saut en chute libre depuis sa plateforme"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Très haute tour d'observation d'une ville portuaire, île du Nord entre deux rades"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus haute tour de l'hémisphère sud, emblème d'Auckland"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Sky Tower à Auckland, Nouvelle-Zélande"}
   ]},
   {name:"Fiordland — Milford Sound, Nouvelle-Zélande",lat:-44.6413,lng:167.9263,desc:"Le parc national de Fiordland reçoit jusqu'à 9 mètres de pluie par an — l'un des endroits les plus pluvieux du monde. Cette eau crée des centaines de cascades éphémères qui cascadent des parois à pic pendant et après chaque pluie.",photo:"photos/fiordland.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Piopiotahi, fjord de 16 km de long taillé par les glaciers, pic de Mitre 1 692 m, classé UNESCO, île du Sud"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de Fiordland, district de Southland, île du Sud, Nouvelle-Zélande"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fjord de Milford Sound, paysage de montagne et cascades, Nouvelle-Zélande"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fjord de 16 km taillé par les glaciers, pic pyramidal de 1 692 m plongeant dans une eau sombre, cascades"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fjord glaciaire d'un parc national, côte sud-ouest de l'île du Sud"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fjord de montagnes et cascades, sud-ouest de l'île du Sud néo-zélandaise"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Fiordland à Milford Sound, Nouvelle-Zélande"}
   ]},
   {name:"Bora Bora — Polynésie française",lat:-16.5004,lng:-151.7415,desc:"Le lagon de Bora Bora est un ancien cratère volcanique envahi par la mer. La barrière de corail qui l'entoure est si peu profonde qu'on peut la traverser à pied à marée basse dans certains endroits, créant une expérience unique de marche sur l'eau.",photo:"photos/bora_bora.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Île volcanique de 38 km², entourée d'un lagon turquoise et d'un récif barrière, archipel de la Société, Polynésie"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel de la Société, Polynésie française, à 260 km à l'ouest de Tahiti"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île paradisiaque à lagon turquoise, Polynésie française"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Île volcanique de 38 km² cernée d'un lagon turquoise et d'un récif barrière, pic central déchiqueté"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île-lagon d'un archipel du Pacifique Sud, à 260 km à l'ouest d'une île principale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Île paradisiaque au lagon turquoise, archipel de la Société, près de Tahiti"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bora Bora en Polynésie française"}
   ]},
   {name:"Palau — Micronésie",lat:7.3419,lng:134.4791,desc:"Le lac des méduses de Palau est le seul endroit au monde où l'on peut nager en sécurité entouré de millions de méduses. Ces méduses ont perdu leur venin au fil de l'évolution car elles n'avaient plus de prédateurs dans ce lac fermé. Chaque jour, elles «nagent» littéralement en suivant la lumière du soleil.",photo:"photos/palau.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Jellyfish Lake (Ongeim'l Tketau), lac marin de 460 m de long peuplé de 5 millions de méduses dorées sans venin, île de Eil Malk"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Archipel des Rock Islands, État de Koror, République des Palaos, Micronésie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac marin peuplé de millions de méduses sans venin, archipel de Micronésie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac marin de 460 m peuplé de millions de méduses dorées inoffensives, au cœur d'îles-champignons"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lac aux méduses au milieu d'un archipel corallien, ouest de l'océan Pacifique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac aux millions de méduses sans venin, îles de Micronésie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palau en Micronésie"}
   ]},
   {name:"Mosquée Al-Aqsa — Jérusalem",lat:31.7761,lng:35.2358,desc:"La mosquée Al-Aqsa est le troisième lieu saint de l'Islam, sur l'esplanade des Mosquées de Jérusalem. Selon la tradition islamique, c'est le site du voyage nocturne du Prophète Mahomet (isra et mi'raj) depuis La Mecque. Elle fut construite en 705 ap. J.-C. par le calife omeyyade al-Walid Ier sur un site sacré depuis l'Antiquité.",photo:"photos/mosquee_al_aqsa.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Masjid al-Aqsa, 3e lieu saint de l'Islam, construite en 705 par Abd al-Malik, esplanade du mont du Temple"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mont du Temple, Vieille Ville de Jérusalem, quartier musulman"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"3e lieu saint de l'Islam, sur l'esplanade des Mosquées, Jérusalem"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Troisième lieu saint d'une grande religion, bâti en 705 sur une vaste esplanade au cœur d'une vieille ville"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande mosquée sur l'esplanade du mont du Temple, quartier musulman d'une vieille ville sainte"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"3e lieu saint de l'Islam, esplanade des Mosquées, Jérusalem"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mosquée Al-Aqsa à Jérusalem"}
   ]},
   {name:"Palmyre — Syrie",lat:34.5503,lng:38.2688,desc:"La reine de Palmyre, Zénobie, défia Rome en 270 ap. J.-C. en conquérant l'Égypte et l'Anatolie avec son armée. Capturée par l'empereur Aurélien, elle fut exhibée à Rome enchaînée d'or massif — un hommage paradoxal à sa grandeur.",photo:"photos/palmyre.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tadmor, oasis caravanière nabatéenne, temple de Bêl (32 ap. J.-C.), partiellement détruit par Daech en 2015"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gouvernorat de Homs, désert syrien, à 210 km de Damas"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité antique de la Reine Zénobie, désert de Syrie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ruines d'une oasis caravanière au temple antique, cité d'une reine rebelle, en partie détruite en 2015"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ruines antiques d'une oasis en plein désert, à 210 km d'une capitale du Proche-Orient"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité antique de la reine Zénobie, désert de Syrie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palmyre en Syrie"}
   ]},
   {name:"Persépolis — Iran",lat:29.9348,lng:52.8913,desc:"Persépolis était le symbole de la richesse et du pouvoir achéménide. Ses bas-reliefs représentent 23 nations soumises portant des tributes — une carte vivante de l'empire le plus vaste de l'Antiquité, qui s'étendait de la Grèce à l'Inde.",photo:"photos/persepolis.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale cérémonielle de l'Empire achéménide, fondée par Darius Ier vers -515, Apadana et porte de toutes les nations"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plaine de Marvdasht, Province de Fars, à 60 km d'une grande ville historique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines de la capitale perse de Darius, Iran"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale cérémonielle d'un empire antique fondée vers -515, escalier de l'Apadana et porte des Nations"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ruines d'une capitale perse antique, plaine du Fars, à 60 km d'une grande ville historique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines de la capitale de Darius, région de Chiraz"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Persépolis en Iran"}
   ]},
   {name:"Coupole du Rocher — Jérusalem",lat:31.7781,lng:35.2354,desc:"Le Dôme du Rocher, sanctuaire islamique construit en 691, recouvre le rocher d'où le prophète Mahomet serait monté au ciel lors de son voyage nocturne. Ses mosaïques et carreaux de faïence furent entièrement restaurés par la Jordanie en 1959 et 2016. Son dôme doré est recouvert de 5 000 plaques d'or.",photo:"photos/coupole_du_rocher.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Qubbat al-Sakhra, sanctuaire islamique érigé en 691 par Abd al-Malik ibn Marwan, recouvrant le rocher de l'Ascension"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mont du Temple, Esplanade des Mosquées, Vieille Ville de Jérusalem"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sanctuaire doré de l'esplanade des Mosquées, Jérusalem"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sanctuaire à coupole dorée érigé en 691 au-dessus d'un rocher saint, au centre d'une vaste esplanade"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Dôme doré sur l'esplanade du mont du Temple, vieille ville sainte des trois monothéismes"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sanctuaire à coupole dorée de l'esplanade des Mosquées, Jérusalem"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Coupole du Rocher à Jérusalem"}
   ]},
   {name:"Cappadoce — Turquie",lat:38.6431,lng:34.8289,desc:"Les cheminées de fées de Cappadoce furent habitées pendant des millénaires. Les premières communautés chrétiennes y creusèrent des villes souterraines entières pour échapper aux persécutions romaines — certaines pouvaient abriter 20 000 personnes sur 8 niveaux.",photo:"photos/cappadoce.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Göreme, cheminées de fées en tuf volcanique créées par l'érosion de la caldeira du Erciyes, habitations rupestres du IVe siècle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Nevşehir, Anatolie centrale, à 280 km d'Ankara"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage lunaire aux cheminées de fées en tuf volcanique, Anatolie centrale, Turquie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cheminées de fées de tuf sculptées par l'érosion d'un volcan, habitations et églises creusées dès le IVe siècle"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Paysage de cheminées de fées et d'habitats troglodytes, plateau d'Anatolie centrale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage lunaire aux cheminées de fées, Anatolie centrale, près de Nevşehir"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cappadoce en Turquie"}
   ]},
   {name:"Château de Kronborg — Elseneur, Danemark",lat:56.039,lng:12.6213,desc:"Le château de Kronborg inspira Shakespeare pour son Hamlet, bien que le dramaturge n'ait probablement jamais visité le Danemark. La légende dit que le héros Viking Holger Danske dort dans ses caves et se réveillera si le Danemark est en danger.",photo:"photos/chateau_de_kronborg.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Slot Kronborg, forteresse Renaissance de 1574, cadre d'Hamlet de Shakespeare, détroit de l'Øresund"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville côtière du nord d'une péninsule européenne, bord d'étroit face à un pays voisin"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château d'Hamlet, classé UNESCO, Danemark"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Forteresse Renaissance de 1574 gardant un détroit stratégique, cadre légendaire d'une tragédie de Shakespeare"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Château Renaissance côtier gardant un détroit, nord d'une péninsule, face à un pays voisin"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château d'Hamlet gardant l'Øresund, Elseneur"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Kronborg à Elseneur, Danemark"}
   ]},
   {name:"Opéra de Copenhague — Danemark",lat:55.6786,lng:12.5997,desc:"L'Opéra de Copenhague, inauguré en 2005, fut entièrement financé par le magnat de la marine Mærsk Mc-Kinney Møller pour 500 millions d'euros. Ses 14 mètres de porte-à-faux et son toit doré de 32 mètres surplombant le port en font l'un des opéras les plus modernes et chers jamais construits.",photo:"photos/opera_de_copenhague.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Operaen, conçu par Henning Larsen, inauguré en 2005, offert par Mærsk McKinney Møller, île de Holmen"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île de Holmen, port de Copenhague, face au palais d'Amalienborg"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Opéra moderne sur le port de Copenhague, Danemark"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Opéra de verre inauguré en 2005, don d'un magnat de l'armement, posé sur une île face à un palais royal"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Opéra moderne sur une île du port, face à la résidence royale d'une capitale nordique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Opéra moderne sur le port, face à Amalienborg, Copenhague"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Opéra de Copenhague, Danemark"}
   ]},
   {name:"Vieux-Port de Stockholm — Suède",lat:59.3245,lng:18.0726,desc:"Gamla Stan est construite sur une île artificielle créée au XIIIe siècle. Ses ruelles les plus étroites ne mesurent que 90 cm de large — soit exactement la largeur des traîneaux à chevaux de l'époque médiévale.",photo:"photos/vieux_port_de_stockholm.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Gamla Stan, île Stadsholmen, vieille ville médiévale fondée en 1252, Stortorget et ruelles pavées"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île de Stadsholmen, centre historique de Stockholm, entre le lac Mälaren et la Baltique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Gamla Stan, vieille ville médiévale de Stockholm, Suède"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vieille ville médiévale fondée en 1252 sur une île, place pavée et ruelles étroites colorées"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cœur médiéval insulaire d'une capitale nordique, entre un lac et la mer Baltique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille ville médiévale de Gamla Stan, Stockholm"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Vieux-Port de Stockholm en Suède"}
   ]},
   {name:"Palais Royal de Stockholm — Suède",lat:59.3268,lng:18.0717,desc:"Le palais royal de Stockholm, achevé en 1754, est l'une des plus grandes résidences royales encore en service avec ses 1 430 pièces. Contrairement à Buckingham, il est ouvert au public l'été entier. La garde royale défile chaque jour à midi dans une cérémonie très populaire.",photo:"photos/palais_royal_de_stockholm.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kungliga Slottet, 1 430 pièces, construit de 1697 à 1760 par Nicodemus Tessin le Jeune sur l'île Stadsholmen"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Gamla Stan, île historique, résidence officielle du monarque, bord de la mer Baltique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand palais royal du monde en usage, Stockholm"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais royal de 1 430 pièces bâti de 1697 à 1760 sur une île de la vieille ville, encore en usage"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grand palais royal sur une île historique, résidence du monarque, bord de la Baltique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand palais royal encore en usage, Stockholm"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais Royal de Stockholm en Suède"}
   ]},
   {name:"Bibliothèque de l'Université d'Helsinki — Finlande",lat:60.1699,lng:24.9384,desc:"La bibliothèque nationale de Finlande, bâtie en 1840 par Carl Ludwig Engel, est le chef-d'œuvre néoclassique d'Helsinki. Son architecture sobre et majestueuse fut conçue pour rivaliser avec les grandes bibliothèques européennes. Elle abrite un exemplaire de chaque livre publié en Finlande depuis 1707 — un dépôt légal exceptionnel.",photo:"photos/bibliotheque_de_l_universite_d_helsinki.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cathédrale luthérienne néoclassique conçue par Carl Ludwig Engel, consacrée en 1852, sur la place du Sénat"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Senate Square (Senaatintori), cœœur de la capitale la plus nordique d'Europe continentale"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cathédrale luthérienne néoclassique blanche consacrée en 1852, dominant une place à degrés"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cathédrale blanche à coupole sur la place du Sénat, capitale la plus nordique d'Europe continentale"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale blanche néoclassique dominant le centre d'Helsinki"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bibliothèque de l'Université d'Helsinki en Finlande"}
   ]},
   {name:"Vieux-Tallinn — Estonie",lat:59.437,lng:24.7453,desc:"Tallinn possède l'une des vieilles villes médiévales les mieux préservées d'Europe du Nord. Sa pharmacie, fondée en 1422, est l'une des plus anciennes pharmacies encore en activité au monde.",photo:"photos/vieux_tallinn.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Centre médiéval de Tallinn, Toompea (colline de la Cathédrale) et Ville basse hanseatique, classé UNESCO en 1997"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Presqu'île baignant dans un golfe de la mer Baltique, vieille ville médiévale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille ville médiévale la mieux préservée de la Baltique, Estonie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cœur médiéval hanséatique à deux niveaux — colline de la cathédrale et ville basse — enserré de remparts"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vieille ville médiévale sur une presqu'île d'un golfe de la Baltique, remparts et tours"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieille ville médiévale la mieux préservée de la Baltique, Tallinn"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Vieux-Tallinn en Estonie"}
   ]},
   {name:"Château de Trakai — Lituanie",lat:54.6479,lng:24.9347,desc:"Le château de Trakai, bâti sur une île du lac Galv? au XIVe siècle, est le château insulaire le plus oriental d'Europe. Il fut la résidence du Grand-Duc Vytautas qui étendit la Lituanie jusqu'à la mer Noire, créant le plus grand État d'Europe médiévale.",photo:"photos/chateau_de_trakai.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pilis, château insulaire gothique du XIVe siècle sur le lac Galv?, résidence du Grand-Duc Vytautas"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île d'un lac glaciaire, ancienne capitale médiévale, à 28 km de la capitale actuelle"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château insulaire médiéval sur un lac, Lituanie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Château gothique du XIVe siècle bâti sur une île, résidence d'un grand-duc, briques rouges sur eau bleue"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Château insulaire sur un lac glaciaire, ancienne capitale, à 28 km de la capitale actuelle"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château insulaire de briques rouges sur un lac, Trakai"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Trakai sur son lac, Lituanie"}
   ]},
   {name:"Vieille ville de Dubrovnik — Croatie",lat:42.6507,lng:18.0944,desc:"Les remparts de Dubrovnik furent construits à partir du XIIIe siècle et n'ont jamais été percés par un ennemi. La cité-état de Raguse fut l'une des premières républiques marchandes à abolir l'esclavage, en 1418, trois siècles avant les nations modernes.",photo:"photos/vieille_ville_de_dubrovnik.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Raguse, cité-état indépendante jusqu'en 1808, remparts de 1 940 m, Fort Lovrijenac et Stradun, côte dalmate"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Extrémité sud de la côte dalmate croate, mer Adriatique, comté de Dubrovnik-Neretva"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Perle de l'Adriatique, vieille ville fortifiée de Croatie, UNESCO"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancienne cité-État marchande ceinte de 1 940 m de remparts, artère de marbre et forts dominant l'Adriatique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vieille ville fortifiée à l'extrémité sud d'une côte dalmate, mer Adriatique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Perle de l'Adriatique, vieille ville fortifiée, Dubrovnik"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La vieille ville fortifiée de Dubrovnik, Croatie"}
   ]},
   {name:"Pont de Mostar — Bosnie-Herzégovine",lat:43.337,lng:17.8156,desc:"Le Stari Most de Mostar, pont ottoman construit en 1566, fut délibérément détruit par des obus croates en novembre 1993. Sa reconstruction, achevée en 2004, utilisa les mêmes techniques du XVIe siècle et la même pierre locale — le tenelija. La reconstruction de ce pont devint un symbole de réconciliation.",photo:"photos/pont_de_mostar.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Stari Most, pont ottoman en pierre calcaire construit en 1566 par Mimar Hayruddin, détruit en 1993 et reconstruit en 2004"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre historique d'une ville des Balkans, vallée de la Neretva, pont ottoman du XVIe s."},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieux pont ottoman de Mostar, symbole de réconciliation, Bosnie-Herzégovine"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pont ottoman en pierre de 1566 en dos d'âne, détruit par la guerre en 1993 puis reconstruit à l'identique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vieux pont ottoman en dos d'âne enjambant une rivière émeraude, centre historique des Balkans"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieux pont ottoman, symbole de réconciliation, Mostar"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont de Mostar en Bosnie-Herzégovine"}
   ]},
   {name:"Monastère de Meteora — Grèce",lat:39.7217,lng:21.6306,desc:"Les monastères de Météora sont construits au sommet de pitons rocheux de grès atteignant 600 mètres. Fondés au XIVe siècle par des moines fuyant les invasions ottomanes, ils étaient accessibles uniquement par des échelles amovibles ou des paniers hissés par des treuils — pour décourager les intrus.",photo:"photos/monastere_de_meteora.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Complexe de 6 monastères orthodoxes actifs perchés sur des pitons de grès (400-600m), fondés aux XIVe-XVIe siècles"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plaine de Thessalie, commune de Kalambaka, région de Thessalie centrale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monastères suspendus sur des rochers géants, merveille de Grèce, UNESCO"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Six monastères orthodoxes juchés sur des pitons de grès de 400 à 600 m, fondés du XIVe au XVIe siècle"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Monastères suspendus sur des rochers verticaux, plaine centrale d'une péninsule du sud-est de l'Europe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monastères perchés sur des rochers géants, Thessalie, près de Kalambaka"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Monastère de Meteora en Grèce"}
   ]},
   {name:"Place Wenceslas — Prague, Rép. Tchèque",lat:50.0813,lng:14.4281,desc:"La place Venceslas de Prague n'est pas une place mais un boulevard de 750 mètres. C'est le centre politique de la Bohême depuis le Moyen Âge. Jan Palach s'y immola par le feu en 1969 pour protester contre l'invasion soviétique. En 1989, des centaines de milliers de personnes y manifestèrent lors de la Révolution de velours.",photo:"photos/place_wenceslas.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Václavské náměstí, boulevard de 750m, cœur politique des révolutions de 1848, 1968 et 1989 (Révolution de velours)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nové Město (Nouvelle Ville), entre gare centrale et musée national, Bohême"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande place-boulevard au cœur de Prague, témoin de la Révolution de Velours, Rép. Tchèque"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Long boulevard-place de 750 m, théâtre des révolutions de 1848, 1968 et de la chute pacifique de 1989"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande place-boulevard de la Nouvelle Ville, entre gare centrale et musée national, Bohême"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Place-boulevard de la Révolution de velours, Prague"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Place Wenceslas à Prague, Rép. Tchèque"}
   ]},
   {name:"Château de Wawel — Cracovie, Pologne",lat:50.054,lng:19.9354,desc:"Le château de Wawel abrite la crypte royale où sont enterrés les rois, héros et poètes nationaux polonais. Il conserve aussi la «dent de dragon» — en réalité une dent de mammouth ou de rhinocéros laineux — suspendue à une chaîne à l'entrée depuis le Moyen Âge.",photo:"photos/chateau_de_wawel.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wawel Royal Castle, résidence des rois jusqu'en 1596, colline de Wawel dominant la Vistule, cathédrale gothique"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline royale sur la rive gauche de la Vistule, Petite-Pologne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château royal et cathédrale sur la colline du Wawel, Cracovie, Pologne"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Château royal habité jusqu'en 1596 et sa cathédrale gothique, sur une colline dominant un fleuve"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Château et cathédrale sur une colline royale, rive gauche d'un fleuve, Petite-Pologne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château royal et cathédrale sur la colline du Wawel, Cracovie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Wawel à Cracovie, Pologne"}
   ]},
   {name:"Auschwitz-Birkenau — Pologne",lat:50.0341,lng:19.1783,desc:"Auschwitz-Birkenau fut libéré le 27 janvier 1945 par l'armée soviétique. Ce jour est devenu la Journée internationale de la mémoire des victimes de l'Holocauste. Le site, classé UNESCO, reçoit plus de 2 millions de visiteurs par an.",photo:"photos/auschwitz_birkenau.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Konzentrationslager Auschwitz-Birkenau, plus grand camp d'extermination nazi, 1,1 million de victimes, 1940-1945"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'Europe centrale, à 60 km d'une grande cité royale, camp d'extermination"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mémorial du camp d'extermination nazi, classé UNESCO, Pologne"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand camp d'extermination d'un régime totalitaire (1940-1945), où périrent plus d'un million de personnes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Mémorial d'un camp d'extermination, ville d'Europe centrale, à 60 km d'une grande cité royale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mémorial du camp d'extermination nazi, sud de la Pologne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Auschwitz-Birkenau en Pologne"}
   ]},
   {name:"Château de Bran — Roumanie",lat:45.5152,lng:25.367,desc:"Le château de Bran fut associé à Dracula par des touristes et éditeurs anglais qui cherchaient un décor réel pour le roman de Bram Stoker (1897). Stoker ne visita jamais la Roumanie et s'inspira uniquement de livres. Vlad l'Empaleur, le vrai prince valaque cruel, n'y séjourna probablement que très brièvement.",photo:"photos/chateau_de_bran.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Castelul Bran, forteresse teutonique de 1382 sur un rocher, associée à la légende de Dracula de Bram Stoker"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Commune d'un col des Carpates entre deux régions historiques d'Europe de l'Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château de Dracula dans les Carpates, Transylvanie, Roumanie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Forteresse de 1382 juchée sur un rocher, associée à la légende d'un comte vampire par un roman de 1897"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Château fort d'un col des Carpates, entre deux régions historiques d'Europe de l'Est"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château dit « de Dracula » dans les Carpates, Transylvanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Bran en Roumanie"}
   ]},
   {name:"Lavra de Kiev — Ukraine",lat:50.4347,lng:30.5578,desc:"La Laure de Kiev-Petchersk, fondée en 1051, est le plus ancien monastère de la Russie kiévienne. Ses catacombes abritent les corps momifiés naturellement de moines médiévaux — une attraction macabre vieille de neuf siècles. Elle fut inscrite au patrimoine mondial de l'UNESCO en 1990.",photo:"photos/lavra_de_kiev.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kyevo-Pechersk? Lavra, monastère orthodoxe fondé en 1051, catacombes avec momies de saints, colline du Dniepr"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive droite d'un grand fleuve d'Europe orientale, quartier des grottes monastiques"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Monastère orthodoxe fondé en 1051, réseau de catacombes aux momies de saints, sur une colline d'un fleuve"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Monastère aux grottes sur la rive droite d'un grand fleuve d'Europe orientale"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Monastère des Grottes, haut lieu de l'orthodoxie slave, Kiev"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lavra de Kiev en Ukraine"}
   ]},
   {name:"Cliffs of Moher — Irlande",lat:52.9715,lng:-9.4309,desc:"Les falaises de Moher servirent de décor dans Harry Potter et les Reliques de la Mort. Elles sont habitées par 30 000 oiseaux de mer de 20 espèces différentes, dont des macareux qui creusent leurs terriers dans le sommet herbeux des falaises.",photo:"photos/cliffs_of_moher.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Falaises de 214 m de hauteur sur 8 km de long, âge de 320 millions d'années, comté de Clare, côte atlantique"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Côte ouest d'une île de l'Atlantique nord, falaises vertigineuses de 200m"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Falaises spectaculaires de l'Atlantique, emblème de l'Irlande"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Falaises verticales de 214 m sur 8 km, roche vieille de 320 millions d'années battue par l'océan"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Hautes falaises maritimes de la côte ouest d'une île de l'Atlantique nord"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Falaises spectaculaires de l'Atlantique, ouest de l'Irlande"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cliffs of Moher en Irlande"}
   ]},
   {name:"Château de Blarney — Irlande",lat:51.9293,lng:-8.5718,desc:"La Pierre d'Éloquence du château de Blarney, encastrée sous le parapet à 25 mètres de hauteur, s'embrasse en se penchant en arrière. Selon la légende, qui l'embrasse reçoit le don de flattery — l'art de parler avec charme et conviction. Winston Churchill et Mick Jagger l'auraient embrassée.",photo:"photos/chateau_de_blarney.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Blarney Castle, tour médiévale de 1446, Pierre d'Éloquence (Blarney Stone) au sommet, comté de Cork"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Village à 8 km d'une grande ville portuaire, château médiéval et sa pierre légendaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château de la Pierre d'Éloquence, près de Cork, Irlande"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tour médiévale de 1446 abritant au sommet une pierre dont un baiser donnerait l'éloquence"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Château médiéval et sa pierre légendaire, village à 8 km d'une grande ville portuaire"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château de la Pierre d'Éloquence, près de Cork"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Blarney en Irlande"}
   ]},
   {name:"Cathédrale de Cologne — Allemagne",lat:50.9413,lng:6.9583,desc:"La cathédrale de Cologne fut construite sur 632 ans (1248-1880) — la plus longue construction cathédrale gothique de l'Histoire. Ses flèches jumelles de 157 mètres furent le bâtiment le plus haut du monde de 1880 à 1884. Elle abrite les reliques supposées des Rois Mages, apportées de Milan en 1164 — ce qui en fit le plus grand pèlerinage médiéval du nord de l'Europe.",photo:"photos/cathedrale_de_cologne.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Kölner Dom, construction entamée en 1248, achevée en 1880, 157m de hauteur, abritant les reliques des Rois Mages"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord du Rhin, face au pont Hohenzollern, centre de Cologne, Rhénanie-du-Nord-Westphalie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale gothique de Cologne, 2e monument le plus visité d'Allemagne"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cathédrale gothique de 157 m, chantier de 1248 achevé en 1880, abritant la châsse des Rois Mages"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense cathédrale gothique au bord d'un fleuve, face à un pont ferroviaire, Rhénanie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cathédrale gothique aux flèches jumelles, très visitée, Cologne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cathédrale de Cologne en Allemagne"}
   ]},
   {name:"Forêt-Noire — Bade-Wurtemberg, Allemagne",lat:47.999,lng:8.227,desc:"La Forêt-Noire est le berceau de la coucou-horloge et du gâteau Forêt-Noire. Ses forêts d'épicéas inspirèrent les frères Grimm pour Blanche-Neige, Hansel et Gretel. La Schwarzwaldbahn, ligne de chemin de fer inaugurée en 1873, traverse 37 tunnels et 163 viaducs dans un paysage de conte de fées.",photo:"photos/foret_noire.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Schwarzwald, massif hercynien de 160km de long, source du Danube à Donaueschingen, horlogerie coucou, Triberg"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bade-Wurtemberg, entre le Rhin et le plateau souabe, massif forestier célèbre"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Massif forestier emblématique, gâteaux et coucous, sud-ouest de l'Allemagne"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Massif forestier hercynien de 160 km, source d'un grand fleuve, pays du coucou et de la forêt sombre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massif forestier célèbre entre un grand fleuve et le plateau souabe, Bade-Wurtemberg"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Massif forestier aux coucous et gâteaux, sud-ouest de l'Allemagne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Forêt-Noire à Bade-Wurtemberg, Allemagne"}
   ]},
   {name:"Château de Chillon — Suisse",lat:46.4142,lng:6.9274,desc:"Lord Byron grava son nom sur une colonne de la prison du château de Chillon lors de sa visite en 1816. Il y écrivit ensuite «Le Prisonnier de Chillon», poème inspiré de François Bonivard, emprisonné 4 ans dans les caves pour s'être opposé au duc de Savoie.",photo:"photos/chateau_de_chillon.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Château insulaire du XIIe siècle sur un rocher du lac Léman, prison de François Bonivard, immortalisé par Byron"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord du lac Léman, commune de Veytaux, canton de Vaud, entre Montreux et Villeneuve"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château médiéval sur le lac Léman, Montreux, Suisse"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Château du XIIe siècle sur un rocher d'un grand lac, ancienne prison chantée par un poète romantique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Château médiéval au bord d'un lac alpin, canton de Vaud, entre deux villes riveraines"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château médiéval sur le Léman, près de Montreux"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Chillon au bord du lac Léman, Suisse"}
   ]},
   {name:"Jet d'eau — Genève, Suisse",lat:46.2044,lng:6.1557,desc:"Le jet d'eau de Genève jaillit à 500 litres par seconde et monte à 140 mètres de hauteur. Il fut créé en 1891 pour réguler la pression hydraulique du réseau d'eau de la ville. Par vent fort, il peut doucher des passants à plusieurs centaines de mètres — les Genevois l'appellent affectueusement «la grande douche».",photo:"photos/jet_d_eau.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Panache de 140 m de hauteur, débit de 500 litres/seconde, vitesse de 200 km/h, inauguré en 1891"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rade du lac Léman, quai Gustave-Ador"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fontaine géante sur le lac Léman, symbole de Genève, Suisse"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Panache d'eau de 140 m propulsé à 200 km/h, 500 litres par seconde, en service depuis 1891"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fontaine géante jaillissant d'une rade lacustre, quai d'une ville au bord d'un grand lac"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fontaine géante sur le lac Léman, symbole de Genève"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Jet d'eau à Genève, Suisse"}
   ]},
   {name:"Lac Baïkal — Sibérie, Russie",lat:53.5587,lng:108.165,desc:"Le lac Baïkal est si profond qu'on pourrait y empiler 6 tours Eiffel sans les voir dépasser. Sa rive orientale abrite des phoques d'eau douce — les seuls au monde — dont l'ancêtre aurait migré depuis l'Arctique il y a 20 millions d'années.",photo:"photos/lac_baikal.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus ancien (25 Ma) et profond (1 642 m) lac du monde, 20% des réserves d'eau douce liquide de la planète"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Sibérie méridionale, oblast d'Irkoutsk et Bouriatie, à 66 km d'Irkoutsk"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac le plus profond du monde, Sibérie, Russie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Lac le plus ancien et le plus profond du monde (1 642 m), 20 % de l'eau douce liquide de la planète"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Lac immense et très profond du sud de la Sibérie, à 66 km d'une grande ville régionale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac le plus profond du monde, Sibérie, près d'Irkoutsk"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac Baïkal à Sibérie, Russie"}
   ]},
   {name:"Registan — Samarcande, Ouzbékistan",lat:39.6558,lng:66.9758,desc:"La place du Registan de Samarcande est ornée de carreaux de céramique vieux de 600 ans dont les couleurs sont aussi vives qu'au premier jour. Le secret des artisans timourides pour produire ce bleu lapis-lazuli immuable n'a jamais été totalement élucidé.",photo:"photos/registan.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Place aux trois médersas timourides (Ulugh Beg 1420, Shir-Dor 1636, Tilya-Kori 1660), joyau de la route de la Soie"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre d'une ville mythique de la Route de la Soie, mosquées de majolique bleue"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus belle place d'Asie centrale, trois médersas dorées, Samarcande, Ouzbékistan"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Place aux trois médersas de majolique bleue (1420-1660), joyau d'une route commerciale mythique"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Place monumentale aux médersas bleues, ville-carrefour de la Route de la Soie, Asie centrale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus belle place d'Asie centrale, trois médersas dorées, Samarcande"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Registan à Samarcande, Ouzbékistan"}
   ]},
   {name:"Palais de Topkapi — Istanbul, Turquie",lat:41.0115,lng:28.9833,desc:"Le palais de Topkapi fut le centre de l'Empire ottoman pendant 400 ans. Son Harem abritait jusqu'à 600 femmes et eunuques. Le palais conserve les reliques les plus sacrées de l'Islam : le manteau et l'épée du prophète Mahomet, ainsi qu'une dent et un cheveu lui appartenant selon la tradition.",photo:"photos/palais_de_topkapi.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Topkapi Sarayi, résidence des sultans ottomans de 1465 à 1856, abritant le manteau du prophète et 86 carats du Diamant du Spoonmak"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pointe du Sérail, péninsule historique, entre la Corne d'Or et le Bosphore"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais des sultans ottomans, trésor impérial, Istanbul"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais des sultans de 1465 à 1856, cours à pavillons abritant reliques sacrées et diamants légendaires"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Palais impérial sur une pointe de la péninsule historique, entre Corne d'Or et Bosphore"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais des sultans ottomans et son trésor, Istanbul"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Topkapi à Istanbul, Turquie"}
   ]},
   {name:"Pamukkale — Turquie",lat:37.92,lng:29.12,desc:"Pamukkale — «château de coton» en turc — est un site naturel unique : des sources thermales à 35°C chargées de carbonate de calcium ont créé des terrasses et cascades de travertin blanc sur 2 700 mètres. La cité antique d'Hiérapolis construite au-dessus comptait 100 000 habitants à son apogée romaine.",photo:"photos/pamukkale.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Château de coton, terrasses calcaires blanches formées par des sources thermales à 35°C riches en carbonate de calcium, Hiérapolis"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Denizli, vallée du Büyük Menderes, Anatolie occidentale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Terrasses de travertin blanc et bassins thermaux, merveille naturelle de Turquie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Terrasses calcaires blanches en gradins, formées par des sources chaudes chargées de calcaire, bassins turquoise"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cascades pétrifiées de travertin blanc, vallée d'Anatolie occidentale, ruines antiques voisines"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Terrasses de travertin blanc et bassins thermaux, ouest de la Turquie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pamukkale en Turquie"}
   ]},
   {name:"Bagan — Myanmar",lat:21.1717,lng:94.8585,desc:"Les temples de Bagan sont peints de fresques représentant la vie du Bouddha. Après le tremblement de terre de 1975, des restaurations controversées utilisant du béton et des briques modernes furent critiquées par les archéologues — Bagan ne peut pas obtenir le statut UNESCO à cause de ces restaurations.",photo:"photos/bagan.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plaine de plus de 2 000 temples bouddhistes et stûpas, ancienne capitale du Royaume de Pagan (849-1297 ap. J.-C.)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord de l'Irrawaddy, zone sèche centrale d'un pays d'Asie du Sud-Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plaine aux milliers de temples bouddhistes, Myanmar (Birmanie)"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plaine hérissée de plus de 2 000 temples et stûpas, ancienne capitale d'un royaume (849-1297)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plaine aux milliers de temples au bord d'un grand fleuve, zone sèche centrale d'un pays asiatique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plaine aux milliers de temples bouddhistes, centre du Myanmar"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Bagan au Myanmar"}
   ]},
   {name:"Ha Long Bay — Vietnam",lat:20.9101,lng:107.1839,desc:"La baie d'Ha Long compte 1 969 îlots calcaires formés il y a 500 millions d'années. Selon la légende vietnamienne, un dragon descendit du ciel en battant de la queue, ses coups créant les vallées et les baies. La baie abriterait aussi des grottes marines habitées par des villages flottants de pêcheurs.",photo:"photos/ha_long_bay.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"2 000 îlots et pitons calcaires karstiques sur 1 553 km², grotte de Hang Đầu Gỗ, province de Quảng Ninh"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Golfe d'une mer intérieure d'Asie du Sud-Est, baie aux 1 600 îlots calcaires"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Baie aux dragons, pitons calcaires dans la mer de Chine, Vietnam"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Baie parsemée de 2 000 pitons calcaires karstiques et de grottes, eaux émeraude semées de jonques"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Baie aux 1 600 îlots calcaires d'un golfe d'Asie du Sud-Est, mer semi-fermée"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Baie aux pitons calcaires et jonques, nord-est du Vietnam"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Ha Long Bay au Vietnam"}
   ]},
   {name:"Rizières en terrasses de Banaue — Philippines",lat:16.9176,lng:121.0583,desc:"Les rizières en terrasses de Banaue dans le Cordillera furent construites il y a 2 000 ans par le peuple Ifugao sans outils en métal ni plans écrits. Sculptées à flanc de montagne sur 1 500 mètres d'altitude, elles forment un total de 10 000 km² — suffisant pour ceinturer la planète 2,5 fois si mises bout à bout.",photo:"photos/rizieres_en_terrasses_de_banaue.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ifugao Rice Terraces, creusées il y a 2 000 ans par le peuple Ifugao, 10 360 km² de terrasses, montagne Cordillère"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province montagneuse d'une grande île tropicale, terrasses de riz vieilles de 2 000 ans"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Terrasses de riz millénaires dans les montagnes de Luçon, Philippines"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Terrasses de riz creusées il y a 2 000 ans à flanc de cordillère, murets épousant la montagne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rizières en terrasses millénaires d'une chaîne montagneuse d'une grande île tropicale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Terrasses de riz millénaires, montagnes de Luçon, Philippines"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Rizières en terrasses de Banaue, Philippines"}
   ]},
   {name:"Lac Tonlé Sap — Cambodge",lat:12.8679,lng:104.043,desc:"Le Tonlé Sap est le seul lac au monde dont le fleuve change de sens deux fois par an. En saison des pluies, le Mékong refoule ses eaux dans le lac qui quintuple de taille. En saison sèche, le flux s'inverse et le lac se vide progressivement.",photo:"photos/lac_tonle_sap.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand lac d'eau douce d'Asie du Sud-Est, superficie variant de 2 500 km² (saison sèche) à 16 000 km² (mousson)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre du pays, grand lac alimenté par le plus long fleuve d'Asie du Sud-Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand lac d'Asie du Sud-Est, villages flottants, Cambodge"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand lac d'eau douce de la région, gonflant de 2 500 à 16 000 km² entre saison sèche et mousson"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grand lac central relié au plus long fleuve d'Asie du Sud-Est, villages sur pilotis"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand lac d'Asie du Sud-Est, villages flottants, centre du Cambodge"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac Tonlé Sap au Cambodge"}
   ]},
   {name:"Gunung Bromo — Java, Indonésie",lat:-7.9425,lng:112.953,desc:"Le mont Bromo est un volcan actif dans une caldeira géante où vivent encore 30 000 personnes du peuple Tengger. Chaque année lors du festival Yadnya Kasada, ils jettent des offrandes — fleurs, riz, poules, chèvres — dans le cratère fumant pour remercier les dieux.",photo:"photos/gunung_bromo.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Volcan actif de 2 329 m dans la caldeira de Tengger, cratère de 800 m de diamètre, brume sulfureuse permanente"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc national de l'est d'une grande île tropicale, caldeira volcanique et mer de sable"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Volcan fumant dans une mer de sable, Java, Indonésie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Volcan actif de 2 329 m fumant au milieu d'une caldeira, cratère de 800 m cerné d'une mer de sable"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Volcan fumant dans une caldeira et sa mer de cendres, est d'une grande île tropicale"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Volcan fumant dans une mer de sable, est de Java"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Gunung Bromo à Java, Indonésie"}
   ]},
   {name:"Mrauk U — Myanmar",lat:20.5947,lng:93.2019,desc:"Mrauk U fut la capitale du royaume d'Arakan du XVe au XVIIIe siècle, une des villes les plus riches d'Asie du Sud-Est. Ses 700 temples en brique, enfouis dans la jungle, sont comparés à Bagan mais trois fois moins connus. Le site reste accessible uniquement par bateau sur la rivière Kaladan — son isolement le préserve du tourisme de masse.",photo:"photos/mrauk_u.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancienne capitale du royaume d'Arakan (1430-1784), temples bouddhistes sur collines, accès uniquement par bateau"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"État côtier du nord-ouest d'un pays d'Asie du Sud-Est, ancienne capitale royale sur une rivière"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité archéologique oubliée, temples sur collines, État Rakhine, Myanmar"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ancienne capitale d'un royaume (1430-1784), temples de brique sur des collines, accessible surtout par bateau"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cité archéologique oubliée sur une rivière, État côtier du nord-ouest d'un pays asiatique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité oubliée aux temples sur collines, ouest du Myanmar"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Mrauk U au Myanmar"}
   ]},
   {name:"Mosquée de Dôme des Umayyades — Damas, Syrie",lat:33.5114,lng:36.3069,desc:"La Grande Mosquée des Omeyyades de Damas est l'une des plus anciennes mosquées du monde (715 ap. J.-C.). Elle fut construite sur une église byzantine, elle-même bâtie sur un temple romain à Jupiter. Selon la tradition, la tête de Jean-Baptiste y est conservée dans un sanctuaire.",photo:"photos/mosquee_de_dome_des_umayyades.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande Mosquée des Omeyyades, construite par Al-Walid Ier de 706 à 715, abritant le tombeau de Saladin et la tête de Jean-Baptiste"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vieille ville de la capitale historique du Proche-Orient, l'une des plus anciennes cités au monde"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mosquée des Omeyyades, joyau de l'architecture islamique, Damas, Syrie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande mosquée bâtie de 706 à 715, abritant le tombeau d'un sultan légendaire et une relique de Jean-Baptiste"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Antique grande mosquée au cœur d'une des plus vieilles capitales habitées du monde, Proche-Orient"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mosquée des Omeyyades, joyau de l'art islamique, Damas"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Mosquée de Dôme des Umayyades à Damas, Syrie"}
   ]},
   {name:"Massif de l'Altaï — Mongolie",lat:48.9,lng:89.5,desc:"Le massif de l'Altaï mongol est la région natale de Gengis Khan et le berceau de la civilisation nomade des steppes. Ses montagnes abritent les aigles dorées dressées par les Kazakhs mongols pour la chasse — une tradition de 4 000 ans perpétuée par les derniers «berkutchi». Chaque automne, un festival des aigles y rassemble ces chasseurs.",photo:"photos/massif_de_l_altai.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Khüiten Peak (4 374 m), point culminant du pays, massif glaciaire aux pétroglyphes vieux de 12 000 ans"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province de Bayan-Ölgii, extrême ouest du pays, tripoint entre trois nations"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Massif glaciaire de l'extrême ouest mongol, nomades kazakhs aigliers, steppes"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Massif glaciaire culminant à 4 374 m, gravé de pétroglyphes vieux de 12 000 ans, aigliers nomades"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massif glaciaire de l'extrême ouest d'un pays de steppes, tripoint entre trois nations"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Massif glaciaire des aigliers kazakhs, extrême ouest de la Mongolie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Massif de l'Altaï en Mongolie"}
   ]},
   {name:"Tombouctu — Mali",lat:16.7735,lng:3.0074,desc:"Tombouctou, surnommée «la ville aux 333 saints», fut au XVe siècle la capitale intellectuelle et spirituelle de l'Afrique avec 25 000 étudiants et une université réputée dans tout le monde islamique. Ses 700 000 manuscrits médiévaux préservés dans des bibliothèques privées représentent une archive unique de la pensée africaine précoloniale.",photo:"photos/tombouctu.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cité mythique du Sahel, carrefour caravanier de l'or et du sel aux XIVe-XVIe siècles, mosquées de Djingareyber et Sankoré"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive nord d'un grand fleuve africain, bordure sud du Sahara, cité caravanère légendaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité mythique du désert, capitale des manuscrits islamiques, Mali"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cité caravanière mythique du Sahel, carrefour de l'or et du sel, mosquées de terre et manuscrits anciens"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cité légendaire au bord d'un grand fleuve, à la lisière sud du Sahara"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cité mythique des manuscrits et des caravanes, nord du Mali"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Tombouctou au Mali"}
   ]},
   {name:"Désert du Sahara — Algérie (Tassili)",lat:25.4167,lng:8.4167,desc:"Le Tassili n'Ajjer en Algérie est un vaste plateau rocheux abritant 15 000 peintures et gravures rupestres réalisées entre -10 000 et -2 000 av. J.-C. Ces œuvres représentent des éléphants, hippopotames et crocodiles — preuve que le Sahara était autrefois une savane verdoyante. L'UNESCO le classe double patrimoine naturel et culturel.",photo:"photos/desert_du_sahara.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tassili n'Ajjer, plateau gréseux à 1 800 m, 15 000 pétroglyphes et peintures rupestres, UNESCO, Sahara central"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Profond Sahara, massif rocheux du Hoggar à proximité, extrême sud du pays"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plateau rupestre du Tassili n'Ajjer, art rupestre préhistorique, Algérie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plateau gréseux à 1 800 m couvert de 15 000 gravures et peintures rupestres, en plein désert"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau à l'art rupestre préhistorique, Sahara central, extrême sud d'un pays d'Afrique du Nord"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plateau à l'art rupestre du Tassili n'Ajjer, Sahara algérien"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Désert du Sahara en Algérie (Tassili)"}
   ]},
   {name:"Médina de Fès — Maroc",lat:34.0633,lng:-5.0039,desc:"La médina de Fès el-Bali, fondée en 808, est la plus grande zone urbaine piétonne au monde — aucune voiture n'y passe. Ses 9 400 ruelles labyrinthiques peuvent faire tourner en rond même les habitants. Les tanneries Chouara, actives depuis le XIe siècle, produisent du cuir selon des méthodes inchangées — cuves de pigments naturels creusées dans la roche.",photo:"photos/medina_de_fes.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fès el-Bali, fondée en 789 par Idriss Ier, plus grande médina du monde sans véhicule, Université Al Quaraouiyine (859)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Centre-nord, entre le Moyen Atlas et les collines du Zerhoun"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus ancienne université du monde, médina médiévale de Fès, Maroc"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grande médina sans voiture du monde, fondée en 789, abritant la plus vieille université en activité (859)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense médina médiévale entre un massif moyen et des collines, centre-nord d'un royaume"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Médina médiévale et plus vieille université du monde, Fès"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Médina de Fès au Maroc"}
   ]},
   {name:"Château de Gorée — Sénégal (Fort d'Estrées)",lat:14.6685,lng:-17.3991,desc:"Le Fort d'Estrées sur l'île de Gorée fut construit par les Hollandais en 1659 puis capturé par la France. L'île de Gorée fut pendant trois siècles la principale plaque tournante de la traite négrière vers les Amériques. La Maison des Esclaves, avec sa «porte du voyage sans retour» ouverte sur l'Atlantique, est devenue un mémorial mondial.",photo:"photos/chateau_de_goree.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fort d'Estrées construit par les Hollandais en 1650, actuellement musée de la Mer, île de Gorée"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Île d'une grande baie ouest-africaine, à 3 km du continent"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fort colonial devenu musée, île de Gorée, Sénégal"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fort bâti par les Hollandais en 1650, aujourd'hui musée de la Mer, sur une petite île chargée d'histoire"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fort colonial sur une île-mémoire d'une baie ouest-africaine, à 3 km du continent"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fort colonial devenu musée, île de Gorée, au large de Dakar"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Château de Gorée au Sénégal (Fort d'Estrées)"}
   ]},
   {name:"Serengeti — Tanzanie",lat:-2.3333,lng:34.8333,desc:"La Grande Migration du Serengeti est guidée uniquement par l'instinct collectif et la détection de l'herbe fraîche par les gnous. Aucun animal ne «dirige» le mouvement — c'est un phénomène d'intelligence collective qui déplace 1,5 million d'animaux sur 1 800 km.",photo:"photos/serengeti.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siringet (plaine sans fin en Maasaï), 14 763 km², Grande Migration de 2 millions de gnous, zèbres et gazelles"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Nord-ouest du pays, à la frontière du grand parc voisin, Rift Valley"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande migration annuelle de 2 millions de gnous et zèbres, vaste parc de Tanzanie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Immense plaine « sans fin » de 14 763 km², théâtre de la migration de deux millions de gnous et zèbres"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vaste savane du nord-ouest d'un pays d'Afrique de l'Est, prolongée par un parc frontalier"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grande migration de deux millions de gnous, vaste savane de Tanzanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Serengeti en Tanzanie"}
   ]},
   {name:"Masai Mara — Kenya",lat:-1.5,lng:35.15,desc:"La traversée de la rivière Mara par les gnous est l'un des spectacles naturels les plus dramatiques du monde. Des centaines d'animaux plongent dans des eaux infestées de crocodiles du Nil — certains crocodiles de la Mara pèsent plus de 700 kg et attendent les migrations depuis des décennies.",photo:"photos/masai_mara.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Réserve nationale de 1 510 km², traversée par la Mara River, Grande Migration juillet-octobre, Triangle de Mara"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Comté du sud-ouest du pays, grande migration animale, continuation d'un parc voisin"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Réserve kényane célèbre pour le Big Five et la grande migration, continuation du Serengeti"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Réserve de 1 510 km² traversée par une rivière, grande migration animale de juillet à octobre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Réserve animalière du sud-ouest d'un pays d'Afrique de l'Est, prolongement d'un grand parc voisin"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Réserve du Big Five prolongeant le Serengeti, sud-ouest du Kenya"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Masai Mara au Kenya"}
   ]},
   {name:"Chutes de Kalandula — Angola",lat:-9.0667,lng:15.95,desc:"Les chutes de Kalandula en Angola sont les deuxièmes plus grandes d'Afrique par leur débit. Tombant de 105 mètres sur une largeur de 400 mètres, elles créent une brume permanente qui maintient une végétation tropicale luxuriante dans un rayon d'un kilomètre.",photo:"photos/chutes_de_kalandula.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Duque de Bragança, 105 m de hauteur sur 400 m de large, rivière Lucala, 2e plus grandes chutes d'Afrique"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plateau de l'intérieur d'un pays d'Afrique centrale-ouest, chutes dans la savane"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chutes de 105 m de haut sur 400 m de large en saison des pluies, deuxièmes du continent, savane luxuriante"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grandes chutes d'eau d'un plateau intérieur, savane d'un pays d'Afrique centrale-ouest"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Deuxièmes plus grandes chutes d'Afrique, province de Malanje, Angola"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Chutes de Kalandula en Angola"}
   ]},
   {name:"Grand Zimbabwe — Zimbabwe",lat:-20.2667,lng:30.9333,desc:"Le Grand Zimbabwe, dont le nom signifie «maison de pierre» en shona, est le plus grand complexe de ruines d'Afrique subsaharienne hors Égypte. Ses murs de 11 mètres de haut furent construits sans mortier avec une précision stupéfiante. Il donna son nom au pays lors de l'indépendance en 1980.",photo:"photos/grand_zimbabwe.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale d'un empire médiéval d'Afrique australe (XIe-XVe siècles), enceinte elliptique de 244m sans mortier"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Province du centre d'un pays d'Afrique australe, ruines d'une cité royale médiévale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines de la capitale médiévale du Zimbabwe, plus grand site en pierre d'Afrique subsaharienne"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale d'un empire médiéval (XIe-XVe s.), enceinte elliptique de 244 m montée sans mortier"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ruines d'une cité royale médiévale en pierre sèche, centre d'un pays d'Afrique australe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand site en pierre d'Afrique subsaharienne, ruines royales du Zimbabwe"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grand Zimbabwe au Zimbabwe"}
   ]},
   {name:"Vallée des Rois — Louxor, Égypte",lat:25.7402,lng:32.6014,desc:"Toutânkhamon est le seul pharaon de la Vallée des Rois à avoir eu sa tombe retrouvée quasi intacte. Howard Carter l'ouvrit en 1922 après 10 ans de fouilles. La malédiction qui aurait frappé les fouilleurs est aujourd'hui attribuée à des moisissures ou des spores pathogènes conservées dans l'air confiné.",photo:"photos/vallee_des_rois.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Wadi el-Muluk, nécropole royale du Nouvel Empire (1550-1070 av. J.-C.), 63 tombes dont celle de Toutânkhamon (KV62)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rive ouest du Nil face à l'antique Thèbes, collines de Deir el-Bahari"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Nécropole des pharaons, tombes de Toutânkhamon et Ramsès II, Louxor"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Nécropole royale du Nouvel Empire aux 63 tombes creusées dans la roche, dont celle d'un jeune pharaon (KV62)"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vallée-nécropole sur la rive ouest d'un fleuve, face à une antique capitale, Haute vallée"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Nécropole des pharaons, tombe de Toutânkhamon, Louxor"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Vallée des Rois à Louxor, Égypte"}
   ]},
   {name:"Yellowknife — Territoires du Nord-Ouest, Canada",lat:62.454,lng:-114.3718,desc:"Yellowknife est la meilleure ville au monde pour observer les aurores boréales, avec 240 nuits d'aurores par an. Sa latitude (62°N) la place exactement sous «l'ovale auroral» — la zone maximale d'activité magnétique. Les aurores y sont visibles à l'œil nu dès la tombée de la nuit en automne et hiver.",photo:"photos/yellowknife.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale territoriale subarctique, meilleur endroit au monde pour observer l'aurore boréale, bord du Grand Lac des Esclaves"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bord d'un grand lac arctique, 62° de latitude Nord, région subarctique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Capitale des Territoires du Nord-Ouest, aurores boréales, Grand Nord canadien"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitale territoriale subarctique au bord d'un grand lac, l'un des meilleurs points d'observation des aurores"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville subarctique au bord d'un grand lac gelé, 62° de latitude nord, Grand Nord"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Capitale du Grand Nord aux aurores boréales, Territoires du Nord-Ouest"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Yellowknife à Territoires du Nord-Ouest, Canada"}
   ]},
   {name:"Quebéc — Canada",lat:46.8139,lng:-71.208,desc:"La ville de Québec est la seule ville fortifiée au nord du Mexique en Amérique du Nord. Ses remparts du XVIIe siècle, longs de 4,6 km, sont encore parfaitement conservés. Le château Frontenac, hôtel le plus photographié au monde selon Guinness, domine le cap Diamant depuis 1893.",photo:"photos/quebec.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Château Frontenac, hôtel inauguré en 1893 par la Compagnie du Chemin de fer du Pacifique Canadien, Haute-Ville de Québec"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Haute-Ville de Québec, cap Diamant, bord du fleuve Saint-Laurent, Province de Québec"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château Frontenac dominant la seule ville fortifiée d'Amérique du Nord, Québec"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hôtel-château inauguré en 1893 par une compagnie ferroviaire, dominant un fleuve depuis un cap fortifié"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville haute fortifiée sur un cap dominant un grand fleuve, seule cité murée d'Amérique du Nord"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château Frontenac dominant la ville fortifiée, Québec"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La ville de Québec, Canada"}
   ]},
   {name:"Parc Banff — Alberta, Canada",lat:51.4968,lng:-115.9281,desc:"Le parc national de Banff est le plus ancien du Canada, fondé en 1885 après la découverte de sources thermales. Son lac Louise, alimenté par la fonte du glacier Victoria, est d'un turquoise si intense qu'il paraît artificiel. Le Château Lake Louise, construit par les Chemins de fer canadiens en 1890, en fit l'endroit le plus romantique du Canada.",photo:"photos/parc_banff.JPG",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Premier parc national de la région (1885), Lac Louise aux eaux turquoise, Champ de glace Columbia, Rocheuses"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rocheuses canadiennes, Alberta, à 130 km à l'ouest de Calgary"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac Louise et Rocheuses canadiennes, parc national de Banff, Alberta"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Premier parc national de son pays (1885), lac turquoise glaciaire et vaste champ de glace, hautes montagnes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Parc de montagnes et lacs turquoise, Rocheuses de l'ouest, à 130 km d'une grande ville"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac Louise et Rocheuses, parc national de Banff, ouest du Canada"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Parc Banff à Alberta, Canada"}
   ]},
   {name:"Monument Valley — Arizona/Utah, USA",lat:36.9991,lng:-110.0985,desc:"Monument Valley est la propriété privée de la Nation Navajo qui en contrôle strictement le tourisme. Les formations rocheuses rouges, appelées «buttes», sont si emblématiques de l'Ouest américain qu'elles ont servi de décor à des dizaines de westerns de John Ford.",photo:"photos/monument_valley.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Navajo Tribal Park, mesas et buttes de grès rouge de la Formation Cutler, The Mittens, John Ford Point"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Frontière Arizona-Utah, Nation Navajo, Colorado Plateau"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage de l'Ouest américain aux mesas rouges, westerns de John Ford"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mesas et buttes de grès rouge dressées dans un désert, décor de nombreux westerns classiques"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Buttes de grès rouge sur des terres autochtones, frontière de deux États, plateau du Colorado"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Paysage aux mesas rouges de l'Ouest américain, frontière Arizona-Utah"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Monument Valley à Arizona/Utah, USA"}
   ]},
   {name:"Antelope Canyon — Arizona, USA",lat:36.8619,lng:-111.3743,desc:"Antelope Canyon est un «slot canyon» créé par des millénaires d'érosion par les crues soudaines. Des rais de lumière pénètrent par l'ouverture en été et créent des «colonnes de lumière» dans la poussière — parmi les photographies les plus reproduites au monde.",photo:"photos/antelope_canyon.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Slot canyon en grès creusé par l'érosion éolienne et les crues éclairs, sur les terres de la Nation navajo"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Réservation Navajo, ville de Page, nord de l'Arizona, bord du Lake Powell"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyon aux vagues de grès orange, canyon-fente le plus photographié du monde, Arizona"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canyon-fente aux parois de grès ondulées et striées de lumière, creusé par les crues et le vent"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Canyon-fente sur des terres autochtones, près d'une petite ville du nord de l'Arizona"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Canyon-fente aux vagues de grès orange, près de Page, Arizona"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Antelope Canyon à Arizona, USA"}
   ]},
     {name:"Ligne Nazca — Pérou",lat:-14.739,lng:-75.13,desc:"Les lignes de Nazca furent créées en ôtant les pierres sombres du désert pour révéler le sable clair en dessous. Elles couvrent 450 km² et représentent 70 animaux et plantes, 300 figures géométriques. Maria Reiche consacra 50 ans de sa vie à les étudier, vivant seule dans le désert pour les protéger.",photo:"photos/ligne_nazc.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Géoglyphes tracés par la culture Nazca entre 500 av. J.-C. et 500 ap. J.-C., colibri (96m), singe (55m), visible uniquement d'avio"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pampas de Jumana, plaine aride d'un désert côtier andin, géoglyphes de 200-800 m"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Géoglyphes mystérieux tracés dans le désert, UNESCO, Pérou"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Géoglyphes géants — colibri, singe, araignée — tracés dans le désert entre -500 et 500, visibles d'avion"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immenses géoglyphes tracés sur une plaine aride d'un désert côtier andin"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Géoglyphes mystérieux du désert, sud du Pérou"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Ligne Nazca au Pérou"}
   ]},
   {name:"Galeries d'art de Buenos Aires — Argentine",lat:-34.6037,lng:-58.3816,desc:"Buenos Aires est la capitale culturelle d'Amérique du Sud, avec plus de librairies par habitant que toute autre ville du monde. Son quartier de San Telmo, avec ses marchés aux puces et ses galeries d'art, est le centre de la scène artistique d'Argentine. La ville abrite aussi le plus grand opéra d'Amérique latine.",photo:"photos/galeries_d_art_de_buenos_aires.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"La Boca, Caminito, ruelles colorées peintes en tôle ondulée, berceau du tango et quartier des immigrés italiens"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier coloré d'une grande capitale sud-américaine, bord d'un canal portuaire"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Caminito, ruelle aux maisons colorées, berceau du tango, Buenos Aires"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ruelle pavée aux façades de tôle multicolores, berceau du tango dans un ancien quartier d'immigrés portuaires"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier coloré au bord d'un canal portuaire, grande capitale sud-américaine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Caminito aux maisons colorées, berceau du tango, Buenos Aires"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Galeries d'art de Buenos Aires en Argentine"}
   ]},
   {name:"Carnaval de Rio — Sambodrome, Brésil",lat:-22.9122,lng:-43.1971,desc:"Le Carnaval de Rio est le plus grand du monde avec 2 millions de personnes par jour dans les rues. Le Sambódromo, conçu par Oscar Niemeyer en 1984, peut accueillir 90 000 spectateurs. Les écoles de samba travaillent toute l'année sur leurs chars et costumes — un budget annuel de plusieurs millions de dollars chacune.",photo:"photos/carnaval_de_rio.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sambódromo Marquês de Sapucaí, conçu par Oscar Niemeyer (1984), 700m de piste, 90 000 spectateurs, Marquês de Sapucaí"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Quartier central de la Cidade Maravilhosa, avenue célèbre du carnaval"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sambodrome au défilé des écoles de samba, plus grand carnaval du monde, Rio de Janeiro"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Piste de défilé de 700 m conçue en 1984, gradins pour 90 000 spectateurs, temple annuel de la samba"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Avenue-stade du carnaval au cœur d'une ville surnommée « merveilleuse », littoral brésilien"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sambodrome du plus grand carnaval du monde, Rio de Janeiro"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Carnaval de Rio à Sambodrome, Brésil"}
   ]},
   {name:"Lac Titicaca — Bolivie/Pérou",lat:-15.8402,lng:-69.3329,desc:"Le lac Titicaca abrite les îles flottantes des Uros, construites entièrement en roseaux totora sur l'eau. Les habitants renouvellent constamment leur île en ajoutant des couches fraîches par-dessus les couches en décomposition.",photo:"photos/lac_titicaca.jpg",hints:[
