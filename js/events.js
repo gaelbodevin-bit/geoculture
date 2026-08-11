@@ -8,7 +8,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Affrontement décisif de 1600 entre deux coalitions féodales, scellé par la trahison de Kobayakawa au profit du vainqueur qui fondera une dynastie de 265 ans"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de l'an 1600 dans une plaine du centre de l'archipel, période Azuchi-Momoyama"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Bataille fondatrice du shogunat Tokugawa, plaine de la région du Ch?bu"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Bataille fondatrice du shogunat Tokugawa, plaine de la région du Chūbu"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Sekigahara, préfecture de Gifu, Japon"}
   ]},
   {name:"Bataille de Waterloo — Brabant wallon, Belgique", lat:50.68, lng:4.412, radius:3000,
@@ -44,7 +44,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire d'un duc normand en 1066, mort du roi adverse d'une flèche selon la légende, immortalisée sur une broderie de 70 mètres"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIe siècle dans le sud d'une île d'Europe du Nord-Ouest"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Conquête normande de l'Angleterre, Sussex"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Conquête normande de l'île, région du Sussex"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Hastings, Angleterre"}
   ]},
   {name:"Chute du mur de Berlin — Berlin, Allemagne", lat:52.5163, lng:13.3777, radius:1500,
@@ -79,7 +79,7 @@ const EVENTS = [
    photo:"events/stalingrad.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège urbain de 1942-1943 le long d'un grand fleuve, encerclement d'une VIe armée entière, tournant d'une guerre à l'Est"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille des années 1940 dans une ville industrielle du sud de la Russie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille des années 1940 dans une ville industrielle sur un grand fleuve du sud"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tournant du front de l'Est, sur la Volga"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Stalingrad (Volgograd), Russie"}
   ]},
@@ -88,7 +88,7 @@ const EVENTS = [
    photo:"events/magna_carta.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Document de 1215 arraché à un roi impopulaire par ses barons révoltés dans une prairie au bord d'un fleuve, ancêtre lointain des libertés civiles"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Acte politique du XIIIe siècle dans une prairie du sud de l'Angleterre"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Acte politique du XIIIe siècle dans une prairie du sud d'une île d'Europe"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Signature de la Magna Carta à Runnymede, comté de Surrey"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Grande Charte de Runnymede, Angleterre"}
   ]},
@@ -107,7 +107,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de citoyens-soldats sur un empire venu de l'Est en 490 av. J.-C. ; la légende d'un coureur porteur de la nouvelle donna son nom à une épreuve sportive"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de l'Antiquité sur une plaine côtière d'une péninsule du sud-est de l'Europe"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire grecque contre les Perses, plaine de l'Attique"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire des cités grecques contre les Perses, plaine de l'Attique"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Marathon, Grèce"}
   ]},
   {name:"Reddition d'Appomattox — Virginie, USA", lat:37.377, lng:-78.796, radius:1500,
@@ -142,7 +142,7 @@ const EVENTS = [
    photo:"events/utah_beach.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"La plus occidentale des cinq plages d'un assaut de juin 1944, courant qui fit dériver les péniches vers un secteur moins défendu, sauvant des vies"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Opération alliée de 1944 sur une côte du nord-ouest de la France"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Opération alliée de 1944 sur une côte du nord-ouest de l'Europe"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Débarquement allié, côte de la Manche"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Utah Beach, Normandie, France"}
   ]},
@@ -152,7 +152,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Première arme nucléaire employée en guerre, matin du 6 août 1945, un dôme éventré conservé depuis en mémorial"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement de 1945 dans une ville portuaire de l'ouest d'un archipel asiatique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Première bombe atomique, sud du Honsh?"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Première bombe atomique, sud du Honshū"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le bombardement d'Hiroshima, Japon"}
   ]},
   {name:"Bataille des Thermopyles — Phthiotide, Grèce", lat:38.796, lng:22.536, radius:2000,
@@ -169,7 +169,7 @@ const EVENTS = [
    photo:"events/independance_us.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Proclamation de rupture de treize colonies avec leur couronne, un 4 juillet, dans une salle à l'horloge d'une ville de la côte est"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Acte fondateur de 1776 dans une grande ville du nord-est américain"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Acte fondateur de 1776 dans une grande ville de la côte est d'Amérique du Nord"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Signature de la Déclaration d'indépendance, Independence Hall"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Déclaration d'indépendance, Philadelphie, USA"}
   ]},
@@ -178,7 +178,7 @@ const EVENTS = [
    photo:"events/azincourt.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Débâcle d'une chevalerie lourde piégée dans la boue en 1415, fauchée par des archers à l'arc long adverses"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XVe siècle dans le nord de la France, guerre de Cent Ans"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XVe siècle dans le nord d'un royaume d'Europe de l'Ouest, guerre de Cent Ans"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire anglaise d'Henri V, Pas-de-Calais"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Azincourt, France"}
   ]},
@@ -214,7 +214,7 @@ const EVENTS = [
    photo:"events/little_bighorn.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Anéantissement d'un régiment de cavalerie en 1876 par une coalition de nations autochtones, ultime éclat avant la soumission"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Affrontement de la fin du XIXe siècle dans les plaines du nord-ouest américain"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Affrontement de la fin du XIXe siècle dans les plaines du nord-ouest d'Amérique du Nord"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite de Custer face aux Sioux, Montana"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Little Bighorn, Montana, USA"}
   ]},
@@ -277,7 +277,7 @@ const EVENTS = [
    photo:"events/verdun.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Enfer de tranchées de 1916 long de 300 jours autour de forts pilonnés, résumé d'un mot d'ordre : « on ne passe pas »"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille des années 1910 dans le nord-est de la France, Première Guerre mondiale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille des années 1910 dans le nord-est d'un pays d'Europe de l'Ouest, Première Guerre mondiale"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Bataille symbole de 1916, département de la Meuse"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Verdun, France"}
   ]},
@@ -296,7 +296,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège de 118 jours en 1899-1900 d'une garnison impériale par des fermiers-combattants, dans une guerre coloniale d'Afrique australe"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Blocus militaire du tournant du XXe siècle dans l'est d'un pays d'Afrique australe"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Siège de Ladysmith, région du KwaZulu-Natal"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Siège de Ladysmith, région vallonnée de l'est"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le siège de Ladysmith, Afrique du Sud"}
   ]},
   {name:"Bataille de Zama — Siliana, Tunisie", lat:36.3, lng:9.4, radius:6000,
@@ -305,7 +305,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite finale d'un stratège carthaginois en 202 av. J.-C., ses éléphants retournés contre lui par un général romain rival"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille antique dans le nord d'un pays d'Afrique du Nord, IIIe siècle av. J.-C."},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite d'Hannibal contre Scipion, arrière-pays tunisien"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite d'Hannibal contre Scipion, arrière-pays d'une plaine du nord"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Zama, Tunisie"}
   ]},
   {name:"Traité de Tordesillas — Valladolid, Espagne", lat:41.499, lng:-4.715, radius:1000,
@@ -357,7 +357,7 @@ const EVENTS = [
    desc:"En 1806, Napoléon écrasa l'armée prussienne, précipitant l'effondrement du royaume de Prusse.",
    photo:"events/iena.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Double victoire écrasante de 1806 d'un empereur français sur une armée réputée invincible, effondrée en une journée"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Double victoire écrasante de 1806 d'un empereur venu de l'Ouest sur une armée réputée invincible, effondrée en une journée"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début du XIXe siècle dans le centre-est d'un pays d'Europe centrale"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire napoléonienne sur la Prusse, Thuringe"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Iéna, Allemagne"}
@@ -411,8 +411,8 @@ const EVENTS = [
    desc:"En août 1944, l'opération Dragoon ouvrit un second front en France par la Méditerranée, libérant rapidement le Sud.",
    photo:"events/provence_1944.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Second assaut amphibie sur la France en août 1944, par une côte méridionale ensoleillée, moins connu que celui du Nord deux mois plus tôt"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Opération militaire de 1944 sur une côte méditerranéenne du sud-est de la France"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Second assaut amphibie sur une côte méridionale ensoleillée en août 1944, moins connu que celui du Nord deux mois plus tôt"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Opération militaire de 1944 sur une côte méditerranéenne du sud-est d'un pays d'Europe de l'Ouest"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Débarquement de Provence, littoral varois"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le débarquement de Provence, France"}
   ]},
@@ -421,7 +421,7 @@ const EVENTS = [
    photo:"events/bouvines.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire royale d'un dimanche de 1214 sur une coalition d'empereur et de comtes, ciment d'une jeune monarchie"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille médiévale du XIIIe siècle dans le nord de la France"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille médiévale du XIIIe siècle dans le nord d'un royaume d'Europe de l'Ouest"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de Philippe Auguste, région du Nord"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Bouvines, France"}
   ]},
@@ -440,7 +440,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Piège naval de 480 av. J.-C. dans un détroit resserré, où des trières agiles anéantirent une armada trop nombreuse pour manœuvrer"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille navale antique dans un golfe du sud-est de l'Europe, près d'une grande cité"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire grecque sur la flotte perse, détroit de Salamine"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire des cités grecques sur la flotte perse, détroit de Salamine"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Salamine, Grèce"}
   ]},
   {name:"Défenestration de Prague — Tchéquie", lat:50.091, lng:14.401, radius:400,
@@ -449,7 +449,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Jet par les fenêtres d'un château, en 1618, de représentants impériaux qui survécurent — étincelle d'une guerre de trente ans"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du début du XVIIe siècle dans une capitale d'Europe centrale, Bohême"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défenestration au château, colline de Hrad?any"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défenestration au château, colline de Hradčany"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La défenestration de Prague, Tchéquie"}
   ]},
   {name:"Bataille de Gaugamèles — Ninive, Irak", lat:36.36, lng:43.25, radius:8000,
@@ -458,7 +458,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire décisive de 331 av. J.-C. d'un jeune conquérant macédonien sur un roi des rois en fuite, clé d'un empire d'Orient"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille antique dans le nord d'un pays du Proche-Orient, IVe siècle av. J.-C."},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire d'Alexandre sur Darius III, plaine du nord irakien"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire d'Alexandre sur Darius III, plaine de Mésopotamie du Nord"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Gaugamèles, Irak"}
   ]},
   {name:"Bataille de Kadesh — Homs, Syrie", lat:34.57, lng:36.51, radius:7000,
@@ -494,7 +494,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Aboutissement en 1930 d'une marche de 385 km au bord de la mer, où un leader en pagne ramassa une poignée de sel pour défier un empire"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Acte de désobéissance civile des années 1930 sur une côte de l'ouest d'un pays d'Asie du Sud"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Marche du sel de Gandhi à Dandi, côte du Gujarat"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Marche du sel de Gandhi à Dandi, côte occidentale du sous-continent"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La marche du sel, Dandi, Inde"}
   ]},
   {name:"Bataille des Champs Catalauniques — Marne, France", lat:48.95, lng:4.36, radius:9000,
@@ -512,7 +512,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capture en 1843 du campement mobile de 20 000 personnes d'un chef de la résistance, par une colonne de cavalerie audacieuse"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Épisode colonial du milieu du XIXe siècle sur les hauts plateaux d'un pays d'Afrique du Nord"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Prise de la smala d'Abd el-Kader, hauts plateaux algériens"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Prise de la smala d'Abd el-Kader, hauts plateaux d'Afrique du Nord"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de la Smala, Algérie"}
   ]},
   {name:"Bataille de Plassey — Bengale-Occidental, Inde", lat:23.8, lng:88.25, radius:4000,
@@ -530,7 +530,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite de 1954 d'un corps expéditaire piégé dans une cuvette, artillerie adverse hissée à dos d'homme sur les crêtes, fin d'une colonie asiatique"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille des années 1950 dans une vallée du nord-ouest d'un pays d'Asie du Sud-Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite française décisive, cuvette du Nord-Ouest"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite d'un corps expéditionnaire dans une cuvette du Nord-Ouest"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Diên Biên Phu, Vietnam"}
   ]},
   {name:"Bataille de Platées — Béotie, Grèce", lat:38.223, lng:23.262, radius:4000,
@@ -539,7 +539,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Choc terrestre de 479 av. J.-C. qui parachève l'échec d'une invasion venue de l'Est, un an après une déroute navale du même envahisseur"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de l'Antiquité dans une plaine du sud-est de l'Europe, guerres médiques"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire grecque décisive sur les Perses, région de Béotie"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire décisive des cités grecques sur les Perses, région de Béotie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Platées, Grèce"}
   ]},
   {name:"Prise de Babylone par Cyrus — Babil, Irak", lat:32.542, lng:44.42, radius:3000,
@@ -677,7 +677,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Arrêt de l'expansion Tang face aux Abbassides, sud du Kazakhstan"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Talas, Kazakhstan"}
   ]},
-  {name:"Bataille de Manzikert — Mu?, Turquie", lat:39.14, lng:42.53, radius:5000,
+  {name:"Bataille de Manzikert — Muş, Turquie", lat:39.14, lng:42.53, radius:5000,
    desc:"En 1071, la défaite byzantine face aux Seldjoukides ouvrit l'Anatolie aux Turcs.",
    photo:"events/manzikert.jpg",
    hints:[
@@ -754,7 +754,7 @@ const EVENTS = [
    photo:"events/crecy.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1346 où l'arc long et de premières bouches à feu fauchèrent une chevalerie nombreuse"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIVe siècle dans le nord de la France, guerre de Cent Ans"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIVe siècle dans le nord d'un royaume d'Europe de l'Ouest, guerre de Cent Ans"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire anglaise d'Édouard III, région de la Somme"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Crécy, France"}
   ]},
@@ -763,8 +763,8 @@ const EVENTS = [
    photo:"events/kulikovo.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1380 d'un prince sur des cavaliers tributaires, premier grand craquement d'un joug venu des steppes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIVe siècle dans une plaine de l'ouest de la Russie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire russe sur la Horde d'or, champ de Koulikovo"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIVe siècle dans une plaine de l'est de l'Europe"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire sur la Horde d'or, champ de Koulikovo"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Koulikovo, Russie"}
   ]},
   {name:"Bataille de Kosovo Polje — Kosovo", lat:42.66, lng:21.1, radius:4000,
@@ -790,7 +790,7 @@ const EVENTS = [
    photo:"events/castillon.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dernière grande bataille de 1453 d'un conflit de plus d'un siècle, où le canon eut raison d'une charge anglaise"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du milieu du XVe siècle dans le sud-ouest de la France"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du milieu du XVe siècle dans le sud-ouest d'un royaume d'Europe de l'Ouest"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fin de la guerre de Cent Ans, vallée de la Dordogne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Castillon, France"}
   ]},
@@ -798,7 +798,7 @@ const EVENTS = [
    desc:"En 1515, la victoire de François Ier sur les Suisses ouvrit les guerres d'Italie.",
    photo:"events/marignan.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire d'un jeune roi français en 1515, « bataille de géants » de deux jours qui brisa la réputation d'une redoutable infanterie de montagne"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire d'un jeune roi en 1515, « bataille de géants » de deux jours qui brisa la réputation d'une redoutable infanterie de montagne"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début du XVIe siècle dans le nord d'une péninsule méditerranéenne"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de François Ier sur les Suisses, Lombardie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Marignan, Italie"}
@@ -808,7 +808,7 @@ const EVENTS = [
    photo:"events/pavie.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Désastre de 1525 où un roi fut fait prisonnier, écrivant que tout était perdu fors l'honneur"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XVIe siècle dans le nord d'une péninsule méditerranéenne, guerres d'Italie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XVIe siècle dans le nord d'une péninsule méditerranéenne, guerres de la Renaissance"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Capture de François Ier par Charles Quint, Lombardie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Pavie, Italie"}
   ]},
@@ -827,7 +827,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite de 1620 sur une colline aux abords d'une capitale, début d'une longue nuit pour une noblesse protestante décapitée peu après"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début du XVIIe siècle près d'une capitale d'Europe centrale, guerre de Trente Ans"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite tchèque face aux Habsbourg, colline à l'ouest de Prague"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite des insurgés protestants face aux Habsbourg, colline à l'ouest de Prague"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de la Montagne Blanche, Tchéquie"}
   ]},
   {name:"Traités de Westphalie — Münster, Allemagne", lat:51.963, lng:7.626, radius:1500,
@@ -844,8 +844,8 @@ const EVENTS = [
    photo:"events/rocroi.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1643 d'un très jeune général qui abattit l'invincible infanterie carrée d'une grande puissance déclinante"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XVIIe siècle dans le nord-est de la France"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire française sur les tercios espagnols, Ardennes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XVIIe siècle dans le nord-est d'un royaume d'Europe de l'Ouest"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire sur les tercios espagnols, Ardennes"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Rocroi, France"}
   ]},
   {name:"Bataille de Poltava — Ukraine", lat:49.6, lng:34.55, radius:5000,
@@ -862,7 +862,7 @@ const EVENTS = [
    photo:"events/plaines_abraham.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bataille de 1759 sur un plateau au-dessus d'un fleuve, où les deux généraux périrent et une colonie changea d'empire"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Affrontement du XVIIIe siècle près d'une ville forte de l'est du Canada"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Affrontement du XVIIIe siècle près d'une ville forte de l'est de l'Amérique du Nord"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Prise de Québec par les Britanniques, plateau au-dessus du Saint-Laurent"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille des plaines d'Abraham, Canada"}
   ]},
@@ -871,7 +871,7 @@ const EVENTS = [
    photo:"events/boston_tea.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Coup d'éclat de 1773 où des colons déguisés noyèrent une cargaison taxée dans un port, étincelle d'une révolte fiscale"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du XVIIIe siècle dans un port du nord-est américain"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du XVIIIe siècle dans un port de la côte est d'Amérique du Nord"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Révolte du thé, port de Boston"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Boston Tea Party, USA"}
   ]},
@@ -970,8 +970,8 @@ const EVENTS = [
    photo:"events/borodino.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Boucherie de 1812 devant une redoute, victoire à la Pyrrhus ouvrant une capitale bientôt trouvée en flammes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début du XIXe siècle à l'ouest d'une grande ville de Russie"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Bataille sanglante de la campagne de Russie, région de Moscou"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début du XIXe siècle à l'ouest d'une grande capitale de l'Est"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Bataille sanglante d'une grande campagne de 1812, région de Moscou"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Borodino, Russie"}
   ]},
   {name:"Bataille de Leipzig — Saxe, Allemagne", lat:51.32, lng:12.4, radius:6000,
@@ -997,7 +997,7 @@ const EVENTS = [
    photo:"events/valmy.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canonnade de 1792 plus que bataille, qui suffit à faire reculer une armée d'invasion et à sauver une révolution naissante"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement militaire de la fin du XVIIIe siècle dans le nord-est de la France"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement militaire de la fin du XVIIIe siècle dans le nord-est d'un pays d'Europe de l'Ouest"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire révolutionnaire, moulin de la Marne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Valmy, France"}
   ]},
@@ -1025,7 +1025,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Anéantissement nocturne d'une flotte à l'ancre en 1798, un vaisseau amiral explosant dans la nuit, piégeant une armée sur un rivage lointain"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille navale de la fin du XVIIIe siècle sur une côte d'Afrique du Nord"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de Nelson sur la flotte française, baie d'Aboukir"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de Nelson sur une flotte ennemie, baie d'Aboukir"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Aboukir, Égypte"}
   ]},
   {name:"Attaque de Pearl Harbor — Hawaï, USA", lat:21.364, lng:-157.95, radius:3000,
@@ -1034,7 +1034,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Raid aérien surprise d'un dimanche matin de 1941 sur une base navale, « jour d'infamie » qui précipita un géant dans la guerre"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Attaque du milieu du XXe siècle sur une île du Pacifique central"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Attaque japonaise sur la flotte américaine, Oahu"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Attaque surprise sur une flotte au mouillage, île d'Oahu"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'attaque de Pearl Harbor, Hawaï, USA"}
   ]},
   {name:"Débarquement d'Inchon — Corée du Sud", lat:37.47, lng:126.62, radius:3000,
@@ -1060,7 +1060,7 @@ const EVENTS = [
    photo:"events/somme_1916.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Offensive de 1916 dont le premier jour reste le plus sanglant d'une armée, premiers chars engagés dans la boue"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de la Première Guerre mondiale dans le nord de la France"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de la Première Guerre mondiale dans le nord d'un pays d'Europe de l'Ouest"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Offensive meurtrière de 1916, vallée de la Somme"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de la Somme, France"}
   ]},
@@ -1069,7 +1069,7 @@ const EVENTS = [
    photo:"events/marne_1914.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sursaut de 1914 qui sauva une capitale, des renforts acheminés au front en taxis réquisitionnés"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début de la Première Guerre mondiale dans le nord-est de la France"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début de la Première Guerre mondiale dans le nord-est d'un pays d'Europe de l'Ouest"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le « miracle » qui sauva Paris, vallée de la Marne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de la Marne, France"}
   ]},
@@ -1078,7 +1078,7 @@ const EVENTS = [
    photo:"events/octobre_1917.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Coup de force d'octobre 1917 (novembre au calendrier occidental) autour d'un palais, salve d'un croiseur pour signal, naissance d'un régime nouveau"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement de la Première Guerre mondiale dans une grande ville du nord-ouest de la Russie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement de la Première Guerre mondiale dans une grande ville du nord-ouest de l'Europe orientale"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Révolution bolchevique, palais d'Hiver"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La révolution d'Octobre, Russie"}
   ]},
@@ -1087,7 +1087,7 @@ const EVENTS = [
    photo:"events/rethondes.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cessez-le-feu de novembre 1918 signé dans un wagon de chemin de fer au cœur d'une forêt, à la onzième heure du onzième jour"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fin d'un conflit mondial dans le nord de la France, 1918"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fin d'un conflit mondial dans le nord d'un pays d'Europe de l'Ouest, 1918"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Signature de l'armistice, clairière de Rethondes"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'armistice de 1918, Rethondes, France"}
   ]},
@@ -1096,7 +1096,7 @@ const EVENTS = [
    photo:"events/dunkerque.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sauvetage de 1940 de centaines de milliers de soldats encerclés, embarqués depuis une plage par une flottille de bateaux civils"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement de la Seconde Guerre mondiale sur une côte du nord de la France"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement de la Seconde Guerre mondiale sur une côte du nord d'un pays d'Europe de l'Ouest"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Évacuation alliée, port et plages du Nord"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'évacuation de Dunkerque, France"}
   ]},
@@ -1123,8 +1123,8 @@ const EVENTS = [
    photo:"events/ardennes_1944.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ultime offensive surprise de l'hiver 1944 dans une forêt enneigée, un général assiégé répondant « des nuts ! » à une sommation"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de la Seconde Guerre mondiale dans un massif du sud-est de la Belgique"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dernière offensive allemande à l'ouest, Ardennes"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de la Seconde Guerre mondiale dans un massif forestier du sud-est d'un petit pays d'Europe de l'Ouest"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dernière grande offensive de l'hiver 1944 à l'ouest, Ardennes"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille des Ardennes, Belgique"}
   ]},
   {name:"Prise du Reichstag — Berlin, Allemagne", lat:52.5186, lng:13.3762, radius:500,
@@ -1142,7 +1142,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Seconde arme nucléaire de l'histoire, larguée le 9 août 1945 sur une ville portuaire après un premier objectif écarté par les nuages"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement de 1945 dans une ville de l'ouest d'un archipel d'Asie de l'Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Deuxième bombe atomique, port du Ky?sh?"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Deuxième bombe atomique, port du Kyūshū"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le bombardement de Nagasaki, Japon"}
   ]},
   {name:"Conférence de Yalta — Crimée", lat:44.47, lng:34.14, radius:600,
@@ -1186,7 +1186,7 @@ const EVENTS = [
    photo:"events/i_have_a_dream.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Discours de 1963 prononcé au pied d'un mémorial de marbre devant une immense foule pour les droits civiques"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du milieu du XXe siècle dans une capitale de la côte est américaine"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du milieu du XXe siècle dans une capitale de la côte est d'Amérique du Nord"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Discours de Martin Luther King, esplanade du Mall"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le discours « I Have a Dream », Washington, USA"}
   ]},
@@ -1196,7 +1196,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Coups de feu de novembre 1963 sur un cortège présidentiel traversant une place, drame filmé qui hante encore les théories"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Assassinat politique du milieu du XXe siècle dans le sud des États-Unis"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Assassinat du président américain, Dealey Plaza"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Assassinat d'un président en plein jour, Dealey Plaza"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'assassinat de JFK, Dallas, USA"}
   ]},
   {name:"Massacre de Tian'anmen — Pékin, Chine", lat:39.906, lng:116.391, radius:1000,
@@ -1214,7 +1214,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Réunification proclamée en 1990 d'un pays coupé en deux depuis la fin d'un conflit mondial, feu d'artifice devant une porte monumentale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du début des années 1990 dans une capitale d'Europe centrale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Réunification allemande, cœur de Berlin"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Réunification d'une nation divisée, cœur de Berlin"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La réunification allemande, Allemagne"}
   ]},
   {name:"Libération de Nelson Mandela — Le Cap, Afrique du Sud", lat:-33.925, lng:18.424, radius:1500,
@@ -1275,7 +1275,7 @@ const EVENTS = [
    desc:"En 1859, cette bataille sanglante inspira la fondation de la Croix-Rouge.",
    photo:"events/solferino.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Carnage de 1859 dont l'horreur inspira à un témoin suisse la création d'une organisation humanitaire universelle"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Carnage de 1859 dont l'horreur inspira à un témoin la création d'une organisation humanitaire universelle"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du milieu du XIXe siècle dans le nord d'une péninsule méditerranéenne"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Bataille à l'origine de la Croix-Rouge, Lombardie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Solférino, Italie"}
@@ -1285,7 +1285,7 @@ const EVENTS = [
    photo:"events/sedan_1870.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Encerclement de 1870 où un empereur se rendit avec son armée, effondrant un régime et allumant une révolution"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de la fin du XIXe siècle dans le nord-est de la France"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de la fin du XIXe siècle dans le nord-est d'un pays d'Europe de l'Ouest"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Capitulation de Napoléon III, Ardennes"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Sedan, France"}
   ]},
@@ -1295,7 +1295,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Insurrection du printemps 1871 d'une capitale autogérée durant deux mois, écrasée lors d'une « semaine sanglante » contre les murs d'un cimetière"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement de la fin du XIXe siècle dans une capitale d'Europe de l'Ouest"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La Commune insurrectionnelle, capitale française"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La Commune insurrectionnelle, dans la capitale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Commune de Paris, France"}
   ]},
   {name:"Bataille d'Isandhlwana — KwaZulu-Natal, Afrique du Sud", lat:-28.35, lng:30.65, radius:3000,
@@ -1313,7 +1313,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1896 d'un empire africain sur une puissance coloniale européenne, préservant une rare indépendance sur tout un continent"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de la fin du XIXe siècle sur les hauts plateaux d'Afrique de l'Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire éthiopienne sur l'Italie, région du Tigré"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire éthiopienne sur une puissance coloniale, région du Tigré"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Adoua, Éthiopie"}
   ]},
   {name:"Bataille d'Omdurman — Khartoum, Soudan", lat:15.65, lng:32.48, radius:5000,
@@ -1358,7 +1358,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Anéantissement en 1905 d'une flotte venue de l'autre bout du monde par une marine asiatique montante, séisme dans l'ordre colonial"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille navale du début du XXe siècle dans un détroit d'Asie de l'Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire japonaise sur la flotte russe, détroit de Tsushima"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire navale japonaise écrasante, détroit de Tsushima"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Tsushima, Japon"}
   ]},
   {name:"Restauration Meiji — Kyoto, Japon", lat:35.021, lng:135.756, radius:2000,
@@ -1385,7 +1385,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Proclamation d'octobre 1949 depuis le balcon d'une porte monumentale au terme d'une longue guerre civile, naissance d'une république populaire"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du milieu du XXe siècle dans une capitale d'Asie de l'Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fondation de la Chine populaire, place de Pékin"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Proclamation d'une grande république populaire, place de Pékin"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La proclamation de la RPC, Chine"}
   ]},
   {name:"Révolte des Boxers — Pékin, Chine", lat:39.904, lng:116.391, radius:3000,
@@ -1465,7 +1465,7 @@ const EVENTS = [
    photo:"events/krach_1929.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Effondrement boursier d'octobre 1929 dans une rue étroite de la finance, « jeudi noir » ouvrant une décennie de misère mondiale"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement de la fin des années 1920 dans une grande ville de la côte est américaine"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement de la fin des années 1920 dans une grande ville de la côte est d'Amérique du Nord"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Krach boursier, quartier de la Bourse"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le krach de Wall Street, New York, USA"}
   ]},
@@ -1483,7 +1483,7 @@ const EVENTS = [
    photo:"events/onze_septembre.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Attaques coordonnées d'un matin de septembre 2001 contre deux tours jumelles d'un quartier d'affaires, bascule géopolitique du nouveau siècle"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du début des années 2000 dans une grande ville de la côte est américaine"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du début des années 2000 dans une grande ville de la côte est d'Amérique du Nord"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Attentats contre le World Trade Center, sud de Manhattan"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les attentats du 11 septembre, New York, USA"}
   ]},
@@ -1547,7 +1547,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Écrasement en 1476 d'un duc ambitieux par des piquiers montagnards, deuxième d'une série de défaites qui lui coûtera bientôt la vie"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de la fin du XVe siècle dans l'ouest d'un pays alpin d'Europe centrale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire suisse sur Charles le Téméraire, lac de Morat"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire des cantons confédérés sur Charles le Téméraire, lac de Morat"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Morat, Suisse"}
   ]},
   {name:"Arrivée de la peste noire — Messine, Sicile, Italie", lat:38.193, lng:15.554, radius:3000,
@@ -1610,7 +1610,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1745 précédée, dit la légende, d'une invitation courtoise à l'adversaire de tirer le premier"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du milieu du XVIIIe siècle dans le sud d'un pays d'Europe de l'Ouest"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire française du maréchal de Saxe, Hainaut"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire du maréchal de Saxe, Hainaut"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Fontenoy, Belgique"}
   ]},
   {name:"Bataille de Friedland — Kaliningrad, Russie", lat:54.44, lng:21.02, radius:4000,
@@ -1618,7 +1618,7 @@ const EVENTS = [
    photo:"events/friedland.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1807 acculant une armée à un fleuve, qui poussa deux empereurs à sceller une paix sur un radeau quelques jours plus tard"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début du XIXe siècle dans une enclave de l'ouest de la Russie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début du XIXe siècle dans une enclave de l'Est européen"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire napoléonienne avant Tilsit, ancienne Prusse-Orientale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Friedland, Russie"}
   ]},
@@ -1628,7 +1628,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1809 arrachée par une concentration d'artillerie inédite après un premier échec sanglant sur une île fluviale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début du XIXe siècle dans l'est d'un pays d'Europe centrale, plaine danubienne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de Napoléon sur l'Autriche, nord de Vienne"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de Napoléon sur les Autrichiens, nord de Vienne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Wagram, Autriche"}
   ]},
   {name:"Bataille de Navarin — Messénie, Grèce", lat:36.92, lng:21.68, radius:7000,
@@ -1646,7 +1646,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Débarquement de 1830 sur une plage à l'ouest d'une baie, prétexte d'un coup d'éventail lançant plus d'un siècle de colonisation"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du XIXe siècle sur une côte d'Afrique du Nord"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Prise d'Alger par la France, baie algéroise"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Prise d'Alger, baie algéroise"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise d'Alger, Algérie"}
   ]},
   {name:"Bataille de Sadowa (Königgrätz) — Tchéquie", lat:50.29, lng:15.75, radius:5000,
@@ -1655,7 +1655,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1866 d'une armée aux fusils se chargeant par la culasse, réglant en une journée la rivalité pour l'unité d'un futur empire"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du milieu du XIXe siècle dans le nord d'un pays d'Europe centrale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire prussienne sur l'Autriche, Bohême"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire prussienne sur les Autrichiens, Bohême"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Sadowa, Tchéquie"}
   ]},
   {name:"Bataille de Koursk — Russie", lat:51.0, lng:36.2, radius:9000,
@@ -1663,7 +1663,7 @@ const EVENTS = [
    photo:"events/koursk.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand affrontement blindé de l'histoire, à l'été 1943, un saillant pris en tenaille où des milliers de chars s'entrechoquèrent"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de la Seconde Guerre mondiale dans l'ouest de la Russie"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de la Seconde Guerre mondiale dans l'ouest de l'Europe orientale"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grande bataille de chars, saillant de Koursk"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Koursk, Russie"}
   ]},
@@ -1673,7 +1673,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Assaut de 1945 sur une île volcanique de cendre noire, un drapeau planté au sommet immortalisé par une photographie devenue icône"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de la Seconde Guerre mondiale sur une île du Pacifique Nord-Ouest"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Prise de l'île au mont Suribachi, archipel japonais"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Prise de l'île au mont Suribachi, Pacifique"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Iwo Jima, Japon"}
   ]},
   {name:"Bombardement de Dresde — Saxe, Allemagne", lat:51.05, lng:13.74, radius:3000,
@@ -1691,7 +1691,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Incendie criminel de 1933 d'un parlement, prétexte immédiat à la suspension des libertés et à la prise de pouvoir totale d'un régime"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du début des années 1930 dans une capitale d'Europe centrale"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Incendie du parlement allemand, quartier gouvernemental"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Incendie d'un parlement, quartier gouvernemental de Berlin"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'incendie du Reichstag, Allemagne"}
   ]},
   {name:"Conférence de Potsdam — Brandebourg, Allemagne", lat:52.41, lng:13.07, radius:600,
