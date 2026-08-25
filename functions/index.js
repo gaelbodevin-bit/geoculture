@@ -1,5 +1,6 @@
 const { onRequest, onCall, HttpsError } = require('firebase-functions/v2/https');
 const { setGlobalOptions } = require('firebase-functions/v2');
+const { defineSecret } = require('firebase-functions/params');
 const admin = require('firebase-admin');
 const stripe = require('stripe');
 
@@ -8,6 +9,9 @@ const db = admin.firestore();
 
 // Limite le nombre d'instances simultanées : borne le coût maximal en cas de spam/DoS
 setGlobalOptions({ region: 'us-central1', maxInstances: 10 });
+
+const stripeSecretKey = defineSecret('STRIPE_SECRET_KEY');
+const stripeWebhookSecret = defineSecret('STRIPE_WEBHOOK_SECRET');
 
 // CORS : liste blanche stricte (égalité exacte, pas de startsWith)
 const ALLOWED_ORIGINS = ['https://www.geo-culture.io', 'https://geo-culture.io'];
@@ -23,11 +27,11 @@ function setCORS(res, req) {
 }
 
 // ── Webhook Stripe ──────────────────────────────────────────────────────────
-exports.stripeWebhook = onRequest(async (req, res) => {
+exports.stripeWebhook = onRequest({ secrets: [stripeSecretKey, stripeWebhookSecret] }, async (req, res) => {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
-  const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
-  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  const stripeClient = stripe(stripeSecretKey.value());
+  const webhookSecret = stripeWebhookSecret.value();
   let event;
   try {
     event = stripeClient.webhooks.constructEvent(req.rawBody, req.headers['stripe-signature'], webhookSecret);
@@ -65,7 +69,7 @@ exports.stripeWebhook = onRequest(async (req, res) => {
 });
 
 // ── Créer session Checkout via fetch + Bearer token ─────────────────────────
-exports.createCheckoutSession = onRequest(async (req, res) => {
+exports.createCheckoutSession = onRequest({ secrets: [stripeSecretKey] }, async (req, res) => {
   setCORS(res, req);
   if (req.method === 'OPTIONS') return res.status(204).send('');
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
@@ -95,7 +99,7 @@ exports.createCheckoutSession = onRequest(async (req, res) => {
   }
   const amount = Math.round(eur * 100);
 
-  const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
+  const stripeClient = stripe(stripeSecretKey.value());
   try {
     const session = await stripeClient.checkout.sessions.create({
       payment_method_types: ['card'],
