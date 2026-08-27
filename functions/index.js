@@ -12,7 +12,7 @@ setGlobalOptions({ region: 'us-central1', maxInstances: 10 });
 // CORS : liste blanche stricte (égalité exacte, pas de startsWith)
 const ALLOWED_ORIGINS = ['https://www.geo-culture.io', 'https://geo-culture.io', 'https://gaelbodevin-bit.github.io'];
 const MAX_AMOUNT_EUR = 500; // plafond anti-fraude (carding, erreurs de saisie, litiges)
-const REPORT_NOTIFY_EMAIL = ''; // optionnel : e-mail de notif des signalements (voir extension Trigger Email)
+const REPORT_NOTIFY_EMAIL = 'bluecellproduction@gmail.com'; // optionnel : e-mail de notif des signalements (voir extension Trigger Email)
 
 function setCORS(res, req) {
   const origin = (req && req.headers && req.headers.origin) || '';
