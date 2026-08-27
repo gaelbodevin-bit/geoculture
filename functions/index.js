@@ -2,6 +2,9 @@ const { onRequest, onCall, HttpsError } = require('firebase-functions/v2/https')
 const { setGlobalOptions } = require('firebase-functions/v2');
 const admin = require('firebase-admin');
 const stripe = require('stripe');
+const nodemailer = require('nodemailer');
+const { defineSecret } = require('firebase-functions/params');
+const SMTP_PASSWORD = defineSecret('SMTP_PASSWORD');
 
 admin.initializeApp();
 const db = admin.firestore();
@@ -196,7 +199,7 @@ exports.deleteAccount = onCall(async (request) => {
 
 
 // ── Signalement de problème ─ stocké dans Firestore (100% interne, pas de mailto) ──
-exports.reportProblem = onRequest(async (req, res) => {
+exports.reportProblem = onRequest({ secrets: [SMTP_PASSWORD] }, async (req, res) => {
   setCORS(res, req);
   if (req.method === 'OPTIONS') return res.status(204).send('');
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
@@ -224,16 +227,25 @@ exports.reportProblem = onRequest(async (req, res) => {
       createdAt: admin.firestore.FieldValue.serverTimestamp()
     });
 
-    // Notification e-mail optionnelle via l'extension Firebase "Trigger Email from Firestore".
-    // Renseigne REPORT_NOTIFY_EMAIL en haut ET installe l'extension pour l'activer.
+        // Notification e-mail directe (nodemailer + Gmail), sans extension.
     if (REPORT_NOTIFY_EMAIL) {
-      await db.collection('mail').add({
-        to: REPORT_NOTIFY_EMAIL,
-        message: {
-          subject: '[GéoCulture] Signalement — ' + (category || 'Autre'),
+      try {
+        const transporter = nodemailer.createTransport({
+          host: 'smtp.gmail.com',
+          port: 465,
+          secure: true,
+          auth: { user: REPORT_NOTIFY_EMAIL, pass: SMTP_PASSWORD.value() }
+        });
+        await transporter.sendMail({
+          from: 'GeoCulture <' + REPORT_NOTIFY_EMAIL + '>',
+          to: REPORT_NOTIFY_EMAIL,
+          replyTo: email || undefined,
+          subject: '[GeoCulture] Signalement - ' + (category || 'Autre'),
           text: message + '\n\n' + (email ? ('Contact : ' + email + '\n\n') : '') + context
-        }
-      });
+        });
+      } catch (mailErr) {
+        console.error('reportProblem mail error:', mailErr);
+      }
     }
 
     return res.status(200).json({ ok: true });
