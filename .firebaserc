@@ -1,5 +1,13 @@
 {
   "projects": {
     "default": "geo-culture-73453"
+  },
+  "targets": {},
+  "etags": {
+    "geo-culture-73453": {
+      "extensionInstances": {
+        "firestore-send-email": "2e337c7e707c1a6709fbdcaba09e37297dacd6aef9a971e078f0ff9dff7685ef"
+      }
+    }
   }
 }
