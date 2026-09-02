@@ -227,7 +227,6 @@ exports.reportProblem = onRequest({ secrets: [SMTP_PASSWORD] }, async (req, res)
       createdAt: admin.firestore.FieldValue.serverTimestamp()
     });
 
-        let mailErrorDebug = null; // DEBUG TEMPORAIRE
     // Notification e-mail directe (nodemailer + Gmail), sans extension.
     if (REPORT_NOTIFY_EMAIL) {
       try {
@@ -246,11 +245,10 @@ exports.reportProblem = onRequest({ secrets: [SMTP_PASSWORD] }, async (req, res)
         });
       } catch (mailErr) {
         console.error('reportProblem mail error:', mailErr);
-        mailErrorDebug = String(mailErr && mailErr.message ? mailErr.message : mailErr); // DEBUG TEMPORAIRE
       }
     }
 
-    return res.status(200).json({ ok: true, mailError: mailErrorDebug }); // DEBUG TEMPORAIRE
+    return res.status(200).json({ ok: true });
   } catch (err) {
     console.error('reportProblem error:', err);
     return res.status(500).json({ error: 'Erreur serveur.' });
