@@ -556,7 +556,7 @@ function showMenu(){
   var h=[];
 
   // Titre
-  h.push('<div class="otitle" style="font-size:58px;line-height:1.05;margin-bottom:28px">G\u00e9o<span>Culture</span></div>');
+  h.push('<div class="otitle gc-mtitle" style="font-size:58px;line-height:1.05;margin-bottom:28px">G\u00e9o<span>Culture</span></div>');
 
   // Zone auth
   if(user){
@@ -571,7 +571,7 @@ function showMenu(){
   }
 
   // Grille 2 colonnes égales
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:920px">');
+  h.push('<div class="gc-menu-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:920px">');
 
   // Colonne gauche: comment jouer
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:16px">');
@@ -602,7 +602,7 @@ function showMenu(){
   // Styles de base — plus grands, plus visuels
   var _bs = 'font-family:\'Baloo 2\',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-align:center;border-radius:10px;padding:14px 6px;transition:all .2s;border:1.5px solid;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1.2;';
 
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1">');
+  h.push('<div class="gc-mode-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1">');
 
   // Normal — orange
   h.push('<button onclick="selectGameMode(\'normal\')" style="'+_bs+'background:transparent;color:#f97316;border-color:#f97316" '
@@ -867,3 +867,13 @@ function openMultiplayer() {
 // ── Exports window pour onclick inline ──
 window.mpShowJoinMenu = mpShowJoinMenu;
 window.mpLaunchGame = mpLaunchGame;
+
+/* === Responsive : recadrage de la carte au redimensionnement / rotation === */
+(function(){
+  var _gcRT;
+  function _gcResizeMap(){
+    try{ if(typeof map!=='undefined' && map){ map.invalidateSize(); if(typeof adjustMapZoom==='function') adjustMapZoom(); } }catch(e){}
+  }
+  window.addEventListener('resize', function(){ clearTimeout(_gcRT); _gcRT=setTimeout(_gcResizeMap,200); });
+  window.addEventListener('orientationchange', function(){ setTimeout(_gcResizeMap,350); });
+})();
