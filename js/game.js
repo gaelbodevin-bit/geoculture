@@ -38,7 +38,7 @@ function haversine(la1,lo1,la2,lo2){
 
 function initMap(){
   if(map){map.remove();map=null;}
-  if(typeof L==='undefined'){console.error('Leaflet not loaded');return;}
+  if(typeof L==='undefined'){return;}
   var mapDiv=document.getElementById('map');
   var divW=mapDiv?mapDiv.offsetWidth:(window.innerWidth-210);
   var divH=mapDiv?mapDiv.offsetHeight:window.innerHeight;
@@ -95,7 +95,7 @@ function startGame(){
   document.getElementById('hsc').textContent='0';
   document.getElementById('overlay').classList.add('h');
   // S'assurer que la carte est initialis\u00e9e
-  if(!map){ try{ initMap(); }catch(e){ console.warn('Map init failed:',e); } }
+  if(!map){ try{ initMap(); }catch(e){  } }
   startRound(0);
 }
 
@@ -114,6 +114,7 @@ function startRound(idx){
   // Masquer le bouton indice suivant en niveau fixe
   var skipb=document.getElementById('skipb');
   if(skipb) skipb.style.display=fixedLevel>=0?'none':'block';
+  _gcSaveState();
 }
 
 function showHint(){
@@ -473,7 +474,7 @@ function _shareToast(msg) {
 }
 window.shareScore = shareScore;
 
-function showEnd(){
+function showEnd(){ _gcClearState();
   if(!window._dailyMode) window._wasDailyMode=false;
   const totalMax=roundScores.reduce((a,s)=>a+(s.maxPts||0),0);
   const pct=totalMax>0?Math.round(total/totalMax*100):0;
@@ -530,7 +531,7 @@ function showEnd(){
       }
     }, 100);
   }
-  if(typeof window.saveGame==='function'){var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);var _p=_t>0?Math.round(total/_t*100):0;var _n=['tout-niveaux','expert','difficile','moyen','facile'];var _m=(eventsMode?'events-':'')+(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(chillMode?'chill-':'')+(_n[fixedLevel+1]||'tout-niveaux');setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);}
+  if(typeof window.saveGame==='function'){var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);var _p=_t>0?Math.round(total/_t*100):0;var _n=['tout-niveaux','expert','difficile','moyen','facile'];var _m=(eventsMode?'events-':'')+(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(chillMode?'chill-':'')+(_n[fixedLevel+1]||'tout-niveaux');setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){}},500);}
   // Sauvegarder dans le classement du jour si mode daily
   if(window._dailyMode && typeof window.saveDailyScore==='function'){
     var _dt=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
@@ -550,6 +551,7 @@ function showMenu(){
   }
   clearInterval(tiv);
   gameActive=false;
+  _gcClearState();
   document.body.classList.add('menu-mode');
   var ov=document.getElementById('overlay');
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
@@ -574,8 +576,9 @@ function showMenu(){
   h.push('<div class="gc-menu-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:920px">');
 
   // Colonne gauche: comment jouer
-  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:16px">');
-  h.push('<div style="font-size:13px;font-weight:700;color:#f97316;letter-spacing:1.8px;text-transform:uppercase">Comment jouer</div>');
+  h.push('<div class="gc-howto'+(window.innerWidth<=820?' collapsed':'')+'" style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:16px">');
+  h.push('<div class="gc-howto-h" onclick="this.parentNode.classList.toggle(\'collapsed\')" style="font-size:13px;font-weight:700;color:#f97316;letter-spacing:1.8px;text-transform:uppercase;display:flex;align-items:center;justify-content:space-between;cursor:pointer">Comment jouer<span class="gc-howto-chev">\u25B8</span></div>');
+  h.push('<div class="gc-howto-body" style="display:flex;flex-direction:column;gap:16px">');
   h.push('<div style="font-size:13.5px;color:#94a3b8;line-height:1.6;padding:2px 0 8px 0;border-bottom:1px solid #1e2d4566;margin-bottom:4px">Localise les lieux grâce aux indices en un minimum de temps.</div>');
   var rules=[
     {t:'Normal', d:T('ruleNormal')},
@@ -591,6 +594,7 @@ function showMenu(){
     h.push('<div><span style="font-size:15px;color:#e2e8f0;font-weight:700">'+r.t+'</span><br><span style="font-size:13px;color:#94a3b8;line-height:1.6">'+r.d+'</span></div>');
     h.push('</div>');
   });
+  h.push('</div>');
   h.push('</div>');
 
   // Colonne droite: modes de jeu
@@ -710,9 +714,40 @@ function exitExploreMode(){
   }
 }
 
+// === Reprise de partie au rafraichissement (localStorage) ===
+var _GC_SAVE_KEY='gc_game_v1';
+function _gcSaveState(){
+  try{
+    if(window._mpMode||window._dailyMode) return;
+    if(!gameActive||!roundList||!roundList.length||curR>=roundList.length) return;
+    var st={v:1,ts:Date.now(),perfectionMode:perfectionMode,noZoomMode:noZoomMode,chillMode:chillMode,eventsMode:eventsMode,fixedLevel:fixedLevel,roundList:roundList,curR:curR,total:total,roundScores:roundScores};
+    localStorage.setItem(_GC_SAVE_KEY,JSON.stringify(st));
+  }catch(e){}
+}
+function _gcClearState(){ try{ localStorage.removeItem(_GC_SAVE_KEY); }catch(e){} }
+function _gcTryRestore(){
+  try{
+    var raw=localStorage.getItem(_GC_SAVE_KEY);
+    if(!raw) return false;
+    var st=JSON.parse(raw);
+    if(!st||st.v!==1||!st.roundList||!st.roundList.length) return false;
+    if(typeof st.curR!=='number'||st.curR<0||st.curR>=st.roundList.length){ _gcClearState(); return false; }
+    perfectionMode=!!st.perfectionMode; noZoomMode=!!st.noZoomMode; chillMode=!!st.chillMode; eventsMode=!!st.eventsMode;
+    fixedLevel=(typeof st.fixedLevel==='number')?st.fixedLevel:-1;
+    roundList=st.roundList; total=st.total||0; roundScores=st.roundScores||[]; curR=st.curR;
+    document.body.classList.remove('menu-mode');
+    var _h=document.getElementById('hsc'); if(_h) _h.textContent=String(total);
+    document.getElementById('overlay').classList.add('h');
+    if(map){ try{ map.remove(); }catch(e){} map=null; }
+    try{ initMap(); }catch(e){}
+    startRound(curR);
+    return true;
+  }catch(e){ _gcClearState(); return false; }
+}
+
 document.addEventListener('DOMContentLoaded',function(){
   document.body.classList.add('menu-mode');
-  setTimeout(function(){try{initMap();}catch(e){}showMenu();},200);
+  setTimeout(function(){ if(!_gcTryRestore()){ try{initMap();}catch(e){} showMenu(); } },200);
   document.getElementById('confb').onclick=confirmGuess;
   document.getElementById('skipb').onclick=function(){if(!gameActive)return;clearInterval(tiv);nextLevel();};
   var nozb=document.getElementById('nozb');
@@ -842,6 +877,7 @@ function showDifficultyMenu(mode) {
 }
 
 function launchGame(level) {
+  window._dailyMode=false;
   fixedLevel = level;
   noZoomMode = window._menuNZ || false;
   perfectionMode = window._menuPerf || false;

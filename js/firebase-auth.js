@@ -102,7 +102,7 @@ function updateAuthUI(user) {
 
 function fbSignIn() {
   signInWithPopup(fbAuth, fbProvider).catch(function(e) {
-    console.error('Auth error:', e);
+    
     showToast('Erreur de connexion : ' + e.message);
   });
 }
@@ -115,7 +115,7 @@ function fbSignOut() {
 
 // \u2500\u2500 Sauvegarder une partie \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 function saveGame(scores, total, pct, mode) {
-  console.log('saveGame appel\u00e9, currentUser=', currentUser ? currentUser.uid : 'NULL');
+  
   if (!currentUser) {
       return;
   }
@@ -133,7 +133,7 @@ function saveGame(scores, total, pct, mode) {
   };
   addDoc(collection(fbDb, 'games'), data)
     .then(function() { showToast('Partie sauvegard\u00e9e !'); })
-    .catch(function(e) { console.error('Save error:', e); });
+    .catch(function(e) {  });
 }
 
 // \u2500\u2500 Charger l'historique \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
@@ -156,7 +156,7 @@ function loadHistory(callback) {
     });
     callback(games);
   }).catch(function(e) {
-    console.error('Load error:', e);
+    
     callback([]);
   });
 }
@@ -320,7 +320,7 @@ function loadLeaderboard(mode, callback) {
     entries.sort(function(a,b){ return (b.total||0)-(a.total||0); });
     callback(entries.slice(0,20));
   }).catch(function(e) {
-    console.error('Leaderboard error:', e);
+    
     callback([]);
   });
 }
@@ -419,7 +419,7 @@ function saveDailyScore(level, total, pct) {
     photoURL: currentUser.photoURL || '',
     total: total, pct: pct, level: level, date: dateStr,
     createdAt: serverTimestamp()
-  }).catch(function(e){ console.error('saveDailyScore:', e); });
+  }).catch(function(e){  });
 }
 
 function loadDailyLeaderboard(level, callback) {
@@ -430,7 +430,7 @@ function loadDailyLeaderboard(level, callback) {
       snap.forEach(function(doc) { entries.push(doc.data()); });
       entries.sort(function(a,b){ return (b.total||0)-(a.total||0); });
       callback(entries.slice(0,20));
-    }).catch(function(e){ console.error('loadDailyLB:', e); callback([]); });
+    }).catch(function(e){  callback([]); });
 }
 
 function showDailyLB() {
@@ -576,7 +576,7 @@ function redeemCode() {
       msg.style.color='#ef4444'; msg.textContent = (r.d && r.d.error) ? r.d.error : 'Code invalide.';
     }
   }).catch(function(e) {
-    console.error('redeemCode error:', e);
+    
     msg.style.color='#ef4444'; msg.textContent = 'Erreur r\u00e9seau, r\u00e9essaie.';
   });
 }
@@ -599,7 +599,7 @@ function initiatePremiumPayment() {
     if(url){ window.location.href=url; }
     else{ throw new Error('URL manquante'); }
   }).catch(function(err){
-    console.error('Stripe error:',err);
+    
     if(typeof showToast==='function') showToast('Erreur: '+err.message);
     if(btn){ btn.textContent='Soutenir et débloquer →'; btn.disabled=false; }
   });
@@ -631,7 +631,7 @@ function doDeleteAccount() {
     ov.innerHTML='<div class="otitle" style="font-size:22px">Compte supprim&#233;</div><div style="color:#6b7280;font-size:14px;margin-top:8px">Vos donn&#233;es ont &#233;t&#233; effac&#233;es. Au revoir&nbsp;!</div>';
     setTimeout(function(){ window.location.reload(); },2500);
   }).catch(function(e){
-    console.error('deleteAccount:',e);
+    
     ov.innerHTML='<div class="otitle" style="font-size:22px;color:#ef4444">Erreur</div><div style="color:#94a3b8;font-size:14px;margin-top:8px">'+e.message+'</div><button onclick="window.closeHistory()" style="margin-top:16px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer">Fermer</button>';
   });
 }
