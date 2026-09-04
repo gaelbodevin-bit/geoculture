@@ -550,8 +550,9 @@ function showMenu(){
     window.mpLeaveRoom(); return;
   }
   clearInterval(tiv);
+  var _gcWasActive=gameActive;
   gameActive=false;
-  _gcClearState();
+  if(_gcWasActive) _gcClearState();
   document.body.classList.add('menu-mode');
   var ov=document.getElementById('overlay');
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
