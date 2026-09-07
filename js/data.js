@@ -1746,9 +1746,9 @@ const ROUNDS=[
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Centre Pompidou à Paris, France"}
   ]},
   {name:"Musée du Louvre — Paris, France",lat:48.8606,lng:2.3376,desc:"Avec 73 000 m² d'expositions, il faudrait 9 semaines entières à raison de 8 heures par jour pour voir chaque œuvre du Louvre 30 secondes. La Joconde, qui déçoit souvent les visiteurs par sa petite taille (77 cm × 53 cm), attire néanmoins 6 millions de personnes par an.",photo:"photos/musee_du_louvre.jpg",hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand musée du monde dans une ancienne forteresse royale, cour à pyramide de verre (1989)"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense musée dans un ancien palais royal, aile bordant un grand fleuve, cour à pyramide de verre"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand musée du monde, pyramide de verre, Paris"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Immense musée dans un ancien palais royal, aile bordant un grand fleuve"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Plus grand musée du monde"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand musée du monde, entrée souterraine signalée par une pyramide de verre, Paris"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Musée du Louvre à Paris, France"}
   ]},
   {name:"Arc de Triomphe — Paris, France",lat:48.8738,lng:2.295,desc:"L'Arc de Triomphe fut commandé par Napoléon après la victoire d'Austerlitz en 1805 mais il ne le vit jamais terminé. C'est sous les voûtes de l'Arc que brûle depuis 1921 la Flamme du Soldat Inconnu — ravivée chaque soir à 18h30 sans interruption depuis un siècle.",photo:"photos/arc_de_triomphe.jpg",hints:[

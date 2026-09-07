@@ -6,7 +6,7 @@ const EVENTS = [
    desc:"Le 21 octobre 1600, la victoire de Tokugawa Ieyasu sur la coalition de l'Ouest dans cette plaine brumeuse mit fin à un siècle de guerre civile et fonda un shogunat qui régna 265 ans.",
    photo:"events/sekigahara.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Affrontement décisif de 1600 entre deux coalitions féodales, scellé par la trahison de Kobayakawa au profit du vainqueur qui fondera une dynastie de 265 ans"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Affrontement décisif de 1600 entre deux coalitions féodales, scellé par la trahison d'un des généraux au profit du vainqueur qui fondera une dynastie de 265 ans"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de l'an 1600 dans une plaine du centre de l'archipel, période Azuchi-Momoyama"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Bataille fondatrice du shogunat Tokugawa, plaine de la région du Chūbu"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Sekigahara, préfecture de Gifu, Japon"}
@@ -57,7 +57,7 @@ const EVENTS = [
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute du mur de Berlin, Allemagne"}
   ]},
   {name:"Débarquement d'Omaha Beach — Calvados, France", lat:49.37, lng:-0.87, radius:3000,
-   desc:"Le 6 juin 1944, le secteur le plus meurtrier du Débarquement allié coûta près de 3 000 pertes américaines en quelques heures sous le feu des falaises.",
+   desc:"Le 6 juin 1944, le secteur le plus meurtrier du Débarquement allié coûta près de 3 000 pertes américaines en quelques heures sous le feu des falaises nazi, hum la vilaine roche.",
    photo:"events/omaha_beach.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Assaut amphibie du 6 juin 1944 sur la plus sanglante des cinq plages, sous le feu croisé de bunkers perchés sur des falaises"},
@@ -182,14 +182,14 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire anglaise d'Henri V, Pas-de-Calais"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Azincourt, France"}
   ]},
-  {name:"Éruption de Pompéi — Campanie, Italie", lat:40.75, lng:14.486, radius:3000,
+  {name:"Destruction de Pompéi — Campanie, Italie", lat:40.75, lng:14.486, radius:3000,
    desc:"En 79 apr. J.-C., l'éruption du Vésuve ensevelit Pompéi sous les cendres, figeant la vie romaine pour l'éternité.",
    photo:"events/pompei_79.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Catastrophe volcanique de l'an 79 qui pétrifia une cité entière sous les cendres, redécouverte intacte 17 siècles plus tard"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Désastre antique au pied d'un volcan du sud d'une péninsule méditerranéenne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ensevelissement de Pompéi par le Vésuve, Campanie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'éruption de Pompéi, Italie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ensevelissement d'une grande ville romaine par le Vésuve, Campanie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La destruction de Pompéi, Italie"}
   ]},
   {name:"Bataille de Bannockburn — Stirling, Écosse", lat:56.091, lng:-3.927, radius:2000,
    desc:"En 1314, Robert Bruce y vainquit l'armée anglaise d'Édouard II, assurant l'indépendance de l'Écosse.",
@@ -281,7 +281,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Bataille symbole de 1916, département de la Meuse"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Verdun, France"}
   ]},
-  {name:"Ralliement de Jeanne d'Arc — Orléans, France", lat:47.897, lng:1.904, radius:1500,
+  {name:"Levée du siège d'Orléans — Orléans, France", lat:47.897, lng:1.904, radius:1500,
    desc:"En 1429, Jeanne d'Arc leva le siège d'Orléans, tournant de la guerre de Cent Ans en faveur du roi de France.",
    photo:"events/orleans_1429.jpg",
    hints:[
@@ -290,7 +290,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Jeanne d'Arc lève le siège, ville de la Loire moyenne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le siège d'Orléans, France"}
   ]},
-  {name:"Bataille de Tours des Boers — Ladysmith — KwaZulu-Natal, Afrique du Sud", lat:-28.559, lng:29.78, radius:5000,
+  {name:"Le siège de Ladysmith — Ladysmith — KwaZulu-Natal, Afrique du Sud", lat:-28.559, lng:29.78, radius:5000,
    desc:"Lors de la guerre des Boers, le siège de Ladysmith (1899-1900) vit 118 jours d'encerclement britannique par les commandos boers.",
    photo:"events/ladysmith.jpg",
    hints:[
@@ -362,7 +362,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire napoléonienne sur la Prusse, Thuringe"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Iéna, Allemagne"}
   ]},
-  {name:"Révolte de Spartacus — Vallée du Sele — Campanie, Italie", lat:40.48, lng:15.15, radius:8000,
+  /*{name:"Révolte de Spartacus — Vallée du Sele — Campanie, Italie", lat:40.48, lng:15.15, radius:8000,
    desc:"De 73 à 71 av. J.-C., l'esclave gladiateur Spartacus mena la plus grande révolte servile de Rome avant d'être écrasé par Crassus.",
    photo:"events/spartacus.jpg",
    hints:[
@@ -370,7 +370,7 @@ const EVENTS = [
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rébellion antique dans le sud d'une péninsule méditerranéenne, dernier siècle av. J.-C."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Révolte de Spartacus, arrière-pays de Campanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La révolte de Spartacus, Italie"}
-  ]},
+  ]},"*/
   {name:"Chute de Tenochtitlan — Mexico, Mexique", lat:19.435, lng:-99.14, radius:3000,
    desc:"En 1521, Cortés et ses alliés indigènes prirent la capitale aztèque après un siège dévastateur, effondrant l'empire.",
    photo:"events/tenochtitlan_1521.jpg",
@@ -389,7 +389,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite jacobite, Highlands près d'Inverness"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Culloden, Écosse"}
   ]},
-  {name:"Incendie de Rome — Rome, Italie", lat:41.892, lng:12.487, radius:4000,
+  {name:"Grand incendie de Rome — Rome, Italie", lat:41.892, lng:12.487, radius:4000,
    desc:"En 64 apr. J.-C., un immense incendie ravagea Rome pendant six jours ; Néron en fit porter la responsabilité aux chrétiens.",
    photo:"events/incendie_rome.jpg",
    hints:[
@@ -476,7 +476,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Prise d'une capitale du Sud le 30 avril 1975, chars enfonçant les grilles d'un palais et hélicoptères évacuant depuis les toits"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fin d'une guerre des années 1970 dans le sud d'un pays d'Asie du Sud-Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chute de Saïgon, delta du Mékong"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fin de la guerre du Vietnam, delta du Mékong"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute de Saïgon, Vietnam"}
   ]},
   {name:"Bataille de Vienne (1683) — Autriche", lat:48.232, lng:16.29, radius:5000,
@@ -497,6 +497,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Marche du sel de Gandhi à Dandi, côte occidentale du sous-continent"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La marche du sel, Dandi, Inde"}
   ]},
+  //Mettre une note de confiance du lieu de l'événement, car certains sont approximatifs, et donc il faut etre plus indulgente sur la note final.
   {name:"Bataille des Champs Catalauniques — Marne, France", lat:48.95, lng:4.36, radius:9000,
    desc:"En 451, une coalition romano-wisigothique arrêta Attila et ses Huns, l'une des dernières grandes victoires de Rome.",
    photo:"events/champs_catalauniques.jpg",
@@ -519,7 +520,7 @@ const EVENTS = [
    desc:"En 1757, la victoire de Clive assura la domination de la Compagnie anglaise des Indes sur le Bengale, prélude à l'empire britannique en Inde.",
    photo:"events/plassey.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1757 acquise plus par la corruption d'un général adverse que par les armes, porte d'entrée d'une compagnie marchande vers un sous-continent"},
+    {bc:"#030303",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1757 acquise plus par la corruption d'un général adverse que par les armes, porte d'entrée d'une compagnie marchande vers un sous-continent"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du milieu du XVIIIe siècle dans l'est d'un pays d'Asie du Sud, delta fluvial"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de la Compagnie des Indes, Bengale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Plassey, Inde"}
@@ -530,7 +531,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite de 1954 d'un corps expéditaire piégé dans une cuvette, artillerie adverse hissée à dos d'homme sur les crêtes, fin d'une colonie asiatique"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille des années 1950 dans une vallée du nord-ouest d'un pays d'Asie du Sud-Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite d'un corps expéditionnaire dans une cuvette du Nord-Ouest"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite d'un corps expéditionnaire français dans une cuvette du sud-est asiatique"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Diên Biên Phu, Vietnam"}
   ]},
   {name:"Bataille de Platées — Béotie, Grèce", lat:38.223, lng:23.262, radius:4000,
@@ -557,7 +558,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 333 av. J.-C. d'un jeune roi macédonien qui força un roi des rois à fuir en abandonnant sa famille"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille antique sur une côte du sud d'un pays du Proche-Orient, IVe siècle av. J.-C."},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire d'Alexandre sur Darius, golfe d'Issos"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire d'Alexandre sur Darius, 333 av. J.-C., golfe d'Issos"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Issos, Turquie"}
   ]},
   {name:"Bataille de Pharsale — Thessalie, Grèce", lat:39.29, lng:22.38, radius:5000,
@@ -565,7 +566,7 @@ const EVENTS = [
    photo:"events/pharsale.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Affrontement de 48 av. J.-C. entre deux généraux romains rivaux, victoire de celui qui avait franchi un fleuve interdit deux ans plus tôt"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille antique dans une plaine du centre d'une péninsule du sud-est de l'Europe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille antique dans une plaine du centre d'une péninsule du sud-est de l'Europe en 48 av. J.-C"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de César sur Pompée, Thessalie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Pharsale, Grèce"}
   ]},
@@ -574,7 +575,7 @@ const EVENTS = [
    photo:"events/rubicon.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Franchissement d'un petit fleuve en armes en 49 av. J.-C., geste de rupture résumé par une formule sur le sort qui est jeté"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement antique sur un cours d'eau du nord d'une péninsule méditerranéenne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement sur un cours d'eau du nord d'une péninsule méditerranéenne déclanchant une guerre civile antique en 49 av. J.-C."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Passage du Rubicon par César, Émilie-Romagne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le passage du Rubicon, Italie"}
   ]},
@@ -582,17 +583,17 @@ const EVENTS = [
    desc:"Aux ides de mars 44 av. J.-C., César fut poignardé par des sénateurs au pied de la Curie de Pompée.",
    photo:"events/cesar_44.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Meurtre d'un dictateur aux ides de mars 44 av. J.-C. par un groupe de sénateurs, l'un d'eux étant son propre protégé"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Assassinat politique antique dans une grande ville du centre d'une péninsule méditerranéenne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Assassinat de César, portique de Pompée"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Assassinat politique dans une grande ville du centre d'une péninsule méditerranéenne par un groupe de sénateurs"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Meurtre d'un dictateur aux ides de mars 44 av. J.-C. par un groupe de sénateurs, l'un d'eux étant son propre protégé"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Assassinat d'un dictateur en 44 av. J.-C., portique de Pompée"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'assassinat de Jules César, Rome, Italie"}
   ]},
   {name:"Bataille de Teutobourg — Basse-Saxe, Allemagne", lat:52.19, lng:8.13, radius:6000,
    desc:"En l'an 9, des tribus germaniques anéantirent trois légions romaines, arrêtant l'expansion au-delà du Rhin.",
    photo:"events/teutobourg.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Embuscade forestière de l'an 9 où trois légions disparurent, arrachant à un empereur le cri « rends-moi mes légions »"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Désastre militaire antique dans une forêt du nord-ouest d'un pays d'Europe centrale"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Désastre militaire antique dans une forêt du nord-ouest d'un pays d'Europe centrale »"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Embuscade forestière de l'an 9 où trois légions disparurent, arrachant à un empereur le cri « rends-moi mes légions »"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Anéantissement des légions de Varus, Germanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Teutobourg, Allemagne"}
   ]},
