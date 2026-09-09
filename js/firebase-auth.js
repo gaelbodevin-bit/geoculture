@@ -19,7 +19,7 @@ var fbApp = initializeApp(firebaseConfig);
 var fbAuth = getAuth(fbApp);
 var fbDb = getFirestore(fbApp);
 var fbFunctions = getFunctions(fbApp, 'us-central1');
-var currentUserPremium = false;
+var currentUserPremium = false; window.isPremium = false; if(window.gcUpdateAds) window.gcUpdateAds();
 var fbProvider = new GoogleAuthProvider();
 // Force l'écran de choix du compte Google à chaque connexion
 fbProvider.setCustomParameters({ prompt: 'select_account' });
@@ -36,7 +36,7 @@ onAuthStateChanged(fbAuth, function(user) {
   if(user) {
     getDoc(doc(fbDb, 'users', user.uid)).then(function(snap) {
       currentUserPremium = snap.exists() && snap.data().premium === true;
-      window.isPremium = currentUserPremium;
+      window.isPremium = currentUserPremium; if(window.gcUpdateAds) window.gcUpdateAds();
       updateAuthUI(user);
       // Rafraîchir le menu si visible (sans boucle)
       var ov = document.getElementById('overlay');
@@ -44,7 +44,7 @@ onAuthStateChanged(fbAuth, function(user) {
         if(typeof showMenu === 'function') showMenu();
       }
     }).catch(function() {
-      currentUserPremium = false;
+      currentUserPremium = false; window.isPremium = false; if(window.gcUpdateAds) window.gcUpdateAds();
       window.isPremium = false;
       updateAuthUI(user);
       var ov = document.getElementById('overlay');
@@ -53,7 +53,7 @@ onAuthStateChanged(fbAuth, function(user) {
       }
     });
   } else {
-    currentUserPremium = false;
+    currentUserPremium = false; window.isPremium = false; if(window.gcUpdateAds) window.gcUpdateAds();
     window.isPremium = false;
     updateAuthUI(user);
     var ov = document.getElementById('overlay');
@@ -70,7 +70,7 @@ onAuthStateChanged(fbAuth, function(user) {
       if(user) {
         getDoc(doc(fbDb, 'users', user.uid)).then(function(snap) {
           currentUserPremium = snap.exists() && snap.data().premium === true;
-          window.isPremium = currentUserPremium;
+          window.isPremium = currentUserPremium; if(window.gcUpdateAds) window.gcUpdateAds();
         });
       }
     }, 800);
@@ -521,7 +521,7 @@ function showPremiumOverlay(featureName) {
   h.push('</div>');
   h.push('<button onclick="window.initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">S&#8217;abonner &#8226; paiement mensuel &#8594;</button>');
   h.push('<div style="font-size:11px;color:#4b5563;margin-top:8px;text-align:center">Paiement s&#233;curis&#233; via Stripe</div>');
-  h.push('<div style="font-size:10.5px;color:#4b5563;margin-top:6px;text-align:center;max-width:340px;line-height:1.5">Abonnement mensuel &#224; renouvellement tacite, r&#233;siliable &#224; tout moment depuis ton compte. En souscrivant, tu demandes l&#8217;acc&#232;s imm&#233;diat et renonces &#224; ton droit de r&#233;tractation de 14 jours.</div>');
+  h.push('<div style="font-size:10.5px;color:#4b5563;margin-top:6px;text-align:center;max-width:340px;line-height:1.5">Abonnement mensuel &#224; renouvellement tacite, r&#233;siliable &#224; tout moment depuis ton compte. En souscrivant, tu demandes l&#8217;acc&#232;s imm&#233;diat et renonces &#224; ton c�oit de r&#233;tractation de 14 jours.</div>');
   h.push('<div style="width:100%;max-width:340px;margin-top:14px;border-top:1px solid #1e2d45;padding-top:14px">');
   h.push('<div style="font-size:11px;color:#6b7280;text-align:center;margin-bottom:8px">Vous avez un code testeur ?</div>');
   h.push('<div style="display:flex;gap:6px">');
@@ -569,7 +569,7 @@ function redeemCode() {
     return res.json().then(function(d){ return { status: res.status, d: d }; });
   }).then(function(r){
     if (r.status === 200 && r.d && r.d.ok) {
-      currentUserPremium = true;
+      currentUserPremium = true; window.isPremium = true; if(window.gcUpdateAds) window.gcUpdateAds();
       window.isPremium = true;
       msg.style.color='#22c55e'; msg.textContent='\u2713 Premium activ\u00e9 ! Profitez bien.';
       setTimeout(function() { if(typeof showMenu==='function') showMenu(); }, 1200);
@@ -614,7 +614,6 @@ function confirmDeleteAccount() {
   var ov=document.getElementById('overlay');
   var h=[];
   h.push('<div class="otitle" style="font-size:24px;color:#ef4444">&#9888; Supprimer le compte</div>');
-  if((typeof window.isPremiumUser==='function'?window.isPremiumUser():window.isPremium===true)){ h.push('<button onclick="window.openBillingPortal()" style="margin:4px 0 16px;padding:10px 20px;border-radius:8px;border:1px solid #2d3f5e;background:#0d1120;color:#fbbf24;font-size:13px;font-weight:600;cursor:pointer">&#9881;&#65039; G&#233;rer / r&#233;silier mon abonnement</button>'); }
   h.push('<div style="font-size:14px;color:#94a3b8;margin:12px 0;text-align:center;max-width:380px;line-height:1.6">Cette action est <strong style="color:#ef4444">irr&#233;versible</strong>.<br>Toutes vos donn&#233;es seront supprim&#233;es&nbsp;:<br><span style="font-size:12px;color:#6b7280">compte, parties, scores, statut premium</span></div>');
   h.push('<div style="display:flex;gap:10px;margin-top:8px">');
   h.push('<button onclick="doDeleteAccount()" style="padding:10px 20px;border-radius:8px;border:none;background:#ef4444;color:#fff;font-weight:700;font-size:14px;cursor:pointer">Oui, supprimer</button>');
