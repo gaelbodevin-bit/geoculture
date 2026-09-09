@@ -506,21 +506,22 @@ function showPremiumOverlay(featureName) {
   h.push('<div style="font-size:14px;color:#94a3b8;margin-bottom:16px;text-align:center;max-width:340px">D&#233;bloquez <strong style="color:#e2e8f0">'+featureName+'</strong> et tous les modes avanc&#233;s.</div>');
   h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;width:100%;max-width:340px;margin-bottom:16px">');
   h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Inclus dans Premium</div>');
-  [['&#9203;','Acc&#232;s permanent sans abonnement'],['&#128683;','Mode No-Zoom'],['&#11088;','Mode Perfection'],['&#127760;','Mode Multijoueur'],['&#9876;&#65039;','Mode &#201;v&#233;nements historiques'],['&#9989;','Soutien ind&#233;pendant']].forEach(function(f){
+  [['&#9203;','Abonnement mensuel, sans engagement'],['&#128683;','Sans publicit&#233;'],['&#128274;','Mode No-Zoom'],['&#11088;','Mode Perfection'],['&#127760;','Mode Multijoueur'],['&#9876;&#65039;','Mode &#201;v&#233;nements historiques'],['&#9989;','Soutien ind&#233;pendant']].forEach(function(f){
     h.push('<div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#e2e8f0"><span>'+f[0]+'</span><span>'+f[1]+'</span></div>');
   });
   h.push('</div>');
   h.push('<div style="width:100%;max-width:340px;margin-bottom:12px">');
-  h.push('<div style="font-size:12px;color:#6b7280;margin-bottom:8px;text-align:center">Choisissez le montant (min. 1&#8364;)</div>');
+  h.push('<div style="font-size:12px;color:#6b7280;margin-bottom:8px;text-align:center">Ton abonnement mensuel &#8212; montant libre (min. 1&#8364;/mois)</div>');
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:8px">');
   [2,5,10,20].forEach(function(amt){
     h.push('<button data-amt="'+amt+'" onclick="window.selectAmount(parseInt(this.dataset.amt))" id="amt-btn-'+amt+'" style="padding:8px;border-radius:7px;border:2px solid #1e2d45;background:#0d1120;color:#e2e8f0;font-size:13px;font-weight:600;cursor:pointer">'+amt+'&#8364;</button>');
   });
   h.push('</div>');
-  h.push('<input id="custom-amount" type="number" min="1" step="1" placeholder="Montant libre (&#8364;)" style="width:100%;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 12px;color:#e2e8f0;font-size:13px">');
+  h.push('<input id="custom-amount" type="number" min="1" step="1" placeholder="Montant/mois (&#8364;)" style="width:100%;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 12px;color:#e2e8f0;font-size:13px">');
   h.push('</div>');
-  h.push('<button onclick="window.initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">Soutenir et d&#233;bloquer &#8594;</button>');
+  h.push('<button onclick="window.initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">S&#8217;abonner &#8226; paiement mensuel &#8594;</button>');
   h.push('<div style="font-size:11px;color:#4b5563;margin-top:8px;text-align:center">Paiement s&#233;curis&#233; via Stripe</div>');
+  h.push('<div style="font-size:10.5px;color:#4b5563;margin-top:6px;text-align:center;max-width:340px;line-height:1.5">Abonnement mensuel &#224; renouvellement tacite, r&#233;siliable &#224; tout moment depuis ton compte. En souscrivant, tu demandes l&#8217;acc&#232;s imm&#233;diat et renonces &#224; ton droit de r&#233;tractation de 14 jours.</div>');
   h.push('<div style="width:100%;max-width:340px;margin-top:14px;border-top:1px solid #1e2d45;padding-top:14px">');
   h.push('<div style="font-size:11px;color:#6b7280;text-align:center;margin-bottom:8px">Vous avez un code testeur ?</div>');
   h.push('<div style="display:flex;gap:6px">');
@@ -601,7 +602,7 @@ function initiatePremiumPayment() {
   }).catch(function(err){
     
     if(typeof showToast==='function') showToast('Erreur: '+err.message);
-    if(btn){ btn.textContent='Soutenir et débloquer →'; btn.disabled=false; }
+    if(btn){ btn.textContent='S\'abonner • paiement mensuel →'; btn.disabled=false; }
   });
 }
 
@@ -613,6 +614,7 @@ function confirmDeleteAccount() {
   var ov=document.getElementById('overlay');
   var h=[];
   h.push('<div class="otitle" style="font-size:24px;color:#ef4444">&#9888; Supprimer le compte</div>');
+  if((typeof window.isPremiumUser==='function'?window.isPremiumUser():window.isPremium===true)){ h.push('<button onclick="window.openBillingPortal()" style="margin:4px 0 16px;padding:10px 20px;border-radius:8px;border:1px solid #2d3f5e;background:#0d1120;color:#fbbf24;font-size:13px;font-weight:600;cursor:pointer">&#9881;&#65039; G&#233;rer / r&#233;silier mon abonnement</button>'); }
   h.push('<div style="font-size:14px;color:#94a3b8;margin:12px 0;text-align:center;max-width:380px;line-height:1.6">Cette action est <strong style="color:#ef4444">irr&#233;versible</strong>.<br>Toutes vos donn&#233;es seront supprim&#233;es&nbsp;:<br><span style="font-size:12px;color:#6b7280">compte, parties, scores, statut premium</span></div>');
   h.push('<div style="display:flex;gap:10px;margin-top:8px">');
   h.push('<button onclick="doDeleteAccount()" style="padding:10px 20px;border-radius:8px;border:none;background:#ef4444;color:#fff;font-weight:700;font-size:14px;cursor:pointer">Oui, supprimer</button>');
@@ -637,6 +639,20 @@ function doDeleteAccount() {
 }
 
 
+function openBillingPortal() {
+  if(!currentUser){ if(typeof fbSignIn==='function') fbSignIn(); return; }
+  if(typeof showToast==='function') showToast('Ouverture du portail\u2026');
+  currentUser.getIdToken(true).then(function(token){
+    return fetch('https://us-central1-geo-culture-73453.cloudfunctions.net/createPortalSession',{
+      method:'POST', headers:{'Content-Type':'application/json','Authorization':'Bearer '+token}, body:'{}'
+    });
+  }).then(function(res){ return res.json(); }).then(function(result){
+    var url=result&&result.result&&result.result.url;
+    if(url){ window.location.href=url; }
+    else{ if(typeof showToast==='function') showToast((result&&result.error)||'Aucun abonnement trouv\u00e9.'); }
+  }).catch(function(e){ if(typeof showToast==='function') showToast('Erreur portail.'); });
+}
+window.openBillingPortal=openBillingPortal;
 window.showDailyLB=showDailyLB;
 window.showLeaderboard=showLeaderboard;window.saveDailyScore=saveDailyScore;
 window.isPremiumUser=isPremiumUser;window.showPremiumOverlay=showPremiumOverlay;
