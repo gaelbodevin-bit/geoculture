@@ -614,6 +614,7 @@ function confirmDeleteAccount() {
   var ov=document.getElementById('overlay');
   var h=[];
   h.push('<div class="otitle" style="font-size:24px;color:#ef4444">&#9888; Supprimer le compte</div>');
+  if((typeof window.isPremiumUser==='function'?window.isPremiumUser():window.isPremium===true)){ h.push('<button onclick="window.openBillingPortal()" style="margin:8px 0 4px;padding:10px 20px;border-radius:8px;border:1px solid #2d3f5e;background:#0d1120;color:#fbbf24;font-size:13px;font-weight:600;cursor:pointer">&#9881;&#65039; G&#233;rer / r&#233;silier mon abonnement</button>'); }
   h.push('<div style="font-size:14px;color:#94a3b8;margin:12px 0;text-align:center;max-width:380px;line-height:1.6">Cette action est <strong style="color:#ef4444">irr&#233;versible</strong>.<br>Toutes vos donn&#233;es seront supprim&#233;es&nbsp;:<br><span style="font-size:12px;color:#6b7280">compte, parties, scores, statut premium</span></div>');
   h.push('<div style="display:flex;gap:10px;margin-top:8px">');
   h.push('<button onclick="doDeleteAccount()" style="padding:10px 20px;border-radius:8px;border:none;background:#ef4444;color:#fff;font-weight:700;font-size:14px;cursor:pointer">Oui, supprimer</button>');
