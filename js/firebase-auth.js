@@ -503,6 +503,7 @@ function showPremiumOverlay(featureName) {
     h.push('<button onclick="window.closeHistory()" style="margin-top:10px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px;display:block">&#8592; Retour</button>');
     ov.innerHTML=h.join(''); ov.classList.remove('h'); return;
   }
+  h.push('<button onclick="window.closeHistory()" style="align-self:flex-start;margin:0 0 10px;padding:6px 16px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer;font-size:13px">&#8592; Retour</button>');
   h.push('<div class="otitle" style="font-size:26px;color:#fbbf24">&#11088; Premium</div>');
   h.push('<div style="font-size:14px;color:#94a3b8;margin-bottom:16px;text-align:center;max-width:340px">D&#233;bloquez <strong style="color:#e2e8f0">'+featureName+'</strong> et tous les modes avanc&#233;s.</div>');
   h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;width:100%;max-width:340px;margin-bottom:16px">');
@@ -522,7 +523,7 @@ function showPremiumOverlay(featureName) {
   h.push('</div>');
   h.push('<button onclick="window.initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">S&#8217;abonner &#8226; paiement mensuel &#8594;</button>');
   h.push('<div style="font-size:11px;color:#4b5563;margin-top:8px;text-align:center">Paiement s&#233;curis&#233; via Stripe</div>');
-  h.push('<div style="font-size:10.5px;color:#4b5563;margin-top:6px;text-align:center;max-width:340px;line-height:1.5">Abonnement mensuel &#224; renouvellement tacite, r&#233;siliable &#224; tout moment depuis ton compte. En souscrivant, tu demandes l&#8217;acc&#232;s imm&#233;diat et renonces &#224; ton c�oit de r&#233;tractation de 14 jours.</div>');
+  h.push('<div style="font-size:10.5px;color:#4b5563;margin-top:6px;text-align:center;max-width:340px;line-height:1.5">Abonnement mensuel &#224; renouvellement tacite, r&#233;siliable &#224; tout moment depuis ton compte. En souscrivant, tu demandes l&#8217;acc&#232;s imm&#233;diat et renonces &#224; ton droit de r&#233;tractation de 14 jours.</div>');
   h.push('<div style="width:100%;max-width:340px;margin-top:14px;border-top:1px solid #1e2d45;padding-top:14px">');
   h.push('<div style="font-size:11px;color:#6b7280;text-align:center;margin-bottom:8px">Vous avez un code testeur ?</div>');
   h.push('<div style="display:flex;gap:6px">');
@@ -587,7 +588,8 @@ function initiatePremiumPayment() {
   if(!currentUser){ if(typeof fbSignIn==='function') fbSignIn(); return; }
   var inp=document.getElementById('custom-amount');
   var amount=inp&&inp.value?parseFloat(inp.value):(window._selectedAmount||5);
-  if(isNaN(amount)||amount<1){ if(typeof showToast==='function') showToast('Montant minimum : 1€'); return; }
+  if(isNaN(amount)||amount<1){ if(typeof showToast==='function') showToast('Le montant minimum est de 1€ / mois'); return; }
+  if(amount>500){ if(typeof showToast==='function') showToast('Le montant maximum est de 500€ / mois'); return; }
   var btn=document.getElementById('pay-btn');
   if(btn){ btn.textContent='Redirection...'; btn.disabled=true; }
   currentUser.getIdToken(true).then(function(token){
@@ -599,7 +601,7 @@ function initiatePremiumPayment() {
   }).then(function(res){ return res.json(); }).then(function(result){
     var url=result&&result.result&&result.result.url;
     if(url){ window.location.href=url; }
-    else{ throw new Error('URL manquante'); }
+    else{ throw new Error((result&&result.error)?result.error:'URL manquante'); }
   }).catch(function(err){
     
     if(typeof showToast==='function') showToast('Erreur: '+err.message);
