@@ -521,7 +521,8 @@ function showPremiumOverlay(featureName) {
   h.push('</div>');
   h.push('<input id="custom-amount" type="number" min="1" step="1" placeholder="Montant/mois (&#8364;)" style="width:100%;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 12px;color:#e2e8f0;font-size:13px">');
   h.push('</div>');
-  h.push('<button onclick="window.initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">S&#8217;abonner &#8226; paiement mensuel &#8594;</button>');
+  h.push('<button onclick="window.initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">S&#8217;abonner - paiement mensuel &#8594;</button>');
+  h.push('<div id="pay-msg" style="font-size:12.5px;color:#f87171;margin-top:8px;text-align:center;min-height:16px;font-weight:600"></div>');
   h.push('<div style="font-size:11px;color:#4b5563;margin-top:8px;text-align:center">Paiement s&#233;curis&#233; via Stripe</div>');
   h.push('<div style="font-size:10.5px;color:#4b5563;margin-top:6px;text-align:center;max-width:340px;line-height:1.5">Abonnement mensuel &#224; renouvellement tacite, r&#233;siliable &#224; tout moment depuis ton compte. En souscrivant, tu demandes l&#8217;acc&#232;s imm&#233;diat et renonces &#224; ton droit de r&#233;tractation de 14 jours.</div>');
   h.push('<div style="width:100%;max-width:340px;margin-top:14px;border-top:1px solid #1e2d45;padding-top:14px">');
@@ -588,8 +589,9 @@ function initiatePremiumPayment() {
   if(!currentUser){ if(typeof fbSignIn==='function') fbSignIn(); return; }
   var inp=document.getElementById('custom-amount');
   var amount=inp&&inp.value?parseFloat(inp.value):(window._selectedAmount||5);
-  if(isNaN(amount)||amount<1){ if(typeof showToast==='function') showToast('Le montant minimum est de 1€ / mois'); return; }
-  if(amount>500){ if(typeof showToast==='function') showToast('Le montant maximum est de 500€ / mois'); return; }
+  if(isNaN(amount)||amount<1){ var pm=document.getElementById('pay-msg'); if(pm) pm.textContent='Le montant minimum est de 1€ / mois'; if(typeof showToast==='function') showToast('Le montant minimum est de 1€ / mois'); return; }
+  if(amount>500){ var pm2=document.getElementById('pay-msg'); if(pm2) pm2.textContent='Le montant maximum est de 500€ / mois'; if(typeof showToast==='function') showToast('Le montant maximum est de 500€ / mois'); return; }
+  var pmc=document.getElementById('pay-msg'); if(pmc) pmc.textContent='';
   var btn=document.getElementById('pay-btn');
   if(btn){ btn.textContent='Redirection...'; btn.disabled=true; }
   currentUser.getIdToken(true).then(function(token){
@@ -604,8 +606,8 @@ function initiatePremiumPayment() {
     else{ throw new Error((result&&result.error)?result.error:'URL manquante'); }
   }).catch(function(err){
     
-    if(typeof showToast==='function') showToast('Erreur: '+err.message);
-    if(btn){ btn.textContent='S\'abonner • paiement mensuel →'; btn.disabled=false; }
+    var pme=document.getElementById('pay-msg'); if(pme) pme.textContent=err.message; if(typeof showToast==='function') showToast('Erreur: '+err.message);
+    if(btn){ btn.textContent='S\'abonner - paiement mensuel →'; btn.disabled=false; }
   });
 }
 
