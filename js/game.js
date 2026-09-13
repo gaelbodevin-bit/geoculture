@@ -318,7 +318,7 @@ function showInter(pts,dist,name,eliminated){
     if(round.photo){
       var img = new Image();
       img.onload = function(){
-        el.style.height='auto'; el.innerHTML = '<img src="'+round.photo+'" onclick="openImageZoom(this.src)" style="width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:12px;display:block;background:#111827;cursor:zoom-in" alt="">';
+        el.style.height='auto'; el.innerHTML = '<img src="'+round.photo+'" onclick="openImageZoom(this.src)" style="width:100%;max-width:100%;height:auto;max-height:55vh;max-height:55dvh;object-fit:contain;border-radius:12px;display:block;background:#111827;cursor:zoom-in" alt="">';
       };
       img.onerror = function(){
         tryWiki('fr');
@@ -336,7 +336,7 @@ function showInter(pts,dist,name,eliminated){
           if(!el2) return;
           var wsrc=(d.originalimage&&d.originalimage.source)||(d.thumbnail&&d.thumbnail.source);
           if(wsrc){
-            el2.style.height='auto'; el2.innerHTML='<img src="'+wsrc+'" onclick="openImageZoom(this.src)" style="width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:12px;display:block;background:#111827;cursor:zoom-in" alt="">';
+            el2.style.height='auto'; el2.innerHTML='<img src="'+wsrc+'" onclick="openImageZoom(this.src)" style="width:100%;max-width:100%;height:auto;max-height:55vh;max-height:55dvh;object-fit:contain;border-radius:12px;display:block;background:#111827;cursor:zoom-in" alt="">';
           } else if(lang==='fr'){tryWiki('en');}
           else{el2.style.display='none';}
         }).catch(function(){var el2=document.getElementById(id);if(el2)el2.style.display='none';});
@@ -730,7 +730,8 @@ function enterExploreMode(){
   const r=roundList[curR];
   if(playerPos && playerMarker){
     const bounds=L.latLngBounds([[playerPos.lat,playerPos.lng],[r.lat,r.lng]]);
-    map.fitBounds(bounds,{padding:[80,80]});
+    try{map.invalidateSize();}catch(e){}
+    map.fitBounds(bounds,{padding: window.innerWidth<600?[30,40]:[80,80]});
   } else {
     map.setView([r.lat,r.lng],12);
   }
