@@ -57,7 +57,7 @@ const EVENTS = [
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute du mur de Berlin, Allemagne"}
   ]},
   {name:"Débarquement d'Omaha Beach — Calvados, France", lat:49.37, lng:-0.87, radius:3000,
-   desc:"Le 6 juin 1944, le secteur le plus meurtrier du Débarquement allié coûta près de 3 000 pertes américaines en quelques heures sous le feu des falaises nazi, hum la vilaine roche.",
+   desc:"Le 6 juin 1944, le secteur le plus meurtrier du Débarquement allié coûta près de 3 000 pertes américaines en quelques heures sous le feu des positions allemandes installées sur les falaises.",
    photo:"events/omaha_beach.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Assaut amphibie du 6 juin 1944 sur la plus sanglante des cinq plages, sous le feu croisé de bunkers perchés sur des falaises"},
@@ -370,7 +370,7 @@ const EVENTS = [
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rébellion antique dans le sud d'une péninsule méditerranéenne, dernier siècle av. J.-C."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Révolte de Spartacus, arrière-pays de Campanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La révolte de Spartacus, Italie"}
-  ]},"*/
+  ]}*/
   {name:"Chute de Tenochtitlan — Mexico, Mexique", lat:19.435, lng:-99.14, radius:3000,
    desc:"En 1521, Cortés et ses alliés indigènes prirent la capitale aztèque après un siège dévastateur, effondrant l'empire.",
    photo:"events/tenochtitlan_1521.jpg",

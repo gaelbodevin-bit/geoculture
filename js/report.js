@@ -75,7 +75,8 @@
     try {
       if (typeof window.getCurrentUser === 'function') {
         var u = window.getCurrentUser();
-        lines.push('Connecté : ' + (u ? ('oui (' + (u.uid || '') + ')') : 'non'));
+        var displayName = u && String(u.displayName || '').replace(/[\r\n]+/g, ' ').trim();
+        lines.push('Utilisateur : ' + (displayName || 'Monsieur/Madame'));
       }
     } catch (e) {}
     return lines.join('\n');

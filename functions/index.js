@@ -5,6 +5,8 @@ const stripe = require('stripe');
 const nodemailer = require('nodemailer');
 const { defineSecret } = require('firebase-functions/params');
 const SMTP_PASSWORD = defineSecret('SMTP_PASSWORD');
+const STRIPE_SECRET_KEY = defineSecret('STRIPE_SECRET_KEY');
+const STRIPE_WEBHOOK_SECRET = defineSecret('STRIPE_WEBHOOK_SECRET');
 
 admin.initializeApp();
 const db = admin.firestore();
@@ -27,11 +29,11 @@ function setCORS(res, req) {
 }
 
 // ── Webhook Stripe ──────────────────────────────────────────────────────────
-exports.stripeWebhook = onRequest(async (req, res) => {
+exports.stripeWebhook = onRequest({ secrets: [STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET] }, async (req, res) => {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
-  const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
-  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  const stripeClient = stripe(STRIPE_SECRET_KEY.value());
+  const webhookSecret = STRIPE_WEBHOOK_SECRET.value();
   let event;
   try {
     event = stripeClient.webhooks.constructEvent(req.rawBody, req.headers['stripe-signature'], webhookSecret);
@@ -91,7 +93,7 @@ exports.stripeWebhook = onRequest(async (req, res) => {
 });
 
 // ── Créer session Checkout via fetch + Bearer token ─────────────────────────
-exports.createCheckoutSession = onRequest(async (req, res) => {
+exports.createCheckoutSession = onRequest({ secrets: [STRIPE_SECRET_KEY] }, async (req, res) => {
   setCORS(res, req);
   if (req.method === 'OPTIONS') return res.status(204).send('');
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
@@ -121,7 +123,7 @@ exports.createCheckoutSession = onRequest(async (req, res) => {
   }
   const amount = Math.round(eur * 100);
 
-  const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
+  const stripeClient = stripe(STRIPE_SECRET_KEY.value());
   // Prix libre : le montant choisi par l'utilisateur devient le tarif annuel.
   const priceData = { currency: 'eur', unit_amount: amount, recurring: { interval: 'month' } };
   const productId = process.env.STRIPE_PRODUCT_ID;
@@ -148,7 +150,7 @@ exports.createCheckoutSession = onRequest(async (req, res) => {
 });
 
 // ── Portail client Stripe (gérer / résilier l'abonnement) ───────────────────
-exports.createPortalSession = onRequest(async (req, res) => {
+exports.createPortalSession = onRequest({ secrets: [STRIPE_SECRET_KEY] }, async (req, res) => {
   setCORS(res, req);
   if (req.method === 'OPTIONS') return res.status(204).send('');
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
@@ -163,7 +165,7 @@ exports.createPortalSession = onRequest(async (req, res) => {
   const customerId = snap.exists ? snap.data().stripeCustomerId : null;
   if (!customerId) return res.status(400).json({ error: 'Aucun abonnement trouvé pour ce compte.' });
 
-  const stripeClient = stripe(process.env.STRIPE_SECRET_KEY);
+  const stripeClient = stripe(STRIPE_SECRET_KEY.value());
   try {
     const portal = await stripeClient.billingPortal.sessions.create({
       customer: customerId,
@@ -256,7 +258,11 @@ exports.reportProblem = onRequest({ secrets: [SMTP_PASSWORD] }, async (req, res)
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
   const body = (req.body && req.body.data) ? req.body.data : (req.body || {});
-  const clean = (v, max) => String(v == null ? '' : v).trim().slice(0, max);
+  const clean = (v, max) => String(v == null ? '' : v)
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '')
+    .trim()
+    .slice(0, max);
   const category = clean(body.category, 60);
   const message = clean(body.message, 4000);
   const email = clean(body.email, 200);

@@ -318,7 +318,7 @@ function showInter(pts,dist,name,eliminated){
     if(round.photo){
       var img = new Image();
       img.onload = function(){
-        el.style.height='auto'; el.innerHTML = '<img src="'+round.photo+'" style="width:100%;height:auto;max-height:55vh;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
+        el.style.height='auto'; el.innerHTML = '<img src="'+round.photo+'" style="width:auto;max-width:100%;height:auto;max-height:55vh;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
       };
       img.onerror = function(){
         tryWiki('fr');
@@ -336,7 +336,7 @@ function showInter(pts,dist,name,eliminated){
           if(!el2) return;
           var wsrc=(d.originalimage&&d.originalimage.source)||(d.thumbnail&&d.thumbnail.source);
           if(wsrc){
-            el2.style.height='auto'; el2.innerHTML='<img src="'+wsrc+'" style="width:100%;height:auto;max-height:55vh;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
+            el2.style.height='auto'; el2.innerHTML='<img src="'+wsrc+'" style="width:auto;max-width:100%;height:auto;max-height:55vh;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
           } else if(lang==='fr'){tryWiki('en');}
           else{el2.style.display='none';}
         }).catch(function(){var el2=document.getElementById(id);if(el2)el2.style.display='none';});
