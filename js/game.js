@@ -282,7 +282,7 @@ function showInter(pts,dist,name,eliminated){
   else if(curR+1<roundList.length){_nextBtn='<button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante</button>';}
   else{_nextBtn='<button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';}
   ov.innerHTML=`
-    <div id="${imgId}" style="width:90%;max-width:450px;min-height:120px;background:#111827;border-radius:12px;overflow:visible;position:relative;flex-shrink:0;margin-bottom:clamp(8px,2vh,18px)"></div>
+    <div id="${imgId}" class="gc-result-image" style="width:100%;max-width:500px;min-height:120px;background:#111827;border-radius:12px;overflow:visible;position:relative;flex-shrink:0;margin-bottom:clamp(8px,2vh,18px)"></div>
     <div class="otitle" style="font-size:38px">+${pts.toLocaleString('fr-FR')}</div>
     <div class="osub" style="color:#e2e8f0;font-size:13px;line-height:1.65;margin-top:-2px;max-width:420px;text-align:center;font-style:normal;background:rgba(17,24,39,0.6);border-radius:8px;padding:8px 14px">${placeDesc}</div>
     <div style="display:flex;align-items:center;gap:10px;width:100%;max-width:320px">
@@ -318,7 +318,7 @@ function showInter(pts,dist,name,eliminated){
     if(round.photo){
       var img = new Image();
       img.onload = function(){
-        el.style.height='auto'; el.innerHTML = '<img src="'+round.photo+'" style="width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
+        el.style.height='auto'; el.innerHTML = '<img src="'+round.photo+'" onclick="openImageZoom(this.src)" style="width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:12px;display:block;background:#111827;cursor:zoom-in" alt="">';
       };
       img.onerror = function(){
         tryWiki('fr');
@@ -336,7 +336,7 @@ function showInter(pts,dist,name,eliminated){
           if(!el2) return;
           var wsrc=(d.originalimage&&d.originalimage.source)||(d.thumbnail&&d.thumbnail.source);
           if(wsrc){
-            el2.style.height='auto'; el2.innerHTML='<img src="'+wsrc+'" style="width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
+            el2.style.height='auto'; el2.innerHTML='<img src="'+wsrc+'" onclick="openImageZoom(this.src)" style="width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:12px;display:block;background:#111827;cursor:zoom-in" alt="">';
           } else if(lang==='fr'){tryWiki('en');}
           else{el2.style.display='none';}
         }).catch(function(){var el2=document.getElementById(id);if(el2)el2.style.display='none';});
@@ -345,6 +345,40 @@ function showInter(pts,dist,name,eliminated){
   })(imgId, roundList[curR]);
 
 }
+
+function openImageZoom(src){
+  var existing=document.getElementById('gc-image-zoom');
+  if(existing) existing.remove();
+  var modal=document.createElement('div');
+  modal.id='gc-image-zoom';
+  modal.style.cssText='position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;overflow:auto;padding:18px;cursor:zoom-in;touch-action:pan-x pan-y;';
+  var image=document.createElement('img');
+  image.src=src;
+  image.alt='';
+  image.style.cssText='display:block;width:auto;max-width:100%;max-height:100%;height:auto;object-fit:contain;cursor:zoom-in;transition:width .2s ease;';
+  var close=document.createElement('button');
+  close.type='button';
+  close.setAttribute('aria-label','Fermer');
+  close.textContent='×';
+  close.style.cssText='position:fixed;top:12px;right:16px;z-index:1;width:40px;height:40px;border:0;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;font-size:30px;line-height:1;cursor:pointer;';
+  function closeZoom(){modal.remove();}
+  function toggleZoom(e){
+    if(e) e.stopPropagation();
+    var zoomed=image.dataset.zoomed==='1';
+    image.dataset.zoomed=zoomed?'0':'1';
+    image.style.width=zoomed?'auto':'200%';
+    image.style.maxWidth=zoomed?'100%':'none';
+    image.style.maxHeight=zoomed?'100%':'none';
+    image.style.cursor=zoomed?'zoom-in':'zoom-out';
+  }
+  close.addEventListener('click',closeZoom);
+  modal.addEventListener('click',function(e){if(e.target===modal) closeZoom();});
+  image.addEventListener('click',toggleZoom);
+  modal.appendChild(image);
+  modal.appendChild(close);
+  document.body.appendChild(modal);
+}
+window.openImageZoom=openImageZoom;
 
 // ════════════════════════════════════════════════════════════════
 // PARTAGE DE SCORE (modes solo + défi du jour — pas multi ni chill)

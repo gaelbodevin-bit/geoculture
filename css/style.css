@@ -228,6 +228,9 @@ body.menu-mode #app-wrapper{background:transparent}
   .gc-mtitle{ font-size:32px !important; margin-bottom:14px !important; }
   .gc-mode-grid{ gap:8px !important; }
 }
+@media (max-width: 600px){
+  .gc-result-image{ width:85% !important; max-width:420px !important; }
+}
 
 /* ---- Hauteur d'écran fiable sur mobile (barre d'adresse) ---- */
 @media (max-width: 1024px){
