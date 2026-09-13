@@ -282,7 +282,7 @@ function showInter(pts,dist,name,eliminated){
   else if(curR+1<roundList.length){_nextBtn='<button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante</button>';}
   else{_nextBtn='<button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';}
   ov.innerHTML=`
-    <div id="${imgId}" style="width:100%;max-width:500px;min-height:120px;background:#111827;border-radius:12px;overflow:visible;position:relative;flex-shrink:0"></div>
+    <div id="${imgId}" style="width:100%;max-width:500px;min-height:120px;background:#111827;border-radius:12px;overflow:visible;position:relative;flex-shrink:0;margin-bottom:clamp(12px,4vh,32px)"></div>
     <div class="otitle" style="font-size:38px">+${pts.toLocaleString('fr-FR')}</div>
     <div class="osub" style="color:#e2e8f0;font-size:13px;line-height:1.65;margin-top:-2px;max-width:420px;text-align:center;font-style:normal;background:rgba(17,24,39,0.6);border-radius:8px;padding:8px 14px">${placeDesc}</div>
     <div style="display:flex;align-items:center;gap:10px;width:100%;max-width:320px">
@@ -318,7 +318,7 @@ function showInter(pts,dist,name,eliminated){
     if(round.photo){
       var img = new Image();
       img.onload = function(){
-        el.style.height='auto'; el.innerHTML = '<img src="'+round.photo+'" style="width:auto;max-width:100%;height:auto;max-height:55vh;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
+        el.style.height='auto'; el.innerHTML = '<img src="'+round.photo+'" style="width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
       };
       img.onerror = function(){
         tryWiki('fr');
@@ -336,7 +336,7 @@ function showInter(pts,dist,name,eliminated){
           if(!el2) return;
           var wsrc=(d.originalimage&&d.originalimage.source)||(d.thumbnail&&d.thumbnail.source);
           if(wsrc){
-            el2.style.height='auto'; el2.innerHTML='<img src="'+wsrc+'" style="width:auto;max-width:100%;height:auto;max-height:55vh;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
+            el2.style.height='auto'; el2.innerHTML='<img src="'+wsrc+'" style="width:100%;max-width:100%;height:auto;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
           } else if(lang==='fr'){tryWiki('en');}
           else{el2.style.display='none';}
         }).catch(function(){var el2=document.getElementById(id);if(el2)el2.style.display='none';});
