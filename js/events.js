@@ -6,7 +6,7 @@ const EVENTS = [
    desc:"Le 21 octobre 1600, la victoire de Tokugawa Ieyasu sur la coalition de l'Ouest dans cette plaine brumeuse mit fin à un siècle de guerre civile et fonda un shogunat qui régna 265 ans.",
    photo:"events/sekigahara.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Affrontement décisif de 1600 entre deux coalitions féodales, scellé par la trahison de Kobayakawa au profit du vainqueur qui fondera une dynastie de 265 ans"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Affrontement décisif de 1600 entre deux coalitions féodales, scellé par la trahison d'un des généraux au profit du vainqueur qui fondera une dynastie de 265 ans"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de l'an 1600 dans une plaine du centre de l'archipel, période Azuchi-Momoyama"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Bataille fondatrice du shogunat Tokugawa, plaine de la région du Chūbu"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Sekigahara, préfecture de Gifu, Japon"}
@@ -57,7 +57,7 @@ const EVENTS = [
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute du mur de Berlin, Allemagne"}
   ]},
   {name:"Débarquement d'Omaha Beach — Calvados, France", lat:49.37, lng:-0.87, radius:3000,
-   desc:"Le 6 juin 1944, le secteur le plus meurtrier du Débarquement allié coûta près de 3 000 pertes américaines en quelques heures sous le feu des falaises.",
+   desc:"Le 6 juin 1944, le secteur le plus meurtrier du Débarquement allié coûta près de 3 000 pertes américaines en quelques heures sous le feu des positions allemandes installées sur les falaises.",
    photo:"events/omaha_beach.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Assaut amphibie du 6 juin 1944 sur la plus sanglante des cinq plages, sous le feu croisé de bunkers perchés sur des falaises"},
@@ -182,14 +182,14 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire anglaise d'Henri V, Pas-de-Calais"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Azincourt, France"}
   ]},
-  {name:"Éruption de Pompéi — Campanie, Italie", lat:40.75, lng:14.486, radius:3000,
+  {name:"Destruction de Pompéi — Campanie, Italie", lat:40.75, lng:14.486, radius:3000,
    desc:"En 79 apr. J.-C., l'éruption du Vésuve ensevelit Pompéi sous les cendres, figeant la vie romaine pour l'éternité.",
    photo:"events/pompei_79.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Catastrophe volcanique de l'an 79 qui pétrifia une cité entière sous les cendres, redécouverte intacte 17 siècles plus tard"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Désastre antique au pied d'un volcan du sud d'une péninsule méditerranéenne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ensevelissement de Pompéi par le Vésuve, Campanie"},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'éruption de Pompéi, Italie"}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ensevelissement d'une grande ville romaine par le Vésuve, Campanie"},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La destruction de Pompéi, Italie"}
   ]},
   {name:"Bataille de Bannockburn — Stirling, Écosse", lat:56.091, lng:-3.927, radius:2000,
    desc:"En 1314, Robert Bruce y vainquit l'armée anglaise d'Édouard II, assurant l'indépendance de l'Écosse.",
@@ -281,7 +281,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Bataille symbole de 1916, département de la Meuse"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Verdun, France"}
   ]},
-  {name:"Ralliement de Jeanne d'Arc — Orléans, France", lat:47.897, lng:1.904, radius:1500,
+  {name:"Levée du siège d'Orléans — Orléans, France", lat:47.897, lng:1.904, radius:1500,
    desc:"En 1429, Jeanne d'Arc leva le siège d'Orléans, tournant de la guerre de Cent Ans en faveur du roi de France.",
    photo:"events/orleans_1429.jpg",
    hints:[
@@ -290,7 +290,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Jeanne d'Arc lève le siège, ville de la Loire moyenne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le siège d'Orléans, France"}
   ]},
-  {name:"Bataille de Tours des Boers — Ladysmith — KwaZulu-Natal, Afrique du Sud", lat:-28.559, lng:29.78, radius:5000,
+  {name:"Le siège de Ladysmith — Ladysmith — KwaZulu-Natal, Afrique du Sud", lat:-28.559, lng:29.78, radius:5000,
    desc:"Lors de la guerre des Boers, le siège de Ladysmith (1899-1900) vit 118 jours d'encerclement britannique par les commandos boers.",
    photo:"events/ladysmith.jpg",
    hints:[
@@ -362,7 +362,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire napoléonienne sur la Prusse, Thuringe"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Iéna, Allemagne"}
   ]},
-  {name:"Révolte de Spartacus — Vallée du Sele — Campanie, Italie", lat:40.48, lng:15.15, radius:8000,
+  /*{name:"Révolte de Spartacus — Vallée du Sele — Campanie, Italie", lat:40.48, lng:15.15, radius:8000,
    desc:"De 73 à 71 av. J.-C., l'esclave gladiateur Spartacus mena la plus grande révolte servile de Rome avant d'être écrasé par Crassus.",
    photo:"events/spartacus.jpg",
    hints:[
@@ -370,7 +370,7 @@ const EVENTS = [
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rébellion antique dans le sud d'une péninsule méditerranéenne, dernier siècle av. J.-C."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Révolte de Spartacus, arrière-pays de Campanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La révolte de Spartacus, Italie"}
-  ]},
+  ]}*/
   {name:"Chute de Tenochtitlan — Mexico, Mexique", lat:19.435, lng:-99.14, radius:3000,
    desc:"En 1521, Cortés et ses alliés indigènes prirent la capitale aztèque après un siège dévastateur, effondrant l'empire.",
    photo:"events/tenochtitlan_1521.jpg",
@@ -389,7 +389,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite jacobite, Highlands près d'Inverness"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Culloden, Écosse"}
   ]},
-  {name:"Incendie de Rome — Rome, Italie", lat:41.892, lng:12.487, radius:4000,
+  {name:"Grand incendie de Rome — Rome, Italie", lat:41.892, lng:12.487, radius:4000,
    desc:"En 64 apr. J.-C., un immense incendie ravagea Rome pendant six jours ; Néron en fit porter la responsabilité aux chrétiens.",
    photo:"events/incendie_rome.jpg",
    hints:[
@@ -476,7 +476,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Prise d'une capitale du Sud le 30 avril 1975, chars enfonçant les grilles d'un palais et hélicoptères évacuant depuis les toits"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fin d'une guerre des années 1970 dans le sud d'un pays d'Asie du Sud-Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chute de Saïgon, delta du Mékong"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fin de la guerre du Vietnam, delta du Mékong"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute de Saïgon, Vietnam"}
   ]},
   {name:"Bataille de Vienne (1683) — Autriche", lat:48.232, lng:16.29, radius:5000,
@@ -497,6 +497,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Marche du sel de Gandhi à Dandi, côte occidentale du sous-continent"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La marche du sel, Dandi, Inde"}
   ]},
+  //Mettre une note de confiance du lieu de l'événement, car certains sont approximatifs, et donc il faut etre plus indulgente sur la note final.
   {name:"Bataille des Champs Catalauniques — Marne, France", lat:48.95, lng:4.36, radius:9000,
    desc:"En 451, une coalition romano-wisigothique arrêta Attila et ses Huns, l'une des dernières grandes victoires de Rome.",
    photo:"events/champs_catalauniques.jpg",
@@ -519,7 +520,7 @@ const EVENTS = [
    desc:"En 1757, la victoire de Clive assura la domination de la Compagnie anglaise des Indes sur le Bengale, prélude à l'empire britannique en Inde.",
    photo:"events/plassey.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1757 acquise plus par la corruption d'un général adverse que par les armes, porte d'entrée d'une compagnie marchande vers un sous-continent"},
+    {bc:"#030303",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1757 acquise plus par la corruption d'un général adverse que par les armes, porte d'entrée d'une compagnie marchande vers un sous-continent"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du milieu du XVIIIe siècle dans l'est d'un pays d'Asie du Sud, delta fluvial"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de la Compagnie des Indes, Bengale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Plassey, Inde"}
@@ -530,7 +531,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite de 1954 d'un corps expéditaire piégé dans une cuvette, artillerie adverse hissée à dos d'homme sur les crêtes, fin d'une colonie asiatique"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille des années 1950 dans une vallée du nord-ouest d'un pays d'Asie du Sud-Est"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite d'un corps expéditionnaire dans une cuvette du Nord-Ouest"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite d'un corps expéditionnaire français dans une cuvette du sud-est asiatique"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Diên Biên Phu, Vietnam"}
   ]},
   {name:"Bataille de Platées — Béotie, Grèce", lat:38.223, lng:23.262, radius:4000,
@@ -557,7 +558,7 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 333 av. J.-C. d'un jeune roi macédonien qui força un roi des rois à fuir en abandonnant sa famille"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille antique sur une côte du sud d'un pays du Proche-Orient, IVe siècle av. J.-C."},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire d'Alexandre sur Darius, golfe d'Issos"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire d'Alexandre sur Darius, 333 av. J.-C., golfe d'Issos"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Issos, Turquie"}
   ]},
   {name:"Bataille de Pharsale — Thessalie, Grèce", lat:39.29, lng:22.38, radius:5000,
@@ -565,7 +566,7 @@ const EVENTS = [
    photo:"events/pharsale.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Affrontement de 48 av. J.-C. entre deux généraux romains rivaux, victoire de celui qui avait franchi un fleuve interdit deux ans plus tôt"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille antique dans une plaine du centre d'une péninsule du sud-est de l'Europe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille antique dans une plaine du centre d'une péninsule du sud-est de l'Europe en 48 av. J.-C"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de César sur Pompée, Thessalie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Pharsale, Grèce"}
   ]},
@@ -574,7 +575,7 @@ const EVENTS = [
    photo:"events/rubicon.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Franchissement d'un petit fleuve en armes en 49 av. J.-C., geste de rupture résumé par une formule sur le sort qui est jeté"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement antique sur un cours d'eau du nord d'une péninsule méditerranéenne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement sur un cours d'eau du nord d'une péninsule méditerranéenne déclanchant une guerre civile antique en 49 av. J.-C."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Passage du Rubicon par César, Émilie-Romagne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le passage du Rubicon, Italie"}
   ]},
@@ -582,17 +583,17 @@ const EVENTS = [
    desc:"Aux ides de mars 44 av. J.-C., César fut poignardé par des sénateurs au pied de la Curie de Pompée.",
    photo:"events/cesar_44.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Meurtre d'un dictateur aux ides de mars 44 av. J.-C. par un groupe de sénateurs, l'un d'eux étant son propre protégé"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Assassinat politique antique dans une grande ville du centre d'une péninsule méditerranéenne"},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Assassinat de César, portique de Pompée"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Assassinat politique dans une grande ville du centre d'une péninsule méditerranéenne par un groupe de sénateurs"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Meurtre d'un dictateur aux ides de mars 44 av. J.-C. par un groupe de sénateurs, l'un d'eux étant son propre protégé"},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Assassinat d'un dictateur en 44 av. J.-C., portique de Pompée"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'assassinat de Jules César, Rome, Italie"}
   ]},
   {name:"Bataille de Teutobourg — Basse-Saxe, Allemagne", lat:52.19, lng:8.13, radius:6000,
    desc:"En l'an 9, des tribus germaniques anéantirent trois légions romaines, arrêtant l'expansion au-delà du Rhin.",
    photo:"events/teutobourg.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Embuscade forestière de l'an 9 où trois légions disparurent, arrachant à un empereur le cri « rends-moi mes légions »"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Désastre militaire antique dans une forêt du nord-ouest d'un pays d'Europe centrale"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Désastre militaire antique dans une forêt du nord-ouest d'un pays d'Europe centrale »"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Embuscade forestière de l'an 9 où trois légions disparurent, arrachant à un empereur le cri « rends-moi mes légions »"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Anéantissement des légions de Varus, Germanie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Teutobourg, Allemagne"}
   ]},
@@ -600,8 +601,8 @@ const EVENTS = [
    desc:"En 52 av. J.-C., César encercla Vercingétorix et acheva la conquête de la Gaule.",
    photo:"events/alesia.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Double encerclement de 52 av. J.-C. où l'assiégeant se retrancha à son tour contre une armée de secours, scellant la soumission d'un chef gaulois"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Siège antique sur un oppidum de l'est de la Gaule, Ier siècle av. J.-C."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Double encerclement du Ier siècle av. J.-C.. où l'assiégeant se retrancha à son tour contre une armée de secours, scellant la soumission d'un chef gaulois"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Siège antique sur un oppidum de l'est de la Gaule, en 52 av. J.-C"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Reddition de Vercingétorix à César, Bourgogne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le siège d'Alésia, France"}
   ]},
@@ -609,17 +610,17 @@ const EVENTS = [
    desc:"En 146 av. J.-C., Rome rasa sa grande rivale, achevant les guerres puniques.",
    photo:"events/carthage_146.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Anéantissement d'une cité maritime rivale en 146 av. J.-C., dont la ruine fut réclamée par un sénateur à la fin de chaque discours"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Destruction antique d'une cité sur une côte d'Afrique du Nord, IIe siècle av. J.-C."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Anéantissement d'une cité maritime rivale au IIe siècle av. J.-C., dont la ruine fut réclamée par un sénateur à la fin de chaque discours"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Destruction antique d'une cité sur une côte d'Afrique du Nord, en 146 av. J.-C."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fin de Carthage face à Rome, banlieue de Tunis"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La destruction de Carthage, Tunisie"}
   ]},
   {name:"Prise de Jérusalem par Titus — Israël", lat:31.778, lng:35.235, radius:3000,
-   desc:"En l'an 70, les Romains prirent la ville et détruisirent le Second Temple.",
+   desc:"En l'an 70, les Romains prirent la ville et détruisirent une seconde fois le Temple de Jérusalem.",
    photo:"events/jerusalem_70.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège de l'an 70 achevé par l'incendie d'un sanctuaire, butin sculpté sur un arc de triomphe encore debout dans la capitale des vainqueurs"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Siège antique d'une ville sainte du Proche-Orient, Ier siècle"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège du Ier siècle achevé par l'incendie d'un sanctuaire, butin sculpté sur un arc de triomphe encore debout dans la capitale des vainqueurs"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Siège antique d'une ville sainte du Proche-Orient, en l'an 70"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Prise de Jérusalem par Titus, Judée"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de Jérusalem de 70, Israël"}
   ]},
@@ -627,13 +628,13 @@ const EVENTS = [
    desc:"En 312, la victoire de Constantin le mena au pouvoir et favorisa l'essor du christianisme.",
    photo:"events/pont_milvius.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 312 remportée après une vision d'un signe dans le ciel, tournant pour une religion jusque-là persécutée"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de l'Antiquité tardive près d'une grande ville du centre d'une péninsule méditerranéenne"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 312 remportée après une vision d'un signe dans le ciel, tournant pour une religion monothéiste."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de l'Antiquité tardive entre deux Césars permettant à l'essor d'une religion jusque-là persécutée"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de Constantin, pont sur le Tibre"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille du pont Milvius, Rome, Italie"}
   ]},
   {name:"Éruption minoenne de Théra — Cyclades, Grèce", lat:36.4, lng:25.4, radius:5000,
-   desc:"Vers 1600 av. J.-C., l'explosion volcanique de Théra bouleversa la civilisation minoenne.",
+   desc:"Vers 1610 av. J.-C., l'explosion volcanique de Théra bouleversa la civilisation minoenne.",
    photo:"events/thera.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cataclysme volcanique de l'âge du bronze qui souffla le centre d'une île en caldeira, peut-être à l'origine d'un mythe d'engloutissement"},
@@ -655,7 +656,7 @@ const EVENTS = [
    photo:"events/qadisiyya.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 636 sur les éléphants d'un empire perse millénaire, ouvrant sa capitale aux conquérants venus du désert"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du VIIe siècle dans le centre d'un pays du Proche-Orient"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du VIIe siècle entre l'empire sassanide et les armées arabes"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite sassanide face aux Arabes, région de l'Euphrate"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Qadisiyya, Irak"}
   ]},
@@ -663,8 +664,8 @@ const EVENTS = [
    desc:"En 622, l'exil de Mahomet vers Yathrib marque le point de départ du calendrier musulman.",
    photo:"events/hegire.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Migration de 622 d'un prédicant persécuté vers une oasis du nord, an zéro d'un nouveau calendrier"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement fondateur du VIIe siècle dans l'ouest d'une péninsule d'Arabie"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Événement fondateur du VIIe siècle, naissance d'un nouveau calendrier"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Migration de 622 d'un prédicant persécuté vers une oasis du nord, an zéro d'un nouveau calendrier"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'Hégire vers Médine, Hedjaz"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hégire, Médine, Arabie saoudite"}
   ]},
@@ -673,7 +674,7 @@ const EVENTS = [
    photo:"events/talas.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Choc de 751 entre deux empires aux confins des steppes, dont les prisonniers auraient transmis le secret d'une invention chinoise à l'Occident"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du VIIIe siècle en Asie centrale, le long d'une rivière"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du VIIIe siècle dans les steppes d'Asie centrale, fin de l'expansion de la dynastie Tang"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Arrêt de l'expansion Tang face aux Abbassides, sud du Kazakhstan"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Talas, Kazakhstan"}
   ]},
@@ -682,7 +683,7 @@ const EVENTS = [
    photo:"events/manzikert.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite de 1071 où un empereur fut fait prisonnier, brèche par laquelle des cavaliers turcs déferlèrent sur une péninsule"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIe siècle dans l'est d'un pays à cheval sur deux continents"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIe siècle dans l'est d'une péninsule du sud-est de l'Europe, ouverture de l'Anatolie aux sultans seldjoukides"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite byzantine face aux Seldjoukides, Anatolie orientale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Manzikert, Turquie"}
   ]},
@@ -691,7 +692,7 @@ const EVENTS = [
    photo:"events/jerusalem_1099.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège de 1099 conclu par un massacre, aboutissement d'une expédition prêchée quatre ans plus tôt par un pape"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du XIe siècle dans une ville sainte du Proche-Orient, première croisade"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement du XIe siècle dans une ville sainte du Proche-Orient, fin de la première croisade"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Prise de Jérusalem par les croisés, Judée"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de Jérusalem de 1099, Israël"}
   ]},
@@ -700,7 +701,7 @@ const EVENTS = [
    photo:"events/hattin.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Piège de 1187 tendu près de deux collines jumelles à une armée assoiffée, victoire qui rendit une ville sainte à son vainqueur kurde"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIIe siècle sur un plateau du Proche-Orient, croisades"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Défaite majeure des croisés en 1187 face aux armées de Saladin dans une plaine du Proche-Orient"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de Saladin sur les croisés, cornes de Hattin"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Hattin, Israël"}
   ]},
@@ -709,7 +710,7 @@ const EVENTS = [
    photo:"events/sac_1204.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Détournement d'une croisade en 1204 qui saccagea une capitale chrétienne au lieu d'un objectif lointain, quatre chevaux de bronze emportés vers une lagune"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pillage médiéval d'une grande ville à cheval sur deux continents"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Pillage de la capitale de l'empire romain d'orient par les croisés, détournement d'une expédition militaire"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Sac de Constantinople par les croisés, Bosphore"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le sac de Constantinople de 1204, Turquie"}
   ]},
@@ -718,7 +719,7 @@ const EVENTS = [
    photo:"events/bagdad_1258.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sac de 1258 d'une capitale du savoir, ses bibliothèques jetées dans un fleuve dit-on noirci d'encre, par des cavaliers venus des steppes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Destruction médiévale d'une grande ville du Proche-Orient, invasions mongoles"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Destruction et massacre d'une grande ville médiévale du Proche-Orient par les armées mongoles"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Prise de Bagdad par Houlagou, Mésopotamie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de Bagdad de 1258, Irak"}
   ]},
@@ -727,25 +728,25 @@ const EVENTS = [
    photo:"events/ain_djalout.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Coup d'arrêt de 1260 porté à une vague de conquête réputée invincible, par une armée d'anciens esclaves-soldats"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIIIe siècle dans une plaine du Proche-Orient"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIIIe siècle dans une plaine du Proche-Orient mettant fin à l'expansion mongole vers l'ouest"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Arrêt des Mongols par les Mamelouks, vallée de Jezréel"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Aïn Djalout, Israël"}
   ]},
-  {name:"Batailles de Hakata (invasions mongoles) — Fukuoka, Japon", lat:33.6, lng:130.4, radius:8000,
+  {name:"Batailles de la baie de Hakata — Fukuoka, Japon", lat:33.6, lng:130.4, radius:8000,
    desc:"En 1274 et 1281, deux typhons providentiels détruisirent les flottes d'invasion mongoles.",
    photo:"events/hakata.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Deux tentatives d'invasion des années 1270-1280 brisées par des typhons providentiels baptisés « vent divin »"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Événement médiéval sur une baie du sud-ouest d'un archipel d'Asie de l'Est"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Echec de deux invasions mongoles du XIIIe siècle sur une île de l'Extrême-Orient notamment à cause de tempêtes causant de lourdes pertes dans la flotte mongole"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Invasions mongoles repoussées, baie de Hakata"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les invasions mongoles du Japon, Fukuoka"}
   ]},
-  {name:"Bataille de Courtrai (Éperons d'or) — Flandre, Belgique", lat:50.83, lng:3.26, radius:2000,
+  {name:"Bataille des Éperons d'or — Flandre, Belgique", lat:50.83, lng:3.26, radius:2000,
    desc:"En 1302, les milices flamandes écrasèrent la chevalerie française.",
    photo:"events/courtrai.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Débâcle de 1302 d'une chevalerie piégée dans les fossés, dont on ramassa des centaines d'éperons dorés en trophée"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIVe siècle dans le nord d'un pays d'Europe de l'Ouest"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Défaite de la chevalerie française face à des milices urbaines dans une plaine du nord-ouest de l'Europe en 1302"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire des milices flamandes, ville de Courtrai"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille des Éperons d'or, Belgique"}
   ]},
@@ -754,7 +755,7 @@ const EVENTS = [
    photo:"events/crecy.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1346 où l'arc long et de premières bouches à feu fauchèrent une chevalerie nombreuse"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIVe siècle dans le nord d'un royaume d'Europe de l'Ouest, guerre de Cent Ans"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille opposant les Anglais et les Français marquant le début de la guerre de Cent Ans"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire anglaise d'Édouard III, région de la Somme"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Crécy, France"}
   ]},
@@ -763,7 +764,7 @@ const EVENTS = [
    photo:"events/kulikovo.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1380 d'un prince sur des cavaliers tributaires, premier grand craquement d'un joug venu des steppes"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XIVe siècle dans une plaine de l'est de l'Europe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Victoire des armées russes conduit par le grand-prince de Moscou Dimitri Ier Ivanovitch sur la Horde d'or mongole"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire sur la Horde d'or, champ de Koulikovo"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Koulikovo, Russie"}
   ]},
@@ -772,7 +773,7 @@ const EVENTS = [
    photo:"events/kosovo_1389.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Choc de 1389 où périrent les deux souverains, gravé depuis dans la mémoire nationale d'un peuple des Balkans"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille de la fin du XIVe siècle dans une plaine du sud-est de l'Europe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille en 1389 qui oppose une armée ottomane à une coalition de princes chrétiens des Balkans qui, sans perdre la bataille, s'en trouvent brisés."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Serbes contre Ottomans, « champ des Merles »"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Kosovo, Kosovo"}
   ]},
@@ -781,7 +782,7 @@ const EVENTS = [
    photo:"events/grunwald.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Écrasement en 1410 d'un ordre de chevaliers religieux par une coalition slavo-balte, l'une des plus grandes batailles du Moyen Âge"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début du XVe siècle dans le nord-est d'un pays d'Europe centrale"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille opposant les chevaliers Teutoniques à une union de royaumes d'Europe centrale et orientale, en 1410"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite des chevaliers Teutoniques, Mazurie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Grunwald, Pologne"}
   ]},
@@ -789,8 +790,8 @@ const EVENTS = [
    desc:"En 1453, l'artillerie française mit fin à la guerre de Cent Ans.",
    photo:"events/castillon.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dernière grande bataille de 1453 d'un conflit de plus d'un siècle, où le canon eut raison d'une charge anglaise"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du milieu du XVe siècle dans le sud-ouest d'un royaume d'Europe de l'Ouest"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dernière grande bataille de 1453 d'un conflit de plus d'un siècle, où les canons eut raison d'une charge anglaise"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille qui mit fin à la guerre de Cent Ans."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fin de la guerre de Cent Ans, vallée de la Dordogne"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Castillon, France"}
   ]},
@@ -799,7 +800,7 @@ const EVENTS = [
    photo:"events/marignan.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire d'un jeune roi en 1515, « bataille de géants » de deux jours qui brisa la réputation d'une redoutable infanterie de montagne"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début du XVIe siècle dans le nord d'une péninsule méditerranéenne"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille entre l'armée française commandée par un jeune roi et des mercenaires suisses dans le nord d'une péninsule méditerranéenne"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Victoire de François Ier sur les Suisses, Lombardie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Marignan, Italie"}
   ]},
@@ -807,8 +808,8 @@ const EVENTS = [
    desc:"En 1525, la capture de François Ier consacra la puissance de Charles Quint.",
    photo:"events/pavie.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Désastre de 1525 où un roi fut fait prisonnier, écrivant que tout était perdu fors l'honneur"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du XVIe siècle dans le nord d'une péninsule méditerranéenne, guerres de la Renaissance"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Désastre militaire de 1525 où un roi fut fait prisonnier, écrivant à sa mère « Tout est perdu, fors l'honneur. »"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Défaite des armées francaises face à celles d'un empereur du Saint-Empire romain germanique marque la défaite des rois de France dans leur tentative de domination du Nord de l’Italie."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Capture de François Ier par Charles Quint, Lombardie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Pavie, Italie"}
   ]},
@@ -817,7 +818,7 @@ const EVENTS = [
    photo:"events/saint_barthelemy.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tuerie religieuse d'un matin d'août 1572, déclenchée au son d'un tocsin, qui ensanglanta une capitale et gagna les provinces"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Massacre du XVIe siècle dans une grande capitale d'Europe de l'Ouest, guerres de Religion"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Tuerie de massse de 1572 dans la capitale d'un royaume catholique, événement majeur des guerres de religion"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Massacre des protestants, cœur de la capitale"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le massacre de la Saint-Barthélemy, Paris, France"}
   ]},
@@ -826,7 +827,7 @@ const EVENTS = [
    photo:"events/montagne_blanche.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite de 1620 sur une colline aux abords d'une capitale, début d'une longue nuit pour une noblesse protestante décapitée peu après"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille du début du XVIIe siècle près d'une capitale d'Europe centrale, guerre de Trente Ans"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Bataille opposant les insurgés protestants et les armées catholiques des Habsbourg en 1620 marque la fin de la première période (période Palatine) de la guerre de Trente Ans"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Défaite des insurgés protestants face aux Habsbourg, colline à l'ouest de Prague"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de la Montagne Blanche, Tchéquie"}
   ]},
@@ -834,8 +835,8 @@ const EVENTS = [
    desc:"En 1648, ces traités mirent fin à la guerre de Trente Ans et fondèrent l'ordre des États modernes.",
    photo:"events/westphalie.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Paix de 1648 signée dans deux villes après trente ans de guerre, acte fondateur d'un ordre de souverainetés en Europe"},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Traité du milieu du XVIIe siècle dans l'ouest d'un pays d'Europe centrale"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Première signature de la Paix de 1648 signée dans deux villes après trente ans de guerre, acte fondateur d'un ordre de souverainetés en Europe"},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Signature du premier traité mettant fin à la guerre de Trente Ans opposant les puissances catholiques et protestantes en Europe"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fin de la guerre de Trente Ans, Westphalie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les traités de Westphalie, Allemagne"}
   ]},

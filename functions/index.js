@@ -1,8 +1,12 @@
 const { onRequest, onCall, HttpsError } = require('firebase-functions/v2/https');
 const { setGlobalOptions } = require('firebase-functions/v2');
-const { defineSecret } = require('firebase-functions/params');
 const admin = require('firebase-admin');
 const stripe = require('stripe');
+const nodemailer = require('nodemailer');
+const { defineSecret } = require('firebase-functions/params');
+const SMTP_PASSWORD = defineSecret('SMTP_PASSWORD');
+const STRIPE_SECRET_KEY = defineSecret('STRIPE_SECRET_KEY');
+const STRIPE_WEBHOOK_SECRET = defineSecret('STRIPE_WEBHOOK_SECRET');
 
 admin.initializeApp();
 const db = admin.firestore();
@@ -10,12 +14,10 @@ const db = admin.firestore();
 // Limite le nombre d'instances simultanées : borne le coût maximal en cas de spam/DoS
 setGlobalOptions({ region: 'us-central1', maxInstances: 10 });
 
-const stripeSecretKey = defineSecret('STRIPE_SECRET_KEY');
-const stripeWebhookSecret = defineSecret('STRIPE_WEBHOOK_SECRET');
-
 // CORS : liste blanche stricte (égalité exacte, pas de startsWith)
-const ALLOWED_ORIGINS = ['https://www.geo-culture.io', 'https://geo-culture.io'];
+const ALLOWED_ORIGINS = ['https://www.geo-culture.io', 'https://geo-culture.io', 'https://gaelbodevin-bit.github.io'];
 const MAX_AMOUNT_EUR = 500; // plafond anti-fraude (carding, erreurs de saisie, litiges)
+const REPORT_NOTIFY_EMAIL = 'bluecellproduction@gmail.com'; // optionnel : e-mail de notif des signalements (voir extension Trigger Email)
 
 function setCORS(res, req) {
   const origin = (req && req.headers && req.headers.origin) || '';
@@ -27,11 +29,11 @@ function setCORS(res, req) {
 }
 
 // ── Webhook Stripe ──────────────────────────────────────────────────────────
-exports.stripeWebhook = onRequest({ secrets: [stripeSecretKey, stripeWebhookSecret] }, async (req, res) => {
+exports.stripeWebhook = onRequest({ secrets: [STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET] }, async (req, res) => {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
 
-  const stripeClient = stripe(stripeSecretKey.value());
-  const webhookSecret = stripeWebhookSecret.value();
+  const stripeClient = stripe(STRIPE_SECRET_KEY.value());
+  const webhookSecret = STRIPE_WEBHOOK_SECRET.value();
   let event;
   try {
     event = stripeClient.webhooks.constructEvent(req.rawBody, req.headers['stripe-signature'], webhookSecret);
@@ -40,36 +42,58 @@ exports.stripeWebhook = onRequest({ secrets: [stripeSecretKey, stripeWebhookSecr
     return res.status(400).send('Webhook Error: ' + err.message);
   }
 
-  if (event.type === 'checkout.session.completed') {
-    const session = event.data.object;
-    const uid = session.metadata && session.metadata.uid;
-    const email = session.customer_email || (session.customer_details && session.customer_details.email) || '';
-    if (!uid) return res.status(400).send('No uid');
-    try {
+  try {
+    // Souscription initiale
+    if (event.type === 'checkout.session.completed') {
+      const session = event.data.object;
+      const uid = (session.metadata && session.metadata.uid) || session.client_reference_id;
+      if (!uid) return res.status(200).json({ received: true, ignored: 'no uid' });
+      const email = session.customer_email || (session.customer_details && session.customer_details.email) || '';
+      let periodEnd = null;
+      if (session.subscription) {
+        try { const sub = await stripeClient.subscriptions.retrieve(session.subscription); periodEnd = sub.current_period_end; } catch (e) {}
+      }
       await db.collection('users').doc(uid).set({
         premium: true,
         premiumSince: admin.firestore.FieldValue.serverTimestamp(),
         lastPayment: admin.firestore.FieldValue.serverTimestamp(),
         amountPaid: session.amount_total,
-        stripeSessionId: session.id,
+        stripeCustomerId: session.customer || null,
+        stripeSubscriptionId: session.subscription || null,
+        premiumUntil: periodEnd ? admin.firestore.Timestamp.fromMillis(periodEnd * 1000) : null,
         email: email
       }, { merge: true });
       await db.collection('payments').add({
-        uid, sessionId: session.id, amount: session.amount_total,
-        currency: session.currency, email,
+        uid, sessionId: session.id, subscriptionId: session.subscription || null,
+        amount: session.amount_total, currency: session.currency, email,
         createdAt: admin.firestore.FieldValue.serverTimestamp()
       });
-      console.log('Premium activé uid=' + uid);
-    } catch (err) {
-      console.error('Firestore error:', err);
-      return res.status(500).send('DB error');
     }
+
+    // Renouvellement / changement de statut / annulation
+    if (event.type === 'customer.subscription.updated' || event.type === 'customer.subscription.deleted') {
+      const sub = event.data.object;
+      const uid = sub.metadata && sub.metadata.uid;
+      if (uid) {
+        const activeStatuses = ['active', 'trialing', 'past_due'];
+        const isActive = event.type !== 'customer.subscription.deleted' && activeStatuses.indexOf(sub.status) !== -1;
+        await db.collection('users').doc(uid).set({
+          premium: isActive,
+          stripeSubscriptionStatus: event.type === 'customer.subscription.deleted' ? 'canceled' : sub.status,
+          premiumUntil: sub.current_period_end ? admin.firestore.Timestamp.fromMillis(sub.current_period_end * 1000) : null,
+          cancelAtPeriodEnd: !!sub.cancel_at_period_end
+        }, { merge: true });
+      }
+    }
+  } catch (err) {
+    console.error('Webhook handler error:', err);
+    return res.status(500).send('DB error');
   }
   res.status(200).json({ received: true });
 });
 
 // ── Créer session Checkout via fetch + Bearer token ─────────────────────────
-exports.createCheckoutSession = onRequest({ secrets: [stripeSecretKey] }, async (req, res) => {
+exports.createCheckoutSession = onRequest({ secrets: [STRIPE_SECRET_KEY] }, async (req, res) => {
   setCORS(res, req);
   if (req.method === 'OPTIONS') return res.status(204).send('');
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
@@ -99,21 +123,21 @@ exports.createCheckoutSession = onRequest({ secrets: [stripeSecretKey] }, async 
   }
   const amount = Math.round(eur * 100);
 
-  const stripeClient = stripe(stripeSecretKey.value());
+  const stripeClient = stripe(STRIPE_SECRET_KEY.value());
+  // Prix libre : le montant choisi par l'utilisateur devient le tarif annuel.
+  const priceData = { currency: 'eur', unit_amount: amount, recurring: { interval: 'month' } };
+  const productId = process.env.STRIPE_PRODUCT_ID;
+  if (productId) priceData.product = productId;
+  else priceData.product_data = { name: 'GéoCulture Premium', description: 'Abonnement mensuel — accès aux modes premium' };
   try {
     const session = await stripeClient.checkout.sessions.create({
+      mode: 'subscription',
       payment_method_types: ['card'],
-      line_items: [{
-        price_data: {
-          currency: 'eur',
-          product_data: { name: 'GéoCulture Premium', description: 'Accès aux modes No-Zoom, Perfection et Multijoueur' },
-          unit_amount: amount
-        },
-        quantity: 1
-      }],
-      mode: 'payment',
+      line_items: [{ price_data: priceData, quantity: 1 }],
       customer_email: email,
+      client_reference_id: uid,
       metadata: { uid },
+      subscription_data: { metadata: { uid } },
       success_url: 'https://www.geo-culture.io/?premium=success',
       cancel_url: 'https://www.geo-culture.io/?premium=cancel',
       locale: 'fr'
@@ -122,6 +146,35 @@ exports.createCheckoutSession = onRequest({ secrets: [stripeSecretKey] }, async 
   } catch (err) {
     console.error('Stripe error:', err);
     return res.status(500).json({ error: 'Erreur Stripe: ' + err.message });
+  }
+});
+
+// ── Portail client Stripe (gérer / résilier l'abonnement) ───────────────────
+exports.createPortalSession = onRequest({ secrets: [STRIPE_SECRET_KEY] }, async (req, res) => {
+  setCORS(res, req);
+  if (req.method === 'OPTIONS') return res.status(204).send('');
+  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+
+  const authHeader = req.headers.authorization || '';
+  if (!authHeader.startsWith('Bearer ')) return res.status(401).json({ error: 'Non authentifié' });
+  let uid;
+  try { uid = (await admin.auth().verifyIdToken(authHeader.split('Bearer ')[1])).uid; }
+  catch (err) { return res.status(401).json({ error: 'Token invalide' }); }
+
+  const snap = await db.collection('users').doc(uid).get();
+  const customerId = snap.exists ? snap.data().stripeCustomerId : null;
+  if (!customerId) return res.status(400).json({ error: 'Aucun abonnement trouvé pour ce compte.' });
+
+  const stripeClient = stripe(STRIPE_SECRET_KEY.value());
+  try {
+    const portal = await stripeClient.billingPortal.sessions.create({
+      customer: customerId,
+      return_url: 'https://www.geo-culture.io/'
+    });
+    return res.status(200).json({ result: { url: portal.url } });
+  } catch (err) {
+    console.error('Portal error:', err);
+    return res.status(500).json({ error: 'Erreur portail: ' + err.message });
   }
 });
 
@@ -194,5 +247,67 @@ exports.deleteAccount = onCall(async (request) => {
     return { success: true };
   } catch (err) {
     throw new HttpsError('internal', err.message);
+  }
+});
+
+
+// ── Signalement de problème ─ stocké dans Firestore (100% interne, pas de mailto) ──
+exports.reportProblem = onRequest({ secrets: [SMTP_PASSWORD] }, async (req, res) => {
+  setCORS(res, req);
+  if (req.method === 'OPTIONS') return res.status(204).send('');
+  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
+
+  const body = (req.body && req.body.data) ? req.body.data : (req.body || {});
+  const clean = (v, max) => String(v == null ? '' : v)
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\u007F]/g, '')
+    .trim()
+    .slice(0, max);
+  const category = clean(body.category, 60);
+  const message = clean(body.message, 4000);
+  const email = clean(body.email, 200);
+  const context = clean(body.context, 4000);
+  if (message.length < 5) return res.status(400).json({ error: 'Message trop court.' });
+
+  // uid éventuel si un token Firebase est fourni (facultatif : signalement anonyme autorisé)
+  let uid = null;
+  const authHeader = req.headers.authorization || '';
+  if (authHeader.startsWith('Bearer ')) {
+    try { uid = (await admin.auth().verifyIdToken(authHeader.split('Bearer ')[1])).uid; } catch (e) {}
+  }
+
+  try {
+    await db.collection('reports').add({
+      category, message, email, context, uid,
+      userAgent: clean(req.headers['user-agent'], 400),
+      status: 'nouveau',
+      createdAt: admin.firestore.FieldValue.serverTimestamp()
+    });
+
+    // Notification e-mail directe (nodemailer + Gmail), sans extension.
+    if (REPORT_NOTIFY_EMAIL) {
+      try {
+        const transporter = nodemailer.createTransport({
+          host: 'smtp.gmail.com',
+          port: 465,
+          secure: true,
+          auth: { user: REPORT_NOTIFY_EMAIL, pass: SMTP_PASSWORD.value() }
+        });
+        await transporter.sendMail({
+          from: 'GeoCulture <' + REPORT_NOTIFY_EMAIL + '>',
+          to: REPORT_NOTIFY_EMAIL,
+          replyTo: email || undefined,
+          subject: '[GeoCulture] Signalement - ' + (category || 'Autre'),
+          text: message + '\n\n' + (email ? ('Contact : ' + email + '\n\n') : '') + context
+        });
+      } catch (mailErr) {
+        console.error('reportProblem mail error:', mailErr);
+      }
+    }
+
+    return res.status(200).json({ ok: true });
+  } catch (err) {
+    console.error('reportProblem error:', err);
+    return res.status(500).json({ error: 'Erreur serveur.' });
   }
 });

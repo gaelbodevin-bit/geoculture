@@ -1,12 +1,12 @@
 var _lang=(navigator.language||navigator.userLanguage||'fr').slice(0,2).toLowerCase();
 if(!['fr','en','es','de','it','pt'].includes(_lang))_lang='en';
 var _t={
-fr:{howToPlay:'COMMENT JOUER',gameMode:'Mode de jeu',difficulty:'Difficult\u00e9',allLevels:'Tout niveaux',hintsPerPlace:'indices par lieu',dailyChallenge:'D\u00e9fi du jour',multiplayer:'Multijoueur',leaderboard:'Classement',disconnect:'D\u00e9connexion',history:'Historique',connectGoogle:'Connexion Google',ruleNormal:'5 manches \u00b7 indices progressifs \u00b7 place le marqueur',ruleNozoom:'Carte bloqu\u00e9e au zoom \u00b7 pas de loupe \u00b7 Premium',rulePerfection:'10 manches \u00b7 \u00e9limin\u00e9 si > 50 km \u00b7 Premium',ruleChill:'Pas de stress · recherche du lieu sans timer',ruleDaily:'5 lieux identiques pour tous \u00b7 1x par jour \u00b7 classement quotidien',confirm:'Confirmer',nextHint:'Indice suivant',exploreMap:'Explorer la carte',nextRound:'Manche suivante',viewSummary:'Voir le bilan \u2192',eliminated:'\u274c \u00c9limin\u00e9 ! > 50km',finished:'Termin\u00e9 !',playAgain:'Rejouer',backMenu:'\u2190 Menu',dailyTitle:'D\u00c9FI DU JOUR',dailySubtitle:'5 lieux \u00b7 r\u00e9initialis\u00e9 \u00e0 minuit (FR)',dailyPlayed:'\u2713 Jou\u00e9',dailyPlay:'Jouer',dailyLB:'Classement du jour',back:'\u2190 Retour',alreadyPlayed:'D\u00e9j\u00e0 jou\u00e9 aujourd\u2019hui !',premiumTitle:'\u2b50 Premium',premiumSubtitle:'D\u00e9bloquez {feature}.',premiumIncludes:'Inclus dans Premium',premiumSupport:'Soutenir et d\u00e9bloquer \u2192',premiumSecure:'Paiement s\u00e9curis\u00e9 via Stripe',premiumMin:'Montant minimum : 1\u20ac',premiumChoose:'Choisissez le montant (min. 1\u20ac)',premiumRedirect:'Redirection...',loginRequired:'Connexion requise',loginMsg:'Connecte-toi pour acc\u00e9der \u00e0 {feature}.',loginBtn:'Se connecter avec Google',legalLink:'Mentions l\u00e9gales',mpTitle:'MULTIJOUEUR',mpCreate:'Cr\u00e9er',mpJoin:'Rejoindre',mpCode:'CODE',mpPseudo:'Pseudo',mpRounds5:'5 manches',mpRounds10:'10 manches',mpCodeInvalid:'Code invalide',mpModuleNotLoaded:'Module non charg\u00e9',mpSalon:'Salon\u00a0: ',mpError:'Erreur\u00a0: ',lvlAll:'Tout niveaux',lvlExpert:'Expert',lvlHard:'Difficile',lvlMedium:'Moyen',lvlEasy:'Facile',lbTitle:'CLASSEMENT',lbDailyTitle:'CLASSEMENT DU JOUR',lbLoading:'Chargement\u2026',lbNoData:'Aucune donn\u00e9e.'},
-en:{howToPlay:'HOW TO PLAY',gameMode:'Game mode',difficulty:'Difficulty',allLevels:'All levels',hintsPerPlace:'hints per place',dailyChallenge:'Daily challenge',multiplayer:'Multiplayer',leaderboard:'Leaderboard',disconnect:'Sign out',history:'History',connectGoogle:'Sign in with Google',ruleNormal:'5 rounds \u00b7 progressive hints \u00b7 place the marker',ruleNozoom:'Map locked at zoom \u00b7 no loupe \u00b7 Premium',rulePerfection:'10 rounds \u00b7 eliminated if > 50 km \u00b7 Premium',ruleChill:'No stress · find the place with no timer',ruleDaily:'Same 5 places for everyone \u00b7 1x per day \u00b7 daily leaderboard',confirm:'Confirm',nextHint:'Next hint',exploreMap:'Explore map',nextRound:'Next round',viewSummary:'View results \u2192',eliminated:'\u274c Eliminated! > 50km',finished:'Finished!',playAgain:'Play again',backMenu:'\u2190 Menu',dailyTitle:'DAILY CHALLENGE',dailySubtitle:'5 places \u00b7 resets at midnight (FR)',dailyPlayed:'\u2713 Played',dailyPlay:'Play',dailyLB:'Daily leaderboard',back:'\u2190 Back',alreadyPlayed:'Already played today!',premiumTitle:'\u2b50 Premium',premiumSubtitle:'Unlock {feature}.',premiumIncludes:'Included in Premium',premiumSupport:'Support & unlock \u2192',premiumSecure:'Secure payment via Stripe',premiumMin:'Minimum: \u20ac1',premiumChoose:'Choose your amount (min. \u20ac1)',premiumRedirect:'Redirecting...',loginRequired:'Login required',loginMsg:'Sign in to access {feature}.',loginBtn:'Sign in with Google',legalLink:'Legal notice',mpTitle:'MULTIPLAYER',mpCreate:'Create',mpJoin:'Join',mpCode:'CODE',mpPseudo:'Nickname',mpRounds5:'5 rounds',mpRounds10:'10 rounds',mpCodeInvalid:'Invalid code',mpModuleNotLoaded:'Module not loaded',mpSalon:'Room: ',mpError:'Error: ',lvlAll:'All levels',lvlExpert:'Expert',lvlHard:'Hard',lvlMedium:'Medium',lvlEasy:'Easy',lbTitle:'LEADERBOARD',lbDailyTitle:'DAILY LEADERBOARD',lbLoading:'Loading\u2026',lbNoData:'No data.'},
-es:{howToPlay:'C\u00d3MO JUGAR',gameMode:'Modo de juego',difficulty:'Dificultad',allLevels:'Todos los niveles',hintsPerPlace:'pistas por lugar',dailyChallenge:'Reto diario',multiplayer:'Multijugador',leaderboard:'Clasificaci\u00f3n',disconnect:'Cerrar sesi\u00f3n',history:'Historial',connectGoogle:'Iniciar sesi\u00f3n con Google',ruleNormal:'5 rondas \u00b7 pistas progresivas \u00b7 coloca el marcador',ruleNozoom:'Mapa bloqueado \u00b7 sin lupa \u00b7 Premium',rulePerfection:'10 rondas \u00b7 eliminado si > 50 km \u00b7 Premium',ruleChill:'Sin estrés · encuentra el lugar sin tiempo',ruleDaily:'Los mismos 5 lugares para todos \u00b7 1x al d\u00eda',confirm:'Confirmar',nextHint:'Siguiente pista',exploreMap:'Explorar mapa',nextRound:'Siguiente ronda',viewSummary:'Ver resultados \u2192',eliminated:'\u274c \u00a1Eliminado! > 50km',finished:'\u00a1Terminado!',playAgain:'Jugar de nuevo',backMenu:'\u2190 Men\u00fa',dailyTitle:'RETO DIARIO',dailySubtitle:'5 lugares \u00b7 se reinicia a medianoche (FR)',dailyPlayed:'\u2713 Jugado',dailyPlay:'Jugar',dailyLB:'Clasificaci\u00f3n del d\u00eda',back:'\u2190 Volver',alreadyPlayed:'\u00a1Ya jugaste hoy!',premiumTitle:'\u2b50 Premium',premiumSubtitle:'Desbloquea {feature}.',premiumIncludes:'Incluido en Premium',premiumSupport:'Apoyar y desbloquear \u2192',premiumSecure:'Pago seguro con Stripe',premiumMin:'M\u00ednimo: 1\u20ac',premiumChoose:'Elige el importe (m\u00edn. 1\u20ac)',premiumRedirect:'Redirigiendo...',loginRequired:'Inicio de sesi\u00f3n requerido',loginMsg:'Inicia sesi\u00f3n para acceder a {feature}.',loginBtn:'Iniciar sesi\u00f3n con Google',legalLink:'Aviso legal',mpTitle:'MULTIJUGADOR',mpCreate:'Crear',mpJoin:'Unirse',mpCode:'C\u00d3DIGO',mpPseudo:'Apodo',mpRounds5:'5 rondas',mpRounds10:'10 rondas',mpCodeInvalid:'C\u00f3digo inv\u00e1lido',mpModuleNotLoaded:'M\u00f3dulo no cargado',mpSalon:'Sala: ',mpError:'Error: ',lvlAll:'Todos los niveles',lvlExpert:'Experto',lvlHard:'Dif\u00edcil',lvlMedium:'Medio',lvlEasy:'F\u00e1cil',lbTitle:'CLASIFICACI\u00d3N',lbDailyTitle:'CLASIFICACI\u00d3N DEL D\u00cdA',lbLoading:'Cargando\u2026',lbNoData:'Sin datos.'},
-de:{howToPlay:'SO SPIELST DU',gameMode:'Spielmodus',difficulty:'Schwierigkeit',allLevels:'Alle Level',hintsPerPlace:'Hinweise pro Ort',dailyChallenge:'Tagesaufgabe',multiplayer:'Mehrspieler',leaderboard:'Bestenliste',disconnect:'Abmelden',history:'Verlauf',connectGoogle:'Mit Google anmelden',ruleNormal:'5 Runden \u00b7 progressive Hinweise \u00b7 Marker setzen',ruleNozoom:'Karte gesperrt \u00b7 keine Lupe \u00b7 Premium',rulePerfection:'10 Runden \u00b7 eliminiert bei > 50 km \u00b7 Premium',ruleChill:'Kein Stress · Ort ohne Timer finden',ruleDaily:'Gleiche 5 Orte f\u00fcr alle \u00b7 1x t\u00e4glich',confirm:'Best\u00e4tigen',nextHint:'N\u00e4chster Hinweis',exploreMap:'Karte erkunden',nextRound:'N\u00e4chste Runde',viewSummary:'Ergebnisse \u2192',eliminated:'\u274c Ausgeschieden! > 50km',finished:'Fertig!',playAgain:'Nochmal spielen',backMenu:'\u2190 Men\u00fc',dailyTitle:'TAGESAUFGABE',dailySubtitle:'5 Orte \u00b7 Zur\u00fccksetzen um Mitternacht (FR)',dailyPlayed:'\u2713 Gespielt',dailyPlay:'Spielen',dailyLB:'Tagesrangliste',back:'\u2190 Zur\u00fcck',alreadyPlayed:'Heute schon gespielt!',premiumTitle:'\u2b50 Premium',premiumSubtitle:'{feature} freischalten.',premiumIncludes:'Im Premium enthalten',premiumSupport:'Unterst\u00fctzen \u2192',premiumSecure:'Sichere Zahlung via Stripe',premiumMin:'Mindestbetrag: 1\u20ac',premiumChoose:'Betrag w\u00e4hlen (min. 1\u20ac)',premiumRedirect:'Weiterleitung...',loginRequired:'Anmeldung erforderlich',loginMsg:'Melde dich an um {feature} zu nutzen.',loginBtn:'Mit Google anmelden',legalLink:'Impressum',mpTitle:'MEHRSPIELER',mpCreate:'Erstellen',mpJoin:'Beitreten',mpCode:'CODE',mpPseudo:'Spitzname',mpRounds5:'5 Runden',mpRounds10:'10 Runden',mpCodeInvalid:'Ung\u00fcltiger Code',mpModuleNotLoaded:'Modul nicht geladen',mpSalon:'Raum: ',mpError:'Fehler: ',lvlAll:'Alle Level',lvlExpert:'Experte',lvlHard:'Schwer',lvlMedium:'Mittel',lvlEasy:'Leicht',lbTitle:'BESTENLISTE',lbDailyTitle:'TAGESBESTENLISTE',lbLoading:'Laden\u2026',lbNoData:'Keine Daten.'},
-it:{howToPlay:'COME GIOCARE',gameMode:'Modalit\u00e0 di gioco',difficulty:'Difficolt\u00e0',allLevels:'Tutti i livelli',hintsPerPlace:'suggerimenti per luogo',dailyChallenge:'Sfida del giorno',multiplayer:'Multigiocatore',leaderboard:'Classifica',disconnect:'Disconnetti',history:'Cronologia',connectGoogle:'Accedi con Google',ruleNormal:'5 round \u00b7 suggerimenti progressivi \u00b7 posiziona il marker',ruleNozoom:'Mappa bloccata \u00b7 senza lente \u00b7 Premium',rulePerfection:'10 round \u00b7 eliminato se > 50 km \u00b7 Premium',ruleChill:'Senza stress · trova il luogo senza timer',ruleDaily:'Stessi 5 luoghi per tutti \u00b7 1x al giorno',confirm:'Conferma',nextHint:'Prossimo suggerimento',exploreMap:'Esplora la mappa',nextRound:'Round successivo',viewSummary:'Vedi risultati \u2192',eliminated:'\u274c Eliminato! > 50km',finished:'Finito!',playAgain:'Gioca ancora',backMenu:'\u2190 Menu',dailyTitle:'SFIDA DEL GIORNO',dailySubtitle:'5 luoghi \u00b7 azzera a mezzanotte (FR)',dailyPlayed:'\u2713 Giocato',dailyPlay:'Gioca',dailyLB:'Classifica del giorno',back:'\u2190 Indietro',alreadyPlayed:'Hai gi\u00e0 giocato oggi!',premiumTitle:'\u2b50 Premium',premiumSubtitle:'Sblocca {feature}.',premiumIncludes:'Incluso nel Premium',premiumSupport:'Supporta e sblocca \u2192',premiumSecure:'Pagamento sicuro via Stripe',premiumMin:'Importo minimo: 1\u20ac',premiumChoose:"Scegli l&#39;importo (min. 1\u20ac)",premiumRedirect:'Reindirizzamento...',loginRequired:'Accesso richiesto',loginMsg:'Accedi per utilizzare {feature}.',loginBtn:'Accedi con Google',legalLink:'Note legali',mpTitle:'MULTIGIOCATORE',mpCreate:'Crea',mpJoin:'Unisciti',mpCode:'CODICE',mpPseudo:'Soprannome',mpRounds5:'5 round',mpRounds10:'10 round',mpCodeInvalid:'Codice non valido',mpModuleNotLoaded:'Modulo non caricato',mpSalon:'Stanza: ',mpError:'Errore: ',lvlAll:'Tutti i livelli',lvlExpert:'Esperto',lvlHard:'Difficile',lvlMedium:'Medio',lvlEasy:'Facile',lbTitle:'CLASSIFICA',lbDailyTitle:'CLASSIFICA DEL GIORNO',lbLoading:'Caricamento\u2026',lbNoData:'Nessun dato.'},
-pt:{howToPlay:'COMO JOGAR',gameMode:'Modo de jogo',difficulty:'Dificuldade',allLevels:'Todos os n\u00edveis',hintsPerPlace:'dicas por lugar',dailyChallenge:'Desafio di\u00e1rio',multiplayer:'Multijogador',leaderboard:'Classifica\u00e7\u00e3o',disconnect:'Sair',history:'Hist\u00f3rico',connectGoogle:'Entrar com Google',ruleNormal:'5 rodadas \u00b7 dicas progressivas \u00b7 coloque o marcador',ruleNozoom:'Mapa bloqueado \u00b7 sem lupa \u00b7 Premium',rulePerfection:'10 rodadas \u00b7 eliminado se > 50 km \u00b7 Premium',ruleChill:'Sem pressa · encontre o lugar sem timer',ruleDaily:'Mesmos 5 lugares para todos \u00b7 1x por dia',confirm:'Confirmar',nextHint:'Pr\u00f3xima dica',exploreMap:'Explorar mapa',nextRound:'Pr\u00f3xima rodada',viewSummary:'Ver resultados \u2192',eliminated:'\u274c Eliminado! > 50km',finished:'Terminado!',playAgain:'Jogar novamente',backMenu:'\u2190 Menu',dailyTitle:'DESAFIO DI\u00c1RIO',dailySubtitle:'5 lugares \u00b7 reinicia \u00e0 meia-noite (FR)',dailyPlayed:'\u2713 Jogado',dailyPlay:'Jogar',dailyLB:'Ranking do dia',back:'\u2190 Voltar',alreadyPlayed:'J\u00e1 jogou hoje!',premiumTitle:'\u2b50 Premium',premiumSubtitle:'Desbloqueie {feature}.',premiumIncludes:'Inclu\u00eddo no Premium',premiumSupport:'Apoiar e desbloquear \u2192',premiumSecure:'Pagamento seguro via Stripe',premiumMin:'Valor m\u00ednimo: 1\u20ac',premiumChoose:'Escolha o valor (m\u00edn. 1\u20ac)',premiumRedirect:'Redirecionando...',loginRequired:'Login necess\u00e1rio',loginMsg:'Entre para acessar {feature}.',loginBtn:'Entrar com Google',legalLink:'Aviso legal',mpTitle:'MULTIJOGADOR',mpCreate:'Criar',mpJoin:'Entrar',mpCode:'C\u00d3DIGO',mpPseudo:'Apelido',mpRounds5:'5 rodadas',mpRounds10:'10 rodadas',mpCodeInvalid:'C\u00f3digo inv\u00e1lido',mpModuleNotLoaded:'M\u00f3dulo n\u00e3o carregado',mpSalon:'Sala: ',mpError:'Erro: ',lvlAll:'Todos os n\u00edveis',lvlExpert:'Especialista',lvlHard:'Dif\u00edcil',lvlMedium:'M\u00e9dio',lvlEasy:'F\u00e1cil',lbTitle:'CLASSIFICA\u00c7\u00c3O',lbDailyTitle:'RANKING DO DIA',lbLoading:'Carregando\u2026',lbNoData:'Sem dados.'}
+fr:{howToPlay:'COMMENT JOUER',gameMode:'Mode de jeu',difficulty:'Difficult\u00e9',allLevels:'Tout niveaux',hintsPerPlace:'indices par lieu',dailyChallenge:'D\u00e9fi du jour',multiplayer:'Multijoueur',leaderboard:'Classement',disconnect:'D\u00e9connexion',history:'Profil',connectGoogle:'Connexion Google',ruleNormal:'5 manches \u00b7 indices progressifs \u00b7 place le marqueur',ruleNozoom:'Carte bloqu\u00e9e au zoom \u00b7 pas de loupe \u00b7 Premium',rulePerfection:'10 manches \u00b7 \u00e9limin\u00e9 si > 50 km \u00b7 Premium',ruleChill:'Pas de stress · recherche du lieu sans timer',ruleDaily:'5 lieux identiques pour tous \u00b7 1x par jour \u00b7 classement quotidien',confirm:'Confirmer',nextHint:'Indice suivant',exploreMap:'Explorer la carte',nextRound:'Manche suivante',viewSummary:'Voir le bilan \u2192',eliminated:'\u274c \u00c9limin\u00e9 ! > 50km',finished:'Termin\u00e9 !',playAgain:'Rejouer',backMenu:'\u2190 Menu',dailyTitle:'D\u00c9FI DU JOUR',dailySubtitle:'5 lieux \u00b7 r\u00e9initialis\u00e9 \u00e0 minuit (FR)',dailyPlayed:'\u2713 Jou\u00e9',dailyPlay:'Jouer',dailyLB:'Classement du jour',back:'\u2190 Retour',alreadyPlayed:'D\u00e9j\u00e0 jou\u00e9 aujourd\u2019hui !',premiumTitle:'\u2b50 Premium',loginRequired:'Connexion requise',loginMsg:'Connecte-toi pour acc\u00e9der \u00e0 {feature}.',loginBtn:'Se connecter avec Google',legalLink:'Mentions l\u00e9gales',mpTitle:'MULTIJOUEUR',mpCreate:'Cr\u00e9er',mpJoin:'Rejoindre',mpCode:'CODE',mpPseudo:'Pseudo',mpRounds5:'5 manches',mpRounds10:'10 manches',mpCodeInvalid:'Code invalide',mpModuleNotLoaded:'Module non charg\u00e9',mpSalon:'Salon\u00a0: ',mpError:'Erreur\u00a0: ',lvlAll:'Tout niveaux',lvlExpert:'Expert',lvlHard:'Difficile',lvlMedium:'Moyen',lvlEasy:'Facile',lbTitle:'CLASSEMENT',lbDailyTitle:'CLASSEMENT DU JOUR',lbLoading:'Chargement\u2026',lbNoData:'Aucune donn\u00e9e.'},
+en:{howToPlay:'HOW TO PLAY',gameMode:'Game mode',difficulty:'Difficulty',allLevels:'All levels',hintsPerPlace:'hints per place',dailyChallenge:'Daily challenge',multiplayer:'Multiplayer',leaderboard:'Leaderboard',disconnect:'Sign out',history:'History',connectGoogle:'Sign in with Google',ruleNormal:'5 rounds \u00b7 progressive hints \u00b7 place the marker',ruleNozoom:'Map locked at zoom \u00b7 no loupe \u00b7 Premium',rulePerfection:'10 rounds \u00b7 eliminated if > 50 km \u00b7 Premium',ruleChill:'No stress · find the place with no timer',ruleDaily:'Same 5 places for everyone \u00b7 1x per day \u00b7 daily leaderboard',confirm:'Confirm',nextHint:'Next hint',exploreMap:'Explore map',nextRound:'Next round',viewSummary:'View results \u2192',eliminated:'\u274c Eliminated! > 50km',finished:'Finished!',playAgain:'Play again',backMenu:'\u2190 Menu',dailyTitle:'DAILY CHALLENGE',dailySubtitle:'5 places \u00b7 resets at midnight (FR)',dailyPlayed:'\u2713 Played',dailyPlay:'Play',dailyLB:'Daily leaderboard',back:'\u2190 Back',alreadyPlayed:'Already played today!',premiumTitle:'\u2b50 Premium',loginRequired:'Login required',loginMsg:'Sign in to access {feature}.',loginBtn:'Sign in with Google',legalLink:'Legal notice',mpTitle:'MULTIPLAYER',mpCreate:'Create',mpJoin:'Join',mpCode:'CODE',mpPseudo:'Nickname',mpRounds5:'5 rounds',mpRounds10:'10 rounds',mpCodeInvalid:'Invalid code',mpModuleNotLoaded:'Module not loaded',mpSalon:'Room: ',mpError:'Error: ',lvlAll:'All levels',lvlExpert:'Expert',lvlHard:'Hard',lvlMedium:'Medium',lvlEasy:'Easy',lbTitle:'LEADERBOARD',lbDailyTitle:'DAILY LEADERBOARD',lbLoading:'Loading\u2026',lbNoData:'No data.'},
+es:{howToPlay:'C\u00d3MO JUGAR',gameMode:'Modo de juego',difficulty:'Dificultad',allLevels:'Todos los niveles',hintsPerPlace:'pistas por lugar',dailyChallenge:'Reto diario',multiplayer:'Multijugador',leaderboard:'Clasificaci\u00f3n',disconnect:'Cerrar sesi\u00f3n',history:'Historial',connectGoogle:'Iniciar sesi\u00f3n con Google',ruleNormal:'5 rondas \u00b7 pistas progresivas \u00b7 coloca el marcador',ruleNozoom:'Mapa bloqueado \u00b7 sin lupa \u00b7 Premium',rulePerfection:'10 rondas \u00b7 eliminado si > 50 km \u00b7 Premium',ruleChill:'Sin estrés · encuentra el lugar sin tiempo',ruleDaily:'Los mismos 5 lugares para todos \u00b7 1x al d\u00eda',confirm:'Confirmar',nextHint:'Siguiente pista',exploreMap:'Explorar mapa',nextRound:'Siguiente ronda',viewSummary:'Ver resultados \u2192',eliminated:'\u274c \u00a1Eliminado! > 50km',finished:'\u00a1Terminado!',playAgain:'Jugar de nuevo',backMenu:'\u2190 Men\u00fa',dailyTitle:'RETO DIARIO',dailySubtitle:'5 lugares \u00b7 se reinicia a medianoche (FR)',dailyPlayed:'\u2713 Jugado',dailyPlay:'Jugar',dailyLB:'Clasificaci\u00f3n del d\u00eda',back:'\u2190 Volver',alreadyPlayed:'\u00a1Ya jugaste hoy!',premiumTitle:'\u2b50 Premium',loginRequired:'Inicio de sesi\u00f3n requerido',loginMsg:'Inicia sesi\u00f3n para acceder a {feature}.',loginBtn:'Iniciar sesi\u00f3n con Google',legalLink:'Aviso legal',mpTitle:'MULTIJUGADOR',mpCreate:'Crear',mpJoin:'Unirse',mpCode:'C\u00d3DIGO',mpPseudo:'Apodo',mpRounds5:'5 rondas',mpRounds10:'10 rondas',mpCodeInvalid:'C\u00f3digo inv\u00e1lido',mpModuleNotLoaded:'M\u00f3dulo no cargado',mpSalon:'Sala: ',mpError:'Error: ',lvlAll:'Todos los niveles',lvlExpert:'Experto',lvlHard:'Dif\u00edcil',lvlMedium:'Medio',lvlEasy:'F\u00e1cil',lbTitle:'CLASIFICACI\u00d3N',lbDailyTitle:'CLASIFICACI\u00d3N DEL D\u00cdA',lbLoading:'Cargando\u2026',lbNoData:'Sin datos.'},
+de:{howToPlay:'SO SPIELST DU',gameMode:'Spielmodus',difficulty:'Schwierigkeit',allLevels:'Alle Level',hintsPerPlace:'Hinweise pro Ort',dailyChallenge:'Tagesaufgabe',multiplayer:'Mehrspieler',leaderboard:'Bestenliste',disconnect:'Abmelden',history:'Verlauf',connectGoogle:'Mit Google anmelden',ruleNormal:'5 Runden \u00b7 progressive Hinweise \u00b7 Marker setzen',ruleNozoom:'Karte gesperrt \u00b7 keine Lupe \u00b7 Premium',rulePerfection:'10 Runden \u00b7 eliminiert bei > 50 km \u00b7 Premium',ruleChill:'Kein Stress · Ort ohne Timer finden',ruleDaily:'Gleiche 5 Orte f\u00fcr alle \u00b7 1x t\u00e4glich',confirm:'Best\u00e4tigen',nextHint:'N\u00e4chster Hinweis',exploreMap:'Karte erkunden',nextRound:'N\u00e4chste Runde',viewSummary:'Ergebnisse \u2192',eliminated:'\u274c Ausgeschieden! > 50km',finished:'Fertig!',playAgain:'Nochmal spielen',backMenu:'\u2190 Men\u00fc',dailyTitle:'TAGESAUFGABE',dailySubtitle:'5 Orte \u00b7 Zur\u00fccksetzen um Mitternacht (FR)',dailyPlayed:'\u2713 Gespielt',dailyPlay:'Spielen',dailyLB:'Tagesrangliste',back:'\u2190 Zur\u00fcck',alreadyPlayed:'Heute schon gespielt!',premiumTitle:'\u2b50 Premium',loginRequired:'Anmeldung erforderlich',loginMsg:'Melde dich an um {feature} zu nutzen.',loginBtn:'Mit Google anmelden',legalLink:'Impressum',mpTitle:'MEHRSPIELER',mpCreate:'Erstellen',mpJoin:'Beitreten',mpCode:'CODE',mpPseudo:'Spitzname',mpRounds5:'5 Runden',mpRounds10:'10 Runden',mpCodeInvalid:'Ung\u00fcltiger Code',mpModuleNotLoaded:'Modul nicht geladen',mpSalon:'Raum: ',mpError:'Fehler: ',lvlAll:'Alle Level',lvlExpert:'Experte',lvlHard:'Schwer',lvlMedium:'Mittel',lvlEasy:'Leicht',lbTitle:'BESTENLISTE',lbDailyTitle:'TAGESBESTENLISTE',lbLoading:'Laden\u2026',lbNoData:'Keine Daten.'},
+it:{howToPlay:'COME GIOCARE',gameMode:'Modalit\u00e0 di gioco',difficulty:'Difficolt\u00e0',allLevels:'Tutti i livelli',hintsPerPlace:'suggerimenti per luogo',dailyChallenge:'Sfida del giorno',multiplayer:'Multigiocatore',leaderboard:'Classifica',disconnect:'Disconnetti',history:'Cronologia',connectGoogle:'Accedi con Google',ruleNormal:'5 round \u00b7 suggerimenti progressivi \u00b7 posiziona il marker',ruleNozoom:'Mappa bloccata \u00b7 senza lente \u00b7 Premium',rulePerfection:'10 round \u00b7 eliminato se > 50 km \u00b7 Premium',ruleChill:'Senza stress · trova il luogo senza timer',ruleDaily:'Stessi 5 luoghi per tutti \u00b7 1x al giorno',confirm:'Conferma',nextHint:'Prossimo suggerimento',exploreMap:'Esplora la mappa',nextRound:'Round successivo',viewSummary:'Vedi risultati \u2192',eliminated:'\u274c Eliminato! > 50km',finished:'Finito!',playAgain:'Gioca ancora',backMenu:'\u2190 Menu',dailyTitle:'SFIDA DEL GIORNO',dailySubtitle:'5 luoghi \u00b7 azzera a mezzanotte (FR)',dailyPlayed:'\u2713 Giocato',dailyPlay:'Gioca',dailyLB:'Classifica del giorno',back:'\u2190 Indietro',alreadyPlayed:'Hai gi\u00e0 giocato oggi!',premiumTitle:'\u2b50 Premium',loginRequired:'Accesso richiesto',loginMsg:'Accedi per utilizzare {feature}.',loginBtn:'Accedi con Google',legalLink:'Note legali',mpTitle:'MULTIGIOCATORE',mpCreate:'Crea',mpJoin:'Unisciti',mpCode:'CODICE',mpPseudo:'Soprannome',mpRounds5:'5 round',mpRounds10:'10 round',mpCodeInvalid:'Codice non valido',mpModuleNotLoaded:'Modulo non caricato',mpSalon:'Stanza: ',mpError:'Errore: ',lvlAll:'Tutti i livelli',lvlExpert:'Esperto',lvlHard:'Difficile',lvlMedium:'Medio',lvlEasy:'Facile',lbTitle:'CLASSIFICA',lbDailyTitle:'CLASSIFICA DEL GIORNO',lbLoading:'Caricamento\u2026',lbNoData:'Nessun dato.'},
+pt:{howToPlay:'COMO JOGAR',gameMode:'Modo de jogo',difficulty:'Dificuldade',allLevels:'Todos os n\u00edveis',hintsPerPlace:'dicas por lugar',dailyChallenge:'Desafio di\u00e1rio',multiplayer:'Multijogador',leaderboard:'Classifica\u00e7\u00e3o',disconnect:'Sair',history:'Hist\u00f3rico',connectGoogle:'Entrar com Google',ruleNormal:'5 rodadas \u00b7 dicas progressivas \u00b7 coloque o marcador',ruleNozoom:'Mapa bloqueado \u00b7 sem lupa \u00b7 Premium',rulePerfection:'10 rodadas \u00b7 eliminado se > 50 km \u00b7 Premium',ruleChill:'Sem pressa · encontre o lugar sem timer',ruleDaily:'Mesmos 5 lugares para todos \u00b7 1x por dia',confirm:'Confirmar',nextHint:'Pr\u00f3xima dica',exploreMap:'Explorar mapa',nextRound:'Pr\u00f3xima rodada',viewSummary:'Ver resultados \u2192',eliminated:'\u274c Eliminado! > 50km',finished:'Terminado!',playAgain:'Jogar novamente',backMenu:'\u2190 Menu',dailyTitle:'DESAFIO DI\u00c1RIO',dailySubtitle:'5 lugares \u00b7 reinicia \u00e0 meia-noite (FR)',dailyPlayed:'\u2713 Jogado',dailyPlay:'Jogar',dailyLB:'Ranking do dia',back:'\u2190 Voltar',alreadyPlayed:'J\u00e1 jogou hoje!',premiumTitle:'\u2b50 Premium',loginRequired:'Login necess\u00e1rio',loginMsg:'Entre para acessar {feature}.',loginBtn:'Entrar com Google',legalLink:'Aviso legal',mpTitle:'MULTIJOGADOR',mpCreate:'Criar',mpJoin:'Entrar',mpCode:'C\u00d3DIGO',mpPseudo:'Apelido',mpRounds5:'5 rodadas',mpRounds10:'10 rodadas',mpCodeInvalid:'C\u00f3digo inv\u00e1lido',mpModuleNotLoaded:'M\u00f3dulo n\u00e3o carregado',mpSalon:'Sala: ',mpError:'Erro: ',lvlAll:'Todos os n\u00edveis',lvlExpert:'Especialista',lvlHard:'Dif\u00edcil',lvlMedium:'M\u00e9dio',lvlEasy:'F\u00e1cil',lbTitle:'CLASSIFICA\u00c7\u00c3O',lbDailyTitle:'RANKING DO DIA',lbLoading:'Carregando\u2026',lbNoData:'Sem dados.'}
 };
 function T(key,vars){var d=_t[_lang]||_t.en;var s=d[key]||_t.en[key]||key;if(vars)Object.keys(vars).forEach(function(k){s=s.replace('{'+k+'}',vars[k]);});return s;}
 window._lang=_lang;window.T=T;
@@ -38,7 +38,7 @@ function haversine(la1,lo1,la2,lo2){
 
 function initMap(){
   if(map){map.remove();map=null;}
-  if(typeof L==='undefined'){console.error('Leaflet not loaded');return;}
+  if(typeof L==='undefined'){return;}
   var mapDiv=document.getElementById('map');
   var divW=mapDiv?mapDiv.offsetWidth:(window.innerWidth-210);
   var divH=mapDiv?mapDiv.offsetHeight:window.innerHeight;
@@ -95,7 +95,7 @@ function startGame(){
   document.getElementById('hsc').textContent='0';
   document.getElementById('overlay').classList.add('h');
   // S'assurer que la carte est initialis\u00e9e
-  if(!map){ try{ initMap(); }catch(e){ console.warn('Map init failed:',e); } }
+  if(!map){ try{ initMap(); }catch(e){  } }
   startRound(0);
 }
 
@@ -114,6 +114,7 @@ function startRound(idx){
   // Masquer le bouton indice suivant en niveau fixe
   var skipb=document.getElementById('skipb');
   if(skipb) skipb.style.display=fixedLevel>=0?'none':'block';
+  _gcSaveState();
 }
 
 function showHint(){
@@ -281,7 +282,7 @@ function showInter(pts,dist,name,eliminated){
   else if(curR+1<roundList.length){_nextBtn='<button class="btn ba" onclick="nextRound()" style="width:auto;padding:12px 32px;font-size:14px">Manche suivante</button>';}
   else{_nextBtn='<button class="btn ba" onclick="showEnd()" style="width:auto;padding:12px 32px;font-size:14px">Voir le bilan &#8594;</button>';}
   ov.innerHTML=`
-    <div id="${imgId}" style="width:100%;max-width:500px;min-height:120px;background:#111827;border-radius:12px;overflow:hidden;position:relative"></div>
+    <div id="${imgId}" class="gc-result-image" style="width:100%;max-width:500px;min-height:120px;background:#111827;border-radius:12px;overflow:visible;position:relative;flex-shrink:0;margin-bottom:clamp(8px,2vh,18px)"></div>
     <div class="otitle" style="font-size:38px">+${pts.toLocaleString('fr-FR')}</div>
     <div class="osub" style="color:#e2e8f0;font-size:13px;line-height:1.65;margin-top:-2px;max-width:420px;text-align:center;font-style:normal;background:rgba(17,24,39,0.6);border-radius:8px;padding:8px 14px">${placeDesc}</div>
     <div style="display:flex;align-items:center;gap:10px;width:100%;max-width:320px">
@@ -317,7 +318,7 @@ function showInter(pts,dist,name,eliminated){
     if(round.photo){
       var img = new Image();
       img.onload = function(){
-        el.style.height='auto'; el.innerHTML = '<img src="'+round.photo+'" style="width:100%;height:auto;max-height:55vh;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
+        el.style.height='auto'; el.innerHTML = '<img src="'+round.photo+'" onclick="openImageZoom(this.src)" style="width:100%;max-width:100%;height:auto;max-height:55vh;max-height:55dvh;object-fit:contain;border-radius:12px;display:block;background:#111827;cursor:zoom-in" alt="">';
       };
       img.onerror = function(){
         tryWiki('fr');
@@ -335,7 +336,7 @@ function showInter(pts,dist,name,eliminated){
           if(!el2) return;
           var wsrc=(d.originalimage&&d.originalimage.source)||(d.thumbnail&&d.thumbnail.source);
           if(wsrc){
-            el2.style.height='auto'; el2.innerHTML='<img src="'+wsrc+'" style="width:100%;height:auto;max-height:55vh;object-fit:contain;border-radius:12px;display:block;background:#111827" alt="">';
+            el2.style.height='auto'; el2.innerHTML='<img src="'+wsrc+'" onclick="openImageZoom(this.src)" style="width:100%;max-width:100%;height:auto;max-height:55vh;max-height:55dvh;object-fit:contain;border-radius:12px;display:block;background:#111827;cursor:zoom-in" alt="">';
           } else if(lang==='fr'){tryWiki('en');}
           else{el2.style.display='none';}
         }).catch(function(){var el2=document.getElementById(id);if(el2)el2.style.display='none';});
@@ -344,6 +345,40 @@ function showInter(pts,dist,name,eliminated){
   })(imgId, roundList[curR]);
 
 }
+
+function openImageZoom(src){
+  var existing=document.getElementById('gc-image-zoom');
+  if(existing) existing.remove();
+  var modal=document.createElement('div');
+  modal.id='gc-image-zoom';
+  modal.style.cssText='position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;overflow:auto;padding:18px;cursor:zoom-in;touch-action:pan-x pan-y;';
+  var image=document.createElement('img');
+  image.src=src;
+  image.alt='';
+  image.style.cssText='display:block;width:auto;max-width:100%;max-height:100%;height:auto;object-fit:contain;cursor:zoom-in;transition:width .2s ease;';
+  var close=document.createElement('button');
+  close.type='button';
+  close.setAttribute('aria-label','Fermer');
+  close.textContent='×';
+  close.style.cssText='position:fixed;top:12px;right:16px;z-index:1;width:40px;height:40px;border:0;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;font-size:30px;line-height:1;cursor:pointer;';
+  function closeZoom(){modal.remove();}
+  function toggleZoom(e){
+    if(e) e.stopPropagation();
+    var zoomed=image.dataset.zoomed==='1';
+    image.dataset.zoomed=zoomed?'0':'1';
+    image.style.width=zoomed?'auto':'200%';
+    image.style.maxWidth=zoomed?'100%':'none';
+    image.style.maxHeight=zoomed?'100%':'none';
+    image.style.cursor=zoomed?'zoom-in':'zoom-out';
+  }
+  close.addEventListener('click',closeZoom);
+  modal.addEventListener('click',function(e){if(e.target===modal) closeZoom();});
+  image.addEventListener('click',toggleZoom);
+  modal.appendChild(image);
+  modal.appendChild(close);
+  document.body.appendChild(modal);
+}
+window.openImageZoom=openImageZoom;
 
 // ════════════════════════════════════════════════════════════════
 // PARTAGE DE SCORE (modes solo + défi du jour — pas multi ni chill)
@@ -473,7 +508,7 @@ function _shareToast(msg) {
 }
 window.shareScore = shareScore;
 
-function showEnd(){
+function showEnd(){ _gcClearState();
   if(!window._dailyMode) window._wasDailyMode=false;
   const totalMax=roundScores.reduce((a,s)=>a+(s.maxPts||0),0);
   const pct=totalMax>0?Math.round(total/totalMax*100):0;
@@ -530,7 +565,7 @@ function showEnd(){
       }
     }, 100);
   }
-  if(typeof window.saveGame==='function'){var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);var _p=_t>0?Math.round(total/_t*100):0;var _n=['tout-niveaux','expert','difficile','moyen','facile'];var _m=(eventsMode?'events-':'')+(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(chillMode?'chill-':'')+(_n[fixedLevel+1]||'tout-niveaux');setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){console.error(e);}},500);}
+  if(typeof window.saveGame==='function'){var _t=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);var _p=_t>0?Math.round(total/_t*100):0;var _n=['tout-niveaux','expert','difficile','moyen','facile'];var _m=(eventsMode?'events-':'')+(noZoomMode?'nozoom-':'')+(perfectionMode?'perfection-':'')+(chillMode?'chill-':'')+(_n[fixedLevel+1]||'tout-niveaux');setTimeout(function(){try{window.saveGame(roundScores,total,_p,_m);}catch(e){}},500);}
   // Sauvegarder dans le classement du jour si mode daily
   if(window._dailyMode && typeof window.saveDailyScore==='function'){
     var _dt=roundScores.reduce(function(a,s){return a+(s.maxPts||0);},0);
@@ -549,14 +584,16 @@ function showMenu(){
     window.mpLeaveRoom(); return;
   }
   clearInterval(tiv);
+  var _gcWasActive=gameActive;
   gameActive=false;
+  if(_gcWasActive) _gcClearState();
   document.body.classList.add('menu-mode');
   var ov=document.getElementById('overlay');
   var user=typeof getCurrentUser==='function'?getCurrentUser():null;
   var h=[];
 
   // Titre
-  h.push('<div class="otitle" style="font-size:58px;line-height:1.05;margin-bottom:28px">G\u00e9o<span>Culture</span></div>');
+  h.push('<div class="otitle gc-mtitle" style="font-size:58px;line-height:1.05;margin-bottom:28px">G\u00e9o<span>Culture</span></div>');
 
   // Zone auth
   if(user){
@@ -564,18 +601,19 @@ function showMenu(){
     h.push('<img src="'+String(user.photoURL||'').replace(/["'<>]/g,'')+'" style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid #f97316">');
     h.push('<span style="font-size:13px;color:#e2e8f0">'+String(user.displayName||user.email||'').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</span>');
     h.push('<button onclick="window.fbSignOut&&window.fbSignOut()" style="font-size:11px;color:#6b7280;background:transparent;border:none;cursor:pointer;text-decoration:underline;margin-left:8px">D\u00e9connexion</button>');
-    h.push('<button onclick="window.showHistory&&window.showHistory()" style="font-size:11px;color:#6b7280;background:transparent;border:none;cursor:pointer;text-decoration:underline">Historique</button>');
+    h.push('<button onclick="window.showHistory&&window.showHistory()" style="font-size:11px;color:#6b7280;background:transparent;border:none;cursor:pointer;text-decoration:underline">Profil</button>');
     h.push('</div>');
   } else {
     h.push('<button onclick="window.fbSignIn&&window.fbSignIn()" style="font-size:12px;font-weight:500;padding:7px 18px;border-radius:8px;border:1px solid #4285f4;background:transparent;color:#4285f4;cursor:pointer;margin-bottom:26px">Se connecter avec Google</button>');
   }
 
   // Grille 2 colonnes égales
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:920px">');
+  h.push('<div class="gc-menu-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:26px;width:100%;max-width:920px">');
 
   // Colonne gauche: comment jouer
-  h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:16px">');
-  h.push('<div style="font-size:13px;font-weight:700;color:#f97316;letter-spacing:1.8px;text-transform:uppercase">Comment jouer</div>');
+  h.push('<div class="gc-howto'+(window.innerWidth<=820?' collapsed':'')+'" style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:16px">');
+  h.push('<div class="gc-howto-h" onclick="this.parentNode.classList.toggle(\'collapsed\')" style="font-size:13px;font-weight:700;color:#f97316;letter-spacing:1.8px;text-transform:uppercase;display:flex;align-items:center;justify-content:space-between;cursor:pointer">Comment jouer<span class="gc-howto-chev">\u25B8</span></div>');
+  h.push('<div class="gc-howto-body" style="display:flex;flex-direction:column;gap:16px">');
   h.push('<div style="font-size:13.5px;color:#94a3b8;line-height:1.6;padding:2px 0 8px 0;border-bottom:1px solid #1e2d4566;margin-bottom:4px">Localise les lieux grâce aux indices en un minimum de temps.</div>');
   var rules=[
     {t:'Normal', d:T('ruleNormal')},
@@ -592,6 +630,7 @@ function showMenu(){
     h.push('</div>');
   });
   h.push('</div>');
+  h.push('</div>');
 
   // Colonne droite: modes de jeu
   h.push('<div style="background:#0d1120;border:0.5px solid #1e2d45;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:16px">');
@@ -602,7 +641,7 @@ function showMenu(){
   // Styles de base — plus grands, plus visuels
   var _bs = 'font-family:\'Baloo 2\',sans-serif;font-size:13px;font-weight:700;cursor:pointer;text-align:center;border-radius:10px;padding:14px 6px;transition:all .2s;border:1.5px solid;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1.2;';
 
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1">');
+  h.push('<div class="gc-mode-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1">');
 
   // Normal — orange
   h.push('<button onclick="selectGameMode(\'normal\')" style="'+_bs+'background:transparent;color:#f97316;border-color:#f97316" '
@@ -691,7 +730,8 @@ function enterExploreMode(){
   const r=roundList[curR];
   if(playerPos && playerMarker){
     const bounds=L.latLngBounds([[playerPos.lat,playerPos.lng],[r.lat,r.lng]]);
-    map.fitBounds(bounds,{padding:[80,80]});
+    try{map.invalidateSize();}catch(e){}
+    map.fitBounds(bounds,{padding: window.innerWidth<600?[30,40]:[80,80]});
   } else {
     map.setView([r.lat,r.lng],12);
   }
@@ -710,9 +750,40 @@ function exitExploreMode(){
   }
 }
 
+// === Reprise de partie au rafraichissement (localStorage) ===
+var _GC_SAVE_KEY='gc_game_v1';
+function _gcSaveState(){
+  try{
+    if(window._mpMode||window._dailyMode) return;
+    if(!gameActive||!roundList||!roundList.length||curR>=roundList.length) return;
+    var st={v:1,ts:Date.now(),perfectionMode:perfectionMode,noZoomMode:noZoomMode,chillMode:chillMode,eventsMode:eventsMode,fixedLevel:fixedLevel,roundList:roundList,curR:curR,total:total,roundScores:roundScores};
+    localStorage.setItem(_GC_SAVE_KEY,JSON.stringify(st));
+  }catch(e){}
+}
+function _gcClearState(){ try{ localStorage.removeItem(_GC_SAVE_KEY); }catch(e){} }
+function _gcTryRestore(){
+  try{
+    var raw=localStorage.getItem(_GC_SAVE_KEY);
+    if(!raw) return false;
+    var st=JSON.parse(raw);
+    if(!st||st.v!==1||!st.roundList||!st.roundList.length) return false;
+    if(typeof st.curR!=='number'||st.curR<0||st.curR>=st.roundList.length){ _gcClearState(); return false; }
+    perfectionMode=!!st.perfectionMode; noZoomMode=!!st.noZoomMode; chillMode=!!st.chillMode; eventsMode=!!st.eventsMode;
+    fixedLevel=(typeof st.fixedLevel==='number')?st.fixedLevel:-1;
+    roundList=st.roundList; total=st.total||0; roundScores=st.roundScores||[]; curR=st.curR;
+    document.body.classList.remove('menu-mode');
+    var _h=document.getElementById('hsc'); if(_h) _h.textContent=String(total);
+    document.getElementById('overlay').classList.add('h');
+    if(map){ try{ map.remove(); }catch(e){} map=null; }
+    try{ initMap(); }catch(e){}
+    startRound(curR);
+    return true;
+  }catch(e){ _gcClearState(); return false; }
+}
+
 document.addEventListener('DOMContentLoaded',function(){
   document.body.classList.add('menu-mode');
-  setTimeout(function(){try{initMap();}catch(e){}showMenu();},200);
+  setTimeout(function(){ if(!_gcTryRestore()){ try{initMap();}catch(e){} showMenu(); } },200);
   document.getElementById('confb').onclick=confirmGuess;
   document.getElementById('skipb').onclick=function(){if(!gameActive)return;clearInterval(tiv);nextLevel();};
   var nozb=document.getElementById('nozb');
@@ -842,6 +913,7 @@ function showDifficultyMenu(mode) {
 }
 
 function launchGame(level) {
+  window._dailyMode=false;
   fixedLevel = level;
   noZoomMode = window._menuNZ || false;
   perfectionMode = window._menuPerf || false;
@@ -867,3 +939,13 @@ function openMultiplayer() {
 // ── Exports window pour onclick inline ──
 window.mpShowJoinMenu = mpShowJoinMenu;
 window.mpLaunchGame = mpLaunchGame;
+
+/* === Responsive : recadrage de la carte au redimensionnement / rotation === */
+(function(){
+  var _gcRT;
+  function _gcResizeMap(){
+    try{ if(typeof map!=='undefined' && map){ map.invalidateSize(); if(typeof adjustMapZoom==='function') adjustMapZoom(); } }catch(e){}
+  }
+  window.addEventListener('resize', function(){ clearTimeout(_gcRT); _gcRT=setTimeout(_gcResizeMap,200); });
+  window.addEventListener('orientationchange', function(){ setTimeout(_gcResizeMap,350); });
+})();
