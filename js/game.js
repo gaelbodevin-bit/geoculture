@@ -730,7 +730,8 @@ function enterExploreMode(){
   const r=roundList[curR];
   if(playerPos && playerMarker){
     const bounds=L.latLngBounds([[playerPos.lat,playerPos.lng],[r.lat,r.lng]]);
-    map.fitBounds(bounds,{padding:[80,80]});
+    try{map.invalidateSize();}catch(e){}
+    map.fitBounds(bounds,{padding: window.innerWidth<600?[30,40]:[80,80]});
   } else {
     map.setView([r.lat,r.lng],12);
   }
