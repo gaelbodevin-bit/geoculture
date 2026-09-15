@@ -933,7 +933,7 @@ const EVENTS = [
    desc:"En 1492, Colomb toucha une île des Caraïbes, premier contact durable Europe-Amériques.",
    photo:"events/colomb_1492.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Atterrissage d'octobre 1492 sur une petite île après une traversée océanique, contact qui allait bouleverser deux mondes"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Débarquement d'octobre 1492 sur une petite île après une traversée océanique, contact qui allait bouleverser deux mondes"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En octobre 1492, après une longue traversée océanique, un navigateur aborde une petite île — un contact qui bouleversera deux mondes, dans un archipel des Caraïbes."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le premier débarquement de Colomb, aux Bahamas."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le débarquement de Colomb, à Guanahani, aux Bahamas."}
@@ -942,7 +942,7 @@ const EVENTS = [
    desc:"En 1770, James Cook aborda la côte est, prélude à la colonisation britannique.",
    photo:"events/botany_bay.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Abordage de 1770 dans une baie foisonnante de plantes nouvelles par un navigateur cartographe, prélude à une colonisation lointaine"},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Débarquement de 1770 dans une baie foisonnante de plantes nouvelles par un navigateur cartographe, prélude à une colonisation lointaine"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1770, un navigateur cartographe aborde une baie foisonnante de plantes nouvelles, sur la côte est d'un continent austral."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le débarquement de Cook, en Australie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le débarquement à Botany Bay, près de Sydney, en Australie."}
@@ -965,7 +965,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire napoléonienne des Trois Empereurs, en Tchéquie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Austerlitz, en Moravie, en Tchéquie."}
   ]},
-  {name:"Bataille de la Moskova (Borodino) — Russie", lat:55.52, lng:35.82, radius:6000,
+  {name:"Bataille de la Moskova — Russie", lat:55.52, lng:35.82, radius:6000,
    desc:"En 1812, la bataille la plus sanglante de la campagne de Russie ouvrit la route de Moscou.",
    photo:"events/borodino.jpg",
    hints:[
@@ -1064,7 +1064,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'offensive meurtrière de 1916, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de la Somme, dans la Somme, en France."}
   ]},
-  {name:"Bataille de la Marne (1914) — Marne, France", lat:48.96, lng:3.39, radius:9000,
+  {name:"Bataille de la Marne — Marne, France", lat:48.96, lng:3.39, radius:9000,
    desc:"En 1914, le « miracle de la Marne » stoppa l'avancée allemande sur Paris.",
    photo:"events/marne_1914.jpg",
    hints:[
@@ -1082,7 +1082,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La révolution bolchevique, en Russie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La révolution d'Octobre, à Saint-Pétersbourg, en Russie."}
   ]},
-  {name:"Armistice de Rethondes — Oise, France", lat:49.427, lng:2.906, radius:500,
+  {name:"Armistice du 11 novembre 1918 — Oise, France", lat:49.427, lng:2.906, radius:500,
    desc:"Le 11 novembre 1918, l'armistice signé dans un wagon mit fin à la Grande Guerre.",
    photo:"events/rethondes.jpg",
    hints:[
