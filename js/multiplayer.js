@@ -37,7 +37,8 @@ function mpEnsureAuth(){
   });
 }
 
-// État local var mp = {
+// État local
+var mp = {
   roomCode: null, playerId: null, playerName: null,
   isHost: false, roomRef: null,
   listeners: [], timerInterval: null
@@ -57,7 +58,8 @@ function mpColorFor(pid) {
   return _colorMap[pid];
 }
 
-// Utilitaires function genCode(){ var c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',s=''; for(var i=0;i<6;i++)s+=c[Math.floor(Math.random()*c.length)]; return s; }
+// Utilitaires
+function genCode(){ var c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789',s=''; for(var i=0;i<6;i++)s+=c[Math.floor(Math.random()*c.length)]; return s; }
 function genPid(){ return 'p_'+Math.random().toString(36).substr(2,9)+'_'+Date.now(); }
 function getPlayerName(){ var u=(typeof getCurrentUser==='function'?getCurrentUser():null)||mpAuth.currentUser; if(u && !u.isAnonymous) return u.displayName || (u.email?u.email.split('@')[0]:'') || mp.playerName || 'Joueur'; return mp.playerName || 'Joueur'; }
 function getPlayerPhoto(){ var u=typeof getCurrentUser==='function'?getCurrentUser():null; return u?(u.photoURL||''):''; }
@@ -76,7 +78,8 @@ function safePhotoUrl(u){
   return /^https:\/\/[\w.~:\/?#@!$&*+,;=%()\[\]-]+$/.test(u) ? u : '';
 }
 
-// Créer un salon function mpCreateRoom(options) {
+// Créer un salon
+function mpCreateRoom(options) {
   return mpEnsureAuth().then(function(_u){
   var code = genCode();
   mp.roomCode = code; mp.playerId = _u.uid; mp.isHost = true;
@@ -104,7 +107,8 @@ function safePhotoUrl(u){
   }); // fin mpEnsureAuth
 }
 
-// Rejoindre un salon function mpJoinRoom(code, playerName) {
+// Rejoindre un salon
+function mpJoinRoom(code, playerName) {
   code = code.toUpperCase().trim();
   mp.playerName = playerName;
   return mpEnsureAuth().then(function(_u){
@@ -127,7 +131,8 @@ function safePhotoUrl(u){
   }); // fin mpEnsureAuth
 }
 
-// Écouter le salon (un seul listener sur la room entière) function mpListenRoom() {
+// Écouter le salon (un seul listener sur la room entière)
+function mpListenRoom() {
   if(!mp.roomRef) return;
   var fn = onValue(mp.roomRef, function(snap) {
     if(!snap.exists()){ mpCleanup(); return; }
@@ -136,7 +141,8 @@ function safePhotoUrl(u){
   mp.listeners.push({ref: mp.roomRef, fn});
 }
 
-// Routeur principal function mpHandleRoomChange(room) {
+// Routeur principal
+function mpHandleRoomChange(room) {
   // --- Mise à jour panel live si on est en train de jouer ---
   if(mpRoundActive) {
     mpUpdateLivePanel(room);
@@ -153,7 +159,8 @@ function safePhotoUrl(u){
   }
 }
 
-// Lobby function mpShowLobby() {
+// Lobby
+function mpShowLobby() {
   document.getElementById('overlay').classList.remove('h');
   mpUpdateLobby(null);
 }
@@ -212,7 +219,8 @@ function mpUpdateLobby(room) {
   ov.innerHTML = h.join('');
 }
 
-// Lancer la partie function mpLaunchGame() {
+// Lancer la partie
+function mpLaunchGame() {
   if(!mp.isHost || !mp.roomRef) return;
   get(mp.roomRef).then(function(snap) {
     var nb = (snap.val().options||{}).nbRounds||5;
@@ -253,7 +261,8 @@ function mpHandleCountdown(room) {
   }
 }
 
-// Démarrer un round – appelé quand status passe à 'playing' function mpHandlePlaying(room) {
+// Démarrer un round – appelé quand status passe à 'playing'
+function mpHandlePlaying(room) {
   var rIdx = room.round||0;
 
   // Stopper définitivement le countdown local
@@ -342,7 +351,8 @@ function mpHandleCountdown(room) {
   mpStartSyncTimer(_rs, opts.timerDuration||30, rIdx);
 }
 
-// Timer synchronisé function mpStartSyncTimer(roundStart, duration, rIdx) {
+// Timer synchronisé
+function mpStartSyncTimer(roundStart, duration, rIdx) {
   clearInterval(mp.timerInterval);
   var C = 2*Math.PI*38;
 
@@ -399,7 +409,8 @@ function mpHandleCountdown(room) {
   tick();
 }
 
-// Soumettre une réponse function mpSubmitAnswer(pos, dist, pts, rIdx) {
+// Soumettre une réponse
+function mpSubmitAnswer(pos, dist, pts, rIdx) {
   if(!mp.roomCode || !mp.playerId) return;
 
   var ansRef = ref(rtdb, 'rooms/'+mp.roomCode+'/answers/'+rIdx+'/'+mp.playerId);
@@ -412,7 +423,8 @@ function mpHandleCountdown(room) {
   });
 }
 
-// Hôte surveille les réponses de tous function mpWatchAllAnswered(rIdx) {
+// Hôte surveille les réponses de tous
+function mpWatchAllAnswered(rIdx) {
   if(chillMode) return;
   if(mp._watchInterval) { clearInterval(mp._watchInterval); }
   var aRef = ref(rtdb,'rooms/'+mp.roomCode+'/answers/'+rIdx);
@@ -833,7 +845,8 @@ function mpShowFinalResults(room) {
   ov.classList.remove('h');
 }
 
-// Panel live (style Skribbl) function mpEnsureLivePanel() {
+// Panel live (style Skribbl)
+function mpEnsureLivePanel() {
   if(document.getElementById('mp-live-panel')) return;
   var p = document.createElement('div');
   p.id = 'mp-live-panel';
@@ -885,7 +898,8 @@ function mpRemoveLivePanel() {
   var p=document.getElementById('mp-live-panel'); if(p)p.remove();
 }
 
-// Marqueurs adversaires en temps réel function mpUpdateOtherMarkers(room) {
+// Marqueurs adversaires en temps réel
+function mpUpdateOtherMarkers(room) {
   if(!window.map) return;
   var rIdx=room.round||0, answers=(room.answers||{})[rIdx]||{}, players=room.players||{};
 
@@ -957,7 +971,8 @@ window.mpOnConfirm = function() {
   mpSubmitAnswer(playerPos, dist, pts, mpCurrentRound);
 };
 
-// Quitter function mpLeaveRoom() {
+// Quitter
+function mpLeaveRoom() {
   clearInterval(mp.timerInterval);
   clearTimeout(_cdTimer); _cdDone=false;
   mpRemoveLivePanel(); mpClearOtherMarkers();

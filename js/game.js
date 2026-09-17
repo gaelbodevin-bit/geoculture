@@ -933,12 +933,8 @@ function openMultiplayer() {
     else setTimeout(function(){ if(typeof window.showPremiumOverlay==='function') window.showPremiumOverlay('Multijoueur'); },500);
     return;
   }
-  if(typeof mpShowJoinMenu==='function') mpShowJoinMenu();
+  if(typeof window.mpShowJoinMenu==='function') window.mpShowJoinMenu();
 }
-
-// ── Exports window pour onclick inline ──
-window.mpShowJoinMenu = mpShowJoinMenu;
-window.mpLaunchGame = mpLaunchGame;
 
 /* === Responsive : recadrage de la carte au redimensionnement / rotation === */
 (function(){
