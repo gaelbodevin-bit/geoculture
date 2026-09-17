@@ -521,7 +521,8 @@ function mpHandleRoundEnd(room) {
   var answers = (room.answers||{})[rIdx]||{};
   var players = room.players||{};
 
-  // ?? Vérifier que toutes les réponses sont présentes var allPresent = Object.keys(players).every(function(pid){ return answers[pid]!==undefined; });
+  // Vérifier que toutes les réponses sont présentes
+  var allPresent = Object.keys(players).every(function(pid){ return answers[pid]!==undefined; });
   if(!allPresent) {
     setTimeout(function(){
       get(ref(rtdb,'rooms/'+mp.roomCode)).then(function(s){
@@ -531,7 +532,8 @@ function mpHandleRoundEnd(room) {
     return;
   }
 
-  // ?? Masquer panel live var lp = document.getElementById('mp-live-panel');
+  // Masquer panel live
+  var lp = document.getElementById('mp-live-panel');
   if(lp) lp.style.display='none';
 
   // ?? Carte : lieu cible + marqueurs + lignes de tous mpClearOtherMarkers();
@@ -981,7 +983,8 @@ function mpLeaveRoom() {
   }
   mp.listeners.forEach(function(l){ try{off(l.ref,'value',l.fn);}catch(e){} });
   mp.listeners=[];
-  if(mp.roomRef) { setTimeout(function(){ remove(mp.roomRef).catch(function(){}); }, 1000); }
+  var roomRefToRemove = mp.roomRef;
+  if(roomRefToRemove) { setTimeout(function(){ remove(roomRefToRemove).catch(function(){}); }, 1000); }
   mp.roomCode=mp.playerId=mp.roomRef=null; mp.isHost=false;
   mpCurrentRound=-1; mpAnswered=false; mpRoundActive=false; window._mpMode=false;
   if(typeof showMenu==='function') showMenu();
