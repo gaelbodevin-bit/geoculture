@@ -420,6 +420,14 @@ function mpHandleCountdown(room) {
   }
 }
 
+function mpUpdateHintButton(hintLevel, isFixedLevel, isPlayerActive) {
+  const hintButton = document.getElementById('skipb');
+  if (!hintButton) return;
+
+  hintButton.style.display = isFixedLevel ? 'none' : 'block';
+  hintButton.disabled = isFixedLevel || !isPlayerActive || hintLevel >= 3;
+}
+
 function mpHandlePlaying(room) {
   const roundIndex = room.round || 0;
   const roomOptions = room.options || {};
@@ -431,6 +439,12 @@ function mpHandlePlaying(room) {
 
   countdownDone = true;
   clearTimeout(countdownTimer);
+
+  mpUpdateHintButton(
+    playerHintLevel,
+    roomOptions.fixedLevel >= 0,
+    playerStatus !== 'submitted' && playerStatus !== 'exhausted' && playerStatus !== 'eliminated'
+  );
 
   // Les marqueurs de la manche précédente ne doivent jamais entrer dans la nouvelle manche.
   if (roundIndex !== mpCurrentRound.value) {
@@ -456,8 +470,7 @@ function mpHandlePlaying(room) {
       confirming = false;
       updateDots();
       showHint();
-      const skipButton = document.getElementById('skipb');
-      if (skipButton) skipButton.disabled = curL >= 3;
+      mpUpdateHintButton(curL, fixedLevel >= 0, true);
       mpStartSyncTimer(
         playerAnswer && playerAnswer.hintStartAt ? playerAnswer.hintStartAt : room.roundStart,
         (room.options || {}).timerDuration || 30,
@@ -520,8 +533,7 @@ function mpHandlePlaying(room) {
   document.getElementById('hsc').textContent = fmtPts(total);
   document.getElementById('confb').disabled = true;
 
-  const skipButton = document.getElementById('skipb');
-  if (skipButton) skipButton.style.display = fixedLevel >= 0 ? 'none' : 'block';
+  mpUpdateHintButton(playerHintLevel, fixedLevel >= 0, true);
 
   if (noZoomMode && typeof initMap === 'function') {
     if (map) map.remove();
@@ -541,8 +553,7 @@ function mpHandlePlaying(room) {
     curL = playerHintLevel;
     updateDots();
   }
-  const localSkipButton = document.getElementById('skipb');
-  if (localSkipButton) localSkipButton.disabled = fixedLevel >= 0 || curL >= 3;
+  mpUpdateHintButton(curL, fixedLevel >= 0, gameActive);
   showHint();
 
   mpEnsureLivePanel();
@@ -713,8 +724,7 @@ function mpMoveToNextHint() {
     triggerFlash(nextHintLevel);
     updateDots();
     showHint();
-    const skipButton = document.getElementById('skipb');
-    if (skipButton) skipButton.disabled = nextHintLevel >= 3;
+    mpUpdateHintButton(nextHintLevel, false, true);
     mpStartSyncTimer(Date.now(), 30, mpCurrentRound.value);
 
     update(answerRef, {
