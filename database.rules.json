@@ -34,6 +34,7 @@
             "score":    { ".write": "auth != null && root.child('rooms').child($roomCode).child('host').val() == auth.uid", ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 200000" },
             "online":   { ".validate": "newData.isBoolean()" },
             "joinedAt": { ".validate": "newData.isNumber()" },
+            "eliminated": { ".validate": "newData.isBoolean()" },
             "$other":   { ".validate": false }
           }
         },
@@ -41,12 +42,17 @@
         "answers": {
           "$round": {
             "$pid": {
-              ".write": "!data.exists() && auth != null && ( $pid == auth.uid || root.child('rooms').child($roomCode).child('host').val() == auth.uid )",
+              ".write": "auth != null && ( $pid == auth.uid || root.child('rooms').child($roomCode).child('host').val() == auth.uid )",
+              ".validate": "newData.hasChildren(['status', 'hintLevel']) && (newData.child('status').val() == 'active' || newData.hasChildren(['pts', 'dist', 'submittedAt']))",
+              "status": { ".validate": "newData.isString() && newData.val().matches(/^(active|submitted|exhausted|eliminated)$/)" },
+              "hintLevel": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 3" },
               "pts":  { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5000" },
-              "dist": { ".validate": "newData.isNumber()" },
+              "dist": { ".validate": "newData.val() == null || (newData.isNumber() && newData.val() >= 0)" },
               "submittedAt": { ".validate": "newData.isNumber()" },
+              "hintStartAt": { ".validate": "newData.isNumber()" },
               "timeout":     { ".validate": "newData.isBoolean()" },
               "pos": {
+                ".validate": "newData.val() == null || newData.hasChildren(['lat', 'lng'])",
                 "lat": { ".validate": "newData.isNumber() && newData.val() >= -90 && newData.val() <= 90" },
                 "lng": { ".validate": "newData.isNumber() && newData.val() >= -180 && newData.val() <= 180" },
                 "$other": { ".validate": false }
