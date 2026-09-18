@@ -113,7 +113,10 @@ function startRound(idx){
   updateDots();showHint();startTimer();
   // Masquer le bouton indice suivant en niveau fixe
   var skipb=document.getElementById('skipb');
-  if(skipb) skipb.style.display=fixedLevel>=0?'none':'block';
+  if(skipb){
+    skipb.style.display=fixedLevel>=0?'none':'block';
+    skipb.disabled=fixedLevel>=0||curL>=3;
+  }
   _gcSaveState();
 }
 
@@ -209,6 +212,8 @@ function triggerFlash(level){
 
 function nextLevel(){
   if(!gameActive)return;
+  // En multijoueur, l'indice 4 est le dernier : le bouton ne doit pas valider la manche.
+  if(window._mpMode&&fixedLevel<0&&curL>=3)return;
   if(fixedLevel>=0){
     if(window._mpMode && window.mpOnConfirm){ window.mpOnConfirm(); return; }
     clearInterval(tiv);gameActive=false;confirming=true;resolveRound();

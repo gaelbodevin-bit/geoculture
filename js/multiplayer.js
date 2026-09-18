@@ -709,6 +709,8 @@ function mpMoveToNextHint() {
     triggerFlash(nextHintLevel);
     updateDots();
     showHint();
+    const skipButton = document.getElementById('skipb');
+    if (skipButton) skipButton.disabled = nextHintLevel >= 3;
     mpStartSyncTimer(Date.now(), 30, mpCurrentRound.value);
 
     update(answerRef, {
