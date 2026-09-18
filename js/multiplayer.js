@@ -456,6 +456,8 @@ function mpHandlePlaying(room) {
       confirming = false;
       updateDots();
       showHint();
+      const skipButton = document.getElementById('skipb');
+      if (skipButton) skipButton.disabled = curL >= 3;
       mpStartSyncTimer(
         playerAnswer && playerAnswer.hintStartAt ? playerAnswer.hintStartAt : room.roundStart,
         (room.options || {}).timerDuration || 30,
@@ -539,6 +541,8 @@ function mpHandlePlaying(room) {
     curL = playerHintLevel;
     updateDots();
   }
+  const localSkipButton = document.getElementById('skipb');
+  if (localSkipButton) localSkipButton.disabled = fixedLevel >= 0 || curL >= 3;
   showHint();
 
   mpEnsureLivePanel();
