@@ -213,7 +213,10 @@ function nextLevel(){
     if(window._mpMode && window.mpOnConfirm){ window.mpOnConfirm(); return; }
     clearInterval(tiv);gameActive=false;confirming=true;resolveRound();
   }
-  else if(curL<3){curL++;triggerFlash(curL);updateDots();showHint();startTimer();}
+  else if(curL<3){
+    if(window._mpMode && window.mpOnNextHint){ window.mpOnNextHint(); return; }
+    curL++;triggerFlash(curL);updateDots();showHint();startTimer();
+  }
   else{
     if(window._mpMode && window.mpOnConfirm){ window.mpOnConfirm(); return; }
     clearInterval(tiv);gameActive=false;confirming=true;resolveRound();

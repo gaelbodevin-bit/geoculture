@@ -304,7 +304,9 @@ function mpUpdateLobby(room) {
   }
 
   const players = room.players || {};
-  const playerEntries = Object.entries(players);
+  const playerEntries = Object.entries(players).sort((firstPlayer, secondPlayer) => {
+    return (secondPlayer[1].score || 0) - (firstPlayer[1].score || 0);
+  });
   const opts = room.options || {};
   const canStart = mp.isHost && playerEntries.length >= 2;
   const levelNames = ['Tout niveaux', 'Expert', 'Difficile', 'Moyen', 'Facile'];
@@ -637,7 +639,10 @@ function mpHandlePlayerTimeout(roundIndex) {
   const answerRef = ref(rtdb, 'rooms/' + mp.roomCode + '/answers/' + roundIndex + '/' + mp.playerId);
   get(answerRef).then((snapshot) => {
     const answer = snapshot.val() || {};
-    if (answer.status === 'submitted' || answer.status === 'exhausted' || answer.status === 'eliminated') return;
+    if (answer.status === 'submitted' || answer.status === 'exhausted' || answer.status === 'eliminated') {
+      if (mp.isHost) mpWatchAllAnswered(roundIndex);
+      return;
+    }
 
     const hintLevel = answer.hintLevel !== undefined
       ? answer.hintLevel
@@ -649,6 +654,8 @@ function mpHandlePlayerTimeout(roundIndex) {
         status: 'active',
         hintLevel: hintLevel + 1,
         hintStartAt: Date.now(),
+      }).then(() => {
+        if (mp.isHost) mpWatchAllAnswered(roundIndex);
       });
       return;
     }
@@ -661,6 +668,40 @@ function mpHandlePlayerTimeout(roundIndex) {
       pos: null,
       submittedAt: Date.now(),
       timeout: true,
+    }).then(() => {
+      if (mp.isHost) mpWatchAllAnswered(roundIndex);
+    });
+  });
+}
+
+function mpMoveToNextHint() {
+  if (!mp.roomCode || !mp.playerId || mpAnswered.value || fixedLevel >= 0) return;
+
+  const answerRef = ref(rtdb, 'rooms/' + mp.roomCode + '/answers/' + mpCurrentRound.value + '/' + mp.playerId);
+  get(answerRef).then((snapshot) => {
+    const answer = snapshot.val() || {};
+    if (answer.status === 'submitted' || answer.status === 'exhausted' || answer.status === 'eliminated') return;
+
+    const currentHintLevel = Math.max(
+      curL,
+      answer.hintLevel !== undefined ? answer.hintLevel : 0
+    );
+    if (currentHintLevel >= 3) return;
+
+    const nextHintLevel = currentHintLevel + 1;
+    curL = nextHintLevel;
+    mpAnswered.value = false;
+    gameActive = true;
+    confirming = false;
+    triggerFlash(nextHintLevel);
+    updateDots();
+    showHint();
+    mpStartSyncTimer(Date.now(), 30, mpCurrentRound.value);
+
+    update(answerRef, {
+      status: 'active',
+      hintLevel: nextHintLevel,
+      hintStartAt: Date.now(),
     });
   });
 }
@@ -1208,12 +1249,14 @@ function mpRenderLivePanel(room) {
   const answers = (room.answers || {})[roundIndex] || {};
   const players = room.players || {};
   const opts = room.options || {};
-  const sortedPlayers = Object.entries(players).sort((a, b) => (b[1].score || 0) - (a[1].score || 0));
+  const playerEntries = Object.entries(players).sort((firstPlayer, secondPlayer) => {
+    return (secondPlayer[1].score || 0) - (firstPlayer[1].score || 0);
+  });
 
   const html = [];
   html.push('<div style="font-size:10px;color:#f97316;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px">Manche ' + (roundIndex + 1) + '/' + (opts.nbRounds || 5) + '</div>');
 
-  sortedPlayers.forEach(([pid, player]) => {
+  playerEntries.forEach(([pid, player]) => {
     const isMe = pid === mp.playerId;
     const color = player.color || mpColorFor(pid);
     const answer = answers[pid];
@@ -1230,10 +1273,10 @@ function mpRenderLivePanel(room) {
     html.push(done
       ? (answer.status === 'eliminated'
         ? '<span style="font-size:10px;color:#ef4444;font-weight:700;flex-shrink:0">Éliminé</span>'
-        : '<span style="font-size:11px;color:#22c55e;font-weight:700;flex-shrink:0">+' + fmtPts(answer.pts || 0) + '</span>')
+        : '<span style="font-size:10px;color:#22c55e;font-weight:700;flex-shrink:0">Répondu</span>')
       : '<span style="font-size:10px;color:#fbbf24;flex-shrink:0">Indice ' + (hintLevel + 1) + '</span>');
     html.push('</div>');
-    html.push('<div style="font-size:10px;color:#4b5563;padding-left:29px;padding-bottom:2px">' + fmtPts(player.score || 0) + ' pts</div>');
+    html.push('<div style="font-size:10px;color:#4b5563;padding-left:29px;padding-bottom:2px">Total : ' + fmtPts(player.score || 0) + ' pts</div>');
   });
 
   panel.innerHTML = html.join('');
@@ -1245,41 +1288,10 @@ function mpRemoveLivePanel() {
 }
 
 function mpUpdateOtherMarkers(room) {
-  if (!window.map) return;
+  if (!window.map || room.status !== 'playing') return;
 
-  const roundIndex = room.round || 0;
-  const answers = (room.answers || {})[roundIndex] || {};
-  const players = room.players || {};
-
-  Object.keys(mpOtherMarkers).forEach((pid) => {
-    if (!answers[pid] || !answers[pid].pos) {
-      mpOtherMarkers[pid].remove();
-      delete mpOtherMarkers[pid];
-    }
-  });
-
-  Object.entries(answers).forEach(([pid, answer]) => {
-    if (pid === mp.playerId || !answer.pos || answer.pos.lat == null) return;
-
-    const player = players[pid];
-    if (!player) return;
-
-    const color = player.color || mpColorFor(pid);
-    const icon = L.divIcon({
-      className: '',
-      html: '<div style="width:20px;height:20px;background:' + color + ';border:2.5px solid #fff;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 2px 8px rgba(0,0,0,.4);position:relative"><div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) rotate(45deg);font-size:8px;color:#fff;font-weight:700">' + safeChar(player.name) + '</div></div>',
-      iconSize: [20, 20],
-      iconAnchor: [10, 20],
-    });
-
-    const popup = '<div style="font-family:system-ui;font-size:12px"><b style="color:' + color + '">' + esc(player.name) + '</b><br>' + fmtDst(answer.dist) + '<br><b style="color:#f97316">+' + fmtPts(answer.pts) + '</b></div>';
-
-    if (mpOtherMarkers[pid]) {
-      mpOtherMarkers[pid].setLatLng([answer.pos.lat, answer.pos.lng]).setPopupContent(popup);
-    } else {
-      mpOtherMarkers[pid] = L.marker([answer.pos.lat, answer.pos.lng], { icon }).bindPopup(popup).addTo(map);
-    }
-  });
+  // Les positions et les scores adverses sont révélés uniquement dans les résultats.
+  mpClearOtherMarkers();
 }
 
 function mpClearOtherMarkers() {
@@ -1422,4 +1434,5 @@ window.mpLeaveRoom = mpLeaveRoom;
 window.mpSubmitAnswer = mpSubmitAnswer;
 window.mpCheckAllAnswered = mpWatchAllAnswered;
 window.mpLaunchNextRound = mpLaunchNextRound;
+window.mpOnNextHint = mpMoveToNextHint;
 window.mpOnConfirm = window.mpOnConfirm || function () {};
