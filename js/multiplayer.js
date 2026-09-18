@@ -432,6 +432,14 @@ function mpHandlePlaying(room) {
   countdownDone = true;
   clearTimeout(countdownTimer);
 
+  // Les marqueurs de la manche précédente ne doivent jamais entrer dans la nouvelle manche.
+  if (roundIndex !== mpCurrentRound.value) {
+    mpClearOtherMarkers();
+    if (playerMarker) { playerMarker.remove(); playerMarker = null; }
+    if (targetMarker) { targetMarker.remove(); targetMarker = null; }
+    if (lineLayer) { lineLayer.remove(); lineLayer = null; }
+  }
+
   if (roundIndex === mpCurrentRound.value && mpRoundActive.value) {
     if (playerStatus === 'submitted' || playerStatus === 'exhausted' || playerStatus === 'eliminated') {
       clearInterval(mp.timerInterval);
@@ -460,7 +468,6 @@ function mpHandlePlaying(room) {
   mpCurrentRound.value = roundIndex;
   mpAnswered.value = false;
   mpRoundActive.value = true;
-  mpClearOtherMarkers();
 
   const currentPlayer = (room.players || {})[mp.playerId] || {};
   if (currentPlayer.eliminated) {
@@ -619,10 +626,11 @@ function mpSubmitAnswer(position, distance, points, roundIndex) {
     status: isEliminated ? 'eliminated' : 'submitted',
     hintLevel: fixedLevel >= 0 ? fixedLevel : curL,
     pts: isEliminated ? 0 : (points || 0),
-    dist: distance,
-    pos: position ? { lat: position.lat, lng: position.lng } : null,
     submittedAt: Date.now(),
   };
+
+  if (distance !== null && distance !== undefined) answerData.dist = distance;
+  if (position) answerData.pos = { lat: position.lat, lng: position.lng };
 
   set(answerRef, answerData).then(() => {
     if (isEliminated) {
@@ -632,6 +640,8 @@ function mpSubmitAnswer(position, distance, points, roundIndex) {
     }
   }).then(() => {
     if (mp.isHost) mpWatchAllAnswered(roundIndex);
+  }).catch((error) => {
+    console.error('Impossible d’enregistrer la réponse multijoueur:', error);
   });
 }
 
@@ -664,12 +674,12 @@ function mpHandlePlayerTimeout(roundIndex) {
       status: 'exhausted',
       hintLevel,
       pts: 0,
-      dist: null,
-      pos: null,
       submittedAt: Date.now(),
       timeout: true,
     }).then(() => {
       if (mp.isHost) mpWatchAllAnswered(roundIndex);
+    }).catch((error) => {
+      console.error('Impossible d’enregistrer le timeout multijoueur:', error);
     });
   });
 }
@@ -770,8 +780,6 @@ function mpWatchAllAnswered(roundIndex) {
             status: 'exhausted',
             hintLevel,
             pts: 0,
-            dist: null,
-            pos: null,
             submittedAt: Date.now(),
             timeout: true,
           };
