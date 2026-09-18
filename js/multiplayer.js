@@ -666,6 +666,9 @@ function mpHandlePlayerTimeout(roundIndex) {
         hintStartAt: Date.now(),
       }).then(() => {
         if (mp.isHost) mpWatchAllAnswered(roundIndex);
+      }).catch((error) => {
+        clearInterval(mp.timerInterval);
+        console.error('Impossible de passer à l’indice suivant:', error);
       });
       return;
     }
@@ -712,6 +715,9 @@ function mpMoveToNextHint() {
       status: 'active',
       hintLevel: nextHintLevel,
       hintStartAt: Date.now(),
+    }).catch((error) => {
+      clearInterval(mp.timerInterval);
+      console.error('Impossible de synchroniser l’indice suivant:', error);
     });
   });
 }

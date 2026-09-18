@@ -43,7 +43,7 @@
           "$round": {
             "$pid": {
               ".write": "auth != null && ( $pid == auth.uid || root.child('rooms').child($roomCode).child('host').val() == auth.uid )",
-              ".validate": "newData.hasChildren(['status', 'hintLevel']) && (newData.child('status').val() == 'active' || newData.hasChildren(['pts', 'dist', 'submittedAt']))",
+              ".validate": "newData.hasChildren(['status', 'hintLevel']) && (newData.child('status').val() == 'active' || newData.hasChildren(['pts', 'submittedAt']))",
               "status": { ".validate": "newData.isString() && newData.val().matches(/^(active|submitted|exhausted|eliminated)$/)" },
               "hintLevel": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 3" },
               "pts":  { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5000" },
