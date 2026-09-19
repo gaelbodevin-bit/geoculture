@@ -35,7 +35,7 @@ onAuthStateChanged(fbAuth, function(user) {
   currentUser = user;
   if(user) {
     getDoc(doc(fbDb, 'users', user.uid)).then(function(snap) {
-      currentUserPremium = snap.exists() && snap.data().premium === true;
+      var _ud = snap.exists() ? snap.data() : {}; currentUserPremium = _ud.premium === true; window.premiumUntil = _ud.premiumUntil ? (_ud.premiumUntil.toMillis ? _ud.premiumUntil.toMillis() : (_ud.premiumUntil.seconds ? _ud.premiumUntil.seconds*1000 : null)) : null; window.subCancel = _ud.cancelAtPeriodEnd === true;
       window.isPremium = currentUserPremium; if(window.gcUpdateAds) window.gcUpdateAds();
       updateAuthUI(user);
       // Rafraîchir le menu si visible (sans boucle)
@@ -69,7 +69,7 @@ onAuthStateChanged(fbAuth, function(user) {
       if(typeof showToast==='function') showToast('Merci ! Accés Premium activé. Rechargez si nécessaire.');
       if(user) {
         getDoc(doc(fbDb, 'users', user.uid)).then(function(snap) {
-          currentUserPremium = snap.exists() && snap.data().premium === true;
+          var _ud = snap.exists() ? snap.data() : {}; currentUserPremium = _ud.premium === true; window.premiumUntil = _ud.premiumUntil ? (_ud.premiumUntil.toMillis ? _ud.premiumUntil.toMillis() : (_ud.premiumUntil.seconds ? _ud.premiumUntil.seconds*1000 : null)) : null; window.subCancel = _ud.cancelAtPeriodEnd === true;
           window.isPremium = currentUserPremium; if(window.gcUpdateAds) window.gcUpdateAds();
         });
       }
@@ -268,7 +268,7 @@ function showHistory() {
     h.push('<div style="display:flex;gap:10px;justify-content:center">');
     h.push('<div style="margin-top:24px;padding-top:16px;border-top:1px solid #1e2d45;width:100%;max-width:460px">');
     h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Zone de danger</div>');
-    if((typeof window.isPremiumUser==='function'?window.isPremiumUser():window.isPremium===true)){ h.push('<button onclick="window.openBillingPortal()" style="padding:8px 16px;border-radius:8px;border:1px solid #2d3f5e;background:#0d1120;color:#fbbf24;font-size:13px;cursor:pointer;font-weight:600;margin-bottom:10px">&#9881;&#65039; G&#233;rer / r&#233;silier mon abonnement</button>'); }
+    if((typeof window.isPremiumUser==='function'?window.isPremiumUser():window.isPremium===true)){ if(window.premiumUntil){ var _rd=new Date(window.premiumUntil); var _days=Math.max(0,Math.ceil((window.premiumUntil-Date.now())/86400000)); var _ds=_rd.toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'}); var _msg=window.subCancel?('&#9203; Ton abonnement se termine le '+_ds+' (dans '+_days+' j) &mdash; pas de renouvellement'):('&#128337; Prochain renouvellement le '+_ds+' (dans '+_days+' j)'); h.push('<div style="font-size:12.5px;color:#94a3b8;margin-bottom:10px;padding:8px 12px;border-radius:8px;background:#0d1120;border:1px solid #1e2d45;text-align:center">'+_msg+'</div>'); } h.push('<button onclick="window.openBillingPortal()" style="padding:8px 16px;border-radius:8px;border:1px solid #2d3f5e;background:#0d1120;color:#fbbf24;font-size:13px;cursor:pointer;font-weight:600;margin-bottom:10px">&#9881;&#65039; G&#233;rer / r&#233;silier mon abonnement</button>'); }
     h.push('<button onclick="confirmDeleteAccount()" style="padding:8px 16px;border-radius:8px;border:1px solid #ef4444;background:transparent;color:#ef4444;font-size:13px;cursor:pointer;font-weight:600">Supprimer mon compte et mes donn&#233;es</button>');
     h.push('<div style="font-size:11px;color:#6b7280;margin-top:6px">Supprime d&#233;finitivement votre compte, vos parties et vos scores. Irr&#233;versible.</div>');
     h.push('</div>');
