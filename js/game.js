@@ -395,10 +395,10 @@ function buildShareText(format) {
   var url = 'https://www.geo-culture.io/';
   // Emojis generes depuis leurs code points -> jamais corrompus par un mauvais encodage de fichier
   var E = {
-    green:  String.fromCodePoint(0x1F7E9), // carre vert
-    yellow: String.fromCodePoint(0x1F7E8), // carre jaune
-    red:    String.fromCodePoint(0x1F7E5), // carre rouge
-    target: String.fromCodePoint(0x1F3AF), // cible
+    green:  String.fromCodePoint(0x1F49A), // coeur vert
+    yellow: String.fromCodePoint(0x1F49B), // coeur jaune
+    red:    String.fromCodePoint(0x2764, 0xFE0F), // coeur rouge
+    target: String.fromCodePoint(0x1F4CD), // epingle
     dash:   '\u2014'                       // tiret long
   };
   var isDaily = !!window._dailyMode || !!window._wasDailyMode;
