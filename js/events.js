@@ -6,7 +6,7 @@ const EVENTS = [
    desc:"Le 21 octobre 1600, la victoire de Tokugawa Ieyasu sur la coalition de l'Ouest dans cette plaine brumeuse mit fin à un siècle de guerre civile et fonda un shogunat qui régna 265 ans.",
    photo:"events/sekigahara.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un matin brumeux de l'an 1600, dans une plaine détrempée, des milliers de bannières se font face ; à la tombée du jour, un seul homme règne, et s'ouvre une ère de paix sans fin."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Affrontement décisif de 1600 entre deux coalitions féodales, scellé par la trahison de Kobayakawa au profit du vainqueur qui fondera une dynastie de 265 ans"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1600, deux coalitions de seigneurs féodaux s'affrontent dans une plaine ; une trahison décide de l'issue et ouvre 265 ans de dynastie."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La bataille fondatrice du shogunat Tokugawa, au Japon."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Sekigahara, à Gifu, au Japon."}
@@ -15,7 +15,7 @@ const EVENTS = [
    desc:"Le 18 juin 1815, la défaite de Napoléon face à Wellington et Blücher mit fin aux Cent-Jours et à l'Empire, redessinant l'Europe pour un siècle.",
    photo:"events/waterloo.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un dimanche pluvieux de juin 1815, un empire s'effondre sur un plateau boueux face à une coalition."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite finale d'un empereur revenu de l'île d'Elbe, face à une coalition anglo-prussienne, un dimanche pluvieux de juin 1815"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En juin 1815, un empereur revenu d'exil est écrasé par une coalition anglo-prussienne sur un plateau agricole, au sud d'une grande capitale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La dernière bataille de Napoléon, en Belgique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Waterloo, à Waterloo, en Belgique."}
@@ -24,7 +24,7 @@ const EVENTS = [
    desc:"Du 1er au 3 juillet 1863, la plus meurtrière bataille de la guerre de Sécession (51 000 pertes) brisa l'invasion nordiste de Lee et marqua le tournant du conflit.",
    photo:"events/gettysburg.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Par une chaleur d'été de 1863, trois jours durant, champs et vergers se couvrent de morts ; sur ces collines, une nation déchirée joue son avenir."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Choc de trois jours en 1863 qui stoppa l'invasion sudiste ; le président y prononça quatre mois plus tard un discours de deux minutes resté célèbre"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1863, une bataille de trois jours stoppe une invasion sudiste pendant une guerre civile ; le président y prononcera un célèbre discours."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le tournant de la guerre de Sécession, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Gettysburg, en Pennsylvanie, aux États-Unis."}
@@ -33,7 +33,7 @@ const EVENTS = [
    desc:"En 216 av. J.-C., Hannibal encercla et anéantit une armée romaine deux fois supérieure par une manœuvre d'enveloppement restée un modèle d'art militaire.",
    photo:"events/cannae.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 216 av. J.-C., sous un soleil écrasant, une armée immense et sûre d'elle se laisse enfermer dans un anneau de fer, et s'évanouit en un jour."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Manœuvre d'encerclement de 216 av. J.-C. où un général carthaginois anéantit une armée deux fois supérieure, cas d'école militaire depuis 2 000 ans"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 216 av. J.-C., un général carthaginois encercle et anéantit une armée deux fois supérieure — un cas d'école de la tactique antique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire d'Hannibal sur Rome, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Cannes, dans les Pouilles, en Italie."}
@@ -42,7 +42,7 @@ const EVENTS = [
    desc:"Le 14 octobre 1066, la victoire de Guillaume le Conquérant sur Harold II ouvrit la conquête normande de l'Angleterre et transforma sa langue et sa noblesse.",
    photo:"events/hastings.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1066, au terme d'une longue journée d'automne, une couronne roule dans la poussière d'une colline ; une île entière bascule vers un autre destin."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire d'un duc normand en 1066, mort du roi adverse d'une flèche selon la légende, immortalisée sur une broderie de 70 mètres"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1066, un duc venu du continent conquiert une île ; le roi adverse meurt d'une flèche, la scène brodée sur une célèbre tapisserie."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La conquête normande de l'Angleterre."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Hastings, dans le Sussex, en Angleterre."}
@@ -51,7 +51,7 @@ const EVENTS = [
    desc:"Le 9 novembre 1989, l'ouverture soudaine des points de passage précipita la fin de la division de la ville et, deux ans plus tard, celle de la guerre froide.",
    photo:"events/mur_berlin.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un soir de novembre 1989, l'incroyable devient réel : on danse et l'on pleure au sommet d'un mur honni, marteau à la main, sous les projecteurs du monde entier."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Effondrement d'une frontière urbaine un soir de novembre 1989, après l'annonce confuse d'un porte-parole ; la foule fit le reste à coups de marteau"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En novembre 1989, une frontière urbaine dressée depuis 1961 s'effondre en une soirée, la foule franchissant les postes de passage."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La chute du Mur, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute du mur de Berlin, à Berlin, en Allemagne."}
@@ -60,7 +60,7 @@ const EVENTS = [
    desc:"Le 6 juin 1944, le secteur le plus meurtrier du Débarquement allié coûta près de 3 000 pertes américaines en quelques heures sous le feu des falaises.",
    photo:"events/omaha_beach.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"À l'aube du 6 juin 1944, sous une grêle d'acier, des milliers d'hommes surgis d'une mer grise se ruent vers un sable où la mort les fauche par vagues."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Assaut amphibie du 6 juin 1944 sur la plus sanglante des cinq plages, sous le feu croisé de bunkers perchés sur des falaises"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Le 6 juin 1944, l'assaut amphibie le plus meurtrier des cinq plages, sous le feu de bunkers perchés sur des falaises."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le débarquement allié le plus sanglant, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Omaha Beach, dans le Calvados (Normandie), France."}
@@ -69,7 +69,7 @@ const EVENTS = [
    desc:"Le 28 juin 1914, l'archiduc François-Ferdinand fut abattu par Gavrilo Princip près du pont Latin, déclenchant l'enchaînement qui mena à la Première Guerre mondiale.",
    photo:"events/sarajevo_1914.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un jour d'été 1914, dans une rue d'une ville des Balkans, deux détonations font vaciller un vieil ordre ; en quelques semaines, un continent s'embrase."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Deux coups de feu tirés par un étudiant nationaliste en 1914, sur un couple princier héritier d'un empire, étincelle d'un embrasement mondial"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1914, un étudiant nationaliste abat un couple princier héritier d'un empire — l'étincelle d'un conflit mondial."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'assassinat de l'archiduc François-Ferdinand, en Bosnie-Herzégovine."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'attentat de Sarajevo, en Bosnie-Herzégovine."}
@@ -78,7 +78,7 @@ const EVENTS = [
    desc:"De 1942 à 1943, la bataille la plus meurtrière de l'histoire (près de 2 millions de victimes) marqua le tournant du front de l'Est.",
    photo:"events/stalingrad.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Durant l'hiver 1942, on se bat pour chaque cave et chaque escalier d'une ville réduite en gravats ; le gel, la faim et la mitraille y engloutissent des armées."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège urbain de 1942-1943 le long d'un grand fleuve, encerclement d'une VIe armée entière, tournant d'une guerre à l'Est"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1942-1943, un siège urbain acharné le long d'un grand fleuve s'achève par l'encerclement d'une armée entière — tournant de la guerre à l'Est."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le tournant du front de l'Est, en Russie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Stalingrad (Volgograd), en Russie."}
@@ -87,7 +87,7 @@ const EVENTS = [
    desc:"En 1215, à Runnymede, le roi Jean sans Terre scella la Magna Carta imposée par ses barons, jalon fondateur des limites au pouvoir royal.",
    photo:"events/magna_carta.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1215, sous un ciel d'orage, un roi acculé, cerné par ses grands vassaux, appose à contrecœur son sceau au bas d'un texte qui, un jour, bridera tous les trônes."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Document de 1215 arraché à un roi impopulaire par ses barons révoltés dans une prairie au bord d'un fleuve, ancêtre lointain des libertés civiles"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1215, des barons révoltés arrachent à un roi impopulaire un document fondateur, dans une prairie au bord d'un fleuve."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La signature de la Magna Carta, en Angleterre."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Grande Charte, à Runnymede (Surrey), en Angleterre."}
@@ -96,7 +96,7 @@ const EVENTS = [
    desc:"Le 14 juillet 1789, la prise de la forteresse-prison, symbole de l'arbitraire royal, marqua le basculement de la Révolution française.",
    photo:"events/bastille.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Le 14 juillet 1789, une foule en fièvre déferle sur de vieilles tours ; à peine y trouve-t-on quelques captifs, mais un monde entier vacille."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Assaut populaire d'une forteresse-prison un 14 juillet, libérant sept détenus seulement mais renversant un symbole d'arbitraire"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Le 14 juillet 1789, une foule prend d'assaut une forteresse-prison, symbole d'arbitraire, dans l'est d'une grande capitale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise de la Bastille, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de la Bastille, à Paris, en France."}
@@ -105,7 +105,7 @@ const EVENTS = [
    desc:"En 490 av. J.-C., la victoire athénienne sur les Perses de Darius inspira la légende du messager courant annoncer le triomphe, à l'origine de la course moderne.",
    photo:"events/marathon.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 490 av. J.-C., sur une plaine ouverte face à la mer, une poignée d'hommes libres met en fuite, contre toute attente, une puissance immense venue d'ailleurs."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de citoyens-soldats sur un empire venu de l'Est en 490 av. J.-C. ; la légende d'un coureur porteur de la nouvelle donna son nom à une épreuve sportive"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 490 av. J.-C., des citoyens-soldats repoussent un empire venu de l'Est sur une plaine côtière ; un coureur porte la nouvelle."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire des cités grecques contre les Perses, en Grèce."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Marathon, en Attique, en Grèce."}
@@ -114,7 +114,7 @@ const EVENTS = [
    desc:"Le 9 avril 1865, la reddition de Lee à Grant dans un salon de village mit fin de fait à la guerre de Sécession.",
    photo:"events/appomattox.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un après-midi d'avril 1865, dans une pièce feutrée d'une maison isolée, deux hommes las se serrent la main ; quatre années de sang entre frères s'éteignent enfin."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capitulation d'un général sudiste dans le salon d'une maison de village, avril 1865, terme effectif d'une guerre civile"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En avril 1865, un général sudiste capitule dans le salon d'une maison de village, mettant fin à une guerre civile."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La reddition confédérée, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La reddition d'Appomattox, en Virginie, aux États-Unis."}
@@ -123,7 +123,7 @@ const EVENTS = [
    desc:"Le 21 octobre 1805, Nelson y détruisit les flottes franco-espagnoles au prix de sa vie, assurant la suprématie navale britannique pour un siècle.",
    photo:"events/trafalgar.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1805, dans la fumée et le fracas d'un combat naval, la victoire est totale ; mais sur le pont de son vaisseau, le vainqueur s'éteint à l'instant même de sa gloire."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Combat naval de 1805 au large d'un cap atlantique, victoire d'un amiral borgne et manchot tué au moment du triomphe"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1805, une flotte est écrasée au large d'un cap atlantique ; l'amiral vainqueur, borgne et manchot, meurt au moment du triomphe."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire navale de Nelson, au large de l'Espagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Trafalgar, au large de Cadix, en Espagne."}
@@ -132,7 +132,7 @@ const EVENTS = [
    desc:"En 1453, la prise de la capitale byzantine par Mehmed II mit fin à l'Empire romain d'Orient et fit basculer l'Europe dans une nouvelle ère.",
    photo:"events/constantinople_1453.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1453, après des semaines de siège, des remparts que l'on croyait éternels cèdent enfin ; le dernier héritier d'un très vieux monde disparaît dans la mêlée."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège de 1453 où des canons géants percèrent des murailles millénaires, effaçant le dernier héritier d'un empire antique"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1453, des canons géants percent des murailles millénaires et effacent un empire antique, sur un détroit entre deux continents."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise ottomane de Constantinople, en Turquie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute de Constantinople (Istanbul), en Turquie."}
@@ -141,7 +141,7 @@ const EVENTS = [
    desc:"Le 6 juin 1944, la plage la plus à l'ouest du Débarquement fut prise avec des pertes limitées, ouvrant la route de Cherbourg.",
    photo:"events/utah_beach.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Au petit jour du 6 juin 1944, une plage un peu plus clémente que les autres accueille les premières vagues d'assaut ; le sort, pour une fois, épargne les hommes."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"La plus occidentale des cinq plages d'un assaut de juin 1944, courant qui fit dériver les péniches vers un secteur moins défendu, sauvant des vies"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Le 6 juin 1944, la plus occidentale des cinq plages d'un grand débarquement ; un courant fit dériver les péniches vers un secteur moins défendu."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Un débarquement allié de 1944, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Utah Beach, dans la Manche (Normandie), France."}
@@ -150,7 +150,7 @@ const EVENTS = [
    desc:"Le 6 août 1945, la première bombe atomique employée en guerre rasa la ville et précipita la capitulation japonaise.",
    photo:"events/hiroshima_1945.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un matin d'août 1945, un unique éclair plus vif que le soleil efface une ville en une seconde ; l'humanité vient d'entrer dans une ère de terreur."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Première arme nucléaire employée en guerre, matin du 6 août 1945, un dôme éventré conservé depuis en mémorial"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Le 6 août 1945, la première arme nucléaire employée en guerre frappe une ville portuaire ; un dôme éventré en garde la mémoire."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La première bombe atomique, au Japon."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le bombardement d'Hiroshima, au Japon."}
@@ -159,7 +159,7 @@ const EVENTS = [
    desc:"En 480 av. J.-C., 300 Spartiates et leurs alliés retardèrent l'armée perse de Xerxès dans un défilé côtier, sacrifice devenu légende.",
    photo:"events/thermopyles.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vers 480 av. J.-C., dans l'ombre d'un étroit passage entre les monts et la mer, une poignée d'hommes tient tête à une marée humaine — jusqu'à ce que la traîtrise en vienne à bout."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défense d'un défilé côtier en 480 av. J.-C. par une poignée de guerriers face à une armée immense, trahis par un sentier de montagne"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vers 480 av. J.-C., une poignée de guerriers défend un défilé côtier contre une armée immense, avant d'être trahis par un sentier détourné."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La résistance des 300 Spartiates, en Grèce."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Thermopyles, en Phthiotide, en Grèce."}
@@ -168,7 +168,7 @@ const EVENTS = [
    desc:"Le 4 juillet 1776, treize colonies proclamèrent leur indépendance dans l'Independence Hall, acte fondateur des États-Unis.",
    photo:"events/independance_us.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un été de 1776, dans la moiteur d'une salle close, des hommes graves apposent leur nom au bas d'un texte qui fait naître une nation et défie un empire."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Proclamation de rupture de treize colonies avec leur couronne, un 4 juillet, dans une salle à l'horloge d'une ville de la côte est"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1776, treize colonies proclament leur rupture avec leur couronne, un 4 juillet, dans une salle à l'horloge d'une grande ville portuaire."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La signature de la Déclaration d'indépendance, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Déclaration d'indépendance, à Philadelphie, aux États-Unis."}
@@ -177,7 +177,7 @@ const EVENTS = [
    desc:"En 1415, les archers anglais d'Henri V écrasèrent une chevalerie française embourbée, tournant de la guerre de Cent Ans.",
    photo:"events/azincourt.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1415, sous une pluie battante, l'orgueil d'une noblesse en armure s'enlise dans la fange et s'effondre sous un ciel noirci de traits."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Débâcle d'une chevalerie lourde piégée dans la boue en 1415, fauchée par des archers à l'arc long adverses"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1415, une lourde chevalerie s'embourbe et se fait faucher par des archers à l'arc long, durant une longue guerre dynastique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire anglaise d'Henri V, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Azincourt, dans le Pas-de-Calais, en France."}
@@ -186,7 +186,7 @@ const EVENTS = [
    desc:"En 79 apr. J.-C., l'éruption du Vésuve ensevelit Pompéi sous les cendres, figeant la vie romaine pour l'éternité.",
    photo:"events/pompei_79.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En l'an 79, un jour d'été, une montagne s'ouvre et vomit le feu ; une cité entière disparaît sous une pluie de cendres, figée à jamais dans l'instant de sa mort."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Catastrophe volcanique de l'an 79 qui pétrifia une cité entière sous les cendres, redécouverte intacte 17 siècles plus tard"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En l'an 79, une éruption volcanique pétrifie une cité entière sous les cendres, redécouverte intacte 17 siècles plus tard."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'ensevelissement de Pompéi par le Vésuve, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'éruption de Pompéi, en Campanie, en Italie."}
@@ -195,7 +195,7 @@ const EVENTS = [
    desc:"En 1314, Robert Bruce y vainquit l'armée anglaise d'Édouard II, assurant l'indépendance de l'Écosse.",
    photo:"events/bannockburn.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1314, dans la boue d'un champ marécageux, l'orgueil d'une grande armée s'enlise face à un petit peuple déterminé ; une liberté longtemps rêvée devient réelle."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire d'un roi écossais en 1314 sur une armée méridionale trois fois supérieure, jalon d'une indépendance retrouvée"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1314, un roi triomphe d'une armée trois fois supérieure venue du sud, jalon d'une indépendance retrouvée."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Robert Bruce, en Écosse."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Bannockburn, près de Stirling, en Écosse."}
@@ -204,7 +204,7 @@ const EVENTS = [
    desc:"De 1814 à 1815, les puissances européennes y redessinèrent le continent après la chute de Napoléon, inaugurant un siècle d'équilibre.",
    photo:"events/congres_vienne.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1814, dans les salons et les bals d'une capitale, les puissants du moment refont le monde à leur main, une carte étalée entre deux danses."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Grande conférence diplomatique de 1814-1815 où l'on redécoupa un continent au son des valses, après la chute d'un empereur"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1814-1815, une grande conférence diplomatique redécoupe un continent au son des valses, après la chute d'un empereur."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le congrès de la Restauration européenne, en Autriche."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le congrès de Vienne, à Vienne, en Autriche."}
@@ -213,7 +213,7 @@ const EVENTS = [
    desc:"En 1876, les guerriers sioux et cheyennes anéantirent le régiment de Custer, ultime grande victoire amérindienne.",
    photo:"events/little_bighorn.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1876, sur les hauteurs herbeuses dominant une rivière, des cavaliers venus imposer leur loi sont noyés sous le nombre ; leurs adversaires savourent une victoire sans lendemain."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Anéantissement d'un régiment de cavalerie en 1876 par une coalition de nations autochtones, ultime éclat avant la soumission"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1876, un régiment de cavalerie est anéanti par une coalition de nations autochtones, ultime éclat avant la soumission."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite de Custer face aux Sioux, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Little Bighorn, dans le Montana, aux États-Unis."}
@@ -222,7 +222,7 @@ const EVENTS = [
    desc:"En 732, Charles Martel y stoppa l'avancée arabo-berbère, événement longtemps vu comme un coup d'arrêt à l'expansion musulmane en Europe.",
    photo:"events/poitiers_732.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 732, une armée montée, lancée depuis les terres du Sud, vient se briser sur les lances serrées d'un chef aguerri ; l'histoire en fera un tournant."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Coup d'arrêt de 732 porté par un chef franc à une colonne venue du sud, épisode érigé plus tard en symbole par les historiens"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 732, un chef franc arrête une colonne venue du sud, épisode érigé plus tard en symbole."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Charles Martel, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Poitiers de 732, dans la Vienne, en France."}
@@ -231,7 +231,7 @@ const EVENTS = [
    desc:"Selon la tradition, Romulus fonda Rome sur le Palatin en 753 av. J.-C. après avoir tué son frère Remus.",
    photo:"events/fondation_rome.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vers 753 av. J.-C., sur une colline au bord d'un fleuve, un homme trace un sillon sacré et abat son frère qui l'a franchi ; d'un fratricide naît une cité promise à l'éternité."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Naissance légendaire d'une cité en 753 av. J.-C. sur une colline, par un jumeau nourri par une louve devenu meurtrier de son frère"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vers 753 av. J.-C., naissance légendaire d'une cité sur une colline, par un jumeau nourri par une louve devenu meurtrier de son frère."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La fondation légendaire de Rome, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La fondation de Rome, dans le Latium, en Italie."}
@@ -240,7 +240,7 @@ const EVENTS = [
    desc:"En 1781, la reddition de Cornwallis à Washington et Rochambeau scella l'indépendance américaine.",
    photo:"events/yorktown.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1781, cernée par la terre et par la mer, une armée à bout de forces met bas les armes ; une jeune nation vient d'arracher sa liberté."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège décisif de 1781 où une armée britannique capitula, prise en étau entre insurgés et alliés venus de la mer, verrou d'une indépendance"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1781, une armée britannique capitule, prise en étau entre insurgés et alliés venus de la mer — verrou d'une indépendance."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La reddition de Cornwallis, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Yorktown, en Virginie, aux États-Unis."}
@@ -249,7 +249,7 @@ const EVENTS = [
    desc:"En 1521, Luther y refusa de se rétracter devant Charles Quint, acte fondateur de la Réforme.",
    photo:"events/worms_1521.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1521, seul face à une assemblée de puissants, un homme d'Église pâle mais inflexible refuse de renier ses écrits ; sa voix va déchirer la foi de tout un continent."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Comparution d'un moine réformateur en 1521 devant un empereur, refus de se dédire qui fractura la chrétienté d'Occident"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1521, un moine réformateur comparaît devant un empereur et refuse de se dédire, fracturant la chrétienté d'Occident."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La diète où Luther défie Charles Quint, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La diète de Worms, à Worms, en Allemagne."}
@@ -258,7 +258,7 @@ const EVENTS = [
    desc:"En 1571, la Sainte-Ligue chrétienne détruisit la flotte ottomane, dernier grand affrontement de galères de l'histoire.",
    photo:"events/lepante.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1571, sur une mer d'automne, des centaines de navires s'éperonnent et s'abordent dans un fracas de bois brisé — l'ultime grand duel livré à la seule force des bras."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dernier grand choc de galères à rames, en 1571, victoire d'une ligue chrétienne où combattit un futur auteur de roman manchot"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1571, dernier grand choc de galères à rames ; une ligue chrétienne l'emporte, où combattit un futur romancier manchot."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de la Sainte-Ligue sur les Ottomans, en Grèce."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Lépante, dans le golfe de Patras, en Grèce."}
@@ -267,7 +267,7 @@ const EVENTS = [
    desc:"Le jour de Noël 800, le pape couronna Charlemagne empereur dans l'ancienne basilique Saint-Pierre, restaurant l'idée impériale en Occident.",
    photo:"events/sacre_charlemagne.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un jour de Noël de l'an 800, sous les voûtes d'une basilique baignée de cierges, une couronne se pose sur la tête d'un roi ; l'Occident se rêve de nouveau un empire."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Couronnement impérial le jour de Noël de l'an 800 par un pape, restaurant en Occident un titre éteint depuis trois siècles"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Le jour de Noël de l'an 800, un pape couronne un empereur, restaurant en Occident un titre éteint depuis trois siècles."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le sacre de Charlemagne empereur, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le sacre de Charlemagne, à Rome, en Italie."}
@@ -276,7 +276,7 @@ const EVENTS = [
    desc:"En 1916, la plus longue bataille de la Première Guerre mondiale (300 jours, 700 000 victimes) devint le symbole de l'enfer des tranchées.",
    photo:"events/verdun.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1916, dix mois durant, deux armées s'enlisent dans un même carré de terre labouré d'obus, où l'on meurt par centaines de milliers pour quelques arpents de boue."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Enfer de tranchées de 1916 long de 300 jours autour de forts pilonnés, résumé d'un mot d'ordre : « on ne passe pas »"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1916, un enfer de tranchées de 300 jours autour de forts pilonnés, résumé d'un mot d'ordre : « on ne passe pas »."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La bataille-symbole de 1916, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Verdun, dans la Meuse, en France."}
@@ -285,16 +285,16 @@ const EVENTS = [
    desc:"En 1429, Jeanne d'Arc leva le siège d'Orléans, tournant de la guerre de Cent Ans en faveur du roi de France.",
    photo:"events/orleans_1429.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1429, devant une ville affamée par un long siège, une frêle silhouette en armure blanche galvanise des soldats découragés et renverse le cours d'une guerre sans fin."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Levée d'un siège en 1429 sous l'impulsion d'une jeune paysanne se disant guidée par des voix, renversant le cours d'une longue guerre"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1429, une jeune paysanne guidée par des voix fait lever un siège et renverse le cours d'une longue guerre."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Jeanne d'Arc lève le siège, en France."},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le ralliement de Jeanne d'Arc, au siège d'Orléans (France)."}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le siège d'Orléans, à Orléans, en France."}
   ]},
-  {name:"Siège de Ladysmith — KwaZulu-Natal, Afrique du Sud", lat:-28.559, lng:29.78, radius:5000,
+  {name:"Bataille de Tours des Boers — Ladysmith — KwaZulu-Natal, Afrique du Sud", lat:-28.559, lng:29.78, radius:5000,
    desc:"Lors de la guerre des Boers, le siège de Ladysmith (1899-1900) vit 118 jours d'encerclement britannique par les commandos boers.",
    photo:"events/ladysmith.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1899, sous le soleil d'un lointain veld, des paysans en armes tiennent en échec des mois durant une fière garnison d'empire ; l'orgueil colonial y prend l'eau."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège de 118 jours en 1899-1900 d'une garnison impériale par des fermiers-combattants, dans une guerre coloniale d'Afrique australe"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1899-1900, des fermiers-combattants assiègent 118 jours une garnison impériale, dans une guerre coloniale d'Afrique australe."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le siège de Ladysmith, en Afrique du Sud."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le siège de Ladysmith, au KwaZulu-Natal, en Afrique du Sud."}
@@ -303,7 +303,7 @@ const EVENTS = [
    desc:"En 202 av. J.-C., Scipion l'Africain vainquit Hannibal, mettant fin à la deuxième guerre punique.",
    photo:"events/zama.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 202 av. J.-C., dans la poussière d'une plaine d'Afrique, le plus redouté des conquérants tombe enfin ; son étoile s'éteint là où, jeune, il avait juré une haine éternelle."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite finale d'un stratège carthaginois en 202 av. J.-C., ses éléphants retournés contre lui par un général romain rival"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 202 av. J.-C., un stratège carthaginois est vaincu, ses propres éléphants retournés contre lui par un général rival."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite d'Hannibal contre Scipion, en Tunisie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Zama, dans la région de Siliana, en Tunisie."}
@@ -312,7 +312,7 @@ const EVENTS = [
    desc:"En 1494, Espagne et Portugal se partagèrent le Nouveau Monde le long d'un méridien, sous l'égide du pape.",
    photo:"events/tordesillas.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1494, penchées sur une carte du monde encore presque vierge, deux couronnes tracent un trait sur l'océan et se partagent des terres qu'aucune n'a jamais vues."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Partage d'un monde à peine découvert entre deux couronnes ibériques en 1494, une ligne tracée sur l'océan par la seule volonté d'un pape"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1494, deux couronnes ibériques se partagent un monde à peine découvert, une ligne tracée sur l'océan par la volonté d'un pape."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le partage du Nouveau Monde, en Espagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le traité de Tordesillas, province de Valladolid, en Espagne."}
@@ -321,7 +321,7 @@ const EVENTS = [
    desc:"En juin 1942, la victoire aéronavale américaine détruisit quatre porte-avions japonais, tournant de la guerre du Pacifique.",
    photo:"events/midway.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En juin 1942, en une seule journée, quatre géants d'acier sombrent au milieu d'un océan ; le renseignement, plus que les canons, y renverse le cours d'une guerre."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bataille aéronavale de juin 1942 gagnée par le décryptage ennemi, quatre porte-avions coulés en une journée, bascule d'un océan"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En juin 1942, une bataille aéronavale gagnée grâce au décryptage ennemi ; quatre porte-avions coulés en un jour font basculer un océan."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le tournant de la guerre du Pacifique, dans le Pacifique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Midway, à l'atoll de Midway, dans le Pacifique."}
@@ -330,7 +330,7 @@ const EVENTS = [
    desc:"En 1492, la reddition de l'émirat de Grenade acheva la Reconquista et l'unité de l'Espagne chrétienne.",
    photo:"events/grenade_1492.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1492, au terme d'un long siège, les portes d'une cité aux palais de pourpre s'ouvrent à deux souverains ; sept siècles de reconquête s'achèvent."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chute du dernier royaume musulman de la péninsule en 1492, remise des clés d'une cité aux palais rouges à deux souverains catholiques"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1492, le dernier royaume musulman de la péninsule tombe ; les clés d'une cité aux palais rouges passent à deux souverains catholiques."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La fin de la Reconquista, en Espagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de Grenade, en Andalousie, en Espagne."}
@@ -339,7 +339,7 @@ const EVENTS = [
    desc:"En 31 av. J.-C., Octave vainquit Antoine et Cléopâtre, ouvrant la voie à l'Empire romain.",
    photo:"events/actium.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 31 av. J.-C., sur des flots baignés de soleil, une bataille décide du maître du monde ; les amants vaincus, plutôt que les chaînes, choisiront bientôt la mort."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire navale de 31 av. J.-C. qui offrit un empire à son vainqueur et poussa un couple d'amants vaincus au suicide"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 31 av. J.-C., une victoire navale offre un empire à son vainqueur et pousse un couple d'amants vaincus au suicide."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite d'Antoine et Cléopâtre, en Grèce."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Actium, dans le golfe d'Ambracie, en Grèce."}
@@ -348,7 +348,7 @@ const EVENTS = [
    desc:"Le 20 juin 1789, les députés du Tiers état jurèrent de ne pas se séparer avant d'avoir donné une constitution à la France.",
    photo:"events/jeu_de_paume.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En juin 1789, trouvant les portes closes, des hommes se pressent dans une vaste salle nue et jurent, la main levée, de ne pas se séparer avant d'avoir tout changé."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Serment prêté dans une salle de sport royale en juin 1789 par des députés verrouillés dehors, promesse de refonder un royaume"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En juin 1789, des députés verrouillés dehors prêtent serment dans une salle de sport royale, promettant de refonder un royaume."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le serment du Jeu de paume, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le serment du Jeu de paume, à Versailles, en France."}
@@ -357,7 +357,7 @@ const EVENTS = [
    desc:"En 1806, Napoléon écrasa l'armée prussienne, précipitant l'effondrement du royaume de Prusse.",
    photo:"events/iena.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1806, en une seule matinée foudroyante, la fière armée d'un vieux royaume se disloque et s'enfuit en déroute devant un adversaire génial."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Double victoire écrasante de 1806 d'un empereur venu de l'Ouest sur une armée réputée invincible, effondrée en une journée"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1806, un empereur venu de l'Ouest écrase en une journée une armée réputée invincible, double victoire foudroyante."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire napoléonienne sur la Prusse, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Iéna, en Thuringe, en Allemagne."}
@@ -366,7 +366,7 @@ const EVENTS = [
    desc:"De 73 à 71 av. J.-C., l'esclave gladiateur Spartacus mena la plus grande révolte servile de Rome avant d'être écrasé par Crassus.",
    photo:"events/spartacus.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vers 73 av. J.-C., un homme échappé de l'arène soulève une multitude d'opprimés et fait trembler les maîtres ; vaincue, sa troupe finira clouée le long d'une grande route."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Soulèvement de 73-71 av. J.-C. mené par un gladiateur évadé, armée d'esclaves finalement crucifiée le long d'une grande voie"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 73-71 av. J.-C., un gladiateur évadé mène une armée d'esclaves, finalement crucifiée le long d'une grande voie."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La révolte de Spartacus, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La révolte de Spartacus, en Campanie, en Italie."}
@@ -375,7 +375,7 @@ const EVENTS = [
    desc:"En 1521, Cortés et ses alliés indigènes prirent la capitale aztèque après un siège dévastateur, effondrant l'empire.",
    photo:"events/tenochtitlan_1521.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1521, la plus éclatante des cités, posée sur un miroir d'eau, sombre après des mois de siège ; avec elle s'éteint la splendeur d'un peuple qui se croyait éternel."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège de 1521 d'une cité lacustre par une poignée d'aventuriers venus de la mer et leurs alliés locaux, fin d'un empire du soleil"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1521, une poignée d'aventuriers venus de la mer et leurs alliés locaux assiègent une cité lacustre — fin d'un empire du soleil."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise de Tenochtitlan par Cortés, au Mexique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute de Tenochtitlan, à Mexico, au Mexique."}
@@ -384,7 +384,7 @@ const EVENTS = [
    desc:"En 1746, l'écrasement des Jacobites mit fin aux espoirs des Stuart et bouleversa la société des clans écossais.",
    photo:"events/culloden.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1746, sur une lande grise fouettée par la pluie, les clans des montagnes sont fauchés en une heure ; avec eux meurt le rêve d'une vieille dynastie."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Massacre de 1746 d'une armée de clans montagnards sur une lande balayée par la pluie, crépuscule d'une cause dynastique"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1746, une armée de clans montagnards est massacrée sur une lande balayée par la pluie, crépuscule d'une cause dynastique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite jacobite, en Écosse."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Culloden, dans les Highlands, en Écosse."}
@@ -393,7 +393,7 @@ const EVENTS = [
    desc:"En 64 apr. J.-C., un immense incendie ravagea Rome pendant six jours ; Néron en fit porter la responsabilité aux chrétiens.",
    photo:"events/incendie_rome.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En l'an 64, six jours et six nuits, les flammes dévorent une capitale antique ; on murmure que le maître chantait devant le brasier, et il faut des coupables à châtier."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Brasier de six jours en l'an 64 qui dévora une capitale antique ; son empereur, accusé d'avoir chanté sur les ruines, désigna des boucs émissaires"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En l'an 64, un brasier de six jours dévore une capitale antique ; l'empereur, accusé d'avoir chanté sur les ruines, désigne des boucs émissaires."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le grand incendie sous Néron, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'incendie de Rome, à Rome, en Italie."}
@@ -402,7 +402,7 @@ const EVENTS = [
    desc:"En 1575, Oda Nobunaga y employa des salves d'arquebuses massées pour briser la cavalerie Takeda, révolution tactique.",
    photo:"events/nagashino.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1575, tapis derrière des palissades, des tireurs déchargent salve après salve ; une glorieuse charge de cavaliers s'effondre — le feu a changé la guerre."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bataille de 1575 où des salves d'arquebusiers retranchés brisèrent une charge de cavalerie réputée, révolution du feu en Extrême-Orient"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1575, des salves d'arquebusiers retranchés brisent une charge de cavalerie réputée, révolution du feu en Extrême-Orient."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire d'Oda Nobunaga, au Japon."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Nagashino, dans la région d'Aichi, au Japon."}
@@ -411,7 +411,7 @@ const EVENTS = [
    desc:"En août 1944, l'opération Dragoon ouvrit un second front en France par la Méditerranée, libérant rapidement le Sud.",
    photo:"events/provence_1944.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En août 1944, une seconde flotte d'invasion aborde une côte méridionale baignée de soleil ; discret dans l'ombre d'un débarquement plus célèbre, il n'en ouvre pas moins une nouvelle brèche."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Second assaut amphibie sur une côte méridionale ensoleillée en août 1944, moins connu que celui du Nord deux mois plus tôt"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En août 1944, un second assaut amphibie sur une côte méridionale ensoleillée, moins connu que celui du Nord deux mois plus tôt."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le débarquement de Provence, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le débarquement de Provence, dans le Var, en France."}
@@ -420,7 +420,7 @@ const EVENTS = [
    desc:"En 1214, la victoire de Philippe Auguste sur une coalition consolida le royaume de France et son autorité royale.",
    photo:"events/bouvines.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un dimanche de 1214, sous un soleil d'été, un roi tient tête à toute une ligue de princes venus l'abattre ; de sa victoire, une jeune monarchie sort soudée."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire royale d'un dimanche de 1214 sur une coalition d'empereur et de comtes, ciment d'une jeune monarchie"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Un dimanche de 1214, un roi triomphe d'une coalition d'empereur et de comtes, ciment d'une jeune monarchie."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Philippe Auguste, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Bouvines, dans le Nord, en France."}
@@ -429,7 +429,7 @@ const EVENTS = [
    desc:"En 1666, un feu parti d'une boulangerie de Pudding Lane détruisit le cœur médiéval de Londres en quatre jours.",
    photo:"events/incendie_londres.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1666, une flammèche échappée d'un fournil dévore, des jours durant, un dédale de maisons serrées ; mais ce brasier, dit-on, chasse aussi la peste qui rôdait."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Brasier de 1666 né dans une boulangerie, quatre jours qui rasèrent une vieille ville de bois mais éteignirent une épidémie de peste"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1666, un brasier né dans une boulangerie rase en quatre jours une vieille ville de bois, mais éteint une épidémie de peste."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le Grand Incendie, en Angleterre."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grand Incendie de Londres, à Londres, en Angleterre."}
@@ -438,7 +438,7 @@ const EVENTS = [
    desc:"En 480 av. J.-C., la flotte grecque piégea et détruisit l'armada perse dans un détroit, sauvant la Grèce.",
    photo:"events/salamine.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 480 av. J.-C., dans un chenal trop étroit pour son nombre, une immense armada s'empêtre et coule sous les éperons de navires plus vifs qu'elle."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Piège naval de 480 av. J.-C. dans un détroit resserré, où des trières agiles anéantirent une armada trop nombreuse pour manœuvrer"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 480 av. J.-C., dans un détroit resserré, des trières agiles anéantissent une armada trop nombreuse pour manœuvrer."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire des cités grecques sur la flotte perse, en Grèce."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Salamine, dans le golfe Saronique, en Grèce."}
@@ -447,7 +447,7 @@ const EVENTS = [
    desc:"En 1618, des gouverneurs impériaux furent jetés par les fenêtres du château de Prague, déclenchant la guerre de Trente Ans.",
    photo:"events/defenestration_prague.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1618, précipités par une fenêtre de château, des envoyés survivent par miracle à leur chute ; ce vol grotesque donne le signal de trente ans de guerre."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Jet par les fenêtres d'un château, en 1618, de représentants impériaux qui survécurent — étincelle d'une guerre de trente ans"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1618, des représentants impériaux jetés par les fenêtres d'un château survivent — étincelle d'une guerre de trente ans."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défenestration au château, en Tchéquie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La défenestration de Prague, à Prague, en Tchéquie."}
@@ -456,7 +456,7 @@ const EVENTS = [
    desc:"En 331 av. J.-C., Alexandre le Grand écrasa Darius III, ouvrant la conquête de l'Empire perse.",
    photo:"events/gaugameles.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 331 av. J.-C., sous la poussière d'une plaine sans horizon, un jeune homme au génie foudroyant met en fuite le plus grand roi de la terre et son océan de soldats ; l'Orient tout entier s'ouvre devant lui."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire décisive de 331 av. J.-C. d'un jeune conquérant macédonien sur un roi des rois en fuite, clé d'un empire d'Orient"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 331 av. J.-C., un jeune conquérant macédonien met en déroute un « roi des rois » et son immense armée, dans une plaine de Mésopotamie."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire d'Alexandre sur Darius III, en Irak."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Gaugamèles, près de Ninive, en Irak."}
@@ -465,7 +465,7 @@ const EVENTS = [
    desc:"Vers 1274 av. J.-C., Égyptiens de Ramsès II et Hittites s'affrontèrent lors de l'une des premières grandes batailles documentées, suivie du plus ancien traité de paix connu.",
    photo:"events/kadesh.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vers 1274 av. J.-C., dans un fracas de roues et de chevaux, deux grands empires du monde ancien s'étripent sans vainqueur ; de leur lassitude naîtra la première paix jamais gravée."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Choc de chars vers 1274 av. J.-C. entre deux empires du Bronze, suivi du plus ancien traité de paix écrit connu de l'humanité"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Vers 1274 av. J.-C., un choc de chars entre deux empires de l'âge du bronze, suivi du plus ancien traité de paix connu, au Proche-Orient."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'affrontement de Ramsès II contre les Hittites, en Syrie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Kadesh, près de Homs, en Syrie."}
@@ -474,7 +474,7 @@ const EVENTS = [
    desc:"Le 30 avril 1975, la prise de Saïgon par les forces du Nord acheva la guerre du Vietnam et réunifia le pays.",
    photo:"events/saigon_1975.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Le 30 avril 1975, sous une chaleur moite, une ville bascule dans le chaos : files désespérées, papiers brûlés et espoirs en fuite, tandis qu'une longue guerre rend son dernier souffle."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Prise d'une capitale du Sud le 30 avril 1975, chars enfonçant les grilles d'un palais et hélicoptères évacuant depuis les toits"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Le 30 avril 1975, des chars enfoncent les grilles d'un palais et un hélicoptère évacue les derniers étrangers : une capitale du Sud tombe, en Asie du Sud-Est."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La chute de Saïgon, au Vietnam."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute de Saïgon (Hô Chi Minh-Ville), au Vietnam."}
@@ -483,7 +483,7 @@ const EVENTS = [
    desc:"En 1683, la levée du siège ottoman de Vienne par les troupes polonaises de Sobieski marqua le reflux de l'Empire ottoman en Europe.",
    photo:"events/vienne_1683.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1683, alors qu'une capitale exsangue est sur le point de céder, une nuée de cavaliers dévale des collines au crépuscule et repousse une marée qui menaçait tout un continent."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Levée d'un siège en 1683 par une charge de cavalerie ailée venue de l'Est, coup d'arrêt à une poussée ottomane vers le cœur de l'Europe"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1683, une charge de cavalerie ailée venue de l'Est lève le siège d'une capitale et stoppe une poussée ottomane, en Europe centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le siège ottoman levé par Sobieski, en Autriche."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Vienne de 1683, à Vienne, en Autriche."}
@@ -492,7 +492,7 @@ const EVENTS = [
    desc:"En 1930, Gandhi acheva sa marche de 385 km à Dandi pour récolter du sel en défi à la taxe coloniale, acte majeur de désobéissance civile.",
    photo:"events/marche_sel.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1930, au bout de longues semaines de marche pieds nus, un vieil homme frêle se penche sur le rivage et ramasse un peu de sel ; ce geste minuscule ébranle un empire."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Aboutissement en 1930 d'une marche de 385 km au bord de la mer, où un leader en pagne ramassa une poignée de sel pour défier un empire"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1930, au terme d'une marche de 385 km vers la mer, un leader en pagne ramasse une poignée de sel en défi à un empire, sur une côte du sous-continent indien."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La marche du sel de Gandhi, en Inde."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La marche du sel, à Dandi (Gujarat), en Inde."}
@@ -501,7 +501,7 @@ const EVENTS = [
    desc:"En 451, une coalition romano-wisigothique arrêta Attila et ses Huns, l'une des dernières grandes victoires de Rome.",
    photo:"events/champs_catalauniques.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 451, des ennemis d'hier scellent une alliance de la dernière heure pour barrer la route à un envahisseur venu des steppes, que la seule évocation de son nom faisait trembler."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Coalition improbable de 451 qui stoppa un conquérant venu des steppes surnommé « fléau de Dieu », baroud d'honneur d'un empire finissant"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 451, une coalition improbable stoppe un conquérant venu des steppes surnommé « fléau de Dieu », dans le nord-est d'un royaume d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Attila arrêté, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Champs Catalauniques, en Champagne, en France."}
@@ -510,7 +510,7 @@ const EVENTS = [
    desc:"En 1843, la prise de la smala d'Abd el-Kader marqua un tournant de la conquête française de l'Algérie.",
    photo:"events/smala_1843.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1843, au galop et par surprise, une poignée de cavaliers fond sur une immense cité nomade en marche et capture le cœur mouvant d'une longue résistance."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Capture en 1843 du campement mobile de 20 000 personnes d'un chef de la résistance, par une colonne de cavalerie audacieuse"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1843, une colonne surprend le campement mobile de 20 000 personnes d'un chef de la résistance, sur des hauts plateaux d'Afrique du Nord."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise de la smala d'Abd el-Kader, en Algérie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de la Smala, en Algérie."}
@@ -519,7 +519,7 @@ const EVENTS = [
    desc:"En 1757, la victoire de Clive assura la domination de la Compagnie anglaise des Indes sur le Bengale, prélude à l'empire britannique en Inde.",
    photo:"events/plassey.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1757, sous une pluie de mousson, une bataille jouée d'avance par l'or et la trahison plus que par les armes livre un immense royaume aux appétits de marchands lointains."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1757 acquise plus par la corruption d'un général adverse que par les armes, porte d'entrée d'une compagnie marchande vers un sous-continent"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1757, une victoire acquise plus par la corruption d'un général adverse que par les armes ouvre un vaste territoire à une compagnie marchande, dans le nord-est du sous-continent indien."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de la Compagnie des Indes, en Inde."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Plassey, au Bengale, en Inde."}
@@ -528,7 +528,7 @@ const EVENTS = [
    desc:"En 1954, la défaite française dans cette cuvette scella la fin de l'Indochine française.",
    photo:"events/dien_bien_phu.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1954, au creux d'une vallée cernée de hauteurs, une armée se croit à l'abri ; mais du sommet des pentes, un déluge d'obus venu de nulle part la broie jusqu'à la reddition."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite de 1954 d'un corps expéditaire piégé dans une cuvette, artillerie adverse hissée à dos d'homme sur les crêtes, fin d'une colonie asiatique"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1954, un corps expéditionnaire est piégé dans une cuvette dont les crêtes sont couronnées d'une artillerie hissée à dos d'homme, en Asie du Sud-Est."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite d'un corps expéditionnaire français, au Vietnam."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Diên Biên Phu, au Vietnam."}
@@ -537,7 +537,7 @@ const EVENTS = [
    desc:"En 479 av. J.-C., la victoire terrestre grecque acheva de repousser la seconde invasion perse.",
    photo:"events/platees.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 479 av. J.-C., sur une plaine, une dernière grande bataille terrestre achève de briser une invasion venue de l'Est ; un monde de cités préserve sa liberté."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Choc terrestre de 479 av. J.-C. qui parachève l'échec d'une invasion venue de l'Est, un an après une déroute navale du même envahisseur"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 479 av. J.-C., un choc terrestre parachève l'échec d'une invasion venue de l'Est, un an après une bataille navale décisive, dans le sud-est de l'Europe."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire décisive des cités grecques sur les Perses, en Grèce."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Platées, en Béotie, en Grèce."}
@@ -546,7 +546,7 @@ const EVENTS = [
    desc:"En 539 av. J.-C., Cyrus le Grand s'empara de la cité sans grand combat, fondant l'Empire perse achéménide.",
    photo:"events/babylone_539.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 539 av. J.-C., une immense cité aux murailles réputées imprenables ouvre ses portes presque sans un cri ; son vainqueur, dit-on, rend à des exilés le chemin de leur patrie."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chute quasi pacifique d'une cité mésopotamienne en 539 av. J.-C., dont le nouveau maître libéra un peuple exilé selon les textes"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 539 av. J.-C., une cité mésopotamienne tombe presque sans combat ; son nouveau maître libère des captifs, au Proche-Orient."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise de Babylone par Cyrus, en Irak."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de Babylone, dans la région de Babil, en Irak."}
@@ -555,7 +555,7 @@ const EVENTS = [
    desc:"En 333 av. J.-C., Alexandre battit Darius III, ouvrant la conquête du Levant.",
    photo:"events/issos.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 333 av. J.-C., coincé entre la montagne et la mer, le plus grand souverain d'Orient panique et s'enfuit, abandonnant jusqu'aux siens à un jeune roi venu de l'ouest."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 333 av. J.-C. d'un jeune roi macédonien qui força un roi des rois à fuir en abandonnant sa famille"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 333 av. J.-C., un jeune roi macédonien force un « roi des rois » à fuir en abandonnant sa famille, sur une plaine côtière au carrefour de deux continents."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire d'Alexandre sur Darius, en Turquie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Issos, dans le Hatay, en Turquie."}
@@ -564,7 +564,7 @@ const EVENTS = [
    desc:"En 48 av. J.-C., César écrasa Pompée, tournant décisif de la guerre civile romaine.",
    photo:"events/pharsale.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 48 av. J.-C., sur une plaine, deux géants d'une même république jouent l'empire du monde ; l'un l'emporte, ouvrant la voie au pouvoir d'un seul."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Affrontement de 48 av. J.-C. entre deux généraux romains rivaux, victoire de celui qui avait franchi un fleuve interdit deux ans plus tôt"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 48 av. J.-C., deux généraux romains rivaux s'affrontent ; le vainqueur avait franchi un petit fleuve un an plus tôt, dans le sud-est de l'Europe."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de César sur Pompée, en Grèce."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Pharsale, en Thessalie, en Grèce."}
@@ -573,7 +573,7 @@ const EVENTS = [
    desc:"En 49 av. J.-C., César franchit ce fleuve frontière en armes, déclenchant la guerre civile.",
    photo:"events/rubicon.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 49 av. J.-C., à la tête de ses légions, un général marque un temps au bord d'un modeste ruisseau, puis le franchit ; d'un seul pas, il jette la république dans la guerre civile."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Franchissement d'un petit fleuve en armes en 49 av. J.-C., geste de rupture résumé par une formule sur le sort qui est jeté"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 49 av. J.-C., un général franchit en armes un petit fleuve, geste de rupture résumé par une formule célèbre, dans le nord d'une péninsule méditerranéenne."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le passage du Rubicon par César, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le passage du Rubicon, en Émilie-Romagne, en Italie."}
@@ -582,7 +582,7 @@ const EVENTS = [
    desc:"Aux ides de mars 44 av. J.-C., César fut poignardé par des sénateurs au pied de la Curie de Pompée.",
    photo:"events/cesar_44.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un matin de mars 44 av. J.-C., au pied d'une statue, un maître tout-puissant s'écroule sous une grêle de poignards ; parmi les mains levées, il reconnaît celle d'un fils de cœur."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Meurtre d'un dictateur aux ides de mars 44 av. J.-C. par un groupe de sénateurs, l'un d'eux étant son propre protégé"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Aux ides de mars 44 av. J.-C., un dictateur est poignardé par des sénateurs, dont l'un lui était cher, au cœur d'une grande cité antique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'assassinat de César, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'assassinat de Jules César, à Rome, en Italie."}
@@ -591,7 +591,7 @@ const EVENTS = [
    desc:"En l'an 9, des tribus germaniques anéantirent trois légions romaines, arrêtant l'expansion au-delà du Rhin.",
    photo:"events/teutobourg.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En l'an 9, dans les marécages sombres d'une forêt, trois armées entières s'évanouissent sans retour ; au loin, un vieil empereur en perdra le sommeil."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Embuscade forestière de l'an 9 où trois légions disparurent, arrachant à un empereur le cri « rends-moi mes légions »"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En l'an 9, trois légions disparaissent dans une embuscade forestière, arrachant à un empereur un cri de désespoir, en Europe centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'anéantissement des légions de Varus, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Teutobourg, en Basse-Saxe, en Allemagne."}
@@ -600,7 +600,7 @@ const EVENTS = [
    desc:"En 52 av. J.-C., César encercla Vercingétorix et acheva la conquête de la Gaule.",
    photo:"events/alesia.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 52 av. J.-C., un assiégeant devient assiégé, pris entre une place forte et une armée de secours ; au bout de l'épreuve, un chef vaincu vient jeter ses armes aux pieds du vainqueur."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Double encerclement de 52 av. J.-C. où l'assiégeant se retrancha à son tour contre une armée de secours, scellant la soumission d'un chef gaulois"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 52 av. J.-C., un assiégeant se retranche à son tour contre une armée de secours et obtient la reddition d'un chef gaulois, dans le centre-est d'un royaume d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La reddition de Vercingétorix à César, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le siège d'Alésia, en Bourgogne, en France."}
@@ -609,7 +609,7 @@ const EVENTS = [
    desc:"En 146 av. J.-C., Rome rasa sa grande rivale, achevant les guerres puniques.",
    photo:"events/carthage_146.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 146 av. J.-C., une grande cité de la mer, rivale honnie, est effacée de la terre pierre après pierre — comme un vieux sénateur le réclamait sans relâche."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Anéantissement d'une cité maritime rivale en 146 av. J.-C., dont la ruine fut réclamée par un sénateur à la fin de chaque discours"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 146 av. J.-C., une cité maritime rivale est rasée, sa ruine réclamée par un sénateur obstiné, sur une côte d'Afrique du Nord."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La fin de Carthage face à Rome, en Tunisie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La destruction de Carthage, près de Tunis, en Tunisie."}
@@ -618,7 +618,7 @@ const EVENTS = [
    desc:"En l'an 70, les Romains prirent la ville et détruisirent le Second Temple.",
    photo:"events/jerusalem_70.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En l'an 70, une ville sainte succombe après des mois de famine et d'assauts ; dans les flammes disparaît un grand temple que le monde n'a jamais revu."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège de l'an 70 achevé par l'incendie d'un sanctuaire, butin sculpté sur un arc de triomphe encore debout dans la capitale des vainqueurs"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En l'an 70, un long siège s'achève par l'incendie d'un sanctuaire dont le butin sera sculpté sur un arc de triomphe, au Proche-Orient."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise de Jérusalem par Titus, en Israël."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de Jérusalem de 70, en Israël."}
@@ -627,7 +627,7 @@ const EVENTS = [
    desc:"En 312, la victoire de Constantin le mena au pouvoir et favorisa l'essor du christianisme.",
    photo:"events/pont_milvius.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 312, à la veille d'un affrontement au bord d'un fleuve, un chef croit voir un signe flamboyer dans le ciel ; sa victoire fera d'un culte persécuté la foi d'un empire."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 312 remportée après une vision d'un signe dans le ciel, tournant pour une religion jusque-là persécutée"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 312, une victoire remportée après une vision dans le ciel change le destin d'une religion, sur un fleuve d'une grande cité antique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Constantin, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille du pont Milvius, à Rome, en Italie."}
@@ -636,7 +636,7 @@ const EVENTS = [
    desc:"Vers 1600 av. J.-C., l'explosion volcanique de Théra bouleversa la civilisation minoenne.",
    photo:"events/thera.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"À l'âge du bronze, une île paisible se déchire dans une explosion titanesque et s'effondre dans la mer ; peut-être le lointain souvenir d'un monde englouti."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cataclysme volcanique de l'âge du bronze qui souffla le centre d'une île en caldeira, peut-être à l'origine d'un mythe d'engloutissement"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"À l'âge du bronze, un cataclysme volcanique souffle le centre d'une île en caldeira, peut-être à l'origine d'un mythe d'engloutissement, en mer Égée."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'éruption de Théra (Santorin), en Grèce."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'éruption minoenne de Santorin, dans les Cyclades, en Grèce."}
@@ -645,7 +645,7 @@ const EVENTS = [
    desc:"En 636, les armées arabes écrasèrent les Byzantins, ouvrant la conquête du Levant.",
    photo:"events/yarmouk.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 636, aveuglés par une tempête de sable au bord d'un ravin, les soldats d'un vieil empire se débandent ; en un jour, tout un Orient change de mains."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 636 le long d'un affluent encaissé, tempête de sable au visage des vaincus, qui livra une riche province orientale à de nouveaux conquérants"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 636, le long d'un affluent encaissé et sous une tempête de sable, une armée byzantine s'effondre et livre tout un Levant, au Proche-Orient."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite byzantine face aux Arabes, en Jordanie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille du Yarmouk, en Jordanie."}
@@ -654,7 +654,7 @@ const EVENTS = [
    desc:"Vers 636, la victoire arabe brisa l'Empire sassanide.",
    photo:"events/qadisiyya.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 636, des cavaliers du désert font front aux éléphants d'un empire vieux de mille ans ; la muraille de bêtes cède, et la route d'une capitale s'ouvre."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 636 sur les éléphants d'un empire perse millénaire, ouvrant sa capitale aux conquérants venus du désert"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 636, la charge d'éléphants d'un empire perse millénaire est brisée, ouvrant sa capitale aux conquérants, en Mésopotamie."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite sassanide face aux Arabes, en Irak."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Qadisiyya, en Irak."}
@@ -663,7 +663,7 @@ const EVENTS = [
    desc:"En 622, l'exil de Mahomet vers Yathrib marque le point de départ du calendrier musulman.",
    photo:"events/hegire.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 622, chassé de sa ville, un homme qui prêche un dieu unique prend la route d'une oasis lointaine ; ce simple départ deviendra le point de départ d'un nouveau temps."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Migration de 622 d'un prédicant persécuté vers une oasis du nord, an zéro d'un nouveau calendrier"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 622, un prédicant persécuté migre vers une oasis du nord, an zéro d'un nouveau calendrier, dans une péninsule désertique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'Hégire vers Médine, en Arabie saoudite."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hégire, à Médine, en Arabie saoudite."}
@@ -672,7 +672,7 @@ const EVENTS = [
    desc:"En 751, la victoire abbasside sur les Tang stoppa l'expansion chinoise vers l'ouest et diffusa le papier.",
    photo:"events/talas.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 751, aux confins des steppes, deux mondes que tout oppose se heurtent ; de leurs captifs serait passé, dit-on, un secret d'Orient qui allait transformer l'écrit."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Choc de 751 entre deux empires aux confins des steppes, dont les prisonniers auraient transmis le secret d'une invention chinoise à l'Occident"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 751, deux empires s'affrontent aux confins des steppes ; des prisonniers y auraient transmis le secret du papier, en Asie centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'arrêt de l'expansion Tang face aux Abbassides, au Kazakhstan."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Talas, dans le sud du Kazakhstan."}
@@ -681,7 +681,7 @@ const EVENTS = [
    desc:"En 1071, la défaite byzantine face aux Seldjoukides ouvrit l'Anatolie aux Turcs.",
    photo:"events/manzikert.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1071, l'impensable : un empereur tombe vivant aux mains de l'ennemi ; par la faille ainsi ouverte, des cavaliers venus de l'est vont submerger toute une contrée."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite de 1071 où un empereur fut fait prisonnier, brèche par laquelle des cavaliers turcs déferlèrent sur une péninsule"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1071, un empereur est fait prisonnier, ouvrant une brèche par laquelle déferlent des cavaliers turcs, en Anatolie orientale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite byzantine face aux Seldjoukides, en Turquie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Manzikert, dans la région de Muş, en Turquie."}
@@ -690,7 +690,7 @@ const EVENTS = [
    desc:"En 1099, la première croisade s'empara de la ville au terme d'un siège sanglant.",
    photo:"events/jerusalem_1099.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1099, des guerriers venus de très loin s'emparent d'une cité trois fois sainte au terme d'un siège féroce ; les rues s'emplissent de sang au nom de la foi."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège de 1099 conclu par un massacre, aboutissement d'une expédition prêchée quatre ans plus tôt par un pape"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1099, un siège s'achève par un massacre, aboutissement d'une expédition prêchée quatre ans plus tôt, au Proche-Orient."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise de Jérusalem par les croisés, en Israël."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de Jérusalem de 1099, en Israël."}
@@ -699,7 +699,7 @@ const EVENTS = [
    desc:"En 1187, Saladin anéantit l'armée croisée, rouvrant la voie de Jérusalem.",
    photo:"events/hattin.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1187, sous un soleil implacable et sans une goutte d'eau, une armée épuisée se laisse encercler sur des hauteurs arides ; sa perte ouvre les portes de la ville sainte."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Piège de 1187 tendu près de deux collines jumelles à une armée assoiffée, victoire qui rendit une ville sainte à son vainqueur kurde"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1187, une armée assoiffée est piégée près de deux collines jumelles ; la défaite rend une ville sainte, en Galilée."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Saladin sur les croisés, en Israël."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Hattin, en Galilée, en Israël."}
@@ -708,7 +708,7 @@ const EVENTS = [
    desc:"En 1204, la quatrième croisade détourna son but et pilla la capitale byzantine chrétienne.",
    photo:"events/sac_1204.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1204, des pèlerins en armes, détournés de leur lointaine route, se ruent sur la plus riche cité d'Orient et la mettent à sac ; on emporte jusqu'à ses chevaux de bronze."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Détournement d'une croisade en 1204 qui saccagea une capitale chrétienne au lieu d'un objectif lointain, quatre chevaux de bronze emportés vers une lagune"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1204, une croisade détournée saccage une capitale chrétienne au lieu de son objectif, sur un détroit entre deux continents."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le sac de Constantinople par les croisés, en Turquie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le sac de Constantinople de 1204, à Istanbul, en Turquie."}
@@ -717,7 +717,7 @@ const EVENTS = [
    desc:"En 1258, Houlagou détruisit la capitale abbasside, fin de l'âge d'or islamique.",
    photo:"events/bagdad_1258.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1258, une vague venue des lointaines steppes engloutit la plus brillante des cités et brûle des siècles de savoir ; un âge d'or s'achève dans les flammes."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sac de 1258 d'une capitale du savoir, ses bibliothèques jetées dans un fleuve dit-on noirci d'encre, par des cavaliers venus des steppes"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1258, une capitale du savoir est saccagée, ses bibliothèques jetées dans un fleuve dit-on noirci d'encre, en Mésopotamie."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise de Bagdad par Houlagou, en Irak."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de Bagdad de 1258, en Irak."}
@@ -726,7 +726,7 @@ const EVENTS = [
    desc:"En 1260, les Mamelouks stoppèrent l'avancée mongole, un tournant historique.",
    photo:"events/ain_djalout.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1260, dans une vallée d'Orient, des soldats nés dans les chaînes brisent net une déferlante que nul n'avait su arrêter ; le mythe de l'invincible s'effondre."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Coup d'arrêt de 1260 porté à une vague de conquête réputée invincible, par une armée d'anciens esclaves-soldats"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1260, une armée d'anciens esclaves-soldats stoppe une vague de conquête réputée invincible, dans une vallée du Levant."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'arrêt des Mongols par les Mamelouks, en Israël."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Aïn Djalout, en Galilée, en Israël."}
@@ -735,7 +735,7 @@ const EVENTS = [
    desc:"En 1274 et 1281, deux typhons providentiels détruisirent les flottes d'invasion mongoles.",
    photo:"events/hakata.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Par deux fois, dans les années 1270-1280, une flotte d'invasion colossale est engloutie par la tempête aux abords d'un archipel ; on y verra le souffle des dieux."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Deux tentatives d'invasion des années 1270-1280 brisées par des typhons providentiels baptisés « vent divin »"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Dans les années 1270-1280, deux tentatives d'invasion sont brisées par des typhons providentiels, sur une baie d'un archipel d'Asie de l'Est."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Les invasions mongoles repoussées, au Japon."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les invasions mongoles du Japon, à la baie de Hakata (Fukuoka), au Japon."}
@@ -744,7 +744,7 @@ const EVENTS = [
    desc:"En 1302, les milices flamandes écrasèrent la chevalerie française.",
    photo:"events/courtrai.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1302, prise au piège des fossés et des marais, une fière chevalerie est taillée en pièces par de simples gens de métier ; on ramasse ses éperons par centaines."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Débâcle de 1302 d'une chevalerie piégée dans les fossés, dont on ramassa des centaines d'éperons dorés en trophée"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1302, une chevalerie piégée dans les fossés est massacrée par des milices urbaines, qui ramassent des centaines d'éperons, dans le nord d'un pays d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire des milices flamandes, en Belgique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille des Éperons d'or, à Courtrai, en Belgique."}
@@ -753,7 +753,7 @@ const EVENTS = [
    desc:"En 1346, les archers anglais brisèrent l'armée française, aube de la guerre de Cent Ans.",
    photo:"events/crecy.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1346, sous une nuée de flèches et les premiers grondements d'un feu nouveau, une chevalerie nombreuse et sûre d'elle tombe par vagues entières."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1346 où l'arc long et de premières bouches à feu fauchèrent une chevalerie nombreuse"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1346, l'arc long et de premières bouches à feu fauchent une nombreuse chevalerie au début d'une longue guerre dynastique, dans le nord d'un royaume d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire anglaise d'Édouard III, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Crécy, dans la Somme, en France."}
@@ -762,7 +762,7 @@ const EVENTS = [
    desc:"En 1380, la victoire russe sur la Horde d'or amorça l'émancipation moscovite.",
    photo:"events/kulikovo.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1380, dans la brume d'une plaine, un prince relève enfin la tête et défait les maîtres venus d'Asie qui l'écrasaient depuis des générations ; leur emprise commence à céder."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1380 d'un prince sur des cavaliers tributaires, premier grand craquement d'un joug venu des steppes"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1380, un prince défait des cavaliers tributaires, premier craquement d'un long joug venu d'Asie, dans les plaines de l'est de l'Europe."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire sur la Horde d'or, en Russie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Koulikovo, dans la région de Toula, en Russie."}
@@ -771,7 +771,7 @@ const EVENTS = [
    desc:"En 1389, l'affrontement serbo-ottoman devint un mythe national des Balkans.",
    photo:"events/kosovo_1389.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1389, sur un champ balayé par les corbeaux, deux souverains tombent le même jour ; de cette défaite, un peuple fera pour des siècles sa plaie sacrée."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Choc de 1389 où périrent les deux souverains, gravé depuis dans la mémoire nationale d'un peuple des Balkans"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1389, un choc où périssent les deux souverains marque à jamais la mémoire d'un peuple, dans les Balkans."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Serbes contre Ottomans, au Kosovo."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Kosovo (« champ des Merles »), au Kosovo."}
@@ -780,7 +780,7 @@ const EVENTS = [
    desc:"En 1410, l'union polono-lituanienne écrasa l'ordre Teutonique.",
    photo:"events/grunwald.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1410, sur un immense champ, des peuples unis fondent sur un ordre de moines-soldats redouté de tous et l'anéantissent ; rarement le Moyen Âge vit pareille mêlée."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Écrasement en 1410 d'un ordre de chevaliers religieux par une coalition slavo-balte, l'une des plus grandes batailles du Moyen Âge"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1410, une coalition slavo-balte écrase un ordre de chevaliers religieux, l'une des plus grandes batailles médiévales, dans le nord-est de l'Europe centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite des chevaliers Teutoniques, en Pologne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Grunwald, en Mazurie, en Pologne."}
@@ -789,7 +789,7 @@ const EVENTS = [
    desc:"En 1453, l'artillerie française mit fin à la guerre de Cent Ans.",
    photo:"events/castillon.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1453, le grondement des bouches à feu a raison d'une ultime charge ; sur ce champ s'achève une guerre qui aura duré plus de cent ans."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Dernière grande bataille de 1453 d'un conflit de plus d'un siècle, où le canon eut raison d'une charge anglaise"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1453, le canon a raison d'une armée lors de la dernière grande bataille d'un conflit de plus d'un siècle, dans le sud-ouest d'un royaume d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La fin de la guerre de Cent Ans, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Castillon, en Gironde, en France."}
@@ -798,7 +798,7 @@ const EVENTS = [
    desc:"En 1515, la victoire de François Ier sur les Suisses ouvrit les guerres d'Italie.",
    photo:"events/marignan.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1515, deux jours durant, un choc d'une violence inouïe brise l'aura d'invincibilité de farouches piquiers venus des montagnes, au profit d'un tout jeune roi."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire d'un jeune roi en 1515, « bataille de géants » de deux jours qui brisa la réputation d'une redoutable infanterie de montagne"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1515, une « bataille de géants » de deux jours brise la réputation d'une redoutable infanterie de montagne, dans le nord d'une péninsule méditerranéenne."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de François Ier sur les Suisses, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Marignan, en Lombardie, en Italie."}
@@ -807,7 +807,7 @@ const EVENTS = [
    desc:"En 1525, la capture de François Ier consacra la puissance de Charles Quint.",
    photo:"events/pavie.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1525, sur un champ de désastre, un roi orgueilleux tombe aux mains de l'ennemi ; du fond de sa geôle, il n'aura plus que son honneur à sauver."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Désastre de 1525 où un roi fut fait prisonnier, écrivant que tout était perdu fors l'honneur"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1525, un roi est fait prisonnier et écrit que tout est perdu « fors l'honneur », dans le nord d'une péninsule méditerranéenne."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La capture de François Ier par Charles Quint, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Pavie, en Lombardie, en Italie."}
@@ -816,7 +816,7 @@ const EVENTS = [
    desc:"En 1572, des milliers de protestants furent tués à Paris et en province.",
    photo:"events/saint_barthelemy.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un matin d'août 1572, dès les premières cloches, une capitale sombre dans la folie ; on égorge par milliers, de porte en porte, au nom de la foi."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Tuerie religieuse d'un matin d'août 1572, déclenchée au son d'un tocsin, qui ensanglanta une capitale et gagna les provinces"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Un matin d'août 1572, au son d'un tocsin, une tuerie religieuse ensanglante une capitale, en Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le massacre des protestants, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le massacre de la Saint-Barthélemy, à Paris, en France."}
@@ -825,7 +825,7 @@ const EVENTS = [
    desc:"En 1620, la défaite tchèque ouvrit trois siècles de domination des Habsbourg.",
    photo:"events/montagne_blanche.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1620, en à peine une heure, une armée s'effondre sous les murs d'une capitale ; pour tout un peuple commence alors une longue servitude."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite de 1620 sur une colline aux abords d'une capitale, début d'une longue nuit pour une noblesse protestante décapitée peu après"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1620, une défaite sur une colline aux abords d'une capitale ouvre une longue nuit pour une noblesse, en Europe centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite des insurgés protestants face aux Habsbourg, en Tchéquie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de la Montagne Blanche, près de Prague, en Tchéquie."}
@@ -834,7 +834,7 @@ const EVENTS = [
    desc:"En 1648, ces traités mirent fin à la guerre de Trente Ans et fondèrent l'ordre des États modernes.",
    photo:"events/westphalie.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1648, après trente années de fer et de feu, quelques signatures font enfin taire les armes de tout un continent et dessinent un monde d'États égaux."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Paix de 1648 signée dans deux villes après trente ans de guerre, acte fondateur d'un ordre de souverainetés en Europe"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1648, une paix signée dans deux villes met fin à trente ans de guerre et fonde un ordre d'États souverains, en Europe centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La fin de la guerre de Trente Ans, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les traités de Westphalie, à Münster, en Allemagne."}
@@ -843,7 +843,7 @@ const EVENTS = [
    desc:"En 1643, la victoire française brisa la réputation des tercios espagnols.",
    photo:"events/rocroi.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1643, un général à peine sorti de l'enfance fait ployer puis tomber une infanterie en carrés qu'on croyait imbattable ; la gloire d'une vieille puissance vacille."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1643 d'un très jeune général qui abattit l'invincible infanterie carrée d'une grande puissance déclinante"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1643, un très jeune général abat une invincible infanterie carrée, sur une frontière du nord d'un royaume d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire sur les tercios espagnols, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Rocroi, dans les Ardennes, en France."}
@@ -852,7 +852,7 @@ const EVENTS = [
    desc:"En 1709, Pierre le Grand écrasa Charles XII, faisant de la Russie une grande puissance.",
    photo:"events/poltava.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1709, un foudre de guerre venu du Nord, invaincu jusque-là, s'égare et se brise loin de ses bases ; une puissance nouvelle prend sa place au soleil."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite en 1709 d'un roi guerrier du Nord au terme d'une marche épuisante vers l'est, avènement d'un nouvel empire"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1709, un roi guerrier du Nord est défait au terme d'une marche épuisante vers l'est, avènement d'une nouvelle grande puissance, dans les plaines de l'Est."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Pierre le Grand sur la Suède, en Ukraine."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Poltava, en Ukraine."}
@@ -861,7 +861,7 @@ const EVENTS = [
    desc:"En 1759, la victoire britannique décida du sort de la Nouvelle-France.",
    photo:"events/plaines_abraham.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1759, à la faveur de l'aube, des soldats escaladent une falaise réputée infranchissable ; la brève bataille qui suit coûte la vie aux deux chefs et livre un continent."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bataille de 1759 sur un plateau au-dessus d'un fleuve, où les deux généraux périrent et une colonie changea d'empire"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1759, sur un plateau dominant un grand fleuve, les deux généraux périssent et une colonie change de mains, en Amérique du Nord."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise de Québec par les Britanniques, au Canada."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille des plaines d'Abraham, à Québec, au Canada."}
@@ -870,7 +870,7 @@ const EVENTS = [
    desc:"En 1773, des colons jetèrent à la mer la cargaison de thé, prélude à la révolution américaine.",
    photo:"events/boston_tea.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Par une nuit de 1773, des hommes au visage grimé jettent à la mer, caisse après caisse, une marchandise honnie ; ce défi à l'impôt met le feu aux poudres."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Coup d'éclat de 1773 où des colons déguisés noyèrent une cargaison taxée dans un port, étincelle d'une révolte fiscale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1773, des colons déguisés noient une cargaison taxée dans un port, étincelle d'une révolte, sur la côte est d'un continent."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La révolte du thé, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Boston Tea Party, à Boston, aux États-Unis."}
@@ -879,7 +879,7 @@ const EVENTS = [
    desc:"En 1777, la victoire américaine décida la France à entrer en guerre.",
    photo:"events/saratoga.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1777, la victoire inespérée d'une poignée de rebelles décide une vieille monarchie à entrer dans leur guerre ; leur cause, soudain, n'est plus perdue."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire insurgée de 1777 qui convainquit une monarchie européenne de s'allier à de jeunes rebelles"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1777, une victoire insurgée convainc une monarchie européenne de s'allier à de jeunes rebelles, dans l'est d'un continent."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le tournant de la guerre d'Indépendance, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Saratoga, dans l'État de New York, aux États-Unis."}
@@ -888,7 +888,7 @@ const EVENTS = [
    desc:"En 1836, la résistance héroïque au siège devint un symbole de l'indépendance texane.",
    photo:"events/alamo.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1836, une poignée d'hommes défend jusqu'au dernier les murs d'une vieille mission ; leur mort deviendra un cri qui embrasera tout un peuple."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Siège de 1836 d'une mission fortifiée dont tous les défenseurs périrent, devenant un cri de ralliement"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1836, une mission fortifiée tombe après un siège où tous les défenseurs périssent, devenant un cri de ralliement, dans le sud d'un continent."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le siège de l'Alamo, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de l'Alamo, à San Antonio (Texas), aux États-Unis."}
@@ -897,7 +897,7 @@ const EVENTS = [
    desc:"En 1810, l'appel du curé Hidalgo lança la guerre d'indépendance mexicaine.",
    photo:"events/dolores.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"À l'aube de 1810, du haut d'un clocher de village, la voix d'un curé lance un appel qui, de bouche en bouche, soulève tout un pays contre ses maîtres."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Appel lancé à l'aube de 1810 depuis le clocher d'une paroisse par un prêtre, coup d'envoi d'une insurrection coloniale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"À l'aube de 1810, un prêtre lance depuis un clocher un appel qui donne le coup d'envoi d'une guerre d'indépendance, en Amérique centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le cri d'indépendance d'Hidalgo, au Mexique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cri de Dolores, au village de Dolores (Guanajuato), au Mexique."}
@@ -906,7 +906,7 @@ const EVENTS = [
    desc:"En 1819, la victoire de Bolívar scella l'indépendance de la Nouvelle-Grenade.",
    photo:"events/boyaca.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1819, au sortir d'une marche insensée par-dessus des cimes glacées, une armée exténuée fond sur l'ennemi et, en une heure, arrache la liberté d'une nation."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire éclair de 1819 remportée sur un pont après une traversée héroïque des hauts sommets par un libérateur"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1819, après une traversée héroïque de hauts sommets, une victoire éclair sur un pont libère un territoire, dans le nord des Andes."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Bolívar, en Colombie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Boyacá, dans le Boyacá, en Colombie."}
@@ -915,7 +915,7 @@ const EVENTS = [
    desc:"En 1824, cette victoire scella l'indépendance de l'Amérique du Sud espagnole.",
    photo:"events/ayacucho.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1824, sur un haut plateau battu par les vents des Andes, une ultime charge scelle la liberté de peuples longtemps asservis ; une ère coloniale s'achève."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1824 sur un haut plateau qui mit fin à trois siècles de domination sur tout un continent"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1824, sur un haut plateau andin, une bataille met fin à trois siècles de domination sur tout un continent."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La dernière grande bataille de l'indépendance sud-américaine, au Pérou."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Ayacucho, dans la région d'Ayacucho, au Pérou."}
@@ -924,7 +924,7 @@ const EVENTS = [
    desc:"En 1532, la capture de l'Inca Atahualpa livra l'empire inca à Pizarro.",
    photo:"events/cajamarca.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1532, sur une place de haute montagne, quelques centaines d'étrangers saisissent par traîtrise un souverain porté sur un trône ; sa rançon emplira une pièce d'or."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Guet-apens de 1532 sur une place où une poignée d'aventuriers capturèrent un empereur porté en litière, rançon d'une salle remplie d'or"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1532, sur une place, une poignée d'aventuriers capturent par ruse un empereur porté en litière, sur un haut plateau andin."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La capture d'Atahualpa par Pizarro, au Pérou."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Cajamarca, à Cajamarca, au Pérou."}
@@ -933,7 +933,7 @@ const EVENTS = [
    desc:"En 1492, Colomb toucha une île des Caraïbes, premier contact durable Europe-Amériques.",
    photo:"events/colomb_1492.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En octobre 1492, au terme de longues semaines à guetter la terre, des voiles touchent une petite île inconnue ; sans le savoir, deux mondes viennent de se rencontrer."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Atterrissage d'octobre 1492 sur une petite île après une traversée océanique, contact qui allait bouleverser deux mondes"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En octobre 1492, après une longue traversée océanique, un navigateur aborde une petite île — un contact qui bouleversera deux mondes, dans un archipel des Caraïbes."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le premier débarquement de Colomb, aux Bahamas."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le débarquement de Colomb, à Guanahani, aux Bahamas."}
@@ -942,7 +942,7 @@ const EVENTS = [
    desc:"En 1770, James Cook aborda la côte est, prélude à la colonisation britannique.",
    photo:"events/botany_bay.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1770, au bout du monde, un navigateur aborde une baie où fleurissent mille plantes inconnues ; il ouvre, sans le voir, la voie à une colonisation lointaine."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Abordage de 1770 dans une baie foisonnante de plantes nouvelles par un navigateur cartographe, prélude à une colonisation lointaine"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1770, un navigateur cartographe aborde une baie foisonnante de plantes nouvelles, sur la côte est d'un continent austral."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le débarquement de Cook, en Australie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le débarquement à Botany Bay, près de Sydney, en Australie."}
@@ -951,7 +951,7 @@ const EVENTS = [
    desc:"En 1840, ce traité entre la Couronne et des chefs maoris fonda la colonie.",
    photo:"events/waitangi.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1840, sous une tente fouettée par le vent du grand large, une couronne d'ailleurs et les chefs d'un peuple ancien apposent leur marque sur un pacte que l'on débat encore."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Accord de 1840 signé sous une tente entre une couronne lointaine et des chefs autochtones, texte fondateur toujours débattu"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1840, sous une tente, une couronne lointaine et des chefs autochtones signent un traité fondateur, sur une île du Pacifique Sud."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le traité entre la Couronne et les Maoris, en Nouvelle-Zélande."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le traité de Waitangi, dans le Northland, en Nouvelle-Zélande."}
@@ -960,16 +960,16 @@ const EVENTS = [
    desc:"En 1805, la victoire de Napoléon sur les Austro-Russes est son chef-d'œuvre tactique.",
    photo:"events/austerlitz.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un matin glacé de décembre 1805, un soleil crève la brume au-dessus de plateaux gelés ; en quelques heures, un chef génial piège des armées supérieures et entre dans la légende."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chef-d'œuvre tactique de 1805 dit « des trois empereurs », soleil perçant la brume au-dessus d'un plateau et d'étangs gelés"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1805, un chef-d'œuvre tactique « des trois empereurs », un soleil perçant la brume, dans une région d'Europe centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire napoléonienne des Trois Empereurs, en Tchéquie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Austerlitz, en Moravie, en Tchéquie."}
   ]},
-  {name:"Bataille de la Moskova — Russie", lat:55.52, lng:35.82, radius:6000,
+  {name:"Bataille de la Moskova (Borodino) — Russie", lat:55.52, lng:35.82, radius:6000,
    desc:"En 1812, la bataille la plus sanglante de la campagne de Russie ouvrit la route de Moscou.",
    photo:"events/borodino.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1812, devant un mamelon changé en charnier, une armée l'emporte au prix de son propre sang ; la route d'une grande cité, bientôt livrée aux flammes, s'ouvre devant elle."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Boucherie de 1812 devant une redoute, victoire à la Pyrrhus ouvrant une capitale bientôt trouvée en flammes"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1812, une boucherie devant une redoute, victoire à la Pyrrhus ouvrant une capitale bientôt en flammes, dans les plaines de l'Est."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La bataille sanglante de la campagne de 1812, en Russie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Borodino (la Moskova), en Russie."}
@@ -978,7 +978,7 @@ const EVENTS = [
    desc:"En 1813, la « bataille des Nations » précipita la chute de l'Empire napoléonien.",
    photo:"events/leipzig_1813.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1813, tout un continent ligué déferle sur un conquérant isolé ; sous le nombre, la plus grande bataille de l'ère l'engloutit."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Immense choc de 1813 dit « des Nations », où une coalition de tout un continent submergea un empereur isolé"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1813, un immense choc « des Nations » où une coalition de tout un continent submerge un empereur, en Europe centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La bataille des Nations, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Leipzig, en Saxe, en Allemagne."}
@@ -987,7 +987,7 @@ const EVENTS = [
    desc:"En 1804, Napoléon se couronna empereur dans la cathédrale Notre-Dame.",
    photo:"events/sacre_napoleon.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1804, sous les ors d'une cathédrale illuminée, un homme parti de rien saisit lui-même la couronne et se la pose sur le front ; nul ne la lui aura donnée."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Couronnement de 1804 où le nouveau maître prit la couronne des mains du pape pour se la poser lui-même, sous les voûtes gothiques d'une île fluviale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1804, un nouveau maître prend la couronne des mains du pape pour se la poser lui-même, dans une cathédrale d'une grande capitale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le sacre impérial de Napoléon, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le sacre de Napoléon, à Paris, en France."}
@@ -996,7 +996,7 @@ const EVENTS = [
    desc:"En 1792, cette canonnade sauva la jeune République face aux Prussiens.",
    photo:"events/valmy.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1792, sous la pluie et la boue, quelques salves de canon et un cri jailli des rangs suffisent à faire refluer une armée d'invasion ; une révolution est sauvée."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Canonnade de 1792 plus que bataille, qui suffit à faire reculer une armée d'invasion et à sauver une révolution naissante"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1792, une simple canonnade suffit à faire reculer une armée d'invasion et à sauver une jeune république, dans le nord-est d'un pays d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire révolutionnaire, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Valmy, dans la Marne, en France."}
@@ -1005,7 +1005,7 @@ const EVENTS = [
    desc:"En 1793, le roi fut guillotiné sur l'actuelle place de la Concorde.",
    photo:"events/louis_xvi.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un matin glacé de janvier 1793, devant une place immense et silencieuse, un roi déchu monte à l'échafaud ; en un instant, des siècles de monarchie s'achèvent sous le couperet."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Décapitation publique d'un roi en janvier 1793 sur une grande place, roulement de tambours couvrant ses derniers mots"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En janvier 1793, un roi est décapité en public sur une grande place, au roulement des tambours, dans une capitale d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'exécution de Louis XVI, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'exécution de Louis XVI, à Paris, en France."}
@@ -1014,7 +1014,7 @@ const EVENTS = [
    desc:"En 1798, Bonaparte battit les Mamelouks lors de la campagne d'Égypte.",
    photo:"events/pyramides_1798.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1798, sous le regard de géants de pierre dressés depuis des millénaires, un général lance ses hommes en leur rappelant que du haut de ces monuments, les siècles les contemplent."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1798 remportée en vue de monuments millénaires, un général haranguant ses troupes sur les siècles qui les contemplaient"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1798, une victoire en vue de monuments millénaires, un général haranguant ses troupes, dans le nord-est de l'Afrique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Bonaparte sur les Mamelouks, en Égypte."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille des Pyramides, près du Caire, en Égypte."}
@@ -1023,7 +1023,7 @@ const EVENTS = [
    desc:"En 1798, Nelson détruisit la flotte française, isolant l'armée d'Égypte.",
    photo:"events/aboukir.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Une nuit de 1798, une flotte assoupie au mouillage est anéantie dans les ténèbres ; l'explosion d'un colosse illumine la mer et scelle le sort d'une armée abandonnée sur un rivage lointain."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Anéantissement nocturne d'une flotte à l'ancre en 1798, un vaisseau amiral explosant dans la nuit, piégeant une armée sur un rivage lointain"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1798, l'anéantissement nocturne d'une flotte à l'ancre, un vaisseau amiral explosant, sur une côte du nord-est de l'Afrique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Nelson sur la flotte française, en Égypte."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Aboukir, dans la baie d'Aboukir, en Égypte."}
@@ -1032,7 +1032,7 @@ const EVENTS = [
    desc:"Le 7 décembre 1941, l'attaque japonaise fit entrer les États-Unis dans la guerre.",
    photo:"events/pearl_harbor.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un dimanche matin de 1941, le calme d'un port ensoleillé est déchiré par un ciel soudain noir d'avions ; en quelques minutes, la paix d'un géant s'effondre dans les flammes."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Raid aérien surprise d'un dimanche matin de 1941 sur une base navale, « jour d'infamie » qui précipita un géant dans la guerre"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Un dimanche matin de 1941, un raid aérien surprise sur une base navale — « jour d'infamie » — sur une île du Pacifique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'attaque surprise sur une flotte au mouillage, aux États-Unis (Hawaï)."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'attaque de Pearl Harbor, à Hawaï, aux États-Unis."}
@@ -1041,7 +1041,7 @@ const EVENTS = [
    desc:"En 1950, le débarquement audacieux de MacArthur renversa le cours de la guerre de Corée.",
    photo:"events/inchon.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1950, profitant de marées démesurées que tous jugeaient un obstacle, un débarquement surgit là où nul ne l'attendait et prend l'ennemi dans le dos ; une guerre se renverse."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Débarquement amphibie de 1950 dans un port aux marées extrêmes, pari audacieux qui prit à revers une armée d'invasion"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1950, un débarquement amphibie dans un port aux marées extrêmes, pari audacieux prenant l'ennemi à revers, en Asie de l'Est."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le débarquement de MacArthur, en Corée du Sud."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le débarquement d'Inchon, près de Séoul, en Corée du Sud."}
@@ -1050,7 +1050,7 @@ const EVENTS = [
    desc:"En 1915-1916, l'échec allié dans les Dardanelles coûta des centaines de milliers de vies.",
    photo:"events/gallipoli.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1915, sur des falaises battues par la mer, un assaut venu du large s'enlise dans le sang ; loin de chez eux, des soldats des antipodes y forgent une légende amère."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Débâcle alliée de 1915 sur une presqu'île commandant un détroit, baptême du feu meurtrier de troupes venues des antipodes"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1915, une débâcle alliée sur une presqu'île commandant un détroit, baptême du feu meurtrier de jeunes nations, au carrefour de deux continents."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'échec allié des Dardanelles, en Turquie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Gallipoli, à Çanakkale, en Turquie."}
@@ -1059,16 +1059,16 @@ const EVENTS = [
    desc:"En 1916, l'offensive fit plus d'un million de victimes, symbole de l'hécatombe industrielle.",
    photo:"events/somme_1916.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1916, au premier matin d'une immense offensive, une armée perd en quelques heures plus d'hommes que jamais ; bientôt, d'étranges carapaces d'acier rampent dans la boue."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Offensive de 1916 dont le premier jour reste le plus sanglant d'une armée, premiers chars engagés dans la boue"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1916, une offensive dont le premier jour reste le plus sanglant d'une armée, avec les premiers chars, dans le nord d'un pays d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'offensive meurtrière de 1916, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de la Somme, dans la Somme, en France."}
   ]},
-  {name:"Bataille de la Marne — Marne, France", lat:48.96, lng:3.39, radius:9000,
+  {name:"Bataille de la Marne (1914) — Marne, France", lat:48.96, lng:3.39, radius:9000,
    desc:"En 1914, le « miracle de la Marne » stoppa l'avancée allemande sur Paris.",
    photo:"events/marne_1914.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1914, à quelques lieues d'une capitale menacée, un ultime sursaut arrête net l'envahisseur ; on raconte que des voitures de place y portèrent les renforts."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sursaut de 1914 qui sauva une capitale, des renforts acheminés au front en taxis réquisitionnés"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1914, un sursaut sauve une capitale, des renforts acheminés au front en taxis réquisitionnés, dans le nord-est d'un pays d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le « miracle » qui sauva Paris, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de la Marne, dans la Marne, en France."}
@@ -1077,16 +1077,16 @@ const EVENTS = [
    desc:"En 1917, la prise du pouvoir bolchevique bouleversa le XXe siècle.",
    photo:"events/octobre_1917.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Une nuit d'octobre 1917, le canon d'un navire tonne à blanc sur un fleuve ; à ce signal, on prend d'assaut le siège du pouvoir, et un monde ancien s'écroule."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Coup de force d'octobre 1917 (novembre au calendrier occidental) autour d'un palais, salve d'un croiseur pour signal, naissance d'un régime nouveau"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En octobre 1917, un coup de force autour d'un palais et la salve d'un croiseur, dans une capitale du Nord, sur la Baltique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La révolution bolchevique, en Russie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La révolution d'Octobre, à Saint-Pétersbourg, en Russie."}
   ]},
-  {name:"Armistice du 11 novembre 1918 — Oise, France", lat:49.427, lng:2.906, radius:500,
+  {name:"Armistice de Rethondes — Oise, France", lat:49.427, lng:2.906, radius:500,
    desc:"Le 11 novembre 1918, l'armistice signé dans un wagon mit fin à la Grande Guerre.",
    photo:"events/rethondes.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un matin de novembre 1918, dans la clairière silencieuse d'une forêt, quelques signatures échangées à bord d'un train font enfin taire quatre années de canons."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cessez-le-feu de novembre 1918 signé dans un wagon de chemin de fer au cœur d'une forêt, à la onzième heure du onzième jour"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En novembre 1918, un cessez-le-feu signé dans un wagon au cœur d'une forêt, à la onzième heure du onzième jour, dans le nord d'un pays d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La signature de l'armistice de 1918, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'armistice de 1918, à Rethondes (Oise), en France."}
@@ -1095,7 +1095,7 @@ const EVENTS = [
    desc:"En 1940, l'opération Dynamo sauva 340 000 soldats alliés encerclés.",
    photo:"events/dunkerque.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Au printemps 1940, acculée à la mer et pilonnée sans répit, une armée entière est arrachée aux plages par une flottille hétéroclite de petits bateaux."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sauvetage de 1940 de centaines de milliers de soldats encerclés, embarqués depuis une plage par une flottille de bateaux civils"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1940, des centaines de milliers de soldats encerclés sont évacués depuis une plage sous les bombes, sur une côte du nord d'un pays d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'évacuation alliée de 1940, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'évacuation de Dunkerque, dans le Nord, en France."}
@@ -1104,7 +1104,7 @@ const EVENTS = [
    desc:"En 1942, la victoire britannique renversa la guerre du désert en Afrique du Nord.",
    photo:"events/el_alamein.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"À l'automne 1942, dans les sables brûlants d'un désert côtier, une ligne tient enfin et brise l'élan d'une armée qui se croyait irrésistible."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1942 dans un désert côtier, verrou qui stoppa une avancée vers un canal stratégique et marqua un tournant"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1942, dans un désert côtier, un verrou stoppe une avancée vers un canal stratégique, en Afrique du Nord-Est."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le tournant de la guerre du désert, en Égypte."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'El Alamein, sur la côte égyptienne, en Égypte."}
@@ -1113,7 +1113,7 @@ const EVENTS = [
    desc:"En août 1944, l'insurrection et l'arrivée des Alliés libérèrent la capitale.",
    photo:"events/liberation_paris.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En août 1944, une ville se soulève et des blindés amis franchissent ses portes ; à la volée, toutes les cloches saluent la fin de longues années d'occupation."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Insurrection d'août 1944 relayée par une division blindée, cloches de toutes les églises sonnant la fin d'une occupation"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En août 1944, une insurrection relayée par une division blindée ; toutes les cloches sonnent la libération d'une capitale d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La libération de la capitale, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La libération de Paris, en France."}
@@ -1122,7 +1122,7 @@ const EVENTS = [
    desc:"Fin 1944, la dernière offensive allemande à l'ouest échoua dans la neige.",
    photo:"events/ardennes_1944.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"À l'hiver 1944, une ultime ruée jaillit d'une forêt figée par le gel et la neige ; encerclés et à court de tout, des hommes tiennent bon jusqu'à l'arrivée des secours."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ultime offensive surprise de l'hiver 1944 dans une forêt enneigée, un général assiégé répondant « des nuts ! » à une sommation"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"À l'hiver 1944, une ultime offensive surprise dans une forêt enneigée ; un général assiégé répond par un seul mot, dans le nord d'un pays d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La dernière grande offensive allemande de 1944, en Belgique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille des Ardennes, en Belgique."}
@@ -1131,7 +1131,7 @@ const EVENTS = [
    desc:"En 1945, le drapeau soviétique hissé sur le Reichstag symbolisa la chute du Reich.",
    photo:"events/reichstag_1945.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Au printemps 1945, dans une capitale réduite en décombres, des soldats hissent leurs couleurs au sommet d'un bâtiment fumant ; l'image annonce au monde la fin d'un régime."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Drapeau hissé au printemps 1945 sur le dôme d'un parlement en ruine, image emblématique de la fin d'un régime"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Au printemps 1945, un drapeau hissé sur le dôme d'un parlement en ruine, image de la chute d'un régime, dans une capitale d'Europe centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La chute de Berlin, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise du Reichstag, à Berlin, en Allemagne."}
@@ -1140,7 +1140,7 @@ const EVENTS = [
    desc:"Le 9 août 1945, la seconde bombe atomique précipita la capitulation japonaise.",
    photo:"events/nagasaki_1945.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En août 1945, quelques jours après l'inimaginable, un nouvel éclair aveuglant réduit une cité en poussière ; l'humanité mesure enfin la puissance qu'elle vient de libérer."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Seconde arme nucléaire de l'histoire, larguée le 9 août 1945 sur une ville portuaire après un premier objectif écarté par les nuages"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Le 9 août 1945, la seconde arme nucléaire de l'histoire frappe une ville portuaire, trois jours après une première, sur un archipel d'Asie de l'Est."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La deuxième bombe atomique, au Japon."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le bombardement de Nagasaki, au Japon."}
@@ -1149,7 +1149,7 @@ const EVENTS = [
    desc:"En février 1945, les trois Grands y dessinèrent l'après-guerre.",
    photo:"events/yalta.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En février 1945, dans un palais face à la mer, trois hommes épuisés penchés sur une carte dessinent le monde d'après — et, sans le dire, ses futures fractures."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sommet de février 1945 dans un palais au bord de la mer Noire, trois dirigeants alliés y partageant l'Europe d'après-guerre"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En février 1945, trois dirigeants alliés se partagent le monde d'après-guerre dans un palais au bord de la mer Noire, sur une péninsule."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La rencontre des trois Grands, en Crimée."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La conférence de Yalta, en Crimée."}
@@ -1158,7 +1158,7 @@ const EVENTS = [
    desc:"En 1945-1946, les dignitaires nazis furent jugés, fondant le droit pénal international.",
    photo:"events/nuremberg.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1945, dans le prétoire d'une ville en ruines, les maîtres déchus d'un régime répondent enfin de leurs crimes ; naît là une justice qui dépasse les nations."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Procès de 1945-1946 d'anciens dignitaires d'un régime déchu, acte de naissance d'une justice pénale internationale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1945-1946, d'anciens dignitaires d'un régime déchu sont jugés — acte de naissance d'une justice internationale, en Europe centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le procès des dignitaires nazis, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le procès de Nuremberg, en Bavière, en Allemagne."}
@@ -1167,7 +1167,7 @@ const EVENTS = [
    desc:"En 1948-1949, un pont aérien ravitailla Berlin-Ouest bloqué par les Soviétiques.",
    photo:"events/pont_aerien_berlin.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1948, une ville encerclée et privée de tout refuse de plier à la faim ; jour et nuit, un ballet ininterrompu d'avions la fait vivre par le ciel."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ravitaillement par les airs de 1948-1949 d'une ville assiégée par un blocus terrestre, un avion toutes les quelques minutes"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1948-1949, une ville assiégée par un blocus terrestre est ravitaillée par les airs, un avion toutes les quelques minutes, en Europe centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le blocus brisé par les airs, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le pont aérien de Berlin, en Allemagne."}
@@ -1176,7 +1176,7 @@ const EVENTS = [
    desc:"En 1961, l'édification du mur figea la division de la ville pour 28 ans.",
    photo:"events/construction_mur.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En une nuit d'août 1961, barbelés et parpaings poussent d'un coup au milieu d'une grande ville ; au matin, des familles se découvrent séparées par une frontière infranchissable."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Barrière dressée en une nuit d'août 1961 en travers d'une ville, fracturant familles et quartiers pour près de trois décennies"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En une nuit d'août 1961, une barrière dressée en travers d'une ville fracture familles et quartiers, dans une capitale d'Europe centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'édification du Mur, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La construction du mur de Berlin, en Allemagne."}
@@ -1185,7 +1185,7 @@ const EVENTS = [
    desc:"En 1963, Martin Luther King galvanisa le mouvement des droits civiques.",
    photo:"events/i_have_a_dream.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un jour d'été 1963, devant une foule immense rassemblée au cœur d'une capitale, une voix fait vibrer un rêve d'égalité qui traversera les décennies."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Discours de 1963 prononcé au pied d'un mémorial de marbre devant une immense foule pour les droits civiques"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1963, un discours pour les droits civiques prononcé au pied d'un mémorial de marbre devant une immense foule, dans une capitale d'Amérique du Nord."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le discours de Martin Luther King, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le discours « I Have a Dream », à Washington, aux États-Unis."}
@@ -1194,7 +1194,7 @@ const EVENTS = [
    desc:"En 1963, le président américain fut abattu dans un cortège, événement mondial.",
    photo:"events/jfk.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un midi de novembre 1963, quelques secondes de pellicule saisissent l'impensable : un cortège officiel fauché en pleine ville ; un pays perd son jeune espoir."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Coups de feu de novembre 1963 sur un cortège présidentiel traversant une place, drame filmé qui hante encore les théories"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En novembre 1963, des coups de feu sur un cortège présidentiel traversant une place, drame filmé par un amateur, dans le sud d'un continent."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'assassinat d'un président américain, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'assassinat de JFK, à Dallas (Texas), aux États-Unis."}
@@ -1203,7 +1203,7 @@ const EVENTS = [
    desc:"En 1989, la répression du mouvement démocratique marqua durablement la Chine.",
    photo:"events/tiananmen.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Au printemps 1989, un vent de liberté soulève une jeunesse en marche ; en une nuit, la force l'écrase, léguant au monde l'image d'un courage nu."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Répression du printemps 1989 d'un mouvement étudiant sur une vaste place, image d'un homme seul face à une colonne de blindés"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Au printemps 1989, la répression d'un mouvement étudiant sur une vaste place, l'image d'un homme seul face aux chars, en Asie de l'Est."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La répression du mouvement démocratique, en Chine."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Tian'anmen, à Pékin, en Chine."}
@@ -1212,7 +1212,7 @@ const EVENTS = [
    desc:"En 1990, la réunification allemande scella la fin de la guerre froide en Europe.",
    photo:"events/reunification_all.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1990, un pays déchiré depuis la fin d'un grand conflit recoud ses deux moitiés ; sous une porte monumentale, un feu d'artifice célèbre la fin d'une longue blessure."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Réunification proclamée en 1990 d'un pays coupé en deux depuis la fin d'un conflit mondial, feu d'artifice devant une porte monumentale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1990, la réunification proclamée d'un pays coupé en deux depuis la fin d'un conflit mondial, en Europe centrale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La réunification d'une nation divisée, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La réunification allemande, à Berlin, en Allemagne."}
@@ -1221,7 +1221,7 @@ const EVENTS = [
    desc:"En 1990, la libération de Mandela ouvrit la fin de l'apartheid.",
    photo:"events/mandela_1990.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1990, après vingt-sept ans derrière les barreaux, un homme devenu le symbole du monde entier retrouve le grand jour, le poing dressé devant une marée de visages en larmes."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Libération de 1990 d'un prisonnier de 27 ans devenu figure mondiale, poing levé au balcon d'un hôtel de ville avant un discours à la foule"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1990, un prisonnier de 27 ans devenu figure mondiale est libéré, poing levé au balcon d'un hôtel de ville, à la pointe d'un continent."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La libération de Mandela, en Afrique du Sud."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La libération de Nelson Mandela, au Cap, en Afrique du Sud."}
@@ -1230,7 +1230,7 @@ const EVENTS = [
    desc:"En 1903, le premier vol motorisé contrôlé ouvrit l'ère de l'aviation.",
    photo:"events/wright.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En décembre 1903, dans le vent glacé de dunes désertes, une frêle machine de toile et de bois s'arrache au sol pour quelques secondes — et l'humanité, enfin, prend son envol."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Premier vol motorisé contrôlé de décembre 1903, une douzaine de secondes au-dessus des dunes d'une côte venteuse"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En décembre 1903, le premier vol motorisé contrôlé — une douzaine de secondes au-dessus des dunes — sur une côte de l'est d'un continent."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le premier vol des frères Wright, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le premier vol des frères Wright, à Kitty Hawk (Caroline du Nord), aux États-Unis."}
@@ -1239,7 +1239,7 @@ const EVENTS = [
    desc:"En 1912, le paquebot réputé insubmersible sombra après avoir heurté un iceberg.",
    photo:"events/titanic.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Par une nuit d'avril 1912, glaciale et sans lune, le plus fier des navires, qu'on jurait invincible, effleure une montagne de glace et s'enfonce lentement dans les eaux noires."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Naufrage d'avril 1912 d'un paquebot réputé insubmersible, heurtant un iceberg dans une nuit glacée de l'océan Nord"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En avril 1912, un paquebot réputé insubmersible heurte un iceberg et sombre dans une nuit glaciale, au large des bancs de Terre-Neuve."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le naufrage du Titanic, dans l'Atlantique Nord."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le naufrage du Titanic, au large de Terre-Neuve, dans l'Atlantique."}
@@ -1248,7 +1248,7 @@ const EVENTS = [
    desc:"En 1848, la découverte d'or déclencha une ruée qui transforma l'Ouest américain.",
    photo:"events/ruee_or.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1848, quelques paillettes scintillant au fond d'un ruisseau suffisent à jeter sur des pistes lointaines des dizaines de milliers d'hommes ivres d'un même rêve."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Pépites trouvées en 1848 dans le bief d'une scierie, déclenchant une ruée de dizaines de milliers de chercheurs vers l'Ouest"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1848, des pépites trouvées dans le bief d'une scierie déclenchent une ruée de dizaines de milliers de chercheurs, dans l'ouest d'un continent."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La découverte d'or de Sutter's Mill, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La ruée vers l'or de 1849, en Californie, aux États-Unis."}
@@ -1257,7 +1257,7 @@ const EVENTS = [
    desc:"En 1869, la jonction des rails relia les deux côtes des États-Unis.",
    photo:"events/transcontinental.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1869, au milieu d'un désert sans fin, un dernier clou d'or unit deux voies ferrées venues des deux océans ; un continent est désormais cousu bord à bord."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Jonction de 1869 scellée par un crampon d'or, deux réseaux ferrés se rejoignant enfin au milieu d'un désert d'altitude"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1869, un crampon d'or scelle la jonction de deux réseaux ferrés au milieu d'un vaste continent."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La jonction du chemin de fer transcontinental, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le transcontinental américain, à Promontory (Utah), aux États-Unis."}
@@ -1266,7 +1266,7 @@ const EVENTS = [
    desc:"En 1869, l'ouverture du canal relia Méditerranée et mer Rouge.",
    photo:"events/suez_1869.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1869, dans les fastes et les pavillons, un cortège de navires glisse pour la première fois d'une mer à l'autre à travers les sables ; deux mondes se rapprochent."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Ouverture de 1869 d'un canal reliant deux mers, cortège de navires pavoisés inaugurant un raccourci maritime entre deux continents"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1869, un cortège de navires pavoisés inaugure un canal reliant deux mers, sur un isthme d'Afrique du Nord-Est."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'inauguration du canal de Suez, en Égypte."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'inauguration du canal de Suez, en Égypte."}
@@ -1275,7 +1275,7 @@ const EVENTS = [
    desc:"En 1859, cette bataille sanglante inspira la fondation de la Croix-Rouge.",
    photo:"events/solferino.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1859, au soir d'une bataille, la vue de milliers de blessés laissés à l'agonie bouleverse un simple voyageur ; de sa pitié naîtra une grande œuvre de secours."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Carnage de 1859 dont l'horreur inspira à un témoin la création d'une organisation humanitaire universelle"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1859, un carnage dont l'horreur inspire à un témoin la création d'une grande organisation humanitaire, dans le nord d'une péninsule méditerranéenne."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La bataille à l'origine de la Croix-Rouge, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Solférino, en Lombardie, en Italie."}
@@ -1284,7 +1284,7 @@ const EVENTS = [
    desc:"En 1870, la capture de Napoléon III précipita la chute du Second Empire.",
    photo:"events/sedan_1870.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1870, cerné de toutes parts, un empereur rend son épée et son armée entière ; à la nouvelle, un régime s'effondre et la rue gronde."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Encerclement de 1870 où un empereur se rendit avec son armée, effondrant un régime et allumant une révolution"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1870, un empereur se rend avec toute son armée après un encerclement, effondrant un régime, dans le nord-est d'un pays d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La capitulation de Napoléon III, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Sedan, dans les Ardennes, en France."}
@@ -1293,7 +1293,7 @@ const EVENTS = [
    desc:"En 1871, l'insurrection parisienne et sa répression sanglante marquèrent l'histoire ouvrière.",
    photo:"events/commune_paris.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Au printemps 1871, une capitale se gouverne elle-même, ivre d'un rêve d'égalité ; deux mois plus tard, une semaine de sang l'ensevelit contre le mur d'un cimetière."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Insurrection du printemps 1871 d'une capitale autogérée durant deux mois, écrasée lors d'une « semaine sanglante » contre les murs d'un cimetière"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Au printemps 1871, une capitale s'autogère durant deux mois avant d'être écrasée lors d'une « semaine sanglante », en Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La Commune insurrectionnelle, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Commune de Paris, en France."}
@@ -1302,7 +1302,7 @@ const EVENTS = [
    desc:"En 1879, les Zoulous infligèrent une lourde défaite à l'armée britannique.",
    photo:"events/isandlwana.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1879, au pied d'une colline en forme de sphinx, une marée de guerriers presque nus submerge une troupe pourtant armée de fusils ; l'orgueil d'un empire y est englouti."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Désastre colonial de 1879 où des guerriers à sagaies submergèrent une colonne équipée de fusils, au pied d'une colline en forme de sphinx"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1879, des guerriers à sagaies submergent une colonne équipée de fusils modernes — un désastre colonial, dans l'est d'un pays d'Afrique australe."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite britannique face aux Zoulous, en Afrique du Sud."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Isandhlwana, au KwaZulu-Natal, en Afrique du Sud."}
@@ -1311,7 +1311,7 @@ const EVENTS = [
    desc:"En 1896, la victoire éthiopienne stoppa la colonisation italienne, cas unique en Afrique.",
    photo:"events/adoua.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1896, sur des hauteurs d'Afrique, un vieux royaume met en déroute une armée coloniale sûre d'elle et sauve, seul de tout un continent, sa liberté."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1896 d'un empire africain sur une puissance coloniale européenne, préservant une rare indépendance sur tout un continent"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1896, un empire africain défait une puissance coloniale européenne et préserve son indépendance, dans le nord de la corne de l'Afrique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire éthiopienne sur une puissance coloniale, en Éthiopie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Adoua, dans le Tigré, en Éthiopie."}
@@ -1320,7 +1320,7 @@ const EVENTS = [
    desc:"En 1898, les mitrailleuses britanniques anéantirent l'armée mahdiste.",
    photo:"events/omdurman.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1898, en plein désert, des armes modernes fauchent par milliers des guerriers lancés au galop ; face à la mitraille, le courage le plus fou ne pèse rien."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Massacre technologique de 1898 où des mitrailleuses fauchèrent une armée de derviches chargeant à découvert, apogée d'une conquête fluviale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1898, des mitrailleuses fauchent une armée de derviches lancée à la charge — un massacre technologique, le long d'un grand fleuve d'Afrique du Nord-Est."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire britannique sur les Mahdistes, au Soudan."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Omdurman, près de Khartoum, au Soudan."}
@@ -1329,7 +1329,7 @@ const EVENTS = [
    desc:"En 1857, la grande révolte indienne ébranla la domination britannique.",
    photo:"events/cipayes.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1857, la rumeur de cartouches impures embrase une armée soumise ; le temps d'un été, la révolte ranime le fantôme d'une splendeur impériale déchue."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Soulèvement de 1857 déclenché par des cartouches suspectes, insurrection qui rétablit brièvement un vieil empereur sur un trône fantoche"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1857, un soulèvement déclenché par des cartouches suspectes rétablit brièvement un vieil empereur sur un trône fantoche."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La grande révolte indienne, en Inde."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La révolte des Cipayes, à Delhi, en Inde."}
@@ -1338,7 +1338,7 @@ const EVENTS = [
    desc:"En 1526, Babur fonda l'Empire moghol par sa victoire décisive.",
    photo:"events/panipat_1526.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1526, le tonnerre encore inconnu du canon disperse une multitude sûre d'elle ; sur ce champ de poussière s'élève un empire promis à des siècles."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1526 où l'artillerie et une tactique de chariots enchaînés brisèrent une armée bien plus nombreuse, fondant un empire de plusieurs siècles"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1526, artillerie et chariots enchaînés brisent une armée bien plus nombreuse, fondant un empire de plusieurs siècles."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La fondation de l'Empire moghol par Babur, en Inde."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Panipat, dans le Haryana, en Inde."}
@@ -1347,7 +1347,7 @@ const EVENTS = [
    desc:"En 326 av. J.-C., Alexandre vainquit le roi Pôros mais atteignit la limite de sa conquête.",
    photo:"events/hydaspe.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vers 326 av. J.-C., sous des pluies torrentielles et face à des monstres cuirassés, un roi infatigable arrache encore une victoire ; mais cette fois, ses hommes épuisés refusent d'aller plus loin."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 326 av. J.-C. remportée sous la mousson contre des éléphants de guerre, dernière grande bataille avant que les troupes refusent d'avancer"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 326 av. J.-C., sous la mousson, un conquérant l'emporte contre des éléphants de guerre — dernière bataille avant que ses troupes refusent d'avancer."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire d'Alexandre sur Pôros, au Pakistan."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de l'Hydaspe, au Pendjab, au Pakistan."}
@@ -1356,7 +1356,7 @@ const EVENTS = [
    desc:"En 1905, la flotte japonaise anéantit l'escadre russe, séisme géopolitique.",
    photo:"events/tsushima.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1905, dans un détroit balayé par la houle, une jeune marine d'Orient envoie par le fond une armada épuisée d'avoir fait le tour du globe ; l'ordre du monde en chancelle."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Anéantissement en 1905 d'une flotte venue de l'autre bout du monde par une marine asiatique montante, séisme dans l'ordre colonial"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1905, une marine asiatique montante anéantit une flotte venue de l'autre bout du monde — séisme dans l'ordre colonial."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'écrasante victoire navale japonaise, au large du Japon."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Tsushima, dans le détroit de Corée, au large du Japon."}
@@ -1365,7 +1365,7 @@ const EVENTS = [
    desc:"En 1868, la restauration impériale lança la modernisation fulgurante du Japon.",
    photo:"events/meiji.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1868, un archipel tourne d'un coup une page de plusieurs siècles : le sabre des guerriers s'incline devant un tout jeune souverain, et le pays se rue vers l'ère des machines."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Restauration de 1868 rendant le pouvoir à un jeune empereur, fin d'un régime de guerriers et bond d'un archipel vers l'ère industrielle"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1868, le pouvoir revient à un jeune empereur ; fin d'un régime de guerriers et bond d'un archipel vers l'ère industrielle."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La restauration impériale Meiji, au Japon."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La restauration Meiji, à Kyoto, au Japon."}
@@ -1374,7 +1374,7 @@ const EVENTS = [
    desc:"En 1185, cette bataille navale acheva la guerre de Genpei et fonda le shogunat.",
    photo:"events/dan_no_ura.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1185, dans un détroit où bouillonnent les courants, un clan vaincu se jette aux flots avec son enfant-souverain ; sur ces eaux s'ouvre l'âge des guerriers."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bataille navale de 1185 dans un détroit à forts courants, un empereur-enfant englouti avec son clan vaincu, aube d'un pouvoir guerrier"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1185, une bataille navale dans un détroit à forts courants engloutit un empereur-enfant et son clan vaincu — aube d'un pouvoir guerrier."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La fin de la guerre de Genpei, au Japon."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Dan-no-ura, détroit de Shimonoseki, au Japon."}
@@ -1383,7 +1383,7 @@ const EVENTS = [
    desc:"En 1949, Mao proclama la RPC depuis la porte de la Paix céleste.",
    photo:"events/rpc_1949.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En octobre 1949, du haut d'une porte immense, une voix grave annonce à une foule sans fin la naissance d'un monde nouveau, après des décennies de fureur fratricide."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Proclamation d'octobre 1949 depuis le balcon d'une porte monumentale au terme d'une longue guerre civile, naissance d'une république populaire"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En octobre 1949, depuis le balcon d'une porte monumentale, un chef proclame une république populaire au terme d'une longue guerre civile."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La proclamation d'une grande république populaire, en Chine."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La proclamation de la RPC, à Pékin, en Chine."}
@@ -1392,7 +1392,7 @@ const EVENTS = [
    desc:"En 1900, le soulèvement anti-étranger fut réprimé par une coalition internationale.",
    photo:"events/boxers.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1900, une colère ancestrale se dresse contre l'étranger ; derrière des murs assiégés, on guette des semaines durant un secours venu de loin."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Soulèvement de 1900 de sociétés secrètes pratiquant les arts martiaux contre les étrangers, légations assiégées puis délivrées par huit puissances"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1900, des sociétés secrètes d'arts martiaux se soulèvent contre les étrangers ; des légations assiégées sont délivrées par huit puissances."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La révolte des Boxers, en Chine."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La révolte des Boxers, à Pékin, en Chine."}
@@ -1401,7 +1401,7 @@ const EVENTS = [
    desc:"En 1934, la retraite épique des communistes chinois sur 12 000 km forgea leur mythe.",
    photo:"events/longue_marche.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1934, une armée traquée s'élance dans une fuite interminable par-delà les monts et les torrents ; cette épreuve titanesque forgera un pouvoir et la légende de son chef."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Départ en 1934 d'une retraite de plus de 10 000 km à travers monts et rivières, épreuve fondatrice d'un futur pouvoir et de son chef"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1934, départ d'une retraite de plus de 10 000 km à travers monts et rivières, épreuve fondatrice d'un futur pouvoir et de son chef."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le début de la Longue Marche, en Chine."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Longue Marche, depuis le Jiangxi, en Chine."}
@@ -1410,7 +1410,7 @@ const EVENTS = [
    desc:"En 1968, l'offensive surprise retourna l'opinion américaine sur la guerre.",
    photo:"events/tet.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Au cœur des fêtes du nouvel an lunaire 1968, une offensive jaillie de nulle part frappe jusqu'au cœur des villes ; à l'autre bout de la terre, une opinion bascule."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Offensive surprise du nouvel an lunaire 1968, un commando jusque dans l'enceinte d'une ambassade, choc psychologique retournant une opinion lointaine"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1968, une offensive surprise du nouvel an lunaire porte un commando jusque dans une ambassade — choc retournant une opinion lointaine."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'offensive du Têt, au Vietnam."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'offensive du Têt, à Saïgon (Hô Chi Minh-Ville), au Vietnam."}
@@ -1419,7 +1419,7 @@ const EVENTS = [
    desc:"En 1979, la chute du chah instaura une république islamique.",
    photo:"events/revolution_iran.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1979, une marée humaine emporte un trône ; d'un long exil revient un vieil homme en robe, salué comme un guide par des millions de voix."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Révolution de 1979 qui renversa une monarchie et fit revenir d'exil un dignitaire religieux acclamé par des foules immenses"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1979, une révolution renverse une monarchie et fait revenir d'exil un dignitaire religieux acclamé par des foules immenses."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La révolution islamique, en Iran."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La révolution iranienne, à Téhéran, en Iran."}
@@ -1428,7 +1428,7 @@ const EVENTS = [
    desc:"En 1775, cette bataille coûteuse montra que les insurgés pouvaient tenir tête aux Britanniques.",
    photo:"events/bunker_hill.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1775, sur une hauteur dominant un port, tant de sang est versé pour emporter une position que le vainqueur en pleure sa victoire."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Bataille de 1775 sur une colline dominant un port, victoire si coûteuse pour les habits rouges qu'elle en eut le goût d'une défaite"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1775, sur une colline dominant un port, une victoire si coûteuse pour les habits rouges qu'elle eut le goût d'une défaite."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La bataille de Bunker Hill, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Bunker Hill, près de Boston, aux États-Unis."}
@@ -1437,7 +1437,7 @@ const EVENTS = [
    desc:"En 1776, Washington traversa le fleuve gelé pour une victoire surprise qui ranima la révolution.",
    photo:"events/trenton.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Au cœur d'un hiver désespéré, la nuit de Noël 1776, une troupe aux abois tente un coup d'audace dans le froid et la glace, et ranime une cause chancelante."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Coup d'audace de la nuit de Noël 1776, une traversée de fleuve charriant des glaces pour surprendre une garnison endormie"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"La nuit de Noël 1776, une traversée de fleuve charriant des glaces permet de surprendre une garnison endormie."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire surprise de Washington, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Trenton, dans le New Jersey, aux États-Unis."}
@@ -1446,7 +1446,7 @@ const EVENTS = [
    desc:"En 1862, la victoire mexicaine sur les Français est commémorée chaque 5 mai.",
    photo:"events/puebla.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Le 5 mai 1862, une troupe en sous-nombre tient tête et fait plier une armée venue d'Europe qu'on disait imbattable."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire inattendue du 5 mai 1862 d'une armée en infériorité sur un corps expéditaire européen réputé invincible"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Le 5 mai 1862, une armée en infériorité l'emporte contre un corps expéditionnaire européen réputé invincible."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire du Cinco de Mayo, au Mexique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Puebla, à Puebla, au Mexique."}
@@ -1455,7 +1455,7 @@ const EVENTS = [
    desc:"En 1863, la résistance héroïque de la Légion étrangère devint sa légende fondatrice.",
    photo:"events/camerone.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1863, dans une ferme écrasée de soleil, une poignée d'hommes jure de ne pas se rendre et tient tête à une marée d'assaillants jusqu'au dernier."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Résistance à un contre soixante en 1863 d'une poignée de légionnaires retranchés dans une ferme, main de bois d'un capitaine devenue relique"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1863, une poignée de légionnaires retranchés dans une ferme résiste à un contre soixante ; la main de bois d'un capitaine en devint une relique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le combat de Camerone de la Légion étrangère, au Mexique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le combat de Camerone, dans l'État de Veracruz, au Mexique."}
@@ -1464,7 +1464,7 @@ const EVENTS = [
    desc:"En 1929, l'effondrement boursier déclencha la Grande Dépression mondiale.",
    photo:"events/krach_1929.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"À l'automne 1929, en quelques jours de panique, des fortunes s'évaporent et des banques s'écroulent ; le monde bascule dans les années les plus sombres du siècle."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Effondrement boursier d'octobre 1929 dans une rue étroite de la finance, « jeudi noir » ouvrant une décennie de misère mondiale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En octobre 1929, un effondrement boursier dans une rue étroite de la finance ouvre une décennie de misère mondiale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le krach boursier de 1929, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le krach de Wall Street, à New York, aux États-Unis."}
@@ -1473,7 +1473,7 @@ const EVENTS = [
    desc:"En 1922, la marche fasciste porta Mussolini au pouvoir.",
    photo:"events/marche_rome.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1922, une marée de chemises sombres converge vers une capitale ; sans presque tirer un coup, elle porte un homme au sommet de l'État."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défilé d'intimidation de 1922 de chemises colorées vers une capitale, ouvrant les portes du pouvoir à leur chef sans véritable combat"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1922, un défilé d'intimidation de chemises colorées vers une capitale ouvre les portes du pouvoir à leur chef, sans véritable combat."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La marche fasciste sur la capitale, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La marche sur Rome, à Rome, en Italie."}
@@ -1482,7 +1482,7 @@ const EVENTS = [
    desc:"En 2001, les attaques contre les tours jumelles bouleversèrent la géopolitique mondiale.",
    photo:"events/onze_septembre.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Par un ciel pur de septembre 2001, le monde bascule en direct : deux colosses de verre s'effondrent, et une ère de certitudes avec eux."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Attaques coordonnées d'un matin de septembre 2001 contre deux tours jumelles d'un quartier d'affaires, bascule géopolitique du nouveau siècle"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Un matin de septembre 2001, des attaques coordonnées frappent deux tours jumelles d'un quartier d'affaires — bascule géopolitique du nouveau siècle."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Les attentats contre le World Trade Center, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les attentats du 11 septembre, à New York, aux États-Unis."}
@@ -1491,7 +1491,7 @@ const EVENTS = [
    desc:"En 338 av. J.-C., Philippe II de Macédoine soumit les cités grecques.",
    photo:"events/cheronee.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 338 av. J.-C., un jeune prince et son père, venus du nord, brisent la fière indépendance de vieilles républiques ; l'élite de leurs guerriers tombe jusqu'au dernier."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 338 av. J.-C. d'un roi du Nord sur des cités jalouses, un bataillon d'amants réputé invincible anéanti sous un lion de pierre"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 338 av. J.-C., un roi du Nord soumet des cités jalouses ; un bataillon d'amants réputé invincible est anéanti sous un lion de pierre."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Philippe II sur les cités grecques, en Grèce."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Chéronée, en Béotie, en Grèce."}
@@ -1500,7 +1500,7 @@ const EVENTS = [
    desc:"En 371 av. J.-C., Thèbes brisa l'hégémonie spartiate.",
    photo:"events/leuctres.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 371 av. J.-C., une manœuvre audacieuse renverse sur un champ de bataille la cité de guerriers qu'on croyait invincible ; une suprématie s'écroule."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 371 av. J.-C. qui, par un ordre oblique novateur, abattit la suprématie d'une cité guerrière réputée imbattable"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 371 av. J.-C., un ordre oblique novateur abat la suprématie d'une cité guerrière réputée imbattable."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire thébaine sur Sparte, en Grèce."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Leuctres, en Béotie, en Grèce."}
@@ -1509,7 +1509,7 @@ const EVENTS = [
    desc:"En 331 av. J.-C., Alexandre fonda la cité qui deviendra un phare du savoir antique.",
    photo:"events/alexandrie.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vers 331 av. J.-C., au bord des flots, un conquérant trace au sol les contours d'une cité qui portera bientôt un phare touchant le ciel et tout le savoir du monde."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Cité fondée en 331 av. J.-C. par un conquérant sur une côte, futur foyer d'un phare géant et d'une bibliothèque universelle"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 331 av. J.-C., un conquérant fonde sur une côte une cité, futur foyer d'un phare géant et d'une bibliothèque universelle."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La fondation d'Alexandrie par Alexandre, en Égypte."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La fondation d'Alexandrie, sur le delta du Nil, en Égypte."}
@@ -1518,7 +1518,7 @@ const EVENTS = [
    desc:"Vers 60-61, la reine Boudicca souleva les Bretons et brûla Londinium.",
    photo:"events/boudicca.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En l'an 60, l'humiliation d'une reine embrase toute une île ; trois cités partent en fumée avant que la révolte ne soit noyée dans le sang."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Soulèvement de l'an 60 mené par une reine celte outragée, trois villes romaines incendiées avant l'écrasement final"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En l'an 60, une reine celte outragée mène un soulèvement ; trois villes romaines sont incendiées avant l'écrasement final."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La révolte de Boudicca, en Angleterre."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La révolte de Boudicca, à Londres (Londinium), en Angleterre."}
@@ -1527,7 +1527,7 @@ const EVENTS = [
    desc:"En 1212, la coalition chrétienne remporta une victoire décisive de la Reconquista.",
    photo:"events/las_navas.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1212, des royaumes longtemps divisés unissent enfin leurs bannières et brisent la puissance d'un califat — une longue reconquête bascule."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1212 d'une coalition de royaumes chrétiens sur un califat, tournant d'une longue reconquête péninsulaire"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1212, une coalition de royaumes chrétiens l'emporte sur un califat — tournant d'une longue reconquête péninsulaire."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Une victoire décisive de la Reconquista, en Espagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Las Navas de Tolosa, dans la province de Jaén, en Espagne."}
@@ -1536,7 +1536,7 @@ const EVENTS = [
    desc:"En 1291, la prise de la dernière place forte croisée acheva les États latins d'Orient.",
    photo:"events/acre_1291.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1291, le dernier port tenu par des chevaliers venus d'Occident cède sous l'assaut ; une longue aventure guerrière en Terre sainte s'éteint dans les vagues."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Chute en 1291 du dernier bastion côtier d'une présence latine en Orient, fin de deux siècles de croisades"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1291, le dernier bastion côtier d'une présence latine en Orient tombe — fin de deux siècles de croisades."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise d'Acre par les Mamelouks, en Israël."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute d'Acre, en Galilée, en Israël."}
@@ -1545,7 +1545,7 @@ const EVENTS = [
    desc:"En 1476, les Confédérés écrasèrent Charles le Téméraire.",
    photo:"events/morat.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1476, l'orgueil d'un prince conquérant se brise une seconde fois sur la muraille d'hommes d'un petit peuple libre ; sa fin est déjà proche."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Écrasement en 1476 d'un duc ambitieux par des piquiers montagnards, deuxième d'une série de défaites qui lui coûtera bientôt la vie"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1476, des piquiers montagnards écrasent un duc ambitieux — deuxième d'une série de défaites qui lui coûtera bientôt la vie."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire des cantons confédérés sur Charles le Téméraire, en Suisse."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Morat, canton de Fribourg, en Suisse."}
@@ -1554,7 +1554,7 @@ const EVENTS = [
    desc:"En 1347, des navires génois introduisirent la peste en Europe par ce port.",
    photo:"events/peste_1347.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1347, des galères accostent, ponts jonchés de cadavres et de mourants ; dans leurs cales voyage un mal noir qui va décimer des peuples entiers."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Navires accostant en 1347 avec des équipages mourants, portant d'Orient un fléau qui allait emporter un tiers d'un continent"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1347, des navires accostent avec des équipages mourants, portant d'Orient un fléau qui allait emporter un tiers d'un continent."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'arrivée de la peste noire en Europe, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'arrivée de la peste noire, à Messine (Sicile), en Italie."}
@@ -1563,7 +1563,7 @@ const EVENTS = [
    desc:"En 955, Otton Ier arrêta les Hongrois, sécurisant l'Europe centrale.",
    photo:"events/lechfeld.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 955, une seule journée met fin à des décennies de raids venus de l'est ; le roi vainqueur se voit déjà ceindre une couronne d'empire."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 955 qui mit fin aux raids dévastateurs de cavaliers venus de l'est, sacrant un roi bientôt empereur"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 955, une victoire met fin aux raids dévastateurs de cavaliers venus de l'est et sacre un roi bientôt empereur."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire d'Otton Ier sur les Hongrois, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille du Lechfeld, près d'Augsbourg (Bavière), en Allemagne."}
@@ -1572,7 +1572,7 @@ const EVENTS = [
    desc:"En 1066, Harold repoussa les Norvégiens juste avant Hastings.",
    photo:"events/stamford_bridge.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En septembre 1066, un roi triomphe des pillards du Nord ; mais sa gloire n'aura duré qu'un souffle, un autre péril montant déjà de la mer, au sud."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de septembre 1066 d'un roi saxon sur des envahisseurs venus du Nord, triomphe éphémère à trois semaines d'un désastre au sud"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En septembre 1066, un roi saxon défait des envahisseurs venus du Nord — triomphe éphémère à trois semaines d'un désastre au sud."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Harold sur les Norvégiens, en Angleterre."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Stamford Bridge, dans le Yorkshire, en Angleterre."}
@@ -1581,7 +1581,7 @@ const EVENTS = [
    desc:"En 1396, la dernière grande croisade échoua face aux Ottomans.",
    photo:"events/nicopolis.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1396, la fleur d'une chevalerie trop sûre d'elle vient se briser, au bord d'un grand fleuve, contre un adversaire qu'elle méprisait."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Déroute de 1396 d'une chevalerie occidentale trop confiante face aux Ottomans, sur les rives d'un grand fleuve, dernière grande croisade"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1396, une chevalerie occidentale trop confiante est mise en déroute par les Ottomans sur les rives d'un grand fleuve — dernière grande croisade."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Une croisade brisée sur le Danube, en Bulgarie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Nicopolis, sur le Danube, en Bulgarie."}
@@ -1590,7 +1590,7 @@ const EVENTS = [
    desc:"En 1444, la mort du roi Ladislas scella l'échec de la croisade anti-ottomane.",
    photo:"events/varna.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1444, l'imprudence d'un jeune roi lui coûte la vie dans une charge folle ; avec lui s'effondre le dernier espoir d'arrêter une marée montant de l'Est."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Défaite de 1444 où un jeune roi tomba en chargeant témérairement, brisant les derniers espoirs d'endiguer une avancée ottomane vers l'Europe"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1444, un jeune roi tombe en chargeant témérairement, brisant les espoirs d'endiguer une avancée ottomane vers l'Europe."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Une croisade brisée près de la mer Noire, en Bulgarie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Varna, sur la mer Noire, en Bulgarie."}
@@ -1599,7 +1599,7 @@ const EVENTS = [
    desc:"En 1704, Marlborough et le Prince Eugène brisèrent l'armée franco-bavaroise.",
    photo:"events/blenheim.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1704, au bord d'un grand fleuve, deux généraux unis brisent l'élan d'un roi qui rêvait de dominer l'Europe."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1704 d'un tandem de généraux alliés sur les rives d'un grand fleuve, coup d'arrêt aux ambitions d'un Roi-Soleil"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1704, un tandem de généraux alliés l'emporte sur les rives d'un grand fleuve, coup d'arrêt aux ambitions d'un Roi-Soleil."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Marlborough, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Blenheim, sur le Danube (Bavière), en Allemagne."}
@@ -1608,7 +1608,7 @@ const EVENTS = [
    desc:"En 1745, la victoire française illustra la courtoisie guerrière du XVIIIe siècle.",
    photo:"events/fontenoy.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1745, deux armées s'affrontent des heures durant sur une plaine indécise ; c'est finalement l'arrivée d'une réserve et le sang-froid d'un vieux maréchal qui emportent la victoire."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1745 précédée, dit la légende, d'une invitation courtoise à l'adversaire de tirer le premier"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1745, une victoire précédée, dit la légende, d'une invitation courtoise faite à l'adversaire de tirer le premier."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire du maréchal de Saxe, en Belgique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Fontenoy, dans le Hainaut, en Belgique."}
@@ -1617,7 +1617,7 @@ const EVENTS = [
    desc:"En 1807, la victoire de Napoléon força la Russie à négocier la paix de Tilsit.",
    photo:"events/friedland.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1807, dos au fleuve et sans issue, une armée est brisée ; peu après, deux empereurs se donnent l'accolade sur un radeau, au milieu des eaux."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1807 acculant une armée à un fleuve, qui poussa deux empereurs à sceller une paix sur un radeau quelques jours plus tard"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1807, une armée est acculée à un fleuve ; la défaite pousse deux empereurs à sceller une paix sur un radeau quelques jours plus tard."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Une victoire napoléonienne avant Tilsit, dans l'actuelle Russie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Friedland, région de Kaliningrad, en Russie."}
@@ -1626,7 +1626,7 @@ const EVENTS = [
    desc:"En 1809, Napoléon vainquit l'Autriche au terme d'une bataille massive.",
    photo:"events/wagram.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1809, après un premier assaut noyé dans le sang au bord d'un fleuve, un déluge de feu jamais vu emporte enfin la décision."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1809 arrachée par une concentration d'artillerie inédite après un premier échec sanglant sur une île fluviale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1809, une concentration d'artillerie inédite arrache la victoire après un premier échec sanglant sur une île fluviale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Napoléon sur les Autrichiens, en Autriche."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Wagram, au nord de Vienne, en Autriche."}
@@ -1635,7 +1635,7 @@ const EVENTS = [
    desc:"En 1827, la flotte ottomane fut détruite, favorisant l'indépendance grecque.",
    photo:"events/navarin.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1827, prises au piège d'une rade close, les voiles d'un empire brûlent sous le feu croisé de trois puissances venues au secours d'un peuple insurgé."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Anéantissement en 1827 d'une flotte ottomane dans une rade fermée par trois marines européennes venues soutenir une insurrection"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1827, trois marines européennes anéantissent une flotte ottomane dans une rade fermée, pour soutenir une insurrection."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La destruction de la flotte ottomane, en Grèce."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Navarin, en Messénie, en Grèce."}
@@ -1644,7 +1644,7 @@ const EVENTS = [
    desc:"En 1830, le débarquement français ouvrit 132 ans de colonisation.",
    photo:"events/alger_1830.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1830, pour laver l'affront d'un simple geste, une flotte débarque au bord d'une baie du Sud ; commence alors plus d'un siècle d'emprise."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Débarquement de 1830 sur une plage à l'ouest d'une baie, prétexte d'un coup d'éventail lançant plus d'un siècle de colonisation"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1830, un débarquement à l'ouest d'une baie, prétexte d'un « coup d'éventail », lance plus d'un siècle de colonisation."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise d'Alger, en Algérie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise d'Alger, dans la baie d'Alger, en Algérie."}
@@ -1653,7 +1653,7 @@ const EVENTS = [
    desc:"En 1866, la victoire prussienne assura l'unité allemande sous Berlin.",
    photo:"events/sadowa.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1866, en une seule journée, des fusils d'un genre nouveau tranchent une vieille rivalité et désignent qui bâtira un empire."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Victoire de 1866 d'une armée aux fusils se chargeant par la culasse, réglant en une journée la rivalité pour l'unité d'un futur empire"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1866, une armée aux fusils se chargeant par la culasse règle en une journée la rivalité pour l'unité d'un futur empire."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire prussienne sur les Autrichiens, en Tchéquie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Sadowa, en Bohême, en Tchéquie."}
@@ -1662,7 +1662,7 @@ const EVENTS = [
    desc:"En 1943, la plus grande bataille de chars de l'histoire brisa l'offensive allemande à l'Est.",
    photo:"events/koursk.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"À l'été 1943, dans la fournaise et la poussière, des milliers de monstres d'acier s'entrechoquent — jamais la terre n'avait porté pareil choc."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Plus grand affrontement blindé de l'histoire, à l'été 1943, un saillant pris en tenaille où des milliers de chars s'entrechoquèrent"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"À l'été 1943, le plus grand affrontement blindé de l'histoire : un saillant pris en tenaille où des milliers de chars s'entrechoquent."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La plus grande bataille de chars, en Russie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Koursk, en Russie."}
@@ -1671,7 +1671,7 @@ const EVENTS = [
    desc:"En 1945, la prise de l'île volcanique donna lieu à une photo mondialement célèbre.",
    photo:"events/iwo_jima.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1945, pour un rocher volcanique perdu dans l'océan, truffé de galeries, on se bat un mois entier dans le soufre et la fournaise ; le sommet, une fois conquis, entrera dans la légende."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Assaut de 1945 sur une île volcanique de cendre noire, un drapeau planté au sommet immortalisé par une photographie devenue icône"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1945, un assaut sur une île volcanique de cendre noire ; un drapeau planté au sommet est immortalisé par une photo devenue icône."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise d'une île au mont Suribachi, dans le Pacifique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Iwo Jima, îles Ogasawara, au Japon."}
@@ -1680,7 +1680,7 @@ const EVENTS = [
    desc:"En 1945, les raids alliés détruisirent la ville dans une tempête de feu.",
    photo:"events/dresde.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En février 1945, en quelques heures de feu, une ville d'art et de pierres blondes n'est plus qu'un brasier ; il n'en restera que des cendres."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Raids de février 1945 déclenchant une tempête de feu qui ravagea une cité baroque surnommée « Florence de l'Elbe »"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En février 1945, des raids déclenchent une tempête de feu qui ravage une cité baroque surnommée « Florence de l'Elbe »."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le bombardement d'une ville baroque sur l'Elbe, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le bombardement de Dresde, en Saxe, en Allemagne."}
@@ -1689,7 +1689,7 @@ const EVENTS = [
    desc:"En 1933, l'incendie du parlement servit de prétexte à la mainmise nazie.",
    photo:"events/reichstag_1933.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1933, les flammes d'un parlement embrasent une nuit ; sur leurs cendres, un pouvoir naissant étouffe d'un coup toutes les libertés."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Incendie criminel de 1933 d'un parlement, prétexte immédiat à la suspension des libertés et à la prise de pouvoir totale d'un régime"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1933, l'incendie criminel d'un parlement sert de prétexte immédiat à la suspension des libertés et à une prise de pouvoir totale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'incendie d'un parlement, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'incendie du Reichstag, à Berlin, en Allemagne."}
@@ -1698,7 +1698,7 @@ const EVENTS = [
    desc:"En 1945, les vainqueurs y organisèrent l'Allemagne occupée et l'ordre d'après-guerre.",
    photo:"events/potsdam.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"À l'été 1945, sous les lambris d'un palais, les maîtres d'un monde en cendres se partagent les dépouilles d'un empire abattu — déjà rongés de méfiance."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sommet de l'été 1945 dans un palais, où trois vainqueurs — dont un remplacé en cours de route — scellèrent le sort d'un pays vaincu"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"À l'été 1945, dans un palais, trois vainqueurs — dont un remplacé en cours de route — scellent le sort d'un pays vaincu."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La conférence des vainqueurs de 1945, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La conférence de Potsdam, dans le Brandebourg, en Allemagne."}
@@ -1707,7 +1707,7 @@ const EVENTS = [
    desc:"En 1962, la découverte de missiles soviétiques amena le monde au bord de la guerre nucléaire.",
    photo:"events/missiles_cuba.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"À l'automne 1962, une peur inédite étreint la planète : dans les foyers, on prépare des abris et l'on guette la radio, tandis qu'au sommet des États, deux hommes retiennent la foudre."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Treize jours d'octobre 1962 où des rampes de missiles repérées par avion-espion sur une île tropicale amenèrent deux blocs au bord de l'abîme"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En octobre 1962, treize jours durant, des rampes de missiles repérées sur une île tropicale amènent deux blocs au bord de l'abîme."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La crise des missiles de 1962, à Cuba."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La crise des missiles de Cuba, à Cuba."}
@@ -1716,7 +1716,7 @@ const EVENTS = [
    desc:"En 1969, le festival réunit près de 500 000 personnes, symbole de la contre-culture.",
    photo:"events/woodstock.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"À l'été 1969, dans la boue d'un champ trempé de pluie, une marée de jeunes gens transforme trois jours de musique en manifeste d'une génération."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rassemblement musical de l'été 1969 dans un champ boueux, un demi-million de spectateurs faisant d'un festival le symbole d'une génération"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"À l'été 1969, un demi-million de spectateurs dans un champ boueux font d'un festival musical le symbole d'une génération."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Un festival musical mythique, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le festival de Woodstock, dans l'État de New York, aux États-Unis."}
@@ -1725,7 +1725,7 @@ const EVENTS = [
    desc:"En 1991, une coalition internationale chassa l'armée irakienne du Koweït.",
    photo:"events/golfe_1991.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1991, une coalition foudroie en quelques jours un envahisseur ; derrière lui, des puits en flammes tendent sur le désert un ciel de suie."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Offensive éclair de 1991 d'une coalition libérant un petit émirat pétrolier envahi, puits enflammés noircissant le ciel du désert"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1991, une offensive éclair d'une coalition libère un petit émirat pétrolier envahi ; des puits enflammés noircissent le ciel du désert."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La libération d'un émirat envahi, au Koweït."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La guerre du Golfe (libération du Koweït), au Koweït."}
@@ -1734,7 +1734,7 @@ const EVENTS = [
    desc:"En 1533, la prise de la capitale inca acheva la conquête espagnole du Pérou.",
    photo:"events/cuzco_1533.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1533, des étrangers en armes s'emparent d'une cité nichée dans les nuages, dont les murailles semblent taillées par des géants ; le cœur d'un grand peuple andin s'éteint."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Prise en 1533 d'une capitale d'altitude aux murs de pierres parfaitement ajustées, cœur d'un empire du soleil livré aux conquérants"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1533, des conquérants prennent une capitale d'altitude aux murs de pierres parfaitement ajustées, cœur d'un empire du soleil."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La chute de la capitale inca, au Pérou."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute de Cuzco, dans la vallée sacrée, au Pérou."}
