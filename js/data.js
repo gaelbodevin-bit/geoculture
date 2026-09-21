@@ -347,7 +347,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Basilique blanche dominant Paris depuis la butte Montmartre"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Basilique du Sacré-Cœur à Paris, France"}
   ]},
-{name:"Palais de Justice — Bruxelles, Belgique",lat:50.8359,lng:4.3531,desc:"Palais de Justice est un lieu historique remarquable situé en Europe.",photo:"photos/palais_de_justice.jpg",hints:[
+{name:"Palais de Justice — Bruxelles, Belgique",lat:50.8359,lng:4.3531,desc:"Le plus grand édifice élevé au XIXe siècle, plus vaste que la basilique Saint-Pierre de Rome : ce colosse à coupole de l'architecte Poelaert écrasa le quartier populaire des Marolles, dont les habitants expropriés firent d'« architek » une injure encore vivace à Bruxelles.",photo:"photos/palais_de_justice.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Colossal palais de justice de 1883 à coupole, plus grand édifice bâti au XIXe siècle, sommet d'un quartier populaire"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Immense palais de justice à coupole, quartier des Marolles, dominant une ville basse"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand bâtiment élevé au XIXe siècle, coupole dominant Bruxelles"},
@@ -1253,7 +1253,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Palais des papes du XIVe siècle, plus grand palais gothique, Avignon"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais des Papes à Avignon, France"}
   ]},
-{name:"Château de Fontainebleau — France",lat:48.4023,lng:2.7014,desc:"Château de Fontainebleau est un lieu historique remarquable situé en Europe.",photo:"photos/chateau_de_fontainebleau.jpg",hints:[
+{name:"Château de Fontainebleau — France",lat:48.4023,lng:2.7014,desc:"Résidence des rois de France pendant près de huit siècles, de la Renaissance à Napoléon, ce vaste château au cœur d'une forêt giboyeuse vit l'Empereur faire ses adieux à sa garde en 1814. Il la surnommait « la vraie maison des rois, la maison des siècles ».",photo:"photos/chateau_de_fontainebleau.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Résidence de chasse royale depuis le XIIe siècle, galerie Renaissance, 1 900 pièces au cœur d'une grande forêt"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Château royal au cœur d'une forêt giboyeuse, à 55 km au sud-est de la capitale"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château royal Renaissance en forêt, Fontainebleau"},
