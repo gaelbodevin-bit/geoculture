@@ -267,7 +267,7 @@ function resolveRound(){
   } else {
     map.setView([r.lat,r.lng],12);targetMarker.openPopup();
   }
-  document.getElementById('placed-info').textContent=dist!=null?`\u1f3af ${fmtDist(Math.round(dist*1000))} \u2014 +${pts.toLocaleString('fr-FR')} pts`:`\u274c Rat\u00e9 \u2014 ${r.name}`;
+  document.getElementById('placed-info').textContent=dist!=null?`\uD83D\uDCCD ${fmtDist(Math.round(dist*1000))} \u2014 +${pts.toLocaleString('fr-FR')} pts`:`\u274c Rat\u00e9 \u2014 ${r.name}`;
   showToast(dist!=null?`${r.name} \u00b7 ${fmtDist(Math.round(dist*1000))} \u00b7 +${pts} pts`:`Rat\u00e9 ! C'\u00e9tait : ${r.name}`);
   setTimeout(function(){
     var elim=perfectionMode&&!eventsMode&&(dist===null||dist>50);
