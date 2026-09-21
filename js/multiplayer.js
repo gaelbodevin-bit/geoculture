@@ -1,4 +1,4 @@
-﻿// GéoCulture Multijoueur — version lisible et maintenable
+// GéoCulture Multijoueur — version lisible et maintenable
 // Logique conservée, structure clarifiée pour faciliter la lecture par un humain.
 import { initializeApp, getApps } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
 import { getDatabase, ref, set, get, onValue, off, update, remove }
@@ -409,7 +409,7 @@ function mpHandleCountdown(room) {
   const remaining = Math.max(0, 3000 - elapsed);
   const second = Math.ceil(remaining / 1000);
 
-  overlay.innerHTML = '<div class="otitle" style="font-size:90px;color:#f97316;line-height:1">' + (second || '?') + '</div><div style="font-size:16px;color:#94a3b8;margin-top:8px">La partie commence !</div>';
+  overlay.innerHTML = '<div class="otitle" style="font-size:90px;color:#f97316;line-height:1">' + (second || 'GO !') + '</div><div style="font-size:16px;color:#94a3b8;margin-top:8px">La partie commence !</div>';
   overlay.classList.remove('h');
 
   if (remaining > 0) {
