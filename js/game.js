@@ -80,7 +80,7 @@ function onMapClick(e){
   if(playerMarker)playerMarker.remove();
   playerMarker=L.marker([playerPos.lat,playerPos.lng],{icon:makePin('#f97316')}).addTo(map);
   document.getElementById('confb').disabled=false;
-  document.getElementById('placed-info').textContent=`${playerPos.lat.toFixed(3)}, ${playerPos.lng.toFixed(3)}`;
+  document.getElementById('placed-info').textContent='';
 }
 
 function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.random()*(i+1);[b[i],b[j]]=[b[j],b[i]]}return b}
@@ -113,7 +113,10 @@ function startRound(idx){
   updateDots();showHint();startTimer();
   // Masquer le bouton indice suivant en niveau fixe
   var skipb=document.getElementById('skipb');
-  if(skipb) skipb.style.display=fixedLevel>=0?'none':'block';
+  if(skipb){
+    skipb.style.display=fixedLevel>=0?'none':'block';
+    skipb.disabled=fixedLevel>=0||curL>=3;
+  }
   _gcSaveState();
 }
 
@@ -209,11 +212,16 @@ function triggerFlash(level){
 
 function nextLevel(){
   if(!gameActive)return;
+  // En multijoueur, l'indice 4 est le dernier : le bouton ne doit pas valider la manche.
+  if(window._mpMode&&fixedLevel<0&&curL>=3)return;
   if(fixedLevel>=0){
     if(window._mpMode && window.mpOnConfirm){ window.mpOnConfirm(); return; }
     clearInterval(tiv);gameActive=false;confirming=true;resolveRound();
   }
-  else if(curL<3){curL++;triggerFlash(curL);updateDots();showHint();startTimer();}
+  else if(curL<3){
+    if(window._mpMode && window.mpOnNextHint){ window.mpOnNextHint(); return; }
+    curL++;triggerFlash(curL);updateDots();showHint();startTimer();
+  }
   else{
     if(window._mpMode && window.mpOnConfirm){ window.mpOnConfirm(); return; }
     clearInterval(tiv);gameActive=false;confirming=true;resolveRound();
@@ -259,7 +267,7 @@ function resolveRound(){
   } else {
     map.setView([r.lat,r.lng],12);targetMarker.openPopup();
   }
-  document.getElementById('placed-info').textContent=dist!=null?`\u1f3af ${fmtDist(Math.round(dist*1000))} \u2014 +${pts.toLocaleString('fr-FR')} pts`:`\u274c Rat\u00e9 \u2014 ${r.name}`;
+  document.getElementById('placed-info').textContent=dist!=null?`\uD83D\uDCCD ${fmtDist(Math.round(dist*1000))} \u2014 +${pts.toLocaleString('fr-FR')} pts`:`\u274c Rat\u00e9 \u2014 ${r.name}`;
   showToast(dist!=null?`${r.name} \u00b7 ${fmtDist(Math.round(dist*1000))} \u00b7 +${pts} pts`:`Rat\u00e9 ! C'\u00e9tait : ${r.name}`);
   setTimeout(function(){
     var elim=perfectionMode&&!eventsMode&&(dist===null||dist>50);
@@ -387,10 +395,10 @@ function buildShareText(format) {
   var url = 'https://www.geo-culture.io/';
   // Emojis generes depuis leurs code points -> jamais corrompus par un mauvais encodage de fichier
   var E = {
-    green:  String.fromCodePoint(0x1F7E9), // carre vert
-    yellow: String.fromCodePoint(0x1F7E8), // carre jaune
-    red:    String.fromCodePoint(0x1F7E5), // carre rouge
-    target: String.fromCodePoint(0x1F3AF), // cible
+    green:  String.fromCodePoint(0x1F49A), // coeur vert
+    yellow: String.fromCodePoint(0x1F49B), // coeur jaune
+    red:    String.fromCodePoint(0x2764, 0xFE0F), // coeur rouge
+    target: String.fromCodePoint(0x1F4CD), // epingle
     dash:   '\u2014'                       // tiret long
   };
   var isDaily = !!window._dailyMode || !!window._wasDailyMode;
