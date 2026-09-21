@@ -292,6 +292,7 @@ window.getCurrentUser = function() { return currentUser; };
 function closeHistory() {
   var ov = document.getElementById('overlay');
   if (window._prevOverlayHTML !== undefined) {
+    ov.style.background = '';
     ov.innerHTML = window._prevOverlayHTML;
     if (window._prevOverlayHidden) {
       ov.classList.add('h');
@@ -493,6 +494,7 @@ function isPremiumUser() {
 
 function showPremiumOverlay(featureName) {
   var ov = document.getElementById('overlay');
+  ov.style.background = 'rgba(9,12,20,0.96)';
   window._prevOverlayHTML = ov.innerHTML;
   window._prevOverlayHidden = ov.classList.contains('h');
   var h = [];
