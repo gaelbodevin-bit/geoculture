@@ -1032,11 +1032,10 @@ function mpHandleRoundEnd(room) {
   html.push('</div>');
 
   const overlay = document.getElementById('overlay');
-  setTimeout(() => {
-    overlay.innerHTML = html.join('');
-    overlay.classList.remove('h');
+  overlay.innerHTML = html.join('');
+  overlay.classList.remove('h');
 
-    (function (elementId, round, query) {
+  (function (elementId, round, query) {
       const element = document.getElementById(elementId);
       if (!element) return;
 
@@ -1079,8 +1078,7 @@ function mpHandleRoundEnd(room) {
         const currentElement = document.getElementById(elementId);
         if (currentElement) currentElement.style.display = 'none';
       }
-    })(imgId, place, placeName);
-  }, 10000);
+  })(imgId, place, placeName);
 }
 
 function mpShowFinalResults(room) {
