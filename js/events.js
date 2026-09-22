@@ -288,9 +288,9 @@ const EVENTS = [
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1429, devant une ville affamée par un long siège, une frêle silhouette en armure blanche galvanise des soldats découragés et renverse le cours d'une guerre sans fin."},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1429, une jeune paysanne guidée par des voix fait lever un siège et renverse le cours d'une longue guerre."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Jeanne d'Arc lève le siège, en France."},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le siège d'Orléans, à Orléans, en France."}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le ralliement de Jeanne d'Arc, au siège d'Orléans (France)."}
   ]},
-  {name:"Bataille de Tours des Boers — Ladysmith — KwaZulu-Natal, Afrique du Sud", lat:-28.559, lng:29.78, radius:5000,
+  {name:"Siège de Ladysmith — KwaZulu-Natal, Afrique du Sud", lat:-28.559, lng:29.78, radius:5000,
    desc:"Lors de la guerre des Boers, le siège de Ladysmith (1899-1900) vit 118 jours d'encerclement britannique par les commandos boers.",
    photo:"events/ladysmith.jpg",
    hints:[
