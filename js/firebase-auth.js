@@ -498,23 +498,23 @@ function showPremiumOverlay(featureName) {
   var h = [];
   if(!currentUser) {
     h.push('<div class="otitle" style="font-size:26px;color:#fbbf24">Connexion requise</div>');
-    h.push('<div style="font-size:15px;color:#e8eaf2;margin-bottom:20px;text-align:center;max-width:360px;text-shadow:0 1px 3px rgba(0,0,0,.95)">Connecte-toi pour acc&#233;der &#224; <strong style="color:#e2e8f0">'+featureName+'</strong>.</div>');
+    h.push('<div style="font-size:15px;color:#e8eaf2;margin-bottom:6px;text-align:center;max-width:360px;text-shadow:0 1px 3px rgba(0,0,0,.95)">Connecte-toi pour acc&#233;der &#224; <strong style="color:#e2e8f0">'+featureName+'</strong>.</div>');
     h.push('<button onclick="window.fbSignIn()" style="padding:10px 28px;border-radius:8px;border:none;background:#f97316;color:#fff;font-weight:700;font-size:14px;cursor:pointer">Se connecter avec Google</button>');
-    h.push('<button onclick="window.closeHistory()" style="margin-top:10px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px;display:block">&#8592; Retour</button>');
+    h.push('<button onclick="window.closeHistory()" style="margin-top:4px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#cbd5e1;cursor:pointer;font-size:13px;display:block">&#8592; Retour</button>');
     ov.innerHTML=h.join(''); ov.classList.remove('h'); return;
   }
   h.push('<button onclick="window.closeHistory()" style="align-self:flex-start;margin:0 0 10px;padding:6px 16px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer;font-size:13px">&#8592; Retour</button>');
   h.push('<div class="otitle" style="font-size:26px;color:#fbbf24">&#11088; Premium</div>');
-  h.push('<div style="font-size:16px;color:#e8eaf2;margin-bottom:16px;text-align:center;max-width:360px;text-shadow:0 1px 3px rgba(0,0,0,.95)">D&#233;bloquez <strong style="color:#e2e8f0">'+featureName+'</strong> et tous les modes avanc&#233;s.</div>');
-  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:14px;width:100%;max-width:340px;margin-bottom:16px">');
+  h.push('<div style="font-size:16px;color:#e8eaf2;margin-bottom:10px;text-align:center;max-width:360px;text-shadow:0 1px 3px rgba(0,0,0,.95)">D&#233;bloquez <strong style="color:#e2e8f0">'+featureName+'</strong> et tous les modes avanc&#233;s.</div>');
+  h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:11px;width:100%;max-width:340px;margin-bottom:10px">');
   h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Inclus dans Premium</div>');
   [['&#9203;','Abonnement mensuel, sans engagement'],['&#128683;','Sans publicit&#233;'],['&#128274;','Mode No-Zoom'],['&#11088;','Mode Perfection'],['&#127760;','Mode Multijoueur'],['&#9876;&#65039;','Mode &#201;v&#233;nements historiques'],['&#9989;','Soutien ind&#233;pendant']].forEach(function(f){
     h.push('<div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#e2e8f0"><span>'+f[0]+'</span><span>'+f[1]+'</span></div>');
   });
   h.push('</div>');
-  h.push('<div style="width:100%;max-width:340px;margin-bottom:12px">');
-  h.push('<div style="font-size:13.5px;color:#e2e8f0;margin-bottom:8px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.95)">Ton abonnement mensuel &#8212; montant libre (min. 1&#8364;/mois)</div>');
-  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:8px">');
+  h.push('<div style="width:100%;max-width:340px;margin-bottom:6px">');
+  h.push('<div style="font-size:13.5px;color:#e2e8f0;margin-bottom:6px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.95)">Ton abonnement mensuel &#8212; montant libre (min. 1&#8364;/mois)</div>');
+  h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:6px">');
   [2,5,10,20].forEach(function(amt){
     h.push('<button data-amt="'+amt+'" onclick="window.selectAmount(parseInt(this.dataset.amt))" id="amt-btn-'+amt+'" style="padding:8px;border-radius:7px;border:2px solid #1e2d45;background:#0d1120;color:#e2e8f0;font-size:13px;font-weight:600;cursor:pointer">'+amt+'&#8364;</button>');
   });
@@ -522,20 +522,20 @@ function showPremiumOverlay(featureName) {
   h.push('<input id="custom-amount" type="number" min="1" step="1" placeholder="Montant/mois (&#8364;)" style="width:100%;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 12px;color:#e2e8f0;font-size:13px">');
   h.push('</div>');
   h.push('<button onclick="window.initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">S&#8217;abonner - paiement mensuel &#8594;</button>');
-  h.push('<div id="pay-msg" style="font-size:12.5px;color:#f87171;margin-top:8px;text-align:center;min-height:16px;font-weight:600"></div>');
-  h.push('<div style="font-size:12.5px;color:#cbd5e1;margin-top:8px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.95)">Paiement s&#233;curis&#233; via Stripe</div>');
-  h.push('<div style="font-size:11.5px;color:#b7c0cf;margin-top:6px;text-align:center;max-width:360px;line-height:1.55;text-shadow:0 1px 2px rgba(0,0,0,.95)">Abonnement mensuel &#224; renouvellement tacite, r&#233;siliable &#224; tout moment depuis ton compte. En souscrivant, tu demandes l&#8217;acc&#232;s imm&#233;diat et renonces &#224; ton droit de r&#233;tractation de 14 jours.</div>');
-  h.push('<div style="width:100%;max-width:340px;margin-top:14px;border-top:1px solid #1e2d45;padding-top:14px">');
-  h.push('<div style="font-size:13px;color:#e2e8f0;text-align:center;margin-bottom:8px;text-shadow:0 1px 3px rgba(0,0,0,.95)">Vous avez un code testeur ?</div>');
+  h.push('<div id="pay-msg" style="font-size:12.5px;color:#f87171;margin-top:4px;text-align:center;min-height:16px;font-weight:600"></div>');
+  h.push('<div style="font-size:12.5px;color:#cbd5e1;margin-top:4px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.95)">Paiement s&#233;curis&#233; via Stripe</div>');
+  h.push('<div style="font-size:11.5px;color:#b7c0cf;margin-top:4px;text-align:center;max-width:360px;line-height:1.55;text-shadow:0 1px 2px rgba(0,0,0,.95)">Abonnement mensuel &#224; renouvellement tacite, r&#233;siliable &#224; tout moment depuis ton compte. En souscrivant, tu demandes l&#8217;acc&#232;s imm&#233;diat et renonces &#224; ton droit de r&#233;tractation de 14 jours.</div>');
+  h.push('<div style="width:100%;max-width:340px;margin-top:4px;border-top:1px solid #1e2d45;padding-top:14px">');
+  h.push('<div style="font-size:13px;color:#e2e8f0;text-align:center;margin-bottom:6px;text-shadow:0 1px 3px rgba(0,0,0,.95)">Vous avez un code testeur ?</div>');
   h.push('<div style="display:flex;gap:6px">');
   h.push('<input id="redeem-input" placeholder="CODE-XXXX" maxlength="12" style="flex:1;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 10px;color:#e2e8f0;font-size:13px;letter-spacing:2px;text-transform:uppercase">');
   h.push('<button onclick="window.redeemCode()" style="padding:8px 14px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-size:12px;font-weight:700;cursor:pointer">Activer</button>');
   h.push('</div>');
-  h.push('<div id="redeem-msg" style="font-size:12px;margin-top:6px;text-align:center;min-height:18px"></div>');
+  h.push('<div id="redeem-msg" style="font-size:12px;margin-top:4px;text-align:center;min-height:18px"></div>');
   h.push('</div>');
-  h.push('<div style="display:flex;gap:12px;margin-top:10px">');
-  h.push('<button onclick="window.closeHistory()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:13px">&#8592; Retour</button>');
-  h.push('<a href="https://gaelbodevin-bit.github.io/geoculture/legal.html" style="padding:8px 12px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer;font-size:11px;text-decoration:none">Mentions l&#233;gales</a>');
+  h.push('<div style="display:flex;gap:12px;margin-top:4px">');
+  h.push('<button onclick="window.closeHistory()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#cbd5e1;cursor:pointer;font-size:13px">&#8592; Retour</button>');
+  h.push('<a href="https://gaelbodevin-bit.github.io/geoculture/legal.html" style="padding:8px 12px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#cbd5e1;cursor:pointer;font-size:13px;text-decoration:none">Mentions l&#233;gales</a>');
   h.push('</div>');
   ov.innerHTML=h.join(''); ov.classList.remove('h');
   window._selectedAmount=5; selectAmount(5);
