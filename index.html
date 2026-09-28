@@ -62,8 +62,6 @@
     #hist-btn {font-size:11px;padding:5px 10px;border-radius:7px;border:1px solid #2d3f5e;cursor:pointer;background:transparent;color:#94a3b8;white-space:nowrap}
   
     /* ══ SEO : tiroir "En savoir plus" ══ */
-    #seo-more{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:800;background:rgba(13,17,32,.9);border:1px solid #2d3f5e;color:#cbd5e1;padding:6px 15px;border-radius:20px;font-size:12.5px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.4);animation:seoBounce 2.2s ease-in-out infinite;white-space:nowrap}
-    @keyframes seoBounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-5px)}}
     #seo-content{position:fixed;inset:0;z-index:2000;background:linear-gradient(180deg,#0a0f1e,#0d1424);color:#cbd5e1;overflow-y:auto;-webkit-overflow-scrolling:touch;transform:translateY(100%);transition:transform .38s cubic-bezier(.4,0,.2,1);padding:0 0 60px}
     #seo-content.open{transform:translateY(0)}
     #seo-close{position:sticky;top:0;width:100%;padding:14px;background:rgba(10,15,30,.96);border:none;border-bottom:1px solid #1e2d45;color:#f97316;font-size:14px;font-weight:700;cursor:pointer;z-index:2}
@@ -168,7 +166,6 @@
   </div><!-- /app-wrapper -->
 
   <!-- ══ SEO : bouton + tiroir de contenu indexable ══ -->
-  <a id="seo-more" href="#seo-content" onclick="document.getElementById('seo-content').classList.add('open');return false;">&#8595;&nbsp;En savoir plus</a>
   <section id="seo-content" aria-label="À propos de GéoCulture">
     <button id="seo-close" onclick="document.getElementById('seo-content').classList.remove('open')">&#8595; Retour au jeu</button>
     <div class="seo-inner">
@@ -223,7 +220,7 @@
   <script type="module" src="js/firebase-auth.js?v=14"></script>
   <!-- Logique du jeu -->
   <script type="module" src="js/multiplayer.js?v=3"></script>
-  <script defer src="js/game.js?v=24"></script>
+  <script defer src="js/game.js?v=25"></script>
   <script defer src="js/tutorial.js?v=2"></script>
   <script defer src="js/report.js?v=1"></script>
   <script>

@@ -637,6 +637,7 @@ function showMenu(){
     h.push('<div><span style="font-size:15px;color:#e2e8f0;font-weight:700">'+r.t+'</span><br><span style="font-size:13px;color:#94a3b8;line-height:1.6">'+r.d+'</span></div>');
     h.push('</div>');
   });
+  h.push('<a href="#a-propos" onclick="var s=document.getElementById(\'seo-content\');if(s){s.classList.add(\'open\');}return false;" style="display:block;margin-top:6px;padding-top:12px;border-top:1px solid #1e2d4566;color:#60a5fa;font-size:13.5px;text-decoration:none;font-weight:600">&#8595; En savoir plus sur G&#233;oCulture</a>');
   h.push('</div>');
   h.push('</div>');
 
