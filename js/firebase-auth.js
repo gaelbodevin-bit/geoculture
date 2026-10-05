@@ -1,5 +1,6 @@
 // \u2500\u2500 Firebase Auth + Historique \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js';
+import { getAnalytics, logEvent } from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-analytics.js';
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged }
   from 'https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js';
 import { getFirestore, collection, addDoc, query, where, orderBy, limit, getDocs, serverTimestamp, doc, getDoc, setDoc }
@@ -12,10 +13,14 @@ var firebaseConfig = {
   projectId: "geo-culture-73453",
   storageBucket: "geo-culture-73453.firebasestorage.app",
   messagingSenderId: "701399534769",
-  appId: "1:701399534769:web:ea9418505d8d2e9a9ea690"
+  appId: "1:701399534769:web:ea9418505d8d2e9a9ea690",
+  measurementId: "G-TMBBRKYG2Z"
 };
 
 var fbApp = initializeApp(firebaseConfig);
+var fbAnalytics = null;
+try { fbAnalytics = getAnalytics(fbApp); } catch(e) {}
+window.gcTrack = function(name, params){ try { if(fbAnalytics) logEvent(fbAnalytics, name, params || {}); } catch(e){} };
 var fbAuth = getAuth(fbApp);
 var fbDb = getFirestore(fbApp);
 var fbFunctions = getFunctions(fbApp, 'us-central1');
@@ -64,6 +69,7 @@ onAuthStateChanged(fbAuth, function(user) {
   // Retour de Stripe
   var params = new URLSearchParams(window.location.search);
   if(params.get('premium') === 'success') {
+    if(window.gcTrack) window.gcTrack('abonnement_premium');
     window.history.replaceState({}, '', window.location.pathname);
     setTimeout(function() {
       if(typeof showToast==='function') showToast('Merci ! Accés Premium activé. Rechargez si nécessaire.');
@@ -572,6 +578,7 @@ function redeemCode() {
     return res.json().then(function(d){ return { status: res.status, d: d }; });
   }).then(function(r){
     if (r.status === 200 && r.d && r.d.ok) {
+      if(window.gcTrack) window.gcTrack('code_testeur_utilise');
       currentUserPremium = true; window.isPremium = true; if(window.gcUpdateAds) window.gcUpdateAds();
       window.isPremium = true;
       msg.style.color='#22c55e'; msg.textContent='\u2713 Premium activ\u00e9 ! Profitez bien.';

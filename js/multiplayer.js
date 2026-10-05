@@ -364,6 +364,7 @@ function mpUpdateLobby(room) {
 // ------------------------------------------------------------
 function mpLaunchGame() {
   if (!mp.isHost || !mp.roomRef) return;
+  try{ if(window.gcTrack) window.gcTrack('partie_multijoueur'); }catch(e){}
 
   get(mp.roomRef).then((snap) => {
     const roomOptions = snap.val().options || {};
