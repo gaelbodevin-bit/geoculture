@@ -88,6 +88,7 @@ function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=0|Math.
 function activeSource(){ return (eventsMode && window.EVENTS && window.EVENTS.length) ? window.EVENTS : ROUNDS; }
 function startGame(){
   document.body.classList.remove('menu-mode');
+  try{ if(window.gcTrack) window.gcTrack('partie_jouee',{mode: eventsMode?'evenements':(chillMode?'chill':(perfectionMode?'perfection':(noZoomMode?'no_zoom':'normal')))}); }catch(e){}
   var nbRounds=perfectionMode?10:5;
   total=0;roundScores=[];
   roundList=shuffle(activeSource()).slice(0,nbRounds);
