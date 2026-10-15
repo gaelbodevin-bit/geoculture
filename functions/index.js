@@ -43,47 +43,25 @@ exports.stripeWebhook = onRequest({ secrets: [STRIPE_SECRET_KEY, STRIPE_WEBHOOK_
   }
 
   try {
-    // Souscription initiale
+    // Paiement unique réussi → accès Premium définitif
     if (event.type === 'checkout.session.completed') {
       const session = event.data.object;
       const uid = (session.metadata && session.metadata.uid) || session.client_reference_id;
       if (!uid) return res.status(200).json({ received: true, ignored: 'no uid' });
       const email = session.customer_email || (session.customer_details && session.customer_details.email) || '';
-      let periodEnd = null;
-      if (session.subscription) {
-        try { const sub = await stripeClient.subscriptions.retrieve(session.subscription); periodEnd = sub.current_period_end; } catch (e) {}
-      }
       await db.collection('users').doc(uid).set({
         premium: true,
         premiumSince: admin.firestore.FieldValue.serverTimestamp(),
         lastPayment: admin.firestore.FieldValue.serverTimestamp(),
         amountPaid: session.amount_total,
         stripeCustomerId: session.customer || null,
-        stripeSubscriptionId: session.subscription || null,
-        premiumUntil: periodEnd ? admin.firestore.Timestamp.fromMillis(periodEnd * 1000) : null,
         email: email
       }, { merge: true });
       await db.collection('payments').add({
-        uid, sessionId: session.id, subscriptionId: session.subscription || null,
+        uid, sessionId: session.id,
         amount: session.amount_total, currency: session.currency, email,
         createdAt: admin.firestore.FieldValue.serverTimestamp()
       });
-    }
-
-    // Renouvellement / changement de statut / annulation
-    if (event.type === 'customer.subscription.updated' || event.type === 'customer.subscription.deleted') {
-      const sub = event.data.object;
-      const uid = sub.metadata && sub.metadata.uid;
-      if (uid) {
-        const activeStatuses = ['active', 'trialing', 'past_due'];
-        const isActive = event.type !== 'customer.subscription.deleted' && activeStatuses.indexOf(sub.status) !== -1;
-        await db.collection('users').doc(uid).set({
-          premium: isActive,
-          stripeSubscriptionStatus: event.type === 'customer.subscription.deleted' ? 'canceled' : sub.status,
-          premiumUntil: sub.current_period_end ? admin.firestore.Timestamp.fromMillis(sub.current_period_end * 1000) : null,
-          cancelAtPeriodEnd: !!sub.cancel_at_period_end
-        }, { merge: true });
-      }
     }
   } catch (err) {
     console.error('Webhook handler error:', err);
@@ -112,11 +90,11 @@ exports.createCheckoutSession = onRequest({ secrets: [STRIPE_SECRET_KEY] }, asyn
     return res.status(401).json({ error: 'Token invalide' });
   }
 
-  // Validation stricte du montant : nombre fini, min 1€, max 500€
+  // Validation stricte du montant : nombre fini, min 2€, max 500€
   const data = req.body.data || req.body || {};
   const eur = Number(data.amount);
-  if (!isFinite(eur) || eur < 1) {
-    return res.status(400).json({ error: 'Montant invalide (minimum 1€)' });
+  if (!isFinite(eur) || eur < 2) {
+    return res.status(400).json({ error: 'Montant invalide (minimum 2€)' });
   }
   if (eur > MAX_AMOUNT_EUR) {
     return res.status(400).json({ error: 'Montant maximum : ' + MAX_AMOUNT_EUR + '€' });
@@ -124,20 +102,20 @@ exports.createCheckoutSession = onRequest({ secrets: [STRIPE_SECRET_KEY] }, asyn
   const amount = Math.round(eur * 100);
 
   const stripeClient = stripe(STRIPE_SECRET_KEY.value());
-  // Prix libre : le montant choisi par l'utilisateur devient le tarif annuel.
-  const priceData = { currency: 'eur', unit_amount: amount, recurring: { interval: 'month' } };
-  const productId = process.env.STRIPE_PRODUCT_ID;
-  if (productId) priceData.product = productId;
-  else priceData.product_data = { name: 'GéoCulture Premium', description: 'Abonnement mensuel — accès aux modes premium' };
+  // Prix libre : paiement unique du montant choisi par l'utilisateur.
+  const priceData = {
+    currency: 'eur',
+    unit_amount: amount,
+    product_data: { name: 'GéoCulture Premium', description: 'Accès Premium à vie — modes avancés (paiement unique)' }
+  };
   try {
     const session = await stripeClient.checkout.sessions.create({
-      mode: 'subscription',
+      mode: 'payment',
       payment_method_types: ['card'],
       line_items: [{ price_data: priceData, quantity: 1 }],
       customer_email: email,
       client_reference_id: uid,
       metadata: { uid },
-      subscription_data: { metadata: { uid } },
       success_url: 'https://www.geo-culture.io/?premium=success',
       cancel_url: 'https://www.geo-culture.io/?premium=cancel',
       locale: 'fr'
@@ -146,35 +124,6 @@ exports.createCheckoutSession = onRequest({ secrets: [STRIPE_SECRET_KEY] }, asyn
   } catch (err) {
     console.error('Stripe error:', err);
     return res.status(500).json({ error: 'Erreur Stripe: ' + err.message });
-  }
-});
-
-// ── Portail client Stripe (gérer / résilier l'abonnement) ───────────────────
-exports.createPortalSession = onRequest({ secrets: [STRIPE_SECRET_KEY] }, async (req, res) => {
-  setCORS(res, req);
-  if (req.method === 'OPTIONS') return res.status(204).send('');
-  if (req.method !== 'POST') return res.status(405).send('Method Not Allowed');
-
-  const authHeader = req.headers.authorization || '';
-  if (!authHeader.startsWith('Bearer ')) return res.status(401).json({ error: 'Non authentifié' });
-  let uid;
-  try { uid = (await admin.auth().verifyIdToken(authHeader.split('Bearer ')[1])).uid; }
-  catch (err) { return res.status(401).json({ error: 'Token invalide' }); }
-
-  const snap = await db.collection('users').doc(uid).get();
-  const customerId = snap.exists ? snap.data().stripeCustomerId : null;
-  if (!customerId) return res.status(400).json({ error: 'Aucun abonnement trouvé pour ce compte.' });
-
-  const stripeClient = stripe(STRIPE_SECRET_KEY.value());
-  try {
-    const portal = await stripeClient.billingPortal.sessions.create({
-      customer: customerId,
-      return_url: 'https://www.geo-culture.io/'
-    });
-    return res.status(200).json({ result: { url: portal.url } });
-  } catch (err) {
-    console.error('Portal error:', err);
-    return res.status(500).json({ error: 'Erreur portail: ' + err.message });
   }
 });
 
