@@ -40,7 +40,7 @@ onAuthStateChanged(fbAuth, function(user) {
   currentUser = user;
   if(user) {
     getDoc(doc(fbDb, 'users', user.uid)).then(function(snap) {
-      var _ud = snap.exists() ? snap.data() : {}; currentUserPremium = _ud.premium === true; window.premiumUntil = _ud.premiumUntil ? (_ud.premiumUntil.toMillis ? _ud.premiumUntil.toMillis() : (_ud.premiumUntil.seconds ? _ud.premiumUntil.seconds*1000 : null)) : null; window.subCancel = _ud.cancelAtPeriodEnd === true;
+      var _ud = snap.exists() ? snap.data() : {}; currentUserPremium = _ud.premium === true;
       window.isPremium = currentUserPremium; if(window.gcUpdateAds) window.gcUpdateAds();
       updateAuthUI(user);
       // Rafraîchir le menu si visible (sans boucle)
@@ -69,13 +69,13 @@ onAuthStateChanged(fbAuth, function(user) {
   // Retour de Stripe
   var params = new URLSearchParams(window.location.search);
   if(params.get('premium') === 'success') {
-    if(window.gcTrack) window.gcTrack('abonnement_premium');
+    if(window.gcTrack) window.gcTrack('achat_premium');
     window.history.replaceState({}, '', window.location.pathname);
     setTimeout(function() {
       if(typeof showToast==='function') showToast('Merci ! Accés Premium activé. Rechargez si nécessaire.');
       if(user) {
         getDoc(doc(fbDb, 'users', user.uid)).then(function(snap) {
-          var _ud = snap.exists() ? snap.data() : {}; currentUserPremium = _ud.premium === true; window.premiumUntil = _ud.premiumUntil ? (_ud.premiumUntil.toMillis ? _ud.premiumUntil.toMillis() : (_ud.premiumUntil.seconds ? _ud.premiumUntil.seconds*1000 : null)) : null; window.subCancel = _ud.cancelAtPeriodEnd === true;
+          var _ud = snap.exists() ? snap.data() : {}; currentUserPremium = _ud.premium === true;
           window.isPremium = currentUserPremium; if(window.gcUpdateAds) window.gcUpdateAds();
         });
       }
@@ -274,7 +274,6 @@ function showHistory() {
     h.push('<div style="display:flex;gap:10px;justify-content:center">');
     h.push('<div style="margin-top:24px;padding-top:16px;border-top:1px solid #1e2d45;width:100%;max-width:460px">');
     h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Zone de danger</div>');
-    if((typeof window.isPremiumUser==='function'?window.isPremiumUser():window.isPremium===true)){ if(window.premiumUntil){ var _rd=new Date(window.premiumUntil); var _days=Math.max(0,Math.ceil((window.premiumUntil-Date.now())/86400000)); var _ds=_rd.toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'}); var _msg=window.subCancel?('&#9203; Ton abonnement se termine le '+_ds+' (dans '+_days+' j) &mdash; pas de renouvellement'):('&#128337; Prochain renouvellement le '+_ds+' (dans '+_days+' j)'); h.push('<div style="font-size:12.5px;color:#94a3b8;margin-bottom:10px;padding:8px 12px;border-radius:8px;background:#0d1120;border:1px solid #1e2d45;text-align:center">'+_msg+'</div>'); } h.push('<button onclick="window.openBillingPortal()" style="padding:8px 16px;border-radius:8px;border:1px solid #2d3f5e;background:#0d1120;color:#fbbf24;font-size:13px;cursor:pointer;font-weight:600;margin-bottom:10px">&#9881;&#65039; G&#233;rer / r&#233;silier mon abonnement</button>'); }
     h.push('<button onclick="confirmDeleteAccount()" style="padding:8px 16px;border-radius:8px;border:1px solid #ef4444;background:transparent;color:#ef4444;font-size:13px;cursor:pointer;font-weight:600">Supprimer mon compte et mes donn&#233;es</button>');
     h.push('<div style="font-size:11px;color:#6b7280;margin-top:6px">Supprime d&#233;finitivement votre compte, vos parties et vos scores. Irr&#233;versible.</div>');
     h.push('</div>');
@@ -514,23 +513,23 @@ function showPremiumOverlay(featureName) {
   h.push('<div style="font-size:16px;color:#e8eaf2;margin-bottom:10px;text-align:center;max-width:360px;text-shadow:0 1px 3px rgba(0,0,0,.95)">D&#233;bloquez <strong style="color:#e2e8f0">'+featureName+'</strong> et tous les modes avanc&#233;s.</div>');
   h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:11px;width:100%;max-width:340px;margin-bottom:10px">');
   h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Inclus dans Premium</div>');
-  [['&#9203;','Abonnement mensuel, sans engagement'],['&#128683;','Sans publicit&#233;'],['&#128274;','Mode No-Zoom'],['&#11088;','Mode Perfection'],['&#127760;','Mode Multijoueur'],['&#9876;&#65039;','Mode &#201;v&#233;nements historiques'],['&#9989;','Soutien ind&#233;pendant']].forEach(function(f){
+  [['&#10024;','Acc&#232;s Premium &#224; vie, paiement unique'],['&#128683;','Sans publicit&#233;'],['&#128274;','Mode No-Zoom'],['&#11088;','Mode Perfection'],['&#127760;','Mode Multijoueur'],['&#9876;&#65039;','Mode &#201;v&#233;nements historiques'],['&#9989;','Soutien ind&#233;pendant']].forEach(function(f){
     h.push('<div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#e2e8f0"><span>'+f[0]+'</span><span>'+f[1]+'</span></div>');
   });
   h.push('</div>');
   h.push('<div style="width:100%;max-width:340px;margin-bottom:6px">');
-  h.push('<div style="font-size:13.5px;color:#e2e8f0;margin-bottom:6px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.95)">Ton abonnement mensuel &#8212; montant libre (min. 1&#8364;/mois)</div>');
+  h.push('<div style="font-size:13.5px;color:#e2e8f0;margin-bottom:6px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.95)">Prix libre &#8212; choisis ton montant (min. 2&#8364;)</div>');
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:6px">');
   [2,5,10,20].forEach(function(amt){
     h.push('<button data-amt="'+amt+'" onclick="window.selectAmount(parseInt(this.dataset.amt))" id="amt-btn-'+amt+'" style="padding:8px;border-radius:7px;border:2px solid #1e2d45;background:#0d1120;color:#e2e8f0;font-size:13px;font-weight:600;cursor:pointer">'+amt+'&#8364;</button>');
   });
   h.push('</div>');
-  h.push('<input id="custom-amount" type="number" min="1" step="1" placeholder="Montant/mois (&#8364;)" style="width:100%;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 12px;color:#e2e8f0;font-size:13px">');
+  h.push('<input id="custom-amount" type="number" min="2" step="1" placeholder="Montant (&#8364;)" style="width:100%;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 12px;color:#e2e8f0;font-size:13px">');
   h.push('</div>');
-  h.push('<button onclick="window.initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">S&#8217;abonner - paiement mensuel &#8594;</button>');
+  h.push('<button onclick="window.initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">D&#233;bloquer Premium &#8594;</button>');
   h.push('<div id="pay-msg" style="font-size:12.5px;color:#f87171;margin-top:4px;text-align:center;min-height:16px;font-weight:600"></div>');
   h.push('<div style="font-size:12.5px;color:#cbd5e1;margin-top:4px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.95)">Paiement s&#233;curis&#233; via Stripe</div>');
-  h.push('<div style="font-size:11.5px;color:#b7c0cf;margin-top:4px;text-align:center;max-width:360px;line-height:1.55;text-shadow:0 1px 2px rgba(0,0,0,.95)">Abonnement mensuel &#224; renouvellement tacite, r&#233;siliable &#224; tout moment depuis ton compte. En souscrivant, tu demandes l&#8217;acc&#232;s imm&#233;diat et renonces &#224; ton droit de r&#233;tractation de 14 jours.</div>');
+  h.push('<div style="font-size:11.5px;color:#b7c0cf;margin-top:4px;text-align:center;max-width:360px;line-height:1.55;text-shadow:0 1px 2px rgba(0,0,0,.95)">Paiement unique &#8212; acc&#232;s d&#233;finitif. En validant, tu demandes l&#8217;acc&#232;s imm&#233;diat et renonces &#224; ton droit de r&#233;tractation de 14 jours.</div>');
   h.push('<div style="width:100%;max-width:340px;margin-top:4px;border-top:1px solid #1e2d45;padding-top:14px">');
   h.push('<div style="font-size:13px;color:#e2e8f0;text-align:center;margin-bottom:6px;text-shadow:0 1px 3px rgba(0,0,0,.95)">Vous avez un code testeur ?</div>');
   h.push('<div style="display:flex;gap:6px">');
@@ -596,8 +595,8 @@ function initiatePremiumPayment() {
   if(!currentUser){ if(typeof fbSignIn==='function') fbSignIn(); return; }
   var inp=document.getElementById('custom-amount');
   var amount=inp&&inp.value?parseFloat(inp.value):(window._selectedAmount||5);
-  if(isNaN(amount)||amount<1){ var pm=document.getElementById('pay-msg'); if(pm) pm.textContent='Le montant minimum est de 1€ / mois'; if(typeof showToast==='function') showToast('Le montant minimum est de 1€ / mois'); return; }
-  if(amount>500){ var pm2=document.getElementById('pay-msg'); if(pm2) pm2.textContent='Le montant maximum est de 500€ / mois'; if(typeof showToast==='function') showToast('Le montant maximum est de 500€ / mois'); return; }
+  if(isNaN(amount)||amount<2){ var pm=document.getElementById('pay-msg'); if(pm) pm.textContent='Le montant minimum est de 2€'; if(typeof showToast==='function') showToast('Le montant minimum est de 2€'); return; }
+  if(amount>500){ var pm2=document.getElementById('pay-msg'); if(pm2) pm2.textContent='Le montant maximum est de 500€'; if(typeof showToast==='function') showToast('Le montant maximum est de 500€'); return; }
   var pmc=document.getElementById('pay-msg'); if(pmc) pmc.textContent='';
   var btn=document.getElementById('pay-btn');
   if(btn){ btn.textContent='Redirection...'; btn.disabled=true; }
@@ -614,7 +613,7 @@ function initiatePremiumPayment() {
   }).catch(function(err){
     
     var pme=document.getElementById('pay-msg'); if(pme) pme.textContent=err.message; if(typeof showToast==='function') showToast('Erreur: '+err.message);
-    if(btn){ btn.textContent='S\'abonner - paiement mensuel →'; btn.disabled=false; }
+    if(btn){ btn.textContent='D\u00e9bloquer Premium →'; btn.disabled=false; }
   });
 }
 
@@ -650,20 +649,6 @@ function doDeleteAccount() {
 }
 
 
-function openBillingPortal() {
-  if(!currentUser){ if(typeof fbSignIn==='function') fbSignIn(); return; }
-  if(typeof showToast==='function') showToast('Ouverture du portail\u2026');
-  currentUser.getIdToken(true).then(function(token){
-    return fetch('https://us-central1-geo-culture-73453.cloudfunctions.net/createPortalSession',{
-      method:'POST', headers:{'Content-Type':'application/json','Authorization':'Bearer '+token}, body:'{}'
-    });
-  }).then(function(res){ return res.json(); }).then(function(result){
-    var url=result&&result.result&&result.result.url;
-    if(url){ window.location.href=url; }
-    else{ if(typeof showToast==='function') showToast((result&&result.error)||'Aucun abonnement trouv\u00e9.'); }
-  }).catch(function(e){ if(typeof showToast==='function') showToast('Erreur portail.'); });
-}
-window.openBillingPortal=openBillingPortal;
 window.showDailyLB=showDailyLB;
 window.showLeaderboard=showLeaderboard;window.saveDailyScore=saveDailyScore;
 window.isPremiumUser=isPremiumUser;window.showPremiumOverlay=showPremiumOverlay;
