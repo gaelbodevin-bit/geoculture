@@ -898,7 +898,7 @@ const EVENTS = [
    photo:"events/grito_de_dolores.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"À l'aube de 1810, du haut d'un clocher de village, la voix d'un curé lance un appel qui, de bouche en bouche, soulève tout un pays contre ses maîtres."},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"À l'aube de 1810, un prêtre lance depuis un clocher un appel qui donne le coup d'envoi d'une guerre d'indépendance, en Amérique centrale."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"À l'aube de 1810, un prêtre lance depuis un clocher un appel qui donne le coup d'envoi d'une guerre d'indépendance, en Amérique du Nord."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le cri d'indépendance d'Hidalgo, au Mexique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Cri de Dolores, au village de Dolores (Guanajuato), au Mexique."}
   ]},
