@@ -96,16 +96,16 @@
       <div id="hdr">
         <div id="logo">Géo<span>Culture</span></div>
         <div id="stats">
-          <div class="st"><span>Manche</span><b id="hrnd">1/5</b></div>
-          <div class="st"><span>Score total</span><b id="hsc">0</b></div>
-          <div class="st"><span>Max restant</span><b class="yw" id="hmax">—</b></div>
+          <div class="st"><span data-i18n="hdrRound">Manche</span><b id="hrnd">1/5</b></div>
+          <div class="st"><span data-i18n="hdrTotal">Score total</span><b id="hsc">0</b></div>
+          <div class="st"><span data-i18n="hdrMaxLeft">Max restant</span><b class="yw" id="hmax">—</b></div>
         </div>
         <div id="auth-zone">
-          <button id="menu-btn" onclick="typeof showMenu!=='undefined'&&showMenu()" style="font-size:11px;padding:5px 10px;border-radius:7px;border:1px solid #2d3f5e;cursor:pointer;background:transparent;color:#94a3b8;white-space:nowrap">Menu</button>
-          <button id="hist-btn" onclick="typeof showHistory!=='undefined'&&showHistory()">Profil</button>
+          <button id="menu-btn" onclick="typeof showMenu!=='undefined'&&showMenu()" style="font-size:11px;padding:5px 10px;border-radius:7px;border:1px solid #2d3f5e;cursor:pointer;background:transparent;color:#94a3b8;white-space:nowrap" data-i18n="menu">Menu</button>
+          <button id="hist-btn" onclick="typeof showHistory!=='undefined'&&showHistory()" data-i18n="history">Profil</button>
           <img id="auth-avatar" src="" alt="">
           <span id="auth-name"></span>
-          <button id="auth-btn" onclick="typeof fbSignIn!=='undefined'&&fbSignIn()">Connexion Google</button>
+          <button id="auth-btn" onclick="typeof fbSignIn!=='undefined'&&fbSignIn()" data-i18n="connectGoogle">Connexion Google</button>
         </div>
       </div>
 
@@ -113,10 +113,10 @@
         <div id="sidebar">
           <div id="qpanel">
             <div id="badge">EXPERT</div>
-            <div id="qtxt">Démarrez pour commencer</div>
+            <div id="qtxt" data-i18n="startPrompt">Démarrez pour commencer</div>
           </div>
           <div id="timer-section">
-            <div id="timer-lbl">Temps restant</div>
+            <div id="timer-lbl" data-i18n="timeLeft">Temps restant</div>
             <div id="tring">
               <svg id="tsvg" viewBox="0 0 90 90">
                 <circle cx="45" cy="45" r="38" fill="none" stroke="var(--border)" stroke-width="6"/>
@@ -127,7 +127,7 @@
               <div id="tnum">30</div>
             </div>
             <div id="maxbox">
-              <div class="ml">Score max ce niveau</div>
+              <div class="ml" data-i18n="maxThisLevel">Score max ce niveau</div>
               <div class="mv" id="lvl-max">—</div>
               <div class="ms" id="lvl-mult">—</div>
             </div>
@@ -139,25 +139,25 @@
             </div>
           </div>
           <div id="actions">
-            <div id="placed-info">Cliquez sur la carte pour placer votre réponse</div>
-            <button class="btn bg" id="skipb">Indice suivant </button>
-            <button class="btn ba" id="confb" disabled>Valider ma réponse &#8594;</button>
+            <div id="placed-info" data-i18n="placeHint">Cliquez sur la carte pour placer votre réponse</div>
+            <button class="btn bg" id="skipb" data-i18n="nextHint">Indice suivant</button>
+            <button class="btn ba" id="confb" disabled data-i18n="confirmAnswer">Valider ma réponse &#8594;</button>
           </div>
         </div>
 
         <div id="mapw">
           <div id="map"></div>
-          <div id="explore-tip" style="display:none;position:absolute;bottom:60px;left:50%;transform:translateX(-50%);background:rgba(13,17,32,.92);color:#94a3b8;font-size:12px;padding:8px 14px;border-radius:8px;border:1px solid #1e2d45;z-index:50;white-space:nowrap;pointer-events:none"> Naviguez librement — cliquez sur les marqueurs pour les détails</div>
+          <div id="explore-tip" style="display:none;position:absolute;bottom:60px;left:50%;transform:translateX(-50%);background:rgba(13,17,32,.92);color:#94a3b8;font-size:12px;padding:8px 14px;border-radius:8px;border:1px solid #1e2d45;z-index:50;white-space:nowrap;pointer-events:none" data-i18n="exploreTip">Naviguez librement — cliquez sur les marqueurs pour les détails</div>
           <div id="level-flash">
             <div id="flash-badge"></div>
             <div id="flash-sub"></div>
           </div>
           <div id="toast" style="position:absolute;bottom:18px;left:50%;transform:translateX(-50%) translateY(8px);background:#1e2d45;border:1px solid #2d3f5e;border-radius:8px;padding:7px 14px;font-size:12px;color:#e2e8f0;z-index:60;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;white-space:nowrap;max-width:92%;font-family:'Baloo 2',sans-serif"></div>
-          <button id="back-btn" onclick="exitExploreMode()">&#8592; Retour aux résultats</button>
+          <button id="back-btn" onclick="exitExploreMode()" data-i18n="backToResults">&#8592; Retour aux résultats</button>
           <div id="overlay">
             <div class="otitle">Géo<span>Culture</span></div>
             <div style="font-size:11px;color:#4b5563;letter-spacing:2px;margin-top:-8px;margin-bottom:8px"></div>
-            <div class="osub">Chargement...</div>
+            <div class="osub" data-i18n="loading">Chargement...</div>
           </div>
         </div>
       </div>
@@ -166,18 +166,18 @@
   </div><!-- /app-wrapper -->
 
   <!-- ══ SEO : bouton + tiroir de contenu indexable ══ -->
-  <section id="seo-content" aria-label="À propos de GéoCulture">
-    <button id="seo-close" onclick="document.getElementById('seo-content').classList.remove('open')">&#8595; Retour au jeu</button>
+  <section id="seo-content" aria-label="À propos de GéoCulture" data-i18n-aria="seoAria">
+    <button id="seo-close" onclick="document.getElementById('seo-content').classList.remove('open')" data-i18n="backToGame">&#8595; Retour au jeu</button>
     <div class="seo-inner">
-      <h1>GéoCulture &mdash; le jeu pour deviner les lieux et monuments du monde</h1>
-      <p class="seo-lead">GéoCulture est un <strong>jeu de géolocalisation culturelle gratuit</strong>, en français, dans l'esprit d'un GeoGuessr culturel. À partir d'un indice, d'une photo ou d'une devinette historique, place le bon endroit sur la carte du monde &mdash; le plus précisément et le plus vite possible.</p>
+      <h1 data-i18n-html="seoH1">GéoCulture &mdash; le jeu pour deviner les lieux et monuments du monde</h1>
+      <p class="seo-lead" data-i18n-html="seoLead">GéoCulture est un <strong>jeu de géolocalisation culturelle gratuit</strong>, en français, dans l'esprit d'un GeoGuessr culturel. À partir d'un indice, d'une photo ou d'une devinette historique, place le bon endroit sur la carte du monde &mdash; le plus précisément et le plus vite possible.</p>
 
-      <h2>Comment jouer ?</h2>
-      <p>Chaque manche te propose un lieu ou un événement à retrouver. Les indices vont du plus <strong>cryptique</strong> (mode Expert) au plus <strong>explicite</strong> (mode Facile) : plus tu devines tôt, plus tu marques de points. Clique sur la carte pour placer ta réponse, valide, et découvre à quelle distance tu étais. Un <strong>défi quotidien</strong>, un classement et un mode <strong>multijoueur</strong> complètent l'expérience.</p>
+      <h2 data-i18n="seoHowH">Comment jouer ?</h2>
+      <p data-i18n-html="seoHowP">Chaque manche te propose un lieu ou un événement à retrouver. Les indices vont du plus <strong>cryptique</strong> (mode Expert) au plus <strong>explicite</strong> (mode Facile) : plus tu devines tôt, plus tu marques de points. Clique sur la carte pour placer ta réponse, valide, et découvre à quelle distance tu étais. Un <strong>défi quotidien</strong>, un classement et un mode <strong>multijoueur</strong> complètent l'expérience.</p>
 
-      <h2>Des centaines de lieux et monuments célèbres</h2>
-      <p>Explore les plus grands monuments et lieux emblématiques de la planète :</p>
-      <ul class="seo-grid">
+      <h2 data-i18n="seoPlacesH">Des centaines de lieux et monuments célèbres</h2>
+      <p data-i18n="seoPlacesP">Explore les plus grands monuments et lieux emblématiques de la planète :</p>
+      <ul class="seo-grid" data-i18n-html="seoGrid">
         <li>Tour Eiffel</li><li>Machu Picchu</li><li>Colisée de Rome</li><li>Taj Mahal</li>
         <li>Grande Muraille de Chine</li><li>Statue de la Liberté</li><li>Pyramides de Gizeh</li>
         <li>Mont Fuji</li><li>Petra</li><li>Sagrada Família</li><li>Christ Rédempteur</li>
@@ -185,8 +185,8 @@
         <li>Chichén Itzá</li><li>Mont Saint-Michel</li><li>Château de Neuschwanstein</li>
       </ul>
 
-      <h2>Des modes de jeu pour tous</h2>
-      <ul class="seo-modes">
+      <h2 data-i18n="seoModesH">Des modes de jeu pour tous</h2>
+      <ul class="seo-modes" data-i18n-html="seoModes">
         <li><strong>Normal</strong> &mdash; l'expérience classique, avec chrono.</li>
         <li><strong>Chill</strong> &mdash; sans limite de temps, pour explorer tranquillement.</li>
         <li><strong>Perfection</strong> &mdash; vise le sans-faute.</li>
@@ -195,15 +195,15 @@
         <li><strong>Multijoueur</strong> &mdash; affronte tes amis en temps réel.</li>
       </ul>
 
-      <h2>Questions fréquentes</h2>
-      <h3>GéoCulture est-il gratuit ?</h3>
-      <p>Oui, GéoCulture est entièrement gratuit. Un accès Premium optionnel retire les publicités et débloque les modes avancés.</p>
-      <h3>Faut-il un compte pour jouer ?</h3>
-      <p>Non, tu peux jouer immédiatement. Un compte Google permet de sauvegarder ton score et de participer au classement.</p>
-      <h3>Qu'est-ce que le mode Événements ?</h3>
-      <p>Un mode où tu devines de grands événements historiques (batailles, traités, révolutions) à partir d'indices, puis les situes sur la carte du monde.</p>
-      <h3>Peut-on jouer à plusieurs ?</h3>
-      <p>Oui, le mode multijoueur permet de créer une partie et d'affronter d'autres joueurs en temps réel.</p>
+      <h2 data-i18n="seoFaqH">Questions fréquentes</h2>
+      <h3 data-i18n="faq1q">GéoCulture est-il gratuit ?</h3>
+      <p data-i18n="faq1a">Oui, GéoCulture est entièrement gratuit. Un accès Premium optionnel retire les publicités et débloque les modes avancés.</p>
+      <h3 data-i18n="faq2q">Faut-il un compte pour jouer ?</h3>
+      <p data-i18n="faq2a">Non, tu peux jouer immédiatement. Un compte Google permet de sauvegarder ton score et de participer au classement.</p>
+      <h3 data-i18n="faq3q">Qu'est-ce que le mode Événements ?</h3>
+      <p data-i18n="faq3a">Un mode où tu devines de grands événements historiques (batailles, traités, révolutions) à partir d'indices, puis les situes sur la carte du monde.</p>
+      <h3 data-i18n="faq4q">Peut-on jouer à plusieurs ?</h3>
+      <p data-i18n="faq4a">Oui, le mode multijoueur permet de créer une partie et d'affronter d'autres joueurs en temps réel.</p>
     </div>
   </section>
 
@@ -212,17 +212,21 @@
   <!-- ══ SCRIPTS ══ -->
   <!-- Leaflet -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <!-- Traductions (interface) : doit précéder tout le reste -->
+  <script src="js/i18n.js?v=1"></script>
   <!-- Données (de nombreux lieux) -->
   <script src="js/data.js?v=2"></script>
   <!-- Événements historiques (mode Premium) -->
   <script src="js/events.js?v=3"></script>
+  <!-- Contenu traduit (lieux + événements) pour la langue active -->
+  <script>GC_localizeData();if(GC_LANG!=='fr')document.write('<script src="js/i18n/content.'+GC_LANG+'.js?v=1"><\/script>');</script>
   <!-- Firebase Auth -->
-  <script type="module" src="js/firebase-auth.js?v=16"></script>
+  <script type="module" src="js/firebase-auth.js?v=17"></script>
   <!-- Logique du jeu -->
-  <script type="module" src="js/multiplayer.js?v=4"></script>
-  <script defer src="js/game.js?v=26"></script>
-  <script defer src="js/tutorial.js?v=2"></script>
-  <script defer src="js/report.js?v=1"></script>
+  <script type="module" src="js/multiplayer.js?v=5"></script>
+  <script defer src="js/game.js?v=27"></script>
+  <script defer src="js/tutorial.js?v=3"></script>
+  <script defer src="js/report.js?v=2"></script>
   <script>
 (function(){function gcUpdateAds(){var ins=document.querySelector("#ad-banner .adsbygoogle");var slot=ins&&ins.getAttribute("data-ad-slot");var premium=(typeof window.isPremiumUser==="function"&&window.isPremiumUser())||window.isPremium===true;if(slot&&!premium){try{if(!ins.getAttribute("data-adsbygoogle-status")){(adsbygoogle=window.adsbygoogle||[]).push({});}}catch(e){}var n=0;var iv=setInterval(function(){var st=ins.getAttribute("data-ad-status");if(st==="filled"){document.body.classList.add("show-ads");clearInterval(iv);}else if(st==="unfilled"||++n>20){document.body.classList.remove("show-ads");clearInterval(iv);}},500);}else{document.body.classList.remove("show-ads");}}window.gcUpdateAds=gcUpdateAds;document.addEventListener("DOMContentLoaded",gcUpdateAds);})();
   </script>

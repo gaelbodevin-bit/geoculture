@@ -70,6 +70,7 @@
     lines.push('— — — (infos techniques, ne pas effacer) — — —');
     try { lines.push('Page : ' + location.href); } catch (e) {}
     lines.push('Date : ' + new Date().toLocaleString('fr-FR'));
+    try { lines.push('Langue : ' + (window.GC_LANG || '?')); } catch (e) {}
     try { lines.push('Navigateur : ' + navigator.userAgent); } catch (e) {}
     lines.push('Écran : ' + (window.innerWidth || '?') + '×' + (window.innerHeight || '?'));
     try {
@@ -88,12 +89,12 @@
 
     var btn = document.createElement('button');
     btn.id = 'gc-rep-btn'; btn.type = 'button';
-    btn.setAttribute('aria-label', 'Signaler un problème');
+    btn.setAttribute('aria-label', T('repBtn'));
     btn.innerHTML =
       '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
       '<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>' +
       '<line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>' +
-      '<span>Signaler un problème</span>';
+      '<span>' + T('repBtn') + '</span>';
     btn.addEventListener('click', open);
     document.body.appendChild(btn);
   }
@@ -104,23 +105,23 @@
       ov.id = 'gc-rep-ov';
       ov.setAttribute('role', 'dialog'); ov.setAttribute('aria-modal', 'true');
       var opts = '';
-      for (var i = 0; i < CATEGORIES.length; i++) opts += '<option>' + CATEGORIES[i] + '</option>';
+      for (var i = 0; i < CATEGORIES.length; i++) opts += '<option value="' + CATEGORIES[i] + '">' + T('repCat' + (i + 1)) + '</option>';
       ov.innerHTML =
         '<div id="gc-rep">' +
-          '<div id="gc-rep-hd"><h2>Signaler un problème</h2><button id="gc-rep-x" type="button" aria-label="Fermer">×</button></div>' +
+          '<div id="gc-rep-hd"><h2>' + T('repTitle') + '</h2><button id="gc-rep-x" type="button" aria-label="' + T('close') + '">×</button></div>' +
           '<div id="gc-rep-bd">' +
-            '<p class="intro">Un bug, un lieu mal placé, une idée ? Décris-le, on regarde ça au plus vite. Merci !</p>' +
-            '<label for="gc-rep-cat">Type de problème</label>' +
+            '<p class="intro">' + T('repIntro') + '</p>' +
+            '<label for="gc-rep-cat">' + T('repType') + '</label>' +
             '<select id="gc-rep-cat">' + opts + '</select>' +
-            '<label for="gc-rep-msg">Description</label>' +
-            '<textarea id="gc-rep-msg" placeholder="Que s\'est-il passé ? Sur quel lieu / quel mode ?"></textarea>' +
-            '<label for="gc-rep-mail">Ton e-mail (facultatif, pour te répondre)</label>' +
-            '<input id="gc-rep-mail" type="email" placeholder="toi@exemple.com">' +
+            '<label for="gc-rep-msg">' + T('repDesc') + '</label>' +
+            '<textarea id="gc-rep-msg" placeholder="' + T('repDescPh') + '"></textarea>' +
+            '<label for="gc-rep-mail">' + T('repMail') + '</label>' +
+            '<input id="gc-rep-mail" type="email" placeholder="' + T('repMailPh') + '">' +
             '<p id="gc-rep-err"></p>' +
           '</div>' +
           '<div id="gc-rep-ft">' +
-            '<button class="gc-rb gc-rb-x" id="gc-rep-cancel" type="button">Annuler</button>' +
-            '<button class="gc-rb gc-rb-ok" id="gc-rep-send" type="button">Envoyer</button>' +
+            '<button class="gc-rb gc-rb-x" id="gc-rep-cancel" type="button">' + T('cancel') + '</button>' +
+            '<button class="gc-rb gc-rb-ok" id="gc-rep-send" type="button">' + T('repSend') + '</button>' +
           '</div>' +
         '</div>';
       document.body.appendChild(ov);
@@ -150,11 +151,11 @@
     var msg = ov.querySelector('#gc-rep-msg').value.trim();
     var mail = ov.querySelector('#gc-rep-mail').value.trim();
     var err = ov.querySelector('#gc-rep-err');
-    if (msg.length < 5) { err.textContent = 'Merci de décrire le problème (au moins quelques mots).'; return; }
+    if (msg.length < 5) { err.textContent = T('repTooShort'); return; }
     err.textContent = '';
 
     var sendBtn = ov.querySelector('#gc-rep-send');
-    sendBtn.disabled = true; sendBtn.textContent = 'Envoi…';
+    sendBtn.disabled = true; sendBtn.textContent = T('repSending');
 
     fetch(REPORT_ENDPOINT, {
       method: 'POST',
@@ -166,9 +167,9 @@
     }).then(function () {
       done();
     }).catch(function () {
-      sendBtn.disabled = false; sendBtn.textContent = 'Envoyer';
-      err.textContent = 'Envoi impossible pour le moment, réessaie dans un instant.'
-        + (REPORT_TO ? (' Ou écris-nous à ' + REPORT_TO + '.') : '');
+      sendBtn.disabled = false; sendBtn.textContent = T('repSend');
+      err.textContent = T('repFailed')
+        + (REPORT_TO ? (' ' + T('repWriteUs', { mail: REPORT_TO })) : '');
     });
   }
 
@@ -177,8 +178,8 @@
     card.innerHTML =
       '<div id="gc-rep-done">' +
         '<div class="ic">✅</div>' +
-        '<p>Merci ! Ton signalement a bien été envoyé.<br>On regarde ça au plus vite.</p>' +
-        '<div style="margin-top:16px"><button class="gc-rb gc-rb-ok" id="gc-rep-close2" type="button">Fermer</button></div>' +
+        '<p>' + T('repDone') + '</p>' +
+        '<div style="margin-top:16px"><button class="gc-rb gc-rb-ok" id="gc-rep-close2" type="button">' + T('close') + '</button></div>' +
       '</div>';
     card.querySelector('#gc-rep-close2').addEventListener('click', function () {
       close();

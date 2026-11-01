@@ -23,48 +23,48 @@
   /* Etapes : spot = zone a surligner en % de l'image {l,t,w,h} (null = vue d'ensemble) */
   var STEPS = [
     {
-      title: 'Bienvenue sur GéoCulture !',
-      text: "Voici l'écran de jeu. On te décrit un lieu, tu dois le <b>localiser sur la carte</b>. Petit tour du propriétaire en quelques étapes.",
+      title: T('tuto1t'),
+      text: T('tuto1x'),
       spot: null
     },
     {
-      title: "L'indice à déchiffrer",
-      text: "À gauche : un <b>badge de difficulté</b> (ici EXPERT) et l'<b>indice</b> à résoudre. Plus le badge est difficile, plus l'indice est énigmatique… mais plus tu marques de points.",
+      title: T('tuto2t'),
+      text: T('tuto2x'),
       spot: { l: 0, t: 8.67, w: 25.9, h: 22.2 }
     },
     {
-      title: "Besoin d'aide ? Change de niveau",
-      text: "« <b>Indice suivant</b> » dévoile un indice plus facile : Expert → Difficile → Moyen → Facile. Pratique si tu sèches… mais le <b>score maximum baisse</b> à chaque fois.",
+      title: T('tuto3t'),
+      text: T('tuto3x'),
       spot: { l: 1.4, t: 84.33, w: 23.1, h: 6.17 }
     },
     {
-      title: 'Ta progression',
-      text: "Ces points indiquent à quel <b>niveau d'indice</b> tu en es (4 paliers, d'Expert à Facile).",
+      title: T('tuto4t'),
+      text: T('tuto4x'),
       spot: { l: 6, t: 66, w: 14, h: 7 }
     },
     {
-      title: 'Le chrono',
-      text: "Chaque manche est <b>chronométrée</b>. Le « score max restant » diminue avec le temps : réfléchis, mais ne traîne pas trop.",
+      title: T('tuto5t'),
+      text: T('tuto5x'),
       spot: { l: 0, t: 30.86, w: 25.9, h: 42.33 }
     },
     {
-      title: 'Navigue et place ton point',
-      text: "<b>Zoome</b> (molette ou +/−), déplace-toi, puis <b>clique sur la carte</b> à l'endroit que tu penses juste. Tu peux corriger ton marqueur tant que tu n'as pas validé.",
+      title: T('tuto6t'),
+      text: T('tuto6x'),
       spot: { l: 26, t: 8.67, w: 74, h: 91.33 }
     },
     {
-      title: 'Vise juste : tout est dans la précision',
-      text: "Quand tu es sûr, clique <b>Valider</b>. Ton score dépend de la <b>distance</b> entre ton point et le vrai lieu : plus tu es <b>précis</b>, plus tu gagnes.",
+      title: T('tuto7t'),
+      text: T('tuto7x'),
       spot: { l: 1.4, t: 91.83, w: 23.1, h: 5.83 }
     },
     {
-      title: 'Score et manches',
-      text: "En haut : la <b>manche</b> en cours, ton <b>score total</b> et le <b>maximum encore atteignable</b> sur cette manche.",
+      title: T('tuto8t'),
+      text: T('tuto8x'),
       spot: { l: 32.1, t: 1.67, w: 24.4, h: 5.17 }
     },
     {
-      title: 'Des modes pour tous les goûts',
-      text: "Depuis le <b>Menu</b> : <b>Classique</b>, <b>No-Zoom</b> (carte figée, pour les pros), <b>Perfection</b> (où seule la précision compte, vise le sans-faute), <b>Événements</b> historiques et <b>Multijoueur</b>. À toi de jouer !",
+      title: T('tuto9t'),
+      text: T('tuto9x'),
       spot: { l: 70.13, t: 2.17, w: 5.22, h: 4.17 }
     }
   ];
@@ -114,11 +114,11 @@
     ov.id = 'gc-tuto-ov';
     ov.setAttribute('role', 'dialog');
     ov.setAttribute('aria-modal', 'true');
-    ov.setAttribute('aria-label', 'Tutoriel GéoCulture');
+    ov.setAttribute('aria-label', T('tutoAria'));
     ov.innerHTML =
       '<div id="gc-tuto">' +
         '<div id="gc-shot">' +
-          '<img src="' + IMG_SRC + '" alt="Aperçu de l\'interface de GéoCulture">' +
+          '<img src="' + IMG_SRC + '" alt="' + T('tutoAlt') + '">' +
           '<div id="gc-mask"><div id="gc-spot"></div></div>' +
         '</div>' +
         '<div id="gc-tuto-body">' +
@@ -127,13 +127,13 @@
           '<div id="gc-tuto-dots"></div>' +
         '</div>' +
         '<div id="gc-tuto-foot">' +
-          '<button id="gc-tuto-skip" type="button">Passer</button>' +
+          '<button id="gc-tuto-skip" type="button">' + T('tutoSkip') + '</button>' +
           '<div id="gc-tuto-nav">' +
-            '<button class="gc-btn gc-btn-prev" id="gc-tuto-prev" type="button">Précédent</button>' +
-            '<button class="gc-btn gc-btn-next" id="gc-tuto-next" type="button">Suivant</button>' +
+            '<button class="gc-btn gc-btn-prev" id="gc-tuto-prev" type="button">' + T('tutoPrev') + '</button>' +
+            '<button class="gc-btn gc-btn-next" id="gc-tuto-next" type="button">' + T('tutoNext') + '</button>' +
           '</div>' +
         '</div>' +
-        '<label id="gc-tuto-again"><input type="checkbox" id="gc-tuto-chk" checked> Ne plus afficher au démarrage</label>' +
+        '<label id="gc-tuto-again"><input type="checkbox" id="gc-tuto-chk" checked> ' + T('tutoDontShow') + '</label>' +
       '</div>';
     document.body.appendChild(ov);
 
@@ -177,7 +177,7 @@
     var dots = ov.querySelectorAll('#gc-tuto-dots .d');
     for (var i = 0; i < dots.length; i++) dots[i].classList.toggle('on', i === idx);
     ov.querySelector('#gc-tuto-prev').style.visibility = idx === 0 ? 'hidden' : 'visible';
-    ov.querySelector('#gc-tuto-next').textContent = (idx === STEPS.length - 1) ? 'Commencer !' : 'Suivant';
+    ov.querySelector('#gc-tuto-next').textContent = (idx === STEPS.length - 1) ? T('tutoStart') : T('tutoNext');
   }
 
   function next() { if (idx < STEPS.length - 1) { idx++; render(); } else close(); }

@@ -64,9 +64,9 @@ function genCode() {
 function getPlayerName() {
   const user = (typeof getCurrentUser === 'function' ? getCurrentUser() : null) || mpAuth.currentUser;
   if (user && !user.isAnonymous) {
-    return user.displayName || (user.email ? user.email.split('@')[0] : '') || mp.playerName || 'Joueur';
+    return user.displayName || (user.email ? user.email.split('@')[0] : '') || mp.playerName || T('player');
   }
-  return mp.playerName || 'Joueur';
+  return mp.playerName || T('player');
 }
 
 function getPlayerPhoto() {
@@ -75,7 +75,7 @@ function getPlayerPhoto() {
 }
 
 function fmtPts(value) {
-  return (value || 0).toLocaleString('fr-FR');
+  return (value || 0).toLocaleString(GC_LOCALE);
 }
 
 function fmtDst(km) {
@@ -201,11 +201,11 @@ function mpJoinRoom(code, playerName) {
     mp.roomRef = ref(rtdb, 'rooms/' + roomCode);
 
     return get(mp.roomRef).then((snap) => {
-      if (!snap.exists()) throw new Error('Salon introuvable');
+      if (!snap.exists()) throw new Error(T('mpRoomNotFound'));
 
       const room = snap.val();
-      if (room.status !== 'waiting') throw new Error('Partie déjà commencée');
-      if (Object.keys(room.players || {}).length >= 8) throw new Error('Salon complet (8/8)');
+      if (room.status !== 'waiting') throw new Error(T('mpAlreadyStarted'));
+      if (Object.keys(room.players || {}).length >= 8) throw new Error(T('mpRoomFull'));
 
       Object.keys(colorMap).forEach((key) => delete colorMap[key]);
       Object.entries(room.players || {}).forEach(([pid, player]) => {
@@ -214,7 +214,7 @@ function mpJoinRoom(code, playerName) {
 
       const myColor = mpColorFor(mp.playerId);
       return set(ref(rtdb, 'rooms/' + roomCode + '/players/' + mp.playerId), {
-        name: getPlayerName() || playerName || 'Joueur',
+        name: getPlayerName() || playerName || T('player'),
         photo: getPlayerPhoto(),
         color: myColor,
         isHost: false,
@@ -299,7 +299,7 @@ function mpUpdateLobby(room) {
 
   const overlay = document.getElementById('overlay');
   if (!room) {
-    overlay.innerHTML = '<div class="otitle">GEO<br>CULTURE</div><div style="color:#94a3b8;font-size:14px;margin-top:8px">Connexion au salon...</div>';
+    overlay.innerHTML = '<div class="otitle">GEO<br>CULTURE</div><div style="color:#94a3b8;font-size:14px;margin-top:8px">' + T('mpConnecting') + '</div>';
     return;
   }
 
@@ -309,25 +309,25 @@ function mpUpdateLobby(room) {
   });
   const opts = room.options || {};
   const canStart = mp.isHost && playerEntries.length >= 2;
-  const levelNames = ['Tout niveaux', 'Expert', 'Difficile', 'Moyen', 'Facile'];
-  const levelLabel = levelNames[opts.fixedLevel >= 0 ? opts.fixedLevel + 1 : 0] || 'Tout niveaux';
+  const levelNames = [T('lvlAll'), T('lvlExpert'), T('lvlHard'), T('lvlMedium'), T('lvlEasy')];
+  const levelLabel = levelNames[opts.fixedLevel >= 0 ? opts.fixedLevel + 1 : 0] || T('lvlAll');
 
   const html = [];
   html.push('<div style="text-align:center;margin-bottom:12px">');
-  html.push('<div class="otitle" style="font-size:32px;margin-bottom:4px">MULTIJOUEUR</div>');
-  html.push('<div style="font-size:13px;color:#94a3b8">Salon : <span style="font-family:monospace;font-size:20px;font-weight:700;color:#f97316;letter-spacing:4px;background:#1a2238;padding:4px 12px;border-radius:6px">' + room.code + '</span></div>');
-  html.push('<div style="font-size:11px;color:#6b7280;margin-top:4px">Partage ce code avec tes amis</div>');
+  html.push('<div class="otitle" style="font-size:32px;margin-bottom:4px">' + T('mpTitle') + '</div>');
+  html.push('<div style="font-size:13px;color:#94a3b8">' + T('mpSalon') + '<span style="font-family:monospace;font-size:20px;font-weight:700;color:#f97316;letter-spacing:4px;background:#1a2238;padding:4px 12px;border-radius:6px">' + room.code + '</span></div>');
+  html.push('<div style="font-size:11px;color:#6b7280;margin-top:4px">' + T('mpShareCode') + '</div>');
   html.push('</div>');
 
   html.push('<div style="display:flex;gap:8px;justify-content:center;margin-bottom:12px;flex-wrap:wrap">');
   html.push('<span style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:4px 10px;font-size:12px;color:#94a3b8">' + levelLabel + '</span>');
-  const modeLabel = opts.eventsMode ? 'Événements' : opts.noZoomMode ? 'No-Zoom' : opts.perfectionMode ? 'Perfection' : opts.chillMode ? 'Chill' : 'Normal';
+  const modeLabel = opts.eventsMode ? T('modeEvents') : opts.noZoomMode ? 'No-Zoom' : opts.perfectionMode ? 'Perfection' : opts.chillMode ? 'Chill' : 'Normal';
   html.push('<span style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:4px 10px;font-size:12px;color:#94a3b8">' + modeLabel + '</span>');
-  html.push('<span style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:4px 10px;font-size:12px;color:#94a3b8">' + (opts.nbRounds || 5) + ' manches</span>');
+  html.push('<span style="background:#1a2238;border:1px solid #2d3f5e;border-radius:6px;padding:4px 10px;font-size:12px;color:#94a3b8">' + T('roundsN', { n: opts.nbRounds || 5 }) + '</span>');
   html.push('</div>');
 
   html.push('<div style="width:100%;max-width:400px;margin-bottom:12px">');
-  html.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Joueurs (' + playerEntries.length + '/8)</div>');
+  html.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">' + T('mpPlayersN', { n: playerEntries.length }) + '</div>');
   playerEntries.forEach(([pid, player]) => {
     const isMe = pid === mp.playerId;
     const color = player.color || mpColorFor(pid);
@@ -339,9 +339,9 @@ function mpUpdateLobby(room) {
     } else {
       html.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;display:flex;align-items:center;justify-content:center;font-size:12px;color:#94a3b8">' + safeChar(player.name) + '</div>');
     }
-    html.push('<span style="flex:1;font-size:13px;color:' + (isMe ? color : '#e2e8f0') + ';font-weight:' + (isMe ? '700' : '400') + '">' + esc(player.name) + (isMe ? ' (moi)' : '') + '</span>');
+    html.push('<span style="flex:1;font-size:13px;color:' + (isMe ? color : '#e2e8f0') + ';font-weight:' + (isMe ? '700' : '400') + '">' + esc(player.name) + (isMe ? ' ' + T('me') : '') + '</span>');
     if (player.isHost) {
-      html.push('<span style="font-size:10px;color:#f97316;background:#3d1a05;padding:2px 6px;border-radius:4px">Hôte</span>');
+      html.push('<span style="font-size:10px;color:#f97316;background:#3d1a05;padding:2px 6px;border-radius:4px">' + T('host') + '</span>');
     }
     html.push('</div>');
   });
@@ -349,11 +349,11 @@ function mpUpdateLobby(room) {
 
   html.push('<div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center">');
   if (mp.isHost) {
-    html.push('<button onclick="mpLaunchGame()" ' + (canStart ? '' : 'disabled') + ' style="padding:10px 28px;font-size:14px;font-weight:700;border-radius:9px;border:none;cursor:' + (canStart ? 'pointer' : 'not-allowed') + ';background:' + (canStart ? '#f97316' : '#374151') + ';color:#fff">' + (canStart ? '▶ Lancer la partie' : 'En attente (min. 2 joueurs)') + '</button>');
+    html.push('<button onclick="mpLaunchGame()" ' + (canStart ? '' : 'disabled') + ' style="padding:10px 28px;font-size:14px;font-weight:700;border-radius:9px;border:none;cursor:' + (canStart ? 'pointer' : 'not-allowed') + ';background:' + (canStart ? '#f97316' : '#374151') + ';color:#fff">' + (canStart ? T('mpLaunch') : T('mpWaitMin')) + '</button>');
   } else {
-    html.push('<div style="color:#94a3b8;font-size:13px;padding:10px">En attente que l\'hôte lance...</div>');
+    html.push('<div style="color:#94a3b8;font-size:13px;padding:10px">' + T('mpWaitHost') + '</div>');
   }
-  html.push('<button onclick="mpLeaveRoom()" style="padding:10px 20px;font-size:13px;border-radius:9px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer">Quitter</button>');
+  html.push('<button onclick="mpLeaveRoom()" style="padding:10px 20px;font-size:13px;border-radius:9px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer">' + T('quit') + '</button>');
   html.push('</div>');
 
   overlay.innerHTML = html.join('');
@@ -410,7 +410,7 @@ function mpHandleCountdown(room) {
   const remaining = Math.max(0, 3000 - elapsed);
   const second = Math.ceil(remaining / 1000);
 
-  overlay.innerHTML = '<div class="otitle" style="font-size:90px;color:#f97316;line-height:1">' + (second || 'GO !') + '</div><div style="font-size:16px;color:#94a3b8;margin-top:8px">La partie commence !</div>';
+  overlay.innerHTML = '<div class="otitle" style="font-size:90px;color:#f97316;line-height:1">' + (second || 'GO !') + '</div><div style="font-size:16px;color:#94a3b8;margin-top:8px">' + T('gameStarting') + '</div>';
   overlay.classList.remove('h');
 
   if (remaining > 0) {
@@ -845,7 +845,7 @@ function mpLaunchNextRound() {
   const button = document.getElementById('mp-next-btn');
   if (button) {
     button.disabled = true;
-    button.textContent = 'Chargement...';
+    button.textContent = T('loading');
   }
 
   get(mp.roomRef).then((snap) => {
@@ -918,7 +918,7 @@ function mpHandleRoundEnd(room) {
       });
 
       const popup = '<div style="font-family:system-ui;font-size:12px">'
-        + '<b style="color:' + color + '">' + esc(player ? player.name : '?') + (isMe ? ' (moi)' : '') + '</b><br>'
+        + '<b style="color:' + color + '">' + esc(player ? player.name : '?') + (isMe ? ' ' + T('me') : '') + '</b><br>'
         + fmtDst(answer.dist) + '<br>'
         + '<b style="color:#f97316">+' + fmtPts(answer.pts) + ' pts</b></div>';
 
@@ -979,7 +979,7 @@ function mpHandleRoundEnd(room) {
   const html = [];
 
   html.push('<div id="' + imgId + '" style="width:100%;max-width:500px;min-height:120px;background:#111827;border-radius:12px;overflow:hidden;position:relative;flex-shrink:0"></div>');
-  html.push('<div style="font-size:11px;color:#f97316;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-top:2px">Manche ' + (roundIndex + 1) + '/' + (room.options || {}).nbRounds + '</div>');
+  html.push('<div style="font-size:11px;color:#f97316;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-top:2px">' + T('roundN', { n: roundIndex + 1, t: (room.options || {}).nbRounds }) + '</div>');
   html.push('<div style="font-size:20px;font-weight:700;color:#e2e8f0;text-align:center;max-width:380px">' + placeName + '</div>');
 
   if (placeDesc) {
@@ -989,10 +989,10 @@ function mpHandleRoundEnd(room) {
   html.push('<div style="width:100%;max-width:340px;background:#111827;border-radius:12px;padding:12px 16px;display:flex;flex-direction:column;gap:6px">');
   html.push('<div style="display:flex;justify-content:space-between;align-items:center">');
   html.push('<span style="font-size:24px;font-weight:700;color:' + barColor + '">+' + fmtPts(myPoints) + ' pts</span>');
-  html.push('<span style="font-size:12px;color:#6b7280">' + (myDistance != null ? fmtDst(myDistance) : 'Raté') + '</span>');
+  html.push('<span style="font-size:12px;color:#6b7280">' + (myDistance != null ? fmtDst(myDistance) : T('missedCap')) + '</span>');
   html.push('</div>');
   html.push('<div style="height:7px;background:#1e2d45;border-radius:4px;overflow:hidden"><div style="width:' + percentRound + '%;height:100%;background:' + barColor + ';border-radius:4px"></div></div>');
-  html.push('<div style="font-size:11px;color:#6b7280">' + fmtPts(myPoints) + ' / ' + fmtPts(maxPoints) + ' pts max • Total : <b style="color:#f97316">' + fmtPts(myScore) + ' pts</b></div>');
+  html.push('<div style="font-size:11px;color:#6b7280">' + fmtPts(myPoints) + ' / ' + fmtPts(maxPoints) + ' pts max • ' + T('total') + ' : <b style="color:#f97316">' + fmtPts(myScore) + ' pts</b></div>');
   html.push('</div>');
 
   html.push('<div style="width:100%;max-width:380px;display:flex;flex-direction:column;gap:3px">');
@@ -1015,19 +1015,19 @@ function mpHandleRoundEnd(room) {
   html.push('</div>');
 
   html.push('<div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:4px">');
-  html.push('<button onclick="window.mpEnterExplore&&window.mpEnterExplore()" style="padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;font-size:13px;font-weight:600">Explorer la carte</button>');
+  html.push('<button onclick="window.mpEnterExplore&&window.mpEnterExplore()" style="padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;font-size:13px;font-weight:600">' + T('exploreMap') + '</button>');
 
   if (nextRound < (room.options || {}).nbRounds) {
     if (mp.isHost) {
-      html.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="padding:12px 32px;border-radius:10px;border:none;background:#f97316;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">Manche suivante ▶</button>');
+      html.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="padding:12px 32px;border-radius:10px;border:none;background:#f97316;color:#fff;font-size:15px;font-weight:700;cursor:pointer;transition:opacity .2s" onmouseover="this.style.opacity=\'0.85\'" onmouseout="this.style.opacity=\'1\'">' + T('mpNextRound') + '</button>');
     } else {
-      html.push('<div style="font-size:13px;color:#94a3b8;padding:8px 16px;background:#0d1120;border-radius:8px;border:1px solid #1e2d45">En attente que l\'hôte lance la manche suivante...</div>');
+      html.push('<div style="font-size:13px;color:#94a3b8;padding:8px 16px;background:#0d1120;border-radius:8px;border:1px solid #1e2d45">' + T('mpWaitNext') + '</div>');
     }
   } else {
     if (mp.isHost) {
-      html.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="padding:12px 32px;border-radius:10px;border:none;background:#22c55e;color:#fff;font-size:15px;font-weight:700;cursor:pointer">🏆 Voir le bilan final</button>');
+      html.push('<button id="mp-next-btn" onclick="window.mpLaunchNextRound&&window.mpLaunchNextRound()" style="padding:12px 32px;border-radius:10px;border:none;background:#22c55e;color:#fff;font-size:15px;font-weight:700;cursor:pointer">' + T('mpFinalBtn') + '</button>');
     } else {
-      html.push('<div style="font-size:13px;color:#94a3b8;padding:8px 16px;background:#0d1120;border-radius:8px;border:1px solid #1e2d45">En attente du bilan final…</div>');
+      html.push('<div style="font-size:13px;color:#94a3b8;padding:8px 16px;background:#0d1120;border-radius:8px;border:1px solid #1e2d45">' + T('mpWaitFinal') + '</div>');
     }
   }
   html.push('</div>');
@@ -1140,7 +1140,7 @@ function mpShowFinalResults(room) {
   }
 
   const html = [];
-  html.push('<div class="otitle" style="font-size:36px">🏆 Fin de partie !</div>');
+  html.push('<div class="otitle" style="font-size:36px">' + T('gameOver') + '</div>');
 
   html.push('<div style="width:100%;max-width:440px">');
   html.push('<div style="font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:1px;padding:0 12px 6px">Classement final</div>');
@@ -1150,7 +1150,7 @@ function mpShowFinalResults(room) {
     html.push('<div style="display:flex;align-items:center;gap:10px;padding:9px 12px;background:' + (isMe ? '#1a2238' : '#0d1120') + ';border-radius:9px;margin-bottom:4px;border:1px solid ' + (isMe ? result.color : '#1e2d45') + '">');
     html.push('<span style="font-size:18px;min-width:28px;text-align:center">' + medal + '</span>');
     html.push(avatar(result, 28));
-    html.push('<span style="flex:1;font-size:13px;font-weight:' + (isMe ? '700' : '500') + ';color:' + (isMe ? result.color : '#e2e8f0') + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + esc(result.name) + (isMe ? ' (moi)' : '') + '</span>');
+    html.push('<span style="flex:1;font-size:13px;font-weight:' + (isMe ? '700' : '500') + ';color:' + (isMe ? result.color : '#e2e8f0') + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + esc(result.name) + (isMe ? ' ' + T('me') : '') + '</span>');
     if (result.avgDist != null) html.push('<span style="font-size:11px;color:#6b7280;flex-shrink:0;margin-right:6px">~' + fmtDst(result.avgDist) + '</span>');
     html.push('<span style="font-size:17px;font-weight:700;color:#f97316;flex-shrink:0">' + fmtPts(result.score) + ' pts</span>');
     html.push('</div>');
@@ -1158,9 +1158,9 @@ function mpShowFinalResults(room) {
   html.push('</div>');
 
   html.push('<div style="width:100%;max-width:440px;background:#0d1120;border-radius:12px;padding:12px 16px;border:1px solid #1e2d45">');
-  html.push('<div style="font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Détail par manche</div>');
+  html.push('<div style="font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">' + T('roundDetail') + '</div>');
   html.push('<div style="display:flex;font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:.5px;padding-bottom:6px;border-bottom:1px solid #1e2d45;margin-bottom:4px">');
-  html.push('<span style="flex:1">Lieu</span>');
+  html.push('<span style="flex:1">' + T('colPlace') + '</span>');
   results.forEach((result) => {
     html.push('<span style="min-width:60px;text-align:right;color:' + result.color + '">' + esc(result.name.split(' ')[0]) + '</span>');
   });
@@ -1192,13 +1192,13 @@ function mpShowFinalResults(room) {
 
   const awards = [];
   const mostAccurate = results.filter((result) => result.avgDist != null).sort((a, b) => (a.avgDist || 999) - (b.avgDist || 999))[0];
-  if (mostAccurate) awards.push({ emoji: '🎯', title: 'Le plus précis', desc: '~' + fmtDst(mostAccurate.avgDist) + ' en moyenne', player: mostAccurate });
+  if (mostAccurate) awards.push({ emoji: '🎯', title: T('awAccurate'), desc: T('awAccurateDesc', { d: fmtDst(mostAccurate.avgDist) }), player: mostAccurate });
 
   const fastest = results.filter((result) => result.avgTime != null).sort((a, b) => (a.avgTime || 999) - (b.avgTime || 999))[0];
-  if (fastest) awards.push({ emoji: '⚡', title: 'Le plus réactif', desc: 'Temps de réponse le plus court', player: fastest });
+  if (fastest) awards.push({ emoji: '⚡', title: T('awFastest'), desc: T('awFastestDesc'), player: fastest });
 
   const longestShot = results.filter((result) => result.worstDist != null).sort((a, b) => b.worstDist - a.worstDist)[0];
-  if (longestShot) awards.push({ emoji: '🚀', title: 'Tir le plus loin', desc: fmtDst(longestShot.worstDist) + ' de la cible', player: longestShot });
+  if (longestShot) awards.push({ emoji: '🚀', title: T('awLongest'), desc: T('fromTarget', { d: fmtDst(longestShot.worstDist) }), player: longestShot });
 
   let bestRound = null;
   let bestRoundPoints = 0;
@@ -1211,12 +1211,12 @@ function mpShowFinalResults(room) {
       }
     }
   });
-  if (bestRound) awards.push({ emoji: '⭐', title: 'Meilleure manche', desc: '+' + fmtPts(bestRound.pts) + ' pts', player: bestRound.player });
-  if (results.length > 0) awards.push({ emoji: '👑', title: 'Champion', desc: fmtPts(results[0].score) + ' pts au total', player: results[0] });
+  if (bestRound) awards.push({ emoji: '⭐', title: T('awBestRound'), desc: '+' + fmtPts(bestRound.pts) + ' pts', player: bestRound.player });
+  if (results.length > 0) awards.push({ emoji: '👑', title: T('awChampion'), desc: T('ptsTotal', { pts: fmtPts(results[0].score) }), player: results[0] });
 
   if (awards.length > 0) {
     html.push('<div style="width:100%;max-width:440px">');
-    html.push('<div style="font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:1px;padding:0 0 6px">Succès</div>');
+    html.push('<div style="font-size:10px;color:#4b5563;text-transform:uppercase;letter-spacing:1px;padding:0 0 6px">' + T('awards') + '</div>');
     html.push('<div style="display:flex;flex-wrap:wrap;gap:8px">');
     awards.forEach((award) => {
       const isMe = award.player.pid === mp.playerId;
@@ -1235,8 +1235,8 @@ function mpShowFinalResults(room) {
   }
 
   html.push('<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px">');
-  html.push('<button onclick="mpLeaveRoom()" style="padding:12px 28px;font-size:14px;border-radius:10px;border:1px solid #2d3f5e;background:transparent;color:#e2e8f0;cursor:pointer;font-weight:600">⌂ Menu</button>');
-  html.push('<button onclick="window.mpEnterExplore&&window.mpEnterExplore()" style="padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;font-size:13px;font-weight:600">Explorer la carte</button>');
+  html.push('<button onclick="mpLeaveRoom()" style="padding:12px 28px;font-size:14px;border-radius:10px;border:1px solid #2d3f5e;background:transparent;color:#e2e8f0;cursor:pointer;font-weight:600">' + T('backMenu') + '</button>');
+  html.push('<button onclick="window.mpEnterExplore&&window.mpEnterExplore()" style="padding:10px 20px;border-radius:9px;border:1px solid #2d3f5e;cursor:pointer;background:rgba(30,45,69,.9);color:#e2e8f0;font-size:13px;font-weight:600">' + T('exploreMap') + '</button>');
   html.push('</div>');
 
   const overlay = document.getElementById('overlay');
@@ -1283,7 +1283,7 @@ function mpRenderLivePanel(room) {
   });
 
   const html = [];
-  html.push('<div style="font-size:10px;color:#f97316;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px">Manche ' + (roundIndex + 1) + '/' + (opts.nbRounds || 5) + '</div>');
+  html.push('<div style="font-size:10px;color:#f97316;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px">' + T('roundN', { n: roundIndex + 1, t: opts.nbRounds || 5 }) + '</div>');
 
   playerEntries.forEach(([pid, player]) => {
     const isMe = pid === mp.playerId;
@@ -1301,11 +1301,11 @@ function mpRenderLivePanel(room) {
     html.push('<span style="flex:1;font-size:12px;color:' + (isMe ? color : '#e2e8f0') + ';font-weight:' + (isMe ? '700' : '400') + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + esc(player.name) + '</span>');
     html.push(done
       ? (answer.status === 'eliminated'
-        ? '<span style="font-size:10px;color:#ef4444;font-weight:700;flex-shrink:0">Éliminé</span>'
-        : '<span style="font-size:10px;color:#22c55e;font-weight:700;flex-shrink:0">Répondu</span>')
-      : '<span style="font-size:10px;color:#fbbf24;flex-shrink:0">Indice ' + (hintLevel + 1) + '</span>');
+        ? '<span style="font-size:10px;color:#ef4444;font-weight:700;flex-shrink:0">' + T('eliminatedTag') + '</span>'
+        : '<span style="font-size:10px;color:#22c55e;font-weight:700;flex-shrink:0">' + T('answered') + '</span>')
+      : '<span style="font-size:10px;color:#fbbf24;flex-shrink:0">' + T('hintN', { n: hintLevel + 1 }) + '</span>');
     html.push('</div>');
-    html.push('<div style="font-size:10px;color:#4b5563;padding-left:29px;padding-bottom:2px">Total : ' + fmtPts(player.score || 0) + ' pts</div>');
+    html.push('<div style="font-size:10px;color:#4b5563;padding-left:29px;padding-bottom:2px">' + T('total') + ' : ' + fmtPts(player.score || 0) + ' pts</div>');
   });
 
   panel.innerHTML = html.join('');
@@ -1372,7 +1372,7 @@ window.mpOnConfirm = function () {
   if (confirmButton) confirmButton.disabled = true;
 
   if (typeof showToast === 'function') {
-    showToast(dist != null ? fmtDst(dist) + ' ? +' + pts + ' pts — En attente des autres...' : 'Raté — En attente des autres...');
+    showToast(dist != null ? fmtDst(dist) + ' · +' + pts + ' pts — ' + T('waitingOthers') : T('missedCap') + ' — ' + T('waitingOthers'));
   }
 
   mpSubmitAnswer(playerPos, dist, pts, mpCurrentRound.value);
@@ -1422,7 +1422,7 @@ function mpOnDisbanded(room) {
 
   const overlay = document.getElementById('overlay');
   if (overlay) {
-    overlay.innerHTML = '<div class="otitle" style="font-size:28px">Partie terminée</div>' + '<div style="font-size:14px;color:#94a3b8;margin-top:8px">Un joueur a quitté la partie.</div>';
+    overlay.innerHTML = '<div class="otitle" style="font-size:28px">' + T('gameEnded') + '</div>' + '<div style="font-size:14px;color:#94a3b8;margin-top:8px">' + T('playerLeft') + '</div>';
     overlay.classList.remove('h');
   }
 
