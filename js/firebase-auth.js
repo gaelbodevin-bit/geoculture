@@ -72,7 +72,7 @@ onAuthStateChanged(fbAuth, function(user) {
     if(window.gcTrack) window.gcTrack('achat_premium');
     window.history.replaceState({}, '', window.location.pathname);
     setTimeout(function() {
-      if(typeof showToast==='function') showToast('Merci ! Accés Premium activé. Rechargez si nécessaire.');
+      if(typeof showToast==='function') showToast(T('premiumThanks'));
       if(user) {
         getDoc(doc(fbDb, 'users', user.uid)).then(function(snap) {
           var _ud = snap.exists() ? snap.data() : {}; currentUserPremium = _ud.premium === true;
@@ -83,7 +83,7 @@ onAuthStateChanged(fbAuth, function(user) {
   }
   if(params.get('premium') === 'cancel') {
     window.history.replaceState({}, '', window.location.pathname);
-    if(typeof showToast==='function') showToast('Paiement annulé.');
+    if(typeof showToast==='function') showToast(T('paymentCancelled'));
   }
 });
 
@@ -93,12 +93,12 @@ function updateAuthUI(user) {
   var name = document.getElementById('auth-name');
   if (!btn) return;
   if (user) {
-    btn.textContent = 'D\u00e9connexion';
+    btn.textContent = T('disconnect');
     btn.onclick = fbSignOut;
     if (avatar) { avatar.src = user.photoURL || ''; avatar.style.display = 'inline-block'; }
     if (name) name.textContent = user.displayName || user.email;
   } else {
-    btn.textContent = 'Connexion Google';
+    btn.textContent = T('connectGoogle');
     btn.onclick = fbSignIn;
     if (avatar) avatar.style.display = 'none';
     if (name) name.textContent = '';
@@ -109,13 +109,13 @@ function updateAuthUI(user) {
 function fbSignIn() {
   signInWithPopup(fbAuth, fbProvider).catch(function(e) {
     
-    showToast('Erreur de connexion : ' + e.message);
+    showToast(T('loginError') + e.message);
   });
 }
 
 function fbSignOut() {
   signOut(fbAuth).then(function() {
-    showToast('D\u00e9connect\u00e9');
+    showToast(T('signedOut'));
   });
 }
 
@@ -127,7 +127,7 @@ function saveGame(scores, total, pct, mode) {
   }
   var data = {
     uid: currentUser.uid,
-    displayName: currentUser.displayName || 'Joueur',
+    displayName: currentUser.displayName || T('player'),
     photoURL: currentUser.photoURL || '',
     total: total,
     pct: pct,
@@ -138,7 +138,7 @@ function saveGame(scores, total, pct, mode) {
     createdAt: serverTimestamp()
   };
   addDoc(collection(fbDb, 'games'), data)
-    .then(function() { showToast('Partie sauvegard\u00e9e !'); })
+    .then(function() { showToast(T('gameSaved')); })
     .catch(function(e) {  });
 }
 
@@ -170,19 +170,19 @@ function loadHistory(callback) {
 // \u2500\u2500 Afficher l'historique \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
 function showHistory() {
   if (!currentUser) {
-    if(typeof showToast==='function') showToast('Connecte-toi pour voir ton historique');
+    if(typeof showToast==='function') showToast(T('loginForHistory'));
     return;
   }
   var ov = document.getElementById('overlay');
   // Sauvegarder l'etat actuel
   window._prevOverlayHTML = ov.innerHTML;
   window._prevOverlayHidden = ov.classList.contains('h');
-  ov.innerHTML = '<div class="otitle" style="font-size:32px">Chargement...</div>';
+  ov.innerHTML = '<div class="otitle" style="font-size:32px">'+T('loading')+'</div>';
   ov.classList.remove('h');
 
   loadHistory(function(games) {
     var h = [];
-    h.push('<div class="otitle" style="font-size:28px">Mes parties</div>');
+    h.push('<div class="otitle" style="font-size:28px">'+T('myGames')+'</div>');
     h.push('<div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">');
     h.push('<img src="'+(currentUser.photoURL||'')+'" style="width:32px;height:32px;border-radius:50%;object-fit:cover">');
     h.push('<span style="color:#e2e8f0;font-size:14px;font-weight:600">'+escH(currentUser.displayName||'')+'</span>');
@@ -194,16 +194,16 @@ function showHistory() {
     var gamesNormal = games.filter(function(g){ return (g.mode||'').indexOf('nozoom') < 0 && (g.mode||'').indexOf('perfection') < 0; });
 
     if (games.length === 0) {
-      h.push('<div class="osub">Aucune partie enregistr\u00e9e pour le moment.</div>');
+      h.push('<div class="osub">'+T('noGamesYet')+'</div>');
     } else {
       // Afficher les parties normales
       if(gamesNormal.length > 0){
-        h.push('<div style="font-size:11px;color:#f97316;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">Mode Normal</div>');
+        h.push('<div style="font-size:11px;color:#f97316;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px">'+T('modeNormal')+'</div>');
         h.push('<div class="ocard" style="max-height:200px;overflow-y:auto;width:100%;max-width:420px;margin-bottom:8px">');
         gamesNormal.forEach(function(g) {
         var date = g.createdAt ? new Date(g.createdAt.seconds * 1000) : new Date();
-        var dateStr = date.toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
-        var _modeMap={'tout-niveaux':'Tout niveaux','expert':'Expert','difficile':'Difficile','moyen':'Moyen','facile':'Facile','tres-facile':'Tr\u00e8s Facile'};
+        var dateStr = date.toLocaleDateString(GC_LOCALE, {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
+        var _modeMap={'tout-niveaux':T('lvlAll'),'expert':T('lvlExpert'),'difficile':T('lvlHard'),'moyen':T('lvlMedium'),'facile':T('lvlEasy'),'tres-facile':T('lvlVeryEasy')};
         var _isNZ=(g.mode||'').indexOf('nozoom')>=0;
         var _lvlKey=(g.mode||'tout-niveaux').replace('nozoom-','');
         var modeLabel=' \u00b7 '+(_isNZ?'No-Zoom \u00b7 ':'')+(_modeMap[_lvlKey]||_lvlKey);
@@ -214,14 +214,14 @@ function showHistory() {
         h.push('<span style="font-size:14px;font-weight:700;color:'+barColor+'">'+g.pct+'%</span>');
         h.push('</div>');
         h.push('<div style="display:flex;justify-content:space-between;font-size:12px;color:#94a3b8;margin-bottom:6px">');
-        h.push('<span>'+g.total.toLocaleString('fr-FR')+' pts</span>');
-        h.push('<span>'+g.rounds.length+' manches</span>');
+        h.push('<span>'+g.total.toLocaleString(GC_LOCALE)+' pts</span>');
+        h.push('<span>'+T('roundsN',{n:g.rounds.length})+'</span>');
         h.push('</div>');
         // Mini liste des lieux
         if (g.rounds && g.rounds.length) {
           h.push('<div style="font-size:11px;color:#4b5563">');
           g.rounds.forEach(function(r) {
-            var dist = r.distM != null ? (r.distM < 1000 ? r.distM+'m' : Math.round(r.distM/1000)+'km') : 'rat\u00e9';
+            var dist = r.distM != null ? (r.distM < 1000 ? r.distM+'m' : Math.round(r.distM/1000)+'km') : T('missed');
             h.push('<span style="margin-right:8px">'+r.name.split('\u2014')[0].trim()+' ('+dist+')</span>');
           });
           h.push('</div>');
@@ -232,18 +232,18 @@ function showHistory() {
       }
       // Afficher les parties No-Zoom
       if(gamesNozoom.length > 0){
-        h.push('<div style="font-size:11px;color:#f97316;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;margin-top:4px">Mode No-Zoom</div>');
+        h.push('<div style="font-size:11px;color:#f97316;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;margin-top:4px">'+T('modeNozoom')+'</div>');
         h.push('<div class="ocard" style="max-height:200px;overflow-y:auto;width:100%;max-width:420px">');
         gamesNozoom.forEach(function(g) {
           var date = g.createdAt ? new Date(g.createdAt.seconds * 1000) : new Date();
-          var dateStr = date.toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
+          var dateStr = date.toLocaleDateString(GC_LOCALE, {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
           var barColor = g.pct >= 80 ? '#22c55e' : g.pct >= 50 ? '#fbbf24' : '#f97316';
           h.push('<div style="padding:10px 0;border-bottom:1px solid #1e2d45">');
           h.push('<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">');
           h.push('<span style="font-size:12px;color:#6b7280">'+dateStr+'</span>');
           h.push('<span style="font-size:14px;font-weight:700;color:'+barColor+'">'+g.pct+'%</span>');
           h.push('</div>');
-          h.push('<span style="font-size:12px;color:#94a3b8">'+g.total.toLocaleString('fr-FR')+' pts</span>');
+          h.push('<span style="font-size:12px;color:#94a3b8">'+g.total.toLocaleString(GC_LOCALE)+' pts</span>');
           h.push('</div>');
         });
         h.push('</div>');
@@ -254,8 +254,8 @@ function showHistory() {
         h.push('<div class="ocard" style="max-height:200px;overflow-y:auto;width:100%;max-width:420px">');
         gamesPerf.forEach(function(g) {
           var date = g.createdAt ? new Date(g.createdAt.seconds * 1000) : new Date();
-          var dateStr = date.toLocaleDateString('fr-FR', {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
-          var _modeMap={'tout-niveaux':'Tout niveaux','expert':'Expert','difficile':'Difficile','moyen':'Moyen','facile':'Facile'};
+          var dateStr = date.toLocaleDateString(GC_LOCALE, {day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit'});
+          var _modeMap={'tout-niveaux':T('lvlAll'),'expert':T('lvlExpert'),'difficile':T('lvlHard'),'moyen':T('lvlMedium'),'facile':T('lvlEasy'),'tres-facile':T('lvlVeryEasy')};
           var _lvlKey=(g.mode||'').replace('perfection-','').replace('nozoom-','');
           var barColor = g.pct >= 80 ? '#22c55e' : g.pct >= 50 ? '#fbbf24' : '#f97316';
           h.push('<div style="padding:10px 0;border-bottom:1px solid #1e2d45">');
@@ -263,7 +263,7 @@ function showHistory() {
           h.push('<span style="font-size:12px;color:#6b7280">'+dateStr+' \u00b7 '+(_modeMap[_lvlKey]||_lvlKey)+'</span>');
           h.push('<span style="font-size:14px;font-weight:700;color:'+barColor+'">'+g.pct+'%</span>');
           h.push('</div>');
-          h.push('<span style="font-size:12px;color:#94a3b8">'+g.total.toLocaleString('fr-FR')+' pts \u00b7 '+g.rounds.length+' manches</span>');
+          h.push('<span style="font-size:12px;color:#94a3b8">'+g.total.toLocaleString(GC_LOCALE)+' pts \u00b7 '+T('roundsN',{n:g.rounds.length})+'</span>');
           h.push('</div>');
         });
         h.push('</div>');
@@ -273,11 +273,11 @@ function showHistory() {
     h.push('<div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;justify-content:center">');
     h.push('<div style="display:flex;gap:10px;justify-content:center">');
     h.push('<div style="margin-top:24px;padding-top:16px;border-top:1px solid #1e2d45;width:100%;max-width:460px">');
-    h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Zone de danger</div>');
-    h.push('<button onclick="confirmDeleteAccount()" style="padding:8px 16px;border-radius:8px;border:1px solid #ef4444;background:transparent;color:#ef4444;font-size:13px;cursor:pointer;font-weight:600">Supprimer mon compte et mes donn&#233;es</button>');
-    h.push('<div style="font-size:11px;color:#6b7280;margin-top:6px">Supprime d&#233;finitivement votre compte, vos parties et vos scores. Irr&#233;versible.</div>');
+    h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">'+T('dangerZone')+'</div>');
+    h.push('<button onclick="confirmDeleteAccount()" style="padding:8px 16px;border-radius:8px;border:1px solid #ef4444;background:transparent;color:#ef4444;font-size:13px;cursor:pointer;font-weight:600">'+T('deleteMyAccount')+'</button>');
+    h.push('<div style="font-size:11px;color:#6b7280;margin-top:6px">'+T('deleteWarn')+'</div>');
     h.push('</div>');
-    h.push('<button class="btn bg" onclick="window.closeHistory()" style="width:auto;padding:10px 20px">&#8592; Retour</button>');
+    h.push('<button class="btn bg" onclick="window.closeHistory()" style="width:auto;padding:10px 20px">'+T('back')+'</button>');
     h.push('</div>');
     h.push('</div>');
 
@@ -342,11 +342,11 @@ function showLeaderboard() {
     {key:'perfection',label:'Perfection', color:'#22c55e'}
   ];
   var LEVELS = [
-    {key:'tout-niveaux', label:'Tout niveaux'},
-    {key:'expert',       label:'Expert'},
-    {key:'difficile',    label:'Difficile'},
-    {key:'moyen',        label:'Moyen'},
-    {key:'facile',       label:'Facile'}
+    {key:'tout-niveaux', label:T('lvlAll')},
+    {key:'expert',       label:T('lvlExpert')},
+    {key:'difficile',    label:T('lvlHard')},
+    {key:'moyen',        label:T('lvlMedium')},
+    {key:'facile',       label:T('lvlEasy')}
   ];
 
   var currentGameMode = 'normal';
@@ -360,7 +360,7 @@ function showLeaderboard() {
 
   function render(gm, lvl, entries) {
     var h = [];
-    h.push('<div class="otitle" style="font-size:26px">CLASSEMENT</div>');
+    h.push('<div class="otitle" style="font-size:26px">'+T('lbTitle')+'</div>');
 
     // Onglets mode jeu
     h.push('<div style="display:flex;gap:5px;margin-bottom:8px;flex-wrap:wrap;justify-content:center">');
@@ -379,7 +379,7 @@ function showLeaderboard() {
     h.push('</div>');
 
     if (entries.length === 0) {
-      h.push('<div class="osub" style="margin:16px 0">Aucune partie pour ce mode.</div>');
+      h.push('<div class="osub" style="margin:16px 0">'+T('noGamesMode')+'</div>');
     } else {
       h.push('<div class="ocard" style="max-height:340px;overflow-y:auto;width:100%;max-width:460px;padding:8px 0">');
       entries.forEach(function(g, i) {
@@ -391,13 +391,13 @@ function showLeaderboard() {
         h.push('<span style="font-size:16px;min-width:28px;text-align:center">' + medal + '</span>');
         if (g.photoURL) h.push('<img src="' + g.photoURL + '" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0">');
         else h.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;flex-shrink:0"></div>');
-        h.push('<span style="flex:1;font-size:13px;color:' + (isMe ? '#f97316' : '#e2e8f0') + ';font-weight:' + (isMe ? '700' : '400') + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + escH(g.displayName || 'Joueur') + '</span>');
-        h.push('<div style="text-align:right"><div style="font-size:15px;font-weight:700;color:' + barColor + '">' + (g.total || 0).toLocaleString('fr-FR') + ' pts</div>');
+        h.push('<span style="flex:1;font-size:13px;color:' + (isMe ? '#f97316' : '#e2e8f0') + ';font-weight:' + (isMe ? '700' : '400') + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + escH(g.displayName || T('player')) + '</span>');
+        h.push('<div style="text-align:right"><div style="font-size:15px;font-weight:700;color:' + barColor + '">' + (g.total || 0).toLocaleString(GC_LOCALE) + ' pts</div>');
         h.push('<div style="font-size:11px;color:#6b7280">' + (g.pct || 0) + '%</div></div></div>');
       });
       h.push('</div>');
     }
-    h.push('<button class="btn bg" onclick="window.closeHistory()" style="width:auto;padding:10px 20px;margin-top:8px">&#8592; Retour</button>');
+    h.push('<button class="btn bg" onclick="window.closeHistory()" style="width:auto;padding:10px 20px;margin-top:8px">'+T('back')+'</button>');
     ov.innerHTML = h.join('');
     ov.classList.remove('h');
   }
@@ -405,7 +405,7 @@ function showLeaderboard() {
   window._showLB = function(gm, lvl) {
     currentGameMode = gm;
     currentLevel    = lvl;
-    ov.innerHTML = '<div class="otitle" style="font-size:26px">Chargement&#8230;</div>';
+    ov.innerHTML = '<div class="otitle" style="font-size:26px">'+T('lbLoading')+'</div>';
     ov.classList.remove('h');
     var modeFilter = getModeFilter(gm, lvl);
     loadLeaderboard(modeFilter, function(entries) { render(gm, lvl, entries); });
@@ -421,7 +421,7 @@ function saveDailyScore(level, total, pct) {
   var docId = currentUser.uid + '_' + dateStr + '_' + level;
   setDoc(doc(fbDb,'daily_scores', docId), {
     uid: currentUser.uid,
-    displayName: currentUser.displayName || 'Joueur',
+    displayName: currentUser.displayName || T('player'),
     photoURL: currentUser.photoURL || '',
     total: total, pct: pct, level: level, date: dateStr,
     createdAt: serverTimestamp()
@@ -444,15 +444,15 @@ function showDailyLB() {
   window._prevOverlayHTML = ov.innerHTML;
   window._prevOverlayHidden = ov.classList.contains('h');
   var LVLS = [
-    {i:0, label:'Expert', color:'#ef4444'},
-    {i:1, label:'Difficile', color:'#f97316'},
-    {i:2, label:'Moyen', color:'#eab308'},
-    {i:3, label:'Facile', color:'#22c55e'}
+    {i:0, label:T('lvlExpert'), color:'#ef4444'},
+    {i:1, label:T('lvlHard'), color:'#f97316'},
+    {i:2, label:T('lvlMedium'), color:'#eab308'},
+    {i:3, label:T('lvlEasy'), color:'#22c55e'}
   ];
   function render(level, entries) {
     var dateStr = typeof getDailyDateFR==='function' ? getDailyDateFR() : '';
     var h = [];
-    h.push('<div class="otitle" style="font-size:26px">CLASSEMENT DU JOUR</div>');
+    h.push('<div class="otitle" style="font-size:26px">'+T('lbDailyTitle')+'</div>');
     h.push('<div style="font-size:11px;color:#6b7280;margin-bottom:8px">' + dateStr + '</div>');
     h.push('<div style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:10px">');
     LVLS.forEach(function(lv) {
@@ -461,7 +461,7 @@ function showDailyLB() {
     });
     h.push('</div>');
     if (entries.length === 0) {
-      h.push('<div class="osub" style="margin:16px 0">Aucune partie aujourd&#39;hui.</div>');
+      h.push('<div class="osub" style="margin:16px 0">'+T('noGamesToday')+'</div>');
     } else {
       h.push('<div class="ocard" style="max-height:340px;overflow-y:auto;width:100%;max-width:460px;padding:8px 0">');
       entries.forEach(function(g, i) {
@@ -473,17 +473,17 @@ function showDailyLB() {
         h.push('<span style="font-size:16px;min-width:28px;text-align:center">' + medal + '</span>');
         if (g.photoURL) h.push('<img src="' + g.photoURL + '" style="width:28px;height:28px;border-radius:50%;object-fit:cover;flex-shrink:0">');
         else h.push('<div style="width:28px;height:28px;border-radius:50%;background:#1e2d45;flex-shrink:0"></div>');
-        h.push('<span style="flex:1;font-size:13px;color:' + (me ? '#f97316' : '#e2e8f0') + ';font-weight:' + (me ? '700' : '400') + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + escH(g.displayName || 'Joueur') + '</span>');
-        h.push('<div style="text-align:right"><div style="font-size:15px;font-weight:700;color:' + bc + '">' + (g.total || 0).toLocaleString('fr-FR') + ' pts</div><div style="font-size:11px;color:#6b7280">' + (g.pct || 0) + '%</div></div></div>');
+        h.push('<span style="flex:1;font-size:13px;color:' + (me ? '#f97316' : '#e2e8f0') + ';font-weight:' + (me ? '700' : '400') + ';overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + escH(g.displayName || T('player')) + '</span>');
+        h.push('<div style="text-align:right"><div style="font-size:15px;font-weight:700;color:' + bc + '">' + (g.total || 0).toLocaleString(GC_LOCALE) + ' pts</div><div style="font-size:11px;color:#6b7280">' + (g.pct || 0) + '%</div></div></div>');
       });
       h.push('</div>');
     }
-    h.push('<button class="btn bg" onclick="window.closeHistory()" style="width:auto;padding:10px 20px;margin-top:8px">&#8592; Retour</button>');
+    h.push('<button class="btn bg" onclick="window.closeHistory()" style="width:auto;padding:10px 20px;margin-top:8px">'+T('back')+'</button>');
     ov.innerHTML = h.join('');
     ov.classList.remove('h');
   }
   window._showDailyLbLevel = function(level) {
-    ov.innerHTML = '<div class="otitle" style="font-size:26px">Chargement&#8230;</div>';
+    ov.innerHTML = '<div class="otitle" style="font-size:26px">'+T('lbLoading')+'</div>';
     ov.classList.remove('h');
     loadDailyLeaderboard(level, function(entries) { render(level, entries); });
   };
@@ -502,45 +502,45 @@ function showPremiumOverlay(featureName) {
   window._prevOverlayHidden = ov.classList.contains('h');
   var h = [];
   if(!currentUser) {
-    h.push('<div class="otitle" style="font-size:26px;color:#fbbf24">Connexion requise</div>');
-    h.push('<div style="font-size:15px;color:#e8eaf2;margin-bottom:6px;text-align:center;max-width:360px;text-shadow:0 1px 3px rgba(0,0,0,.95)">Connecte-toi pour acc&#233;der &#224; <strong style="color:#e2e8f0">'+featureName+'</strong>.</div>');
-    h.push('<button onclick="window.fbSignIn()" style="padding:10px 28px;border-radius:8px;border:none;background:#f97316;color:#fff;font-weight:700;font-size:14px;cursor:pointer">Se connecter avec Google</button>');
-    h.push('<button onclick="window.closeHistory()" style="margin-top:4px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#cbd5e1;cursor:pointer;font-size:13px;display:block">&#8592; Retour</button>');
+    h.push('<div class="otitle" style="font-size:26px;color:#fbbf24">'+T('loginRequired')+'</div>');
+    h.push('<div style="font-size:15px;color:#e8eaf2;margin-bottom:6px;text-align:center;max-width:360px;text-shadow:0 1px 3px rgba(0,0,0,.95)">'+T('loginMsg',{feature:'<strong style="color:#e2e8f0">'+featureName+'</strong>'})+'</div>');
+    h.push('<button onclick="window.fbSignIn()" style="padding:10px 28px;border-radius:8px;border:none;background:#f97316;color:#fff;font-weight:700;font-size:14px;cursor:pointer">'+T('loginBtn')+'</button>');
+    h.push('<button onclick="window.closeHistory()" style="margin-top:4px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#cbd5e1;cursor:pointer;font-size:13px;display:block">'+T('back')+'</button>');
     ov.innerHTML=h.join(''); ov.classList.remove('h'); return;
   }
-  h.push('<button onclick="window.closeHistory()" style="align-self:flex-start;margin:0 0 10px;padding:6px 16px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer;font-size:13px">&#8592; Retour</button>');
+  h.push('<button onclick="window.closeHistory()" style="align-self:flex-start;margin:0 0 10px;padding:6px 16px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#94a3b8;cursor:pointer;font-size:13px">'+T('back')+'</button>');
   h.push('<div class="otitle" style="font-size:26px;color:#fbbf24">&#11088; Premium</div>');
-  h.push('<div style="font-size:16px;color:#e8eaf2;margin-bottom:10px;text-align:center;max-width:360px;text-shadow:0 1px 3px rgba(0,0,0,.95)">D&#233;bloquez <strong style="color:#e2e8f0">'+featureName+'</strong> et tous les modes avanc&#233;s.</div>');
+  h.push('<div style="font-size:16px;color:#e8eaf2;margin-bottom:10px;text-align:center;max-width:360px;text-shadow:0 1px 3px rgba(0,0,0,.95)">'+T('unlockFeature',{feature:'<strong style="color:#e2e8f0">'+featureName+'</strong>'})+'</div>');
   h.push('<div style="background:#0d1120;border:1px solid #1e2d45;border-radius:12px;padding:11px;width:100%;max-width:340px;margin-bottom:10px">');
-  h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">Inclus dans Premium</div>');
-  [['&#10024;','Acc&#232;s Premium &#224; vie, paiement unique'],['&#128683;','Sans publicit&#233;'],['&#128274;','Mode No-Zoom'],['&#11088;','Mode Perfection'],['&#127760;','Mode Multijoueur'],['&#9876;&#65039;','Mode &#201;v&#233;nements historiques'],['&#9989;','Soutien ind&#233;pendant']].forEach(function(f){
+  h.push('<div style="font-size:11px;color:#6b7280;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">'+T('includedPremium')+'</div>');
+  [['&#10024;',T('featLifetime')],['&#128683;',T('featNoAds')],['&#128274;',T('featNozoom')],['&#11088;',T('featPerf')],['&#127760;',T('featMp')],['&#9876;&#65039;',T('featEvents')],['&#9989;',T('featSupport')]].forEach(function(f){
     h.push('<div style="display:flex;align-items:center;gap:8px;padding:5px 0;font-size:13px;color:#e2e8f0"><span>'+f[0]+'</span><span>'+f[1]+'</span></div>');
   });
   h.push('</div>');
   h.push('<div style="width:100%;max-width:340px;margin-bottom:6px">');
-  h.push('<div style="font-size:13.5px;color:#e2e8f0;margin-bottom:6px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.95)">Prix libre &#8212; choisis ton montant (min. 2&#8364;)</div>');
+  h.push('<div style="font-size:13.5px;color:#e2e8f0;margin-bottom:6px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.95)">'+T('freePrice')+'</div>');
   h.push('<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;margin-bottom:6px">');
   [2,5,10,20].forEach(function(amt){
     h.push('<button data-amt="'+amt+'" onclick="window.selectAmount(parseInt(this.dataset.amt))" id="amt-btn-'+amt+'" style="padding:8px;border-radius:7px;border:2px solid #1e2d45;background:#0d1120;color:#e2e8f0;font-size:13px;font-weight:600;cursor:pointer">'+amt+'&#8364;</button>');
   });
   h.push('</div>');
-  h.push('<input id="custom-amount" type="number" min="2" step="1" placeholder="Montant (&#8364;)" style="width:100%;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 12px;color:#e2e8f0;font-size:13px">');
+  h.push('<input id="custom-amount" type="number" min="2" step="1" placeholder="'+T('amountPh')+'" style="width:100%;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 12px;color:#e2e8f0;font-size:13px">');
   h.push('</div>');
-  h.push('<button onclick="window.initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">D&#233;bloquer Premium &#8594;</button>');
+  h.push('<button onclick="window.initiatePremiumPayment()" id="pay-btn" style="width:100%;max-width:340px;padding:12px;border-radius:9px;border:none;background:#fbbf24;color:#111;font-weight:700;font-size:15px;cursor:pointer">'+T('unlockPremium')+'</button>');
   h.push('<div id="pay-msg" style="font-size:12.5px;color:#f87171;margin-top:4px;text-align:center;min-height:16px;font-weight:600"></div>');
-  h.push('<div style="font-size:12.5px;color:#cbd5e1;margin-top:4px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.95)">Paiement s&#233;curis&#233; via Stripe</div>');
-  h.push('<div style="font-size:11.5px;color:#b7c0cf;margin-top:4px;text-align:center;max-width:360px;line-height:1.55;text-shadow:0 1px 2px rgba(0,0,0,.95)">Paiement unique &#8212; acc&#232;s d&#233;finitif. En validant, tu demandes l&#8217;acc&#232;s imm&#233;diat et renonces &#224; ton droit de r&#233;tractation de 14 jours.</div>');
+  h.push('<div style="font-size:12.5px;color:#cbd5e1;margin-top:4px;text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.95)">'+T('securePay')+'</div>');
+  h.push('<div style="font-size:11.5px;color:#b7c0cf;margin-top:4px;text-align:center;max-width:360px;line-height:1.55;text-shadow:0 1px 2px rgba(0,0,0,.95)">'+T('payTerms')+'</div>');
   h.push('<div style="width:100%;max-width:340px;margin-top:4px;border-top:1px solid #1e2d45;padding-top:14px">');
-  h.push('<div style="font-size:13px;color:#e2e8f0;text-align:center;margin-bottom:6px;text-shadow:0 1px 3px rgba(0,0,0,.95)">Vous avez un code testeur ?</div>');
+  h.push('<div style="font-size:13px;color:#e2e8f0;text-align:center;margin-bottom:6px;text-shadow:0 1px 3px rgba(0,0,0,.95)">'+T('testerCode')+'</div>');
   h.push('<div style="display:flex;gap:6px">');
   h.push('<input id="redeem-input" placeholder="CODE-XXXX" maxlength="12" style="flex:1;background:#1a2238;border:1px solid #2d3f5e;border-radius:7px;padding:8px 10px;color:#e2e8f0;font-size:13px;letter-spacing:2px;text-transform:uppercase">');
-  h.push('<button onclick="window.redeemCode()" style="padding:8px 14px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-size:12px;font-weight:700;cursor:pointer">Activer</button>');
+  h.push('<button onclick="window.redeemCode()" style="padding:8px 14px;border-radius:7px;border:none;background:#22c55e;color:#fff;font-size:12px;font-weight:700;cursor:pointer">'+T('activate')+'</button>');
   h.push('</div>');
   h.push('<div id="redeem-msg" style="font-size:12px;margin-top:4px;text-align:center;min-height:18px"></div>');
   h.push('</div>');
   h.push('<div style="display:flex;gap:12px;margin-top:4px">');
-  h.push('<button onclick="window.closeHistory()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#cbd5e1;cursor:pointer;font-size:13px">&#8592; Retour</button>');
-  h.push('<a href="https://gaelbodevin-bit.github.io/geoculture/legal.html" style="padding:8px 12px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#cbd5e1;cursor:pointer;font-size:13px;text-decoration:none">Mentions l&#233;gales</a>');
+  h.push('<button onclick="window.closeHistory()" style="padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#cbd5e1;cursor:pointer;font-size:13px">'+T('back')+'</button>');
+  h.push('<a href="https://gaelbodevin-bit.github.io/geoculture/legal.html" style="padding:8px 12px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#cbd5e1;cursor:pointer;font-size:13px;text-decoration:none">'+T('legalLink')+'</a>');
   h.push('</div>');
   ov.innerHTML=h.join(''); ov.classList.remove('h');
   window._selectedAmount=5; selectAmount(5);
@@ -559,13 +559,13 @@ function selectAmount(amt) {
 }
 
 function redeemCode() {
-  if (!currentUser) { if(typeof showToast==='function') showToast('Connecte-toi d\'abord !'); return; }
+  if (!currentUser) { if(typeof showToast==='function') showToast(T('loginFirst')); return; }
   var input = document.getElementById('redeem-input');
   var msg = document.getElementById('redeem-msg');
   if (!input || !msg) return;
   var code = input.value.trim().toUpperCase();
-  if (code.length < 4) { msg.style.color='#ef4444'; msg.textContent='Code invalide.'; return; }
-  msg.style.color='#94a3b8'; msg.textContent='V\u00e9rification\u2026';
+  if (code.length < 4) { msg.style.color='#ef4444'; msg.textContent=T('codeInvalidDot'); return; }
+  msg.style.color='#94a3b8'; msg.textContent=T('verifying');
   // Appel HTTP direct (Bearer token) — même modèle que createCheckoutSession qui fonctionne.
   currentUser.getIdToken(true).then(function(token){
     return fetch('https://us-central1-geo-culture-73453.cloudfunctions.net/redeemCode',{
@@ -580,14 +580,14 @@ function redeemCode() {
       if(window.gcTrack) window.gcTrack('code_testeur_utilise');
       currentUserPremium = true; window.isPremium = true; if(window.gcUpdateAds) window.gcUpdateAds();
       window.isPremium = true;
-      msg.style.color='#22c55e'; msg.textContent='\u2713 Premium activ\u00e9 ! Profitez bien.';
+      msg.style.color='#22c55e'; msg.textContent=T('premiumActivated');
       setTimeout(function() { if(typeof showMenu==='function') showMenu(); }, 1200);
     } else {
-      msg.style.color='#ef4444'; msg.textContent = (r.d && r.d.error) ? r.d.error : 'Code invalide.';
+      msg.style.color='#ef4444'; msg.textContent = (r.d && r.d.error) ? (/introuvable/i.test(r.d.error) ? T('codeNotFound') : /utilis/i.test(r.d.error) ? T('codeUsed') : (GC_LANG==='fr' ? r.d.error : T('codeInvalidDot'))) : T('codeInvalidDot');
     }
   }).catch(function(e) {
     
-    msg.style.color='#ef4444'; msg.textContent = 'Erreur r\u00e9seau, r\u00e9essaie.';
+    msg.style.color='#ef4444'; msg.textContent = T('networkError');
   });
 }
 
@@ -595,11 +595,11 @@ function initiatePremiumPayment() {
   if(!currentUser){ if(typeof fbSignIn==='function') fbSignIn(); return; }
   var inp=document.getElementById('custom-amount');
   var amount=inp&&inp.value?parseFloat(inp.value):(window._selectedAmount||5);
-  if(isNaN(amount)||amount<2){ var pm=document.getElementById('pay-msg'); if(pm) pm.textContent='Le montant minimum est de 2€'; if(typeof showToast==='function') showToast('Le montant minimum est de 2€'); return; }
-  if(amount>500){ var pm2=document.getElementById('pay-msg'); if(pm2) pm2.textContent='Le montant maximum est de 500€'; if(typeof showToast==='function') showToast('Le montant maximum est de 500€'); return; }
+  if(isNaN(amount)||amount<2){ var pm=document.getElementById('pay-msg'); if(pm) pm.textContent=T('minAmount'); if(typeof showToast==='function') showToast(T('minAmount')); return; }
+  if(amount>500){ var pm2=document.getElementById('pay-msg'); if(pm2) pm2.textContent=T('maxAmount'); if(typeof showToast==='function') showToast(T('maxAmount')); return; }
   var pmc=document.getElementById('pay-msg'); if(pmc) pmc.textContent='';
   var btn=document.getElementById('pay-btn');
-  if(btn){ btn.textContent='Redirection...'; btn.disabled=true; }
+  if(btn){ btn.textContent=T('redirecting'); btn.disabled=true; }
   currentUser.getIdToken(true).then(function(token){
     return fetch('https://us-central1-geo-culture-73453.cloudfunctions.net/createCheckoutSession',{
       method:'POST',
@@ -612,8 +612,8 @@ function initiatePremiumPayment() {
     else{ throw new Error((result&&result.error)?result.error:'URL manquante'); }
   }).catch(function(err){
     
-    var pme=document.getElementById('pay-msg'); if(pme) pme.textContent=err.message; if(typeof showToast==='function') showToast('Erreur: '+err.message);
-    if(btn){ btn.textContent='D\u00e9bloquer Premium →'; btn.disabled=false; }
+    var pme=document.getElementById('pay-msg'); if(pme) pme.textContent=err.message; if(typeof showToast==='function') showToast(T('mpError')+err.message);
+    if(btn){ btn.textContent=T('unlockPremium'); btn.disabled=false; }
   });
 }
 
@@ -624,11 +624,11 @@ function deleteMyAccount() {
 function confirmDeleteAccount() {
   var ov=document.getElementById('overlay');
   var h=[];
-  h.push('<div class="otitle" style="font-size:24px;color:#ef4444">&#9888; Supprimer le compte</div>');
-  h.push('<div style="font-size:14px;color:#94a3b8;margin:12px 0;text-align:center;max-width:380px;line-height:1.6">Cette action est <strong style="color:#ef4444">irr&#233;versible</strong>.<br>Toutes vos donn&#233;es seront supprim&#233;es&nbsp;:<br><span style="font-size:12px;color:#6b7280">compte, parties, scores, statut premium</span></div>');
+  h.push('<div class="otitle" style="font-size:24px;color:#ef4444">'+T('deleteAccountTitle')+'</div>');
+  h.push('<div style="font-size:14px;color:#94a3b8;margin:12px 0;text-align:center;max-width:380px;line-height:1.6">'+T('deleteIrrev',{x:'<strong style="color:#ef4444">'+T('irreversible')+'</strong>'})+'<br>'+T('deleteAllData')+'<br><span style="font-size:12px;color:#6b7280">'+T('deleteDataList')+'</span></div>');
   h.push('<div style="display:flex;gap:10px;margin-top:8px">');
-  h.push('<button onclick="doDeleteAccount()" style="padding:10px 20px;border-radius:8px;border:none;background:#ef4444;color:#fff;font-weight:700;font-size:14px;cursor:pointer">Oui, supprimer</button>');
-  h.push('<button onclick="window.closeHistory()" style="padding:10px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;font-size:14px;cursor:pointer">Annuler</button>');
+  h.push('<button onclick="doDeleteAccount()" style="padding:10px 20px;border-radius:8px;border:none;background:#ef4444;color:#fff;font-weight:700;font-size:14px;cursor:pointer">'+T('yesDelete')+'</button>');
+  h.push('<button onclick="window.closeHistory()" style="padding:10px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;font-size:14px;cursor:pointer">'+T('cancel')+'</button>');
   h.push('</div>');
   ov.innerHTML=h.join(''); ov.classList.remove('h');
 }
@@ -636,15 +636,15 @@ function confirmDeleteAccount() {
 function doDeleteAccount() {
   if(!currentUser) return;
   var ov=document.getElementById('overlay');
-  ov.innerHTML='<div class="otitle" style="font-size:22px;color:#ef4444">Suppression en cours&#8230;</div>';
+  ov.innerHTML='<div class="otitle" style="font-size:22px;color:#ef4444">'+T('deleting')+'</div>';
   ov.classList.remove('h');
   var deleteFn=httpsCallable(fbFunctions,'deleteAccount');
   deleteFn({}).then(function(){
-    ov.innerHTML='<div class="otitle" style="font-size:22px">Compte supprim&#233;</div><div style="color:#6b7280;font-size:14px;margin-top:8px">Vos donn&#233;es ont &#233;t&#233; effac&#233;es. Au revoir&nbsp;!</div>';
+    ov.innerHTML='<div class="otitle" style="font-size:22px">'+T('accountDeleted')+'</div><div style="color:#6b7280;font-size:14px;margin-top:8px">'+T('dataErased')+'</div>';
     setTimeout(function(){ window.location.reload(); },2500);
   }).catch(function(e){
     
-    ov.innerHTML='<div class="otitle" style="font-size:22px;color:#ef4444">Erreur</div><div style="color:#94a3b8;font-size:14px;margin-top:8px">'+e.message+'</div><button onclick="window.closeHistory()" style="margin-top:16px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer">Fermer</button>';
+    ov.innerHTML='<div class="otitle" style="font-size:22px;color:#ef4444">'+T('error')+'</div><div style="color:#94a3b8;font-size:14px;margin-top:8px">'+e.message+'</div><button onclick="window.closeHistory()" style="margin-top:16px;padding:8px 20px;border-radius:8px;border:1px solid #2d3f5e;background:transparent;color:#6b7280;cursor:pointer">'+T('close')+'</button>';
   });
 }
 
