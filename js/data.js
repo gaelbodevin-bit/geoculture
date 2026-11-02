@@ -35,7 +35,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Basilique inachevée la plus visitée d'Europe, en Catalogne, Barcelone"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Sagrada Família à Barcelone, Espagne"}
   ]},
-{name:"Alhambra — Grenade, Espagne",lat:37.1761,lng:-3.5881,desc:"Ce palais nasride renferme l'une des plus belles décorations islamiques du monde. Ses jardins de l'Generalife, alimentés par un système hydraulique vieux de 700 ans, restent en fleur toute l'année.",photo:"photos/_a_remplacer/alhambra.jpg",hints:[
+{name:"Alhambra — Grenade, Espagne",lat:37.1761,lng:-3.5881,desc:"Ce palais nasride renferme l'une des plus belles décorations islamiques du monde. Ses jardins de l'Generalife, alimentés par un système hydraulique vieux de 700 ans, restent en fleur toute l'année.",photo:"photos/alhambra.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Palais et forteresse nasride du XIVe siècle sur une colline aux pieds d'une sierra enneigée"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Colline surplombant le quartier Albaicín, face à la Sierra Nevada, Andalousie"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Chef-d'œuvre de l'architecture mauresque, le plus visité d'Espagne, Grenade"},
@@ -131,7 +131,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand palais du monde, demeure des empereurs pendant cinq siècles, Pékin"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La Cité Interdite à Pékin, Chine"}
   ]},
-{name:"Temple d'or (Harmandir Sahib) — Amritsar, Inde",lat:31.62,lng:74.8765,desc:"Le Temple d'Or recouvre 750 kg de feuilles d'or pur. Les Sikhs cuisinent et servent gratuitement 100 000 repas par jour à tous les visiteurs sans distinction de religion, de caste ou de nationalité.",photo:"photos/_a_remplacer/temple_d_or_harmandir_sahib.jpg",hints:[
+{name:"Temple d'or (Harmandir Sahib) — Amritsar, Inde",lat:31.62,lng:74.8765,desc:"Le Temple d'Or recouvre 750 kg de feuilles d'or pur. Les Sikhs cuisinent et servent gratuitement 100 000 repas par jour à tous les visiteurs sans distinction de religion, de caste ou de nationalité.",photo:"photos/temple_d_or_harmandir_sahib.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sanctuaire recouvert d'or au milieu d'un bassin sacré, fondé en 1604 par un maître spirituel"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Temple à coupole dorée au centre d'un bassin, ville sainte du Pendjab, à 30 km d'une frontière tendue"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lieu le plus sacré du sikhisme, coupole dorée reflétée dans l'eau, Amritsar"},
@@ -437,7 +437,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Ruines du palais de Tamerlan, sa ville natale, Chakhrisabz"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Palais de Shakhrisabz en Ouzbékistan"}
   ]},
-{name:"Mosquée Sultan Ahmed — Istanbul, Turquie",lat:41.0054,lng:28.9768,desc:"La Mosquée Bleue, construite de 1609 à 1616, est la seule mosquée d'Istanbul à posséder six minarets — une audace qui scandalisa la Mecque, qui n'en avait alors que quatre. L'intérieur est revêtu de 20 000 carreaux d'Iznik bleus, dont chacun fut peint à la main.",photo:"photos/_a_remplacer/mosquee_sultan_ahmed.jpg",hints:[
+{name:"Mosquée Sultan Ahmed — Istanbul, Turquie",lat:41.0054,lng:28.9768,desc:"La Mosquée Bleue, construite de 1609 à 1616, est la seule mosquée d'Istanbul à posséder six minarets — une audace qui scandalisa la Mecque, qui n'en avait alors que quatre. L'intérieur est revêtu de 20 000 carreaux d'Iznik bleus, dont chacun fut peint à la main.",photo:"photos/mosquee_sultan_ahmed.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Mosquée impériale de 1609-1616 aux 6 minarets — scandale de l'époque — faisant face à une ancienne basilique"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande mosquée à six minarets, péninsule historique, face à un ancien édifice byzantin"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Mosquée Bleue aux six minarets, face à Sainte-Sophie, Istanbul"},
@@ -455,7 +455,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Tours jumelles reliées par un observatoire suspendu, Osaka"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Umeda Sky Building à Osaka, Japon"}
   ]},
-{name:"Temple de Confucius — Qufu, Chine",lat:35.5967,lng:116.9839,desc:"Le temple de Confucius à Qufu est le plus grand complexe confucéen du monde avec 466 bâtiments. Construit en -478, un an après la mort du philosophe, il fut agrandi par chaque dynasties chinoise pendant 2 500 ans. Les descendants directs de Confucius y vivent encore aujourd'hui.",photo:"photos/_a_remplacer/temple_de_confucius.jpg",hints:[
+{name:"Temple de Confucius — Qufu, Chine",lat:35.5967,lng:116.9839,desc:"Le temple de Confucius à Qufu est le plus grand complexe confucéen du monde avec 466 bâtiments. Construit en -478, un an après la mort du philosophe, il fut agrandi par chaque dynasties chinoise pendant 2 500 ans. Les descendants directs de Confucius y vivent encore aujourd'hui.",photo:"photos/temple_de_confucius.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vaste temple de 466 salles dédié à un philosophe, érigé dès 478 av. J.-C. dans sa ville natale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grand temple confucéen dans la ville natale du sage, province du Shandong"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand temple dédié à Confucius, sa ville natale, Qufu"},
@@ -521,7 +521,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Plus grand temple de l'Égypte antique, Louxor"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le temple de Karnak à Louxor, Égypte"}
   ]},
-{name:"Cap de Bonne-Espérance — Afrique du Sud",lat:-34.3568,lng:18.4702,desc:"Le cap de Bonne-Espérance ne marque pas le point le plus méridional d'Afrique — c'est le cap Agulhas, à 150 km à l'est. Mais c'est là que les vents d'ouest et les courants marins se rejoignent, créant des conditions de navigation particulièrement dangereuses. Bartolomeu Dias le doubla en 1488, ouvrant la route des Indes.",photo:"photos/_a_remplacer/cap_de_bonne_esperance.jpg",hints:[
+{name:"Cap de Bonne-Espérance — Afrique du Sud",lat:-34.3568,lng:18.4702,desc:"Le cap de Bonne-Espérance ne marque pas le point le plus méridional d'Afrique — c'est le cap Agulhas, à 150 km à l'est. Mais c'est là que les vents d'ouest et les courants marins se rejoignent, créant des conditions de navigation particulièrement dangereuses. Bartolomeu Dias le doubla en 1488, ouvrant la route des Indes.",photo:"photos/cap_de_bonne_esperance.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Promontoire rocheux battu par les vents, contourné en 1488, à la rencontre de deux océans"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Cap rocheux à l'extrémité d'une péninsule, parc national, sud-ouest d'un pays d'Afrique australe"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Cap légendaire à la pointe de la péninsule du Cap, près du Cap"},
@@ -713,7 +713,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Vieux pont ottoman, symbole de réconciliation, Mostar"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Pont de Mostar en Bosnie-Herzégovine"}
   ]},
-{name:"Place Venceslas — Prague, Rép. Tchèque",lat:50.0813,lng:14.4281,desc:"La place Venceslas de Prague n'est pas une place mais un boulevard de 750 mètres. C'est le centre politique de la Bohême depuis le Moyen Âge. Jan Palach s'y immola par le feu en 1969 pour protester contre l'invasion soviétique. En 1989, des centaines de milliers de personnes y manifestèrent lors de la Révolution de velours.",photo:"photos/_a_remplacer/place_wenceslas.jpg",hints:[
+{name:"Place Venceslas — Prague, Rép. Tchèque",lat:50.0813,lng:14.4281,desc:"La place Venceslas de Prague n'est pas une place mais un boulevard de 750 mètres. C'est le centre politique de la Bohême depuis le Moyen Âge. Jan Palach s'y immola par le feu en 1969 pour protester contre l'invasion soviétique. En 1989, des centaines de milliers de personnes y manifestèrent lors de la Révolution de velours.",photo:"photos/place_wenceslas.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Long boulevard-place de 750 m, théâtre des révolutions de 1848, 1968 et de la chute pacifique de 1989"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Grande place-boulevard de la Nouvelle Ville, entre gare centrale et musée national, Bohême"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Place-boulevard de la Révolution de velours, Prague"},
@@ -869,7 +869,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Médina médiévale et plus vieille université du monde, Fès"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La médina de Fès, au Maroc"}
   ]},
-{name:"Château de Gorée — Sénégal (Fort d'Estrées)",lat:14.6685,lng:-17.3991,desc:"Le fort d'Estrées, sur l'île de Gorée, fut construit par les Français entre 1852 et 1856 pour défendre la rade de Dakar ; il abrite aujourd'hui le Musée historique du Sénégal. L'île, haut lieu de mémoire de la traite négrière, est connue pour sa Maison des Esclaves et sa « porte du voyage sans retour » ouverte sur l'Atlantique.",photo:"photos/_a_remplacer/chateau_de_goree.JPG",hints:[
+{name:"Château de Gorée — Sénégal (Fort d'Estrées)",lat:14.6685,lng:-17.3991,desc:"Le fort d'Estrées, sur l'île de Gorée, fut construit par les Français entre 1852 et 1856 pour défendre la rade de Dakar ; il abrite aujourd'hui le Musée historique du Sénégal. L'île, haut lieu de mémoire de la traite négrière, est connue pour sa Maison des Esclaves et sa « porte du voyage sans retour » ouverte sur l'Atlantique.",photo:"photos/chateau_de_goree.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Fort bâti par les Français au milieu du XIXe siècle, aujourd'hui musée d'histoire, sur une petite île chargée de mémoire"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Fort colonial sur une île-mémoire d'une baie ouest-africaine, à 3 km du continent"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Fort colonial devenu musée historique, île de Gorée, au large de Dakar"},
@@ -911,7 +911,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Capitale du Grand Nord aux aurores boréales, Territoires du Nord-Ouest"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Yellowknife, dans les Territoires du Nord-Ouest, Canada"}
   ]},
-{name:"Québec — Canada",lat:46.8139,lng:-71.208,desc:"La ville de Québec est la seule ville fortifiée au nord du Mexique en Amérique du Nord. Ses remparts du XVIIe siècle, longs de 4,6 km, sont encore parfaitement conservés. Le château Frontenac, hôtel le plus photographié au monde selon Guinness, domine le cap Diamant depuis 1893.",photo:"photos/_a_remplacer/quebec.jpg",hints:[
+{name:"Québec — Canada",lat:46.8139,lng:-71.208,desc:"La ville de Québec est la seule ville fortifiée au nord du Mexique en Amérique du Nord. Ses remparts du XVIIe siècle, longs de 4,6 km, sont encore parfaitement conservés. Le château Frontenac, hôtel le plus photographié au monde selon Guinness, domine le cap Diamant depuis 1893.",photo:"photos/quebec.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Hôtel-château inauguré en 1893 par une compagnie ferroviaire, dominant un fleuve depuis un cap fortifié"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ville haute fortifiée sur un cap dominant un grand fleuve, seule cité murée d'Amérique du Nord"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Château Frontenac dominant la ville fortifiée, Québec"},
@@ -1367,7 +1367,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Lac au reflet du mont Fuji et pagode, région de Yamanashi"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Lac de Kawaguchi au Japon"}
   ]},
-{name:"Shanghai — Chine (Bund)",lat:31.2397,lng:121.4898,desc:"Le Bund de Shanghai est un boulevard de 1,5 km bordé de 52 bâtiments Art Déco et néoclassiques construits dans les années 1930 par les concessions étrangères. Face à lui, de l'autre côté de la rivière Huangpu, se dressent les gratte-ciels ultramodernes de Pudong — un dialogue saisissant entre deux Shanghais.",photo:"photos/_a_remplacer/shanghai.jpg",hints:[
+{name:"Shanghai — Chine (Bund)",lat:31.2397,lng:121.4898,desc:"Le Bund de Shanghai est un boulevard de 1,5 km bordé de 52 bâtiments Art Déco et néoclassiques construits dans les années 1930 par les concessions étrangères. Face à lui, de l'autre côté de la rivière Huangpu, se dressent les gratte-ciels ultramodernes de Pudong — un dialogue saisissant entre deux Shanghais.",photo:"photos/shanghai.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Front de fleuve bordé de 1,5 km d'immeubles néoclassiques et Art déco des années 1920, face à une tour futuriste"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Promenade coloniale au bord d'un fleuve, face à un quartier de gratte-ciel ultramodernes"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Promenade coloniale face aux gratte-ciel du Pudong, plus grande ville de Chine, Shanghai"},
@@ -1925,7 +1925,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Grand portail shinto flottant, île de Miyajima, près d'Hiroshima"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le sanctuaire d'Itsukushima sur l'île de Miyajima, près d'Hiroshima, Japon"}
   ]},
-{name:"Hiroshima Peace Memorial — Japon",lat:34.3955,lng:132.4536,desc:"La bombe atomique d'Hiroshima n'a pas détruit le Dôme de Genbaku uniquement parce qu'elle explosa presque exactement au-dessus de lui. La déflagration verticale épargna le bâtiment qu'une onde horizontale aurait rasé. Il est maintenant symbole universel de paix.",photo:"photos/_a_remplacer/hiroshima_peace_memorial.jpg",hints:[
+{name:"Hiroshima Peace Memorial — Japon",lat:34.3955,lng:132.4536,desc:"La bombe atomique d'Hiroshima n'a pas détruit le Dôme de Genbaku uniquement parce qu'elle explosa presque exactement au-dessus de lui. La déflagration verticale épargna le bâtiment qu'une onde horizontale aurait rasé. Il est maintenant symbole universel de paix.",photo:"photos/hiroshima_peace_memorial.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Seul bâtiment resté debout à l'aplomb d'une explosion atomique du 6 août 1945, dôme éventré conservé"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Ruine-mémorial d'une bombe atomique au bord d'une rivière, grande ville de l'ouest de l'archipel"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Dôme de la bombe atomique, mémorial de la paix, Hiroshima"},
@@ -2291,7 +2291,7 @@ const ROUNDS=[
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Galeries karstiques visitées en train, refuge du protée aveugle, Slovénie"},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Grottes de Postojna en Slovénie"}
   ]},
-{name:"Vallée de la Soča — Slovénie",lat:46.34,lng:13.65,desc:"La Soča (Isonzo en italien) est une rivière aux eaux d\'un bleu-vert émeraude unique, prenant sa source dans les Alpes juliennes slovènes. Sa vallée fut le théâtre des batailles de l\'Isonzo (1915-1917) et est aujourd\'hui un paradis naturel réputé pour ses gorges et sports d\'eau vive.",photo:"photos/_a_remplacer/vallee_de_la_so_a.jpg",hints:[
+{name:"Vallée de la Soča — Slovénie",lat:46.34,lng:13.65,desc:"La Soča (Isonzo en italien) est une rivière aux eaux d\'un bleu-vert émeraude unique, prenant sa source dans les Alpes juliennes slovènes. Sa vallée fut le théâtre des batailles de l\'Isonzo (1915-1917) et est aujourd\'hui un paradis naturel réputé pour ses gorges et sports d\'eau vive.",photo:"photos/vallee_de_la_so_a.jpg",hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Rivière aux eaux émeraude, théâtre de terribles batailles de montagne de 1915-1917, source dans les Alpes"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Rivière émeraude à gorges, Alpes juliennes, à la frontière de deux pays d'Europe"},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Rivière émeraude des Alpes juliennes, Soča, Slovénie"},
@@ -3292,7 +3292,7 @@ const ROUNDS=[
   ]},
 {name:"Bambouseraie d'Arashiyama — Kyoto, Japon", lat:35.017, lng:135.671,
    desc:"Dans la bambouseraie d'Arashiyama, des tiges de 20 m filtrent une lumière verte et produisent, sous le vent, un craquement feutré classé parmi les « 100 paysages sonores du Japon » à préserver.",
-   photo:"photos/_a_remplacer/arashiyama.jpg",
+   photo:"photos/arashiyama.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Sentier serpentant entre des bambous géants dont le bruissement est classé paysage sonore, ouest de l'ancienne capitale"},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"Forêt de bambous géants près d'un temple classé, ouest d'une ancienne capitale impériale"},
