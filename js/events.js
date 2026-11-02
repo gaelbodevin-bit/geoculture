@@ -21,7 +21,7 @@ const EVENTS = [
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Waterloo, à Waterloo, en Belgique."}
   ]},
   {name:"Bataille de Gettysburg — Pennsylvanie, USA", lat:39.811, lng:-77.23, radius:4000,
-   desc:"Du 1er au 3 juillet 1863, la plus meurtrière bataille de la guerre de Sécession (51 000 pertes) brisa l'invasion nordiste de Lee et marqua le tournant du conflit.",
+   desc:"Du 1er au 3 juillet 1863, la plus meurtrière bataille de la guerre de Sécession (51 000 pertes) brisa l'invasion du Nord menée par Lee et marqua le tournant du conflit.",
    photo:"events/gettysburg.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Par une chaleur d'été de 1863, trois jours durant, champs et vergers se couvrent de morts ; sur ces collines, une nation déchirée joue son avenir."},
@@ -303,12 +303,12 @@ const EVENTS = [
    desc:"En 202 av. J.-C., Scipion l'Africain vainquit Hannibal, mettant fin à la deuxième guerre punique.",
    photo:"events/zama.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 202 av. J.-C., dans la poussière d'une plaine d'Afrique, le plus redouté des conquérants tombe enfin ; son étoile s'éteint là où, jeune, il avait juré une haine éternelle."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 202 av. J.-C., dans la poussière d'une plaine d'Afrique, le plus redouté des conquérants tombe enfin ; son étoile s'éteint sur la terre même où, enfant, il avait juré une haine éternelle."},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 202 av. J.-C., un stratège carthaginois est vaincu, ses propres éléphants retournés contre lui par un général rival."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite d'Hannibal contre Scipion, en Tunisie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Zama, dans la région de Siliana, en Tunisie."}
   ]},
-  {name:"Traité de Tordesillas — Valladolid, Espagne", lat:41.499, lng:-4.715, radius:1000,
+  {name:"Traité de Tordesillas — Valladolid, Espagne", lat:41.5011, lng:-5.0003, radius:1000,
    desc:"En 1494, Espagne et Portugal se partagèrent le Nouveau Monde le long d'un méridien, sous l'égide du pape.",
    photo:"events/tordesillas.jpg",
    hints:[
@@ -344,7 +344,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La défaite d'Antoine et Cléopâtre, en Grèce."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Actium, dans le golfe d'Ambracie, en Grèce."}
   ]},
-  {name:"Serment du Jeu de paume — Versailles, France", lat:48.8049, lng:2.1204, radius:300,
+  {name:"Serment du Jeu de paume — Versailles, France", lat:48.802, lng:2.1242, radius:300,
    desc:"Le 20 juin 1789, les députés du Tiers état jurèrent de ne pas se séparer avant d'avoir donné une constitution à la France.",
    photo:"events/jeu_de_paume.jpg",
    hints:[
@@ -430,7 +430,7 @@ const EVENTS = [
    photo:"events/grand_incendie_de_londres.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1666, une étincelle de four embrase une ville de bois ; quatre jours durant les flammes la dévorent — mais purgent, dit-on, le fléau qui la rongeait."},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1666, un brasier né dans une boulangerie rase en quatre jours une vieille ville de bois, mais éteint une épidémie de peste."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1666, un brasier né dans une boulangerie rase en quatre jours une vieille ville de bois et, dit-on, met fin à une épidémie de peste."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le Grand Incendie, en Angleterre."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le Grand Incendie de Londres, à Londres, en Angleterre."}
   ]},
@@ -480,7 +480,7 @@ const EVENTS = [
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute de Saïgon (Hô Chi Minh-Ville), au Vietnam."}
   ]},
   {name:"Bataille de Vienne (1683) — Autriche", lat:48.232, lng:16.29, radius:5000,
-   desc:"En 1683, la levée du siège ottoman de Vienne par les troupes polonaises de Sobieski marqua le reflux de l'Empire ottoman en Europe.",
+   desc:"En 1683, l'armée de secours polono-impériale menée par Jean III Sobieski leva le siège ottoman de Vienne, marquant le reflux de l'Empire ottoman en Europe.",
    photo:"events/bataille_de_vienne_(1683).jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1683, alors qu'une capitale exsangue est sur le point de céder, une nuée de cavaliers dévale des collines au crépuscule et repousse une marée qui menaçait tout un continent."},
@@ -488,7 +488,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le siège ottoman levé par Sobieski, en Autriche."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Vienne de 1683, à Vienne, en Autriche."}
   ]},
-  {name:"Marche du sel de Gandhi — Gujarat, Inde", lat:20.9, lng:72.66, radius:2000,
+  {name:"Marche du sel de Gandhi — Gujarat, Inde", lat:20.8865, lng:72.8009, radius:2000,
    desc:"En 1930, Gandhi acheva sa marche de 385 km à Dandi pour récolter du sel en défi à la taxe coloniale, acte majeur de désobéissance civile.",
    photo:"events/marche_du_sel_de_gandhi.jpg",
    hints:[
@@ -506,14 +506,14 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Attila arrêté, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Les Champs Catalauniques, en Champagne, en France."}
   ]},
-  {name:"Prise de la Smala d'Abd el-Kader — Algérie", lat:35.0, lng:1.5, radius:10000,
+  {name:"Prise de la Smala d'Abd el-Kader — Algérie", lat:34.8933, lng:2.31, radius:10000,
    desc:"En 1843, la prise de la smala d'Abd el-Kader marqua un tournant de la conquête française de l'Algérie.",
    photo:"events/prise_de_la_smala_d_abd_el_Kader.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1843, au galop et par surprise, une poignée de cavaliers fond sur une immense cité nomade en marche et capture le cœur mouvant d'une longue résistance."},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1843, une colonne surprend le campement mobile de 20 000 personnes d'un chef de la résistance, sur des hauts plateaux d'Afrique du Nord."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La prise de la smala d'Abd el-Kader, en Algérie."},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de la Smala, en Algérie."}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise de la Smala, à Taguin (région de Tiaret), en Algérie."}
   ]},
   {name:"Bataille de Plassey — Bengale-Occidental, Inde", lat:23.8, lng:88.25, radius:4000,
    desc:"En 1757, la victoire de Clive assura la domination de la Compagnie anglaise des Indes sur le Bengale, prélude à l'empire britannique en Inde.",
@@ -543,7 +543,7 @@ const EVENTS = [
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Platées, en Béotie, en Grèce."}
   ]},
   {name:"Prise de Babylone par Cyrus — Babil, Irak", lat:32.542, lng:44.42, radius:3000,
-   desc:"En 539 av. J.-C., Cyrus le Grand s'empara de la cité sans grand combat, fondant l'Empire perse achéménide.",
+   desc:"En 539 av. J.-C., Cyrus le Grand s'empara de la cité presque sans combat et intégra la Mésopotamie à l'Empire perse achéménide.",
    photo:"events/prise_de_babylone_par_cyrus.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 539 av. J.-C., une immense cité aux murailles réputées imprenables ouvre ses portes presque sans un cri ; son vainqueur, dit-on, rend à des exilés le chemin de leur patrie."},
@@ -579,7 +579,7 @@ const EVENTS = [
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le passage du Rubicon, en Émilie-Romagne, en Italie."}
   ]},
   {name:"Assassinat de Jules César — Rome, Italie", lat:41.8955, lng:12.4768, radius:400,
-   desc:"Aux ides de mars 44 av. J.-C., César fut poignardé par des sénateurs au pied de la Curie de Pompée.",
+   desc:"Aux ides de mars 44 av. J.-C., César fut poignardé par des sénateurs dans la Curie de Pompée, au pied de la statue de son ancien rival.",
    photo:"events/assassinat_de_jules_cesar.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un matin de mars 44 av. J.-C., au pied d'une statue, un maître tout-puissant s'écroule sous une grêle de poignards ; parmi les mains levées, il reconnaît celle d'un fils de cœur."},
@@ -587,7 +587,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'assassinat de César, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'assassinat de Jules César, à Rome, en Italie."}
   ]},
-  {name:"Bataille de Teutobourg — Basse-Saxe, Allemagne", lat:52.19, lng:8.13, radius:6000,
+  {name:"Bataille de Teutobourg — Basse-Saxe, Allemagne", lat:52.4083, lng:8.1286, radius:6000,
    desc:"En l'an 9, des tribus germaniques anéantirent trois légions romaines, arrêtant l'expansion au-delà du Rhin.",
    photo:"events/bataille_de_teutobourg.jpg",
    hints:[
@@ -664,18 +664,18 @@ const EVENTS = [
    photo:"events/hegire.png",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 622, chassé de sa ville, un homme qui prêche un dieu unique prend la route d'une oasis lointaine ; ce simple départ deviendra le point de départ d'un nouveau temps."},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 622, un prédicant persécuté migre vers une oasis du nord, an zéro d'un nouveau calendrier, dans une péninsule désertique."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 622, un prédicateur persécuté migre vers une oasis du nord, an un d'un nouveau calendrier, dans une péninsule désertique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'Hégire vers Médine, en Arabie saoudite."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'Hégire, à Médine, en Arabie saoudite."}
   ]},
-  {name:"Bataille de Talas — Kazakhstan", lat:42.52, lng:72.24, radius:7000,
-   desc:"En 751, la victoire abbasside sur les Tang stoppa l'expansion chinoise vers l'ouest et diffusa le papier.",
+  {name:"Bataille de Talas — Talas, Kirghizistan", lat:42.52, lng:72.24, radius:7000,
+   desc:"En 751, la victoire abbasside sur les Tang, près de la rivière Talas, stoppa l'expansion chinoise vers l'ouest ; des prisonniers auraient transmis le secret du papier.",
    photo:"events/bataille_de_talas.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 751, aux confins des steppes, deux mondes que tout oppose se heurtent ; de leurs captifs serait passé, dit-on, un secret d'Orient qui allait transformer l'écrit."},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 751, deux empires s'affrontent aux confins des steppes ; des prisonniers y auraient transmis le secret du papier, en Asie centrale."},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'arrêt de l'expansion Tang face aux Abbassides, au Kazakhstan."},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Talas, dans le sud du Kazakhstan."}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'arrêt de l'expansion Tang face aux Abbassides, en Asie centrale (frontière kirghizo-kazakhe)."},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Talas, dans la vallée du Talas, au Kirghizistan."}
   ]},
   {name:"Bataille de Manzikert — Muş, Turquie", lat:39.14, lng:42.53, radius:5000,
    desc:"En 1071, la défaite byzantine face aux Seldjoukides ouvrit l'Anatolie aux Turcs.",
@@ -794,8 +794,8 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La fin de la guerre de Cent Ans, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Castillon, en Gironde, en France."}
   ]},
-  {name:"Bataille de Marignan — Lombardie, Italie", lat:45.31, lng:9.35, radius:3000,
-   desc:"En 1515, la victoire de François Ier sur les Suisses ouvrit les guerres d'Italie.",
+  {name:"Bataille de Marignan — Lombardie, Italie", lat:45.3667, lng:9.3167, radius:3000,
+   desc:"En 1515, la victoire de François Ier sur les Suisses, en pleines guerres d'Italie, lui livra le duché de Milan.",
    photo:"events/bataille_de_marignan.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1515, deux jours durant, un choc d'une violence inouïe brise l'aura d'invincibilité de farouches piquiers venus des montagnes, au profit d'un tout jeune roi."},
@@ -889,11 +889,11 @@ const EVENTS = [
    photo:"events/bataille_de_fort_alamo.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1836, une poignée d'hommes défend jusqu'au dernier les murs d'une vieille mission ; leur mort deviendra un cri qui embrasera tout un peuple."},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1836, une mission fortifiée tombe après un siège où tous les défenseurs périssent, devenant un cri de ralliement, dans le sud d'un continent."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1836, une mission fortifiée tombe après un siège où tous les défenseurs périssent, devenant un cri de ralliement, dans le sud de l'Amérique du Nord."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le siège de l'Alamo, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de l'Alamo, à San Antonio (Texas), aux États-Unis."}
   ]},
-  {name:"Serment / Cri de Dolores — Guanajuato, Mexique", lat:21.156, lng:-100.934, radius:800,
+  {name:"Cri de Dolores — Dolores Hidalgo, Mexique", lat:21.156, lng:-100.934, radius:800,
    desc:"En 1810, l'appel du curé Hidalgo lança la guerre d'indépendance mexicaine.",
    photo:"events/grito_de_dolores.jpg",
    hints:[
@@ -911,14 +911,14 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Bolívar, en Colombie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Boyacá, dans le Boyacá, en Colombie."}
   ]},
-  {name:"Bataille d'Ayacucho — Ayacucho, Pérou", lat:-13.28, lng:-74.0, radius:3000,
+  {name:"Bataille d'Ayacucho — Ayacucho, Pérou", lat:-13.0542, lng:-74.1392, radius:3000,
    desc:"En 1824, cette victoire scella l'indépendance de l'Amérique du Sud espagnole.",
    photo:"events/bataille_d_ayacucho.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1824, sur un toit du monde battu par les vents, une dernière grande bataille referme trois siècles d'un joug venu d'outre-mer ; tout un continent respire."},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1824, sur un haut plateau andin, une bataille met fin à trois siècles de domination sur tout un continent."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La dernière grande bataille de l'indépendance sud-américaine, au Pérou."},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Ayacucho, dans la région d'Ayacucho, au Pérou."}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille d'Ayacucho, près de Quinua (région d'Ayacucho), au Pérou."}
   ]},
   {name:"Bataille de Cajamarca — Cajamarca, Pérou", lat:-7.16, lng:-78.51, radius:2000,
    desc:"En 1532, la capture de l'Inca Atahualpa livra l'empire inca à Pizarro.",
@@ -988,16 +988,16 @@ const EVENTS = [
    photo:"events/sacre_de_napoleon.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1804, sous les ors d'une cathédrale illuminée, un homme parti de rien saisit lui-même la couronne et se la pose sur le front ; nul ne la lui aura donnée."},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1804, un nouveau maître prend la couronne des mains du pape pour se la poser lui-même, dans une cathédrale d'une grande capitale."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1804, un nouveau maître se pose lui-même la couronne sur la tête sous les yeux du pape, dans une cathédrale d'une grande capitale."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le sacre impérial de Napoléon, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le sacre de Napoléon, à Paris, en France."}
   ]},
   {name:"Bataille de Valmy — Marne, France", lat:49.08, lng:4.77, radius:2500,
-   desc:"En 1792, cette canonnade sauva la jeune République face aux Prussiens.",
+   desc:"Le 20 septembre 1792, cette canonnade arrêta les Prussiens et sauva la Révolution, à la veille de la proclamation de la République.",
    photo:"events/bataille_de_valmy.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1792, sous la pluie et la boue, quelques salves de canon et un cri jailli des rangs suffisent à faire refluer une armée d'invasion ; une révolution est sauvée."},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1792, une simple canonnade suffit à faire reculer une armée d'invasion et à sauver une jeune république, dans le nord-est d'un pays d'Europe de l'Ouest."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1792, une simple canonnade suffit à faire reculer une armée d'invasion et à sauver une révolution, dans le nord-est d'un pays d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire révolutionnaire, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Valmy, dans la Marne, en France."}
   ]},
@@ -1010,14 +1010,14 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'exécution de Louis XVI, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'exécution de Louis XVI, à Paris, en France."}
   ]},
-  {name:"Bataille des Pyramides — Le Caire, Égypte", lat:30.02, lng:31.13, radius:4000,
-   desc:"En 1798, Bonaparte battit les Mamelouks lors de la campagne d'Égypte.",
+  {name:"Bataille des Pyramides — Le Caire, Égypte", lat:30.0833, lng:31.2, radius:4000,
+   desc:"En 1798, Bonaparte battit les Mamelouks à Embabeh, en vue des pyramides, lors de la campagne d'Égypte.",
    photo:"events/bataille_des_pyramides.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1798, sous le regard de géants de pierre dressés depuis des millénaires, un général lance ses hommes en leur rappelant que du haut de ces monuments, les siècles les contemplent."},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1798, une victoire en vue de monuments millénaires, un général haranguant ses troupes, dans le nord-est de l'Afrique."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire de Bonaparte sur les Mamelouks, en Égypte."},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille des Pyramides, près du Caire, en Égypte."}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille des Pyramides, à Embabeh près du Caire, en Égypte."}
   ]},
   {name:"Bataille d'Aboukir (navale) — Égypte", lat:31.31, lng:30.1, radius:8000,
    desc:"En 1798, Nelson détruisit la flotte française, isolant l'armée d'Égypte.",
@@ -1073,7 +1073,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Le « miracle » qui sauva Paris, en France."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de la Marne, dans la Marne, en France."}
   ]},
-  {name:"Révolution d'Octobre — Saint-Pétersbourg, Russie", lat:59.941, lng:30.375, radius:2000,
+  {name:"Révolution d'Octobre — Saint-Pétersbourg, Russie", lat:59.9399, lng:30.3146, radius:2000,
    desc:"En 1917, la prise du pouvoir bolchevique bouleversa le XXe siècle.",
    photo:"events/revolution_d_octobre.jpg",
    hints:[
@@ -1123,7 +1123,7 @@ const EVENTS = [
    photo:"events/bataille_des_ardennes.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"À l'hiver 1944, une dernière ruée jaillit d'une forêt sous la neige ; sommé de se rendre, un général cerné répond d'un seul mot méprisant."},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"À l'hiver 1944, une ultime offensive surprise dans une forêt enneigée ; un général assiégé répond par un seul mot, dans le nord d'un pays d'Europe de l'Ouest."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"À l'hiver 1944, une ultime offensive surprise dans une forêt enneigée ; un général assiégé répond par un seul mot, dans le sud-est d'un petit pays d'Europe de l'Ouest."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La dernière grande offensive allemande de 1944, en Belgique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille des Ardennes, en Belgique."}
   ]},
@@ -1154,7 +1154,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La rencontre des trois Grands, en Crimée."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La conférence de Yalta, en Crimée."}
   ]},
-  {name:"Procès de Nuremberg — Bavière, Allemagne", lat:49.453, lng:11.081, radius:600,
+  {name:"Procès de Nuremberg — Bavière, Allemagne", lat:49.4544, lng:11.0484, radius:600,
    desc:"En 1945-1946, les dignitaires nazis furent jugés, fondant le droit pénal international.",
    photo:"events/proces_de_nuremberg.jpg",
    hints:[
@@ -1195,7 +1195,7 @@ const EVENTS = [
    photo:"events/assassinat_de_jfk.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un midi de novembre 1963, quelques secondes de pellicule saisissent l'impensable : un cortège officiel fauché en pleine ville ; un pays perd son jeune espoir."},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En novembre 1963, des coups de feu sur un cortège présidentiel traversant une place, drame filmé par un amateur, dans le sud d'un continent."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En novembre 1963, des coups de feu sur un cortège présidentiel traversant une place, drame filmé par un amateur, dans le sud de l'Amérique du Nord."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'assassinat d'un président américain, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'assassinat de JFK, à Dallas (Texas), aux États-Unis."}
   ]},
@@ -1259,8 +1259,8 @@ const EVENTS = [
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1869, dans les fastes et les pavillons, un cortège de navires glisse pour la première fois d'une mer à l'autre à travers les sables ; deux mondes se rapprochent."},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1869, un cortège de navires pavoisés inaugure un canal reliant deux mers, sur un isthme d'Afrique du Nord-Est."},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'inauguration du canal de Suez, en Égypte."},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'inauguration du canal de Suez, en Égypte."}
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'ouverture d'une voie d'eau entre Méditerranée et mer Rouge, en Égypte."},
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'inauguration du canal de Suez, à Ismaïlia, en Égypte."}
   ]},
   {name:"Bataille de Solférino — Lombardie, Italie", lat:45.37, lng:10.57, radius:4000,
    desc:"En 1859, cette bataille sanglante inspira la fondation de la Croix-Rouge.",
@@ -1338,8 +1338,8 @@ const EVENTS = [
    desc:"En 326 av. J.-C., Alexandre vainquit le roi Pôros mais atteignit la limite de sa conquête.",
    photo:"events/bataille_de_l_hydaspe.jpg",
    hints:[
-    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vers 326 av. J.-C., sous les trombes de la mousson, un conquérant infatigable terrasse une muraille d'éléphants ; ce sera sa dernière victoire, ses hommes refusant d'aller plus loin."},
-    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 326 av. J.-C., sous la mousson, un conquérant l'emporte contre des éléphants de guerre — dernière bataille avant que ses troupes refusent d'avancer."},
+    {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Vers 326 av. J.-C., sous les trombes de la mousson, un conquérant infatigable terrasse une muraille d'éléphants ; ce sera sa dernière grande bataille rangée, ses hommes refusant bientôt d'aller plus loin."},
+    {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 326 av. J.-C., sous la mousson, un conquérant l'emporte contre des éléphants de guerre — sa dernière grande bataille rangée, peu avant que ses troupes refusent d'avancer."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire d'Alexandre sur Pôros, au Pakistan."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de l'Hydaspe, au Pendjab, au Pakistan."}
   ]},
@@ -1415,7 +1415,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La révolution islamique, en Iran."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La révolution iranienne, à Téhéran, en Iran."}
   ]},
-  {name:"Boston / Bataille de Bunker Hill — Massachusetts, USA", lat:42.376, lng:-71.061, radius:800,
+  {name:"Bataille de Bunker Hill — Charlestown (Boston), USA", lat:42.376, lng:-71.061, radius:800,
    desc:"En 1775, cette bataille coûteuse montra que les insurgés pouvaient tenir tête aux Britanniques.",
    photo:"events/bunker_hill.jpg",
    hints:[
@@ -1425,7 +1425,7 @@ const EVENTS = [
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Bunker Hill, près de Boston, aux États-Unis."}
   ]},
   {name:"Bataille de Trenton — New Jersey, USA", lat:40.22, lng:-74.76, radius:2000,
-   desc:"En 1776, Washington traversa le fleuve gelé pour une victoire surprise qui ranima la révolution.",
+   desc:"En 1776, Washington traversa de nuit le Delaware charriant des glaces pour une victoire surprise qui ranima la révolution.",
    photo:"events/trenton.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Au cœur d'un hiver désespéré, la nuit de Noël 1776, une troupe aux abois tente un coup d'audace dans le froid et la glace, et ranime une cause chancelante."},
@@ -1442,7 +1442,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La victoire du Cinco de Mayo, au Mexique."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Puebla, à Puebla, au Mexique."}
   ]},
-  {name:"Bataille de Camerone — Veracruz, Mexique", lat:18.94, lng:-96.3, radius:600,
+  {name:"Bataille de Camerone — Veracruz, Mexique", lat:19.0231, lng:-96.6128, radius:600,
    desc:"En 1863, la résistance héroïque de la Légion étrangère devint sa légende fondatrice.",
    photo:"events/camerone.jpg",
    hints:[
@@ -1542,12 +1542,12 @@ const EVENTS = [
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La bataille de Morat, canton de Fribourg, en Suisse."}
   ]},
   {name:"Arrivée de la peste noire — Messine, Sicile, Italie", lat:38.193, lng:15.554, radius:3000,
-   desc:"En 1347, des navires génois introduisirent la peste en Europe par ce port.",
+   desc:"En 1347, des navires génois venus de Caffa introduisirent la peste en Europe occidentale par ce port.",
    photo:"events/peste_1347.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1347, des navires abordent, cales pleines de morts et d'agonisants ; dans leurs flancs voyage un fléau qui va faucher un tiers d'un continent."},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1347, des navires accostent avec des équipages mourants, portant d'Orient un fléau qui allait emporter un tiers d'un continent."},
-    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'arrivée de la peste noire en Europe, en Italie."},
+    {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'arrivée de la peste noire en Europe occidentale, en Italie."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'arrivée de la peste noire, à Messine (Sicile), en Italie."}
   ]},
   {name:"Bataille de Lechfeld — Bavière, Allemagne", lat:48.27, lng:10.86, radius:4000,
@@ -1641,7 +1641,7 @@ const EVENTS = [
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La prise d'Alger, dans la baie d'Alger, en Algérie."}
   ]},
   {name:"Bataille de Sadowa (Königgrätz) — Tchéquie", lat:50.29, lng:15.75, radius:5000,
-   desc:"En 1866, la victoire prussienne assura l'unité allemande sous Berlin.",
+   desc:"En 1866, la victoire prussienne sur l'Autriche ouvrit la voie à l'unité allemande autour de la Prusse.",
    photo:"events/sadowa.JPG",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1866, en une seule journée, des fusils d'un genre nouveau tranchent une vieille rivalité et désignent qui bâtira un empire."},
@@ -1685,7 +1685,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"L'incendie d'un parlement, en Allemagne."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"L'incendie du Reichstag, à Berlin, en Allemagne."}
   ]},
-  {name:"Conférence de Potsdam — Brandebourg, Allemagne", lat:52.41, lng:13.07, radius:600,
+  {name:"Conférence de Potsdam — Brandebourg, Allemagne", lat:52.4193, lng:13.0707, radius:600,
    desc:"En 1945, les vainqueurs y organisèrent l'Allemagne occupée et l'ordre d'après-guerre.",
    photo:"events/potsdam.jpg",
    hints:[
@@ -1703,7 +1703,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La crise des missiles de 1962, à Cuba."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La crise des missiles de Cuba, à Cuba."}
   ]},
-  {name:"Festival de Woodstock — New York, USA", lat:41.701, lng:-74.88, radius:2000,
+  {name:"Festival de Woodstock — Bethel (État de New York), USA", lat:41.701, lng:-74.88, radius:2000,
    desc:"En 1969, le festival réunit près de 500 000 personnes, symbole de la contre-culture.",
    photo:"events/woodstock.jpg",
    hints:[
@@ -1712,7 +1712,7 @@ const EVENTS = [
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"Un festival musical mythique, aux États-Unis."},
     {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"Le festival de Woodstock, dans l'État de New York, aux États-Unis."}
   ]},
-  {name:"Guerre du Golfe — Libération du Koweït", lat:29.37, lng:47.978, radius:5000,
+  {name:"Guerre du Golfe (libération du Koweït) — Koweït City, Koweït", lat:29.37, lng:47.978, radius:5000,
    desc:"En 1991, une coalition internationale chassa l'armée irakienne du Koweït.",
    photo:"events/golfe_1991.jpg",
    hints:[
@@ -1728,7 +1728,7 @@ const EVENTS = [
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"En 1533, des étrangers en armes s'emparent d'une cité perchée dans les nuages, aux pierres si bien jointes qu'aucune lame ne s'y glisse — cœur d'un empire du soleil."},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1533, des conquérants prennent une capitale d'altitude aux murs de pierres parfaitement ajustées, cœur d'un empire du soleil."},
     {bc:"#3a2008",tc:"#fde68a",l:"MOYEN",t:"La chute de la capitale inca, au Pérou."},
-    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute de Cuzco, dans la vallée sacrée, au Pérou."}
+    {bc:"#052e16",tc:"#86efac",l:"FACILE",t:"La chute de Cuzco, dans les Andes, au Pérou."}
   ]}
 ];
 
