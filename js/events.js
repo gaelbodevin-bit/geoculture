@@ -1183,7 +1183,7 @@ const EVENTS = [
   ]},
   {name:"Discours « I Have a Dream » — Washington, USA", lat:38.8893, lng:-77.0502, radius:500,
    desc:"En 1963, Martin Luther King galvanisa le mouvement des droits civiques.",
-   photo:"events/discours_\302\253_I_Have_a_Dream_\302\273.jpg",
+   photo:"events/i_have_a_dream.jpg",
    hints:[
     {bc:"#3b0f0f",tc:"#fca5a5",l:"EXPERT",t:"Un jour de 1963, au pied d'un grand mémorial de marbre, devant une foule à perte de vue, une voix pose des mots sur un rêve d'égalité — et le siècle les retient."},
     {bc:"#3d1a05",tc:"#fdba74",l:"DIFFICILE",t:"En 1963, un discours pour les droits civiques prononcé au pied d'un mémorial de marbre devant une immense foule, dans une capitale d'Amérique du Nord."},
