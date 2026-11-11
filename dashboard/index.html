@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Dashboard — Blue Cell Production</title>
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="theme-color" content="#0b0f17" />
+<meta name="robots" content="noindex, nofollow" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Blue Cell" />
+<link rel="icon" href="icons/icon-192.png" />
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+<style>
+  :root{
+    --bg:#0b0f17; --panel:#141b26; --panel2:#1b2433; --line:#273142;
+    --txt:#e6edf6; --muted:#8aa0b8; --accent:#4da3ff; --good:#37d399; --warn:#ffb020;
+    --geo:#4da3ff; --play:#b479ff; --fas:#ff7a59;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+    font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  a{color:var(--accent)}
+  header{display:flex;align-items:center;gap:16px;padding:18px 24px;
+    padding-top:calc(18px + env(safe-area-inset-top));flex-wrap:wrap;
+    border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
+  header h1{font-size:18px;margin:0;font-weight:650;letter-spacing:.2px}
+  header .sp{flex:1}
+  button{font:inherit;color:var(--txt);background:var(--panel2);border:1px solid var(--line);
+    padding:9px 14px;border-radius:9px;cursor:pointer}
+  button:hover{border-color:var(--accent)}
+  button.primary{background:var(--accent);border-color:var(--accent);color:#06121f;font-weight:600}
+  .muted{color:var(--muted)}
+  main{padding:24px;max-width:1200px;margin:0 auto}
+  .totals{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:26px}
+  .tile .k small{text-transform:none;letter-spacing:0}
+  .kpi .v small{font-size:12px;color:var(--muted);font-weight:500;display:block;margin-top:2px}
+  .tile{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .tile .k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+  .tile .v{font-size:26px;font-weight:700;margin-top:6px}
+  .tile .v small{font-size:14px;color:var(--muted);font-weight:500}
+  .proj{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+    padding:20px;margin-bottom:22px}
+  .proj h2{margin:0 0 4px;font-size:17px;display:flex;align-items:center;gap:10px}
+  .dot{width:10px;height:10px;border-radius:50%}
+  .badge{font-size:11px;padding:2px 8px;border-radius:20px;background:var(--panel2);
+    border:1px solid var(--line);color:var(--muted)}
+  .kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:16px 0 10px}
+  .kpi{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .kpi .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+  .kpi .v{font-size:21px;font-weight:700;margin-top:4px}
+  .charts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px}
+  .chartbox{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:12px}
+  .chartbox h3{margin:0 0 8px;font-size:12px;color:var(--muted);font-weight:600;
+    text-transform:uppercase;letter-spacing:.5px}
+  canvas{width:100%!important;height:150px!important}
+  #login{display:flex;flex-direction:column;align-items:center;justify-content:center;
+    min-height:70vh;gap:16px;text-align:center}
+  #gate{display:none}
+  .err{color:var(--warn)}
+  @media(max-width:1180px){.totals{grid-template-columns:repeat(3,1fr)}.kpis{grid-template-columns:repeat(3,1fr)}
+    .charts{grid-template-columns:1fr 1fr}}
+  @media(max-width:860px){.totals{grid-template-columns:repeat(2,1fr)}
+    .kpis{grid-template-columns:repeat(2,1fr)}.charts{grid-template-columns:1fr}}
+  @media(max-width:600px){
+    header{padding:10px 14px;padding-top:calc(10px + env(safe-area-inset-top));gap:8px;flex-wrap:nowrap}
+    header h1{font-size:16px;white-space:nowrap;margin-right:auto} .hm,#who,#updated{display:none}
+    header button{padding:7px 10px;font-size:13px}
+    main{padding-left:14px!important;padding-right:14px!important}
+    .tile .v{font-size:22px}}
+</style>
+</head>
+<body>
+
+<div id="login">
+  <h1>Dashboard — Blue Cell Production</h1>
+  <p class="muted">Suivi fréquentation · conversion · achats</p>
+  <button class="primary" id="signin">Se connecter avec Google</button>
+  <p class="err" id="loginErr"></p>
+</div>
+
+<div id="gate">
+  <header>
+    <h1>📊 Blue Cell<span class="hm"> — Dashboard</span></h1>
+    <span class="badge" id="who"></span>
+    <div class="sp"></div>
+    <span class="muted" id="updated"></span>
+    <button id="refresh">↻ Rafraîchir</button>
+    <button id="signout">Déconnexion</button>
+  </header>
+  <main>
+    <div id="errors" style="display:none;background:#3a1d12;border:1px solid #ff7a59;
+      color:#ffd2c4;border-radius:12px;padding:14px 16px;margin-bottom:20px;
+      font-size:14px;line-height:1.6"></div>
+    <div class="totals" id="totals"></div>
+    <div id="projects"></div>
+    <p class="muted" style="margin-top:30px">
+      Les courbes se remplissent jour après jour (1 point / jour).
+      « Rafraîchir » relance l'agrégation immédiatement.
+    </p>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, signOut, onAuthStateChanged }
+  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+import { getFirestore, doc, getDoc, collection, query, orderBy, limit, getDocs }
+  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+import { getFunctions, httpsCallable }
+  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-functions.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDm7KMECwQVWvnOnMmSVm8aK7FdP03QWyA",
+  authDomain: "geo-culture-73453.firebaseapp.com",
+  projectId: "geo-culture-73453",
+  storageBucket: "geo-culture-73453.firebasestorage.app",
+  messagingSenderId: "701399534769",
+  appId: "1:701399534769:web:ea9418505d8d2e9a9ea690",
+};
+const ADMIN_EMAILS = ["bluecellproduction@gmail.com"]; // <-- tes emails admin
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getFirestore(app);
+const functions = getFunctions(app, "europe-west1");
+
+const $ = (s) => document.querySelector(s);
+const META = {
+  geoculture: { color: "var(--geo)" },
+  playwatch:  { color: "var(--play)" },
+  fas:        { color: "var(--fas)" },
+};
+const euro = (n) => (Number(n)||0).toLocaleString("fr-FR",{style:"currency",currency:"EUR"});
+const num  = (n) => (Number(n)||0).toLocaleString("fr-FR");
+
+// Connexion : popup (PC, Android) ; si la popup est impossible (app installée sur iPhone,
+// popup bloquée…), bascule automatiquement sur une redirection.
+const provider = new GoogleAuthProvider();
+getRedirectResult(auth).catch((e) => $("#loginErr").textContent = e.message);
+$("#signin").onclick = () =>
+  signInWithPopup(auth, provider).catch((e) => {
+    const c = e && e.code;
+    if (c === "auth/popup-blocked" || c === "auth/operation-not-supported-in-this-environment"
+        || c === "auth/popup-closed-by-user" && window.matchMedia("(display-mode: standalone)").matches) {
+      return signInWithRedirect(auth, provider);
+    }
+    $("#loginErr").textContent = e.message;
+  });
+$("#signout").onclick = () => signOut(auth);
+
+onAuthStateChanged(auth, (user) => {
+  if (!user) { show(false); return; }
+  if (ADMIN_EMAILS.indexOf(user.email) === -1) {
+    $("#loginErr").textContent = "Accès réservé : " + user.email + " n'est pas admin.";
+    signOut(auth); return;
+  }
+  $("#who").textContent = user.email;
+  show(true);
+  load().catch((e) => showErrors([(e.code || "") + " — " + (e.message || e)]));
+});
+function show(authed){ $("#login").style.display = authed?"none":"flex";
+  $("#gate").style.display = authed?"block":"none"; }
+
+$("#refresh").onclick = async () => {
+  $("#refresh").disabled = true; $("#refresh").textContent = "…";
+  try {
+    const res = await httpsCallable(functions, "refreshStats")();
+    await load();
+    const r = (res && res.data) || {};
+    const ko = Object.keys(r).filter(k => r[k] !== "ok").map(k => k + " : " + r[k]);
+    if (ko.length) showErrors(["Agrégation partielle :"].concat(ko));
+  }
+  catch (e) { showErrors(["Rafraîchir : " + (e.code || "") + " — " + (e.message || e)]); }
+  $("#refresh").disabled = false; $("#refresh").textContent = "↻ Rafraîchir";
+};
+
+const PROJECTS = ["geoculture", "playwatch", "fas"];
+const charts = {};
+
+function showErrors(list) {
+  const el = $("#errors");
+  if (!list.length) { el.style.display = "none"; el.innerHTML = ""; return; }
+  el.style.display = "block";
+  el.innerHTML = "<b>Erreur de chargement</b><br>" + list.map(x =>
+    String(x).replace(/[<>&]/g, c => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]))).join("<br>");
+}
+
+async function load() {
+  const data = {};
+  const errors = [];
+  for (const p of PROJECTS) {
+    try {
+      const s = await getDoc(doc(db, "stats", p));
+      data[p] = s.exists() ? s.data() : { __empty: true };
+      // Pas d'orderBy côté Firestore (évite un index) : 1 doc/jour, tri dans la page.
+      const dailySnap = await getDocs(collection(db, "stats", p, "daily"));
+      data[p].__daily = dailySnap.docs
+        .map(d => ({ day: d.id, ...d.data() }))
+        .sort((a, b) => a.day.localeCompare(b.day))
+        .slice(-30);
+    } catch (e) {
+      errors.push(p + " : " + (e.code || "") + " — " + (e.message || e));
+      data[p] = null;
+    }
+  }
+  for (const p of PROJECTS) {
+    if (data[p] && data[p].signupsError) errors.push("Inscrits " + (data[p].name || p) + " : " + data[p].signupsError);
+  }
+  if (data.geoculture && data.geoculture.ga4Error) {
+    errors.push("GA4 GéoCulture : " + data.geoculture.ga4Error);
+  }
+  if (!errors.length && PROJECTS.every(p => data[p] && data[p].__empty)) {
+    errors.push("Aucune statistique encore calculée : clique sur « ↻ Rafraîchir ».");
+  }
+  showErrors(errors);
+  renderTotals(data);
+  renderProjects(data);
+  const latest = Object.values(data).map(d => d && d.updatedAt).filter(Boolean)
+    .map(t => t.toDate ? t.toDate() : new Date()).sort((a,b)=>b-a)[0];
+  $("#updated").textContent = latest ? "Màj " + latest.toLocaleString("fr-FR") : "";
+}
+
+function renderTotals(data) {
+  let users=0, premium=0, purchases=0, revenue=0, signups7=null, signupsY=null;
+  for (const p of PROJECTS) { const d=data[p];
+    if (d && d.signups7d!=null) { signups7=(signups7||0)+d.signups7d; signupsY=(signupsY||0)+(d.signupsYesterday||0); } }
+  for (const p of PROJECTS) { const d=data[p]; if(!d) continue;
+    users+=d.usersTotal||0; premium+=d.premiumTotal||0;
+    purchases+=d.purchasesCount||0; revenue+=d.revenueEur||0; }
+  const g = data.geoculture || {};
+  $("#totals").innerHTML = [
+    tile("Visiteurs 30 j <small>(GéoCulture)</small>", g.visitors30d!=null ? num(g.visitors30d) : "—"),
+    tile("Nouveaux inscrits 7 j <small>(3 jeux)</small>", signups7 != null
+      ? num(signups7) + ` <small>hier ${num(signupsY)}</small>` : "—"),
+    tile("Utilisateurs (3 jeux)", num(users)),
+    tile("Comptes premium", num(premium)),
+    tile("Achats cumulés", num(purchases)),
+    tile("Revenu cumulé", euro(revenue)),
+  ].join("");
+}
+const tile = (k,v) => `<div class="tile"><div class="k">${k}</div><div class="v">${v}</div></div>`;
+
+function kpi(k,v){ return `<div class="kpi"><div class="k">${k}</div><div class="v">${v}</div></div>`; }
+
+function renderProjects(data) {
+  const host = $("#projects"); host.innerHTML = "";
+  for (const p of PROJECTS) {
+    const d = data[p]; if (!d) continue;
+    const c = META[p].color;
+    let kpis = "";
+    if (p === "geoculture") {
+      kpis = kpi("Visiteurs 7 j", d.visitors7d!=null
+            ? num(d.visitors7d) + ` <small>hier ${num(d.visitorsYesterday)} · 30 j ${num(d.visitors30d)}</small>`
+            : "— <small>" + (d.ga4Error ? "erreur GA4" : "GA4 off") + "</small>")
+        + kpi("Joueurs connectés", num(d.usersTotal))
+        + kpi("Premium payé", d.premiumPaid!=null
+            ? num(d.premiumPaid) + (d.testers ? ` <small>+${num(d.testers)} testeurs</small>` : "")
+            : num(d.premiumTotal))
+        + kpi("Conversion", (d.conversion||0)+" %")
+        + kpi("Revenu", euro(d.revenueEur));
+    } else if (p === "playwatch") {
+      kpis = kpi("Utilisateurs", num(d.usersTotal))
+        + kpi("Actifs 7j", d.active7d!=null?num(d.active7d):"—")
+        + kpi("Premium payé", num(d.paid))
+        + kpi("Conversion", (d.conversion||0)+" %")
+        + kpi("Revenu", euro(d.revenueEur));
+    } else {
+      kpis = kpi("Utilisateurs", num(d.usersTotal))
+        + kpi("Premium", num(d.premiumTotal))
+        + kpi("Skins vendus", num(d.skinSales||d.skinsOwned||0))
+        + kpi("Achats", num(d.purchasesCount))
+        + kpi("Revenu", euro(d.revenueEur));
+    }
+    kpis = kpi("Nouveaux inscrits", d.signups7d!=null
+        ? num(d.signupsToday) + ` <small>aujourd'hui · hier ${num(d.signupsYesterday)} · 7 j ${num(d.signups7d)}</small>`
+        : "— <small>" + (d.signupsError ? "accès Auth manquant" : "pas encore calculé") + "</small>") + kpis;
+    const badge = d.published===false ? `<span class="badge">non publié</span>` : "";
+    const stripe = d.stripeMode==="test" ? `<span class="badge">Stripe test</span>` : "";
+    const el = document.createElement("div");
+    el.className = "proj";
+    el.innerHTML = `
+      <h2><span class="dot" style="background:${c}"></span>${d.name||p} ${badge} ${stripe}</h2>
+      <div class="kpis">${kpis}</div>
+      <div class="charts">
+        <div class="chartbox"><h3>${p==="geoculture" && d.ga4Daily ? "Visiteurs par jour (30 j)" : "Fréquentation (30 j)"}</h3><canvas id="c_${p}_u"></canvas></div>
+        <div class="chartbox"><h3>Nouveaux inscrits par jour (30 j)</h3><canvas id="c_${p}_s"></canvas></div>
+        <div class="chartbox"><h3>Revenu cumulé (30 j)</h3><canvas id="c_${p}_r"></canvas></div>
+      </div>`;
+    host.appendChild(el);
+    if (p === "geoculture" && Array.isArray(d.ga4Daily) && d.ga4Daily.length) {
+      drawChart(`c_${p}_u`, d.ga4Daily, ["users"], c);
+    } else {
+      drawChart(`c_${p}_u`, d.__daily, p==="geoculture"?["usersTotal"]:["active7d","usersTotal"], c);
+    }
+    if (Array.isArray(d.signupsDaily) && d.signupsDaily.length) {
+      drawChart(`c_${p}_s`, d.signupsDaily, ["n"], c, false, "bar");
+    } else {
+      const box = document.getElementById(`c_${p}_s`).parentNode;
+      box.insertAdjacentHTML("beforeend", `<div style="color:var(--muted);font-size:13px;margin-top:-110px;text-align:center">${
+        d.signupsError ? "Accès Firebase Auth manquant (voir le bandeau)" : "Clique sur « ↻ Rafraîchir »"}</div>`);
+    }
+    drawChart(`c_${p}_r`, d.__daily, ["revenueEur"], c, true);
+  }
+}
+
+function drawChart(id, daily, fields, color, fill, type) {
+  const el = document.getElementById(id); if (!el || !daily) return;
+  const labels = daily.map(x => x.day.slice(5)); // MM-DD
+  const field = fields.find(f => daily.some(x => x[f]!=null)) || fields[fields.length-1];
+  const values = daily.map(x => x[field]!=null ? x[field] : null);
+  if (charts[id]) charts[id].destroy();
+  charts[id] = new Chart(el, {
+    type: type || "line",
+    data: { labels, datasets: [{ data: values, borderColor: colorVar(color),
+      backgroundColor: type === "bar" ? colorVar(color) + "cc" : (fill ? colorVar(color)+"22" : "transparent"),
+      borderRadius: type === "bar" ? 3 : 0,
+      fill: !!fill, tension:.3, spanGaps:true, pointRadius:2, borderWidth:2 }] },
+    options: { plugins:{legend:{display:false}}, maintainAspectRatio:false,
+      scales:{ x:{ticks:{color:"#8aa0b8",maxTicksLimit:6},grid:{display:false}},
+        y:{ticks:{color:"#8aa0b8",precision:0},grid:{color:"#273142"},beginAtZero:true} } },
+  });
+}
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+}
+function colorVar(v){ const m={"var(--geo)":"#4da3ff","var(--play)":"#b479ff","var(--fas)":"#ff7a59"};
+  return m[v]||"#4da3ff"; }
+</script>
+</body>
+</html>
