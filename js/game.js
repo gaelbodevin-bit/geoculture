@@ -737,6 +737,7 @@ function enterExploreMode(){
 }
 
 function exitExploreMode(){
+  if(window._mpMode && window.mpExitExplore){ window.mpExitExplore(); return; }
   inExploreMode=false;
   document.getElementById('explore-tip').style.display='none';
   document.getElementById('back-btn').style.display='none';

@@ -290,6 +290,7 @@ function mpHandleRoomChange(room) {
 // ------------------------------------------------------------
 function mpShowLobby() {
   const overlay = document.getElementById('overlay');
+  mpStopExplore();
   if (overlay) overlay.classList.remove('h');
   mpUpdateLobby(null);
 }
@@ -411,6 +412,7 @@ function mpHandleCountdown(room) {
   const second = Math.ceil(remaining / 1000);
 
   overlay.innerHTML = '<div class="otitle" style="font-size:90px;color:#f97316;line-height:1">' + (second || 'GO !') + '</div><div style="font-size:16px;color:#94a3b8;margin-top:8px">' + T('gameStarting') + '</div>';
+  mpStopExplore();
   overlay.classList.remove('h');
 
   if (remaining > 0) {
@@ -527,6 +529,7 @@ function mpHandlePlaying(room) {
   eventsMode = opts.eventsMode || false;
   total = (room.players[mp.playerId] || {}).score || 0;
 
+  mpStopExplore();
   const overlay = document.getElementById('overlay');
   overlay.classList.add('h');
   document.body.classList.remove('menu-mode');
@@ -1034,7 +1037,7 @@ function mpHandleRoundEnd(room) {
 
   const overlay = document.getElementById('overlay');
   overlay.innerHTML = html.join('');
-  overlay.classList.remove('h');
+  mpRevealOverlay(overlay, 'round:' + roundIndex);
 
   (function (elementId, round, query) {
       const element = document.getElementById(elementId);
@@ -1241,7 +1244,7 @@ function mpShowFinalResults(room) {
 
   const overlay = document.getElementById('overlay');
   overlay.innerHTML = html.join('');
-  overlay.classList.remove('h');
+  mpRevealOverlay(overlay, 'final');
 }
 
 // ------------------------------------------------------------
@@ -1423,6 +1426,7 @@ function mpOnDisbanded(room) {
   const overlay = document.getElementById('overlay');
   if (overlay) {
     overlay.innerHTML = '<div class="otitle" style="font-size:28px">' + T('gameEnded') + '</div>' + '<div style="font-size:14px;color:#94a3b8;margin-top:8px">' + T('playerLeft') + '</div>';
+    mpStopExplore();
     overlay.classList.remove('h');
   }
 
@@ -1438,12 +1442,46 @@ function mpOnDisbanded(room) {
   }, 2000);
 }
 
+// Exploration de la carte en multi : on masque l'écran de résultats sans le détruire.
+// « Retour aux résultats » le réaffiche (mpExitExplore) — surtout PAS l'écran de fin du mode solo,
+// qui proposait « Rejouer » et lançait une partie solo avec d'autres lieux.
+// Tant que le joueur explore, les mises à jour du salon ne le font pas sortir de la carte ;
+// au lancement de la manche suivante (ou du bilan final), l'exploration s'arrête d'elle-même.
+function mpSetExploreUi(on) {
+  const tip = document.getElementById('explore-tip');
+  if (tip) tip.style.display = on ? 'block' : 'none';
+  const backButton = document.getElementById('back-btn');
+  if (backButton) backButton.style.display = on ? 'block' : 'none';
+  if (typeof inExploreMode !== 'undefined') inExploreMode = on;
+}
+
+function mpStopExplore() {
+  if (!mp._exploring) return;
+  mp._exploring = false;
+  mp._exploreView = null;
+  mpSetExploreUi(false);
+}
+
+function mpRevealOverlay(overlay, view) {
+  mp._view = view;
+  if (mp._exploring && mp._exploreView === view) return; // reste sur la carte, résultats mis à jour en fond
+  mpStopExplore();
+  overlay.classList.remove('h');
+}
+
+function mpExitExplore() {
+  mpStopExplore();
+  const overlay = document.getElementById('overlay');
+  if (overlay) overlay.classList.remove('h');
+}
+
 function mpEnterExplore() {
   const overlay = document.getElementById('overlay');
   if (overlay) overlay.classList.add('h');
 
-  const backButton = document.getElementById('back-btn');
-  if (backButton) backButton.style.display = 'block';
+  mp._exploring = true;
+  mp._exploreView = mp._view || null;
+  mpSetExploreUi(true);
 
   setTimeout(() => {
     try { map.invalidateSize(); } catch (error) {}
@@ -1456,6 +1494,7 @@ function mpEnterExplore() {
 }
 
 window.mpEnterExplore = mpEnterExplore;
+window.mpExitExplore = mpExitExplore;
 window.mpCreateRoom = mpCreateRoom;
 window.mpJoinRoom = mpJoinRoom;
 window.mpLaunchGame = mpLaunchGame;
